@@ -356,10 +356,11 @@
         "pt": "Mago",
         "en": "Mage"
       },
+      "sex": "f",
       "look": [
-        "habito_peregrino",
-        "cloth_sandals",
-        "male_head1"
+        "habito",
+        "default_feet",
+        "head_long"
       ],
       "sells": [
         [
@@ -480,13 +481,12 @@
         "en": "Butcher"
       },
       "look": [
-        "aldeao_tunica1",
+        "ferreiro_tunica",
         "cloth_pants",
         "leather_boots",
         "leather_gloves",
         "dagger",
-        "male_head1",
-        "ferreiro_tunica"
+        "male_head1"
       ],
       "sells": [
         [
@@ -528,11 +528,12 @@
         "pt": "Estalajadeiro",
         "en": "Innkeeper"
       },
+      "sex": "f",
       "look": [
-        "aldeao_tunica2",
-        "cloth_pants",
-        "cloth_sandals",
-        "male_head2"
+        "aldea_roupa2",
+        "default_legs",
+        "default_feet",
+        "head_long"
       ],
       "sells": [
         [
@@ -725,11 +726,12 @@
         "pt": "Banqueiro",
         "en": "Banker"
       },
+      "sex": "f",
       "look": [
-        "cloth_shirt",
-        "calca_branca",
-        "cloth_sandals",
-        "male_head2"
+        "clothes",
+        "default_legs",
+        "default_feet",
+        "head_long"
       ],
       "sells": [],
       "buys": [],
