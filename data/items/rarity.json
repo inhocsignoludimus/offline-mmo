@@ -1,0 +1,280 @@
+{
+  "version": 1,
+  "drop": [
+    {
+      "level": [
+        1,
+        10
+      ],
+      "comum": 76,
+      "refinado": 18,
+      "raro": 5,
+      "conjunto": 0.8,
+      "lendario": 0.2
+    },
+    {
+      "level": [
+        11,
+        20
+      ],
+      "comum": 68,
+      "refinado": 22,
+      "raro": 8,
+      "conjunto": 1.5,
+      "lendario": 0.5
+    },
+    {
+      "level": [
+        21,
+        30
+      ],
+      "comum": 58,
+      "refinado": 26,
+      "raro": 12,
+      "conjunto": 3,
+      "lendario": 1
+    },
+    {
+      "level": [
+        31,
+        40
+      ],
+      "comum": 48,
+      "refinado": 28,
+      "raro": 17,
+      "conjunto": 5,
+      "lendario": 2
+    },
+    {
+      "level": [
+        41,
+        50
+      ],
+      "comum": 40,
+      "refinado": 30,
+      "raro": 20,
+      "conjunto": 7,
+      "lendario": 3
+    },
+    {
+      "level": [
+        51,
+        65
+      ],
+      "comum": 32,
+      "refinado": 30,
+      "raro": 24,
+      "conjunto": 9,
+      "lendario": 5
+    },
+    {
+      "level": [
+        66,
+        99
+      ],
+      "comum": 24,
+      "refinado": 30,
+      "raro": 28,
+      "conjunto": 11,
+      "lendario": 7
+    }
+  ],
+  "rare_names": {
+    "first": [
+      {
+        "pt": "Lamento",
+        "en": "Lament"
+      },
+      {
+        "pt": "Juramento",
+        "en": "Oath"
+      },
+      {
+        "pt": "Cinza",
+        "en": "Ash"
+      },
+      {
+        "pt": "Véu",
+        "en": "Veil"
+      },
+      {
+        "pt": "Marca",
+        "en": "Mark"
+      },
+      {
+        "pt": "Eco",
+        "en": "Echo"
+      },
+      {
+        "pt": "Voto",
+        "en": "Vow"
+      },
+      {
+        "pt": "Selo",
+        "en": "Seal"
+      },
+      {
+        "pt": "Rastro",
+        "en": "Trail"
+      },
+      {
+        "pt": "Estilhaço",
+        "en": "Shard"
+      },
+      {
+        "pt": "Promessa",
+        "en": "Promise"
+      },
+      {
+        "pt": "Ferida",
+        "en": "Wound"
+      },
+      {
+        "pt": "Canto",
+        "en": "Canticle"
+      },
+      {
+        "pt": "Pó",
+        "en": "Dust"
+      },
+      {
+        "pt": "Brasa",
+        "en": "Ember"
+      },
+      {
+        "pt": "Relíquia",
+        "en": "Relic"
+      },
+      {
+        "pt": "Sussurro",
+        "en": "Whisper"
+      },
+      {
+        "pt": "Cicatriz",
+        "en": "Scar"
+      },
+      {
+        "pt": "Âncora",
+        "en": "Anchor"
+      },
+      {
+        "pt": "Farol",
+        "en": "Beacon"
+      },
+      {
+        "pt": "Sal",
+        "en": "Salt"
+      },
+      {
+        "pt": "Vigília",
+        "en": "Vigil"
+      },
+      {
+        "pt": "Cálice",
+        "en": "Chalice"
+      },
+      {
+        "pt": "Poço",
+        "en": "Well"
+      }
+    ],
+    "second": [
+      {
+        "pt": "da Aurora",
+        "en": "of Dawn"
+      },
+      {
+        "pt": "das Dunas",
+        "en": "of the Dunes"
+      },
+      {
+        "pt": "de Jafa",
+        "en": "of Jaffa"
+      },
+      {
+        "pt": "de Montgisard",
+        "en": "of Montgisard"
+      },
+      {
+        "pt": "do Sepulcro",
+        "en": "of the Sepulchre"
+      },
+      {
+        "pt": "do Oásis",
+        "en": "of the Oasis"
+      },
+      {
+        "pt": "de Aelia",
+        "en": "of Aelia"
+      },
+      {
+        "pt": "de Ashur",
+        "en": "of Ashur"
+      },
+      {
+        "pt": "da Caravana",
+        "en": "of the Caravan"
+      },
+      {
+        "pt": "da Muralha",
+        "en": "of the Wall"
+      },
+      {
+        "pt": "do Siroco",
+        "en": "of the Sirocco"
+      },
+      {
+        "pt": "da Geada",
+        "en": "of the Rime"
+      },
+      {
+        "pt": "do Pântano",
+        "en": "of the Marsh"
+      },
+      {
+        "pt": "da Cripta",
+        "en": "of the Crypt"
+      },
+      {
+        "pt": "do Norte",
+        "en": "of the North"
+      },
+      {
+        "pt": "da Hiena",
+        "en": "of the Hyena"
+      },
+      {
+        "pt": "do Peregrino",
+        "en": "of the Pilgrim"
+      },
+      {
+        "pt": "da Cisterna",
+        "en": "of the Cistern"
+      },
+      {
+        "pt": "do Minarete",
+        "en": "of the Minaret"
+      },
+      {
+        "pt": "da Vigília",
+        "en": "of the Vigil"
+      },
+      {
+        "pt": "do Poço",
+        "en": "of the Well"
+      },
+      {
+        "pt": "da Rota",
+        "en": "of the Road"
+      },
+      {
+        "pt": "do Sal",
+        "en": "of Salt"
+      },
+      {
+        "pt": "da Palmeira",
+        "en": "of the Palm"
+      }
+    ]
+  }
+}

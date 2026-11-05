@@ -1,0 +1,1035 @@
+{
+  "version": 1,
+  "uniques": [
+    {
+      "id": "mandibula_do_rei",
+      "base": "broadaxe",
+      "name": {
+        "pt": "Mandíbula do Rei",
+        "en": "The King's Mandible"
+      },
+      "hue": "verde_veneno",
+      "level": 22,
+      "affixes": [
+        [
+          "dmg_pct",
+          22
+        ],
+        [
+          "str",
+          6
+        ]
+      ],
+      "effect": "poison_on_hit",
+      "source": "rei_formiga",
+      "lore": {
+        "pt": "Arrancada da pinça do Rei Formiga nas dunas de Qasr. O veneno ainda pulsa no fio.",
+        "en": "Torn from the Ant King's pincer in the dunes of Qasr. The venom still pulses in the edge."
+      }
+    },
+    {
+      "id": "lamina_do_guardiao",
+      "base": "longsword",
+      "name": {
+        "pt": "Lâmina do Guardião",
+        "en": "The Guardian's Blade"
+      },
+      "hue": "preto_sombra",
+      "level": 30,
+      "affixes": [
+        [
+          "dmg_flat",
+          6
+        ],
+        [
+          "res_energy",
+          12
+        ]
+      ],
+      "effect": "life_leech",
+      "source": "guardiao_da_cripta",
+      "lore": {
+        "pt": "A espada que o Guardião da Cripta não largou nem depois da morte. Bebe um pouco da vida de quem corta.",
+        "en": "The sword the Crypt Guardian did not drop even after death. It drinks a little of the life it cuts."
+      }
+    },
+    {
+      "id": "presa_de_brasa",
+      "base": "falchion",
+      "name": {
+        "pt": "Presa de Brasa",
+        "en": "Ember Fang"
+      },
+      "hue": "brasa",
+      "level": 38,
+      "affixes": [
+        [
+          "dmg_pct",
+          28
+        ],
+        [
+          "res_fire",
+          22
+        ]
+      ],
+      "effect": "burn_on_hit",
+      "source": "serpe_de_fogo",
+      "lore": {
+        "pt": "Forjada no dente da Serpe de Fogo. O fio acende quando acha carne.",
+        "en": "Forged on the Fire Serpent's tooth. The edge lights when it finds flesh."
+      }
+    },
+    {
+      "id": "lorigao_do_voto",
+      "base": "lorigao",
+      "name": {
+        "pt": "Lorigão do Voto",
+        "en": "Hauberk of the Vow"
+      },
+      "hue": "marfim",
+      "level": 34,
+      "affixes": [
+        [
+          "armor_pct",
+          14
+        ],
+        [
+          "res_energy",
+          16
+        ]
+      ],
+      "effect": "thorns",
+      "source": "fantasma_cruzado",
+      "lore": {
+        "pt": "O voto de um cruzado que não atravessou o portão. A malha devolve o golpe a quem insiste.",
+        "en": "The vow of a crusader who never passed the gate. The mail gives the blow back to whoever insists."
+      }
+    },
+    {
+      "id": "brigantina_do_lodo",
+      "base": "brigandine",
+      "name": {
+        "pt": "Brigantina do Lodo",
+        "en": "Brigandine of the Mire"
+      },
+      "hue": "verde_veneno",
+      "level": 32,
+      "affixes": [
+        [
+          "res_poison",
+          28
+        ],
+        [
+          "regen_hp",
+          2
+        ]
+      ],
+      "effect": "poison_on_hit",
+      "source": "senhor_do_pantano",
+      "lore": {
+        "pt": "O Senhor do Pântano usava isto por baixo da água negra. O couro fede a veneno e fecha a ferida devagar.",
+        "en": "The Swamp Lord wore this under the black water. The leather stinks of venom and closes a wound slowly."
+      }
+    },
+    {
+      "id": "machado_duplo_do_jarl",
+      "base": "double_axe",
+      "name": {
+        "pt": "Machado Duplo do Jarl",
+        "en": "The Jarl's Twin Axe"
+      },
+      "hue": "branco_gelo",
+      "level": 40,
+      "affixes": [
+        [
+          "dmg_flat",
+          8
+        ],
+        [
+          "res_cold",
+          18
+        ]
+      ],
+      "effect": "chill_on_hit",
+      "source": "jarl_morto",
+      "lore": {
+        "pt": "O Jarl Morto ainda parte lenha e homens com o mesmo golpe. O frio sobe pelo cabo.",
+        "en": "The Dead Jarl still splits timber and men with the same blow. The cold climbs the haft."
+      }
+    },
+    {
+      "id": "presa_da_matilha",
+      "base": "dagger",
+      "name": {
+        "pt": "Presa da Matilha",
+        "en": "Fang of the Pack"
+      },
+      "hue": "cinza_lobo",
+      "level": 16,
+      "affixes": [
+        [
+          "dex",
+          8
+        ],
+        [
+          "swing_speed",
+          8
+        ]
+      ],
+      "effect": "bleed_on_hit",
+      "source": "matilha_cinzenta",
+      "lore": {
+        "pt": "Um dente de lobo da Matilha Cinzenta, encastoado num punho curto. Abre a pele e não fecha.",
+        "en": "A wolf tooth from the Ashen Pack, set in a short grip. It opens the skin and does not close it."
+      }
+    },
+    {
+      "id": "coifa_de_lata",
+      "base": "scale_coif",
+      "name": {
+        "pt": "Coifa de Lata",
+        "en": "Tin Coif"
+      },
+      "hue": "ocre",
+      "level": 14,
+      "affixes": [
+        [
+          "armor_flat",
+          4
+        ],
+        [
+          "luck",
+          10
+        ]
+      ],
+      "effect": "extra_gold",
+      "source": "chefe_goblin",
+      "lore": {
+        "pt": "A coroa torta do Chefe Goblin, feita de panelas e um prego de ouro. Quem a usa acha mais moedas no chão.",
+        "en": "The Goblin Chief's crooked crown, made of pots and one gold nail. Whoever wears it finds more coins on the ground."
+      }
+    },
+    {
+      "id": "forquilha_da_clareira",
+      "base": "war_fork",
+      "name": {
+        "pt": "Forquilha da Clareira",
+        "en": "Fork of the Glade"
+      },
+      "hue": "verde_musgo",
+      "level": 24,
+      "affixes": [
+        [
+          "hit_chance",
+          8
+        ],
+        [
+          "dex",
+          6
+        ]
+      ],
+      "effect": "poison_on_hit",
+      "source": "aranha_da_clareira",
+      "lore": {
+        "pt": "A Aranha da Clareira deixou o veneno nestas três pontas. Uma picada só.",
+        "en": "The Glade Spider left its venom in these three points. One sting."
+      }
+    },
+    {
+      "id": "cajado_de_casca",
+      "base": "quarterstaff",
+      "name": {
+        "pt": "Cajado de Casca",
+        "en": "Staff of Bark"
+      },
+      "hue": "verde_seiva",
+      "level": 40,
+      "affixes": [
+        [
+          "int",
+          10
+        ],
+        [
+          "regen_hp",
+          3
+        ]
+      ],
+      "effect": "thorns",
+      "source": "coracao_do_bosque",
+      "lore": {
+        "pt": "Um galho que o Coração do Bosque ainda considera seu. Bate como madeira e devolve espinho.",
+        "en": "A branch the Heart of the Wood still counts as its own. It hits like timber and gives the thorn back."
+      }
+    },
+    {
+      "id": "maca_da_pata",
+      "base": "mace",
+      "name": {
+        "pt": "Maça da Pata",
+        "en": "Paw Mace"
+      },
+      "hue": "marrom_urso",
+      "level": 26,
+      "affixes": [
+        [
+          "str",
+          10
+        ],
+        [
+          "dmg_flat",
+          4
+        ]
+      ],
+      "effect": "bleed_on_hit",
+      "source": "urso_negro",
+      "lore": {
+        "pt": "O peso da pata do Urso Negro, preso em ferro. O golpe rasga mais do que esmaga.",
+        "en": "The weight of the Black Bear's paw, bound in iron. The blow tears more than it crushes."
+      }
+    },
+    {
+      "id": "manto_do_miasma",
+      "base": "travel_cloak",
+      "name": {
+        "pt": "Manto do Miasma",
+        "en": "Cloak of the Miasma"
+      },
+      "hue": "verde_veneno",
+      "level": 24,
+      "affixes": [
+        [
+          "res_poison",
+          20
+        ],
+        [
+          "mana",
+          12
+        ]
+      ],
+      "effect": "poison_cloud",
+      "source": "sombra_do_miasma",
+      "lore": {
+        "pt": "A Sombra do Miasma vestia este pano podre. Quem o fere respira a nuvem.",
+        "en": "The Miasma Shade wore this rotten cloth. Whoever strikes it breathes the cloud."
+      }
+    },
+    {
+      "id": "malho_do_pico",
+      "base": "maul",
+      "name": {
+        "pt": "Malho do Pico",
+        "en": "Maul of the Peak"
+      },
+      "hue": "cinza_pedra",
+      "level": 36,
+      "affixes": [
+        [
+          "dmg_pct",
+          24
+        ],
+        [
+          "str",
+          12
+        ]
+      ],
+      "effect": "stun_on_hit",
+      "source": "minotauro_do_pico",
+      "lore": {
+        "pt": "O Minotauro do Pico abria a trilha com isto. A cabeça de pedra atordoa quem não desvia.",
+        "en": "The Peak Minotaur opened the trail with this. The stone head stuns whoever does not step aside."
+      }
+    },
+    {
+      "id": "mangual_de_rocha",
+      "base": "flail",
+      "name": {
+        "pt": "Mangual de Rocha",
+        "en": "Rock Flail"
+      },
+      "hue": "cinza_osso",
+      "level": 44,
+      "affixes": [
+        [
+          "dmg_flat",
+          7
+        ],
+        [
+          "str",
+          8
+        ]
+      ],
+      "effect": "stun_on_hit",
+      "source": "elemental_de_pedra",
+      "lore": {
+        "pt": "Correntes do Elemental de Pedra, com um seixo no lugar da bola. O impacto sobe pelo braço dos dois.",
+        "en": "Chains from the Stone Elemental, a pebble where the ball should be. The impact climbs both arms."
+      }
+    },
+    {
+      "id": "machado_da_geada",
+      "base": "war_axe",
+      "name": {
+        "pt": "Machado da Geada",
+        "en": "Rime Axe"
+      },
+      "hue": "branco_gelo",
+      "level": 50,
+      "affixes": [
+        [
+          "dmg_pct",
+          22
+        ],
+        [
+          "res_cold",
+          28
+        ]
+      ],
+      "effect": "chill_on_hit",
+      "source": "gigante_do_gelo",
+      "lore": {
+        "pt": "O Gigante do Gelo quebrou um glaciar e chamou o pedaço de machado. O corte deixa a junta lenta.",
+        "en": "The Frost Giant broke a glacier and called the piece an axe. The cut leaves the joint slow."
+      }
+    },
+    {
+      "id": "varinha_caduca",
+      "base": "wand",
+      "name": {
+        "pt": "Varinha Caduca",
+        "en": "Withered Wand"
+      },
+      "hue": "purpura_real",
+      "level": 46,
+      "affixes": [
+        [
+          "int",
+          14
+        ],
+        [
+          "mana",
+          28
+        ],
+        [
+          "skill:magery",
+          12
+        ]
+      ],
+      "effect": "mana_leech",
+      "source": "necromante_caduco",
+      "lore": {
+        "pt": "O Necromante Caduco escrevia com isto em vez de tinta. Cada golpe puxa um fio de mana.",
+        "en": "The Fallen Necromancer wrote with this instead of ink. Each strike pulls a thread of mana."
+      }
+    },
+    {
+      "id": "espada_do_corsario",
+      "base": "arming_sword",
+      "name": {
+        "pt": "Espada do Corsário",
+        "en": "The Corsair's Sword"
+      },
+      "hue": "vermelho_sangue",
+      "level": 26,
+      "affixes": [
+        [
+          "dmg_pct",
+          16
+        ],
+        [
+          "dex",
+          8
+        ]
+      ],
+      "effect": "bleed_on_hit",
+      "source": "corsario_vermelho",
+      "lore": {
+        "pt": "A lâmina do Corsário Vermelho, manchada de propósito. O corte não estanca fácil.",
+        "en": "The Red Corsair's blade, stained on purpose. The cut does not staunch easily."
+      }
+    },
+    {
+      "id": "maca_da_pinca",
+      "base": "flanged_mace",
+      "name": {
+        "pt": "Maça da Pinça",
+        "en": "Mace of the Pincer"
+      },
+      "hue": "azul_mar",
+      "level": 32,
+      "affixes": [
+        [
+          "dmg_flat",
+          7
+        ],
+        [
+          "def_chance",
+          6
+        ]
+      ],
+      "effect": "stun_on_hit",
+      "source": "caranguejo_colossal",
+      "lore": {
+        "pt": "Uma pinça do Caranguejo Colossal, aparafusada num cabo. O impacto trava o braço.",
+        "en": "A pincer from the Colossal Crab, bolted to a haft. The impact locks the arm."
+      }
+    },
+    {
+      "id": "ferrao_de_formiga",
+      "base": "shortsword",
+      "name": {
+        "pt": "Ferrão de Formiga",
+        "en": "Ant Sting"
+      },
+      "hue": "brasa",
+      "level": 12,
+      "affixes": [
+        [
+          "dmg_flat",
+          3
+        ],
+        [
+          "res_fire",
+          8
+        ]
+      ],
+      "effect": "burn_on_hit",
+      "source": "fire_ant",
+      "lore": {
+        "pt": "O ferrão da Formiga de Fogo ainda queima depois de morto o bicho.",
+        "en": "The fire ant's sting still burns after the beast is dead."
+      }
+    },
+    {
+      "id": "casco_do_antlion",
+      "base": "tower_shield",
+      "name": {
+        "pt": "Casco do Antlion",
+        "en": "Antlion Shell"
+      },
+      "hue": "bronze",
+      "level": 20,
+      "affixes": [
+        [
+          "armor_pct",
+          12
+        ],
+        [
+          "def_chance",
+          5
+        ]
+      ],
+      "source": "antlion_armored",
+      "lore": {
+        "pt": "A placa do dorso do Antlion Couraçado, recurvada para o braço.",
+        "en": "A plate from the armored antlion's back, curved to fit the arm."
+      }
+    },
+    {
+      "id": "lanca_do_cuspe",
+      "base": "spear",
+      "name": {
+        "pt": "Lança do Cuspe",
+        "en": "Spit Spear"
+      },
+      "hue": "verde_pus",
+      "level": 14,
+      "affixes": [
+        [
+          "dmg_flat",
+          3
+        ],
+        [
+          "res_poison",
+          12
+        ]
+      ],
+      "effect": "poison_on_hit",
+      "source": "antlion_spitter",
+      "lore": {
+        "pt": "A saliva do Antlion Cuspidor comeu o ferro e deixou o veneno.",
+        "en": "The spitting antlion's saliva ate the iron and left the venom."
+      }
+    },
+    {
+      "id": "clava_do_hob",
+      "base": "club",
+      "name": {
+        "pt": "Clava do Hob",
+        "en": "Hob Club"
+      },
+      "hue": "marrom_terra",
+      "level": 16,
+      "affixes": [
+        [
+          "str",
+          6
+        ],
+        [
+          "dmg_flat",
+          3
+        ]
+      ],
+      "source": "hobgoblin",
+      "lore": {
+        "pt": "Um galho nodoso que o hobgoblin não largava nem para dormir.",
+        "en": "A knotted branch the hobgoblin did not drop even to sleep."
+      }
+    },
+    {
+      "id": "arco_do_hob",
+      "base": "bow",
+      "name": {
+        "pt": "Arco do Hob",
+        "en": "Hob Bow"
+      },
+      "hue": "verde_oliva",
+      "level": 18,
+      "affixes": [
+        [
+          "hit_chance",
+          6
+        ],
+        [
+          "dex",
+          5
+        ]
+      ],
+      "source": "hobgoblin_archer",
+      "lore": {
+        "pt": "Corda de tendão e uma haste roubada de um peregrino.",
+        "en": "A sinew string and a stave stolen from a pilgrim."
+      }
+    },
+    {
+      "id": "cetro_do_xama",
+      "base": "scepter",
+      "name": {
+        "pt": "Cetro do Xamã",
+        "en": "Shaman's Scepter"
+      },
+      "hue": "ocre",
+      "level": 12,
+      "affixes": [
+        [
+          "int",
+          6
+        ],
+        [
+          "mana",
+          10
+        ]
+      ],
+      "source": "goblin_shaman",
+      "lore": {
+        "pt": "Ossos e uma conta de vidro. O xamã jurava que a conta escutava.",
+        "en": "Bones and one glass bead. The shaman swore the bead listened."
+      }
+    },
+    {
+      "id": "machado_de_elite",
+      "base": "axe",
+      "name": {
+        "pt": "Machado de Elite",
+        "en": "Elite Axe"
+      },
+      "hue": "ouro_velho",
+      "level": 14,
+      "affixes": [
+        [
+          "dmg_pct",
+          12
+        ],
+        [
+          "str",
+          4
+        ]
+      ],
+      "source": "goblin_elite",
+      "lore": {
+        "pt": "O goblin de elite pintou o fio com ouro de mentira. O corte, esse, é de verdade.",
+        "en": "The elite goblin painted the edge with false gold. The cut itself is real."
+      }
+    },
+    {
+      "id": "espada_de_costela",
+      "base": "sword",
+      "name": {
+        "pt": "Espada de Costela",
+        "en": "Rib Sword"
+      },
+      "hue": "cinza_osso",
+      "level": 10,
+      "affixes": [
+        [
+          "dmg_flat",
+          2
+        ],
+        [
+          "durability",
+          20
+        ]
+      ],
+      "source": "skeleton",
+      "lore": {
+        "pt": "Uma espada torta feita de costela e arame. Leve, e o suficiente para um morto.",
+        "en": "A crooked sword of rib and wire. Light, and enough for a dead man."
+      }
+    },
+    {
+      "id": "besta_do_ossuario",
+      "base": "crossbow",
+      "name": {
+        "pt": "Besta do Ossuário",
+        "en": "Ossuary Crossbow"
+      },
+      "hue": "cinza_osso",
+      "level": 14,
+      "affixes": [
+        [
+          "hit_chance",
+          7
+        ],
+        [
+          "dmg_flat",
+          3
+        ]
+      ],
+      "source": "skeleton_archer",
+      "lore": {
+        "pt": "A coronha é um fêmur. O virote sai com um estalo seco.",
+        "en": "The stock is a femur. The bolt leaves with a dry crack."
+      }
+    },
+    {
+      "id": "anel_de_cinza",
+      "base": "silver_ring",
+      "name": {
+        "pt": "Anel de Cinza",
+        "en": "Ash Ring"
+      },
+      "hue": "cinza_osso",
+      "level": 16,
+      "affixes": [
+        [
+          "int",
+          5
+        ],
+        [
+          "mana",
+          8
+        ]
+      ],
+      "source": "skeleton_mage",
+      "lore": {
+        "pt": "O mago esqueleto usava isto no dedo que ainda tinha. A cinza não sai.",
+        "en": "The skeleton mage wore this on the finger it still had. The ash does not come off."
+      }
+    },
+    {
+      "id": "estrela_de_brasa",
+      "base": "morning_star",
+      "name": {
+        "pt": "Estrela de Brasa",
+        "en": "Ember Star"
+      },
+      "hue": "brasa",
+      "level": 18,
+      "affixes": [
+        [
+          "dmg_flat",
+          4
+        ],
+        [
+          "res_fire",
+          10
+        ]
+      ],
+      "effect": "burn_on_hit",
+      "source": "skeleton_mage_fire",
+      "lore": {
+        "pt": "A bola da maça guarda uma brasa que o mago de fogo não conseguiu apagar.",
+        "en": "The mace's ball holds an ember the fire mage could not put out."
+      }
+    },
+    {
+      "id": "pique_do_campeao",
+      "base": "pike",
+      "name": {
+        "pt": "Pique do Campeão",
+        "en": "Champion's Pike"
+      },
+      "hue": "vermelho_montgisard",
+      "level": 22,
+      "affixes": [
+        [
+          "dmg_pct",
+          16
+        ],
+        [
+          "hit_chance",
+          6
+        ]
+      ],
+      "source": "skeleton_knight_boss",
+      "lore": {
+        "pt": "O campeão esqueleto ainda apresenta armas com esta haste. A ponta é o que sobrou de um elmo.",
+        "en": "The skeleton champion still presents arms with this haft. The point is what remained of a helm."
+      }
+    },
+    {
+      "id": "manto_de_seda_negra",
+      "base": "silk_robe",
+      "name": {
+        "pt": "Manto de Seda Negra",
+        "en": "Black Silk Robe"
+      },
+      "hue": "preto_sombra",
+      "level": 24,
+      "affixes": [
+        [
+          "mana",
+          18
+        ],
+        [
+          "skill:magery",
+          8
+        ]
+      ],
+      "source": "skeleton_mage_boss",
+      "lore": {
+        "pt": "O arqui-mago esqueleto bordou círculos na barra. A seda não apodrece.",
+        "en": "The skeleton archmage embroidered circles on the hem. The silk does not rot."
+      }
+    },
+    {
+      "id": "capelo_do_hierofante",
+      "base": "wizard_hat",
+      "name": {
+        "pt": "Capelo do Hierofante",
+        "en": "Hierophant's Cap"
+      },
+      "hue": "violeta_cripta",
+      "level": 28,
+      "affixes": [
+        [
+          "int",
+          12
+        ],
+        [
+          "mana",
+          22
+        ]
+      ],
+      "effect": "mana_leech",
+      "source": "skeleton_mage_high_boss",
+      "lore": {
+        "pt": "O hierofante esqueleto media a mana dos outros por este capelo. Um pouco dela fica.",
+        "en": "The skeleton hierophant measured others' mana through this cap. A little of it stays."
+      }
+    },
+    {
+      "id": "cutelo_podre",
+      "base": "cleaver",
+      "name": {
+        "pt": "Cutelo Podre",
+        "en": "Rotten Cleaver"
+      },
+      "hue": "verde_pus",
+      "level": 12,
+      "affixes": [
+        [
+          "dmg_flat",
+          3
+        ],
+        [
+          "res_poison",
+          8
+        ]
+      ],
+      "effect": "poison_on_hit",
+      "source": "zombie",
+      "lore": {
+        "pt": "O zumbi não caçava: desossava. O cutelo ainda adoece o corte.",
+        "en": "The zombie did not hunt: it butchered. The cleaver still sickens the cut."
+      }
+    },
+    {
+      "id": "manto_sombrio",
+      "base": "crimson_cloak",
+      "name": {
+        "pt": "Manto Sombrio",
+        "en": "Dark Cloak"
+      },
+      "hue": "preto_sombra",
+      "level": 18,
+      "affixes": [
+        [
+          "res_energy",
+          14
+        ],
+        [
+          "dex",
+          4
+        ]
+      ],
+      "source": "zombie_dark",
+      "lore": {
+        "pt": "O zumbi sombrio arrasta este pano mesmo rasgado. A escuridão gruda na barra.",
+        "en": "The dark zombie drags this cloth even torn. The dark sticks to the hem."
+      }
+    },
+    {
+      "id": "alabarda_da_serpe",
+      "base": "halberd",
+      "name": {
+        "pt": "Alabarda da Serpe",
+        "en": "Wyvern Halberd"
+      },
+      "hue": "verde_oliva",
+      "level": 22,
+      "affixes": [
+        [
+          "dmg_pct",
+          14
+        ],
+        [
+          "dex",
+          6
+        ]
+      ],
+      "source": "wyvern",
+      "lore": {
+        "pt": "Uma garra da serpe comum, posta numa haste de freixo. O alcance é o da asa.",
+        "en": "A claw from a common wyvern, set on an ash haft. The reach is the wing's."
+      }
+    },
+    {
+      "id": "dardo_do_vento",
+      "base": "javelin",
+      "name": {
+        "pt": "Dardo do Vento",
+        "en": "Wind Javelin"
+      },
+      "hue": "azul_ceu",
+      "level": 24,
+      "affixes": [
+        [
+          "swing_speed",
+          10
+        ],
+        [
+          "dex",
+          8
+        ]
+      ],
+      "source": "wyvern_air",
+      "lore": {
+        "pt": "A serpe do ar soltou isto como quem solta uma pena. Chega antes do braço.",
+        "en": "The air wyvern loosed this the way one looses a feather. It arrives before the arm."
+      }
+    },
+    {
+      "id": "lanca_da_agua",
+      "base": "lance",
+      "name": {
+        "pt": "Lança da Água",
+        "en": "Water Lance"
+      },
+      "hue": "azul_mar",
+      "level": 24,
+      "affixes": [
+        [
+          "dmg_flat",
+          5
+        ],
+        [
+          "res_cold",
+          12
+        ]
+      ],
+      "effect": "chill_on_hit",
+      "source": "wyvern_water",
+      "lore": {
+        "pt": "A serpe da água deixou a lança molhada para sempre. O frio entra pela junta.",
+        "en": "The water wyvern left the lance wet forever. The cold gets in through the joint."
+      }
+    },
+    {
+      "id": "arco_da_ancia",
+      "base": "composite_bow",
+      "name": {
+        "pt": "Arco da Anciã",
+        "en": "The Elder's Bow"
+      },
+      "hue": "azul_ceu",
+      "level": 30,
+      "affixes": [
+        [
+          "dmg_pct",
+          18
+        ],
+        [
+          "dex",
+          8
+        ]
+      ],
+      "source": "wyvern_air_boss",
+      "lore": {
+        "pt": "A serpe anciã do ar entortou este arco com o vento da asa, não com as mãos.",
+        "en": "The elder air wyvern bent this bow with the wind of a wing, not with hands."
+      }
+    },
+    {
+      "id": "colar_de_tumulos",
+      "base": "gold_necklace",
+      "name": {
+        "pt": "Colar de Túmulos",
+        "en": "Necklace of Tombs"
+      },
+      "hue": "purpura",
+      "level": 26,
+      "affixes": [
+        [
+          "int",
+          8
+        ],
+        [
+          "mana",
+          16
+        ]
+      ],
+      "effect": "mana_leech",
+      "source": "necromancer",
+      "lore": {
+        "pt": "O necromante conta os mortos nestas contas de ouro. Cada uma puxa um pouco de mana.",
+        "en": "The necromancer counts the dead on these gold beads. Each one pulls a little mana."
+      }
+    },
+    {
+      "id": "lasca_de_pedreira",
+      "base": "bardiche",
+      "name": {
+        "pt": "Lasca de Pedreira",
+        "en": "Quarry Shard"
+      },
+      "hue": "cinza_pedra",
+      "level": 20,
+      "affixes": [
+        [
+          "dmg_flat",
+          5
+        ],
+        [
+          "str",
+          6
+        ]
+      ],
+      "effect": "stun_on_hit",
+      "source": "boulder",
+      "lore": {
+        "pt": "Um fragmento do pedregulho, afiado na queda. Pesado o bastante para travar um escudo.",
+        "en": "A shard of the boulder, sharpened by the fall. Heavy enough to jam a shield."
+      }
+    }
+  ]
+}
