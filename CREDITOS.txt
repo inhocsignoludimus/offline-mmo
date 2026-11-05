@@ -1,0 +1,155 @@
+MMO OFFLINE (NOME PROVISÓRIO)
+  Estúdio: In Hoc Signo Ludimus
+  Direção: Rodrigo
+
+  Jogo de um jogador, no estilo de Ultima Online, sem servidor.
+  Este arquivo é a lista de créditos. Quem mantém a lista é o
+  Ludimus. Toda inclusão de asset atualiza este texto no mesmo
+  pull request que traz o arquivo.
+
+
+REGRA
+=====
+Todo asset que entrar neste repositório ganha, aqui, três coisas:
+
+  - autor
+  - licença
+  - link da obra e link do texto da licença
+
+Não entram assets de uso não comercial (CC-BY-NC, CC-BY-NC-SA,
+CC-BY-NC-ND, "non-commercial" e equivalentes), nem material do
+Ultima Online ou da EA, nem assets sem licença. Licença sem
+direito de adaptação (ND) também não serve: o jogo recorta e
+reduz a arte.
+
+A arte derivada do Flare fica em CC-BY-SA 3.0, e versões
+posteriores podem ser usadas (docs/ART_SPEC.md, seção 8). Ver
+LICENSE e art/LICENSE. O crédito de cada obra de origem continua
+obrigatório.
+
+
+ARTE DESTE JOGO — art/
+======================
+Ainda não há tiles, props nem arquivos .blend neste repositório.
+Quando o primeiro render entrar, a entrada correspondente nasce
+nesta seção, com o caminho do arquivo, o autor (Ludimus / estúdio,
+ou o autor da obra adaptada), a licença e o que mudou em relação
+à origem.
+
+Licença da arte derivada do Flare, nesta pasta:
+
+  Creative Commons Atribuição-CompartilhaIgual 3.0 Internacional
+  Versões posteriores podem ser usadas.
+  https://creativecommons.org/licenses/by-sa/3.0/deed.pt
+  https://creativecommons.org/licenses/by-sa/3.0/legalcode
+
+  CC0 aceito, sempre com linha nesta ficha: texturas da
+  ambientCG, da Poly Haven e do flare-game-art-src; modelos da
+  Quaternius e da KayKit.
+
+
+FLARE
+=====
+Arte reutilizável que este jogo pode adaptar. Nenhum arquivo do
+Flare foi copiado no esqueleto inicial do repositório.
+
+Projeto
+  Flare — https://flarerpg.org
+  Jogo e arte publicados:
+    https://github.com/flareteam/flare-game
+  Fontes Blender atualizadas (flare-game-art-src; os .blend em
+  art_src_hd miram resolução maior e o renderizador EEVEE; as
+  texturas desse repositório incluem material CC0):
+    https://github.com/flareteam/flare-game-art-src
+
+Licença da arte do flare-game
+  Creative Commons Atribuição-CompartilhaIgual 3.0, com versões
+  posteriores permitidas pelo projeto.
+    https://creativecommons.org/licenses/by-sa/3.0/
+    https://creativecommons.org/licenses/by-sa/3.0/legalcode
+  O wiki do Flare registra essa concessão (código sob GPL v3 e
+  arte sob CC-BY-SA 3.0, versões posteriores permitidas para as
+  duas licenças):
+    https://github.com/flareteam/flare-game/wiki/Credits
+
+  A adaptação que passar a viver em art/ deste jogo fica em
+  CC-BY-SA 3.0, com versões posteriores permitidas, como a arte
+  de origem. O código do motor Flare é GPL v3 e não é copiado
+  para cá.
+
+Créditos publicados pelo flare-game (CREDITS.txt e wiki)
+  https://github.com/flareteam/flare-game/blob/master/CREDITS.txt
+  https://github.com/flareteam/flare-game/wiki/Credits
+
+  Arte:
+    Blarumyrran
+    Brandon Morris "Augmentality" — https://www.youtube.com/brandon75689
+    Clint Bellanger — https://clintbellanger.net
+    Holly Daniel
+    Justin Jacobs — https://dorkster.github.io/
+    Justin Nichol — https://opengameart.org/users/justin-nichol
+    Jessica "Zeldyn" Cox — https://zeldyn.deviantart.com/
+    remaxim — https://opengameart.org/users/remaxim
+    rubberduck — https://opengameart.org/users/rubberduck
+    Sarah Benalene — https://benalene.com/
+    Scrittl
+    Stefan Beller — https://github.com/stefanbeller
+
+  Arte adicional reutilizada pelo Flare (crédito exigido pelas
+  licenças de origem; a lista fechada por arquivo está no
+  CREDITS.txt e no wiki do Flare):
+    Aare; Bart K (OpenGameArt.org); Blender Foundation
+    (apricot.blender.org); Cori Samuel; D. Sharon Pruitt;
+    Hythlodaeus; Iwan "qubodup" Gabovitch; Lamoot; Lattice;
+    Ljudbank; Lorc; MaximB; Michael Baradari; Mike Koenig;
+    Mikodrak; Misha; Mumu; Naraphim; p0ss; Renderwahn; rubberduck;
+    Samuel Moxham; Sindwiller; Spookymodem; Stephan; TiZiana;
+    Vwolfdog; Yughues; Zuendholz.
+
+Planície nevada (snowplains)
+  Autor: rubberduck, em cima do tileset de pradaria (grassland)
+  de Clint Bellanger.
+  O wiki do Flare lista este arquivo sob CC-BY-SA 3.0 e também
+  sob GPL 3.0. Neste jogo a concessão usada é a CC-BY-SA (3.0 ou
+  posterior, como o restante da arte do Flare). A GPL não é
+  adotada, para a pasta art/ não herdar a licença do código do
+  Flare.
+  Arquivo no flare-game:
+    mods/empyrean_campaign/images/tilesets/tileset_snowplains.png
+  Ficha pública do conjunto isométrico de neve, publicada pelo
+  autor sob CC-BY-SA 3.0:
+    https://opengameart.org/content/isometric-snow-tileset-flare
+  Perfil: https://opengameart.org/users/rubberduck
+  Ao importar qualquer recorte desse conjunto, repetir aqui o
+  caminho local, o arquivo de origem e os créditos por arquivo
+  que o CREDITS.txt do Flare e o credits.txt do próprio tileset
+  listarem. Não resumir por cima de um crédito que a licença
+  pede nome a nome.
+
+
+FONTES
+======
+Nenhuma fonte faz parte do jogo neste momento.
+
+Se uma fonte for adicionada depois, a licença dela é a SIL Open
+Font License 1.1:
+
+  https://openfontlicense.org/
+
+A OFL fica na fonte. O arquivo da fonte não é relicenciado como
+CC-BY-SA. A entrada desta seção leva o nome da fonte, o autor, a
+licença e o link do arquivo de origem.
+
+
+MOTOR DE REFERÊNCIA (CÓDIGO DO PRÓPRIO ESTÚDIO)
+===============================================
+Projeção, tile de tela e recorte de cenário seguem A Cruz de
+Montgisard, do mesmo estúdio. Isso é convenção de código, não
+arte de terceiros:
+
+  https://github.com/inhocsignoludimus/The-Cross-of-Montgisard
+
+  js/jogo.js — TILE_LARGURA = 64, TILE_ALTURA = 32.
+  O chão é medido em metros e convertido para pixels.
+  O cenário em folhas está em assets/cenario/<área>/folha*.webp,
+  fatiado por CENARIO_DADOS.

@@ -1,0 +1,19 @@
+A arte nesta pasta e nas subpastas fica sob a licença Creative
+Commons Atribuição-CompartilhaIgual 3.0 Internacional (CC-BY-SA 3.0).
+Versões posteriores dessa licença podem ser usadas.
+
+  https://creativecommons.org/licenses/by-sa/3.0/deed.pt
+  https://creativecommons.org/licenses/by-sa/3.0/legalcode
+
+É o que `docs/ART_SPEC.md` (seção 8) fixou para a arte derivada
+do Flare. O crédito de cada arquivo (autor, licença de origem,
+link e o que mudou) está em CREDITOS.txt, na raiz do repositório.
+
+Texturas CC0 (ambientCG, Poly Haven, flare-game-art-src) e modelos
+CC0 (Quaternius, KayKit) podem entrar, sempre com linha no
+CREDITOS.txt. Se o arquivo CC0 for redistribuído sozinho, continua
+CC0.
+
+Não colocar aqui arquivo non-commercial, material do Ultima Online
+ou da EA, arquivo sem licença, ou arquivo com vedação de obra
+derivada.
