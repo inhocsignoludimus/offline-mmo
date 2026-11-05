@@ -53,20 +53,22 @@ tile=ID,x,y,w,h,ox,oy
 
 ## 5. Construções em que se entra (obrigatório)
 
-Toda construção precisa poder ser aberta. Cada casa é entregue em **peças separadas**, alinhadas na mesma grade:
+Toda construção precisa poder ser aberta. Cada casa é renderizada **inteira** no Blender e entregue em **camadas grandes**, não em peças por tile. Todas as camadas da casa têm **o mesmo tamanho de imagem e a mesma âncora**: `ox, oy` é o ponto, dentro da imagem, onde fica o centro do losango do tile de origem da casa (o canto norte da planta, `[0,0]` no `house.json`), na escala do master (192×96).
 
-| Camada | O que é |
-|---|---|
-| `floor` | chão interno, tile a tile |
-| `wall` | uma peça de parede **por tile**, com variações: reta NE–SO, reta NO–SE, quina externa, quina interna, ponta, com janela, com porta (vão) |
-| `wall_low` | **a mesma parede cortada na altura do rodapé** (cerca de 20% da altura). A engine usa essa versão nas paredes da frente quando o jogador está dentro |
-| `door` | aberta e fechada, nas 2 orientações |
-| `roof` | o telhado como **uma imagem por construção** (`<casa>_roof.png`), com a âncora no tile de origem da casa. A engine esconde o telhado quando o jogador entra |
-| `props` | móveis e decoração **soltos**: nunca grudados na parede nem no chão |
+| Camada | Arquivo | O que é |
+|---|---|---|
+| `back` | `back.png` | paredes do fundo (as faces voltadas para longe da câmera), chão interno e tudo o que é fixo por dentro |
+| `front` | `front.png` | as paredes da frente inteiras (as duas faces voltadas para a câmera), **sem** a porta |
+| `front_low` | `front_low.png` | as mesmas paredes da frente cortadas no rodapé (cerca de 20% da altura). A engine troca `front` por esta quando o jogador está dentro |
+| `roof` | `roof.png` | o telhado, sozinho. A engine esconde quando o jogador entra |
+| `door_closed` / `door_open` | `door_closed.png`, `door_open.png` | só a folha da porta, com a mesma âncora da casa |
+| `props` | `props/<id>_r0..r3.png` | móveis soltos, um por tile, em 4 rotações (âncora própria, como qualquer objeto) |
 
-* As paredes ocupam **um tile inteiro** de colisão, como no Flare e no After Light. A espessura visual pode ser fina, centrada no tile.
-* Cada casa de teste vem com um `house.json` (ver o `DATA_SCHEMA.md`) que lista as peças por posição, mais a porta e a área interna.
-* O kit de paredes vem por material: madeira (cabana), enxaimel (`medieval_building_tiles`), pedra (castelo e muralha), arenito (Terra Santa) e barro/adobe (vilas do deserto).
+* O telhado não pode ter frestas: um pixel de céu ou de luz interna atravessando as telhas aparece como brilho no jogo. Janela sem luz acesa por dentro (a luz da casa é da engine).
+* A porta tem de ter **pelo menos 1,2× a altura do personagem** (personagem de pé ≈ 140 px no master, 70 px no jogo). Parede da frente da mesma altura da porta mais o lintel.
+* A colisão continua **por tile** no `house.json` (ver o `DATA_SCHEMA.md`): parede ocupa o tile inteiro, como no Flare e no After Light.
+* **Profundidade:** a engine ordena as camadas pela planta da casa (o retângulo `size`), não por um valor fixo. Quem está fora do lado da câmera (x maior que a parede da frente leste ou y maior que a parede da frente sul) é desenhado por cima de `front`; quem está dentro ou atrás fica por baixo. Por isso a casa é **retangular** em planta. Casas em L ou com anexo vêm como duas casas encostadas, cada uma com o seu `house.json`.
+* Os materiais seguem: madeira (cabana), enxaimel (`medieval_building_tiles`), pedra (castelo e muralha), arenito (Terra Santa) e barro/adobe (vilas do deserto).
 
 ## 6. Nomes e pastas
 
