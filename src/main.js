@@ -4,45 +4,28 @@
 // entrada (clique para andar, segurar para seguir o cursor) e roda o laço.
 // DATA vem embutido pelo build/build.py (funciona em file:// no APK).
 // =====================================================================
-const ITENS_DEV = {
-  espada: { name: 'Espada longa', icon: 'espada_1', layer: 'longsword' },
-  maca: { name: 'Maça', icon: 'maca_0', layer: 'mace' },
-  machado: { name: 'Machadinha', icon: 'machado', layer: 'hand_axe' },
-  faca: { name: 'Adaga', icon: 'faca_0', layer: 'dagger' },
-  lanca: { name: 'Lança', icon: 'lanca_0', layer: 'lanca' },
-  martelo: { name: 'Martelo', icon: 'martelo', layer: 'martelo' },
-  escudoCruz: { name: 'Escudo da cruz', icon: 'escudoCruz', layer: 'escudo_cruz' },
-  escudoRedondo: { name: 'Escudo redondo', icon: 'escudoRedondo', layer: 'escudo_redondo' },
-  broquel: { name: 'Broquel', icon: 'broquel', layer: 'buckler' },
-  elmoNasal: { name: 'Elmo nasal', icon: 'elmoNasal', layer: 'elmo_nasal' },
-  turbante: { name: 'Turbante', icon: 'turbante', layer: 'turbante' },
-  capuz: { name: 'Capuz de couro', icon: 'capuz', layer: 'leather_hood' },
-  loriga: { name: 'Loriga', icon: 'loriga', layer: 'loriga' },
-  lamelar: { name: 'Armadura lamelar', icon: 'lamelar', layer: 'lamelar' },
-  gambesao: { name: 'Gambesão', icon: 'gambesao', layer: 'gambesao' },
-  jaque: { name: 'Jaque de couro', icon: 'jaque', layer: 'jaque_couro' },
-  habito: { name: 'Hábito de peregrino', icon: 'habito', layer: 'habito_peregrino' },
-  sobrevesteCruzado: { name: 'Sobreveste de cruzado', icon: 'sobreveste', layer: 'armadura_cruzado' },
-  sobrevesteTemplario: { name: 'Manto do Templo', icon: 'sobreveste', layer: 'armadura_templario' },
-  gibao: { name: 'Gibão de sargento', icon: 'gibao', layer: 'armadura_sargento' },
-  lorigao: { name: 'Lorigão', icon: 'cota', layer: 'lorigao' },
-  coifa: { name: 'Coifa de malha', icon: 'capelo', layer: 'chain_coif' },
-  grevas: { name: 'Grevas de malha', icon: 'cotaSemMangas', layer: 'chain_greaves' },
-  botasCano: { name: 'Botas de cano', icon: 'botasCano', layer: 'chain_boots' },
-  luvas: { name: 'Luvas de couro', icon: 'luvasCouro', layer: 'leather_gloves' },
-  manoplas: { name: 'Manoplas de malha', icon: 'manoplas', layer: 'chain_gloves' },
-  botas: { name: 'Botas de couro', icon: 'botasCouro', layer: 'leather_boots' },
-  amendoa: { name: 'Amêndoas', icon: 'amendoa_0', food: 1 },
-  relicario: { name: 'Relicário', icon: 'relicario' },
-  anel: { name: 'Anel de prata', icon: 'anelPrata' },
+// Itens: data/items/base.json (Ludimus). sprite_layer = 'm/<camada do TCoM>' ou null.
+const Items = {
+  byId: {},
+  init(data) { for (const it of data.items.items) this.byId[it.id] = it; },
+  def(id) { return this.byId[id]; },
+  name(d) { return (d.name && (d.name[Chat.lang] || d.name.pt)) || d.id; },
+  layer(d) { return d.sprite_layer ? d.sprite_layer.split('/')[1] : null; },
+  stackable(d) { return ['consumable', 'resource'].includes(d.type) || d.slot === 'none' && d.type === 'misc'; },
+  twoHanded(d) { return ['arco', 'besta', 'lanca', 'infantry_axe'].includes(this.layer(d)) || /staff/.test(d.id); },
 };
+// ofícios iniciais: equipamento (ids de itens), camadas de base que não são itens e o que vai na mochila
 const CLASSES = {
-  guerreiro: { nome: 'Guerreiro', m: ['chain_greaves', 'leather_boots', 'gambesao', 'leather_gloves', 'male_head1', 'elmo_nasal', 'longsword', 'buckler'], skills: { Espadas: 50, Táticas: 45, Cura: 30, Anatomia: 25 }, bag: ['loriga', 'escudoRedondo', 'maca'] },
-  cruzado: { nome: 'Cruzado', m: ['chain_greaves', 'chain_boots', 'chain_gloves', 'armadura_cruzado', 'male_head2', 'chain_coif', 'longsword', 'escudo_cruz'], skills: { Espadas: 45, Táticas: 40, Cavalgar: 35, Piedade: 30 }, bag: ['elmoNasal', 'relicario'] },
-  beduino: { nome: 'Beduíno', m: ['beduino_saia', 'beduino_veste', 'beduino_mangas', 'cloth_sandals', 'male_head1', 'turbante', 'lanca', 'escudo_redondo'], skills: { Lanças: 50, Táticas: 35, Rastrear: 35, Cavalgar: 30 }, bag: ['faca', 'amendoa'] },
-  artesao: { nome: 'Artesão', m: ['cloth_pants', 'leather_boots', 'ferreiro_tunica', 'male_head2', 'martelo'], skills: { Ferraria: 55, Mineração: 50, Carpintaria: 30, Comércio: 25 }, bag: ['machado', 'luvas', 'anel'] },
-  peregrino: { nome: 'Peregrino', m: ['cloth_pants', 'cloth_sandals', 'habito_peregrino', 'male_head1'], f: ['habito', 'head_long'], skills: { Cura: 50, Magia: 40, Meditação: 40, Piedade: 30 }, bag: ['relicario', 'amendoa'] },
-  aldea: { nome: 'Aldeã(o)', m: ['cloth_pants', 'cloth_sandals', 'aldeao_tunica1', 'male_head1', 'dagger'], f: ['aldea_roupa2', 'head_long'], skills: { Culinária: 45, Pesca: 45, Alquimia: 30, Comércio: 30 }, bag: ['faca', 'amendoa', 'capuz'] },
+  guerreiro: { equip: ['gambeson', 'chain_greaves', 'leather_boots', 'leather_gloves', 'nasal_helm', 'longsword', 'buckler'], base: ['male_head1'], skills: { Espadas: 50, Táticas: 45, Cura: 30, Anatomia: 25 }, bag: [['loriga'], ['round_shield'], ['mace'], ['bandage', 8], ['heal_potion', 2]] },
+  cruzado: { equip: ['crusader_surcoat', 'chain_greaves', 'chain_boots', 'chain_gloves', 'chain_coif', 'longsword', 'crusader_shield'], base: ['male_head2'], skills: { Espadas: 45, Táticas: 40, Cavalgar: 35, Piedade: 30 }, bag: [['nasal_helm'], ['pilgrim_cross'], ['bandage', 6], ['bread', 4]] },
+  beduino: { equip: ['bedouin_robe', 'cloth_sandals', 'turban', 'spear'], base: ['male_head1', 'beduino_saia', 'beduino_mangas'], skills: { Lanças: 50, Táticas: 35, Rastrear: 35, Cavalgar: 30 }, bag: [['dagger'], ['keffiyeh'], ['round_shield'], ['dried_meat', 6]] },
+  artesao: { equip: ['cloth_pants', 'leather_boots', 'smith_hammer'], base: ['male_head2', 'ferreiro_tunica'], skills: { Ferraria: 55, Mineração: 50, Carpintaria: 30, Comércio: 25 }, bag: [['pickaxe'], ['leather_gloves'], ['iron_ore', 12], ['iron_ingot', 6], ['logs', 10]] },
+  peregrino: { equip: ['pilgrim_habit', 'cloth_pants', 'cloth_sandals', 'pilgrim_cross'], base: ['male_head1'], f: ['habito', 'head_long'], skills: { Cura: 50, Magia: 40, Meditação: 40, Piedade: 30 }, bag: [['relicary'], ['heal_potion', 3], ['mana_potion', 2], ['bread', 5]] },
+  aldea: { equip: ['cloth_pants', 'cloth_sandals', 'peasant_tunic', 'skinning_knife'], base: ['male_head1'], f: ['aldea_roupa2', 'head_long'], skills: { Culinária: 45, Pesca: 45, Alquimia: 30, Comércio: 30 }, bag: [['fishing_pole'], ['sewing_kit'], ['cloth_bolt', 3], ['bread', 5]] },
+};
+const EFEITOS = { // consumíveis
+  bandage: p => p.hp += 8, greater_bandage: p => p.hp += 18, heal_potion: p => p.hp += 20, greater_heal_potion: p => p.hp += 40,
+  mana_potion: p => p.mp += 20, refresh_potion: p => p.st += 30, cure_potion: p => p.hp += 2, bread: p => p.st += 12, dried_meat: p => p.st += 15,
 };
 
 const Game = {
@@ -53,20 +36,19 @@ const Game = {
     this.townCenter = this.findCenter();
     Chat.init(DATA); TCOM.meta = DATA.tcom; Icons.meta = DATA.icons;
     // personagem
+    Items.init(DATA);
     const cls = CLASSES[cfg.cls] || CLASSES.guerreiro, sexo = cfg.sexo === 'f' ? 'f' : 'm';
-    const layers = sexo === 'f' ? (cls.f || ['clothes', 'head_long']) : cls.m;
+    const base = sexo === 'f' ? (cls.f || ['clothes', 'head_long']) : cls.base;
     const [x, y] = this.townCenter;
-    const actor = new Actor({ x, y, ap: { sexo, layers: layers.slice() }, name: cfg.name, kind: 'me', nameColor: '#6ab0ff', speed: 4.2 });
+    const actor = new Actor({ x, y, ap: { sexo, layers: [] }, name: cfg.name, kind: 'me', nameColor: '#6ab0ff', speed: 4.2 });
     this.player = {
-      name: cfg.name, guild: null, actor, gold: 120, hp: 70, hpMax: 70, mp: 40, mpMax: 40, st: 60, stMax: 60,
+      name: cfg.name, guild: null, actor, base, gold: 120, hp: 70, hpMax: 70, mp: 40, mpMax: 40, st: 60, stMax: 60,
       skills: { ...cls.skills }, equip: {}, bag: [],
-      weight() { return 8 + this.bag.length * 3 + Object.keys(this.equip).length * 4; },
+      weight() { let w = 0; for (const i of this.bag) w += (i.d.weight || 0) * i.qty; for (const k in this.equip) w += this.equip[k].d.weight || 0; return Math.round(w); },
     };
-    // o que já veste vira item equipado no paperdoll
-    const byLayer = {}; for (const k in ITENS_DEV) if (ITENS_DEV[k].layer) byLayer[ITENS_DEV[k].layer] = k;
-    for (const l of layers) if (byLayer[l]) this.player.equip[TCOM.slot[l]] = this.item(byLayer[l]);
-    cls.bag.forEach(k => this.give(k));
-    this.give('amendoa'); this.player.bag.find(i => i.icon === 'amendoa_0').qty = 5;
+    for (const id of cls.equip) { const it = this.item(id); if (it) this.player.equip[it.d.slot] = it; }
+    cls.bag.forEach(([id, n]) => this.give(id, n || 1));
+    this.rebuildLook();
     this.playerSim = { name: cfg.name, online: true, near: true, pers: 'novato' };
     this.actors.push(actor);
     Camera.snap(x, y);
@@ -92,35 +74,42 @@ const Game = {
     }
     return best;
   },
-  item(k) { const d = ITENS_DEV[k]; return { k, ...d, qty: 1, bx: 6 + Math.random() * 170, by: 6 + Math.random() * 120 }; },
-  give(k) { const it = this.item(k); const same = it.food && this.player.bag.find(i => i.k === k); if (same) same.qty++; else this.player.bag.push(it); },
+  item(id, qty = 1) {
+    const d = Items.def(id); if (!d) { console.warn('item desconhecido', id); return null; }
+    return { id, d, name: Items.name(d), icon: d.icon, qty, bx: 6 + Math.random() * 170, by: 6 + Math.random() * 120 };
+  },
+  give(id, qty = 1) {
+    const it = this.item(id, qty); if (!it) return;
+    const same = Items.stackable(it.d) && this.player.bag.find(i => i.id === id);
+    if (same) same.qty += qty; else this.player.bag.push(it);
+  },
   useItem(it) {
-    const p = this.player;
-    if (it.food) { it.qty--; if (it.qty <= 0) p.bag.splice(p.bag.indexOf(it), 1); p.st = Math.min(p.stMax, p.st + 10); Journal.add('system', '', `Você come ${it.name.toLowerCase()}.`); Backpack.render(); return; }
-    if (!it.layer) { Journal.add('system', '', it.name); return; }
-    const slot = TCOM.slot[it.layer];
-    const old = p.equip[slot];
+    const p = this.player, d = it.d;
+    if (EFEITOS[it.id]) {
+      EFEITOS[it.id](p); p.hp = Math.min(p.hpMax, p.hp); p.mp = Math.min(p.mpMax, p.mp); p.st = Math.min(p.stMax, p.st);
+      if (--it.qty <= 0) p.bag.splice(p.bag.indexOf(it), 1);
+      Journal.add('system', '', `Você usa: ${it.name.toLowerCase()}.`); Backpack.render(); return;
+    }
+    if (!d.slot || d.slot === 'none') { Journal.add('system', '', (d.desc && (d.desc[Chat.lang] || d.desc.pt)) || it.name); return; }
     p.bag.splice(p.bag.indexOf(it), 1);
-    if (old) p.bag.push({ ...old, bx: it.bx, by: it.by });
-    p.equip[slot] = it;
-    this.rebuildLook();
-    Backpack.render(); Paperdoll.render();
+    const back = s => { const o = p.equip[s]; if (o) { delete p.equip[s]; p.bag.push({ ...o, bx: it.bx, by: it.by }); } };
+    back(d.slot);
+    if (d.slot === 'hand2') { const m = p.equip.hand1; if (m && Items.twoHanded(m.d)) back('hand1'); }
+    if (d.slot === 'hand1' && Items.twoHanded(d)) back('hand2');
+    p.equip[d.slot] = it;
+    this.rebuildLook(); Backpack.render(); Paperdoll.render();
   },
   unequip(slot) {
     const p = this.player, it = p.equip[slot]; if (!it) return;
     delete p.equip[slot]; p.bag.push({ ...it, bx: 10 + Math.random() * 150, by: 10 + Math.random() * 100 });
     this.rebuildLook(); Backpack.render(); Paperdoll.render();
   },
+  // camadas = base (cabeça, roupa de baixo) + itens equipados; armadura de tronco esconde a túnica de base
   rebuildLook() {
-    const a = this.player.actor, p = this.player;
-    // mantém o que não é item (cabeça, roupa de baixo) e troca o resto pelo equipado
-    const itemLayers = new Set(Object.values(ITENS_DEV).map(i => i.layer).filter(Boolean));
-    const base = a.ap.layers.filter(l => !itemLayers.has(l));
-    const eq = Object.values(p.equip).map(i => i.layer);
-    // armadura de tronco esconde a túnica de baixo
+    const p = this.player, a = p.actor;
+    const eq = Object.values(p.equip).map(i => Items.layer(i.d)).filter(Boolean);
     const hasChest = eq.some(l => TCOM.slot[l] === 'tronco');
-    a.ap.layers = base.filter(l => !(hasChest && TCOM.slot[l] === 'tronco')).concat(eq);
-    if (!hasChest && !a.ap.layers.some(l => TCOM.slot[l] === 'tronco')) a.ap.layers.push(a.ap.sexo === 'f' ? 'clothes' : 'aldeao_tunica1');
+    a.ap.layers = p.base.filter(l => !(hasChest && TCOM.slot[l] === 'tronco')).concat(eq);
     a.camadas = montarCamadas(a.ap);
   },
 

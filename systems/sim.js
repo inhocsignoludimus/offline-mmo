@@ -24,10 +24,11 @@ const GUILDA_COMBINA = { rp: ['roleplayer', 'comerciante'], pvp: ['pvper', 'trol
 // visuais com as camadas do TCoM
 const VISUAIS_M = [
   () => [rnd(['cloth_pants', 'calca_branca']), rnd(['cloth_sandals', 'leather_boots']), rnd(['aldeao_tunica1', 'aldeao_tunica2', 'cloth_shirt', 'ferreiro_tunica']), rnd(['male_head1', 'male_head2']), ...(chance(0.3) ? ['leather_hood'] : []), ...(chance(0.5) ? [rnd(['dagger', 'hand_axe', 'martelo'])] : [])],
-  () => ['chain_greaves', rnd(['chain_boots', 'leather_boots']), rnd(['loriga', 'lorigao', 'lamelar', 'gambesao', 'jaque_couro']), rnd(['chain_gloves', 'leather_gloves']), rnd(['male_head1', 'male_head2']), rnd(['elmo_nasal', 'chain_coif', 'elmo_nasal']), rnd(['longsword', 'mace', 'hand_axe', 'lanca']), rnd(['shield', 'buckler', 'escudo_redondo'])],
+  () => ['chain_greaves', rnd(['chain_boots', 'leather_boots']), rnd(['loriga', 'lorigao', 'lamelar', 'gambesao', 'jaque_couro', 'chain_cuirass', 'leather_armor', 'cazagante']), rnd(['chain_gloves', 'leather_gloves']), rnd(['male_head1', 'male_head2']), rnd(['elmo_nasal', 'chain_coif', 'elmo_pontudo', 'elmo_grande', 'elmo_rosto']), rnd(['longsword', 'mace', 'hand_axe', 'lanca', 'infantry_axe']), rnd(['shield', 'buckler', 'escudo_redondo'])],
   () => ['chain_greaves', 'chain_boots', 'chain_gloves', rnd(['armadura_templario', 'armadura_cruzado', 'armadura_sargento']), rnd(['male_head1', 'male_head2']), rnd(['elmo_nasal', 'chain_coif']), 'longsword', 'escudo_cruz'],
   () => ['beduino_saia', 'beduino_veste', 'beduino_mangas', 'cloth_sandals', rnd(['male_head1', 'male_head2']), 'turbante', rnd(['dagger', 'lanca', 'hand_axe', 'longsword']), ...(chance(0.5) ? ['escudo_redondo'] : [])],
   () => ['cloth_pants', 'cloth_sandals', 'habito_peregrino', rnd(['male_head1', 'male_head2'])],
+  () => ['beduino_saia', 'leather_boots', rnd(['couraca_turca', 'gibao_egipcio']), 'beduino_mangas', rnd(['male_head1', 'male_head2']), rnd(['elmo_pontudo', 'keffiyeh', 'turbante']), rnd(['arco', 'besta', 'longsword'])],
 ];
 const VISUAIS_F = [() => [rnd(['clothes', 'aldea_roupa2', 'aldea_roupa2', 'habito']), 'head_long']];
 
@@ -272,7 +273,7 @@ const Sim = {
     } else { // raid
       const g = rnd(this.guilds.filter(x => x.members.some(m => m.online)));
       const s = g && rnd(g.members.filter(m => m.online && m !== Game.playerSim)); if (!s) return;
-      const boss = rnd(Chat.DEV.boss);
+      const boss = rnd(Chat.bosses);
       this.say(s, 'raid_call', { boss }, Game.player.guild === g ? 'guild' : 'global');
       this.raids.push({ guild: g, boss, end: this.t + between(90, 240) });
     }

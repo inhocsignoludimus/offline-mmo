@@ -33,11 +33,17 @@ O build cria `dist/game.js`. Esse arquivo junta os scripts com todos os JSON de 
 - Atalhos de janela: S, P, B, J, O, M.
 - Comandos: `/g` (global), `/w Nome` (sussurro), `/gu` (guilda), `/aceitar` e `/sair` (guilda), `/quem`.
 
+## Dados que a engine lê
+
+- `data/items/base.json`:
+  - `sprite_layer` diz que camada do TCoM aparece no boneco;
+  - `icon` diz qual ícone da folha aparece na mochila. Item sem ícone na folha aparece como um quadrado com as iniciais.
+- `data/names/bosses.json`: preenche o `{boss}` das falas.
+- Quando um item novo pedir uma camada do TCoM que ainda não foi importada, rode `build/import_dev_assets.py --skip-map --incremental` para trazer só as que faltam.
+
 ## Pendências de dados (Ludimus)
 
-- `data/items/base.json`: até ele chegar, a engine usa a tabela provisória `ITENS_DEV` de `src/main.js`.
-- Lista de chefes para `{boss}`: até ela chegar, a engine usa a lista provisória `Chat.DEV.boss`.
-- Ícones de skills e um `skills.json`.
+- `skills.json`, com nomes e ícones. Até ele chegar, o `{skill}` usa a lista provisória `Chat.DEV.skill`.
 
 ## Próximos passos
 

@@ -5,18 +5,16 @@
 // =====================================================================
 const Chat = {
   lang: 'pt', byKey: {}, pers: {}, recent: [],
-  // placeholders que ainda não têm arquivo de dados: valores provisórios
-  DEV: {
-    skill: ['Espadas', 'Táticas', 'Cura', 'Magia', 'Arquearia', 'Ferraria', 'Mineração', 'Pesca', 'Furtividade', 'Domar Animais', 'Alquimia', 'Carpintaria'],
-    boss: ['Rei Formiga', 'Guardião da Cripta', 'Serpe de Fogo', 'Fantasma Cruzado', 'Senhor do Pântano', 'Jarl Morto'],
-    item: ['espada longa', 'elmo nasal', 'loriga', 'escudo da cruz', 'cimitarra', 'maça', 'besta', 'gambesão', 'lança', 'relicário', 'anel de prata', 'machado'],
-  },
+  // {skill} ainda não tem arquivo de dados: lista provisória
+  DEV: { skill: ['Espadas', 'Táticas', 'Cura', 'Magia', 'Arquearia', 'Ferraria', 'Mineração', 'Pesca', 'Furtividade', 'Domar Animais', 'Alquimia', 'Carpintaria'] },
   init(data) {
     for (const p of data.personalities.personalities) this.pers[p.id] = p;
     for (const l of data.lines.lines) for (const p of l.p) (this.byKey[p + '|' + l.ctx] ||= []).push(l);
     this.places = [];
     for (const b of data.biomes.biomes) for (const c of b.cities) this.places.push(c.name[this.lang] || c.name.pt);
-    this.items = (data.items && data.items.items) ? data.items.items.map(i => (i.name && (i.name[this.lang] || i.name.pt)) || i.id) : this.DEV.item;
+    // itens que valem a pena anunciar (nada de pão e minério nas falas de loot e comércio)
+    this.items = data.items.items.filter(i => ['weapon', 'armor', 'shield', 'jewelry', 'clothing'].includes(i.type)).map(i => (i.name[this.lang] || i.name.pt).toLowerCase());
+    this.bosses = data.bosses.bosses.map(b => b.name[this.lang] || b.name.pt);
   },
   has(pers, ctx) { return !!this.byKey[pers + '|' + ctx]; },
   // devolve { text, ch } ou null
@@ -36,7 +34,7 @@ const Chat = {
       case 'place': return r(this.places);
       case 'item': return r(this.items);
       case 'skill': return r(this.DEV.skill);
-      case 'boss': return r(this.DEV.boss);
+      case 'boss': return r(this.bosses);
       case 'price': return String((1 + Math.floor(Math.random() * 40)) * 50);
       case 'n': return String(2 + Math.floor(Math.random() * 8));
       default: return '?';
