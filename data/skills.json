@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "swordsmanship",
+      "name": {
+        "pt": "Espadas",
+        "en": "Swordsmanship"
+      },
+      "icon": "swordsmanship"
+    },
+    {
+      "id": "mace_fighting",
+      "name": {
+        "pt": "Maças",
+        "en": "Mace Fighting"
+      },
+      "icon": "mace_fighting"
+    },
+    {
+      "id": "fencing",
+      "name": {
+        "pt": "Esgrima",
+        "en": "Fencing"
+      },
+      "icon": "fencing"
+    },
+    {
+      "id": "archery",
+      "name": {
+        "pt": "Arquearia",
+        "en": "Archery"
+      },
+      "icon": "archery"
+    },
+    {
+      "id": "tactics",
+      "name": {
+        "pt": "Táticas",
+        "en": "Tactics"
+      },
+      "icon": "tactics"
+    },
+    {
+      "id": "wrestling",
+      "name": {
+        "pt": "Luta Corporal",
+        "en": "Wrestling"
+      },
+      "icon": "wrestling"
+    },
+    {
+      "id": "parrying",
+      "name": {
+        "pt": "Aparar Golpes",
+        "en": "Parrying"
+      },
+      "icon": "parrying"
+    },
+    {
+      "id": "magery",
+      "name": {
+        "pt": "Magia",
+        "en": "Magery"
+      },
+      "icon": "magery"
+    },
+    {
+      "id": "evaluating_intelligence",
+      "name": {
+        "pt": "Avaliar Inteligência",
+        "en": "Evaluating Intelligence"
+      },
+      "icon": "evaluating_intelligence"
+    },
+    {
+      "id": "meditation",
+      "name": {
+        "pt": "Meditação",
+        "en": "Meditation"
+      },
+      "icon": "meditation"
+    },
+    {
+      "id": "resisting_spells",
+      "name": {
+        "pt": "Resistência a Magias",
+        "en": "Resisting Spells"
+      },
+      "icon": "resisting_spells"
+    },
+    {
+      "id": "blacksmithing",
+      "name": {
+        "pt": "Ferraria",
+        "en": "Blacksmithing"
+      },
+      "icon": "blacksmithing"
+    },
+    {
+      "id": "carpentry",
+      "name": {
+        "pt": "Carpintaria",
+        "en": "Carpentry"
+      },
+      "icon": "carpentry"
+    },
+    {
+      "id": "tailoring",
+      "name": {
+        "pt": "Alfaiataria",
+        "en": "Tailoring"
+      },
+      "icon": "tailoring"
+    },
+    {
+      "id": "alchemy",
+      "name": {
+        "pt": "Alquimia",
+        "en": "Alchemy"
+      },
+      "icon": "alchemy"
+    },
+    {
+      "id": "tinkering",
+      "name": {
+        "pt": "Engenhocas",
+        "en": "Tinkering"
+      },
+      "icon": "tinkering"
+    },
+    {
+      "id": "cooking",
+      "name": {
+        "pt": "Culinária",
+        "en": "Cooking"
+      },
+      "icon": "cooking"
+    },
+    {
+      "id": "mining",
+      "name": {
+        "pt": "Mineração",
+        "en": "Mining"
+      },
+      "icon": "mining"
+    },
+    {
+      "id": "lumberjacking",
+      "name": {
+        "pt": "Lenhador",
+        "en": "Lumberjacking"
+      },
+      "icon": "lumberjacking"
+    },
+    {
+      "id": "fishing",
+      "name": {
+        "pt": "Pesca",
+        "en": "Fishing"
+      },
+      "icon": "fishing"
+    },
+    {
+      "id": "stealth",
+      "name": {
+        "pt": "Furtividade",
+        "en": "Stealth"
+      },
+      "icon": "stealth"
+    },
+    {
+      "id": "hiding",
+      "name": {
+        "pt": "Ocultação",
+        "en": "Hiding"
+      },
+      "icon": "hiding"
+    },
+    {
+      "id": "snooping",
+      "name": {
+        "pt": "Bisbilhotar",
+        "en": "Snooping"
+      },
+      "icon": "snooping"
+    },
+    {
+      "id": "lockpicking",
+      "name": {
+        "pt": "Arrombar Fechaduras",
+        "en": "Lockpicking"
+      },
+      "icon": "lockpicking"
+    },
+    {
+      "id": "animal_taming",
+      "name": {
+        "pt": "Domar Animais",
+        "en": "Animal Taming"
+      },
+      "icon": "animal_taming"
+    },
+    {
+      "id": "veterinary",
+      "name": {
+        "pt": "Veterinária",
+        "en": "Veterinary"
+      },
+      "icon": "veterinary"
+    },
+    {
+      "id": "healing",
+      "name": {
+        "pt": "Cura",
+        "en": "Healing"
+      },
+      "icon": "healing"
+    },
+    {
+      "id": "anatomy",
+      "name": {
+        "pt": "Anatomia",
+        "en": "Anatomy"
+      },
+      "icon": "anatomy"
+    },
+    {
+      "id": "camping",
+      "name": {
+        "pt": "Acampamento",
+        "en": "Camping"
+      },
+      "icon": "camping"
+    },
+    {
+      "id": "tracking",
+      "name": {
+        "pt": "Rastreamento",
+        "en": "Tracking"
+      },
+      "icon": "tracking"
+    },
+    {
+      "id": "herding",
+      "name": {
+        "pt": "Pastoreio",
+        "en": "Herding"
+      },
+      "icon": "herding"
+    },
+    {
+      "id": "musicianship",
+      "name": {
+        "pt": "Musicalidade",
+        "en": "Musicianship"
+      },
+      "icon": "musicianship"
+    },
+    {
+      "id": "provocation",
+      "name": {
+        "pt": "Provocação",
+        "en": "Provocation"
+      },
+      "icon": "provocation"
+    },
+    {
+      "id": "peacemaking",
+      "name": {
+        "pt": "Pacificação",
+        "en": "Peacemaking"
+      },
+      "icon": "peacemaking"
+    },
+    {
+      "id": "inscription",
+      "name": {
+        "pt": "Inscrição",
+        "en": "Inscription"
+      },
+      "icon": "inscription"
+    },
+    {
+      "id": "detecting_hidden",
+      "name": {
+        "pt": "Detectar Ocultos",
+        "en": "Detecting Hidden"
+      },
+      "icon": "detecting_hidden"
+    },
+    {
+      "id": "poisoning",
+      "name": {
+        "pt": "Envenenamento",
+        "en": "Poisoning"
+      },
+      "icon": "poisoning"
+    },
+    {
+      "id": "bowcraft_fletching",
+      "name": {
+        "pt": "Fabricação de Arcos e Flechas",
+        "en": "Bowcraft and Fletching"
+      },
+      "icon": "bowcraft_fletching"
+    }
+  ]
+}
