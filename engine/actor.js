@@ -84,6 +84,7 @@ class Actor {
   }
   draw(g, sx, sy) {
     const meta = TCOM.meta, dn = DIRECOES[this.dir];
+    if (this.alpha != null && this.alpha < 1) g.globalAlpha = this.alpha;
     // sombra
     g.fillStyle = 'rgba(0,0,0,0.28)'; g.beginPath(); g.ellipse(sx, sy, 15, 7, 0, 0, Math.PI * 2); g.fill();
     for (const key of this.camadas[dn]) {
@@ -94,5 +95,6 @@ class Actor {
       const im = TCOM.img(key); if (!im.complete || !im.naturalWidth) continue;
       g.drawImage(im, q[0], q[1], q[2], q[3], Math.round(sx - q[4]), Math.round(sy - q[5]), q[2], q[3]);
     }
+    g.globalAlpha = 1;
   }
 }

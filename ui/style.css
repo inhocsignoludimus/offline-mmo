@@ -114,3 +114,21 @@ button { font-family: inherit; }
 .skrow button { width: 22px; height: 18px; padding: 0; font-size: 10px; background: #1a1814; border: 1px solid #4a4030; color: #8fd08f; cursor: pointer; }
 .skrow button.down { color: #e08a6a; } .skrow button.lock { color: #b0a890; }
 #menubar button[data-act=names].on { color: var(--ouro); border-color: var(--ouro); }
+
+/* magias */
+.spellbook .gbody { display: flex; flex-direction: column; padding: 5px; background: linear-gradient(#3a2e1e, #2a2116); }
+.sptabs { display: flex; gap: 2px; } .sptabs button { flex: 1; padding: 2px 0; background: #1a1612; color: var(--tenue); border: 1px solid #4a4030; font: 700 12px 'Alegreya SC', serif; cursor: pointer; }
+.sptabs button.on { color: var(--ouro); border-color: var(--ouro); } .sptabs button.shut { opacity: .45; }
+.sphead { font-size: 12px; color: var(--tenue); margin: 4px 0; }
+.splist { flex: 1; overflow-y: auto; touch-action: pan-y; }
+.sp { display: grid; grid-template-columns: 1fr auto; gap: 0 4px; padding: 3px 2px; border-bottom: 1px solid rgba(255,255,255,.05); }
+.sp span { grid-column: 1; font-size: 11px; color: var(--tenue); }
+.spc { grid-row: 1; text-align: left; background: none; border: 0; color: #f0e4c4; font: 600 14px 'Alegreya Sans', serif; cursor: pointer; padding: 0; }
+.spc:hover { color: var(--ouro); } .sp.shut .spc { color: #6f6650; cursor: default; }
+.spb { grid-row: 1 / 3; grid-column: 2; width: 26px; background: #1a1612; border: 1px solid #4a4030; color: #6f6650; cursor: pointer; }
+.spb.on { color: var(--ouro); }
+.sbuffs { font-size: 11px; color: #c0a0ff; margin-top: 3px; }
+#hotbar { position: absolute; left: 50%; bottom: 52px; transform: translateX(-50%); display: flex; gap: 3px; }
+#hotbar button { position: relative; width: 42px; height: 42px; background: radial-gradient(#3a3060, #1a1630); border: 1px solid #000; outline: 1px solid #6b5a3a; color: #e0d8ff; font: 700 12px 'Alegreya SC', serif; cursor: pointer; }
+#hotbar b { position: absolute; left: 3px; top: 1px; font-size: 10px; color: var(--ouro); }
+body.targeting #cv { cursor: cell; }

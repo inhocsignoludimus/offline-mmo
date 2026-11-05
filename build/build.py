@@ -9,7 +9,7 @@ import argparse, json, os, shutil, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCRIPTS = ['engine/iso.js', 'engine/map.js', 'engine/actor.js', 'engine/render.js',
-           'ui/gumps.js', 'systems/chat.js', 'systems/skills.js', 'systems/sim.js', 'src/main.js']
+           'ui/gumps.js', 'systems/chat.js', 'systems/skills.js', 'systems/magic.js', 'systems/sim.js', 'src/main.js']
 MAP = 'lochport'
 
 
@@ -44,6 +44,8 @@ def main():
         'items': load('data/items/base.json'),
         'bosses': load('data/names/bosses.json'),
         'skills': load('data/skills.json'),
+        'spells': load('data/magic/spells.json'),
+        'reagents': load('data/magic/reagents.json'),
     }
     js = ['// gerado por build/build.py — não editar à mão',
           'const DATA = ' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';']
