@@ -357,10 +357,9 @@
         "en": "Mage"
       },
       "look": [
-        "habito",
+        "habito_peregrino",
         "cloth_sandals",
-        "head_long",
-        "staff"
+        "male_head1"
       ],
       "sells": [
         [
@@ -411,8 +410,7 @@
         "cloth_pants",
         "cloth_sandals",
         "leather_gloves",
-        "male_head2",
-        "alquimista_avental"
+        "male_head2"
       ],
       "sells": [
         [
@@ -488,7 +486,7 @@
         "leather_gloves",
         "dagger",
         "male_head1",
-        "acougueiro_avental"
+        "ferreiro_tunica"
       ],
       "sells": [
         [
@@ -531,7 +529,7 @@
         "en": "Innkeeper"
       },
       "look": [
-        "aldea_roupa2",
+        "aldeao_tunica2",
         "cloth_pants",
         "cloth_sandals",
         "male_head2"
@@ -731,7 +729,7 @@
         "cloth_shirt",
         "calca_branca",
         "cloth_sandals",
-        "head_long"
+        "male_head2"
       ],
       "sells": [],
       "buys": [],
