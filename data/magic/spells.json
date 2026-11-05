@@ -1,0 +1,2022 @@
+{
+  "version": 1,
+  "spells": [
+    {
+      "id": "minor_mend",
+      "name": {
+        "pt": "Cura Menor",
+        "en": "Minor Mend"
+      },
+      "circle": 1,
+      "mana": 4,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "heal",
+        "base": [
+          6,
+          12
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Shifa Qarib",
+      "icon": "minor_mend",
+      "desc": {
+        "pt": "Fecha um corte pequeno em quem você tocar.",
+        "en": "Closes a small cut on whomever you touch."
+      }
+    },
+    {
+      "id": "spark_dart",
+      "name": {
+        "pt": "Dardo de Centelha",
+        "en": "Spark Dart"
+      },
+      "circle": 1,
+      "mana": 4,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "fire",
+        "base": [
+          4,
+          8
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Nar Saghir",
+      "icon": "spark_dart",
+      "desc": {
+        "pt": "Uma centelha curta queima o alvo.",
+        "en": "A short spark burns the target."
+      }
+    },
+    {
+      "id": "night_eye",
+      "name": {
+        "pt": "Olho da Noite",
+        "en": "Night Eye"
+      },
+      "circle": 1,
+      "mana": 4,
+      "reagents": {},
+      "target": "self",
+      "effect": {
+        "type": "buff",
+        "stat": "night_sight",
+        "base": [
+          8,
+          12
+        ],
+        "duration": 180,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Ayn Layl",
+      "icon": "night_eye",
+      "desc": {
+        "pt": "Seus olhos passam a enxergar no escuro por um tempo.",
+        "en": "Your eyes see in the dark for a while."
+      }
+    },
+    {
+      "id": "soft_hide",
+      "name": {
+        "pt": "Couro Leve",
+        "en": "Soft Hide"
+      },
+      "circle": 1,
+      "mana": 4,
+      "reagents": {},
+      "target": "self",
+      "effect": {
+        "type": "buff",
+        "stat": "armor_flat",
+        "base": [
+          4,
+          8
+        ],
+        "duration": 40,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Dira Tin",
+      "icon": "soft_hide",
+      "desc": {
+        "pt": "Uma pele de couro mágico amortece os golpes.",
+        "en": "A hide of magic leather softens incoming blows."
+      }
+    },
+    {
+      "id": "loose_grip",
+      "name": {
+        "pt": "Mão Frouxa",
+        "en": "Loose Grip"
+      },
+      "circle": 1,
+      "mana": 4,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "debuff",
+        "stat": "dex",
+        "base": [
+          6,
+          12
+        ],
+        "duration": 20,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Yad Rikhwa",
+      "icon": "loose_grip",
+      "desc": {
+        "pt": "Os dedos do alvo perdem firmeza.",
+        "en": "The target's fingers lose their firmness."
+      }
+    },
+    {
+      "id": "dull_wit",
+      "name": {
+        "pt": "Juízo Embaçado",
+        "en": "Dulled Wit"
+      },
+      "circle": 1,
+      "mana": 4,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "debuff",
+        "stat": "int",
+        "base": [
+          6,
+          12
+        ],
+        "duration": 20,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Aql Wahn",
+      "icon": "dull_wit",
+      "desc": {
+        "pt": "A mente do alvo embaça por alguns instantes.",
+        "en": "The target's mind clouds for a few moments."
+      }
+    },
+    {
+      "id": "slack_limb",
+      "name": {
+        "pt": "Membro Frouxo",
+        "en": "Slack Limb"
+      },
+      "circle": 1,
+      "mana": 4,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "debuff",
+        "stat": "str",
+        "base": [
+          6,
+          12
+        ],
+        "duration": 20,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Jism Rikhwa",
+      "icon": "slack_limb",
+      "desc": {
+        "pt": "O braço do alvo pesa e a força cai.",
+        "en": "The target's arm hangs heavy and strength falls."
+      }
+    },
+    {
+      "id": "pilgrim_loaf",
+      "name": {
+        "pt": "Pão do Peregrino",
+        "en": "Pilgrim Loaf"
+      },
+      "circle": 1,
+      "mana": 4,
+      "reagents": {},
+      "target": "none",
+      "effect": {
+        "type": "create_item",
+        "id": "bread",
+        "base": [
+          1,
+          3
+        ],
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Khubz Salib",
+      "icon": "pilgrim_loaf",
+      "desc": {
+        "pt": "Põe pão fresco na mochila.",
+        "en": "Puts fresh bread in the pack."
+      }
+    },
+    {
+      "id": "firm_step",
+      "name": {
+        "pt": "Passo Firme",
+        "en": "Firm Step"
+      },
+      "circle": 2,
+      "mana": 6,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "buff",
+        "stat": "dex",
+        "base": [
+          6,
+          12
+        ],
+        "duration": 45,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Rashaq Qawi",
+      "icon": "firm_step",
+      "desc": {
+        "pt": "O passo de quem você toca fica leve e certo.",
+        "en": "The one you touch steps lighter and surer."
+      }
+    },
+    {
+      "id": "clear_mind",
+      "name": {
+        "pt": "Mente Clara",
+        "en": "Clear Mind"
+      },
+      "circle": 2,
+      "mana": 6,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "buff",
+        "stat": "int",
+        "base": [
+          6,
+          12
+        ],
+        "duration": 45,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Aql Nahar",
+      "icon": "clear_mind",
+      "desc": {
+        "pt": "Clareia o juízo de um aliado.",
+        "en": "Clears an ally's wits."
+      }
+    },
+    {
+      "id": "salt_wash",
+      "name": {
+        "pt": "Lavagem de Sal",
+        "en": "Salt Wash"
+      },
+      "circle": 2,
+      "mana": 6,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "heal",
+        "base": [
+          2,
+          6
+        ],
+        "removes": [
+          "poison"
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Khalsa Milh",
+      "icon": "salt_wash",
+      "desc": {
+        "pt": "Lava o veneno e fecha um arranhão.",
+        "en": "Washes out poison and closes a scratch."
+      }
+    },
+    {
+      "id": "open_palm",
+      "name": {
+        "pt": "Palma Aberta",
+        "en": "Open Palm"
+      },
+      "circle": 2,
+      "mana": 6,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "physical",
+        "base": [
+          6,
+          12
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Saqt Yad",
+      "icon": "open_palm",
+      "desc": {
+        "pt": "Um golpe de palma invisível empurra o alvo.",
+        "en": "An unseen open palm strikes the target."
+      }
+    },
+    {
+      "id": "sinew_gift",
+      "name": {
+        "pt": "Dom do Tendão",
+        "en": "Sinew Gift"
+      },
+      "circle": 2,
+      "mana": 6,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "buff",
+        "stat": "str",
+        "base": [
+          6,
+          12
+        ],
+        "duration": 45,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Jism Qawi",
+      "icon": "sinew_gift",
+      "desc": {
+        "pt": "O tendão de quem você toca endurece.",
+        "en": "The sinew of the one you touch grows firm."
+      }
+    },
+    {
+      "id": "ward_skin",
+      "name": {
+        "pt": "Pele de Guarda",
+        "en": "Ward Skin"
+      },
+      "circle": 2,
+      "mana": 6,
+      "reagents": {},
+      "target": "self",
+      "effect": {
+        "type": "buff",
+        "stat": "def_chance",
+        "base": [
+          6,
+          12
+        ],
+        "duration": 40,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Haras Jild",
+      "icon": "ward_skin",
+      "desc": {
+        "pt": "A pele desvia uma parte dos golpes.",
+        "en": "The skin turns aside a share of the blows."
+      }
+    },
+    {
+      "id": "linen_wrap",
+      "name": {
+        "pt": "Faixa de Linho",
+        "en": "Linen Wrap"
+      },
+      "circle": 2,
+      "mana": 6,
+      "reagents": {},
+      "target": "none",
+      "effect": {
+        "type": "create_item",
+        "id": "bandage",
+        "base": [
+          1,
+          3
+        ],
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Lifafa Qarib",
+      "icon": "linen_wrap",
+      "desc": {
+        "pt": "Tece faixas de linho prontas para estancar.",
+        "en": "Weaves linen wraps ready to staunch a wound."
+      }
+    },
+    {
+      "id": "ember_touch",
+      "name": {
+        "pt": "Toque de Brasa",
+        "en": "Ember Touch"
+      },
+      "circle": 2,
+      "mana": 6,
+      "reagents": {},
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "fire",
+        "base": [
+          8,
+          14
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Nar Yad",
+      "icon": "ember_touch",
+      "desc": {
+        "pt": "A mão deixa uma brasa no alvo.",
+        "en": "The hand leaves an ember on the target."
+      }
+    },
+    {
+      "id": "three_gifts",
+      "name": {
+        "pt": "Três Dons",
+        "en": "Three Gifts"
+      },
+      "circle": 3,
+      "mana": 9,
+      "reagents": {
+        "incense": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "buff",
+        "stats": [
+          "str",
+          "dex",
+          "int"
+        ],
+        "base": [
+          3,
+          6
+        ],
+        "duration": 60,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Baraka Nur",
+      "icon": "three_gifts",
+      "desc": {
+        "pt": "Força, agilidade e juízo sobem juntos por um minuto.",
+        "en": "Strength, agility and wits rise together for a minute."
+      }
+    },
+    {
+      "id": "naphtha_ball",
+      "name": {
+        "pt": "Bola de Nafta",
+        "en": "Naphtha Ball"
+      },
+      "circle": 3,
+      "mana": 9,
+      "reagents": {
+        "saltpeter": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "fire",
+        "base": [
+          12,
+          22
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Nar Rami",
+      "icon": "naphtha_ball",
+      "desc": {
+        "pt": "Uma bola de nafta estoura em fogo no alvo.",
+        "en": "A ball of naphtha bursts into fire on the target."
+      }
+    },
+    {
+      "id": "resin_sting",
+      "name": {
+        "pt": "Ferrão de Resina",
+        "en": "Resin Sting"
+      },
+      "circle": 3,
+      "mana": 9,
+      "reagents": {
+        "myrrh": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "poison",
+        "base": [
+          3,
+          6
+        ],
+        "duration": 8,
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Samm Rami",
+      "icon": "resin_sting",
+      "desc": {
+        "pt": "A resina envenena e dói por alguns segundos.",
+        "en": "The resin poisons and hurts for several seconds."
+      }
+    },
+    {
+      "id": "side_step",
+      "name": {
+        "pt": "Passo de Lado",
+        "en": "Side Step"
+      },
+      "circle": 3,
+      "mana": 9,
+      "reagents": {
+        "incense": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "teleport",
+        "mode": "blink",
+        "base": [
+          6,
+          11
+        ],
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Wasat Qarib",
+      "icon": "side_step",
+      "desc": {
+        "pt": "Você dá um passo curto até o chão marcado.",
+        "en": "You take a short step to the marked ground."
+      }
+    },
+    {
+      "id": "lime_curtain",
+      "name": {
+        "pt": "Cortina de Cal",
+        "en": "Lime Curtain"
+      },
+      "circle": 3,
+      "mana": 9,
+      "reagents": {
+        "quicklime": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "field",
+        "kind": "wall",
+        "base": [
+          0,
+          0
+        ],
+        "duration": 25,
+        "element": "physical",
+        "length": 5,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Hajar Sura",
+      "icon": "lime_curtain",
+      "desc": {
+        "pt": "Uma cortina de cal viva fecha a passagem.",
+        "en": "A curtain of quicklime closes the way."
+      }
+    },
+    {
+      "id": "frost_pinch",
+      "name": {
+        "pt": "Beliscão de Gelo",
+        "en": "Frost Pinch"
+      },
+      "circle": 3,
+      "mana": 9,
+      "reagents": {
+        "myrrh": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "cold",
+        "base": [
+          8,
+          16
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Thalj Yad",
+      "icon": "frost_pinch",
+      "desc": {
+        "pt": "Um frio seco belisca a carne do alvo.",
+        "en": "A dry cold pinches the target's flesh."
+      }
+    },
+    {
+      "id": "pilgrim_ward",
+      "name": {
+        "pt": "Guarda do Peregrino",
+        "en": "Pilgrim Ward"
+      },
+      "circle": 3,
+      "mana": 9,
+      "reagents": {
+        "incense": 1
+      },
+      "target": "self",
+      "effect": {
+        "type": "buff",
+        "stats": [
+          "res_fire",
+          "res_cold",
+          "res_poison",
+          "res_energy"
+        ],
+        "base": [
+          3,
+          6
+        ],
+        "duration": 50,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Haras Salib",
+      "icon": "pilgrim_ward",
+      "desc": {
+        "pt": "O incenso recobre você contra fogo, frio, veneno e energia.",
+        "en": "Incense cloaks you against fire, cold, poison and energy."
+      }
+    },
+    {
+      "id": "dust_blind",
+      "name": {
+        "pt": "Cegueira de Pó",
+        "en": "Dust Blind"
+      },
+      "circle": 3,
+      "mana": 9,
+      "reagents": {
+        "quicklime": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "debuff",
+        "stat": "hit_chance",
+        "base": [
+          8,
+          16
+        ],
+        "duration": 18,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Tubba Ayn",
+      "icon": "dust_blind",
+      "desc": {
+        "pt": "Pó de cal cobre os olhos e os golpes erram.",
+        "en": "Lime dust covers the eyes and blows go wide."
+      }
+    },
+    {
+      "id": "choir_cleanse",
+      "name": {
+        "pt": "Purificação do Coro",
+        "en": "Choir Cleanse"
+      },
+      "circle": 4,
+      "mana": 11,
+      "reagents": {
+        "incense": 1,
+        "myrrh": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "heal",
+        "base": [
+          8,
+          16
+        ],
+        "removes": [
+          "poison"
+        ],
+        "radius": 3,
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Khalsa Kabir",
+      "icon": "choir_cleanse",
+      "desc": {
+        "pt": "Limpa o veneno e cura um pouco, em você e em quem está perto.",
+        "en": "Clears poison and mends a little, on you and those nearby."
+      }
+    },
+    {
+      "id": "host_aegis",
+      "name": {
+        "pt": "Égide da Hoste",
+        "en": "Aegis of the Host"
+      },
+      "circle": 4,
+      "mana": 11,
+      "reagents": {
+        "incense": 1,
+        "quicklime": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "buff",
+        "stat": "armor_flat",
+        "base": [
+          10,
+          18
+        ],
+        "duration": 60,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Haras Dira",
+      "icon": "host_aegis",
+      "desc": {
+        "pt": "Uma égide de cal e prece engrossa a armadura.",
+        "en": "An aegis of lime and prayer thickens armor."
+      }
+    },
+    {
+      "id": "four_weights",
+      "name": {
+        "pt": "Quatro Pesos",
+        "en": "Four Weights"
+      },
+      "circle": 4,
+      "mana": 11,
+      "reagents": {
+        "myrrh": 1,
+        "quicklime": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "debuff",
+        "stats": [
+          "str",
+          "dex",
+          "int"
+        ],
+        "base": [
+          8,
+          14
+        ],
+        "duration": 30,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Laan Arba",
+      "icon": "four_weights",
+      "desc": {
+        "pt": "Quatro pesos caem sobre força, agilidade e juízo.",
+        "en": "Four weights settle on strength, agility and wits."
+      }
+    },
+    {
+      "id": "saltfire_line",
+      "name": {
+        "pt": "Linha de Fogo Salitroso",
+        "en": "Saltfire Line"
+      },
+      "circle": 4,
+      "mana": 11,
+      "reagents": {
+        "saltpeter": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "field",
+        "kind": "fire",
+        "base": [
+          4,
+          8
+        ],
+        "duration": 30,
+        "element": "fire",
+        "length": 5,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Nar Midan",
+      "icon": "saltfire_line",
+      "desc": {
+        "pt": "Uma linha de fogo de salitre queima quem a atravessa.",
+        "en": "A line of saltpeter fire burns whoever crosses it."
+      }
+    },
+    {
+      "id": "deep_mend",
+      "name": {
+        "pt": "Cura Funda",
+        "en": "Deep Mend"
+      },
+      "circle": 4,
+      "mana": 11,
+      "reagents": {
+        "incense": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "heal",
+        "base": [
+          22,
+          38
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Shifa Kabir",
+      "icon": "deep_mend",
+      "desc": {
+        "pt": "Fecha feridas fundas em quem você tocar.",
+        "en": "Closes deep wounds on whomever you touch."
+      }
+    },
+    {
+      "id": "storm_nail",
+      "name": {
+        "pt": "Prego da Tormenta",
+        "en": "Storm Nail"
+      },
+      "circle": 4,
+      "mana": 11,
+      "reagents": {
+        "saltpeter": 1,
+        "incense": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "energy",
+        "base": [
+          16,
+          28
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Sama Sahm",
+      "icon": "storm_nail",
+      "desc": {
+        "pt": "Um prego de tormenta crava energia no alvo.",
+        "en": "A storm nail drives energy into the target."
+      }
+    },
+    {
+      "id": "breath_siphon",
+      "name": {
+        "pt": "Sifão de Sopro",
+        "en": "Breath Siphon"
+      },
+      "circle": 4,
+      "mana": 11,
+      "reagents": {
+        "myrrh": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "debuff",
+        "stat": "mana",
+        "base": [
+          12,
+          22
+        ],
+        "duration": 0,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Ruh Saqt",
+      "icon": "breath_siphon",
+      "desc": {
+        "pt": "Suga na hora uma parte da mana do alvo.",
+        "en": "Drains a share of the target's mana at once."
+      }
+    },
+    {
+      "id": "shrine_step",
+      "name": {
+        "pt": "Passo do Santuário",
+        "en": "Shrine Step"
+      },
+      "circle": 4,
+      "mana": 11,
+      "reagents": {
+        "incense": 1,
+        "myrrh": 1
+      },
+      "target": "none",
+      "effect": {
+        "type": "teleport",
+        "mode": "recall",
+        "base": [
+          1,
+          1
+        ],
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Bab Markaz",
+      "icon": "shrine_step",
+      "desc": {
+        "pt": "Leva você de volta ao chão que foi cravado antes.",
+        "en": "Carries you back to ground you nailed earlier."
+      }
+    },
+    {
+      "id": "blade_djinn",
+      "name": {
+        "pt": "Djinn de Lâminas",
+        "en": "Blade Djinn"
+      },
+      "circle": 5,
+      "mana": 14,
+      "reagents": {
+        "myrrh": 1,
+        "saltpeter": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "summon",
+        "id": "skeleton_knight",
+        "base": [
+          1,
+          2
+        ],
+        "duration": 40,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Ruh Hadid",
+      "icon": "blade_djinn",
+      "desc": {
+        "pt": "Chama um ou dois cavaleiros esqueleto, de lâmina em punho.",
+        "en": "Calls one or two skeletal knights, blade in hand."
+      }
+    },
+    {
+      "id": "tear_curtain",
+      "name": {
+        "pt": "Rasgar a Cortina",
+        "en": "Tear the Curtain"
+      },
+      "circle": 5,
+      "mana": 14,
+      "reagents": {
+        "incense": 1,
+        "quicklime": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "field",
+        "kind": "dispel",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 0,
+        "radius": 3,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Fakk Sura",
+      "icon": "tear_curtain",
+      "desc": {
+        "pt": "Rasga campos mágicos num pequeno trecho de chão.",
+        "en": "Tears magical fields across a small patch of ground."
+      }
+    },
+    {
+      "id": "mirror_oath",
+      "name": {
+        "pt": "Juramento do Espelho",
+        "en": "Mirror Oath"
+      },
+      "circle": 5,
+      "mana": 14,
+      "reagents": {
+        "incense": 1,
+        "quicklime": 1
+      },
+      "target": "self",
+      "effect": {
+        "type": "buff",
+        "stat": "spell_reflect",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 30,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Aks Qasam",
+      "icon": "mirror_oath",
+      "desc": {
+        "pt": "O próximo feitiço hostil volta para quem o lançou.",
+        "en": "The next hostile spell turns back on its caster."
+      }
+    },
+    {
+      "id": "cold_mind",
+      "name": {
+        "pt": "Mente Fria",
+        "en": "Cold Mind"
+      },
+      "circle": 5,
+      "mana": 14,
+      "reagents": {
+        "myrrh": 1,
+        "incense": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "cold",
+        "base": [
+          12,
+          30
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Thalj Aql",
+      "icon": "cold_mind",
+      "desc": {
+        "pt": "Um frio de dentro racha a mente do alvo.",
+        "en": "An inner cold cracks the target's mind."
+      }
+    },
+    {
+      "id": "lime_bind",
+      "name": {
+        "pt": "Ligadura de Cal",
+        "en": "Lime Bind"
+      },
+      "circle": 5,
+      "mana": 14,
+      "reagents": {
+        "quicklime": 1,
+        "myrrh": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "debuff",
+        "stat": "paralyze",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 8,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Qayd Hajar",
+      "icon": "lime_bind",
+      "desc": {
+        "pt": "A cal prende os pés do alvo por uns instantes.",
+        "en": "Lime locks the target's feet for a few moments."
+      }
+    },
+    {
+      "id": "resin_mire",
+      "name": {
+        "pt": "Lodaçal de Resina",
+        "en": "Resin Mire"
+      },
+      "circle": 5,
+      "mana": 14,
+      "reagents": {
+        "myrrh": 2
+      },
+      "target": "ground",
+      "effect": {
+        "type": "field",
+        "kind": "poison",
+        "base": [
+          3,
+          6
+        ],
+        "duration": 30,
+        "element": "poison",
+        "length": 5,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Samm Midan",
+      "icon": "resin_mire",
+      "desc": {
+        "pt": "Um lodaçal de mirra envenena quem pisa nele.",
+        "en": "A myrrh mire poisons whoever steps in it."
+      }
+    },
+    {
+      "id": "call_jackal",
+      "name": {
+        "pt": "Chamado do Chacal",
+        "en": "Call of the Jackal"
+      },
+      "circle": 5,
+      "mana": 14,
+      "reagents": {
+        "myrrh": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "summon",
+        "id": "jackal",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 120,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Ruh Dhib",
+      "icon": "call_jackal",
+      "desc": {
+        "pt": "Chama um chacal do deserto para o seu lado.",
+        "en": "Calls a desert jackal to your side."
+      }
+    },
+    {
+      "id": "anoint_edge",
+      "name": {
+        "pt": "Ungir o Fio",
+        "en": "Anoint the Edge"
+      },
+      "circle": 5,
+      "mana": 14,
+      "reagents": {
+        "incense": 1,
+        "myrrh": 1
+      },
+      "target": "item",
+      "effect": {
+        "type": "buff",
+        "stat": "dmg_pct",
+        "base": [
+          10,
+          20
+        ],
+        "duration": 90,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Dam Baraka",
+      "icon": "anoint_edge",
+      "desc": {
+        "pt": "Unge o fio de uma arma e ela corta mais fundo.",
+        "en": "Anoints a weapon's edge so it cuts deeper."
+      }
+    },
+    {
+      "id": "unweave",
+      "name": {
+        "pt": "Desfiar",
+        "en": "Unweave"
+      },
+      "circle": 6,
+      "mana": 20,
+      "reagents": {
+        "incense": 1,
+        "myrrh": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "debuff",
+        "stat": "banish",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 0,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Fakk Ruh",
+      "icon": "unweave",
+      "desc": {
+        "pt": "Desfia uma criatura chamada e a devolve ao nada.",
+        "en": "Unweaves a summoned creature and sends it back to nothing."
+      }
+    },
+    {
+      "id": "glass_bolt",
+      "name": {
+        "pt": "Raio de Vidro",
+        "en": "Glass Bolt"
+      },
+      "circle": 6,
+      "mana": 20,
+      "reagents": {
+        "saltpeter": 1,
+        "quicklime": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "energy",
+        "base": [
+          26,
+          40
+        ],
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Sahm Zujaj",
+      "icon": "glass_bolt",
+      "desc": {
+        "pt": "Um raio de vidro e salitre fura o alvo.",
+        "en": "A bolt of glass and saltpeter pierces the target."
+      }
+    },
+    {
+      "id": "kiln_burst",
+      "name": {
+        "pt": "Estouro do Forno",
+        "en": "Kiln Burst"
+      },
+      "circle": 6,
+      "mana": 20,
+      "reagents": {
+        "saltpeter": 2
+      },
+      "target": "ground",
+      "effect": {
+        "type": "damage",
+        "element": "fire",
+        "base": [
+          22,
+          36
+        ],
+        "radius": 2,
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Nar Fitna",
+      "icon": "kiln_burst",
+      "desc": {
+        "pt": "O forno estoura em fogo à volta do chão marcado.",
+        "en": "The kiln bursts into fire around the marked ground."
+      }
+    },
+    {
+      "id": "myrrh_veil",
+      "name": {
+        "pt": "Véu de Mirra",
+        "en": "Myrrh Veil"
+      },
+      "circle": 6,
+      "mana": 20,
+      "reagents": {
+        "myrrh": 1,
+        "incense": 1
+      },
+      "target": "self",
+      "effect": {
+        "type": "buff",
+        "stat": "invisible",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 35,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Hijab Ruh",
+      "icon": "myrrh_veil",
+      "desc": {
+        "pt": "Um véu de mirra esconde você por um tempo.",
+        "en": "A veil of myrrh hides you for a time."
+      }
+    },
+    {
+      "id": "nail_place",
+      "name": {
+        "pt": "Cravar o Lugar",
+        "en": "Nail the Place"
+      },
+      "circle": 6,
+      "mana": 20,
+      "reagents": {
+        "incense": 1,
+        "quicklime": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "teleport",
+        "mode": "mark",
+        "base": [
+          1,
+          1
+        ],
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Markaz Salib",
+      "icon": "nail_place",
+      "desc": {
+        "pt": "Crava este chão para um passo de santuário futuro.",
+        "en": "Nails this ground for a later shrine step."
+      }
+    },
+    {
+      "id": "crowd_malison",
+      "name": {
+        "pt": "Maldição da Multidão",
+        "en": "Crowd Malison"
+      },
+      "circle": 6,
+      "mana": 20,
+      "reagents": {
+        "myrrh": 1,
+        "quicklime": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "debuff",
+        "stats": [
+          "str",
+          "dex",
+          "int"
+        ],
+        "base": [
+          8,
+          14
+        ],
+        "duration": 25,
+        "radius": 3,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Laan Jam",
+      "icon": "crowd_malison",
+      "desc": {
+        "pt": "A maldição pesa em todos que estão no trecho marcado.",
+        "en": "The malison weighs on everyone in the marked patch."
+      }
+    },
+    {
+      "id": "white_cage",
+      "name": {
+        "pt": "Jaula Branca",
+        "en": "White Cage"
+      },
+      "circle": 6,
+      "mana": 20,
+      "reagents": {
+        "quicklime": 2
+      },
+      "target": "ground",
+      "effect": {
+        "type": "field",
+        "kind": "paralyze",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 20,
+        "length": 4,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Qayd Midan",
+      "icon": "white_cage",
+      "desc": {
+        "pt": "Uma jaula branca de cal prende quem a atravessa.",
+        "en": "A white lime cage holds whoever crosses it."
+      }
+    },
+    {
+      "id": "strip_veil",
+      "name": {
+        "pt": "Arrancar o Véu",
+        "en": "Strip the Veil"
+      },
+      "circle": 6,
+      "mana": 20,
+      "reagents": {
+        "incense": 1,
+        "quicklime": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "reveal",
+        "base": [
+          6,
+          10
+        ],
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Kashf Hijab",
+      "icon": "strip_veil",
+      "desc": {
+        "pt": "Arranca o véu de quem se esconde perto do chão marcado.",
+        "en": "Strips the veil from anyone hiding near the marked ground."
+      }
+    },
+    {
+      "id": "nail_chain",
+      "name": {
+        "pt": "Corrente de Pregos",
+        "en": "Chain of Nails"
+      },
+      "circle": 7,
+      "mana": 40,
+      "reagents": {
+        "saltpeter": 1,
+        "incense": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "energy",
+        "base": [
+          20,
+          34
+        ],
+        "chains": 3,
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Silsila Sahm",
+      "icon": "nail_chain",
+      "desc": {
+        "pt": "Pregos de energia saltam do alvo para quem está perto.",
+        "en": "Energy nails leap from the target to those nearby."
+      }
+    },
+    {
+      "id": "salt_bars",
+      "name": {
+        "pt": "Barras de Salitre",
+        "en": "Salt Bars"
+      },
+      "circle": 7,
+      "mana": 40,
+      "reagents": {
+        "saltpeter": 1,
+        "quicklime": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "field",
+        "kind": "energy",
+        "base": [
+          6,
+          12
+        ],
+        "duration": 25,
+        "element": "energy",
+        "length": 4,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Milh Sura",
+      "icon": "salt_bars",
+      "desc": {
+        "pt": "Barras de salitre crepitam e ferem quem as toca.",
+        "en": "Saltpeter bars crackle and wound whoever touches them."
+      }
+    },
+    {
+      "id": "naphtha_pillar",
+      "name": {
+        "pt": "Pilar de Nafta",
+        "en": "Naphtha Pillar"
+      },
+      "circle": 7,
+      "mana": 40,
+      "reagents": {
+        "saltpeter": 2
+      },
+      "target": "ground",
+      "effect": {
+        "type": "damage",
+        "element": "fire",
+        "base": [
+          36,
+          54
+        ],
+        "radius": 1,
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Nar Burj",
+      "icon": "naphtha_pillar",
+      "desc": {
+        "pt": "Um pilar de nafta desce em fogo sobre o chão marcado.",
+        "en": "A pillar of naphtha comes down in fire on the marked ground."
+      }
+    },
+    {
+      "id": "two_sands_door",
+      "name": {
+        "pt": "Porta das Duas Areias",
+        "en": "Door of Two Sands"
+      },
+      "circle": 7,
+      "mana": 40,
+      "reagents": {
+        "incense": 1,
+        "myrrh": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "teleport",
+        "mode": "gate",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 30,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Bab Ramal",
+      "icon": "two_sands_door",
+      "desc": {
+        "pt": "Abre por meio minuto uma porta até o chão cravado.",
+        "en": "Opens, for half a minute, a door to the nailed ground."
+      }
+    },
+    {
+      "id": "drink_lamp",
+      "name": {
+        "pt": "Beber a Lâmpada",
+        "en": "Drink the Lamp"
+      },
+      "circle": 7,
+      "mana": 40,
+      "reagents": {
+        "myrrh": 1,
+        "incense": 1
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "debuff",
+        "stat": "mana",
+        "base": [
+          24,
+          44
+        ],
+        "duration": 0,
+        "leech": true,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Ruh Shurb",
+      "icon": "drink_lamp",
+      "desc": {
+        "pt": "Bebe a mana do alvo e devolve essa luz a você.",
+        "en": "Drinks the target's mana and returns that light to you."
+      }
+    },
+    {
+      "id": "scatter_called",
+      "name": {
+        "pt": "Espalhar os Chamados",
+        "en": "Scatter the Called"
+      },
+      "circle": 7,
+      "mana": 40,
+      "reagents": {
+        "incense": 2
+      },
+      "target": "ground",
+      "effect": {
+        "type": "debuff",
+        "stat": "banish",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 0,
+        "radius": 4,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Fakk Jam",
+      "icon": "scatter_called",
+      "desc": {
+        "pt": "Espalha de uma vez as criaturas chamadas no trecho.",
+        "en": "Scatters summoned creatures in the patch at once."
+      }
+    },
+    {
+      "id": "falling_stars",
+      "name": {
+        "pt": "Estrelas Cadentes",
+        "en": "Falling Stars"
+      },
+      "circle": 7,
+      "mana": 40,
+      "reagents": {
+        "saltpeter": 1,
+        "myrrh": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "damage",
+        "element": "fire",
+        "base": [
+          28,
+          46
+        ],
+        "radius": 3,
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Najm Saqt",
+      "icon": "falling_stars",
+      "desc": {
+        "pt": "Estrelas de fogo caem à volta do chão marcado.",
+        "en": "Stars of fire fall around the marked ground."
+      }
+    },
+    {
+      "id": "clay_shape",
+      "name": {
+        "pt": "Forma de Barro",
+        "en": "Clay Shape"
+      },
+      "circle": 7,
+      "mana": 40,
+      "reagents": {
+        "quicklime": 1,
+        "myrrh": 1
+      },
+      "target": "self",
+      "effect": {
+        "type": "buff",
+        "stat": "polymorph",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 60,
+        "form": "golem_ruin",
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Tin Sura",
+      "icon": "clay_shape",
+      "desc": {
+        "pt": "Seu corpo toma a forma de um golem das ruínas.",
+        "en": "Your body takes the shape of a ruin golem."
+      }
+    },
+    {
+      "id": "split_ground",
+      "name": {
+        "pt": "Fender o Chão",
+        "en": "Split the Ground"
+      },
+      "circle": 8,
+      "mana": 50,
+      "reagents": {
+        "quicklime": 2
+      },
+      "target": "ground",
+      "effect": {
+        "type": "damage",
+        "element": "physical",
+        "base": [
+          26,
+          44
+        ],
+        "radius": 4,
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Zalzal Ard",
+      "icon": "split_ground",
+      "desc": {
+        "pt": "O chão se fende e sacode todos à volta.",
+        "en": "The ground splits and shakes everyone around it."
+      }
+    },
+    {
+      "id": "labyrinth_rush",
+      "name": {
+        "pt": "Investida do Labirinto",
+        "en": "Labyrinth Rush"
+      },
+      "circle": 8,
+      "mana": 50,
+      "reagents": {
+        "saltpeter": 1,
+        "myrrh": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "summon",
+        "id": "minotaur",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 35,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Hadid Qarn",
+      "icon": "labyrinth_rush",
+      "desc": {
+        "pt": "Traz um minotauro que investe contra quem estiver perto.",
+        "en": "Brings a minotaur that rushes whoever stands nearby."
+      }
+    },
+    {
+      "id": "raise_fallen",
+      "name": {
+        "pt": "Erguer o Caído",
+        "en": "Raise the Fallen"
+      },
+      "circle": 8,
+      "mana": 50,
+      "reagents": {
+        "incense": 2
+      },
+      "target": "mobile",
+      "effect": {
+        "type": "heal",
+        "base": [
+          30,
+          50
+        ],
+        "resurrect": true,
+        "scales": [
+          "magery",
+          "int"
+        ]
+      },
+      "words": "Qiyam Haya",
+      "icon": "raise_fallen",
+      "desc": {
+        "pt": "Ergue um corpo caído e devolve vida a ele.",
+        "en": "Raises a fallen body and returns life to it."
+      }
+    },
+    {
+      "id": "call_kiln",
+      "name": {
+        "pt": "Chamar o Forno",
+        "en": "Call the Kiln"
+      },
+      "circle": 8,
+      "mana": 50,
+      "reagents": {
+        "saltpeter": 2
+      },
+      "target": "ground",
+      "effect": {
+        "type": "summon",
+        "id": "wyvern_fire",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 50,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Nar Jinn",
+      "icon": "call_kiln",
+      "desc": {
+        "pt": "O forno responde com uma wyvern de fogo.",
+        "en": "The kiln answers with a fire wyvern."
+      }
+    },
+    {
+      "id": "call_quarry",
+      "name": {
+        "pt": "Chamar a Pedreira",
+        "en": "Call the Quarry"
+      },
+      "circle": 8,
+      "mana": 50,
+      "reagents": {
+        "quicklime": 2
+      },
+      "target": "ground",
+      "effect": {
+        "type": "summon",
+        "id": "rock_elemental",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 60,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Hajar Jinn",
+      "icon": "call_quarry",
+      "desc": {
+        "pt": "Ergue um elemental de rocha da pedreira.",
+        "en": "Raises a rock elemental from the quarry."
+      }
+    },
+    {
+      "id": "call_simoom",
+      "name": {
+        "pt": "Chamar o Simum",
+        "en": "Call the Simoom"
+      },
+      "circle": 8,
+      "mana": 50,
+      "reagents": {
+        "incense": 1,
+        "saltpeter": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "summon",
+        "id": "wyvern_air",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 50,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Rih Jinn",
+      "icon": "call_simoom",
+      "desc": {
+        "pt": "O simum traz uma wyvern do ar.",
+        "en": "The simoom brings an air wyvern."
+      }
+    },
+    {
+      "id": "call_cistern",
+      "name": {
+        "pt": "Chamar a Cisterna",
+        "en": "Call the Cistern"
+      },
+      "circle": 8,
+      "mana": 50,
+      "reagents": {
+        "myrrh": 1,
+        "incense": 1
+      },
+      "target": "ground",
+      "effect": {
+        "type": "summon",
+        "id": "crab_giant",
+        "base": [
+          1,
+          1
+        ],
+        "duration": 50,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Ma Jinn",
+      "icon": "call_cistern",
+      "desc": {
+        "pt": "A cisterna solta um caranguejo gigante.",
+        "en": "The cistern looses a giant crab."
+      }
+    },
+    {
+      "id": "eighth_seal",
+      "name": {
+        "pt": "Selo Oitavo",
+        "en": "Eighth Seal"
+      },
+      "circle": 8,
+      "mana": 50,
+      "reagents": {
+        "incense": 1,
+        "quicklime": 1
+      },
+      "target": "self",
+      "effect": {
+        "type": "buff",
+        "stats": [
+          "res_fire",
+          "res_cold",
+          "res_poison",
+          "res_energy"
+        ],
+        "base": [
+          8,
+          14
+        ],
+        "duration": 40,
+        "scales": [
+          "magery"
+        ]
+      },
+      "words": "Khatm Thamin",
+      "icon": "eighth_seal",
+      "desc": {
+        "pt": "O oitavo selo fecha você contra fogo, frio, veneno e energia.",
+        "en": "The eighth seal closes you against fire, cold, poison and energy."
+      }
+    }
+  ]
+}

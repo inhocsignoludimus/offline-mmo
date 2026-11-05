@@ -537,7 +537,7 @@
       "value": 90,
       "material": "leather",
       "icon": "couroCozido",
-      "sprite_layer": "m/leather_armor",
+      "sprite_layer": "m/jaque_couro",
       "desc": {
         "pt": "Armadura de Couro para proteger o guerreiro.",
         "en": "Leather Armor to protect the warrior."
