@@ -22,7 +22,7 @@ const KITS = {
   cruzado: { nome: 'Cruzado', equip: ['crusader_surcoat', 'chain_greaves', 'chain_boots', 'chain_gloves', 'chain_coif', 'longsword', 'crusader_shield'], base: ['male_head2'], skills: { swordsmanship: 45, tactics: 40, parrying: 35, healing: 30 }, bag: [['pilgrim_cross'], ['bandage', 6], ['bread', 4]] },
   lanceiro: { nome: 'Lanceiro beduíno', equip: ['bedouin_robe', 'cloth_sandals', 'turban', 'spear'], base: ['male_head1', 'beduino_saia', 'beduino_mangas'], skills: { fencing: 50, tactics: 40, tracking: 35, camping: 25 }, bag: [['dagger'], ['dried_meat', 6]] },
   arqueiro: { nome: 'Arqueiro', equip: ['leather_armor', 'cloth_pants', 'leather_boots', 'leather_hood', 'longbow'], base: ['male_head2'], skills: { archery: 50, tactics: 40, bowcraft_fletching: 35, tracking: 25 }, bag: [['arrow', 60], ['hatchet'], ['bread', 4]] },
-  mago: { nome: 'Mago', equip: ['pilgrim_habit', 'cloth_sandals', 'travel_cloak', 'staff'], base: ['male_head1'], f: ['habito', 'head_long'], skills: { magery: 50, evaluating_intelligence: 40, meditation: 40, resisting_spells: 20 }, bag: [['mana_potion', 3], ['bread', 4]] },
+  mago: { nome: 'Mago', equip: ['pilgrim_habit', 'cloth_sandals', 'travel_cloak', 'staff'], base: ['male_head1'], f: ['habito', 'head_long'], skills: { magery: 50, evaluating_intelligence: 40, meditation: 40, resisting_spells: 20 }, bag: [['mana_potion', 3], ['bread', 4], ['incense', 20], ['saltpeter', 20], ['myrrh', 20], ['quicklime', 20]] },
   curandeiro: { nome: 'Curandeiro', equip: ['pilgrim_habit', 'cloth_pants', 'cloth_sandals', 'pilgrim_cross'], base: ['male_head1'], f: ['habito', 'head_long'], skills: { healing: 50, anatomy: 40, veterinary: 30, meditation: 30 }, bag: [['bandage', 20], ['heal_potion', 3], ['bread', 4]] },
   gatuno: { nome: 'Gatuno', equip: ['leather_armor', 'cloth_pants', 'leather_boots', 'leather_gloves', 'leather_hood', 'dagger'], base: ['male_head2'], skills: { stealth: 45, hiding: 45, snooping: 35, lockpicking: 25 }, bag: [['bread', 3]] },
   ferreiro: { nome: 'Ferreiro', equip: ['cloth_pants', 'leather_boots', 'smith_hammer'], base: ['male_head2', 'ferreiro_tunica'], skills: { blacksmithing: 55, mining: 50, tinkering: 25, mace_fighting: 20 }, bag: [['pickaxe'], ['iron_ore', 12], ['iron_ingot', 6]] },
@@ -47,7 +47,7 @@ const Game = {
     this.townCenter = this.findCenter();
     Chat.init(DATA); TCOM.meta = DATA.tcom; Icons.meta = DATA.icons;
     // personagem
-    Items.init(DATA);
+    Items.init(DATA); Magic.init(DATA);
     const cls = KITS[cfg.cls] || KITS.guerreiro, sexo = cfg.sexo === 'f' ? 'f' : 'm';
     const base = sexo === 'f' ? (cls.f || ['clothes', 'head_long']) : cls.base;
     const [x, y] = this.townCenter;
@@ -64,7 +64,7 @@ const Game = {
     this.actors.push(actor);
     Camera.snap(x, y);
     // interface
-    Journal.init(); StatusGump.init(); Backpack.init(); Paperdoll.init(); SkillsGump.init(); Minimap.init(); OnlineGump.init(); HUD.init();
+    Journal.init(); StatusGump.init(); Backpack.init(); Paperdoll.init(); SkillsGump.init(); Spellbook.init(); Minimap.init(); OnlineGump.init(); HUD.init();
     Minimap.build(this.map);
     Sim.init(DATA, this.map);
     Journal.add('system', '', `Bem-vindo a ${this.townName}, shard Outremer. ${Sim.online().length} jogadores online.`);
@@ -174,6 +174,7 @@ const Game = {
     cv.addEventListener('pointerdown', e => {
       document.activeElement && document.activeElement.blur && document.activeElement.blur();
       const s = pick(e.clientX, e.clientY);
+      if (Magic.targeting) { const [wx, wy] = Camera.screenToWorld(e.clientX, e.clientY, Render.vw, Render.vh); const me = Math.hypot(e.clientX - Render.vw / 2, e.clientY - Render.vh / 2 + 30) < 30; Magic.click(s || (me ? this.player.actor : null), wx, wy); return; }
       if (s && s.sim) { this.inspect(s.sim); return; }
       this.held = [e.clientX, e.clientY]; downAt = performance.now(); go(e.clientX, e.clientY); cv.setPointerCapture(e.pointerId);
     });
@@ -191,7 +192,9 @@ const Game = {
       if (e.key === 'Enter' && !typing) { e.preventDefault(); Journal.focus(); return; }
       if (e.key === 'Escape' && typing) { document.activeElement.blur(); return; }
       if (typing) return;
-      const k = e.key.toLowerCase(), map = { s: 'status', p: 'paperdoll', b: 'backpack', j: 'journal', o: 'online', m: 'minimap', k: 'skills' };
+      const k = e.key.toLowerCase(), map = { s: 'status', p: 'paperdoll', b: 'backpack', j: 'journal', o: 'online', m: 'minimap', k: 'skills', l: 'spellbook' };
+      if (/^[1-9]$/.test(k)) { const id = Magic.hotbar[+k - 1]; if (id) Magic.cast(id); return; }
+      if (k === 'escape') { Magic.cancel(); return; }
       if (k === 'n' && !e.ctrlKey) { Render.toggleNames(); e.preventDefault(); return; }
       if (map[k] && !e.ctrlKey && !e.metaKey) { Gumps.toggle(map[k]); e.preventDefault(); }
     });
@@ -211,7 +214,8 @@ const Game = {
     Sim.update(dt);
     // fôlego cai correndo e volta parado
     p.st = Math.max(0, Math.min(p.stMax, p.st + (a.path ? -0.4 : 2) * dt));
-    p.mp = Math.min(p.mpMax, p.mp + 0.5 * dt);
+    p.mp = Math.min(p.mpMax, p.mp + (0.5 + (p.skills.meditation || 0) / 40) * dt); // Meditação acelera a mana
+    Magic.update(dt);
     Camera.follow(a.x, a.y, dt);
     Render.frame(this.map, this.actors, this.hover, t);
     if (!this._ui || t - this._ui > 200) { this._ui = t; StatusGump.update(p); Minimap.tick(this.map, this.actors, a); }

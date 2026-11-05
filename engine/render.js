@@ -57,6 +57,7 @@ const Render = {
       if (e.o) map.drawTile(g, e.o.t, e.sx, e.sy);
       else e.a.draw(g, e.sx, e.sy);
     }
+    Magic.draw(g);
     // nomes e falas, em pixels de tela (texto nítido)
     g.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
     for (const e of list) if (e.a) this.overhead(e.a, now);

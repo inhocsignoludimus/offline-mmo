@@ -136,6 +136,8 @@ const StatusGump = {
       const el = b.querySelector('.bar.' + k); el.querySelector('i').style.width = (100 * v / m) + '%'; el.querySelector('span').textContent = `${Math.round(v)} / ${m}`;
     }
     b.querySelector('.sgold').textContent = p.gold; b.querySelector('.sw').textContent = p.weight();
+    const bf = b.querySelector('.sbuffs') || b.appendChild(Object.assign(document.createElement('div'), { className: 'sbuffs' }));
+    bf.textContent = Magic.buffs.map(x => `${x.name} ${Math.ceil((x.until - Game.now) / 1000)}s`).join(' · ');
   },
 };
 
@@ -276,7 +278,7 @@ const OnlineGump = {
 const HUD = {
   init() {
     const bar = document.createElement('div'); bar.id = 'menubar';
-    bar.innerHTML = [['status', 'Status', 'S'], ['paperdoll', 'Paperdoll', 'P'], ['backpack', 'Mochila', 'B'], ['skills', 'Skills', 'K'], ['journal', 'Diário', 'J'], ['online', 'Online', 'O'], ['minimap', 'Mapa', 'M']]
+    bar.innerHTML = [['status', 'Status', 'S'], ['paperdoll', 'Paperdoll', 'P'], ['backpack', 'Mochila', 'B'], ['skills', 'Skills', 'K'], ['spellbook', 'Magias', 'L'], ['journal', 'Diário', 'J'], ['online', 'Online', 'O'], ['minimap', 'Mapa', 'M']]
       .map(([id, n, k]) => `<button data-g="${id}" title="${n} (${k})">${n}${id === 'journal' ? '<b class="badge"></b>' : ''}</button>`).join('') + '<button data-act="names" title="Mostrar nomes (N)">Nomes</button><button data-act="chat" class="chatbtn" title="Falar (Enter)">Falar</button>';
     document.getElementById('ui').appendChild(bar);
     bar.querySelectorAll('button[data-g]').forEach(b => b.onclick = () => Gumps.toggle(b.dataset.g));
