@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "reagents": [
+    {
+      "id": "incense",
+      "name": {
+        "pt": "Incenso",
+        "en": "Incense"
+      },
+      "type": "reagent",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 3,
+      "material": "resin",
+      "icon": "incense",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Grãos de incenso de igreja, queimados para firmar a prece.",
+        "en": "Church incense grains, burned to steady a prayer."
+      }
+    },
+    {
+      "id": "saltpeter",
+      "name": {
+        "pt": "Salitre",
+        "en": "Saltpeter"
+      },
+      "type": "reagent",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 4,
+      "material": "mineral",
+      "icon": "saltpeter",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Salitre de alquimista, seco e pronto para o fogo.",
+        "en": "Alchemist's saltpeter, dry and ready for fire."
+      }
+    },
+    {
+      "id": "myrrh",
+      "name": {
+        "pt": "Mirra",
+        "en": "Myrrh"
+      },
+      "type": "reagent",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 5,
+      "material": "resin",
+      "icon": "myrrh",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Resina oriental, amarga, para ungir ou para o veneno lento.",
+        "en": "Bitter oriental resin, for anointing or for slow venom."
+      }
+    },
+    {
+      "id": "quicklime",
+      "name": {
+        "pt": "Cal Viva",
+        "en": "Quicklime"
+      },
+      "type": "reagent",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 3,
+      "material": "mineral",
+      "icon": "quicklime",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Cal viva de pedreiro, cáustica, para muros e selos.",
+        "en": "Masons' quicklime, caustic, for walls and seals."
+      }
+    }
+  ]
+}
