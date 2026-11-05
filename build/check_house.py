@@ -84,6 +84,28 @@ def main(folder):
         bb = im.split()[3].point(lambda v: 255 if v > 32 else 0).getbbox()
         return (bb[3] - bb[1]) if bb else 0
 
+    # a planta tem de caber na imagem e bater com o desenho
+    corners = {'norte': (ax, ay - TH // 2),
+               'leste': (tile_center(ax, ay, w - 1, 0)[0] + TW // 2, tile_center(ax, ay, w - 1, 0)[1]),
+               'sul': (tile_center(ax, ay, w - 1, dpt - 1)[0], tile_center(ax, ay, w - 1, dpt - 1)[1] + TH // 2),
+               'oeste': (tile_center(ax, ay, 0, dpt - 1)[0] - TW // 2, tile_center(ax, ay, 0, dpt - 1)[1])}
+    for k, (x, y) in corners.items():
+        if not (0 <= x < size[0] and 0 <= y < size[1]):
+            probs.append(f'a quina {k} da planta ({x},{y}) fica fora da imagem {size}: âncora errada ou imagem pequena')
+    # nada pode encostar na borda (sinal de render cortado)
+    for k, im in L.items():
+        bb = im.split()[3].point(lambda v: 255 if v > 16 else 0).getbbox()
+        if bb and (bb[0] <= 1 or bb[1] <= 1 or bb[2] >= size[0] - 1 or bb[3] >= size[1] - 1):
+            probs.append(f'{k}: o desenho encosta na borda da imagem {bb} (render cortado)')
+    # o chão da back deve ocupar a planta: compara as pontas do desenho com as quinas
+    if 'back' in L:
+        bb = L['back'].split()[3].point(lambda v: 255 if v > 16 else 0).getbbox()
+        if bb:
+            dx_l, dx_r, dy_b = bb[0] - corners['oeste'][0], bb[2] - corners['leste'][0], bb[3] - corners['sul'][1]
+            print(f'back vs planta: esquerda {dx_l:+}px, direita {dx_r:+}px, base {dy_b:+}px')
+            if max(abs(dx_l), abs(dx_r), abs(dy_b)) > 60:
+                probs.append(f'a back não bate com a planta (esq {dx_l:+}, dir {dx_r:+}, base {dy_b:+} px): confira anchor e size no house.json')
+
     # altura da front_low e da front: a low deve ter ~20% da front
     if 'front' in L and 'front_low' in L:
         hf, hl = opaque_height(L['front']), opaque_height(L['front_low'])

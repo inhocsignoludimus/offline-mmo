@@ -97,3 +97,62 @@ art/
 
 * A arte derivada do Flare fica em **CC-BY-SA 3.0** (pode usar versões posteriores). Texturas CC0 (ambientCG, Poly Haven, `flare-game-art-src`) e modelos CC0 (Quaternius, KayKit) podem entrar, sempre registrados no `CREDITOS.txt`.
 * Não usar nada marcado como "non-commercial", nem nenhum material do Ultima Online ou da EA.
+
+## 9. Monstros
+
+* **Render:** câmera e luz da seção 2. Use **8 direções**, na ordem do TCoM: SW, W, NW, N, NE, E, SE, S.
+* **Animações:**
+
+  | Animação | Quadros | Tipo |
+  |---|---|---|
+  | `stance` (parado) | 4–8 | back_forth |
+  | `run` | 8–12 | looped |
+  | `swing` (ataque) | 6–9 | play_once |
+  | `hit` | 2–4 | play_once |
+  | `die` | 6–10 | play_once; o último quadro é o cadáver |
+  | `cast` | 6–8 | só nos que lançam magia |
+  | `special` | — | opcional: sopro, investida |
+
+* **Entrega:**
+  * Uma folha por monstro: `art/monsters/<id>/<id>.png`.
+  * Junto, um `<id>.json` no formato `CAMADAS_ANIM` do TCoM: `{anim: {n, dur, tipo, q[quadro][direção] = [x, y, w, h, ax, ay]}}`. A âncora `ax, ay` fica nos pés, no centro do losango.
+* **Escala**, com o humano de 140 px no master:
+
+  | Porte | Altura em relação ao humano |
+  |---|---|
+  | rato | 0,3× |
+  | lobo | 0,6× |
+  | urso | 1,1× |
+  | minotauro | 1,5× |
+  | gigante | 2× |
+
+* **Dragões** — um rig, 5 degraus, com a altura em relação ao humano:
+
+  | Degrau | Altura | Como é |
+  |---|---|---|
+  | filhote | 0,6× | |
+  | jovem | 1× | |
+  | adulto | 2× | |
+  | ancião | 3× | |
+  | alfa | 3,5× | asas abertas no `stance`, aura própria |
+
+  Cada degrau tem chifres, placas e cicatrizes próprios. As variações de elemento (`fire`, `ice`, `poison`, `storm`) vêm com cor de base clara, para a engine aplicar o tom (seção 11).
+* Monstros do Flare (goblin, esqueleto, zumbi, minotauro, wyverns, formigas, necromante…) **não** precisam de render: a engine importa as folhas do Flare.
+
+## 10. Paperdoll desenhado (janela do personagem, como no UO)
+
+A janela do personagem mostra **um desenho 2D pintado**, de frente, como no UO, e não o boneco 3D do jogo.
+
+* **Tela:** 300×480 px no master (a engine usa 150×240), fundo transparente.
+* **Base:** um corpo masculino e um feminino, em pé, de frente, com braços levemente abertos: `art/paperdoll/m/body.png` e `art/paperdoll/f/body.png`. Mais 3 tons de pele e 6 cabelos por sexo, cada um numa camada (`hair_01.png`…).
+* **Itens:** uma camada por item que se veste, com **o mesmo tamanho e a mesma posição da base**: `art/paperdoll/<m|f>/<item_id>.png`. O id é o do `base.json`.
+* **Ordem de pintura:** a engine empilha nesta ordem: corpo, cabelo, pernas, pés, tronco, braços, mãos, pescoço, manto, cabeça, arma e escudo. Pinte cada peça como se as de baixo estivessem lá.
+* **Cor:** pinte as partes que recebem tom (pano, couro, esmalte) em **cinza claro com sombreado**, como os hues do UO. Metal, madeira e detalhes que não mudam de cor vão numa segunda camada `<item_id>_fixed.png`.
+* **Estilo:** pintura de traço firme e luz de cima à esquerda, num estilo de ilustração medieval. Nada de imitar o desenho do UO: o estilo é nosso.
+
+## 11. Cores dos itens (hues, como no UO)
+
+* Os itens podem vir em **muitas cores**, sem se limitar a tons realistas: azul-real, verde-veneno, vermelho-sangue, dourado, roxo, branco-gelo, negro-sombra, cores de raridade e de evento.
+* A engine **pinta** os sprites do jogo e do paperdoll com o hue escolhido: troca o matiz e a saturação e mantém a luz e a sombra do desenho. Por isso as partes que recebem cor precisam estar em tom claro e pouco saturado.
+* A lista de cores fica em `data/hues.json` (ver o `DATA_SCHEMA.md`).
+

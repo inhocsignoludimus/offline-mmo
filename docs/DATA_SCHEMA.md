@@ -119,3 +119,100 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
 * `walls`: tiles bloqueados, `[x, y]`.
 * `doors`: `[x, y]` de cada porta. O tile da porta bloqueia quando fechada.
 * `interior`: o retângulo `[x0, y0]` a `[x1, y1]` que conta como "dentro" da casa (esconde o telhado e troca `front` por `front_low`).
+
+## data/items/rarity.json, sets.json e uniques.json — faixas do TCoM
+
+As **5 faixas de raridade** são fixas na engine:
+
+| Faixa | Cor do nome | Afixos |
+|---|---|---|
+| `comum` | branco | 0 |
+| `refinado` | azul | 1 a 2 |
+| `raro` | amarelo | 3 a 4, mais um nome sorteado |
+| `conjunto` | verde | peça de um set |
+| `lendario` | laranja | único, com nome e efeito fixos |
+
+`rarity.json` só traz os pesos de queda por nível de monstro:
+
+```json
+{ "version": 1, "drop": [ { "level": [1, 10], "comum": 70, "refinado": 22, "raro": 6, "conjunto": 1.5, "lendario": 0.5 } ],
+  "rare_names": { "first": [{"pt": "Lamento", "en": "Lament"}], "second": [{"pt": "da Aurora", "en": "of Dawn"}] } }
+```
+
+`sets.json`:
+
+```json
+{ "version": 1, "sets": [ { "id": "vigia_de_jafa", "name": {"pt": "Vigia de Jafa", "en": "Warden of Jaffa"},
+  "pieces": [ {"base": "nasal_helm", "hue": "areia", "affixes": [["armor_pct", 10]]} ],
+  "bonus": { "2": [["def_chance", 5]], "4": [["skill:parrying", 10], ["res_fire", 10]] } } ] }
+```
+
+`uniques.json`:
+
+```json
+{ "version": 1, "uniques": [ { "id": "dente_do_alfa", "base": "longsword", "name": {"pt": "Dente do Alfa", "en": "Alpha's Fang"},
+  "hue": "brasa", "level": 40, "affixes": [["dmg_pct", 60], ["res_fire", 20]], "effect": "burn_on_hit",
+  "source": "dragon_alpha_fire", "lore": {"pt": "...", "en": "..."} } ] }
+```
+
+* `effect` é opcional e serve para efeitos especiais que a engine implementa. Peça novos efeitos no PR.
+* `source` é o chefe ou monstro que solta o item.
+
+## data/hues.json
+
+```json
+{ "version": 1, "hues": [ { "id": "azul_real", "name": {"pt": "Azul-real", "en": "Royal Blue"}, "hex": "#2a4fd8", "group": "comum" },
+  { "id": "brasa", "name": {"pt": "Brasa", "en": "Ember"}, "hex": "#ff5a1a", "group": "raro", "glow": true } ] }
+```
+
+* `group` diz onde a cor aparece: `comum` (loja e tintura), `raro` (só loot), `evento` ou `material` (a cor do minério ou do couro).
+* `glow: true` faz a peça brilhar de leve.
+
+## data/monsters.json
+
+```json
+{ "version": 1, "monsters": [ { "id": "dragon_young_fire", "name": {"pt": "Dragão Jovem de Fogo", "en": "Young Fire Dragon"},
+  "art": "dragon", "stage": "young", "hue": "brasa", "scale": 1.0, "level": 25,
+  "hp": [180, 220], "mana": 80, "str": 120, "dex": 70, "int": 60, "armor": 30,
+  "dmg": [12, 20], "speed": 1.1, "range": 1, "resist": {"fire": 80, "cold": -20},
+  "skills": {"wrestling": 70, "magery": 40}, "spells": ["spark_dart"], "special": ["breath_fire"],
+  "behavior": "aggressive", "aggro": 8, "flee_hp": 0, "pack": [1, 1],
+  "biomes": ["outremer", "mountains"], "spawn_weight": 2,
+  "loot": {"gold": [80, 160], "table": "dragon_young", "rarity_bonus": 1},
+  "tame": null, "corpse_items": ["leather_hide"] } ] }
+```
+
+* **`art`:** o id da folha.
+  * Monstros do Flare usam o nome de lá (`goblin`, `skeleton`, `wyvern_fire`…).
+  * Monstros novos usam o de `art/monsters/<id>`.
+  * Dragões de degraus diferentes usam a mesma arte, com `scale` e `hue` diferentes.
+* **`behavior`:** `passive` (bicho), `defensive`, `aggressive` ou `coward`.
+* **`tame`:** `{"skill": 60}` para os que dá para domar.
+* **Tabelas de loot:** `data/loot.json` → `{ "tables": { "dragon_young": [ ["base:longsword", 5], ["gold", 1], ["reagent", 10] ] } }`. Cada entrada é um peso; `base:<id>` sorteia a faixa pelo `rarity.json`.
+
+## data/npcs/vendors.json
+
+```json
+{ "version": 1, "vendors": [ { "id": "ferreiro", "name": {"pt": "Ferreiro", "en": "Blacksmith"}, "look": ["ferreiro_tunica", "cloth_pants", "leather_boots", "martelo"],
+  "sells": [ ["longsword", 1.0], ["nasal_helm", 1.0], ["iron_ingot", 1.2] ], "buys": ["weapon", "armor", "shield", "iron_ore"],
+  "trains": ["blacksmithing", "mining"], "lines": {"pt": ["Boa lâmina, bom preço."], "en": ["Good blade, fair price."]} } ] }
+```
+
+* `sells`: `[id, multiplicador do preço]`.
+* `buys`: os tipos de item ou ids que a loja compra, pela metade do `value`.
+* `look`: camadas do TCoM.
+
+## data/events.json e data/portals.json
+
+```json
+{ "version": 1, "events": [ { "id": "rei_formiga_dunas", "boss": "rei_formiga", "place": {"biome": "outremer", "poi": "dunas_de_qasr"},
+  "every_min": [40, 70], "duration_min": 15, "announce": {"pt": "O {boss} surgiu em {place}!", "en": "{boss} has appeared at {place}!"},
+  "adds": [["fire_ant", 6]], "rewards": {"table": "boss_rei_formiga", "top_damage": 3} } ] }
+```
+
+```json
+{ "version": 1, "portals": [ { "id": "portal_aurelia", "city": "aurelia", "phases": ["aelia_sancta", "porto_do_trigo", "folhaverde"] } ] }
+```
+
+* `phases`: o destino muda com a fase da lua, como no UO.
+
