@@ -2,10 +2,10 @@
 
 Dono: **Ludimus**.
 
-Catálogo de linguagem dos itens: nome, descrição, prefixos,
-sufixos, feitiços e reagentes. Sem números de combate; dano,
-peso e preço ficam com o Claude quando o sistema existir.
+- `base.json` — nome, descrição, tipo, slot, números de combate
+  e a camada `sprite_layer` do TCoM.
+- `affixes.json` — prefixos e sufixos, com `stat`, `range` e
+  `tier` de 1 a 5.
 
-A proposta é um `catalogo.json`. O afixo guarda um modelo com
-`{base}`, porque a ordem das palavras muda entre o português e
-o inglês. Ver `docs/DATA_SPEC.md`.
+Feitiços e reagentes ficam em `data/magic/`. O esquema está em
+`docs/DATA_SCHEMA.md`.

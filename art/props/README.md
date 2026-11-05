@@ -2,18 +2,23 @@
 
 Dono: **Ludimus**.
 
-Objetos e criaturas que ocupam o tile e passam da altura do
-losango: árvore, muro, tenda, guarda. PNG com alfa, um diretório
-por bioma.
+Móveis e objetos soltos, nunca grudados na parede nem no chão da
+casa. Um diretório por categoria:
 
 ```
-art/props/<bioma>/<tipo>_<nome>_<variante>.png
+art/props/<categoria>/<id>.png
 ```
 
-Peça animada leva direção e quadro no nome
-(`criatura_guarda_s_00.png`). A proposta é de 8 direções; 16
-continua em aberto em `docs/ART_SPEC.md`.
+O que o jogador gira ao decorar (cama, mesa, baú, cadeira,
+estante, bancada) tem quatro rotações, frentes para N, L, S e O:
 
-A âncora é o ponto do losango onde o objeto pisa, não o rodapé
-da imagem. O ponto exato (vértice sul ou centro do tile) o Claude
-fecha.
+```
+art/props/<categoria>/<id>_r0.png
+art/props/<categoria>/<id>_r3.png
+```
+
+Personagens e monstros usam 8 direções, como no TCoM. Portas não
+moram aqui: ficam na casa, em `art/buildings/`, aberta e fechada,
+nas duas orientações de parede.
+
+Ver `docs/ART_SPEC.md`.

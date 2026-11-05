@@ -2,10 +2,13 @@
 
 Dono: **Ludimus**.
 
-Dicionário de falas dos jogadores simulados. A proposta é um
-`frases.json`: personalidade (`novato`, `farmador`, `pvper`,
-`troll`, `comerciante`, `roleplayer`), tags de contexto, peso e
-texto em português do Brasil e inglês.
+Falas dos jogadores simulados.
 
-Não é o código que sorteia a frase. Isso mora em `systems/`,
-pasta do Claude. O esquema está em `docs/DATA_SPEC.md`.
+- `personalities.json` — `novato`, `farmador`, `pvper`,
+  `comerciante`, `roleplayer`, `troll`, com as probabilidades
+  `typo`, `caps` e `emoji`.
+- `lines.json` — frases com personalidade (`p`), contexto (`ctx`)
+  e canal (`ch`).
+
+Quem sorteia e aplica erro de digitação é a engine, em
+`systems/`. O esquema está em `docs/DATA_SCHEMA.md`.

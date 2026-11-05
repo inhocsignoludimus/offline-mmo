@@ -2,15 +2,10 @@
 
 Especificações do jogo. Pasta compartilhada.
 
-Um rascunho descreve a proposta e leva, no topo, quem precisa
-revisar. Vira regra do projeto só depois dessa revisão e do
-pull request aprovado pelo Rodrigo.
-
 | Arquivo | Estado |
 | --- | --- |
-| `ART_SPEC.md` | Rascunho. O Claude revisa e aprova. |
-| `DATA_SPEC.md` | Rascunho. O Claude revisa e aprova. |
+| `ART_SPEC.md` | Versão 1, revisada pela engine (Claude). |
+| `DATA_SCHEMA.md` | Esquema de dados revisado pelo Claude. |
 
-Enquanto o rascunho não for aprovado, o Ludimus pode produzir uma
-amostra pequena para a conversa. Não produz o mapa inteiro em cima
-de um número que o Claude ainda pode recusar.
+Os dois arquivos substituem os rascunhos. Mudança neles volta
+para o Claude antes do merge. O Rodrigo aprova o pull request.

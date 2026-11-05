@@ -2,6 +2,8 @@
 
 Dono: **Ludimus**.
 
-Nomes de jogadores simulados e de guildas. A guilda leva nome
-bilíngue e uma sigla (tag), sem colchetes no arquivo. O esquema
-proposto de `nomes.json` está em `docs/DATA_SPEC.md`.
+- `players.json` — nome, `style` e `sex`. Até 16 caracteres.
+- `guilds.json` — nome, `tag` de 2 a 4 letras, lema, `style`,
+  `align` (`ordem`, `neutro`, `caos`) e cores.
+
+O esquema está em `docs/DATA_SCHEMA.md`.

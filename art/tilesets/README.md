@@ -2,16 +2,21 @@
 
 Dono: **Ludimus**.
 
-Definição dos tilesets e, quando existirem, as folhas
-empacotadas. A proposta de formato é um JSON por bioma,
-`art/tilesets/<bioma>.json`, compatível com a tupla do
-`CENARIO_DADOS` do TCoM:
+Um diretório por bioma. Dentro dele, o par `<set>.png` e
+`<set>.txt` no formato de tileset do Flare, que a engine já lê:
 
-`[folha, x, y, largura, altura, ancoraX, ancoraY]`
+```
+[tileset]
+img=art/tilesets/plains/plains_walls.png
+tile=ID,x,y,w,h,ox,oy
+```
 
-O esquema, as alternativas (texto do Flare e Tiled) e a
-recomendação estão em `docs/ART_SPEC.md`. Enquanto o Claude não
-aprovar, não há JSON de tileset nesta pasta.
+`ox,oy` é a distância do canto superior esquerdo do recorte até o
+centro do losango de chão. O PNG master do chão é 192×96 (2× o
+runtime de 96×48). O build da engine reduz e gera os atlas.
 
-Os PNG soltos continuam em `art/tiles/` e `art/props/`. A folha
-é um passo posterior.
+O id do tile não muda depois de entregue. Peça nova ganha id no
+fim; id antigo não é reaproveitado.
+
+Biomas: `outremer`, `plains`, `forest`, `swamp`, `mountains`,
+`north`, `ruins`, `coast`. Ver `docs/ART_SPEC.md`.

@@ -1,4 +1,4 @@
-# Cópias de segurança do Blender. O .blend em si entra em art/blend/.
+# Cópias de segurança do Blender. O .blend em si entra em art/src/.
 *.blend1
 *.blend2
 *.blend@

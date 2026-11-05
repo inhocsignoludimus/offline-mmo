@@ -17,13 +17,15 @@ Todo asset que entrar neste repositório ganha, aqui, três coisas:
   - link da obra e link do texto da licença
 
 Não entram assets de uso não comercial (CC-BY-NC, CC-BY-NC-SA,
-CC-BY-NC-ND, "non-commercial" e equivalentes) nem assets sem
-licença. Licença sem direito de adaptação (ND) também não serve:
-o jogo recorta e reduz a arte.
+CC-BY-NC-ND, "non-commercial" e equivalentes), nem material do
+Ultima Online ou da EA, nem assets sem licença. Licença sem
+direito de adaptação (ND) também não serve: o jogo recorta e
+reduz a arte.
 
-A pasta art/ é distribuída sob CC-BY-SA 4.0. Ver LICENSE e
-art/LICENSE. O crédito de cada obra de origem continua obrigatório
-mesmo quando a adaptação sai sob a 4.0.
+A arte derivada do Flare fica em CC-BY-SA 3.0, e versões
+posteriores podem ser usadas (docs/ART_SPEC.md, seção 8). Ver
+LICENSE e art/LICENSE. O crédito de cada obra de origem continua
+obrigatório.
 
 
 ARTE DESTE JOGO — art/
@@ -34,11 +36,16 @@ nesta seção, com o caminho do arquivo, o autor (Ludimus / estúdio,
 ou o autor da obra adaptada), a licença e o que mudou em relação
 à origem.
 
-Licença de distribuição da pasta:
+Licença da arte derivada do Flare, nesta pasta:
 
-  Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional
-  https://creativecommons.org/licenses/by-sa/4.0/deed.pt
-  https://creativecommons.org/licenses/by-sa/4.0/legalcode
+  Creative Commons Atribuição-CompartilhaIgual 3.0 Internacional
+  Versões posteriores podem ser usadas.
+  https://creativecommons.org/licenses/by-sa/3.0/deed.pt
+  https://creativecommons.org/licenses/by-sa/3.0/legalcode
+
+  CC0 aceito, sempre com linha nesta ficha: texturas da
+  ambientCG, da Poly Haven e do flare-game-art-src; modelos da
+  Quaternius e da KayKit.
 
 
 FLARE
@@ -65,9 +72,10 @@ Licença da arte do flare-game
   duas licenças):
     https://github.com/flareteam/flare-game/wiki/Credits
 
-  A adaptação que passar a viver em art/ deste jogo sai sob
-  CC-BY-SA 4.0, licença compatível com o "3.0 ou posterior" do
-  Flare. O código do motor Flare é GPL v3 e não é copiado para cá.
+  A adaptação que passar a viver em art/ deste jogo fica em
+  CC-BY-SA 3.0, com versões posteriores permitidas, como a arte
+  de origem. O código do motor Flare é GPL v3 e não é copiado
+  para cá.
 
 Créditos publicados pelo flare-game (CREDITS.txt e wiki)
   https://github.com/flareteam/flare-game/blob/master/CREDITS.txt
