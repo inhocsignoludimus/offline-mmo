@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "guilds": [
+    {
+      "name": "Ordem da Cruz Vermelha",
+      "tag": "OCV",
+      "motto": {
+        "pt": "In hoc signo vincimus",
+        "en": "In this sign we conquer"
+      },
+      "style": "rp",
+      "align": "ordem",
+      "colors": [
+        "#b8302a",
+        "#e8e0d0"
+      ]
+    },
+    {
+      "name": "Lâminas de Ashur",
+      "tag": "ASH",
+      "motto": {
+        "pt": "O deserto não perdoa",
+        "en": "The desert forgives nothing"
+      },
+      "style": "rp",
+      "align": "caos",
+      "colors": [
+        "#2d5a27",
+        "#c9a227"
+      ]
+    },
+    {
+      "name": "Mercadores de Acre",
+      "tag": "MDA",
+      "motto": {
+        "pt": "Ouro antes da glória",
+        "en": "Gold before glory"
+      },
+      "style": "trade",
+      "align": "neutro",
+      "colors": [
+        "#1a3a5c",
+        "#d4a84b"
+      ]
+    },
+    {
+      "name": "Guarda Invernal",
+      "tag": "GI",
+      "motto": {
+        "pt": "O gelo é nosso escudo",
+        "en": "Ice is our shield"
+      },
+      "style": "rp",
+      "align": "ordem",
+      "colors": [
+        "#7ec8e3",
+        "#1e2a44"
+      ]
+    },
+    {
+      "name": "Cabala do Osso",
+      "tag": "CDO",
+      "motto": {
+        "pt": "A morte é só o começo",
+        "en": "Death is only the beginning"
+      },
+      "style": "rp",
+      "align": "caos",
+      "colors": [
+        "#4a0e4e",
+        "#9e9e9e"
+      ]
+    },
+    {
+      "name": "Lenhadores Negros",
+      "tag": "LN",
+      "motto": {
+        "pt": "Cortamos o que quisermos",
+        "en": "We cut what we will"
+      },
+      "style": "pvp",
+      "align": "caos",
+      "colors": [
+        "#3e2723",
+        "#8bc34a"
+      ]
+    },
+    {
+      "name": "Clã das Folhas",
+      "tag": "CDF",
+      "motto": {
+        "pt": "A floresta lembra",
+        "en": "The forest remembers"
+      },
+      "style": "rp",
+      "align": "ordem",
+      "colors": [
+        "#1b5e20",
+        "#a5d6a7"
+      ]
+    },
+    {
+      "name": "Espólio Livre",
+      "tag": "EL",
+      "motto": {
+        "pt": "Loot primeiro, perguntas depois",
+        "en": "Loot first, ask later"
+      },
+      "style": "pvp",
+      "align": "caos",
+      "colors": [
+        "#bf360c",
+        "#ffcc80"
+      ]
+    },
+    {
+      "name": "Republica San Marco",
+      "tag": "RSM",
+      "motto": {
+        "pt": "Galés e contratos",
+        "en": "Galleys and contracts"
+      },
+      "style": "trade",
+      "align": "neutro",
+      "colors": [
+        "#0d47a1",
+        "#ffd54f"
+      ]
+    },
+    {
+      "name": "Corsários do Golfo",
+      "tag": "CG",
+      "motto": {
+        "pt": "Vento favorável ao saque",
+        "en": "Fair wind for plunder"
+      },
+      "style": "pvp",
+      "align": "caos",
+      "colors": [
+        "#212121",
+        "#e53935"
+      ]
+    },
+    {
+      "name": "Marcas da Pedra",
+      "tag": "MP",
+      "motto": {
+        "pt": "O passo é nosso",
+        "en": "The pass is ours"
+      },
+      "style": "rp",
+      "align": "neutro",
+      "colors": [
+        "#5d4037",
+        "#b0bec5"
+      ]
+    },
+    {
+      "name": "Forja Livre",
+      "tag": "FL",
+      "motto": {
+        "pt": "Ferro justo, preço justo",
+        "en": "Fair iron, fair price"
+      },
+      "style": "trade",
+      "align": "neutro",
+      "colors": [
+        "#37474f",
+        "#ff8a65"
+      ]
+    },
+    {
+      "name": "Senhores do Brejo",
+      "tag": "SB",
+      "motto": {
+        "pt": "Pague ou afunde",
+        "en": "Pay or sink"
+      },
+      "style": "pvp",
+      "align": "caos",
+      "colors": [
+        "#33691e",
+        "#827717"
+      ]
+    },
+    {
+      "name": "Guardiões do Selo",
+      "tag": "GS",
+      "motto": {
+        "pt": "O selo não se quebra",
+        "en": "The seal does not break"
+      },
+      "style": "rp",
+      "align": "ordem",
+      "colors": [
+        "#f5f5f5",
+        "#4527a0"
+      ]
+    },
+    {
+      "name": "Jarls do Gelo",
+      "tag": "JG",
+      "motto": {
+        "pt": "Honra ou morte fria",
+        "en": "Honor or cold death"
+      },
+      "style": "rp",
+      "align": "neutro",
+      "colors": [
+        "#01579b",
+        "#eceff1"
+      ]
+    },
+    {
+      "name": "Farm Inc",
+      "tag": "FI",
+      "motto": {
+        "pt": "XP não dorme",
+        "en": "XP never sleeps"
+      },
+      "style": "farm",
+      "align": "neutro",
+      "colors": [
+        "#f9a825",
+        "#212121"
+      ]
+    },
+    {
+      "name": "Skull Collectors",
+      "tag": "SKC",
+      "motto": {
+        "pt": "Mais um skull no muro",
+        "en": "Another skull on the wall"
+      },
+      "style": "pvp",
+      "align": "caos",
+      "colors": [
+        "#b71c1c",
+        "#000000"
+      ]
+    },
+    {
+      "name": "Cruzados de Montgisard",
+      "tag": "CMG",
+      "motto": {
+        "pt": "Lembramos 1177",
+        "en": "We remember 1177"
+      },
+      "style": "rp",
+      "align": "ordem",
+      "colors": [
+        "#c62828",
+        "#fff8e1"
+      ]
+    },
+    {
+      "name": "Beduínos Qasr",
+      "tag": "BQ",
+      "motto": {
+        "pt": "O oásis escolhe seus amigos",
+        "en": "The oasis chooses its friends"
+      },
+      "style": "rp",
+      "align": "neutro",
+      "colors": [
+        "#f57f17",
+        "#efebe9"
+      ]
+    },
+    {
+      "name": "No Mercy BR",
+      "tag": "NMB",
+      "motto": {
+        "pt": "Sem misericórdia, sem lag",
+        "en": "No mercy, no lag"
+      },
+      "style": "pvp",
+      "align": "caos",
+      "colors": [
+        "#d50000",
+        "#212121"
+      ]
+    }
+  ]
+}

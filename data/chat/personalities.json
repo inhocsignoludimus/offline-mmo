@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "personalities": [
+    {
+      "id": "novato",
+      "desc": "pergunta tudo, erra muito, agradece",
+      "typo": 0.15,
+      "caps": 0.05,
+      "emoji": 0.2
+    },
+    {
+      "id": "farmador",
+      "desc": "focado em xp/loot, fala pouco",
+      "typo": 0.05,
+      "caps": 0.0,
+      "emoji": 0.05
+    },
+    {
+      "id": "pvper",
+      "desc": "provoca, desafia, se gaba",
+      "typo": 0.08,
+      "caps": 0.3,
+      "emoji": 0.1
+    },
+    {
+      "id": "comerciante",
+      "desc": "WTS/WTB, negocia, anuncia preço",
+      "typo": 0.03,
+      "caps": 0.2,
+      "emoji": 0.0
+    },
+    {
+      "id": "roleplayer",
+      "desc": "fala como personagem medieval, nunca gíria",
+      "typo": 0.0,
+      "caps": 0.0,
+      "emoji": 0.0
+    },
+    {
+      "id": "troll",
+      "desc": "zoa, reclama do servidor, spam leve",
+      "typo": 0.2,
+      "caps": 0.4,
+      "emoji": 0.3
+    }
+  ]
+}

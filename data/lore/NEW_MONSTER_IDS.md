@@ -1,0 +1,41 @@
+# New monster IDs (need art models)
+
+Lines marked `existe` already have a model; the source is in parentheses. Do not request new art for them.
+
+- `bandit`: human bandit — needs model (TCoM soldier ok)
+- `boar`: wild boar — needs model
+- `bog_lurker`: swamp stalker — zombie/antlion hybrid art
+- `boulder`: existe (Flare)
+- `crab_giant`: giant crab — needs model
+- `croc`: marsh crocodile — needs model
+- `crusader_ghost`: spectral frankish knight — skeleton_knight reskin
+- `cultist`: ruin cultist — bandit/necromancer
+- `dire_bear`: large bear — needs model
+- `fire_ant`: red antlion variant — existe (Flare)
+- `frost_giant`: northern giant — minotaur reskin possible
+- `ghazi`: saracen cavalry spirit — needs model or hobgoblin reskin
+- `golem_ruin`: ruin construct — rock_elemental variant
+- `griffon`: mountain griffin — needs model
+- `hyena`: spotted hyena — existe (TCoM: hiena)
+- `ice_wolf`: arctic wolf — wolf reskin
+- `jackal`: canine desert scavenger — existe (TCoM: chacal)
+- `mosquito_swarm`: insect cloud — needs VFX
+- `mountain_goat`: aggressive goat — needs model
+- `necromancer`: existe (Flare)
+- `plague_rat`: giant rat — needs model
+- `rock_elemental`: boulder golem — reuse boulder
+- `sand_scorpion`: desert scorpion — needs model
+- `sea_raider`: coastal pirate — bandit reskin
+- `shade`: shadow spirit — zombie_ghost ok
+- `sharkman`: amphibious raider — needs model
+- `siren`: coastal siren — needs model
+- `spider_giant`: giant spider — needs model
+- `treant`: animated tree — needs model
+- `wight`: frost undead — frozen_zombie ok
+- `wolf`: timber wolf — needs model
+- `wyvern`: existe (Flare)
+- `wyvern_air`: air wyvern — existe (Flare)
+- `skeleton_knight`: Flare uses skeletal_knight — alias or reskin
+- `skeleton_knight_boss`: existe (Flare)
+- `zombie_dark`: existe (Flare)
+- `zombie_rotting`: Flare lvl1_zombie_rotting — use zombie_rotting id
