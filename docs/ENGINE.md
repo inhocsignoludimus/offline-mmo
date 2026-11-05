@@ -39,11 +39,8 @@ O build cria `dist/game.js`. Esse arquivo junta os scripts com todos os JSON de 
   - `sprite_layer` diz que camada do TCoM aparece no boneco;
   - `icon` diz qual ícone da folha aparece na mochila. Item sem ícone na folha aparece como um quadrado com as iniciais.
 - `data/names/bosses.json`: preenche o `{boss}` das falas.
+- `data/skills.json`: nomes das skills (paperdoll e `{skill}`). Os ofícios iniciais usam os `id`.
 - Quando um item novo pedir uma camada do TCoM que ainda não foi importada, rode `build/import_dev_assets.py --skip-map --incremental` para trazer só as que faltam.
-
-## Pendências de dados (Ludimus)
-
-- `skills.json`, com nomes e ícones. Até ele chegar, o `{skill}` usa a lista provisória `Chat.DEV.skill`.
 
 ## Próximos passos
 

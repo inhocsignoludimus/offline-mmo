@@ -204,7 +204,7 @@ const Paperdoll = {
       s.appendChild(d);
     }
     const sk = p.skills;
-    this.g.body.querySelector('.pinfo').innerHTML = `<b>${p.name}</b>${p.guild ? ` <span>[${p.guild.tag}]</span>` : ''}<br>${Object.entries(sk).slice(0, 4).map(([k, v]) => `${k} ${v.toFixed(1)}`).join('<br>')}`;
+    this.g.body.querySelector('.pinfo').innerHTML = `<b>${p.name}</b>${p.guild ? ` <span>[${p.guild.tag}]</span>` : ''}<br>${Object.entries(sk).slice(0, 4).map(([k, v]) => `${Chat.skills[k] || k} ${v.toFixed(1)}`).join('<br>')}`;
   },
   tick(dt) {
     if (!Gumps.isOpen('paperdoll')) return;

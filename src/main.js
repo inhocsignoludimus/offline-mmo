@@ -14,14 +14,14 @@ const Items = {
   stackable(d) { return ['consumable', 'resource'].includes(d.type) || d.slot === 'none' && d.type === 'misc'; },
   twoHanded(d) { return ['arco', 'besta', 'lanca', 'infantry_axe'].includes(this.layer(d)) || /staff/.test(d.id); },
 };
-// ofícios iniciais: equipamento (ids de itens), camadas de base que não são itens e o que vai na mochila
+// ofícios iniciais: equipamento (ids de itens), camadas de base que não são itens, skills (ids de data/skills.json) e o que vai na mochila
 const CLASSES = {
-  guerreiro: { equip: ['gambeson', 'chain_greaves', 'leather_boots', 'leather_gloves', 'nasal_helm', 'longsword', 'buckler'], base: ['male_head1'], skills: { Espadas: 50, Táticas: 45, Cura: 30, Anatomia: 25 }, bag: [['loriga'], ['round_shield'], ['mace'], ['bandage', 8], ['heal_potion', 2]] },
-  cruzado: { equip: ['crusader_surcoat', 'chain_greaves', 'chain_boots', 'chain_gloves', 'chain_coif', 'longsword', 'crusader_shield'], base: ['male_head2'], skills: { Espadas: 45, Táticas: 40, Cavalgar: 35, Piedade: 30 }, bag: [['nasal_helm'], ['pilgrim_cross'], ['bandage', 6], ['bread', 4]] },
-  beduino: { equip: ['bedouin_robe', 'cloth_sandals', 'turban', 'spear'], base: ['male_head1', 'beduino_saia', 'beduino_mangas'], skills: { Lanças: 50, Táticas: 35, Rastrear: 35, Cavalgar: 30 }, bag: [['dagger'], ['keffiyeh'], ['round_shield'], ['dried_meat', 6]] },
-  artesao: { equip: ['cloth_pants', 'leather_boots', 'smith_hammer'], base: ['male_head2', 'ferreiro_tunica'], skills: { Ferraria: 55, Mineração: 50, Carpintaria: 30, Comércio: 25 }, bag: [['pickaxe'], ['leather_gloves'], ['iron_ore', 12], ['iron_ingot', 6], ['logs', 10]] },
-  peregrino: { equip: ['pilgrim_habit', 'cloth_pants', 'cloth_sandals', 'pilgrim_cross'], base: ['male_head1'], f: ['habito', 'head_long'], skills: { Cura: 50, Magia: 40, Meditação: 40, Piedade: 30 }, bag: [['relicary'], ['heal_potion', 3], ['mana_potion', 2], ['bread', 5]] },
-  aldea: { equip: ['cloth_pants', 'cloth_sandals', 'peasant_tunic', 'skinning_knife'], base: ['male_head1'], f: ['aldea_roupa2', 'head_long'], skills: { Culinária: 45, Pesca: 45, Alquimia: 30, Comércio: 30 }, bag: [['fishing_pole'], ['sewing_kit'], ['cloth_bolt', 3], ['bread', 5]] },
+  guerreiro: { equip: ['gambeson', 'chain_greaves', 'leather_boots', 'leather_gloves', 'nasal_helm', 'longsword', 'buckler'], base: ['male_head1'], skills: { swordsmanship: 50, tactics: 45, healing: 30, anatomy: 25 }, bag: [['loriga'], ['round_shield'], ['mace'], ['bandage', 8], ['heal_potion', 2]] },
+  cruzado: { equip: ['crusader_surcoat', 'chain_greaves', 'chain_boots', 'chain_gloves', 'chain_coif', 'longsword', 'crusader_shield'], base: ['male_head2'], skills: { swordsmanship: 45, tactics: 40, parrying: 35, healing: 30 }, bag: [['nasal_helm'], ['pilgrim_cross'], ['bandage', 6], ['bread', 4]] },
+  beduino: { equip: ['bedouin_robe', 'cloth_sandals', 'turban', 'spear'], base: ['male_head1', 'beduino_saia', 'beduino_mangas'], skills: { fencing: 50, tactics: 35, tracking: 35, camping: 30 }, bag: [['dagger'], ['keffiyeh'], ['round_shield'], ['dried_meat', 6]] },
+  artesao: { equip: ['cloth_pants', 'leather_boots', 'smith_hammer'], base: ['male_head2', 'ferreiro_tunica'], skills: { blacksmithing: 55, mining: 50, carpentry: 30, tinkering: 25 }, bag: [['pickaxe'], ['leather_gloves'], ['iron_ore', 12], ['iron_ingot', 6], ['logs', 10]] },
+  peregrino: { equip: ['pilgrim_habit', 'cloth_pants', 'cloth_sandals', 'pilgrim_cross'], base: ['male_head1'], f: ['habito', 'head_long'], skills: { healing: 50, magery: 40, meditation: 40, resisting_spells: 30 }, bag: [['relicary'], ['heal_potion', 3], ['mana_potion', 2], ['bread', 5]] },
+  aldea: { equip: ['cloth_pants', 'cloth_sandals', 'peasant_tunic', 'skinning_knife'], base: ['male_head1'], f: ['aldea_roupa2', 'head_long'], skills: { cooking: 45, fishing: 45, alchemy: 30, tailoring: 30 }, bag: [['fishing_pole'], ['sewing_kit'], ['cloth_bolt', 3], ['bread', 5]] },
 };
 const EFEITOS = { // consumíveis
   bandage: p => p.hp += 8, greater_bandage: p => p.hp += 18, heal_potion: p => p.hp += 20, greater_heal_potion: p => p.hp += 40,

@@ -5,8 +5,6 @@
 // =====================================================================
 const Chat = {
   lang: 'pt', byKey: {}, pers: {}, recent: [],
-  // {skill} ainda não tem arquivo de dados: lista provisória
-  DEV: { skill: ['Espadas', 'Táticas', 'Cura', 'Magia', 'Arquearia', 'Ferraria', 'Mineração', 'Pesca', 'Furtividade', 'Domar Animais', 'Alquimia', 'Carpintaria'] },
   init(data) {
     for (const p of data.personalities.personalities) this.pers[p.id] = p;
     for (const l of data.lines.lines) for (const p of l.p) (this.byKey[p + '|' + l.ctx] ||= []).push(l);
@@ -15,6 +13,8 @@ const Chat = {
     // itens que valem a pena anunciar (nada de pão e minério nas falas de loot e comércio)
     this.items = data.items.items.filter(i => ['weapon', 'armor', 'shield', 'jewelry', 'clothing'].includes(i.type)).map(i => (i.name[this.lang] || i.name.pt).toLowerCase());
     this.bosses = data.bosses.bosses.map(b => b.name[this.lang] || b.name.pt);
+    this.skills = {}; for (const k of data.skills.skills) this.skills[k.id] = k.name[this.lang] || k.name.pt;
+    this.skillNames = Object.values(this.skills);
   },
   has(pers, ctx) { return !!this.byKey[pers + '|' + ctx]; },
   // devolve { text, ch } ou null
@@ -33,7 +33,7 @@ const Chat = {
     switch (k) {
       case 'place': return r(this.places);
       case 'item': return r(this.items);
-      case 'skill': return r(this.DEV.skill);
+      case 'skill': return r(this.skillNames);
       case 'boss': return r(this.bosses);
       case 'price': return String((1 + Math.floor(Math.random() * 40)) * 50);
       case 'n': return String(2 + Math.floor(Math.random() * 8));
