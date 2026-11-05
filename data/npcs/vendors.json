@@ -1,0 +1,755 @@
+{
+  "version": 1,
+  "vendors": [
+    {
+      "id": "ferreiro",
+      "name": {
+        "pt": "Ferreiro",
+        "en": "Blacksmith"
+      },
+      "look": [
+        "ferreiro_tunica",
+        "cloth_pants",
+        "leather_boots",
+        "leather_gloves",
+        "martelo",
+        "male_head1"
+      ],
+      "sells": [
+        [
+          "sword",
+          1.0
+        ],
+        [
+          "longsword",
+          1.0
+        ],
+        [
+          "shortsword",
+          1.0
+        ],
+        [
+          "scimitar",
+          1.1
+        ],
+        [
+          "dagger",
+          1.0
+        ],
+        [
+          "kris",
+          1.2
+        ],
+        [
+          "mace",
+          1.0
+        ],
+        [
+          "flanged_mace",
+          1.1
+        ],
+        [
+          "warhammer",
+          1.2
+        ],
+        [
+          "axe",
+          1.0
+        ],
+        [
+          "battleaxe",
+          1.15
+        ],
+        [
+          "hand_axe",
+          1.0
+        ],
+        [
+          "spear",
+          1.0
+        ],
+        [
+          "lance",
+          1.2
+        ],
+        [
+          "hauberk",
+          1.0
+        ],
+        [
+          "lorigao",
+          1.1
+        ],
+        [
+          "loriga",
+          1.0
+        ],
+        [
+          "chain_coif",
+          1.0
+        ],
+        [
+          "chain_gloves",
+          1.0
+        ],
+        [
+          "chain_greaves",
+          1.0
+        ],
+        [
+          "chain_boots",
+          1.0
+        ],
+        [
+          "nasal_helm",
+          1.0
+        ],
+        [
+          "kettle_helm",
+          1.1
+        ],
+        [
+          "greathelm",
+          1.2
+        ],
+        [
+          "face_helm",
+          1.2
+        ],
+        [
+          "plate_torso",
+          1.25
+        ],
+        [
+          "plate_arms",
+          1.25
+        ],
+        [
+          "plate_legs",
+          1.25
+        ],
+        [
+          "plate_boots",
+          1.25
+        ],
+        [
+          "plate_gloves",
+          1.25
+        ],
+        [
+          "lamellar",
+          1.15
+        ],
+        [
+          "turkish_cuirass",
+          1.2
+        ],
+        [
+          "buckler",
+          1.0
+        ],
+        [
+          "kite_shield",
+          1.1
+        ],
+        [
+          "heater_shield",
+          1.15
+        ],
+        [
+          "crusader_shield",
+          1.2
+        ],
+        [
+          "iron_ingot",
+          1.2
+        ],
+        [
+          "smith_hammer",
+          1.0
+        ],
+        [
+          "pickaxe",
+          1.0
+        ],
+        [
+          "shovel",
+          1.0
+        ]
+      ],
+      "buys": [
+        "weapon",
+        "armor",
+        "shield",
+        "iron_ore",
+        "copper_ore",
+        "silver_ore",
+        "gold_ore",
+        "iron_ingot"
+      ],
+      "trains": [
+        "blacksmithing",
+        "mining"
+      ],
+      "lines": {
+        "pt": [
+          "Boa lâmina, bom preço.",
+          "Ferro eu compro em minério ou em barra. O que está torto, eu endireito.",
+          "Martelo e picareta ficam no balcão. Placa, no gancho do fundo.",
+          "Ferraria e mineração eu ensino. O resto é calo."
+        ],
+        "en": [
+          "Good blade, fair price.",
+          "I buy iron as ore or ingot. What is bent, I straighten.",
+          "Hammer and pickaxe sit on the counter. Plate hangs on the back hook.",
+          "I teach smithing and mining. The rest is callus."
+        ]
+      }
+    },
+    {
+      "id": "alfaiate",
+      "name": {
+        "pt": "Alfaiate",
+        "en": "Tailor"
+      },
+      "look": [
+        "cloth_shirt",
+        "cloth_pants",
+        "cloth_sandals",
+        "male_head2"
+      ],
+      "sells": [
+        [
+          "cloth_shirt",
+          1.0
+        ],
+        [
+          "cloth_pants",
+          1.0
+        ],
+        [
+          "cloth_sandals",
+          1.0
+        ],
+        [
+          "pilgrim_habit",
+          1.0
+        ],
+        [
+          "peasant_tunic",
+          1.0
+        ],
+        [
+          "wool_cloak",
+          1.1
+        ],
+        [
+          "travel_cloak",
+          1.1
+        ],
+        [
+          "crimson_cloak",
+          1.15
+        ],
+        [
+          "keffiyeh",
+          1.0
+        ],
+        [
+          "turban",
+          1.0
+        ],
+        [
+          "bedouin_robe",
+          1.15
+        ],
+        [
+          "leather_belt",
+          1.0
+        ],
+        [
+          "knight_belt",
+          1.15
+        ],
+        [
+          "gambeson",
+          1.0
+        ],
+        [
+          "leather_armor",
+          1.0
+        ],
+        [
+          "studded_leather",
+          1.15
+        ],
+        [
+          "leather_hood",
+          1.0
+        ],
+        [
+          "leather_gloves",
+          1.0
+        ],
+        [
+          "leather_boots",
+          1.0
+        ],
+        [
+          "egyptian_gambeson",
+          1.1
+        ],
+        [
+          "crusader_surcoat",
+          1.2
+        ],
+        [
+          "cazagante",
+          1.2
+        ],
+        [
+          "cloth_bolt",
+          1.2
+        ],
+        [
+          "cut_leather",
+          1.2
+        ],
+        [
+          "sewing_kit",
+          1.0
+        ]
+      ],
+      "buys": [
+        "clothing",
+        "cut_leather",
+        "cloth_bolt",
+        "gambeson",
+        "leather_armor",
+        "studded_leather",
+        "leather_hood",
+        "leather_gloves",
+        "leather_boots",
+        "egyptian_gambeson",
+        "crusader_surcoat",
+        "cazagante"
+      ],
+      "trains": [
+        "tailoring"
+      ],
+      "lines": {
+        "pt": [
+          "Linha, couro e capa. Ombro nu não atravessa a estrada.",
+          "Pele crua é com o açougueiro. Couro cortado e tecido, eu compro.",
+          "Alfaiataria começa na agulha. Eu mostro o ponto."
+        ],
+        "en": [
+          "Thread, leather and a cloak. A bare shoulder does not last the road.",
+          "Raw hides go to the butcher. Cut leather and cloth, I buy.",
+          "Tailoring starts at the needle. I will show you the stitch."
+        ]
+      }
+    },
+    {
+      "id": "mago",
+      "name": {
+        "pt": "Mago",
+        "en": "Mage"
+      },
+      "look": [
+        "habito",
+        "cloth_sandals",
+        "head_long",
+        "staff"
+      ],
+      "sells": [
+        [
+          "staff",
+          1.0
+        ],
+        [
+          "relicary",
+          1.3
+        ],
+        [
+          "pilgrim_cross",
+          1.1
+        ]
+      ],
+      "buys": [
+        "reagent",
+        "staff"
+      ],
+      "trains": [
+        "magery",
+        "evaluating_intelligence",
+        "meditation",
+        "resisting_spells",
+        "inscription"
+      ],
+      "lines": {
+        "pt": [
+          "Cajado, cruz e relicário. Reagente eu compro; não empilho no balcão.",
+          "Eu abro o caminho da magia: meditar, avaliar, resistir e escrever o selo.",
+          "Poção pronta está com o alquimista. Eu trabalho com a palavra."
+        ],
+        "en": [
+          "Staff, cross and reliquary. I buy reagents; I do not stack them on the counter.",
+          "I open the way of magic: meditate, evaluate, resist and write the seal.",
+          "Finished potions are with the alchemist. I work with the word."
+        ]
+      }
+    },
+    {
+      "id": "alquimista",
+      "name": {
+        "pt": "Alquimista",
+        "en": "Alchemist"
+      },
+      "look": [
+        "aldeao_tunica2",
+        "cloth_pants",
+        "cloth_sandals",
+        "leather_gloves",
+        "male_head2",
+        "alquimista_avental"
+      ],
+      "sells": [
+        [
+          "heal_potion",
+          1.0
+        ],
+        [
+          "greater_heal_potion",
+          1.25
+        ],
+        [
+          "mana_potion",
+          1.1
+        ],
+        [
+          "refresh_potion",
+          1.0
+        ],
+        [
+          "cure_potion",
+          1.1
+        ],
+        [
+          "poison_potion",
+          1.15
+        ],
+        [
+          "bandage",
+          1.0
+        ],
+        [
+          "greater_bandage",
+          1.15
+        ],
+        [
+          "mortar_pestle",
+          1.0
+        ]
+      ],
+      "buys": [
+        "reagent"
+      ],
+      "trains": [
+        "alchemy",
+        "healing",
+        "poisoning"
+      ],
+      "lines": {
+        "pt": [
+          "Cura, mana, vigor, antídoto e veneno. O pilão vai junto.",
+          "Bandagem para quem não quer esperar o frasco.",
+          "Reagente eu compro. O frasco escuro não é para brindar.",
+          "Alquimia, cura e veneno. Três ofícios, um nariz."
+        ],
+        "en": [
+          "Heal, mana, refresh, cure and poison. The mortar comes with them.",
+          "Bandages for those who will not wait on the bottle.",
+          "I buy reagents. The dark bottle is not for toasts.",
+          "Alchemy, healing and poison. Three crafts, one nose."
+        ]
+      }
+    },
+    {
+      "id": "acougueiro",
+      "name": {
+        "pt": "Açougueiro",
+        "en": "Butcher"
+      },
+      "look": [
+        "aldeao_tunica1",
+        "cloth_pants",
+        "leather_boots",
+        "leather_gloves",
+        "dagger",
+        "male_head1",
+        "acougueiro_avental"
+      ],
+      "sells": [
+        [
+          "dried_meat",
+          1.0
+        ],
+        [
+          "skinning_knife",
+          1.0
+        ],
+        [
+          "leather_hide",
+          1.2
+        ]
+      ],
+      "buys": [
+        "leather_hide"
+      ],
+      "trains": [
+        "anatomy",
+        "cooking"
+      ],
+      "lines": {
+        "pt": [
+          "Carne seca e a faca de esfolar. Pele crua eu pago na hora.",
+          "Anatomia para não estragar o corte. Cozinha, para o resto não apodrecer.",
+          "O que sangrou no mato vira jantar ou vira couro."
+        ],
+        "en": [
+          "Dried meat and the skinning knife. Raw hides I pay on the spot.",
+          "Anatomy so the cut is not wasted. Cooking so the rest does not spoil.",
+          "What bled in the wild becomes supper or leather."
+        ]
+      }
+    },
+    {
+      "id": "estalajadeiro",
+      "name": {
+        "pt": "Estalajadeiro",
+        "en": "Innkeeper"
+      },
+      "look": [
+        "aldea_roupa2",
+        "cloth_pants",
+        "cloth_sandals",
+        "male_head2"
+      ],
+      "sells": [
+        [
+          "bread",
+          1.0
+        ],
+        [
+          "dried_meat",
+          1.15
+        ]
+      ],
+      "buys": [
+        "bread",
+        "dried_meat"
+      ],
+      "trains": [
+        "cooking",
+        "camping"
+      ],
+      "lines": {
+        "pt": [
+          "Pão e carne seca para a estrada. Cama de verdade, o carpinteiro.",
+          "Se você cozinhou, eu compro o pão e a carne. Briga eu não hospedo.",
+          "Cozinha e acampamento. O banco é na praça, e eu não fio."
+        ],
+        "en": [
+          "Bread and dried meat for the road. A real bed is the carpenter's.",
+          "If you cooked it, I buy the bread and the meat. Brawls I do not lodge.",
+          "Cooking and camping. The bank is on the square, and I do not extend credit."
+        ]
+      }
+    },
+    {
+      "id": "carpinteiro",
+      "name": {
+        "pt": "Carpinteiro",
+        "en": "Carpenter"
+      },
+      "look": [
+        "aldeao_tunica1",
+        "cloth_pants",
+        "leather_boots",
+        "hand_axe",
+        "male_head1"
+      ],
+      "sells": [
+        [
+          "logs",
+          1.15
+        ],
+        [
+          "boards",
+          1.2
+        ],
+        [
+          "hatchet",
+          1.0
+        ],
+        [
+          "fishing_pole",
+          1.0
+        ],
+        [
+          "club",
+          1.0
+        ],
+        [
+          "quarterstaff",
+          1.0
+        ],
+        [
+          "wooden_shield",
+          1.0
+        ],
+        [
+          "round_shield",
+          1.1
+        ],
+        [
+          "wooden_chest",
+          1.1
+        ],
+        [
+          "simple_bed",
+          1.1
+        ],
+        [
+          "wooden_table",
+          1.1
+        ],
+        [
+          "deed_plains_cabin",
+          1.0
+        ],
+        [
+          "deed_smithy",
+          1.0
+        ]
+      ],
+      "buys": [
+        "logs",
+        "boards"
+      ],
+      "trains": [
+        "carpentry",
+        "lumberjacking"
+      ],
+      "lines": {
+        "pt": [
+          "Tábua, baú, cama, escudo de madeira e a escritura. Tronco eu compro.",
+          "Cabana da planície ou ferraria: o papel sai daqui, a casa você levanta.",
+          "Carpintaria e machado no tronco. Madeira verde empena."
+        ],
+        "en": [
+          "Boards, chest, bed, wooden shield and the deed. I buy logs.",
+          "Plains cabin or smithy: the paper leaves here, you raise the house.",
+          "Carpentry and the axe in the log. Green wood warps."
+        ]
+      }
+    },
+    {
+      "id": "arqueiro",
+      "name": {
+        "pt": "Arqueiro",
+        "en": "Bowyer"
+      },
+      "look": [
+        "leather_armor",
+        "cloth_pants",
+        "leather_boots",
+        "leather_gloves",
+        "leather_hood",
+        "arco",
+        "male_head1"
+      ],
+      "sells": [
+        [
+          "bow",
+          1.0
+        ],
+        [
+          "longbow",
+          1.15
+        ],
+        [
+          "crossbow",
+          1.15
+        ],
+        [
+          "hand_crossbow",
+          1.1
+        ],
+        [
+          "arrow",
+          1.2
+        ],
+        [
+          "crossbow_bolt",
+          1.2
+        ]
+      ],
+      "buys": [
+        "bow",
+        "longbow",
+        "crossbow",
+        "hand_crossbow",
+        "arrow",
+        "crossbow_bolt"
+      ],
+      "trains": [
+        "archery",
+        "bowcraft_fletching"
+      ],
+      "lines": {
+        "pt": [
+          "Arco, besta, flecha e virote. O que voltou inteiro, eu recompro.",
+          "Arquearia e a feitura do arco. Pena e haste não são trabalho de forja.",
+          "Se o tiro foi torto, a corda estava certa."
+        ],
+        "en": [
+          "Bow, crossbow, arrow and bolt. What came back whole, I buy again.",
+          "Archery and bowcraft. Feather and shaft are not forge work.",
+          "If the shot went wide, the string was true."
+        ]
+      }
+    },
+    {
+      "id": "banqueiro",
+      "name": {
+        "pt": "Banqueiro",
+        "en": "Banker"
+      },
+      "look": [
+        "cloth_shirt",
+        "calca_branca",
+        "cloth_sandals",
+        "head_long"
+      ],
+      "sells": [],
+      "buys": [],
+      "trains": [],
+      "lines": {
+        "pt": [
+          "O baú abre no seu nome, {player}. Ouro aqui não some.",
+          "Não vendo, não compro, não empresto. Guardo.",
+          "Saque e depósito na hora. Conta alheia eu nem confirmo.",
+          "O que caiu no chão ficou no chão. Aqui dentro, só o que você entregou."
+        ],
+        "en": [
+          "The box opens in your name, {player}. Gold here does not vanish.",
+          "I do not sell, I do not buy, I do not lend. I keep.",
+          "Withdrawal and deposit on the spot. Another's account I will not even confirm.",
+          "What fell on the ground stayed on the ground. In here, only what you handed over."
+        ]
+      }
+    }
+  ]
+}
