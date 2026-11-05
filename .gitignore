@@ -17,3 +17,5 @@ build/*.zip
 dist/
 dist.zip
 __pycache__/
+
+_check.png
