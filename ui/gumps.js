@@ -204,7 +204,7 @@ const Paperdoll = {
       s.appendChild(d);
     }
     const sk = p.skills;
-    this.g.body.querySelector('.pinfo').innerHTML = `<b>${p.name}</b>${p.guild ? ` <span>[${p.guild.tag}]</span>` : ''}<br>${Object.entries(sk).slice(0, 4).map(([k, v]) => `${Chat.skills[k] || k} ${v.toFixed(1)}`).join('<br>')}`;
+    this.g.body.querySelector('.pinfo').innerHTML = `<b>${p.name}</b>${p.guild ? ` <span>[${p.guild.tag}]</span>` : ''}<br>${Object.entries(sk).filter(e => e[1] > 0).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([k, v]) => `${Chat.skills[k] || k} ${v.toFixed(1)}`).join('<br>')}`;
   },
   tick(dt) {
     if (!Gumps.isOpen('paperdoll')) return;
@@ -276,11 +276,12 @@ const OnlineGump = {
 const HUD = {
   init() {
     const bar = document.createElement('div'); bar.id = 'menubar';
-    bar.innerHTML = [['status', 'Status', 'S'], ['paperdoll', 'Paperdoll', 'P'], ['backpack', 'Mochila', 'B'], ['journal', 'Diário', 'J'], ['online', 'Online', 'O'], ['minimap', 'Mapa', 'M']]
-      .map(([id, n, k]) => `<button data-g="${id}" title="${n} (${k})">${n}${id === 'journal' ? '<b class="badge"></b>' : ''}</button>`).join('') + '<button data-act="chat" class="chatbtn" title="Falar (Enter)">Falar</button>';
+    bar.innerHTML = [['status', 'Status', 'S'], ['paperdoll', 'Paperdoll', 'P'], ['backpack', 'Mochila', 'B'], ['skills', 'Skills', 'K'], ['journal', 'Diário', 'J'], ['online', 'Online', 'O'], ['minimap', 'Mapa', 'M']]
+      .map(([id, n, k]) => `<button data-g="${id}" title="${n} (${k})">${n}${id === 'journal' ? '<b class="badge"></b>' : ''}</button>`).join('') + '<button data-act="names" title="Mostrar nomes (N)">Nomes</button><button data-act="chat" class="chatbtn" title="Falar (Enter)">Falar</button>';
     document.getElementById('ui').appendChild(bar);
     bar.querySelectorAll('button[data-g]').forEach(b => b.onclick = () => Gumps.toggle(b.dataset.g));
     bar.querySelector('[data-act=chat]').onclick = () => Journal.focus();
+    bar.querySelector('[data-act=names]').onclick = () => Render.toggleNames();
     this.toastEl = document.createElement('div'); this.toastEl.id = 'toast'; document.getElementById('ui').appendChild(this.toastEl);
   },
   badge() { const b = document.querySelector('#menubar .badge'); if (b) b.textContent = Journal.unread ? (Journal.unread > 99 ? '99+' : Journal.unread) : ''; },

@@ -5,10 +5,14 @@
 // e as falas em balão, como no UO.
 // =====================================================================
 const Render = {
-  cv: null, g: null, vw: 0, vh: 0, dpr: 1,
+  cv: null, g: null, vw: 0, vh: 0, dpr: 1, showNames: false, labels: new Map(),
   init(cv) { this.cv = cv; this.g = cv.getContext('2d'); this.resize(); addEventListener('resize', () => this.resize()); },
   resize() {
-    this.dpr = Math.min(2, devicePixelRatio || 1);
+    // resolução do mundo: no celular 1:1 (a tela ampliada pelo navegador), no PC até 1,5x.
+    // É o que mais pesa no FPS; Store 'hq' liga a resolução cheia.
+    const mobile = matchMedia('(pointer: coarse)').matches || innerWidth < 900;
+    this.dpr = Math.min(devicePixelRatio || 1, Store.get('hq', false) ? 2 : mobile ? 1 : 1.5);
+    this.labels.clear();
     this.vw = innerWidth; this.vh = innerHeight;
     this.cv.width = Math.round(this.vw * this.dpr); this.cv.height = Math.round(this.vh * this.dpr);
     this.cv.style.width = this.vw + 'px'; this.cv.style.height = this.vh + 'px';
@@ -57,23 +61,38 @@ const Render = {
     g.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
     for (const e of list) if (e.a) this.overhead(e.a, now);
   },
+  toggleNames() {
+    this.showNames = !this.showNames;
+    const b = document.querySelector('#menubar [data-act=names]'); if (b) b.classList.toggle('on', this.showNames);
+    HUD.toast(this.showNames ? 'Nomes visíveis' : 'Nomes só ao passar o mouse');
+  },
+  // texto com contorno pré-desenhado num canvas pequeno (strokeText a cada quadro pesa muito)
+  label(text, color, size) {
+    const k = size + '|' + color + '|' + text; let c = this.labels.get(k);
+    if (c) return c;
+    const d = this.dpr, font = `600 ${size}px "Alegreya Sans", system-ui, sans-serif`;
+    const m = this.g; m.font = font;
+    const w = Math.ceil(m.measureText(text).width) + 8, h = size + 8;
+    c = document.createElement('canvas'); c.width = Math.ceil(w * d); c.height = Math.ceil(h * d); c.w = w; c.h = h;
+    const g = c.getContext('2d'); g.scale(d, d); g.font = font; g.textAlign = 'center'; g.textBaseline = 'middle';
+    g.lineJoin = 'round'; g.lineWidth = 3; g.strokeStyle = 'rgba(0,0,0,0.88)'; g.strokeText(text, w / 2, h / 2);
+    g.fillStyle = color; g.fillText(text, w / 2, h / 2);
+    if (this.labels.size > 400) this.labels.delete(this.labels.keys().next().value);
+    this.labels.set(k, c); return c;
+  },
   overhead(a, now) {
     const g = this.g, [px, py] = Camera.worldToScreen(a.x, a.y, this.vw, this.vh);
-    const top = py - 78 * Camera.zoom;
-    g.font = '600 12px "Alegreya Sans", system-ui, sans-serif'; g.textAlign = 'center'; g.textBaseline = 'bottom';
-    let y = top - 4;
-    if (a.showName !== false) {
-      const label = a.tag ? `${a.name} [${a.tag}]` : a.name;
-      g.lineWidth = 3; g.strokeStyle = 'rgba(0,0,0,0.85)'; g.strokeText(label, px, y);
-      g.fillStyle = a.nameColor; g.fillText(label, px, y); y -= 15;
-    }
-    if (a.say && a.say.until > now) {
-      const lines = wrapText(g, a.say.text, 220);
+    const talking = a.say && a.say.until > now;
+    // como no UO: nomes só ao passar o mouse, ao clicar, ou com N ligado; o seu sempre
+    const named = a.kind === 'me' || this.showNames || a === Game.hoverActor || talking;
+    if (!named) return;
+    let y = py - 78 * Camera.zoom - 10;
+    const put = c => { g.drawImage(c, Math.round(px - c.w / 2), Math.round(y - c.h / 2), c.w, c.h); y -= 15; };
+    if (a.showName !== false) put(this.label(a.tag ? `${a.name} [${a.tag}]` : a.name, a.nameColor, 12));
+    if (talking) {
       g.font = '600 13px "Alegreya Sans", system-ui, sans-serif';
-      for (let i = lines.length - 1; i >= 0; i--) {
-        g.lineWidth = 3; g.strokeStyle = 'rgba(0,0,0,0.9)'; g.strokeText(lines[i], px, y);
-        g.fillStyle = a.say.color || '#f2ede0'; g.fillText(lines[i], px, y); y -= 15;
-      }
+      const lines = a.say.lines || (a.say.lines = wrapText(g, a.say.text, 220));
+      for (let i = lines.length - 1; i >= 0; i--) put(this.label(lines[i], a.say.color || '#f2ede0', 13));
     }
   },
 };

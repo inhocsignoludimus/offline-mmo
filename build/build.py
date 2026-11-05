@@ -9,7 +9,7 @@ import argparse, json, os, shutil, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCRIPTS = ['engine/iso.js', 'engine/map.js', 'engine/actor.js', 'engine/render.js',
-           'ui/gumps.js', 'systems/chat.js', 'systems/sim.js', 'src/main.js']
+           'ui/gumps.js', 'systems/chat.js', 'systems/skills.js', 'systems/sim.js', 'src/main.js']
 MAP = 'lochport'
 
 

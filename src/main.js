@@ -14,14 +14,25 @@ const Items = {
   stackable(d) { return ['consumable', 'resource'].includes(d.type) || d.slot === 'none' && d.type === 'misc'; },
   twoHanded(d) { return ['arco', 'besta', 'lanca', 'infantry_axe'].includes(this.layer(d)) || /staff/.test(d.id); },
 };
-// ofícios iniciais: equipamento (ids de itens), camadas de base que não são itens, skills (ids de data/skills.json) e o que vai na mochila
-const CLASSES = {
-  guerreiro: { equip: ['gambeson', 'chain_greaves', 'leather_boots', 'leather_gloves', 'nasal_helm', 'longsword', 'buckler'], base: ['male_head1'], skills: { swordsmanship: 50, tactics: 45, healing: 30, anatomy: 25 }, bag: [['loriga'], ['round_shield'], ['mace'], ['bandage', 8], ['heal_potion', 2]] },
-  cruzado: { equip: ['crusader_surcoat', 'chain_greaves', 'chain_boots', 'chain_gloves', 'chain_coif', 'longsword', 'crusader_shield'], base: ['male_head2'], skills: { swordsmanship: 45, tactics: 40, parrying: 35, healing: 30 }, bag: [['nasal_helm'], ['pilgrim_cross'], ['bandage', 6], ['bread', 4]] },
-  beduino: { equip: ['bedouin_robe', 'cloth_sandals', 'turban', 'spear'], base: ['male_head1', 'beduino_saia', 'beduino_mangas'], skills: { fencing: 50, tactics: 35, tracking: 35, camping: 30 }, bag: [['dagger'], ['keffiyeh'], ['round_shield'], ['dried_meat', 6]] },
-  artesao: { equip: ['cloth_pants', 'leather_boots', 'smith_hammer'], base: ['male_head2', 'ferreiro_tunica'], skills: { blacksmithing: 55, mining: 50, carpentry: 30, tinkering: 25 }, bag: [['pickaxe'], ['leather_gloves'], ['iron_ore', 12], ['iron_ingot', 6], ['logs', 10]] },
-  peregrino: { equip: ['pilgrim_habit', 'cloth_pants', 'cloth_sandals', 'pilgrim_cross'], base: ['male_head1'], f: ['habito', 'head_long'], skills: { healing: 50, magery: 40, meditation: 40, resisting_spells: 30 }, bag: [['relicary'], ['heal_potion', 3], ['mana_potion', 2], ['bread', 5]] },
-  aldea: { equip: ['cloth_pants', 'cloth_sandals', 'peasant_tunic', 'skinning_knife'], base: ['male_head1'], f: ['aldea_roupa2', 'head_long'], skills: { cooking: 45, fishing: 45, alchemy: 30, tailoring: 30 }, bag: [['fishing_pole'], ['sewing_kit'], ['cloth_bolt', 3], ['bread', 5]] },
+// Não há classe fixa, como no UO: o kit inicial só decide por onde você começa
+// (4 skills e o equipamento). Qualquer skill sobe com o uso (systems/skills.js).
+const ROUPA = ['cloth_shirt', 'cloth_pants', 'cloth_sandals'];
+const KITS = {
+  guerreiro: { nome: 'Guerreiro', equip: ['gambeson', 'chain_greaves', 'leather_boots', 'leather_gloves', 'nasal_helm', 'longsword', 'buckler'], base: ['male_head1'], skills: { swordsmanship: 50, tactics: 45, parrying: 30, anatomy: 25 }, bag: [['bandage', 8], ['heal_potion', 2]] },
+  cruzado: { nome: 'Cruzado', equip: ['crusader_surcoat', 'chain_greaves', 'chain_boots', 'chain_gloves', 'chain_coif', 'longsword', 'crusader_shield'], base: ['male_head2'], skills: { swordsmanship: 45, tactics: 40, parrying: 35, healing: 30 }, bag: [['pilgrim_cross'], ['bandage', 6], ['bread', 4]] },
+  lanceiro: { nome: 'Lanceiro beduíno', equip: ['bedouin_robe', 'cloth_sandals', 'turban', 'spear'], base: ['male_head1', 'beduino_saia', 'beduino_mangas'], skills: { fencing: 50, tactics: 40, tracking: 35, camping: 25 }, bag: [['dagger'], ['dried_meat', 6]] },
+  arqueiro: { nome: 'Arqueiro', equip: ['leather_armor', 'cloth_pants', 'leather_boots', 'leather_hood', 'longbow'], base: ['male_head2'], skills: { archery: 50, tactics: 40, bowcraft_fletching: 35, tracking: 25 }, bag: [['arrow', 60], ['hatchet'], ['bread', 4]] },
+  mago: { nome: 'Mago', equip: ['pilgrim_habit', 'cloth_sandals', 'travel_cloak', 'staff'], base: ['male_head1'], f: ['habito', 'head_long'], skills: { magery: 50, evaluating_intelligence: 40, meditation: 40, resisting_spells: 20 }, bag: [['mana_potion', 3], ['bread', 4]] },
+  curandeiro: { nome: 'Curandeiro', equip: ['pilgrim_habit', 'cloth_pants', 'cloth_sandals', 'pilgrim_cross'], base: ['male_head1'], f: ['habito', 'head_long'], skills: { healing: 50, anatomy: 40, veterinary: 30, meditation: 30 }, bag: [['bandage', 20], ['heal_potion', 3], ['bread', 4]] },
+  gatuno: { nome: 'Gatuno', equip: ['leather_armor', 'cloth_pants', 'leather_boots', 'leather_gloves', 'leather_hood', 'dagger'], base: ['male_head2'], skills: { stealth: 45, hiding: 45, snooping: 35, lockpicking: 25 }, bag: [['bread', 3]] },
+  ferreiro: { nome: 'Ferreiro', equip: ['cloth_pants', 'leather_boots', 'smith_hammer'], base: ['male_head2', 'ferreiro_tunica'], skills: { blacksmithing: 55, mining: 50, tinkering: 25, mace_fighting: 20 }, bag: [['pickaxe'], ['iron_ore', 12], ['iron_ingot', 6]] },
+  lenhador: { nome: 'Lenhador e carpinteiro', equip: [...ROUPA, 'leather_boots', 'hatchet'], base: ['male_head1'], skills: { lumberjacking: 50, carpentry: 45, bowcraft_fletching: 25, tactics: 30 }, bag: [['logs', 15], ['boards', 10]] },
+  pescador: { nome: 'Pescador e cozinheiro', equip: ['cloth_pants', 'cloth_sandals', 'peasant_tunic', 'skinning_knife'], base: ['male_head1'], f: ['aldea_roupa2', 'head_long'], skills: { fishing: 50, cooking: 45, camping: 30, tailoring: 25 }, bag: [['fishing_pole'], ['bread', 6]] },
+  alfaiate: { nome: 'Alfaiate', equip: [...ROUPA], base: ['male_head2'], f: ['clothes', 'head_long'], skills: { tailoring: 55, herding: 30, cooking: 30, musicianship: 35 }, bag: [['sewing_kit'], ['cloth_bolt', 4], ['cut_leather', 6]] },
+  domador: { nome: 'Domador', equip: ['leather_armor', 'cloth_pants', 'leather_boots', 'skinning_knife'], base: ['male_head1'], skills: { animal_taming: 50, veterinary: 40, herding: 35, tracking: 25 }, bag: [['bandage', 10], ['dried_meat', 6]] },
+  bardo: { nome: 'Bardo', equip: [...ROUPA, 'travel_cloak', 'dagger'], base: ['male_head2'], f: ['aldea_roupa2', 'head_long'], skills: { musicianship: 50, peacemaking: 40, provocation: 35, fencing: 25 }, bag: [['bread', 4]] },
+  alquimista: { nome: 'Alquimista', equip: [...ROUPA, 'wool_cloak'], base: ['male_head1'], f: ['clothes', 'head_long'], skills: { alchemy: 50, poisoning: 35, healing: 35, inscription: 30 }, bag: [['mortar_pestle'], ['heal_potion', 4], ['cure_potion', 2]] },
+  livre: { nome: 'Do seu jeito (escolha 3 skills)', equip: [...ROUPA, 'dagger'], base: ['male_head1'], f: ['clothes', 'head_long'], skills: {}, bag: [['bandage', 6], ['bread', 4]] },
 };
 const EFEITOS = { // consumíveis
   bandage: p => p.hp += 8, greater_bandage: p => p.hp += 18, heal_potion: p => p.hp += 20, greater_heal_potion: p => p.hp += 40,
@@ -37,13 +48,13 @@ const Game = {
     Chat.init(DATA); TCOM.meta = DATA.tcom; Icons.meta = DATA.icons;
     // personagem
     Items.init(DATA);
-    const cls = CLASSES[cfg.cls] || CLASSES.guerreiro, sexo = cfg.sexo === 'f' ? 'f' : 'm';
+    const cls = KITS[cfg.cls] || KITS.guerreiro, sexo = cfg.sexo === 'f' ? 'f' : 'm';
     const base = sexo === 'f' ? (cls.f || ['clothes', 'head_long']) : cls.base;
     const [x, y] = this.townCenter;
     const actor = new Actor({ x, y, ap: { sexo, layers: [] }, name: cfg.name, kind: 'me', nameColor: '#6ab0ff', speed: 4.2 });
     this.player = {
       name: cfg.name, guild: null, actor, base, gold: 120, hp: 70, hpMax: 70, mp: 40, mpMax: 40, st: 60, stMax: 60,
-      skills: { ...cls.skills }, equip: {}, bag: [],
+      skills: Skills.start(cfg.cls === 'livre' ? cfg.free : cls.skills), equip: {}, bag: [],
       weight() { let w = 0; for (const i of this.bag) w += (i.d.weight || 0) * i.qty; for (const k in this.equip) w += this.equip[k].d.weight || 0; return Math.round(w); },
     };
     for (const id of cls.equip) { const it = this.item(id); if (it) this.player.equip[it.d.slot] = it; }
@@ -53,11 +64,11 @@ const Game = {
     this.actors.push(actor);
     Camera.snap(x, y);
     // interface
-    Journal.init(); StatusGump.init(); Backpack.init(); Paperdoll.init(); Minimap.init(); OnlineGump.init(); HUD.init();
+    Journal.init(); StatusGump.init(); Backpack.init(); Paperdoll.init(); SkillsGump.init(); Minimap.init(); OnlineGump.init(); HUD.init();
     Minimap.build(this.map);
     Sim.init(DATA, this.map);
     Journal.add('system', '', `Bem-vindo a ${this.townName}, shard Outremer. ${Sim.online().length} jogadores online.`);
-    Journal.add('system', '', 'Clique no chão para andar (segure para seguir o cursor). Enter para falar. /g global, /w Nome sussurro, /gu guilda, /aceitar, /sair, /quem.');
+    Journal.add('system', '', 'Clique no chão para andar (segure para seguir o cursor). Enter para falar. N mostra os nomes. /g global, /w Nome sussurro, /gu guilda, /aceitar, /sair, /quem.');
     this.bindInput();
     this.last = performance.now(); requestAnimationFrame(t => this.loop(t));
     setInterval(() => { OnlineGump.render(); }, 3000);
@@ -86,7 +97,9 @@ const Game = {
   useItem(it) {
     const p = this.player, d = it.d;
     if (EFEITOS[it.id]) {
-      EFEITOS[it.id](p); p.hp = Math.min(p.hpMax, p.hp); p.mp = Math.min(p.mpMax, p.mp); p.st = Math.min(p.stMax, p.st);
+      EFEITOS[it.id](p);
+      if (/bandage/.test(it.id)) { Skills.use('healing', 0.3); Skills.use('anatomy', 0.2); }
+      if (/potion/.test(it.id)) Skills.use('alchemy', 0.1); p.hp = Math.min(p.hpMax, p.hp); p.mp = Math.min(p.mpMax, p.mp); p.st = Math.min(p.stMax, p.st);
       if (--it.qty <= 0) p.bag.splice(p.bag.indexOf(it), 1);
       Journal.add('system', '', `Você usa: ${it.name.toLowerCase()}.`); Backpack.render(); return;
     }
@@ -165,6 +178,7 @@ const Game = {
       this.held = [e.clientX, e.clientY]; downAt = performance.now(); go(e.clientX, e.clientY); cv.setPointerCapture(e.pointerId);
     });
     cv.addEventListener('pointermove', e => {
+      if (e.pointerType === 'mouse') { const h = pick(e.clientX, e.clientY); this.hoverActor = h; cv.style.cursor = h ? 'pointer' : 'crosshair'; }
       if (!this.held) return; this.held = [e.clientX, e.clientY];
       const n = performance.now(); if (n - lastRepath > 180) { lastRepath = n; go(e.clientX, e.clientY); }
     });
@@ -177,7 +191,8 @@ const Game = {
       if (e.key === 'Enter' && !typing) { e.preventDefault(); Journal.focus(); return; }
       if (e.key === 'Escape' && typing) { document.activeElement.blur(); return; }
       if (typing) return;
-      const k = e.key.toLowerCase(), map = { s: 'status', p: 'paperdoll', b: 'backpack', j: 'journal', o: 'online', m: 'minimap' };
+      const k = e.key.toLowerCase(), map = { s: 'status', p: 'paperdoll', b: 'backpack', j: 'journal', o: 'online', m: 'minimap', k: 'skills' };
+      if (k === 'n' && !e.ctrlKey) { Render.toggleNames(); e.preventDefault(); return; }
       if (map[k] && !e.ctrlKey && !e.metaKey) { Gumps.toggle(map[k]); e.preventDefault(); }
     });
   },
@@ -215,11 +230,24 @@ function boot() {
   const saved = Store.get('char', null);
   const el = document.getElementById('create');
   const f = el.querySelector('form');
-  if (saved) { f.nome.value = saved.name; f.sexo.value = saved.sexo; f.cls.value = saved.cls; }
+  f.cls.innerHTML = Object.entries(KITS).map(([k, v]) => `<option value="${k}">${v.nome}</option>`).join('');
+  const sk = DATA.skills.skills.map(x => `<option value="${x.id}">${x.name.pt}</option>`).join('');
+  f.querySelectorAll('.free select').forEach((s, i) => { s.innerHTML = sk; s.selectedIndex = [0, 4, 26][i]; });
+  const kitInfo = () => {
+    const k = KITS[f.cls.value], free = f.cls.value === 'livre';
+    f.querySelector('.free').style.display = free ? '' : 'none';
+    f.querySelector('.kitinfo').textContent = free ? 'Escolha 3 skills: começam em 50, 30 e 20.' :
+      Object.entries(k.skills).map(([id, v]) => `${(DATA.skills.skills.find(x => x.id === id) || { name: { pt: id } }).name.pt} ${v}`).join(' · ');
+  };
+  f.cls.onchange = kitInfo;
+  if (saved && KITS[saved.cls]) { f.nome.value = saved.name; f.sexo.value = saved.sexo; f.cls.value = saved.cls; }
   else f.nome.value = rnd(['Tomás', 'Godofredo', 'Balduíno', 'Onofre', 'Raimundo', 'Hugo']) + Math.floor(10 + Math.random() * 89);
+  kitInfo();
   f.onsubmit = e => {
     e.preventDefault();
-    const cfg = { name: f.nome.value.trim().slice(0, 16) || 'Andarilho', sexo: f.sexo.value, cls: f.cls.value };
+    const fs = [...f.querySelectorAll('.free select')].map(x => x.value), free = {};
+    [50, 30, 20].forEach((v, i) => { if (fs[i] && !free[fs[i]]) free[fs[i]] = v; });
+    const cfg = { name: f.nome.value.trim().slice(0, 16) || 'Andarilho', sexo: f.sexo.value, cls: f.cls.value, free };
     Store.set('char', cfg);
     el.classList.add('off');
     const go = () => Promise.all([fonts, new Promise(r => atlas.complete ? r() : (atlas.onload = r))]).then(() => Game.start(cfg));
