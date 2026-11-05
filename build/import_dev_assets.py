@@ -114,7 +114,7 @@ TCOM_LAYERS_F = ['default_chest', 'default_legs', 'default_hands', 'default_feet
 KEEP_ANIMS = ('stance', 'run', 'swing', 'hit', 'die', 'idle')
 
 
-def import_tcom(tcom, out):
+def import_tcom(tcom, out, items=None, incremental=False):
     s = open(os.path.join(tcom, 'js', 'jogo.js'), encoding='utf-8').read()
     i = s.index('const CAMADAS_ANIM = ') + len('const CAMADAS_ANIM = ')
     depth = 0
@@ -130,9 +130,22 @@ def import_tcom(tcom, out):
     os.makedirs(os.path.join(out, 'f'), exist_ok=True)
     meta = {}
     total = 0
-    for sex, names in (('m', TCOM_LAYERS_M), ('f', TCOM_LAYERS_F)):
+    lm, lf = list(TCOM_LAYERS_M), list(TCOM_LAYERS_F)
+    # camadas pedidas pelos itens (data/items/base.json: sprite_layer = 'm/<nome>')
+    if items and os.path.exists(items):
+        for it in json.load(open(items, encoding='utf-8'))['items']:
+            sl = it.get('sprite_layer')
+            if sl:
+                sx, n = sl.split('/', 1)
+                (lm if sx == 'm' else lf).append(n) if n not in (lm if sx == 'm' else lf) else None
+    lj = os.path.join(out, 'layers.json')
+    old = json.load(open(lj)) if incremental and os.path.exists(lj) else {}
+    for sex, names in (('m', lm), ('f', lf)):
         for n in names:
             key = f'{sex}/{n}'
+            if key in old and os.path.exists(os.path.join(out, key + '.webp')):
+                meta[key] = old[key]
+                continue
             if key not in anim:
                 print('  (falta no TCoM)', key)
                 continue
@@ -177,7 +190,11 @@ if __name__ == '__main__':
     ap.add_argument('--tcom', required=True)
     ap.add_argument('--map', action='append', default=[])
     ap.add_argument('--out', default='engine/dev_assets')
+    ap.add_argument('--items', default='data/items/base.json', help='acrescenta as camadas que os itens usam')
+    ap.add_argument('--incremental', action='store_true', help='só importa as camadas que ainda não existem')
+    ap.add_argument('--skip-map', action='store_true')
     a = ap.parse_args()
-    for m in a.map or ['lochport']:
-        import_map(a.flare, m, os.path.join(a.out, 'flare'))
-    import_tcom(a.tcom, os.path.join(a.out, 'tcom'))
+    if not a.skip_map:
+        for m in a.map or ['lochport']:
+            import_map(a.flare, m, os.path.join(a.out, 'flare'))
+    import_tcom(a.tcom, os.path.join(a.out, 'tcom'), a.items, a.incremental)

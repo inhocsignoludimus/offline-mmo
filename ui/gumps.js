@@ -142,8 +142,16 @@ const StatusGump = {
 // ---------------------------------------------------------------------
 // Ícones dos itens (folha do TCoM)
 // ---------------------------------------------------------------------
+const COR_TIPO = { consumable: '#7a3030', resource: '#5a4a2a', tool: '#3a4a5a', furniture: '#5a3a1a', deed: '#6a5a2a', jewelry: '#5a4a6a', misc: '#444' };
 const Icons = {
+  // quadrado com as iniciais, para os itens que ainda não têm ícone desenhado
+  fallback(it, size) {
+    const n = it.name.split(/\s+/).filter(w => w.length > 2).map(w => w[0]).join('').slice(0, 2).toUpperCase() || it.name.slice(0, 2);
+    return { style: `background:${COR_TIPO[it.d.type] || '#444'};border:1px solid #000;border-radius:4px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font:700 ${Math.round(size * 0.36)}px 'Alegreya SC',serif;color:#f0e0c0`, label: n };
+  },
+  style(it, size) { const c = this.css(it.icon, size); return c ? { style: c, label: '' } : this.fallback(it, size); },
   img: null, meta: null,
+  // ícone da folha do TCoM; sem ícone na folha, devolve '' e quem chama usa fallback()
   css(key, size) {
     const m = this.meta && this.meta.mapa[key]; if (!m) return '';
     const s = size / this.meta.tam;
@@ -162,9 +170,10 @@ const Backpack = {
     const p = Game.player, b = this.g.body; b.innerHTML = '';
     for (const it of p.bag) {
       const d = document.createElement('div'); d.className = 'bitem';
-      d.style.cssText = Icons.css(it.icon, 44) + `;left:${it.bx}px;top:${it.by}px`;
-      d.title = it.name + (it.qty > 1 ? ` (${it.qty})` : '');
-      if (it.qty > 1) d.innerHTML = `<b>${it.qty}</b>`;
+      const ic = Icons.style(it, 44);
+      d.style.cssText = ic.style + `;left:${it.bx}px;top:${it.by}px`;
+      d.title = it.name + (it.qty > 1 ? ` (${it.qty})` : '') + (it.d.desc ? '\n' + (it.d.desc[Chat.lang] || it.d.desc.pt) : '');
+      d.innerHTML = ic.label + (it.qty > 1 ? `<b>${it.qty}</b>` : '');
       let sx, sy, ox, oy, moved = false;
       d.onpointerdown = e => { e.stopPropagation(); sx = e.clientX; sy = e.clientY; ox = it.bx; oy = it.by; moved = false; d.setPointerCapture(e.pointerId); };
       d.onpointermove = e => { if (sx === undefined) return; const dx = e.clientX - sx, dy = e.clientY - sy; if (Math.abs(dx) + Math.abs(dy) > 4) moved = true; it.bx = Math.max(0, Math.min(b.clientWidth - 44, ox + dx)); it.by = Math.max(0, Math.min(b.clientHeight - 44, oy + dy)); d.style.left = it.bx + 'px'; d.style.top = it.by + 'px'; };
@@ -180,21 +189,22 @@ const Backpack = {
 // ---------------------------------------------------------------------
 const Paperdoll = {
   init() {
-    this.g = Gumps.create('paperdoll', 'Paperdoll', { pos: [240, 12], posCompact: [6, 6], w: 280, h: 340, cls: 'paperdoll', open: false, onOpen: () => this.render() });
+    this.g = Gumps.create('paperdoll', 'Paperdoll', { pos: [240, 12], posCompact: [6, 6], w: 300, h: 340, cls: 'paperdoll', open: false, onOpen: () => this.render() });
     this.g.body.innerHTML = `<canvas width="120" height="150"></canvas><div class="pslots"></div><div class="pinfo"></div>`;
     this.cv = this.g.body.querySelector('canvas'); this.t = 0;
   },
   render() {
     const p = Game.player, s = this.g.body.querySelector('.pslots');
     s.innerHTML = '';
-    for (const [slot, nome] of [['cabeca', 'Cabeça'], ['tronco', 'Tronco'], ['maos', 'Mãos'], ['pernas', 'Pernas'], ['pes', 'Pés'], ['main', 'Arma'], ['off', 'Escudo']]) {
+    for (const [slot, nome] of [['head', 'Cabeça'], ['neck', 'Pescoço'], ['torso', 'Tronco'], ['cloak', 'Manto'], ['arms', 'Braços'], ['hands', 'Mãos'], ['legs', 'Pernas'], ['feet', 'Pés'], ['hand1', 'Arma'], ['hand2', 'Escudo'], ['ring', 'Anel']]) {
       const it = p.equip[slot], d = document.createElement('div'); d.className = 'pslot';
-      d.innerHTML = `<i style="${it ? Icons.css(it.icon, 30) : ''}"></i><span>${it ? it.name : '<em>' + nome + '</em>'}</span>`;
+      const ic = it ? Icons.style(it, 22) : { style: '', label: '' };
+      d.innerHTML = `<i style="${ic.style}">${ic.label}</i><span>${it ? it.name : '<em>' + nome + '</em>'}</span>`;
       if (it) { d.title = 'Clique para tirar'; d.onclick = () => Game.unequip(slot); }
       s.appendChild(d);
     }
     const sk = p.skills;
-    this.g.body.querySelector('.pinfo').innerHTML = `<b>${p.name}</b>${p.guild ? ` <span>[${p.guild.tag}]</span>` : ''}<br>${Object.entries(sk).slice(0, 4).map(([k, v]) => `${k} ${v.toFixed(1)}`).join(' · ')}`;
+    this.g.body.querySelector('.pinfo').innerHTML = `<b>${p.name}</b>${p.guild ? ` <span>[${p.guild.tag}]</span>` : ''}<br>${Object.entries(sk).slice(0, 4).map(([k, v]) => `${k} ${v.toFixed(1)}`).join('<br>')}`;
   },
   tick(dt) {
     if (!Gumps.isOpen('paperdoll')) return;

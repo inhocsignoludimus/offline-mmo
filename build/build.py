@@ -42,6 +42,7 @@ def main():
         'guilds': load('data/names/guilds.json'),
         'biomes': load('data/lore/biomes.json'),
         'items': load('data/items/base.json'),
+        'bosses': load('data/names/bosses.json'),
     }
     js = ['// gerado por build/build.py — não editar à mão',
           'const DATA = ' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';']
