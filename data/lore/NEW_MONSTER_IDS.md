@@ -1,0 +1,35 @@
+# New monster IDs (need art models)
+
+- `bandit`: human bandit — needs model (TCoM soldier ok)
+- `boar`: wild boar — needs model
+- `bog_lurker`: swamp stalker — zombie/antlion hybrid art
+- `crab_giant`: giant crab — needs model
+- `croc`: marsh crocodile — needs model
+- `crusader_ghost`: spectral frankish knight — skeleton_knight reskin
+- `cultist`: ruin cultist — bandit/necromancer
+- `dire_bear`: large bear — needs model
+- `fire_ant`: red antlion variant — can reuse antlion palette
+- `frost_giant`: northern giant — minotaur reskin possible
+- `ghazi`: saracen cavalry spirit — needs model or hobgoblin reskin
+- `golem_ruin`: ruin construct — rock_elemental variant
+- `griffon`: mountain griffin — needs model
+- `hyena`: spotted hyena — needs model
+- `ice_wolf`: arctic wolf — wolf reskin
+- `jackal`: canine desert scavenger — needs model (dog/wolf reskin ok)
+- `mosquito_swarm`: insect cloud — needs VFX
+- `mountain_goat`: aggressive goat — needs model
+- `plague_rat`: giant rat — needs model
+- `rock_elemental`: boulder golem — reuse boulder
+- `sand_scorpion`: desert scorpion — needs model
+- `sea_raider`: coastal pirate — bandit reskin
+- `shade`: shadow spirit — zombie_ghost ok
+- `sharkman`: amphibious raider — needs model
+- `siren`: coastal siren — needs model
+- `snow_hare_dire`: dire snow hare — needs model
+- `spider_giant`: giant spider — needs model
+- `treant`: animated tree — needs model
+- `wight`: frost undead — frozen_zombie ok
+- `wolf`: timber wolf — needs model
+- `wyvern_air`: air wyvern — Flare has wyvern / wyvern_air_boss; confirm palette
+- `skeleton_knight`: Flare uses skeletal_knight — alias or reskin
+- `zombie_rotting`: Flare lvl1_zombie_rotting — use zombie_rotting id

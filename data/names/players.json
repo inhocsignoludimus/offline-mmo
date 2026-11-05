@@ -1,0 +1,505 @@
+{
+  "version": 1,
+  "players": [
+    {
+      "name": "xXCruzadoXx",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "DarkGhazi99",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "PvPRainha",
+      "style": "gamer",
+      "sex": "f"
+    },
+    {
+      "name": "NoobSlayer",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "LootGoblinx",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "SkillCap200",
+      "style": "gamer",
+      "sex": "f"
+    },
+    {
+      "name": "xxSarracenxx",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "FarmQueen",
+      "style": "gamer",
+      "sex": "f"
+    },
+    {
+      "name": "CritMachine",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "LagKillah",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "ProBaldwin",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "MissCrit",
+      "style": "gamer",
+      "sex": "f"
+    },
+    {
+      "name": "ZergRushBR",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "AfkMiner",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "ComboBreaker",
+      "style": "gamer",
+      "sex": "f"
+    },
+    {
+      "name": "GlassCanon",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "RaidWiper",
+      "style": "gamer",
+      "sex": "m"
+    },
+    {
+      "name": "Lirael",
+      "style": "fantasia",
+      "sex": "f"
+    },
+    {
+      "name": "Aldric",
+      "style": "fantasia",
+      "sex": "m"
+    },
+    {
+      "name": "Seraphine",
+      "style": "fantasia",
+      "sex": "f"
+    },
+    {
+      "name": "Thalor",
+      "style": "fantasia",
+      "sex": "m"
+    },
+    {
+      "name": "Elyndra",
+      "style": "fantasia",
+      "sex": "f"
+    },
+    {
+      "name": "Kaelen",
+      "style": "fantasia",
+      "sex": "m"
+    },
+    {
+      "name": "Mirabel",
+      "style": "fantasia",
+      "sex": "f"
+    },
+    {
+      "name": "Draven",
+      "style": "fantasia",
+      "sex": "m"
+    },
+    {
+      "name": "Isolde",
+      "style": "fantasia",
+      "sex": "f"
+    },
+    {
+      "name": "Gareth",
+      "style": "fantasia",
+      "sex": "m"
+    },
+    {
+      "name": "Nyxara",
+      "style": "fantasia",
+      "sex": "f"
+    },
+    {
+      "name": "Rowan",
+      "style": "fantasia",
+      "sex": "m"
+    },
+    {
+      "name": "Faelwen",
+      "style": "fantasia",
+      "sex": "f"
+    },
+    {
+      "name": "Corvin",
+      "style": "fantasia",
+      "sex": "m"
+    },
+    {
+      "name": "AstridMoon",
+      "style": "fantasia",
+      "sex": "f"
+    },
+    {
+      "name": "Vesper",
+      "style": "fantasia",
+      "sex": "m"
+    },
+    {
+      "name": "Lunara",
+      "style": "fantasia",
+      "sex": "f"
+    },
+    {
+      "name": "Balduino IV",
+      "style": "rp_historico",
+      "sex": "m"
+    },
+    {
+      "name": "Saladino",
+      "style": "rp_historico",
+      "sex": "m"
+    },
+    {
+      "name": "Sibila",
+      "style": "rp_historico",
+      "sex": "f"
+    },
+    {
+      "name": "Reinaldo",
+      "style": "rp_historico",
+      "sex": "m"
+    },
+    {
+      "name": "Melisende",
+      "style": "rp_historico",
+      "sex": "f"
+    },
+    {
+      "name": "Godofredo",
+      "style": "rp_historico",
+      "sex": "m"
+    },
+    {
+      "name": "Leonor",
+      "style": "rp_historico",
+      "sex": "f"
+    },
+    {
+      "name": "Tancredo",
+      "style": "rp_historico",
+      "sex": "m"
+    },
+    {
+      "name": "Aisha",
+      "style": "rp_historico",
+      "sex": "f"
+    },
+    {
+      "name": "Boemundo",
+      "style": "rp_historico",
+      "sex": "m"
+    },
+    {
+      "name": "Constanca",
+      "style": "rp_historico",
+      "sex": "f"
+    },
+    {
+      "name": "Imad",
+      "style": "rp_historico",
+      "sex": "m"
+    },
+    {
+      "name": "Yolanda",
+      "style": "rp_historico",
+      "sex": "f"
+    },
+    {
+      "name": "Hugo de Payns",
+      "style": "rp_historico",
+      "sex": "m"
+    },
+    {
+      "name": "Nur ad-Din",
+      "style": "rp_historico",
+      "sex": "m"
+    },
+    {
+      "name": "Bertrada",
+      "style": "rp_historico",
+      "sex": "f"
+    },
+    {
+      "name": "Raymond",
+      "style": "rp_historico",
+      "sex": "m"
+    },
+    {
+      "name": "TiozãoPvP",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "CafuneMortal",
+      "style": "br_zoeira",
+      "sex": "f"
+    },
+    {
+      "name": "BiscoitoPK",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "Xuxuzinho",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "DonaEspada",
+      "style": "br_zoeira",
+      "sex": "f"
+    },
+    {
+      "name": "ZéGotinhaXP",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "PipocaCrit",
+      "style": "br_zoeira",
+      "sex": "f"
+    },
+    {
+      "name": "MlkDoLag",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "TiaDoBank",
+      "style": "br_zoeira",
+      "sex": "f"
+    },
+    {
+      "name": "Sacaninha",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "FrangoAssado",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "BolachaPvE",
+      "style": "br_zoeira",
+      "sex": "f"
+    },
+    {
+      "name": "PãoComOvo",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "Catapimbas",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "JujubaPK",
+      "style": "br_zoeira",
+      "sex": "f"
+    },
+    {
+      "name": "SóVimFarmar",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "KkkMatador",
+      "style": "br_zoeira",
+      "sex": "m"
+    },
+    {
+      "name": "Pedro",
+      "style": "simples",
+      "sex": "m"
+    },
+    {
+      "name": "Ana",
+      "style": "simples",
+      "sex": "f"
+    },
+    {
+      "name": "Lucas",
+      "style": "simples",
+      "sex": "m"
+    },
+    {
+      "name": "Maria",
+      "style": "simples",
+      "sex": "f"
+    },
+    {
+      "name": "Joao",
+      "style": "simples",
+      "sex": "m"
+    },
+    {
+      "name": "Clara",
+      "style": "simples",
+      "sex": "f"
+    },
+    {
+      "name": "Bruno",
+      "style": "simples",
+      "sex": "m"
+    },
+    {
+      "name": "Helena",
+      "style": "simples",
+      "sex": "f"
+    },
+    {
+      "name": "Rafael",
+      "style": "simples",
+      "sex": "m"
+    },
+    {
+      "name": "Beatriz",
+      "style": "simples",
+      "sex": "f"
+    },
+    {
+      "name": "Diego",
+      "style": "simples",
+      "sex": "m"
+    },
+    {
+      "name": "Sofia",
+      "style": "simples",
+      "sex": "f"
+    },
+    {
+      "name": "Marcos",
+      "style": "simples",
+      "sex": "m"
+    },
+    {
+      "name": "Julia",
+      "style": "simples",
+      "sex": "f"
+    },
+    {
+      "name": "Felipe",
+      "style": "simples",
+      "sex": "m"
+    },
+    {
+      "name": "Larissa",
+      "style": "simples",
+      "sex": "f"
+    },
+    {
+      "name": "Gustavo",
+      "style": "simples",
+      "sex": "m"
+    },
+    {
+      "name": "Pedro1987",
+      "style": "numero",
+      "sex": "m"
+    },
+    {
+      "name": "Ana2001",
+      "style": "numero",
+      "sex": "f"
+    },
+    {
+      "name": "Cruzado1177",
+      "style": "numero",
+      "sex": "m"
+    },
+    {
+      "name": "Knight42",
+      "style": "numero",
+      "sex": "m"
+    },
+    {
+      "name": "Sara99",
+      "style": "numero",
+      "sex": "f"
+    },
+    {
+      "name": "Hugo1337",
+      "style": "numero",
+      "sex": "m"
+    },
+    {
+      "name": "Mia2010",
+      "style": "numero",
+      "sex": "f"
+    },
+    {
+      "name": "Rex007",
+      "style": "numero",
+      "sex": "m"
+    },
+    {
+      "name": "Lara88",
+      "style": "numero",
+      "sex": "f"
+    },
+    {
+      "name": "Omar1492",
+      "style": "numero",
+      "sex": "m"
+    },
+    {
+      "name": "Nina360",
+      "style": "numero",
+      "sex": "f"
+    },
+    {
+      "name": "Leo2024",
+      "style": "numero",
+      "sex": "m"
+    },
+    {
+      "name": "Bia777",
+      "style": "numero",
+      "sex": "f"
+    },
+    {
+      "name": "Tom123",
+      "style": "numero",
+      "sex": "m"
+    },
+    {
+      "name": "Sam1984",
+      "style": "numero",
+      "sex": "m"
+    }
+  ]
+}

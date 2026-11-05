@@ -1,0 +1,3605 @@
+{
+  "version": 1,
+  "lines": [
+    {
+      "id": "nov_greet_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "greet",
+      "ch": "local",
+      "text": {
+        "pt": "oi gente alguem sabe onde fica o banco de {place}?",
+        "en": "hi anyone know where the bank in {place} is?"
+      }
+    },
+    {
+      "id": "nov_greet_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "greet",
+      "ch": "local",
+      "text": {
+        "pt": "eae galera sou novo aq, vlw se ajudarem",
+        "en": "hey folks I'm new here, ty if you help"
+      }
+    },
+    {
+      "id": "nov_greet_03",
+      "p": [
+        "novato"
+      ],
+      "ctx": "greet",
+      "ch": "whisper",
+      "text": {
+        "pt": "oi {target} vc pode me ajudar um pouco?",
+        "en": "hi {target} can you help me a bit?"
+      }
+    },
+    {
+      "id": "nov_bye_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "bye",
+      "ch": "local",
+      "text": {
+        "pt": "flw gente vou sair um pouco",
+        "en": "cya guys logging for a bit"
+      }
+    },
+    {
+      "id": "nov_bye_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "bye",
+      "ch": "party",
+      "text": {
+        "pt": "vlw pelo pt pessoal, flw!",
+        "en": "ty for the party guys, cya!"
+      }
+    },
+    {
+      "id": "nov_idle_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "como upa {skill} mais rapido?",
+        "en": "how do I level {skill} faster?"
+      }
+    },
+    {
+      "id": "nov_idle_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "to perdido perto de {place} kkk",
+        "en": "I'm lost near {place} lol"
+      }
+    },
+    {
+      "id": "nov_idle_03",
+      "p": [
+        "novato"
+      ],
+      "ctx": "idle",
+      "ch": "global",
+      "text": {
+        "pt": "alguem ai? servidor parece vazio",
+        "en": "anyone online? server feels empty"
+      }
+    },
+    {
+      "id": "nov_lfg_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "lfg",
+      "ch": "global",
+      "text": {
+        "pt": "lfg {place} sou noob mas esforço",
+        "en": "lfg {place} I'm a noob but I try"
+      }
+    },
+    {
+      "id": "nov_lfg_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "lfg",
+      "ch": "local",
+      "text": {
+        "pt": "alguem topa pt pra farmar?",
+        "en": "anyone want a farm party?"
+      }
+    },
+    {
+      "id": "nov_lfg_03",
+      "p": [
+        "novato"
+      ],
+      "ctx": "lfg",
+      "ch": "party",
+      "text": {
+        "pt": "preciso de healer pra {boss} pfv",
+        "en": "need a healer for {boss} plz"
+      }
+    },
+    {
+      "id": "nov_trade_sell_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "trade_sell",
+      "ch": "local",
+      "text": {
+        "pt": "vendo {item} barato {price}gp",
+        "en": "selling {item} cheap {price}gp"
+      }
+    },
+    {
+      "id": "nov_trade_buy_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "trade_buy",
+      "ch": "local",
+      "text": {
+        "pt": "alguem vende {item}? tenho {price}gp",
+        "en": "anyone selling {item}? got {price}gp"
+      }
+    },
+    {
+      "id": "nov_trade_haggle_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "trade_haggle",
+      "ch": "whisper",
+      "text": {
+        "pt": "aceita {price}gp no {item}? to pobre kkk",
+        "en": "take {price}gp for {item}? I'm broke lol"
+      }
+    },
+    {
+      "id": "nov_help_ask_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "help_ask",
+      "ch": "local",
+      "text": {
+        "pt": "como abre a porta da casa?",
+        "en": "how do I open a house door?"
+      }
+    },
+    {
+      "id": "nov_help_ask_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "help_ask",
+      "ch": "local",
+      "text": {
+        "pt": "o q é PK? me mataram em {place}",
+        "en": "what's PK? I got killed in {place}"
+      }
+    },
+    {
+      "id": "nov_help_ask_03",
+      "p": [
+        "novato"
+      ],
+      "ctx": "help_ask",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} como faz pra entrar na guild?",
+        "en": "{target} how do I join a guild?"
+      }
+    },
+    {
+      "id": "nov_help_ask_04",
+      "p": [
+        "novato"
+      ],
+      "ctx": "help_ask",
+      "ch": "global",
+      "text": {
+        "pt": "onde farmar noob friendly?",
+        "en": "where to farm that's noob friendly?"
+      }
+    },
+    {
+      "id": "nov_help_give_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "help_give",
+      "ch": "local",
+      "text": {
+        "pt": "acho q o banco fica perto da praça",
+        "en": "I think the bank is near the square"
+      }
+    },
+    {
+      "id": "nov_help_give_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "help_give",
+      "ch": "whisper",
+      "text": {
+        "pt": "pra upar {skill} é só usar bastante",
+        "en": "to level {skill} just keep using it"
+      }
+    },
+    {
+      "id": "nov_thanks_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "thanks",
+      "ch": "local",
+      "text": {
+        "pt": "vlw demais pessoal!!",
+        "en": "ty so much guys!!"
+      }
+    },
+    {
+      "id": "nov_thanks_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "thanks",
+      "ch": "whisper",
+      "text": {
+        "pt": "obrigado {target} vc salvou",
+        "en": "thanks {target} you saved me"
+      }
+    },
+    {
+      "id": "nov_thanks_03",
+      "p": [
+        "novato"
+      ],
+      "ctx": "thanks",
+      "ch": "party",
+      "text": {
+        "pt": "vlw pelo pt, aprendi mt",
+        "en": "ty for the party, learned a lot"
+      }
+    },
+    {
+      "id": "nov_brag_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "brag",
+      "ch": "local",
+      "text": {
+        "pt": "consegui matar um goblin sozinho!!",
+        "en": "I killed a goblin alone!!"
+      }
+    },
+    {
+      "id": "nov_brag_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "brag",
+      "ch": "local",
+      "text": {
+        "pt": "upei {skill} pra {n} hoje kkk",
+        "en": "leveled {skill} to {n} today lol"
+      }
+    },
+    {
+      "id": "nov_insult_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "insult",
+      "ch": "local",
+      "text": {
+        "pt": "esse monstro é mt hard pra mim",
+        "en": "this mob is too hard for me"
+      }
+    },
+    {
+      "id": "nov_insult_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "insult",
+      "ch": "local",
+      "text": {
+        "pt": "{target} pq me matou? eu era noob :(",
+        "en": "{target} why kill me? I was a noob :("
+      }
+    },
+    {
+      "id": "nov_complain_server_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "complain_server",
+      "ch": "global",
+      "text": {
+        "pt": "lagou e eu morri :(",
+        "en": "lagged and I died :("
+      }
+    },
+    {
+      "id": "nov_complain_server_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "complain_server",
+      "ch": "local",
+      "text": {
+        "pt": "bugou a porta de novo?",
+        "en": "door bugged again?"
+      }
+    },
+    {
+      "id": "nov_death_self_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "death_self",
+      "ch": "local",
+      "text": {
+        "pt": "morri kkk sou muito ruim",
+        "en": "died lol I'm so bad"
+      }
+    },
+    {
+      "id": "nov_death_self_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "death_self",
+      "ch": "party",
+      "text": {
+        "pt": "gente morri ajudaee",
+        "en": "guys I died help"
+      }
+    },
+    {
+      "id": "nov_death_self_03",
+      "p": [
+        "novato"
+      ],
+      "ctx": "death_self",
+      "ch": "local",
+      "text": {
+        "pt": "perdi o loot todo em {place}",
+        "en": "lost all my loot in {place}"
+      }
+    },
+    {
+      "id": "nov_kill_other_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "kill_other",
+      "ch": "local",
+      "text": {
+        "pt": "matei um monstro!! era o {boss}?",
+        "en": "I killed a mob!! was it {boss}?"
+      }
+    },
+    {
+      "id": "nov_loot_rare_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "loot_rare",
+      "ch": "local",
+      "text": {
+        "pt": "dropou {item}!! o q faz com isso?",
+        "en": "{item} dropped!! what do I do with it?"
+      }
+    },
+    {
+      "id": "nov_loot_rare_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "loot_rare",
+      "ch": "party",
+      "text": {
+        "pt": "caiu {item} raro, e agora?",
+        "en": "rare {item} dropped, now what?"
+      }
+    },
+    {
+      "id": "nov_guild_recruit_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "local",
+      "text": {
+        "pt": "tem guild q aceita noob?",
+        "en": "any guild taking noobs?"
+      }
+    },
+    {
+      "id": "nov_guild_recruit_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} vcs aceitam iniciante?",
+        "en": "{target} do you take beginners?"
+      }
+    },
+    {
+      "id": "nov_guild_war_declare_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "guild_war_declare",
+      "ch": "local",
+      "text": {
+        "pt": "o q é guerra de guild?",
+        "en": "what's a guild war?"
+      }
+    },
+    {
+      "id": "nov_guild_war_taunt_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "guild_war_taunt",
+      "ch": "local",
+      "text": {
+        "pt": "vi a guerra mas n entendi nada kkk",
+        "en": "saw the war but got nothing lol"
+      }
+    },
+    {
+      "id": "nov_raid_call_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "raid_call",
+      "ch": "global",
+      "text": {
+        "pt": "raid de {boss} aceita noob?",
+        "en": "{boss} raid taking noobs?"
+      }
+    },
+    {
+      "id": "nov_raid_call_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "raid_call",
+      "ch": "party",
+      "text": {
+        "pt": "posso ir no raid? prometo n morrer mt",
+        "en": "can I join the raid? I'll try not to die"
+      }
+    },
+    {
+      "id": "nov_raid_win_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "raid_win",
+      "ch": "party",
+      "text": {
+        "pt": "aee ganhamoos!! vlw gente",
+        "en": "yay we won!! ty guys"
+      }
+    },
+    {
+      "id": "nov_raid_wipe_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "raid_wipe",
+      "ch": "party",
+      "text": {
+        "pt": "wipeou... foi culpa minha?",
+        "en": "wiped... was it my fault?"
+      }
+    },
+    {
+      "id": "nov_reply_friend_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "reply_friend",
+      "ch": "whisper",
+      "text": {
+        "pt": "oi {target}!! vlw por me ajudar ontem",
+        "en": "hi {target}!! ty for helping yesterday"
+      }
+    },
+    {
+      "id": "nov_reply_friend_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "reply_friend",
+      "ch": "local",
+      "text": {
+        "pt": "{target} é gente boa demais",
+        "en": "{target} is so nice"
+      }
+    },
+    {
+      "id": "nov_reply_enemy_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} n me mata pfv sou noob",
+        "en": "{target} please don't kill me I'm a noob"
+      }
+    },
+    {
+      "id": "nov_reply_neutral_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "reply_neutral",
+      "ch": "local",
+      "text": {
+        "pt": "oi {target}, tudo bem?",
+        "en": "hi {target}, how's it going?"
+      }
+    },
+    {
+      "id": "nov_reply_neutral_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "reply_neutral",
+      "ch": "whisper",
+      "text": {
+        "pt": "desculpa te encher {target}",
+        "en": "sorry to bother you {target}"
+      }
+    },
+    {
+      "id": "nov_pk_warning_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "pk_warning",
+      "ch": "local",
+      "text": {
+        "pt": "cuidado tem PK perto de {place}!!",
+        "en": "careful PK near {place}!!"
+      }
+    },
+    {
+      "id": "nov_pk_warning_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "pk_warning",
+      "ch": "global",
+      "text": {
+        "pt": "vi uns vermelhos em {place}",
+        "en": "saw reds in {place}"
+      }
+    },
+    {
+      "id": "frm_greet_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "greet",
+      "ch": "local",
+      "text": {
+        "pt": "eae, bom farm?",
+        "en": "hey, good farm?"
+      }
+    },
+    {
+      "id": "frm_greet_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "greet",
+      "ch": "whisper",
+      "text": {
+        "pt": "oi {target}, spot livre?",
+        "en": "hi {target}, spot free?"
+      }
+    },
+    {
+      "id": "frm_bye_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "bye",
+      "ch": "local",
+      "text": {
+        "pt": "flw, vou trocar de spot",
+        "en": "cya, switching spots"
+      }
+    },
+    {
+      "id": "frm_bye_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "bye",
+      "ch": "party",
+      "text": {
+        "pt": "sai do pt, farm solo agora",
+        "en": "leaving party, solo farm"
+      }
+    },
+    {
+      "id": "frm_idle_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "xp/h ta ok aq em {place}",
+        "en": "xp/h ok here at {place}"
+      }
+    },
+    {
+      "id": "frm_idle_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "falta pouco pra {skill} {n}",
+        "en": "almost {skill} {n}"
+      }
+    },
+    {
+      "id": "frm_idle_03",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "idle",
+      "ch": "global",
+      "text": {
+        "pt": "farmando {place}, n atrapalhem",
+        "en": "farming {place}, don't pull"
+      }
+    },
+    {
+      "id": "frm_lfg_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "lfg",
+      "ch": "global",
+      "text": {
+        "pt": "lfg farm {place} xp bom",
+        "en": "lfg farm {place} good xp"
+      }
+    },
+    {
+      "id": "frm_lfg_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "lfg",
+      "ch": "party",
+      "text": {
+        "pt": "preciso de tank pra farmar {boss}",
+        "en": "need tank to farm {boss}"
+      }
+    },
+    {
+      "id": "frm_lfg_03",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "lfg",
+      "ch": "local",
+      "text": {
+        "pt": "pt farm antlion?",
+        "en": "antlion farm party?"
+      }
+    },
+    {
+      "id": "frm_trade_sell_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "trade_sell",
+      "ch": "global",
+      "text": {
+        "pt": "WTS stack {item} {price}gp",
+        "en": "WTS stack {item} {price}gp"
+      }
+    },
+    {
+      "id": "frm_trade_buy_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "trade_buy",
+      "ch": "global",
+      "text": {
+        "pt": "WTB {item} pago {price}gp",
+        "en": "WTB {item} pay {price}gp"
+      }
+    },
+    {
+      "id": "frm_trade_haggle_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "trade_haggle",
+      "ch": "whisper",
+      "text": {
+        "pt": "{price}gp no stack e levo tudo",
+        "en": "{price}gp for the stack I take all"
+      }
+    },
+    {
+      "id": "frm_help_ask_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "help_ask",
+      "ch": "local",
+      "text": {
+        "pt": "qual respawn do {boss}?",
+        "en": "what's {boss} respawn?"
+      }
+    },
+    {
+      "id": "frm_help_ask_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "help_ask",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} drop rate de {item}?",
+        "en": "{target} drop rate on {item}?"
+      }
+    },
+    {
+      "id": "frm_help_give_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "help_give",
+      "ch": "local",
+      "text": {
+        "pt": "farm de {item} é em {place}",
+        "en": "{item} farm is at {place}"
+      }
+    },
+    {
+      "id": "frm_help_give_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "help_give",
+      "ch": "whisper",
+      "text": {
+        "pt": "rota boa: {place} depois sobe",
+        "en": "good route: {place} then up"
+      }
+    },
+    {
+      "id": "frm_thanks_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "thanks",
+      "ch": "local",
+      "text": {
+        "pt": "vlw pela tip do spot",
+        "en": "ty for the spot tip"
+      }
+    },
+    {
+      "id": "frm_thanks_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "thanks",
+      "ch": "whisper",
+      "text": {
+        "pt": "vlw {target}, xp subiu",
+        "en": "ty {target}, xp went up"
+      }
+    },
+    {
+      "id": "frm_brag_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "brag",
+      "ch": "local",
+      "text": {
+        "pt": "{n} kills hj, dropou {item}",
+        "en": "{n} kills today, got {item}"
+      }
+    },
+    {
+      "id": "frm_brag_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "brag",
+      "ch": "guild",
+      "text": {
+        "pt": "farmou {item} raro em {place}",
+        "en": "farmed rare {item} at {place}"
+      }
+    },
+    {
+      "id": "frm_insult_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "insult",
+      "ch": "local",
+      "text": {
+        "pt": "n pulla meu spot pfv",
+        "en": "don't pull my spot plz"
+      }
+    },
+    {
+      "id": "frm_insult_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "insult",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} saiu do meu farm",
+        "en": "{target} left my farm"
+      }
+    },
+    {
+      "id": "frm_complain_server_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "complain_server",
+      "ch": "local",
+      "text": {
+        "pt": "respawn ta lento hj",
+        "en": "respawn slow today"
+      }
+    },
+    {
+      "id": "frm_complain_server_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "complain_server",
+      "ch": "global",
+      "text": {
+        "pt": "lag no farm de {place}",
+        "en": "lag at {place} farm"
+      }
+    },
+    {
+      "id": "frm_death_self_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "death_self",
+      "ch": "local",
+      "text": {
+        "pt": "morri no pull, reset",
+        "en": "died on pull, reset"
+      }
+    },
+    {
+      "id": "frm_death_self_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "death_self",
+      "ch": "party",
+      "text": {
+        "pt": "down, rezz?",
+        "en": "down, rez?"
+      }
+    },
+    {
+      "id": "frm_kill_other_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "kill_other",
+      "ch": "local",
+      "text": {
+        "pt": "clear, prox pack",
+        "en": "clear, next pack"
+      }
+    },
+    {
+      "id": "frm_kill_other_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "kill_other",
+      "ch": "party",
+      "text": {
+        "pt": "{boss} down, loot",
+        "en": "{boss} down, loot"
+      }
+    },
+    {
+      "id": "frm_loot_rare_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "loot_rare",
+      "ch": "local",
+      "text": {
+        "pt": "dropou {item}!!",
+        "en": "{item} dropped!!"
+      }
+    },
+    {
+      "id": "frm_loot_rare_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "loot_rare",
+      "ch": "party",
+      "text": {
+        "pt": "{item} no loot, roll?",
+        "en": "{item} in loot, roll?"
+      }
+    },
+    {
+      "id": "frm_loot_rare_03",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "loot_rare",
+      "ch": "guild",
+      "text": {
+        "pt": "farmou {item} em {n} runs",
+        "en": "farmed {item} in {n} runs"
+      }
+    },
+    {
+      "id": "frm_guild_recruit_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "guild",
+      "text": {
+        "pt": "preciso de farmador ativo",
+        "en": "need active farmer"
+      }
+    },
+    {
+      "id": "frm_guild_recruit_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} farm bem, topa {guild}?",
+        "en": "{target} farm well, join {guild}?"
+      }
+    },
+    {
+      "id": "frm_guild_war_declare_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "guild_war_declare",
+      "ch": "guild",
+      "text": {
+        "pt": "guerra, pausar farm?",
+        "en": "war, pause farm?"
+      }
+    },
+    {
+      "id": "frm_guild_war_taunt_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "guild_war_taunt",
+      "ch": "guild",
+      "text": {
+        "pt": "eles n farmam, só pk",
+        "en": "they don't farm, just pk"
+      }
+    },
+    {
+      "id": "frm_raid_call_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "raid_call",
+      "ch": "guild",
+      "text": {
+        "pt": "farm pré-raid em {place}",
+        "en": "pre-raid farm at {place}"
+      }
+    },
+    {
+      "id": "frm_raid_call_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "raid_call",
+      "ch": "party",
+      "text": {
+        "pt": "stack potion antes do {boss}",
+        "en": "stack potions before {boss}"
+      }
+    },
+    {
+      "id": "frm_raid_win_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "raid_win",
+      "ch": "party",
+      "text": {
+        "pt": "bom loot, valeu o farm",
+        "en": "good loot, worth the farm"
+      }
+    },
+    {
+      "id": "frm_raid_wipe_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "raid_wipe",
+      "ch": "party",
+      "text": {
+        "pt": "wipe, farmar pots dnv",
+        "en": "wipe, farm pots again"
+      }
+    },
+    {
+      "id": "frm_reply_friend_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "reply_friend",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} spot compartilhado?",
+        "en": "{target} share spot?"
+      }
+    },
+    {
+      "id": "frm_reply_friend_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "reply_friend",
+      "ch": "local",
+      "text": {
+        "pt": "{target} farm top",
+        "en": "{target} solid farm"
+      }
+    },
+    {
+      "id": "frm_reply_enemy_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "local",
+      "text": {
+        "pt": "{target} n steala meu pack",
+        "en": "{target} don't steal my pack"
+      }
+    },
+    {
+      "id": "frm_reply_enemy_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "whisper",
+      "text": {
+        "pt": "sai do spot {target}",
+        "en": "leave the spot {target}"
+      }
+    },
+    {
+      "id": "frm_reply_neutral_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "reply_neutral",
+      "ch": "local",
+      "text": {
+        "pt": "spot livre se quiser",
+        "en": "spot free if you want"
+      }
+    },
+    {
+      "id": "frm_reply_neutral_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "reply_neutral",
+      "ch": "whisper",
+      "text": {
+        "pt": "farm solo, flw",
+        "en": "solo farm, cya"
+      }
+    },
+    {
+      "id": "frm_pk_warning_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "pk_warning",
+      "ch": "local",
+      "text": {
+        "pt": "pk no spot de {place}",
+        "en": "pk at {place} spot"
+      }
+    },
+    {
+      "id": "frm_pk_warning_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "pk_warning",
+      "ch": "guild",
+      "text": {
+        "pt": "vermelhos farmando em {place}",
+        "en": "reds farming at {place}"
+      }
+    },
+    {
+      "id": "frm_idle_04",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "idle",
+      "ch": "party",
+      "text": {
+        "pt": "mais um pack e banco",
+        "en": "one more pack then bank"
+      }
+    },
+    {
+      "id": "frm_brag_03",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "brag",
+      "ch": "local",
+      "text": {
+        "pt": "{skill} {n} pure farm",
+        "en": "{skill} {n} pure farm"
+      }
+    },
+    {
+      "id": "pvp_greet_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "greet",
+      "ch": "local",
+      "text": {
+        "pt": "eae fracos",
+        "en": "hey scrubs"
+      }
+    },
+    {
+      "id": "pvp_greet_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "greet",
+      "ch": "global",
+      "text": {
+        "pt": "quem topa 1v1 em {place}?",
+        "en": "who wants 1v1 at {place}?"
+      }
+    },
+    {
+      "id": "pvp_bye_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "bye",
+      "ch": "local",
+      "text": {
+        "pt": "flw, vcs n valem meu tempo",
+        "en": "cya, not worth my time"
+      }
+    },
+    {
+      "id": "pvp_bye_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "bye",
+      "ch": "whisper",
+      "text": {
+        "pt": "gg {target}, ate a prox",
+        "en": "gg {target}, until next"
+      }
+    },
+    {
+      "id": "pvp_idle_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "to entediado, cadê os pks",
+        "en": "bored, where are the pks"
+      }
+    },
+    {
+      "id": "pvp_idle_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "idle",
+      "ch": "global",
+      "text": {
+        "pt": "arena aberta em {place}",
+        "en": "arena open at {place}"
+      }
+    },
+    {
+      "id": "pvp_lfg_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "lfg",
+      "ch": "global",
+      "text": {
+        "pt": "lfg gank squad {place}",
+        "en": "lfg gank squad {place}"
+      }
+    },
+    {
+      "id": "pvp_lfg_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "lfg",
+      "ch": "party",
+      "text": {
+        "pt": "preciso de stun pra gank",
+        "en": "need stun for gank"
+      }
+    },
+    {
+      "id": "pvp_lfg_03",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "lfg",
+      "ch": "guild",
+      "text": {
+        "pt": "war party formando",
+        "en": "war party forming"
+      }
+    },
+    {
+      "id": "pvp_trade_sell_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "trade_sell",
+      "ch": "global",
+      "text": {
+        "pt": "WTS set pvp {price}gp",
+        "en": "WTS pvp set {price}gp"
+      }
+    },
+    {
+      "id": "pvp_trade_buy_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "trade_buy",
+      "ch": "global",
+      "text": {
+        "pt": "WTB {item} pvp pronto",
+        "en": "WTB {item} pvp ready"
+      }
+    },
+    {
+      "id": "pvp_trade_haggle_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "trade_haggle",
+      "ch": "whisper",
+      "text": {
+        "pt": "por {price}gp eu nem olho",
+        "en": "for {price}gp I won't even look"
+      }
+    },
+    {
+      "id": "pvp_help_ask_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "help_ask",
+      "ch": "local",
+      "text": {
+        "pt": "qual build mata {target}?",
+        "en": "what build beats {target}?"
+      }
+    },
+    {
+      "id": "pvp_help_give_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "help_give",
+      "ch": "local",
+      "text": {
+        "pt": "usa {skill} no opener",
+        "en": "use {skill} on opener"
+      }
+    },
+    {
+      "id": "pvp_help_give_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "help_give",
+      "ch": "whisper",
+      "text": {
+        "pt": "kiting em {place} funciona",
+        "en": "kiting at {place} works"
+      }
+    },
+    {
+      "id": "pvp_thanks_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "thanks",
+      "ch": "local",
+      "text": {
+        "pt": "gg vlw pela fight",
+        "en": "gg ty for the fight"
+      }
+    },
+    {
+      "id": "pvp_thanks_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "thanks",
+      "ch": "whisper",
+      "text": {
+        "pt": "boa fight {target}",
+        "en": "good fight {target}"
+      }
+    },
+    {
+      "id": "pvp_brag_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "brag",
+      "ch": "global",
+      "text": {
+        "pt": "matei {target} 1v1 facil",
+        "en": "killed {target} 1v1 easy"
+      }
+    },
+    {
+      "id": "pvp_brag_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "brag",
+      "ch": "local",
+      "text": {
+        "pt": "{n} kills hj, farm de noob",
+        "en": "{n} kills today, noob farm"
+      }
+    },
+    {
+      "id": "pvp_brag_03",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "brag",
+      "ch": "guild",
+      "text": {
+        "pt": "derrubei o leader de {tag}",
+        "en": "downed {tag}'s leader"
+      }
+    },
+    {
+      "id": "pvp_insult_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "insult",
+      "ch": "local",
+      "text": {
+        "pt": "{target} é noob demais kkk",
+        "en": "{target} is such a noob lol"
+      }
+    },
+    {
+      "id": "pvp_insult_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "insult",
+      "ch": "global",
+      "text": {
+        "pt": "{guild} só sabe correr",
+        "en": "{guild} only knows how to run"
+      }
+    },
+    {
+      "id": "pvp_insult_03",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "insult",
+      "ch": "whisper",
+      "text": {
+        "pt": "ez {target}",
+        "en": "ez {target}"
+      }
+    },
+    {
+      "id": "pvp_complain_server_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "complain_server",
+      "ch": "global",
+      "text": {
+        "pt": "lag me fez perder a kill",
+        "en": "lag cost me the kill"
+      }
+    },
+    {
+      "id": "pvp_complain_server_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "complain_server",
+      "ch": "local",
+      "text": {
+        "pt": "hitreg ta zoado",
+        "en": "hitreg is messed up"
+      }
+    },
+    {
+      "id": "pvp_death_self_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "death_self",
+      "ch": "local",
+      "text": {
+        "pt": "lagou... rematch",
+        "en": "lagged... rematch"
+      }
+    },
+    {
+      "id": "pvp_death_self_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "death_self",
+      "ch": "party",
+      "text": {
+        "pt": "down, eles tão {n}",
+        "en": "down, they're {n}"
+      }
+    },
+    {
+      "id": "pvp_kill_other_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "kill_other",
+      "ch": "local",
+      "text": {
+        "pt": "EZ {target}",
+        "en": "EZ {target}"
+      }
+    },
+    {
+      "id": "pvp_kill_other_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "kill_other",
+      "ch": "global",
+      "text": {
+        "pt": "mais um skull, gg {target}",
+        "en": "another skull, gg {target}"
+      }
+    },
+    {
+      "id": "pvp_kill_other_03",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "kill_other",
+      "ch": "guild",
+      "text": {
+        "pt": "{target} caiu, prox",
+        "en": "{target} down, next"
+      }
+    },
+    {
+      "id": "pvp_loot_rare_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "loot_rare",
+      "ch": "local",
+      "text": {
+        "pt": "lootou set do {target} kkk",
+        "en": "looted {target}'s set lol"
+      }
+    },
+    {
+      "id": "pvp_loot_rare_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "loot_rare",
+      "ch": "guild",
+      "text": {
+        "pt": "peguei {item} do corpse",
+        "en": "got {item} off the corpse"
+      }
+    },
+    {
+      "id": "pvp_guild_recruit_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "global",
+      "text": {
+        "pt": "[{tag}] recruta PvP hardcore",
+        "en": "[{tag}] recruiting hardcore PvP"
+      }
+    },
+    {
+      "id": "pvp_guild_recruit_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} luta bem, entra {guild}",
+        "en": "{target} fights well, join {guild}"
+      }
+    },
+    {
+      "id": "pvp_guild_war_declare_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "guild_war_declare",
+      "ch": "global",
+      "text": {
+        "pt": "[{tag}] DECLARA GUERRA a {guild}!!",
+        "en": "[{tag}] DECLARES WAR on {guild}!!"
+      }
+    },
+    {
+      "id": "pvp_guild_war_declare_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "guild_war_declare",
+      "ch": "guild",
+      "text": {
+        "pt": "guerra ON, todos online",
+        "en": "war ON, everyone online"
+      }
+    },
+    {
+      "id": "pvp_guild_war_taunt_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "guild_war_taunt",
+      "ch": "global",
+      "text": {
+        "pt": "{guild} ta escondida kkk",
+        "en": "{guild} is hiding lol"
+      }
+    },
+    {
+      "id": "pvp_guild_war_taunt_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "guild_war_taunt",
+      "ch": "local",
+      "text": {
+        "pt": "vem {tag}, ou tem medo?",
+        "en": "come {tag}, or scared?"
+      }
+    },
+    {
+      "id": "pvp_raid_call_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "raid_call",
+      "ch": "guild",
+      "text": {
+        "pt": "raid PvP em {place} AGORA",
+        "en": "PvP raid at {place} NOW"
+      }
+    },
+    {
+      "id": "pvp_raid_call_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "raid_call",
+      "ch": "party",
+      "text": {
+        "pt": "stack e vai, target {boss}",
+        "en": "stack and go, target {boss}"
+      }
+    },
+    {
+      "id": "pvp_raid_win_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "raid_win",
+      "ch": "global",
+      "text": {
+        "pt": "raid win, {guild} chorou",
+        "en": "raid win, {guild} cried"
+      }
+    },
+    {
+      "id": "pvp_raid_wipe_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "raid_wipe",
+      "ch": "party",
+      "text": {
+        "pt": "wipe... eles tão stacked",
+        "en": "wipe... they're stacked"
+      }
+    },
+    {
+      "id": "pvp_reply_friend_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "reply_friend",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} bora gankar?",
+        "en": "{target} let's gank?"
+      }
+    },
+    {
+      "id": "pvp_reply_friend_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "reply_friend",
+      "ch": "local",
+      "text": {
+        "pt": "{target} é meu duo",
+        "en": "{target} is my duo"
+      }
+    },
+    {
+      "id": "pvp_reply_enemy_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "local",
+      "text": {
+        "pt": "te pego dnv {target}",
+        "en": "catching you again {target}"
+      }
+    },
+    {
+      "id": "pvp_reply_enemy_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "whisper",
+      "text": {
+        "pt": "ranked rematch {target}?",
+        "en": "ranked rematch {target}?"
+      }
+    },
+    {
+      "id": "pvp_reply_neutral_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "reply_neutral",
+      "ch": "local",
+      "text": {
+        "pt": "1v1 ou some",
+        "en": "1v1 or leave"
+      }
+    },
+    {
+      "id": "pvp_pk_warning_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "pk_warning",
+      "ch": "local",
+      "text": {
+        "pt": "eu sou o PK de {place} kkk",
+        "en": "I'm the PK of {place} lol"
+      }
+    },
+    {
+      "id": "pvp_pk_warning_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "pk_warning",
+      "ch": "global",
+      "text": {
+        "pt": "vermelhos free em {place}",
+        "en": "free reds at {place}"
+      }
+    },
+    {
+      "id": "pvp_idle_03",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "treino {skill} em player",
+        "en": "training {skill} on players"
+      }
+    },
+    {
+      "id": "com_greet_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "greet",
+      "ch": "global",
+      "text": {
+        "pt": "WTS/WTB aberto, pm ofertas",
+        "en": "WTS/WTB open, pm offers"
+      }
+    },
+    {
+      "id": "com_greet_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "greet",
+      "ch": "local",
+      "text": {
+        "pt": "eae, ta comprando ou vendendo?",
+        "en": "hey, buying or selling?"
+      }
+    },
+    {
+      "id": "com_bye_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "bye",
+      "ch": "local",
+      "text": {
+        "pt": "fechado por hj, flw",
+        "en": "closing for today, cya"
+      }
+    },
+    {
+      "id": "com_bye_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "bye",
+      "ch": "whisper",
+      "text": {
+        "pt": "deal fechado {target}, vlw",
+        "en": "deal done {target}, ty"
+      }
+    },
+    {
+      "id": "com_idle_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "idle",
+      "ch": "global",
+      "text": {
+        "pt": "mercado de {place} ativo",
+        "en": "{place} market is live"
+      }
+    },
+    {
+      "id": "com_idle_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "preço de {item} subiu",
+        "en": "{item} price went up"
+      }
+    },
+    {
+      "id": "com_lfg_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "lfg",
+      "ch": "global",
+      "text": {
+        "pt": "lfg escolta de carga {place}",
+        "en": "lfg cargo escort {place}"
+      }
+    },
+    {
+      "id": "com_lfg_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "lfg",
+      "ch": "party",
+      "text": {
+        "pt": "pago {price}gp por escolta",
+        "en": "pay {price}gp for escort"
+      }
+    },
+    {
+      "id": "com_trade_sell_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade_sell",
+      "ch": "global",
+      "text": {
+        "pt": "WTS {item} {price}gp pm",
+        "en": "WTS {item} {price}gp pm"
+      }
+    },
+    {
+      "id": "com_trade_sell_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade_sell",
+      "ch": "global",
+      "text": {
+        "pt": "WTS {item} x{n} {price}gp ea",
+        "en": "WTS {item} x{n} {price}gp ea"
+      }
+    },
+    {
+      "id": "com_trade_sell_03",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade_sell",
+      "ch": "local",
+      "text": {
+        "pt": "vendo {item} barato aq",
+        "en": "selling {item} cheap here"
+      }
+    },
+    {
+      "id": "com_trade_sell_04",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade_sell",
+      "ch": "whisper",
+      "text": {
+        "pt": "tenho {item} por {price}gp",
+        "en": "got {item} for {price}gp"
+      }
+    },
+    {
+      "id": "com_trade_buy_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade_buy",
+      "ch": "global",
+      "text": {
+        "pt": "WTB {item} pago {price}gp",
+        "en": "WTB {item} pay {price}gp"
+      }
+    },
+    {
+      "id": "com_trade_buy_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade_buy",
+      "ch": "global",
+      "text": {
+        "pt": "WTB stack {item} pm preço",
+        "en": "WTB stack {item} pm price"
+      }
+    },
+    {
+      "id": "com_trade_buy_03",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade_buy",
+      "ch": "local",
+      "text": {
+        "pt": "compro {item}, pm",
+        "en": "buying {item}, pm"
+      }
+    },
+    {
+      "id": "com_trade_haggle_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade_haggle",
+      "ch": "whisper",
+      "text": {
+        "pt": "melhor que {price}gp n rola",
+        "en": "better than {price}gp no deal"
+      }
+    },
+    {
+      "id": "com_trade_haggle_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade_haggle",
+      "ch": "whisper",
+      "text": {
+        "pt": "fechamos em {price}gp?",
+        "en": "deal at {price}gp?"
+      }
+    },
+    {
+      "id": "com_trade_haggle_03",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade_haggle",
+      "ch": "whisper",
+      "text": {
+        "pt": "ultima oferta {price}gp",
+        "en": "last offer {price}gp"
+      }
+    },
+    {
+      "id": "com_help_ask_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "help_ask",
+      "ch": "local",
+      "text": {
+        "pt": "qual preço de {item} hj?",
+        "en": "what's {item} price today?"
+      }
+    },
+    {
+      "id": "com_help_give_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "help_give",
+      "ch": "local",
+      "text": {
+        "pt": "{item} ta saindo a {price}gp",
+        "en": "{item} going for {price}gp"
+      }
+    },
+    {
+      "id": "com_help_give_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "help_give",
+      "ch": "whisper",
+      "text": {
+        "pt": "compra em {place} mais barato",
+        "en": "buy at {place} cheaper"
+      }
+    },
+    {
+      "id": "com_thanks_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "thanks",
+      "ch": "whisper",
+      "text": {
+        "pt": "vlw pelo deal {target}",
+        "en": "ty for the deal {target}"
+      }
+    },
+    {
+      "id": "com_thanks_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "thanks",
+      "ch": "local",
+      "text": {
+        "pt": "bom negocio, volte sempre",
+        "en": "good deal, come again"
+      }
+    },
+    {
+      "id": "com_brag_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "brag",
+      "ch": "global",
+      "text": {
+        "pt": "virei {price}gp só de {item}",
+        "en": "made {price}gp on {item} alone"
+      }
+    },
+    {
+      "id": "com_brag_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "brag",
+      "ch": "guild",
+      "text": {
+        "pt": "lucro do dia: {price}gp",
+        "en": "day's profit: {price}gp"
+      }
+    },
+    {
+      "id": "com_insult_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "insult",
+      "ch": "local",
+      "text": {
+        "pt": "esse preço é roubo kkk",
+        "en": "that price is robbery lol"
+      }
+    },
+    {
+      "id": "com_insult_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "insult",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} n sabe negociar",
+        "en": "{target} can't negotiate"
+      }
+    },
+    {
+      "id": "com_complain_server_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "complain_server",
+      "ch": "global",
+      "text": {
+        "pt": "AH bugou meu anuncio",
+        "en": "AH bugged my listing"
+      }
+    },
+    {
+      "id": "com_complain_server_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "complain_server",
+      "ch": "local",
+      "text": {
+        "pt": "trade window lagou",
+        "en": "trade window lagged"
+      }
+    },
+    {
+      "id": "com_death_self_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "death_self",
+      "ch": "local",
+      "text": {
+        "pt": "me mataram com a carga!!",
+        "en": "got killed with my cargo!!"
+      }
+    },
+    {
+      "id": "com_death_self_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "death_self",
+      "ch": "guild",
+      "text": {
+        "pt": "perdi o shipment em {place}",
+        "en": "lost shipment at {place}"
+      }
+    },
+    {
+      "id": "com_kill_other_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "kill_other",
+      "ch": "local",
+      "text": {
+        "pt": "defendi a carga, gg",
+        "en": "defended the cargo, gg"
+      }
+    },
+    {
+      "id": "com_loot_rare_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "loot_rare",
+      "ch": "global",
+      "text": {
+        "pt": "WTS {item} raro drop fresco",
+        "en": "WTS rare {item} fresh drop"
+      }
+    },
+    {
+      "id": "com_loot_rare_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "loot_rare",
+      "ch": "whisper",
+      "text": {
+        "pt": "caiu {item}, quanto vale?",
+        "en": "got {item}, what's it worth?"
+      }
+    },
+    {
+      "id": "com_guild_recruit_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "global",
+      "text": {
+        "pt": "[{tag}] recruta comerciantes",
+        "en": "[{tag}] recruiting traders"
+      }
+    },
+    {
+      "id": "com_guild_recruit_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} topa vender c/ {guild}?",
+        "en": "{target} sell with {guild}?"
+      }
+    },
+    {
+      "id": "com_guild_war_declare_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "guild_war_declare",
+      "ch": "guild",
+      "text": {
+        "pt": "guerra: suspender rotas",
+        "en": "war: suspend routes"
+      }
+    },
+    {
+      "id": "com_guild_war_taunt_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "guild_war_taunt",
+      "ch": "global",
+      "text": {
+        "pt": "{guild} n paga divida kkk",
+        "en": "{guild} doesn't pay debts lol"
+      }
+    },
+    {
+      "id": "com_raid_call_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "raid_call",
+      "ch": "guild",
+      "text": {
+        "pt": "preciso de guardas no raid loot",
+        "en": "need guards on raid loot"
+      }
+    },
+    {
+      "id": "com_raid_call_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "raid_call",
+      "ch": "party",
+      "text": {
+        "pt": "vendo pots pré-raid {price}gp",
+        "en": "selling pre-raid pots {price}gp"
+      }
+    },
+    {
+      "id": "com_raid_win_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "raid_win",
+      "ch": "guild",
+      "text": {
+        "pt": "loot vendido, split {price}gp",
+        "en": "loot sold, split {price}gp"
+      }
+    },
+    {
+      "id": "com_raid_wipe_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "raid_wipe",
+      "ch": "guild",
+      "text": {
+        "pt": "perda: pots e tempo",
+        "en": "loss: pots and time"
+      }
+    },
+    {
+      "id": "com_reply_friend_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "reply_friend",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} prioridade no stock",
+        "en": "{target} stock priority"
+      }
+    },
+    {
+      "id": "com_reply_friend_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "reply_friend",
+      "ch": "local",
+      "text": {
+        "pt": "pra {target} faço desconto",
+        "en": "for {target} I discount"
+      }
+    },
+    {
+      "id": "com_reply_enemy_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "whisper",
+      "text": {
+        "pt": "pra {target} preço dobrado",
+        "en": "for {target} double price"
+      }
+    },
+    {
+      "id": "com_reply_enemy_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "local",
+      "text": {
+        "pt": "n negocio c/ {target}",
+        "en": "no deals with {target}"
+      }
+    },
+    {
+      "id": "com_reply_neutral_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "reply_neutral",
+      "ch": "whisper",
+      "text": {
+        "pt": "pm oferta por {item}",
+        "en": "pm offer for {item}"
+      }
+    },
+    {
+      "id": "com_pk_warning_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "pk_warning",
+      "ch": "global",
+      "text": {
+        "pt": "PK na rota {place}, evitem",
+        "en": "PK on {place} route, avoid"
+      }
+    },
+    {
+      "id": "com_pk_warning_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "pk_warning",
+      "ch": "local",
+      "text": {
+        "pt": "escolta cara em {place} hj",
+        "en": "pricey escort at {place} today"
+      }
+    },
+    {
+      "id": "com_idle_03",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "idle",
+      "ch": "global",
+      "text": {
+        "pt": "WTT {item} por {item}",
+        "en": "WTT {item} for {item}"
+      }
+    },
+    {
+      "id": "rp_greet_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "greet",
+      "ch": "local",
+      "text": {
+        "pt": "Saudações, viajantes de {place}.",
+        "en": "Greetings, travelers of {place}."
+      }
+    },
+    {
+      "id": "rp_greet_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "greet",
+      "ch": "local",
+      "text": {
+        "pt": "Que a luz vos guie neste dia.",
+        "en": "May the light guide you this day."
+      }
+    },
+    {
+      "id": "rp_greet_03",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "greet",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target}, bem-vindo à minha companhia.",
+        "en": "{target}, welcome to my company."
+      }
+    },
+    {
+      "id": "rp_bye_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "bye",
+      "ch": "local",
+      "text": {
+        "pt": "Até breve; que o caminho seja seguro.",
+        "en": "Farewell; may the road be safe."
+      }
+    },
+    {
+      "id": "rp_bye_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "bye",
+      "ch": "party",
+      "text": {
+        "pt": "Parto por ora; obrigado pela companhia.",
+        "en": "I depart for now; thank you for the company."
+      }
+    },
+    {
+      "id": "rp_idle_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "Observo as muralhas de {place} em silêncio.",
+        "en": "I watch the walls of {place} in silence."
+      }
+    },
+    {
+      "id": "rp_idle_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "O vento traz cheiro de batalha antiga.",
+        "en": "The wind carries the scent of old battle."
+      }
+    },
+    {
+      "id": "rp_lfg_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "lfg",
+      "ch": "global",
+      "text": {
+        "pt": "Busco companheiros dignos para {place}.",
+        "en": "I seek worthy companions for {place}."
+      }
+    },
+    {
+      "id": "rp_lfg_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "lfg",
+      "ch": "party",
+      "text": {
+        "pt": "Aceito aliados contra {boss}.",
+        "en": "I accept allies against {boss}."
+      }
+    },
+    {
+      "id": "rp_lfg_03",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "lfg",
+      "ch": "local",
+      "text": {
+        "pt": "Há quem marche comigo ao anoitecer?",
+        "en": "Who will march with me at dusk?"
+      }
+    },
+    {
+      "id": "rp_trade_sell_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "trade_sell",
+      "ch": "local",
+      "text": {
+        "pt": "Ofereço {item} por {price} peças de ouro.",
+        "en": "I offer {item} for {price} gold pieces."
+      }
+    },
+    {
+      "id": "rp_trade_buy_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "trade_buy",
+      "ch": "local",
+      "text": {
+        "pt": "Procuro {item}; pago {price} de bom grado.",
+        "en": "I seek {item}; I gladly pay {price}."
+      }
+    },
+    {
+      "id": "rp_trade_haggle_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "trade_haggle",
+      "ch": "whisper",
+      "text": {
+        "pt": "Proponho {price} por honra e justiça.",
+        "en": "I propose {price} in honor and fairness."
+      }
+    },
+    {
+      "id": "rp_help_ask_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "help_ask",
+      "ch": "local",
+      "text": {
+        "pt": "Poderíeis indicar o caminho a {place}?",
+        "en": "Could you point the way to {place}?"
+      }
+    },
+    {
+      "id": "rp_help_ask_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "help_ask",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target}, ensinaríeis sobre {skill}?",
+        "en": "{target}, would you teach of {skill}?"
+      }
+    },
+    {
+      "id": "rp_help_give_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "help_give",
+      "ch": "local",
+      "text": {
+        "pt": "O caminho a {place} segue pela estrada leste.",
+        "en": "The road to {place} follows the east way."
+      }
+    },
+    {
+      "id": "rp_help_give_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "help_give",
+      "ch": "whisper",
+      "text": {
+        "pt": "A prática de {skill} exige paciência.",
+        "en": "The practice of {skill} demands patience."
+      }
+    },
+    {
+      "id": "rp_thanks_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "thanks",
+      "ch": "local",
+      "text": {
+        "pt": "Minha gratidão é sincera.",
+        "en": "My gratitude is sincere."
+      }
+    },
+    {
+      "id": "rp_thanks_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "thanks",
+      "ch": "whisper",
+      "text": {
+        "pt": "Abençoado sejais, {target}.",
+        "en": "Blessings upon you, {target}."
+      }
+    },
+    {
+      "id": "rp_brag_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "brag",
+      "ch": "local",
+      "text": {
+        "pt": "Venci {n} desafios sob o sol de {place}.",
+        "en": "I bested {n} trials under the sun of {place}."
+      }
+    },
+    {
+      "id": "rp_brag_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "brag",
+      "ch": "guild",
+      "text": {
+        "pt": "Nossa ordem ergueu-se em {place}.",
+        "en": "Our order rose at {place}."
+      }
+    },
+    {
+      "id": "rp_insult_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "insult",
+      "ch": "local",
+      "text": {
+        "pt": "Vossa conduta desonra o campo de batalha.",
+        "en": "Your conduct dishonors the battlefield."
+      }
+    },
+    {
+      "id": "rp_insult_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "insult",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target}, agis sem nobreza.",
+        "en": "{target}, you act without nobility."
+      }
+    },
+    {
+      "id": "rp_complain_server_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "complain_server",
+      "ch": "local",
+      "text": {
+        "pt": "Os céus parecem inquietos hoje...",
+        "en": "The heavens seem restless today..."
+      }
+    },
+    {
+      "id": "rp_complain_server_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "complain_server",
+      "ch": "local",
+      "text": {
+        "pt": "Sinto o mundo tremer sob meus pés.",
+        "en": "I feel the world tremble beneath my feet."
+      }
+    },
+    {
+      "id": "rp_death_self_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "death_self",
+      "ch": "local",
+      "text": {
+        "pt": "Caí... que alguém continue a marcha.",
+        "en": "I have fallen... may another continue."
+      }
+    },
+    {
+      "id": "rp_death_self_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "death_self",
+      "ch": "party",
+      "text": {
+        "pt": "Minha lâmina descansa; erguei-me se puderdes.",
+        "en": "My blade rests; raise me if you can."
+      }
+    },
+    {
+      "id": "rp_kill_other_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "kill_other",
+      "ch": "local",
+      "text": {
+        "pt": "Que {target} encontre paz além.",
+        "en": "May {target} find peace beyond."
+      }
+    },
+    {
+      "id": "rp_kill_other_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "kill_other",
+      "ch": "guild",
+      "text": {
+        "pt": "O adversário {target} foi vencido.",
+        "en": "The foe {target} has been vanquished."
+      }
+    },
+    {
+      "id": "rp_loot_rare_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "loot_rare",
+      "ch": "local",
+      "text": {
+        "pt": "Os deuses concederam-me {item}.",
+        "en": "The gods have granted me {item}."
+      }
+    },
+    {
+      "id": "rp_loot_rare_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "loot_rare",
+      "ch": "party",
+      "text": {
+        "pt": "Este {item} pertence a quem mais o mereça.",
+        "en": "This {item} belongs to the most worthy."
+      }
+    },
+    {
+      "id": "rp_guild_recruit_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "global",
+      "text": {
+        "pt": "A ordem {guild} [{tag}] acolhe corações firmes.",
+        "en": "Order {guild} [{tag}] welcomes steadfast hearts."
+      }
+    },
+    {
+      "id": "rp_guild_recruit_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target}, unir-vos-íeis a {guild}?",
+        "en": "{target}, would you join {guild}?"
+      }
+    },
+    {
+      "id": "rp_guild_war_declare_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "guild_war_declare",
+      "ch": "global",
+      "text": {
+        "pt": "[{tag}] declara guerra justa a {guild}.",
+        "en": "[{tag}] declares just war upon {guild}."
+      }
+    },
+    {
+      "id": "rp_guild_war_declare_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "guild_war_declare",
+      "ch": "guild",
+      "text": {
+        "pt": "Sob juramento, a guerra começa.",
+        "en": "Under oath, the war begins."
+      }
+    },
+    {
+      "id": "rp_guild_war_taunt_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "guild_war_taunt",
+      "ch": "global",
+      "text": {
+        "pt": "{guild}, enfrentai-nos com honra em {place}.",
+        "en": "{guild}, meet us with honor at {place}."
+      }
+    },
+    {
+      "id": "rp_guild_war_taunt_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "guild_war_taunt",
+      "ch": "local",
+      "text": {
+        "pt": "Vossa bandeira tremerá ante a nossa.",
+        "en": "Your banner shall tremble before ours."
+      }
+    },
+    {
+      "id": "rp_raid_call_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "raid_call",
+      "ch": "guild",
+      "text": {
+        "pt": "Às armas! {boss} desperta em {place}.",
+        "en": "To arms! {boss} awakens at {place}."
+      }
+    },
+    {
+      "id": "rp_raid_call_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "raid_call",
+      "ch": "party",
+      "text": {
+        "pt": "Formai a linha; o destino chama.",
+        "en": "Form the line; destiny calls."
+      }
+    },
+    {
+      "id": "rp_raid_win_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "raid_win",
+      "ch": "party",
+      "text": {
+        "pt": "Vitória! Cantemos em {place}.",
+        "en": "Victory! Let us sing in {place}."
+      }
+    },
+    {
+      "id": "rp_raid_wipe_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "raid_wipe",
+      "ch": "party",
+      "text": {
+        "pt": "Recuamos... mas não esquecemos.",
+        "en": "We fall back... yet we do not forget."
+      }
+    },
+    {
+      "id": "rp_reply_friend_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "reply_friend",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target}, minha espada é vossa.",
+        "en": "{target}, my sword is yours."
+      }
+    },
+    {
+      "id": "rp_reply_friend_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "reply_friend",
+      "ch": "local",
+      "text": {
+        "pt": "É bom ver um aliado como {target}.",
+        "en": "It is good to see an ally like {target}."
+      }
+    },
+    {
+      "id": "rp_reply_enemy_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target}, o próximo encontro será decisivo.",
+        "en": "{target}, our next meeting shall decide."
+      }
+    },
+    {
+      "id": "rp_reply_enemy_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "local",
+      "text": {
+        "pt": "Não temo {target}; a verdade me guarda.",
+        "en": "I fear not {target}; truth guards me."
+      }
+    },
+    {
+      "id": "rp_reply_neutral_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "reply_neutral",
+      "ch": "local",
+      "text": {
+        "pt": "Paz a vós, {target}, se a buscardes.",
+        "en": "Peace to you, {target}, if you seek it."
+      }
+    },
+    {
+      "id": "rp_reply_neutral_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "reply_neutral",
+      "ch": "whisper",
+      "text": {
+        "pt": "Estado-vos, {target}.",
+        "en": "I greet you, {target}."
+      }
+    },
+    {
+      "id": "rp_pk_warning_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "pk_warning",
+      "ch": "local",
+      "text": {
+        "pt": "Cuidado: assassinos rondam {place}.",
+        "en": "Beware: assassins haunt {place}."
+      }
+    },
+    {
+      "id": "rp_pk_warning_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "pk_warning",
+      "ch": "global",
+      "text": {
+        "pt": "Há sangue injusto nas estradas de {place}.",
+        "en": "Unjust blood stains the roads of {place}."
+      }
+    },
+    {
+      "id": "rp_idle_03",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "Rezo pela paz em {place}.",
+        "en": "I pray for peace in {place}."
+      }
+    },
+    {
+      "id": "trl_greet_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "greet",
+      "ch": "global",
+      "text": {
+        "pt": "OLA SERVIDOR DE LAG kkk",
+        "en": "HI LAG SERVER lol"
+      }
+    },
+    {
+      "id": "trl_greet_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "greet",
+      "ch": "local",
+      "text": {
+        "pt": "eae noobs",
+        "en": "hey noobs"
+      }
+    },
+    {
+      "id": "trl_bye_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "bye",
+      "ch": "local",
+      "text": {
+        "pt": "flw vou em servidor melhor",
+        "en": "cya going to a better server"
+      }
+    },
+    {
+      "id": "trl_bye_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "bye",
+      "ch": "global",
+      "text": {
+        "pt": "DELETANDO PERSONAGEM flw",
+        "en": "DELETING CHAR cya"
+      }
+    },
+    {
+      "id": "trl_idle_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "idle",
+      "ch": "global",
+      "text": {
+        "pt": "esse jogo ta morto ne",
+        "en": "this game is dead right"
+      }
+    },
+    {
+      "id": "trl_idle_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "idle",
+      "ch": "local",
+      "text": {
+        "pt": "farmar chato demais kkk",
+        "en": "farming is so boring lol"
+      }
+    },
+    {
+      "id": "trl_idle_03",
+      "p": [
+        "troll"
+      ],
+      "ctx": "idle",
+      "ch": "global",
+      "text": {
+        "pt": "admin dormindo de novo",
+        "en": "admin sleeping again"
+      }
+    },
+    {
+      "id": "trl_lfg_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "lfg",
+      "ch": "global",
+      "text": {
+        "pt": "lfg pra zoar em {place}",
+        "en": "lfg to mess around at {place}"
+      }
+    },
+    {
+      "id": "trl_lfg_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "lfg",
+      "ch": "party",
+      "text": {
+        "pt": "pt de troll on",
+        "en": "troll party on"
+      }
+    },
+    {
+      "id": "trl_trade_sell_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "trade_sell",
+      "ch": "global",
+      "text": {
+        "pt": "WTS {item} 1gp kkk mentira",
+        "en": "WTS {item} 1gp lol jk"
+      }
+    },
+    {
+      "id": "trl_trade_buy_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "trade_buy",
+      "ch": "global",
+      "text": {
+        "pt": "WTB conta de {target} kkk",
+        "en": "WTB {target}'s account lol"
+      }
+    },
+    {
+      "id": "trl_trade_haggle_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "trade_haggle",
+      "ch": "whisper",
+      "text": {
+        "pt": "te pago {price}gp em tapinha",
+        "en": "I'll pay {price}gp in high-fives"
+      }
+    },
+    {
+      "id": "trl_help_ask_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "help_ask",
+      "ch": "local",
+      "text": {
+        "pt": "como desinstala? serio",
+        "en": "how do I uninstall? serious"
+      }
+    },
+    {
+      "id": "trl_help_ask_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "help_ask",
+      "ch": "global",
+      "text": {
+        "pt": "cadê o botao de refund",
+        "en": "where's the refund button"
+      }
+    },
+    {
+      "id": "trl_help_give_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "help_give",
+      "ch": "local",
+      "text": {
+        "pt": "a dica é: desiste kkk",
+        "en": "the tip is: give up lol"
+      }
+    },
+    {
+      "id": "trl_help_give_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "help_give",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} aperta alt+f4 pra loot",
+        "en": "{target} press alt+f4 for loot"
+      }
+    },
+    {
+      "id": "trl_thanks_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "thanks",
+      "ch": "local",
+      "text": {
+        "pt": "vlw por nada kkk",
+        "en": "ty for nothing lol"
+      }
+    },
+    {
+      "id": "trl_thanks_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "thanks",
+      "ch": "whisper",
+      "text": {
+        "pt": "obrigado pelo report {target}",
+        "en": "thanks for the report {target}"
+      }
+    },
+    {
+      "id": "trl_brag_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "brag",
+      "ch": "global",
+      "text": {
+        "pt": "eu q balanceio esse jogo",
+        "en": "I balance this game"
+      }
+    },
+    {
+      "id": "trl_brag_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "brag",
+      "ch": "local",
+      "text": {
+        "pt": "matei {n} com lag kkk",
+        "en": "killed {n} with lag lol"
+      }
+    },
+    {
+      "id": "trl_insult_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "insult",
+      "ch": "global",
+      "text": {
+        "pt": "{guild} é guild de firebase",
+        "en": "{guild} is a firebase guild"
+      }
+    },
+    {
+      "id": "trl_insult_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "insult",
+      "ch": "local",
+      "text": {
+        "pt": "{target} joga de olhos fechados",
+        "en": "{target} plays with eyes closed"
+      }
+    },
+    {
+      "id": "trl_insult_03",
+      "p": [
+        "troll"
+      ],
+      "ctx": "insult",
+      "ch": "whisper",
+      "text": {
+        "pt": "ez clap {target}",
+        "en": "ez clap {target}"
+      }
+    },
+    {
+      "id": "trl_complain_server_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "complain_server",
+      "ch": "global",
+      "text": {
+        "pt": "SERVIDOR LIXO LAG DEMAIS",
+        "en": "SERVER TRASH TOO MUCH LAG"
+      }
+    },
+    {
+      "id": "trl_complain_server_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "complain_server",
+      "ch": "global",
+      "text": {
+        "pt": "quem q fez esse patch kkk",
+        "en": "who made this patch lol"
+      }
+    },
+    {
+      "id": "trl_complain_server_03",
+      "p": [
+        "troll"
+      ],
+      "ctx": "complain_server",
+      "ch": "local",
+      "text": {
+        "pt": "bugou de novo NE",
+        "en": "bugged again RIGHT"
+      }
+    },
+    {
+      "id": "trl_complain_server_04",
+      "p": [
+        "troll"
+      ],
+      "ctx": "complain_server",
+      "ch": "global",
+      "text": {
+        "pt": "devs nerfaram minha diversao",
+        "en": "devs nerfed my fun"
+      }
+    },
+    {
+      "id": "trl_death_self_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "death_self",
+      "ch": "local",
+      "text": {
+        "pt": "morri pro terrain kkk",
+        "en": "died to terrain lol"
+      }
+    },
+    {
+      "id": "trl_death_self_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "death_self",
+      "ch": "global",
+      "text": {
+        "pt": "KILLSTEAL DO LAG",
+        "en": "LAG KILLSTEAL"
+      }
+    },
+    {
+      "id": "trl_kill_other_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "kill_other",
+      "ch": "local",
+      "text": {
+        "pt": "gg ez next",
+        "en": "gg ez next"
+      }
+    },
+    {
+      "id": "trl_kill_other_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "kill_other",
+      "ch": "global",
+      "text": {
+        "pt": "mais um pro mural de vergonha",
+        "en": "another for the shame wall"
+      }
+    },
+    {
+      "id": "trl_loot_rare_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "loot_rare",
+      "ch": "local",
+      "text": {
+        "pt": "dropou {item} e eu n queria kkk",
+        "en": "{item} dropped and I didn't want it lol"
+      }
+    },
+    {
+      "id": "trl_loot_rare_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "loot_rare",
+      "ch": "global",
+      "text": {
+        "pt": "RNG me ama, vcs n",
+        "en": "RNG loves me, not you"
+      }
+    },
+    {
+      "id": "trl_guild_recruit_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "global",
+      "text": {
+        "pt": "[{tag}] recruta gente sem vida",
+        "en": "[{tag}] recruiting people with no life"
+      }
+    },
+    {
+      "id": "trl_guild_recruit_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "guild_recruit",
+      "ch": "local",
+      "text": {
+        "pt": "entra {guild} pra sofrer junto",
+        "en": "join {guild} to suffer together"
+      }
+    },
+    {
+      "id": "trl_guild_war_declare_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "guild_war_declare",
+      "ch": "global",
+      "text": {
+        "pt": "[{tag}] declara GUERRA de meme",
+        "en": "[{tag}] declares meme WAR"
+      }
+    },
+    {
+      "id": "trl_guild_war_taunt_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "guild_war_taunt",
+      "ch": "global",
+      "text": {
+        "pt": "{guild} chorando no discord kkk",
+        "en": "{guild} crying on discord lol"
+      }
+    },
+    {
+      "id": "trl_guild_war_taunt_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "guild_war_taunt",
+      "ch": "local",
+      "text": {
+        "pt": "vem {tag} q o chao eh lava",
+        "en": "come {tag} floor is lava"
+      }
+    },
+    {
+      "id": "trl_raid_call_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "raid_call",
+      "ch": "global",
+      "text": {
+        "pt": "raid pra ver wipe em {boss}",
+        "en": "raid to watch {boss} wipe"
+      }
+    },
+    {
+      "id": "trl_raid_call_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "raid_call",
+      "ch": "party",
+      "text": {
+        "pt": "bring popcorn pro wipe",
+        "en": "bring popcorn for the wipe"
+      }
+    },
+    {
+      "id": "trl_raid_win_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "raid_win",
+      "ch": "global",
+      "text": {
+        "pt": "ganhamos? milagre kkk",
+        "en": "we won? miracle lol"
+      }
+    },
+    {
+      "id": "trl_raid_wipe_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "raid_wipe",
+      "ch": "global",
+      "text": {
+        "pt": "WIPE CLASSICO obrigado {name}",
+        "en": "CLASSIC WIPE thanks {name}"
+      }
+    },
+    {
+      "id": "trl_reply_friend_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "reply_friend",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} meu unico amigo nesse lixo",
+        "en": "{target} my only friend in this trash"
+      }
+    },
+    {
+      "id": "trl_reply_friend_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "reply_friend",
+      "ch": "local",
+      "text": {
+        "pt": "{target} merece medalha de paciencia",
+        "en": "{target} deserves a patience medal"
+      }
+    },
+    {
+      "id": "trl_reply_enemy_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "whisper",
+      "text": {
+        "pt": "te reporto dps {target} kkk",
+        "en": "I'll report you later {target} lol"
+      }
+    },
+    {
+      "id": "trl_reply_enemy_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "reply_enemy",
+      "ch": "local",
+      "text": {
+        "pt": "{target} stalker oficial",
+        "en": "{target} official stalker"
+      }
+    },
+    {
+      "id": "trl_reply_neutral_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "reply_neutral",
+      "ch": "local",
+      "text": {
+        "pt": "oi {target} ou sera bot?",
+        "en": "hi {target} or are you a bot?"
+      }
+    },
+    {
+      "id": "trl_reply_neutral_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "reply_neutral",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target} ainda joga isso?",
+        "en": "{target} still playing this?"
+      }
+    },
+    {
+      "id": "trl_pk_warning_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "pk_warning",
+      "ch": "global",
+      "text": {
+        "pt": "PK? sou eu kkk em {place}",
+        "en": "PK? that's me lol at {place}"
+      }
+    },
+    {
+      "id": "trl_pk_warning_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "pk_warning",
+      "ch": "local",
+      "text": {
+        "pt": "cuidado o chao... nao, sou eu",
+        "en": "careful the floor... nah it's me"
+      }
+    }
+  ]
+}

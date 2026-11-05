@@ -1,0 +1,587 @@
+{
+  "version": 1,
+  "biomes": [
+    {
+      "id": "outremer",
+      "name": {
+        "pt": "Outremer",
+        "en": "Outremer"
+      },
+      "climate": "deserto",
+      "factions": [
+        "reino_de_aelia",
+        "sultanato_de_ashur",
+        "tribos_beduinas"
+      ],
+      "monsters": [
+        "antlion",
+        "antlion_spitter",
+        "fire_ant",
+        "jackal",
+        "hyena",
+        "sand_scorpion",
+        "wyvern_fire",
+        "crusader_ghost",
+        "ghazi",
+        "skeleton"
+      ],
+      "cities": [
+        {
+          "id": "aelia_sancta",
+          "name": {
+            "pt": "Aelia Sancta",
+            "en": "Aelia Sancta"
+          },
+          "type": "capital",
+          "desc": {
+            "pt": "Capital franca no planalto calcário; muralhas brancas e Santo Sepulcro.",
+            "en": "Frankish capital on the limestone ridge; white walls and the Holy Sepulchre."
+          }
+        },
+        {
+          "id": "castelo_montgisard",
+          "name": {
+            "pt": "Castelo Montgisard",
+            "en": "Montgisard Castle"
+          },
+          "type": "castelo",
+          "desc": {
+            "pt": "Fortaleza onde a Cruz de Montgisard foi erguida; posto avançado contra Ashur.",
+            "en": "Fortress where the Cross of Montgisard was raised; outpost against Ashur."
+          }
+        },
+        {
+          "id": "oasis_qasr",
+          "name": {
+            "pt": "Oásis de Qasr",
+            "en": "Qasr Oasis"
+          },
+          "type": "vila",
+          "desc": {
+            "pt": "Vila beduína de poços e palmeiras; mercado de especiarias e camelos.",
+            "en": "Bedouin village of wells and palms; spice and camel market."
+          }
+        },
+        {
+          "id": "fort_amir",
+          "name": {
+            "pt": "Forte Amir",
+            "en": "Fort Amir"
+          },
+          "type": "castelo",
+          "desc": {
+            "pt": "Citadela do Sultanato de Ashur; torre de vigia sobre as dunas.",
+            "en": "Citadel of the Ashur Sultanate; watchtower over the dunes."
+          }
+        }
+      ],
+      "summary": {
+        "pt": "Deserto da Terra Santa reinventada: francos, beduínos e o Sultanato disputam oásis, rotas de caravana e a memória da Batalha de Montgisard.",
+        "en": "Reimagined Holy Land desert: Franks, Bedouin and the Ashur Sultanate contest oases, caravan routes and the memory of Montgisard."
+      }
+    },
+    {
+      "id": "plains",
+      "name": {
+        "pt": "Planícies Verdes",
+        "en": "Green Plains"
+      },
+      "climate": "temperado",
+      "factions": [
+        "coroa_verdante",
+        "liga_das_cidades_livres",
+        "ordem_do_campo"
+      ],
+      "monsters": [
+        "goblin",
+        "goblin_spearman",
+        "boar",
+        "wolf",
+        "bandit",
+        "skeleton",
+        "wyvern"
+      ],
+      "cities": [
+        {
+          "id": "aurelia",
+          "name": {
+            "pt": "Aurélia",
+            "en": "Aurelia"
+          },
+          "type": "capital",
+          "desc": {
+            "pt": "Capital da Coroa Verdante; campos dourados e palácio de pedra clara.",
+            "en": "Capital of the Verdant Crown; golden fields and pale-stone palace."
+          }
+        },
+        {
+          "id": "porto_trigo",
+          "name": {
+            "pt": "Porto do Trigo",
+            "en": "Wheatport"
+          },
+          "type": "cidade",
+          "desc": {
+            "pt": "Empório cerealista; granários e feiras semanais.",
+            "en": "Grain emporium; granaries and weekly fairs."
+          }
+        },
+        {
+          "id": "vila_cruzada",
+          "name": {
+            "pt": "Vila Cruzada",
+            "en": "Crusader Hamlet"
+          },
+          "type": "vila",
+          "desc": {
+            "pt": "Assentamento de veteranos que voltaram de Outremer.",
+            "en": "Settlement of veterans returned from Outremer."
+          }
+        },
+        {
+          "id": "castelo_linden",
+          "name": {
+            "pt": "Castelo Linden",
+            "en": "Linden Castle"
+          },
+          "type": "castelo",
+          "desc": {
+            "pt": "Bastilha da Ordem do Campo; guarda a estrada real.",
+            "en": "Bastion of the Field Order; watches the royal road."
+          }
+        }
+      ],
+      "summary": {
+        "pt": "Terras férteis sob a Coroa Verdante; a Liga das Cidades Livres disputa pedágios e a Ordem do Campo cobra dízimos — combustível para guerras de guilda.",
+        "en": "Fertile lands under the Verdant Crown; Free Cities contest tolls and the Field Order collects tithes — fuel for guild wars."
+      }
+    },
+    {
+      "id": "forest",
+      "name": {
+        "pt": "Bosque Sombrio",
+        "en": "Shadowwood"
+      },
+      "climate": "temperado_umido",
+      "factions": [
+        "clan_das_folhas",
+        "eremitas_verdes",
+        "lenhadores_reais"
+      ],
+      "monsters": [
+        "goblin",
+        "goblin_shaman",
+        "spider_giant",
+        "wolf",
+        "treant",
+        "dire_bear",
+        "skeleton"
+      ],
+      "cities": [
+        {
+          "id": "folhaverde",
+          "name": {
+            "pt": "Folhaverde",
+            "en": "Leafgreen"
+          },
+          "type": "cidade",
+          "desc": {
+            "pt": "Cidade nas árvores e clareiras; sede do Clã das Folhas.",
+            "en": "Town among trees and clearings; seat of the Leaf Clan."
+          }
+        },
+        {
+          "id": "mosteiro_musgo",
+          "name": {
+            "pt": "Mosteiro do Musgo",
+            "en": "Moss Abbey"
+          },
+          "type": "mosteiro",
+          "desc": {
+            "pt": "Abadia dos Eremitas Verdes; cura e herborismo.",
+            "en": "Abbey of the Green Hermits; healing and herb lore."
+          }
+        },
+        {
+          "id": "acampamento_machado",
+          "name": {
+            "pt": "Acampamento do Machado",
+            "en": "Axe Camp"
+          },
+          "type": "acampamento",
+          "desc": {
+            "pt": "Posto dos Lenhadores Reais; tensão com o Clã das Folhas.",
+            "en": "Royal Woodcutters' post; tension with the Leaf Clan."
+          }
+        }
+      ],
+      "summary": {
+        "pt": "Floresta densa onde o Clã das Folhas protege árvores sagradas, eremitas curam e lenhadores reais avançam — brigas de território e guildas rivais.",
+        "en": "Dense forest where the Leaf Clan guards sacred trees, hermits heal, and royal woodcutters push in — territory fights and rival guilds."
+      }
+    },
+    {
+      "id": "swamp",
+      "name": {
+        "pt": "Pântano de Miasma",
+        "en": "Miasma Marsh"
+      },
+      "climate": "pantanoso",
+      "factions": [
+        "senhores_do_brejo",
+        "culto_da_praga",
+        "pescadores_de_lodo"
+      ],
+      "monsters": [
+        "zombie",
+        "zombie_rotting",
+        "bog_lurker",
+        "plague_rat",
+        "croc",
+        "mosquito_swarm",
+        "antlion",
+        "skeleton"
+      ],
+      "cities": [
+        {
+          "id": "lodoalto",
+          "name": {
+            "pt": "Lodoalto",
+            "en": "Highmire"
+          },
+          "type": "cidade",
+          "desc": {
+            "pt": "Palafitas sobre o brejo; mercado de peixe e venenos.",
+            "en": "Stilt town over the bog; fish and poison market."
+          }
+        },
+        {
+          "id": "torre_miasma",
+          "name": {
+            "pt": "Torre Miasma",
+            "en": "Miasma Tower"
+          },
+          "type": "ruina",
+          "desc": {
+            "pt": "Torre do Culto da Praga; fumos verdes à noite.",
+            "en": "Plague Cult tower; green fumes at night."
+          }
+        },
+        {
+          "id": "porto_lodo",
+          "name": {
+            "pt": "Porto do Lodo",
+            "en": "Mireport"
+          },
+          "type": "porto",
+          "desc": {
+            "pt": "Embarcadouro dos Pescadores de Lodo; barcos rasos.",
+            "en": "Landing of the Mire Fishers; shallow boats."
+          }
+        }
+      ],
+      "summary": {
+        "pt": "Brejos tóxicos onde Senhores do Brejo cobram passagem, o Culto da Praga espalha medo e pescadores sobrevivem — terreno ideal para PK e guerras sujas.",
+        "en": "Toxic marshes where Bog Lords levy tolls, the Plague Cult spreads fear, and fishers endure — ideal for PK and dirty wars."
+      }
+    },
+    {
+      "id": "mountains",
+      "name": {
+        "pt": "Montanhas de Pedra Alta",
+        "en": "Highstone Mountains"
+      },
+      "climate": "alpino",
+      "factions": [
+        "marcas_da_pedra",
+        "guilda_dos_mineiros",
+        "senhorio_do_pico"
+      ],
+      "monsters": [
+        "goblin",
+        "hobgoblin",
+        "minotaur",
+        "rock_elemental",
+        "mountain_goat",
+        "griffon",
+        "wyvern_air",
+        "skeleton"
+      ],
+      "cities": [
+        {
+          "id": "pedralta",
+          "name": {
+            "pt": "Pedralta",
+            "en": "Highstone"
+          },
+          "type": "capital",
+          "desc": {
+            "pt": "Cidade-fortaleza entalhada na rocha; sede das Marcas da Pedra.",
+            "en": "Rock-cut fortress city; seat of the Stone Marches."
+          }
+        },
+        {
+          "id": "mina_ferro",
+          "name": {
+            "pt": "Mina do Ferro",
+            "en": "Ironmine"
+          },
+          "type": "vila",
+          "desc": {
+            "pt": "Vila mineira da Guilda dos Mineiros; minério e forjas.",
+            "en": "Mining village of the Miners' Guild; ore and forges."
+          }
+        },
+        {
+          "id": "castelo_pico",
+          "name": {
+            "pt": "Castelo do Pico",
+            "en": "Peak Castle"
+          },
+          "type": "castelo",
+          "desc": {
+            "pt": "Ninho de águias do Senhorio do Pico; controla passes.",
+            "en": "Eagle's nest of the Peak Lordship; controls the passes."
+          }
+        },
+        {
+          "id": "mosteiro_vento",
+          "name": {
+            "pt": "Mosteiro do Vento",
+            "en": "Wind Abbey"
+          },
+          "type": "mosteiro",
+          "desc": {
+            "pt": "Mosteiro no penhasco; monjes cartógrafos das rotas.",
+            "en": "Cliff abbey; monks who chart the mountain routes."
+          }
+        }
+      ],
+      "summary": {
+        "pt": "Picos e minas disputados pelas Marcas da Pedra, pela Guilda dos Mineiros e pelo Senhorio do Pico — rotas de minério viram motivo de guerra de guildas.",
+        "en": "Peaks and mines contested by the Stone Marches, Miners' Guild and Peak Lordship — ore routes become casus belli for guild wars."
+      }
+    },
+    {
+      "id": "north",
+      "name": {
+        "pt": "Norte Gelado",
+        "en": "Frozen North"
+      },
+      "climate": "artico",
+      "factions": [
+        "jarls_do_gelo",
+        "guarda_invernal",
+        "clans_renas"
+      ],
+      "monsters": [
+        "wolf",
+        "ice_wolf",
+        "frozen_zombie",
+        "wight",
+        "frost_giant",
+        "antlion_freezer",
+        "wyvern_air",
+        "skeleton_mage_ice"
+      ],
+      "cities": [
+        {
+          "id": "gelomarca",
+          "name": {
+            "pt": "Gelomarca",
+            "en": "Frostmark"
+          },
+          "type": "capital",
+          "desc": {
+            "pt": "Grande hall dos Jarls do Gelo; tochas e madeira escura.",
+            "en": "Great hall of the Frost Jarls; torches and dark timber."
+          }
+        },
+        {
+          "id": "posto_invernal",
+          "name": {
+            "pt": "Posto Invernal",
+            "en": "Winter Post"
+          },
+          "type": "acampamento",
+          "desc": {
+            "pt": "Acampamento da Guarda Invernal na fronteira do gelo.",
+            "en": "Winter Guard camp on the ice frontier."
+          }
+        },
+        {
+          "id": "vila_rena",
+          "name": {
+            "pt": "Vila da Rena",
+            "en": "Reindeer Hamlet"
+          },
+          "type": "vila",
+          "desc": {
+            "pt": "Vilarejo dos Clãs Renas; peles e peixe seco.",
+            "en": "Reindeer Clans' hamlet; furs and dried fish."
+          }
+        }
+      ],
+      "summary": {
+        "pt": "Tundra e fiordes onde Jarls, Guarda Invernal e Clãs Renas disputam peles, rotas e honra — duelos e guerras de guilda sob neve eterna.",
+        "en": "Tundra and fjords where Jarls, Winter Guard and Reindeer Clans contest furs, routes and honor — duels and guild wars under endless snow."
+      }
+    },
+    {
+      "id": "ruins",
+      "name": {
+        "pt": "Ruínas Antigas",
+        "en": "Ancient Ruins"
+      },
+      "climate": "ruinoso",
+      "factions": [
+        "cabala_necromante",
+        "guilda_do_espólio",
+        "guardiões_do_selo"
+      ],
+      "monsters": [
+        "skeleton",
+        "skeleton_knight",
+        "zombie",
+        "zombie_ghost",
+        "shade",
+        "cultist",
+        "golem_ruin",
+        "necromancer_apprentice",
+        "minotaur",
+        "wyvern"
+      ],
+      "cities": [
+        {
+          "id": "cidadela_quebrada",
+          "name": {
+            "pt": "Cidadela Quebrada",
+            "en": "Broken Citadel"
+          },
+          "type": "ruina",
+          "desc": {
+            "pt": "Capital caída; agora ninho da Cabala Necromante.",
+            "en": "Fallen capital; now nest of the Necromancer Cabal."
+          }
+        },
+        {
+          "id": "acampamento_espólio",
+          "name": {
+            "pt": "Acampamento do Espólio",
+            "en": "Spoil Camp"
+          },
+          "type": "acampamento",
+          "desc": {
+            "pt": "Base da Guilda do Espólio; leilão de relíquias.",
+            "en": "Spoil Guild base; relic auctions."
+          }
+        },
+        {
+          "id": "templo_selo",
+          "name": {
+            "pt": "Templo do Selo",
+            "en": "Seal Temple"
+          },
+          "type": "mosteiro",
+          "desc": {
+            "pt": "Último reduto dos Guardiões do Selo contra a necromancia.",
+            "en": "Last hold of the Seal Guardians against necromancy."
+          }
+        },
+        {
+          "id": "cripta_familia",
+          "name": {
+            "pt": "Cripta Familiar",
+            "en": "Family Crypt"
+          },
+          "type": "ruina",
+          "desc": {
+            "pt": "Labirinto subterrâneo de ossos e baús amaldiçoados.",
+            "en": "Underground maze of bones and cursed chests."
+          }
+        }
+      ],
+      "summary": {
+        "pt": "Império morto onde a Cabala ergue mortos, a Guilda do Espólio saqueia e os Guardiões do Selo resistem — PvP e raids de guilda constantes.",
+        "en": "Dead empire where the Cabal raises undead, the Spoil Guild loots, and Seal Guardians resist — constant PvP and guild raids."
+      }
+    },
+    {
+      "id": "coast",
+      "name": {
+        "pt": "Costa Levantina",
+        "en": "Levantine Coast"
+      },
+      "climate": "mediterraneo",
+      "factions": [
+        "republica_de_san_marco",
+        "corsarios_do_golfo",
+        "porto_de_acre_livre"
+      ],
+      "monsters": [
+        "sea_raider",
+        "crab_giant",
+        "siren",
+        "sharkman",
+        "goblin",
+        "bandit",
+        "wyvern_air",
+        "skeleton"
+      ],
+      "cities": [
+        {
+          "id": "acre_livre",
+          "name": {
+            "pt": "Acre Livre",
+            "en": "Free Acre"
+          },
+          "type": "porto",
+          "desc": {
+            "pt": "Porto franco misturando latinos, árabes e bizantinos; grande mercado.",
+            "en": "Free port mixing Latins, Arabs and Byzantines; great bazaar."
+          }
+        },
+        {
+          "id": "san_marco",
+          "name": {
+            "pt": "San Marco",
+            "en": "San Marco"
+          },
+          "type": "capital",
+          "desc": {
+            "pt": "República mercantil veneziana reinventada; arsenais e galés.",
+            "en": "Reimagined Venetian merchant republic; arsenals and galleys."
+          }
+        },
+        {
+          "id": "cova_corsario",
+          "name": {
+            "pt": "Cova do Corsário",
+            "en": "Corsair Cove"
+          },
+          "type": "acampamento",
+          "desc": {
+            "pt": "Esconderijo dos Corsários do Golfo; saque e resgate.",
+            "en": "Hideout of the Gulf Corsairs; plunder and ransom."
+          }
+        },
+        {
+          "id": "faro_bizantino",
+          "name": {
+            "pt": "Farol Bizantino",
+            "en": "Byzantine Lighthouse"
+          },
+          "type": "vila",
+          "desc": {
+            "pt": "Vila e farol de eco bizantino; guia navios e espiões.",
+            "en": "Byzantine-echo village and lighthouse; guides ships and spies."
+          }
+        }
+      ],
+      "summary": {
+        "pt": "Costa entre Outremer e o mar: República de San Marco, Corsários e Acre Livre disputam rotas — pirataria e guerras de guilda no porto.",
+        "en": "Coast between Outremer and the sea: San Marco Republic, Corsairs and Free Acre contest routes — piracy and guild wars in port."
+      }
+    }
+  ]
+}
