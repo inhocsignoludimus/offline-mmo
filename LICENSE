@@ -1,0 +1,77 @@
+NOTAS DE LICENÇA
+================
+
+Este arquivo não escolhe a licença do código. Diz o que já está
+combinado e o que fica com o Rodrigo.
+
+Código
+------
+A licença do código ainda não foi escolhida. A decisão é do Rodrigo
+(In Hoc Signo Ludimus). Entram nessa espera as pastas src/, engine/,
+ui/, systems/ e build/, e qualquer outro arquivo de programa que
+venha a existir.
+
+Até essa escolha, ninguém deve tratar o código deste repositório
+como se já tivesse uma licença livre publicada (MIT, GPL, Apache ou
+outra).
+
+O motor JavaScript reaproveitado é o de A Cruz de Montgisard, do
+mesmo estúdio:
+
+  https://github.com/inhocsignoludimus/The-Cross-of-Montgisard
+
+O código do motor Flare (GNU GPL v3) não entra neste repositório.
+Do Flare usamos arte, nos termos abaixo.
+
+Arte — pasta art/
+-----------------
+A arte distribuída em art/ sai sob a licença Creative Commons
+Atribuição-CompartilhaIgual 4.0 Internacional (CC-BY-SA 4.0):
+
+  Resumo em português:
+    https://creativecommons.org/licenses/by-sa/4.0/deed.pt
+  Texto jurídico (o inglês faz fé):
+    https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Quem copia ou adapta essa arte precisa dar crédito, indicar as
+mudanças, manter o mesmo tipo de licença na adaptação e apontar
+para o texto da CC-BY-SA 4.0. O crédito completo mora no
+CREDITOS.txt da raiz.
+
+A arte do projeto Flare (flare-game) está em CC-BY-SA 3.0, e o
+próprio projeto permite versões posteriores da licença. A 4.0 cabe
+nessa concessão. Antes de copiar um arquivo específico, a entrada
+no CREDITOS.txt confirma autor, licença daquele arquivo e link. Se
+algum arquivo de origem for só 3.0, sem versão posterior, ele
+permanece citado como 3.0 e não é "promovido" em silêncio.
+
+Textura CC0 ou obra em CC-BY (sem ShareAlike) pode ser adaptada
+dentro de art/. O render resultante, quando misturado ao conjunto
+CC-BY-SA, sai sob CC-BY-SA 4.0. Se o arquivo CC0 for redistribuído
+sozinho, continua CC0.
+
+Não entra em art/:
+
+  - licença non-commercial (CC-BY-NC, CC-BY-NC-SA, CC-BY-NC-ND e
+    equivalentes "não comercial");
+  - licença sem derivação (ND), porque o jogo recorta, reduz e
+    remonta a arte;
+  - arquivo sem licença, ou com licença que proíba o uso no jogo
+    vendido ou distribuído de graça na web, em APK e na itch.io.
+
+Todo asset leva autor, licença e link no CREDITOS.txt.
+
+Texto de jogo — pasta data/
+---------------------------
+A licença de lore, falas, nomes e itens ainda não foi escolhida.
+Acompanha a decisão do Rodrigo sobre o código e o conteúdo. Até
+lá, data/ não está sob CC-BY-SA 4.0 só por estar ao lado de art/.
+
+Fontes
+------
+Nenhuma fonte está incluída. Se uma fonte entrar depois, a licença
+dela é a SIL Open Font License 1.1, que permite uso comercial e
+distribuição em web, APK e itch.io. A fonte permanece sob a OFL;
+o arquivo da fonte não vira CC-BY-SA.
+
+  https://openfontlicense.org/

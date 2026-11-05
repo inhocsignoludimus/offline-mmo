@@ -1,0 +1,16 @@
+# Cópias de segurança do Blender. O .blend em si entra em art/blend/.
+*.blend1
+*.blend2
+*.blend@
+*.blend.tmp
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Saída de empacotamento. A pasta build/ guarda scripts; o pacote gerado não.
+build/dist/
+build/out/
+build/*.apk
+build/*.aab
+build/*.zip
