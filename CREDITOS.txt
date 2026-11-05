@@ -36,6 +36,10 @@ Cama: art_src_hd/tilesets/dungeon/bed.blend (mesh e materiais originais do Flare
 Iluminacao de referencia: art_src_hd/tilesets/common/lighting.blend, Justin Jacobs, CC0. https://github.com/flareteam/flare-game-art-src
 Modificacoes: cabana mantida como cena coerente e ajustada a planta retangular 5x4; camada frontal sem folha; rodape a 20% da altura; porta articulada; fechamento opaco do substrato do telhado; recesso de janela escuro e nao emissivo; chao interno; bau com madeira/ferro validos; mesa rustica derivada de madeira Flare; master 192x96 por tile. Derivados sujeitos as licencas acima. Personagem TCoM somente nas previas: stance direcao 4 ampliado 2x nearest-neighbor; credito conforme CREDITOS.txt do TCoM, nao integra o tileset.
 
+paperdoll fase 1 — janela do personagem em art/paperdoll/m/ e art/paperdoll/f/, mais as previas art/_preview/paperdoll_*.png.
+Autor: Ludimus (In Hoc Signo Ludimus), arte original do estudio. Licenca: CC0 1.0 Universal (obra original). https://creativecommons.org/publicdomain/zero/1.0/deed.pt ; https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Janela 300x480 px RGBA, fundo transparente (docs/ART_SPEC.md, secao 10). Bases pintadas de frente, ilustracao medieval sombria. Nao ha material da Electronic Arts nem do Ultima Online. Camadas alinhadas ao mesmo canvas. Pano, couro e esmalte que recebem cor ficam em cinza claro com sombreado. Metal, madeira e rebites ficam em <item_id>_fixed.png.
+
 Licença da arte derivada do Flare, nesta pasta:
 
   Creative Commons Atribuição-CompartilhaIgual 3.0 Internacional
