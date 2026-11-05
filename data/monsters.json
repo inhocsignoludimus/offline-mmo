@@ -1,0 +1,2253 @@
+{
+  "version": 1,
+  "monsters": [
+    {
+      "id": "goblin",
+      "name": {
+        "pt": "Goblin",
+        "en": "Goblin"
+      },
+      "art": "goblin",
+      "scale": 0.85,
+      "level": 2,
+      "hp": [
+        18,
+        26
+      ],
+      "mana": 0,
+      "str": 28,
+      "dex": 32,
+      "int": 12,
+      "armor": 3,
+      "dmg": [
+        2,
+        5
+      ],
+      "speed": 1.05,
+      "range": 1,
+      "resist": {
+        "poison": 10
+      },
+      "skills": {
+        "mace_fighting": 25,
+        "tactics": 20,
+        "wrestling": 20
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 6,
+      "flee_hp": 6,
+      "pack": [
+        3,
+        6
+      ],
+      "biomes": [
+        "plains",
+        "forest",
+        "mountains",
+        "coast"
+      ],
+      "spawn_weight": 16,
+      "loot": {
+        "gold": [
+          6,
+          16
+        ],
+        "table": "goblin",
+        "rarity_bonus": 0
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "goblin_runner",
+      "name": {
+        "pt": "Goblin Corredor",
+        "en": "Goblin Runner"
+      },
+      "art": "goblin",
+      "scale": 0.82,
+      "level": 1,
+      "hp": [
+        12,
+        18
+      ],
+      "mana": 0,
+      "str": 22,
+      "dex": 48,
+      "int": 10,
+      "armor": 1,
+      "dmg": [
+        1,
+        4
+      ],
+      "speed": 1.4,
+      "range": 1,
+      "resist": {
+        "poison": 5
+      },
+      "skills": {
+        "wrestling": 22,
+        "tactics": 15
+      },
+      "spells": [],
+      "special": [
+        "charge"
+      ],
+      "behavior": "aggressive",
+      "aggro": 7,
+      "flee_hp": 8,
+      "pack": [
+        2,
+        4
+      ],
+      "biomes": [
+        "plains",
+        "forest"
+      ],
+      "spawn_weight": 8,
+      "loot": {
+        "gold": [
+          4,
+          12
+        ],
+        "table": "goblin_runner",
+        "rarity_bonus": 0
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "goblin_spearman",
+      "name": {
+        "pt": "Goblin Lanceiro",
+        "en": "Goblin Spearman"
+      },
+      "art": "goblin",
+      "scale": 0.88,
+      "level": 3,
+      "hp": [
+        22,
+        32
+      ],
+      "mana": 0,
+      "str": 32,
+      "dex": 30,
+      "int": 12,
+      "armor": 4,
+      "dmg": [
+        3,
+        7
+      ],
+      "speed": 1.0,
+      "range": 2,
+      "resist": {
+        "poison": 10
+      },
+      "skills": {
+        "fencing": 32,
+        "tactics": 25,
+        "parrying": 15
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 7,
+      "flee_hp": 6,
+      "pack": [
+        2,
+        4
+      ],
+      "biomes": [
+        "plains"
+      ],
+      "spawn_weight": 8,
+      "loot": {
+        "gold": [
+          8,
+          20
+        ],
+        "table": "goblin_spearman",
+        "rarity_bonus": 0
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "goblin_shaman",
+      "name": {
+        "pt": "Goblin Xamã",
+        "en": "Goblin Shaman"
+      },
+      "art": "goblin",
+      "scale": 0.86,
+      "level": 5,
+      "hp": [
+        20,
+        30
+      ],
+      "mana": 24,
+      "str": 22,
+      "dex": 28,
+      "int": 36,
+      "armor": 3,
+      "dmg": [
+        1,
+        4
+      ],
+      "speed": 0.95,
+      "range": 5,
+      "resist": {
+        "fire": 10,
+        "poison": 15,
+        "energy": 10
+      },
+      "skills": {
+        "magery": 30,
+        "resisting_spells": 20,
+        "wrestling": 15,
+        "meditation": 15
+      },
+      "spells": [
+        "spark_dart",
+        "minor_mend"
+      ],
+      "special": [],
+      "behavior": "defensive",
+      "aggro": 8,
+      "flee_hp": 10,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "forest"
+      ],
+      "spawn_weight": 4,
+      "loot": {
+        "gold": [
+          12,
+          28
+        ],
+        "table": "goblin_shaman",
+        "rarity_bonus": 0
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "goblin_elite",
+      "name": {
+        "pt": "Goblin de Elite",
+        "en": "Elite Goblin"
+      },
+      "art": "goblin_elite",
+      "scale": 1.0,
+      "level": 6,
+      "hp": [
+        42,
+        58
+      ],
+      "mana": 0,
+      "str": 48,
+      "dex": 36,
+      "int": 16,
+      "armor": 8,
+      "dmg": [
+        5,
+        9
+      ],
+      "speed": 1.05,
+      "range": 1,
+      "resist": {
+        "fire": 5,
+        "cold": 5,
+        "poison": 15
+      },
+      "skills": {
+        "swordsmanship": 45,
+        "tactics": 40,
+        "parrying": 25,
+        "anatomy": 20
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 8,
+      "flee_hp": 10,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "plains",
+        "forest",
+        "mountains"
+      ],
+      "spawn_weight": 3,
+      "loot": {
+        "gold": [
+          16,
+          40
+        ],
+        "table": "goblin_elite",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "hobgoblin",
+      "name": {
+        "pt": "Hobgoblin",
+        "en": "Hobgoblin"
+      },
+      "art": "hobgoblin",
+      "scale": 1.15,
+      "level": 9,
+      "hp": [
+        72,
+        98
+      ],
+      "mana": 16,
+      "str": 70,
+      "dex": 42,
+      "int": 22,
+      "armor": 14,
+      "dmg": [
+        8,
+        14
+      ],
+      "speed": 1.0,
+      "range": 1,
+      "resist": {
+        "fire": 5,
+        "cold": 10,
+        "poison": 15
+      },
+      "skills": {
+        "swordsmanship": 55,
+        "tactics": 50,
+        "parrying": 35,
+        "healing": 25,
+        "magery": 20,
+        "anatomy": 25
+      },
+      "spells": [
+        "minor_mend"
+      ],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 8,
+      "flee_hp": 0,
+      "pack": [
+        1,
+        3
+      ],
+      "biomes": [
+        "mountains"
+      ],
+      "spawn_weight": 6,
+      "loot": {
+        "gold": [
+          28,
+          70
+        ],
+        "table": "hobgoblin",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": [
+        "leather_hide"
+      ]
+    },
+    {
+      "id": "hobgoblin_archer",
+      "name": {
+        "pt": "Hobgoblin Arqueiro",
+        "en": "Hobgoblin Archer"
+      },
+      "art": "hobgoblin_archer",
+      "scale": 1.12,
+      "level": 10,
+      "hp": [
+        58,
+        78
+      ],
+      "mana": 16,
+      "str": 55,
+      "dex": 58,
+      "int": 24,
+      "armor": 10,
+      "dmg": [
+        5,
+        9
+      ],
+      "speed": 0.95,
+      "range": 7,
+      "resist": {
+        "fire": 5,
+        "cold": 10,
+        "poison": 15
+      },
+      "skills": {
+        "archery": 60,
+        "tactics": 45,
+        "healing": 20,
+        "magery": 18,
+        "anatomy": 20
+      },
+      "spells": [
+        "minor_mend"
+      ],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 10,
+      "flee_hp": 12,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "mountains"
+      ],
+      "spawn_weight": 4,
+      "loot": {
+        "gold": [
+          30,
+          76
+        ],
+        "table": "hobgoblin_archer",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": [
+        "arrow"
+      ]
+    },
+    {
+      "id": "skeleton",
+      "name": {
+        "pt": "Esqueleto",
+        "en": "Skeleton"
+      },
+      "art": "skeleton_weak",
+      "scale": 1.0,
+      "level": 3,
+      "hp": [
+        24,
+        36
+      ],
+      "mana": 0,
+      "str": 36,
+      "dex": 28,
+      "int": 8,
+      "armor": 8,
+      "dmg": [
+        3,
+        7
+      ],
+      "speed": 1.0,
+      "range": 1,
+      "resist": {
+        "fire": -10,
+        "cold": 20,
+        "poison": 60
+      },
+      "skills": {
+        "swordsmanship": 30,
+        "tactics": 25,
+        "resisting_spells": 20
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 7,
+      "flee_hp": 0,
+      "pack": [
+        2,
+        4
+      ],
+      "biomes": [
+        "plains",
+        "forest",
+        "swamp",
+        "mountains",
+        "outremer",
+        "coast",
+        "ruins"
+      ],
+      "spawn_weight": 12,
+      "loot": {
+        "gold": [
+          8,
+          20
+        ],
+        "table": "skeleton",
+        "rarity_bonus": 0
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "skeleton_archer",
+      "name": {
+        "pt": "Esqueleto Arqueiro",
+        "en": "Skeleton Archer"
+      },
+      "art": "skeleton_archer",
+      "scale": 1.0,
+      "level": 5,
+      "hp": [
+        22,
+        34
+      ],
+      "mana": 0,
+      "str": 32,
+      "dex": 42,
+      "int": 10,
+      "armor": 6,
+      "dmg": [
+        3,
+        6
+      ],
+      "speed": 0.95,
+      "range": 6,
+      "resist": {
+        "fire": -10,
+        "cold": 20,
+        "poison": 60
+      },
+      "skills": {
+        "archery": 42,
+        "tactics": 30,
+        "resisting_spells": 20
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 9,
+      "flee_hp": 0,
+      "pack": [
+        1,
+        3
+      ],
+      "biomes": [
+        "ruins",
+        "plains",
+        "coast",
+        "mountains"
+      ],
+      "spawn_weight": 6,
+      "loot": {
+        "gold": [
+          12,
+          32
+        ],
+        "table": "skeleton_archer",
+        "rarity_bonus": 0
+      },
+      "tame": null,
+      "corpse_items": [
+        "arrow"
+      ]
+    },
+    {
+      "id": "skeleton_knight",
+      "name": {
+        "pt": "Cavaleiro Esqueleto",
+        "en": "Skeleton Knight"
+      },
+      "art": "skeleton",
+      "scale": 1.05,
+      "level": 8,
+      "hp": [
+        62,
+        86
+      ],
+      "mana": 0,
+      "str": 65,
+      "dex": 38,
+      "int": 14,
+      "armor": 18,
+      "dmg": [
+        8,
+        14
+      ],
+      "speed": 0.9,
+      "range": 1,
+      "resist": {
+        "fire": -5,
+        "cold": 25,
+        "poison": 60,
+        "physical": 10
+      },
+      "skills": {
+        "swordsmanship": 55,
+        "tactics": 50,
+        "parrying": 40,
+        "resisting_spells": 25,
+        "anatomy": 20
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 8,
+      "flee_hp": 0,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "ruins",
+        "mountains"
+      ],
+      "spawn_weight": 4,
+      "loot": {
+        "gold": [
+          24,
+          60
+        ],
+        "table": "skeleton_knight",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "skeleton_mage",
+      "name": {
+        "pt": "Mago Esqueleto",
+        "en": "Skeleton Mage"
+      },
+      "art": "skeleton_mage",
+      "scale": 1.0,
+      "level": 7,
+      "hp": [
+        32,
+        46
+      ],
+      "mana": 40,
+      "str": 28,
+      "dex": 30,
+      "int": 48,
+      "armor": 6,
+      "dmg": [
+        2,
+        5
+      ],
+      "speed": 0.95,
+      "range": 6,
+      "resist": {
+        "fire": 10,
+        "cold": 20,
+        "poison": 60,
+        "energy": 15
+      },
+      "skills": {
+        "magery": 40,
+        "evaluating_intelligence": 30,
+        "resisting_spells": 35,
+        "meditation": 25,
+        "wrestling": 15
+      },
+      "spells": [
+        "spark_dart",
+        "ember_touch",
+        "dust_blind"
+      ],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 9,
+      "flee_hp": 8,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "ruins"
+      ],
+      "spawn_weight": 4,
+      "loot": {
+        "gold": [
+          18,
+          48
+        ],
+        "table": "skeleton_mage",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "skeleton_mage_fire",
+      "name": {
+        "pt": "Mago Esqueleto de Fogo",
+        "en": "Fire Skeleton Mage"
+      },
+      "art": "skeleton_mage",
+      "scale": 1.0,
+      "level": 9,
+      "hp": [
+        36,
+        52
+      ],
+      "mana": 50,
+      "str": 30,
+      "dex": 32,
+      "int": 58,
+      "armor": 6,
+      "dmg": [
+        2,
+        6
+      ],
+      "speed": 0.95,
+      "range": 6,
+      "resist": {
+        "fire": 70,
+        "cold": -15,
+        "poison": 60,
+        "energy": 10
+      },
+      "skills": {
+        "magery": 48,
+        "evaluating_intelligence": 35,
+        "resisting_spells": 35,
+        "meditation": 30
+      },
+      "spells": [
+        "ember_touch",
+        "naphtha_ball"
+      ],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 9,
+      "flee_hp": 8,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "ruins",
+        "outremer"
+      ],
+      "spawn_weight": 3,
+      "loot": {
+        "gold": [
+          24,
+          62
+        ],
+        "table": "skeleton_mage_fire",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "skeleton_mage_ice",
+      "name": {
+        "pt": "Mago Esqueleto de Gelo",
+        "en": "Ice Skeleton Mage"
+      },
+      "art": "skeleton_mage",
+      "scale": 1.0,
+      "level": 11,
+      "hp": [
+        42,
+        60
+      ],
+      "mana": 55,
+      "str": 32,
+      "dex": 30,
+      "int": 64,
+      "armor": 8,
+      "dmg": [
+        3,
+        6
+      ],
+      "speed": 0.95,
+      "range": 6,
+      "resist": {
+        "fire": -15,
+        "cold": 75,
+        "poison": 60,
+        "energy": 10
+      },
+      "skills": {
+        "magery": 52,
+        "evaluating_intelligence": 40,
+        "resisting_spells": 40,
+        "meditation": 30
+      },
+      "spells": [
+        "frost_pinch",
+        "dull_wit"
+      ],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 9,
+      "flee_hp": 10,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "north",
+        "ruins"
+      ],
+      "spawn_weight": 4,
+      "loot": {
+        "gold": [
+          32,
+          78
+        ],
+        "table": "skeleton_mage_ice",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "skeleton_knight_boss",
+      "name": {
+        "pt": "Campeão Esqueleto",
+        "en": "Skeleton Champion"
+      },
+      "art": "skeleton_knight_boss",
+      "scale": 1.25,
+      "level": 14,
+      "hp": [
+        110,
+        150
+      ],
+      "mana": 0,
+      "str": 90,
+      "dex": 50,
+      "int": 18,
+      "armor": 22,
+      "dmg": [
+        10,
+        16
+      ],
+      "speed": 0.95,
+      "range": 1,
+      "resist": {
+        "cold": 30,
+        "poison": 70,
+        "physical": 15
+      },
+      "skills": {
+        "swordsmanship": 75,
+        "tactics": 70,
+        "parrying": 60,
+        "anatomy": 40,
+        "resisting_spells": 35
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 9,
+      "flee_hp": 0,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "ruins"
+      ],
+      "spawn_weight": 1,
+      "loot": {
+        "gold": [
+          48,
+          110
+        ],
+        "table": "skeleton_knight_boss",
+        "rarity_bonus": 2
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "skeleton_mage_boss",
+      "name": {
+        "pt": "Arqui-Mago Esqueleto",
+        "en": "Skeletal Archmage"
+      },
+      "art": "skeleton_mage_boss",
+      "scale": 1.15,
+      "level": 14,
+      "hp": [
+        90,
+        120
+      ],
+      "mana": 70,
+      "str": 36,
+      "dex": 38,
+      "int": 80,
+      "armor": 10,
+      "dmg": [
+        4,
+        7
+      ],
+      "speed": 0.95,
+      "range": 7,
+      "resist": {
+        "fire": 25,
+        "cold": 25,
+        "poison": 70,
+        "energy": 30
+      },
+      "skills": {
+        "magery": 70,
+        "evaluating_intelligence": 60,
+        "resisting_spells": 55,
+        "meditation": 50,
+        "wrestling": 25
+      },
+      "spells": [
+        "naphtha_ball",
+        "frost_pinch",
+        "storm_nail",
+        "deep_mend"
+      ],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 10,
+      "flee_hp": 20,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "ruins"
+      ],
+      "spawn_weight": 1,
+      "loot": {
+        "gold": [
+          44,
+          100
+        ],
+        "table": "skeleton_mage_boss",
+        "rarity_bonus": 2
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "skeleton_mage_high_boss",
+      "name": {
+        "pt": "Hierofante Esqueleto",
+        "en": "Skeletal Hierophant"
+      },
+      "art": "skeleton_mage_high_boss",
+      "scale": 1.2,
+      "level": 17,
+      "hp": [
+        120,
+        160
+      ],
+      "mana": 100,
+      "str": 42,
+      "dex": 40,
+      "int": 100,
+      "armor": 14,
+      "dmg": [
+        5,
+        9
+      ],
+      "speed": 1.0,
+      "range": 7,
+      "resist": {
+        "fire": 30,
+        "cold": 30,
+        "poison": 80,
+        "energy": 40
+      },
+      "skills": {
+        "magery": 85,
+        "evaluating_intelligence": 75,
+        "resisting_spells": 70,
+        "meditation": 65,
+        "wrestling": 30
+      },
+      "spells": [
+        "kiln_burst",
+        "cold_mind",
+        "glass_bolt",
+        "resin_mire",
+        "deep_mend"
+      ],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 11,
+      "flee_hp": 25,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "ruins"
+      ],
+      "spawn_weight": 1,
+      "loot": {
+        "gold": [
+          70,
+          160
+        ],
+        "table": "skeleton_mage_high_boss",
+        "rarity_bonus": 2
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "zombie",
+      "name": {
+        "pt": "Zumbi",
+        "en": "Zombie"
+      },
+      "art": "zombie",
+      "scale": 1.0,
+      "level": 4,
+      "hp": [
+        40,
+        58
+      ],
+      "mana": 0,
+      "str": 55,
+      "dex": 16,
+      "int": 6,
+      "armor": 4,
+      "dmg": [
+        4,
+        8
+      ],
+      "speed": 0.72,
+      "range": 1,
+      "resist": {
+        "fire": -15,
+        "cold": 10,
+        "poison": 50
+      },
+      "skills": {
+        "wrestling": 35,
+        "tactics": 20,
+        "anatomy": 15
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 6,
+      "flee_hp": 0,
+      "pack": [
+        2,
+        4
+      ],
+      "biomes": [
+        "swamp",
+        "ruins"
+      ],
+      "spawn_weight": 10,
+      "loot": {
+        "gold": [
+          10,
+          26
+        ],
+        "table": "zombie",
+        "rarity_bonus": 0
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "zombie_rotting",
+      "name": {
+        "pt": "Zumbi Apodrecido",
+        "en": "Rotting Zombie"
+      },
+      "art": "zombie",
+      "scale": 0.98,
+      "level": 3,
+      "hp": [
+        28,
+        42
+      ],
+      "mana": 0,
+      "str": 42,
+      "dex": 12,
+      "int": 4,
+      "armor": 2,
+      "dmg": [
+        3,
+        6
+      ],
+      "speed": 0.65,
+      "range": 1,
+      "resist": {
+        "fire": -20,
+        "cold": 5,
+        "poison": 70
+      },
+      "skills": {
+        "wrestling": 28,
+        "poisoning": 30,
+        "anatomy": 10
+      },
+      "spells": [],
+      "special": [
+        "disease"
+      ],
+      "behavior": "aggressive",
+      "aggro": 5,
+      "flee_hp": 0,
+      "pack": [
+        2,
+        5
+      ],
+      "biomes": [
+        "swamp"
+      ],
+      "spawn_weight": 10,
+      "loot": {
+        "gold": [
+          6,
+          18
+        ],
+        "table": "zombie_rotting",
+        "rarity_bonus": 0
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "zombie_dark",
+      "name": {
+        "pt": "Zumbi Sombrio",
+        "en": "Dark Zombie"
+      },
+      "art": "zombie_dark",
+      "scale": 1.08,
+      "level": 10,
+      "hp": [
+        82,
+        112
+      ],
+      "mana": 0,
+      "str": 78,
+      "dex": 28,
+      "int": 12,
+      "armor": 8,
+      "dmg": [
+        8,
+        14
+      ],
+      "speed": 0.85,
+      "range": 1,
+      "resist": {
+        "fire": -10,
+        "cold": 20,
+        "poison": 55,
+        "energy": 15
+      },
+      "skills": {
+        "wrestling": 55,
+        "tactics": 40,
+        "anatomy": 30,
+        "resisting_spells": 25
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 8,
+      "flee_hp": 0,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "swamp",
+        "ruins"
+      ],
+      "spawn_weight": 3,
+      "loot": {
+        "gold": [
+          30,
+          74
+        ],
+        "table": "zombie_dark",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "zombie_ghost",
+      "name": {
+        "pt": "Zumbi Fantasma",
+        "en": "Ghost Zombie"
+      },
+      "art": "zombie",
+      "scale": 1.0,
+      "level": 8,
+      "hp": [
+        34,
+        50
+      ],
+      "mana": 0,
+      "str": 30,
+      "dex": 40,
+      "int": 30,
+      "armor": 2,
+      "dmg": [
+        4,
+        9
+      ],
+      "speed": 1.15,
+      "range": 1,
+      "resist": {
+        "cold": 30,
+        "poison": 80,
+        "physical": 25,
+        "energy": 20
+      },
+      "skills": {
+        "wrestling": 40,
+        "resisting_spells": 35
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 8,
+      "flee_hp": 0,
+      "pack": [
+        1,
+        3
+      ],
+      "biomes": [
+        "ruins"
+      ],
+      "spawn_weight": 4,
+      "loot": {
+        "gold": [
+          20,
+          50
+        ],
+        "table": "zombie_ghost",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "frozen_zombie",
+      "name": {
+        "pt": "Zumbi Congelado",
+        "en": "Frozen Zombie"
+      },
+      "art": "zombie",
+      "scale": 1.02,
+      "level": 8,
+      "hp": [
+        50,
+        70
+      ],
+      "mana": 0,
+      "str": 60,
+      "dex": 14,
+      "int": 8,
+      "armor": 6,
+      "dmg": [
+        5,
+        10
+      ],
+      "speed": 0.7,
+      "range": 1,
+      "resist": {
+        "fire": -25,
+        "cold": 70,
+        "poison": 50
+      },
+      "skills": {
+        "wrestling": 42,
+        "tactics": 25,
+        "anatomy": 15
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 6,
+      "flee_hp": 0,
+      "pack": [
+        2,
+        4
+      ],
+      "biomes": [
+        "north"
+      ],
+      "spawn_weight": 6,
+      "loot": {
+        "gold": [
+          18,
+          46
+        ],
+        "table": "frozen_zombie",
+        "rarity_bonus": 0
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "antlion_hatchling",
+      "name": {
+        "pt": "Cria de Antlion",
+        "en": "Antlion Hatchling"
+      },
+      "art": "antlion_small",
+      "scale": 0.55,
+      "level": 2,
+      "hp": [
+        10,
+        16
+      ],
+      "mana": 0,
+      "str": 16,
+      "dex": 36,
+      "int": 4,
+      "armor": 2,
+      "dmg": [
+        1,
+        3
+      ],
+      "speed": 1.25,
+      "range": 1,
+      "resist": {
+        "fire": 5,
+        "poison": 20
+      },
+      "skills": {
+        "wrestling": 18
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 5,
+      "flee_hp": 4,
+      "pack": [
+        3,
+        7
+      ],
+      "biomes": [
+        "outremer",
+        "swamp"
+      ],
+      "spawn_weight": 12,
+      "loot": {
+        "gold": [
+          3,
+          10
+        ],
+        "table": "antlion_hatchling",
+        "rarity_bonus": 0
+      },
+      "tame": {
+        "skill": 35
+      },
+      "corpse_items": []
+    },
+    {
+      "id": "fire_ant",
+      "name": {
+        "pt": "Formiga de Fogo",
+        "en": "Fire Ant"
+      },
+      "art": "fire_ant",
+      "scale": 1.05,
+      "level": 5,
+      "hp": [
+        28,
+        40
+      ],
+      "mana": 0,
+      "str": 36,
+      "dex": 40,
+      "int": 8,
+      "armor": 6,
+      "dmg": [
+        3,
+        7
+      ],
+      "speed": 1.15,
+      "range": 1,
+      "resist": {
+        "fire": 70,
+        "cold": -20,
+        "poison": 25
+      },
+      "skills": {
+        "wrestling": 35,
+        "tactics": 20
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 7,
+      "flee_hp": 6,
+      "pack": [
+        3,
+        5
+      ],
+      "biomes": [
+        "outremer"
+      ],
+      "spawn_weight": 10,
+      "loot": {
+        "gold": [
+          12,
+          30
+        ],
+        "table": "fire_ant",
+        "rarity_bonus": 0
+      },
+      "tame": {
+        "skill": 50
+      },
+      "corpse_items": []
+    },
+    {
+      "id": "antlion_spitter",
+      "name": {
+        "pt": "Antlion Cuspidor",
+        "en": "Antlion Spitter"
+      },
+      "art": "fire_ant",
+      "scale": 1.08,
+      "level": 7,
+      "hp": [
+        36,
+        52
+      ],
+      "mana": 0,
+      "str": 40,
+      "dex": 38,
+      "int": 10,
+      "armor": 7,
+      "dmg": [
+        3,
+        6
+      ],
+      "speed": 1.0,
+      "range": 5,
+      "resist": {
+        "fire": 60,
+        "cold": -15,
+        "poison": 40
+      },
+      "skills": {
+        "wrestling": 30,
+        "poisoning": 40,
+        "tactics": 25
+      },
+      "spells": [],
+      "special": [
+        "spit"
+      ],
+      "behavior": "aggressive",
+      "aggro": 8,
+      "flee_hp": 8,
+      "pack": [
+        1,
+        3
+      ],
+      "biomes": [
+        "outremer"
+      ],
+      "spawn_weight": 6,
+      "loot": {
+        "gold": [
+          16,
+          42
+        ],
+        "table": "antlion_spitter",
+        "rarity_bonus": 0
+      },
+      "tame": {
+        "skill": 60
+      },
+      "corpse_items": []
+    },
+    {
+      "id": "antlion_freezer",
+      "name": {
+        "pt": "Antlion do Gelo",
+        "en": "Freezer Antlion"
+      },
+      "art": "ice_ant",
+      "scale": 1.05,
+      "level": 9,
+      "hp": [
+        44,
+        64
+      ],
+      "mana": 0,
+      "str": 48,
+      "dex": 34,
+      "int": 12,
+      "armor": 8,
+      "dmg": [
+        4,
+        8
+      ],
+      "speed": 1.0,
+      "range": 4,
+      "resist": {
+        "fire": -20,
+        "cold": 75,
+        "poison": 25
+      },
+      "skills": {
+        "wrestling": 42,
+        "tactics": 30
+      },
+      "spells": [],
+      "special": [
+        "spit_frost"
+      ],
+      "behavior": "aggressive",
+      "aggro": 8,
+      "flee_hp": 0,
+      "pack": [
+        2,
+        4
+      ],
+      "biomes": [
+        "north"
+      ],
+      "spawn_weight": 5,
+      "loot": {
+        "gold": [
+          24,
+          58
+        ],
+        "table": "antlion_freezer",
+        "rarity_bonus": 1
+      },
+      "tame": {
+        "skill": 65
+      },
+      "corpse_items": []
+    },
+    {
+      "id": "antlion",
+      "name": {
+        "pt": "Antlion",
+        "en": "Antlion"
+      },
+      "art": "antlion",
+      "scale": 1.2,
+      "level": 11,
+      "hp": [
+        78,
+        108
+      ],
+      "mana": 0,
+      "str": 80,
+      "dex": 42,
+      "int": 12,
+      "armor": 14,
+      "dmg": [
+        8,
+        14
+      ],
+      "speed": 1.05,
+      "range": 1,
+      "resist": {
+        "fire": 15,
+        "cold": 10,
+        "poison": 30,
+        "physical": 5
+      },
+      "skills": {
+        "wrestling": 55,
+        "tactics": 40,
+        "anatomy": 20
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 8,
+      "flee_hp": 0,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "outremer",
+        "swamp"
+      ],
+      "spawn_weight": 5,
+      "loot": {
+        "gold": [
+          32,
+          80
+        ],
+        "table": "antlion",
+        "rarity_bonus": 1
+      },
+      "tame": {
+        "skill": 75
+      },
+      "corpse_items": [
+        "leather_hide"
+      ]
+    },
+    {
+      "id": "antlion_armored",
+      "name": {
+        "pt": "Antlion Couraçado",
+        "en": "Armored Antlion"
+      },
+      "art": "antlion_armored",
+      "scale": 1.4,
+      "level": 14,
+      "hp": [
+        120,
+        160
+      ],
+      "mana": 0,
+      "str": 100,
+      "dex": 34,
+      "int": 12,
+      "armor": 22,
+      "dmg": [
+        10,
+        16
+      ],
+      "speed": 0.9,
+      "range": 1,
+      "resist": {
+        "fire": 20,
+        "cold": 15,
+        "poison": 35,
+        "physical": 20
+      },
+      "skills": {
+        "wrestling": 70,
+        "tactics": 55,
+        "anatomy": 30
+      },
+      "spells": [],
+      "special": [],
+      "behavior": "aggressive",
+      "aggro": 8,
+      "flee_hp": 0,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "outremer"
+      ],
+      "spawn_weight": 1,
+      "loot": {
+        "gold": [
+          48,
+          110
+        ],
+        "table": "antlion_armored",
+        "rarity_bonus": 2
+      },
+      "tame": null,
+      "corpse_items": [
+        "leather_hide"
+      ]
+    },
+    {
+      "id": "minotaur",
+      "name": {
+        "pt": "Minotauro",
+        "en": "Minotaur"
+      },
+      "art": "minotaur",
+      "scale": 1.5,
+      "level": 13,
+      "hp": [
+        140,
+        180
+      ],
+      "mana": 0,
+      "str": 120,
+      "dex": 46,
+      "int": 20,
+      "armor": 18,
+      "dmg": [
+        11,
+        17
+      ],
+      "speed": 1.0,
+      "range": 1,
+      "resist": {
+        "fire": 5,
+        "cold": 10,
+        "poison": 20,
+        "physical": 10
+      },
+      "skills": {
+        "mace_fighting": 70,
+        "tactics": 60,
+        "wrestling": 50,
+        "anatomy": 35,
+        "parrying": 30
+      },
+      "spells": [],
+      "special": [
+        "charge"
+      ],
+      "behavior": "aggressive",
+      "aggro": 8,
+      "flee_hp": 0,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "mountains",
+        "ruins"
+      ],
+      "spawn_weight": 3,
+      "loot": {
+        "gold": [
+          50,
+          120
+        ],
+        "table": "minotaur",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": [
+        "leather_hide"
+      ]
+    },
+    {
+      "id": "boulder",
+      "name": {
+        "pt": "Pedregulho",
+        "en": "Boulder"
+      },
+      "art": "boulder",
+      "scale": 1.25,
+      "level": 12,
+      "hp": [
+        110,
+        150
+      ],
+      "mana": 0,
+      "str": 110,
+      "dex": 12,
+      "int": 4,
+      "armor": 22,
+      "dmg": [
+        8,
+        14
+      ],
+      "speed": 0.6,
+      "range": 1,
+      "resist": {
+        "fire": 20,
+        "cold": 20,
+        "poison": 80,
+        "physical": 25,
+        "energy": 10
+      },
+      "skills": {
+        "wrestling": 50,
+        "tactics": 20
+      },
+      "spells": [],
+      "special": [
+        "quake"
+      ],
+      "behavior": "defensive",
+      "aggro": 4,
+      "flee_hp": 0,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "mountains",
+        "ruins"
+      ],
+      "spawn_weight": 3,
+      "loot": {
+        "gold": [
+          24,
+          60
+        ],
+        "table": "boulder",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": [
+        "iron_ore"
+      ]
+    },
+    {
+      "id": "wyvern",
+      "name": {
+        "pt": "Serpe",
+        "en": "Wyvern"
+      },
+      "art": "wyvern",
+      "scale": 1.25,
+      "level": 14,
+      "hp": [
+        130,
+        170
+      ],
+      "mana": 24,
+      "str": 120,
+      "dex": 68,
+      "int": 32,
+      "armor": 18,
+      "dmg": [
+        10,
+        16
+      ],
+      "speed": 1.15,
+      "range": 1,
+      "resist": {
+        "fire": 10,
+        "cold": 10,
+        "poison": 40
+      },
+      "skills": {
+        "wrestling": 65,
+        "tactics": 50,
+        "anatomy": 30
+      },
+      "spells": [],
+      "special": [
+        "breath_poison"
+      ],
+      "behavior": "aggressive",
+      "aggro": 10,
+      "flee_hp": 30,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "plains",
+        "ruins"
+      ],
+      "spawn_weight": 2,
+      "loot": {
+        "gold": [
+          55,
+          130
+        ],
+        "table": "wyvern",
+        "rarity_bonus": 2
+      },
+      "tame": null,
+      "corpse_items": [
+        "leather_hide"
+      ]
+    },
+    {
+      "id": "wyvern_fire",
+      "name": {
+        "pt": "Serpe de Fogo",
+        "en": "Fire Wyvern"
+      },
+      "art": "wyvern_fire",
+      "scale": 1.3,
+      "level": 16,
+      "hp": [
+        150,
+        190
+      ],
+      "mana": 30,
+      "str": 130,
+      "dex": 70,
+      "int": 36,
+      "armor": 20,
+      "dmg": [
+        11,
+        17
+      ],
+      "speed": 1.1,
+      "range": 1,
+      "resist": {
+        "fire": 80,
+        "cold": -25,
+        "poison": 20
+      },
+      "skills": {
+        "wrestling": 70,
+        "tactics": 55,
+        "anatomy": 30,
+        "resisting_spells": 25
+      },
+      "spells": [],
+      "special": [
+        "breath_fire"
+      ],
+      "behavior": "aggressive",
+      "aggro": 10,
+      "flee_hp": 35,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "outremer"
+      ],
+      "spawn_weight": 2,
+      "loot": {
+        "gold": [
+          70,
+          160
+        ],
+        "table": "wyvern_fire",
+        "rarity_bonus": 2
+      },
+      "tame": null,
+      "corpse_items": [
+        "leather_hide"
+      ]
+    },
+    {
+      "id": "wyvern_air",
+      "name": {
+        "pt": "Serpe do Ar",
+        "en": "Air Wyvern"
+      },
+      "art": "wyvern_air",
+      "scale": 1.25,
+      "level": 15,
+      "hp": [
+        125,
+        165
+      ],
+      "mana": 24,
+      "str": 125,
+      "dex": 90,
+      "int": 36,
+      "armor": 16,
+      "dmg": [
+        10,
+        16
+      ],
+      "speed": 1.35,
+      "range": 1,
+      "resist": {
+        "cold": 20,
+        "poison": 15,
+        "energy": 25
+      },
+      "skills": {
+        "wrestling": 65,
+        "tactics": 55,
+        "anatomy": 25
+      },
+      "spells": [],
+      "special": [
+        "dash"
+      ],
+      "behavior": "aggressive",
+      "aggro": 11,
+      "flee_hp": 30,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "mountains",
+        "north",
+        "coast"
+      ],
+      "spawn_weight": 2,
+      "loot": {
+        "gold": [
+          64,
+          150
+        ],
+        "table": "wyvern_air",
+        "rarity_bonus": 2
+      },
+      "tame": null,
+      "corpse_items": [
+        "leather_hide"
+      ]
+    },
+    {
+      "id": "wyvern_water",
+      "name": {
+        "pt": "Serpe da Água",
+        "en": "Water Wyvern"
+      },
+      "art": "wyvern_water",
+      "scale": 1.3,
+      "level": 15,
+      "hp": [
+        140,
+        180
+      ],
+      "mana": 28,
+      "str": 130,
+      "dex": 66,
+      "int": 36,
+      "armor": 18,
+      "dmg": [
+        10,
+        16
+      ],
+      "speed": 1.1,
+      "range": 1,
+      "resist": {
+        "fire": -15,
+        "cold": 50,
+        "poison": 25
+      },
+      "skills": {
+        "wrestling": 68,
+        "tactics": 50,
+        "anatomy": 28
+      },
+      "spells": [],
+      "special": [
+        "breath_cold"
+      ],
+      "behavior": "aggressive",
+      "aggro": 10,
+      "flee_hp": 30,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "coast",
+        "swamp"
+      ],
+      "spawn_weight": 2,
+      "loot": {
+        "gold": [
+          64,
+          150
+        ],
+        "table": "wyvern_water",
+        "rarity_bonus": 2
+      },
+      "tame": null,
+      "corpse_items": [
+        "leather_hide"
+      ]
+    },
+    {
+      "id": "wyvern_air_boss",
+      "name": {
+        "pt": "Serpe Anciã do Ar",
+        "en": "Elder Air Wyvern"
+      },
+      "art": "wyvern_air_boss",
+      "scale": 1.55,
+      "level": 18,
+      "hp": [
+        200,
+        250
+      ],
+      "mana": 50,
+      "str": 160,
+      "dex": 95,
+      "int": 60,
+      "armor": 24,
+      "dmg": [
+        13,
+        20
+      ],
+      "speed": 1.4,
+      "range": 1,
+      "resist": {
+        "fire": 10,
+        "cold": 30,
+        "poison": 20,
+        "energy": 40,
+        "physical": 10
+      },
+      "skills": {
+        "wrestling": 80,
+        "tactics": 70,
+        "magery": 40,
+        "anatomy": 40,
+        "resisting_spells": 35
+      },
+      "spells": [
+        "storm_nail"
+      ],
+      "special": [
+        "dash"
+      ],
+      "behavior": "aggressive",
+      "aggro": 12,
+      "flee_hp": 40,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "mountains",
+        "north"
+      ],
+      "spawn_weight": 1,
+      "loot": {
+        "gold": [
+          100,
+          220
+        ],
+        "table": "wyvern_air_boss",
+        "rarity_bonus": 2
+      },
+      "tame": null,
+      "corpse_items": [
+        "leather_hide"
+      ]
+    },
+    {
+      "id": "necromancer_apprentice",
+      "name": {
+        "pt": "Aprendiz Necromante",
+        "en": "Necromancer Apprentice"
+      },
+      "art": "necromancer",
+      "scale": 0.95,
+      "level": 11,
+      "hp": [
+        52,
+        74
+      ],
+      "mana": 48,
+      "str": 32,
+      "dex": 34,
+      "int": 62,
+      "armor": 6,
+      "dmg": [
+        3,
+        7
+      ],
+      "speed": 1.0,
+      "range": 6,
+      "resist": {
+        "cold": 20,
+        "poison": 30,
+        "energy": 15
+      },
+      "skills": {
+        "magery": 45,
+        "evaluating_intelligence": 35,
+        "resisting_spells": 30,
+        "meditation": 25,
+        "wrestling": 20
+      },
+      "spells": [
+        "spark_dart",
+        "resin_sting",
+        "minor_mend"
+      ],
+      "special": [
+        "summon_undead"
+      ],
+      "behavior": "aggressive",
+      "aggro": 9,
+      "flee_hp": 16,
+      "pack": [
+        1,
+        2
+      ],
+      "biomes": [
+        "ruins"
+      ],
+      "spawn_weight": 3,
+      "loot": {
+        "gold": [
+          32,
+          80
+        ],
+        "table": "necromancer_apprentice",
+        "rarity_bonus": 1
+      },
+      "tame": null,
+      "corpse_items": []
+    },
+    {
+      "id": "necromancer",
+      "name": {
+        "pt": "Necromante",
+        "en": "Necromancer"
+      },
+      "art": "necromancer",
+      "scale": 1.0,
+      "level": 16,
+      "hp": [
+        95,
+        130
+      ],
+      "mana": 90,
+      "str": 40,
+      "dex": 38,
+      "int": 100,
+      "armor": 8,
+      "dmg": [
+        4,
+        8
+      ],
+      "speed": 0.95,
+      "range": 7,
+      "resist": {
+        "fire": 10,
+        "cold": 30,
+        "poison": 45,
+        "energy": 25
+      },
+      "skills": {
+        "magery": 80,
+        "evaluating_intelligence": 70,
+        "resisting_spells": 60,
+        "meditation": 55,
+        "wrestling": 30
+      },
+      "spells": [
+        "resin_sting",
+        "frost_pinch",
+        "breath_siphon",
+        "dust_blind",
+        "deep_mend"
+      ],
+      "special": [
+        "summon_undead"
+      ],
+      "behavior": "aggressive",
+      "aggro": 10,
+      "flee_hp": 25,
+      "pack": [
+        1,
+        1
+      ],
+      "biomes": [
+        "ruins"
+      ],
+      "spawn_weight": 2,
+      "loot": {
+        "gold": [
+          80,
+          180
+        ],
+        "table": "necromancer",
+        "rarity_bonus": 2
+      },
+      "tame": null,
+      "corpse_items": []
+    }
+  ]
+}
