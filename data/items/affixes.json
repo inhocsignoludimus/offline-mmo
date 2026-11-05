@@ -1,0 +1,1003 @@
+{
+  "version": 1,
+  "prefix": [
+    {
+      "id": "cruel",
+      "name": {
+        "pt": "Cruel",
+        "en": "Cruel"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "dmg_pct",
+      "range": [
+        8,
+        15
+      ],
+      "tier": 2
+    },
+    {
+      "id": "sanguinario",
+      "name": {
+        "pt": "Sanguinário",
+        "en": "Bloodthirsty"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "dmg_flat",
+      "range": [
+        4,
+        7
+      ],
+      "tier": 3
+    },
+    {
+      "id": "cortante",
+      "name": {
+        "pt": "Cortante",
+        "en": "Cutting"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "hit_chance",
+      "range": [
+        2,
+        5
+      ],
+      "tier": 1
+    },
+    {
+      "id": "ligeiro",
+      "name": {
+        "pt": "Ligeiro",
+        "en": "Swift"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "swing_speed",
+      "range": [
+        2,
+        5
+      ],
+      "tier": 1
+    },
+    {
+      "id": "solido",
+      "name": {
+        "pt": "Sólido",
+        "en": "Solid"
+      },
+      "applies": [
+        "armor",
+        "shield"
+      ],
+      "stat": "armor_flat",
+      "range": [
+        1,
+        3
+      ],
+      "tier": 1
+    },
+    {
+      "id": "couracado",
+      "name": {
+        "pt": "Couraçado",
+        "en": "Cuirassed"
+      },
+      "applies": [
+        "armor",
+        "shield"
+      ],
+      "stat": "armor_pct",
+      "range": [
+        12,
+        22
+      ],
+      "tier": 3
+    },
+    {
+      "id": "robusto",
+      "name": {
+        "pt": "Robusto",
+        "en": "Stout"
+      },
+      "applies": [
+        "armor",
+        "weapon",
+        "jewelry"
+      ],
+      "stat": "str",
+      "range": [
+        3,
+        7
+      ],
+      "tier": 2
+    },
+    {
+      "id": "agil",
+      "name": {
+        "pt": "Ágil",
+        "en": "Nimble"
+      },
+      "applies": [
+        "clothing",
+        "armor"
+      ],
+      "stat": "dex",
+      "range": [
+        2,
+        5
+      ],
+      "tier": 1
+    },
+    {
+      "id": "letrado",
+      "name": {
+        "pt": "Letrado",
+        "en": "Learned"
+      },
+      "applies": [
+        "jewelry",
+        "clothing"
+      ],
+      "stat": "int",
+      "range": [
+        2,
+        5
+      ],
+      "tier": 1
+    },
+    {
+      "id": "vivaz",
+      "name": {
+        "pt": "Vivaz",
+        "en": "Lively"
+      },
+      "applies": [
+        "armor",
+        "jewelry"
+      ],
+      "stat": "hp",
+      "range": [
+        8,
+        18
+      ],
+      "tier": 2
+    },
+    {
+      "id": "arcano",
+      "name": {
+        "pt": "Arcano",
+        "en": "Arcane"
+      },
+      "applies": [
+        "jewelry"
+      ],
+      "stat": "mana",
+      "range": [
+        12,
+        22
+      ],
+      "tier": 3
+    },
+    {
+      "id": "incansavel",
+      "name": {
+        "pt": "Incansável",
+        "en": "Tireless"
+      },
+      "applies": [
+        "armor",
+        "clothing"
+      ],
+      "stat": "stam",
+      "range": [
+        8,
+        16
+      ],
+      "tier": 2
+    },
+    {
+      "id": "salgado",
+      "name": {
+        "pt": "Salgado",
+        "en": "Brined"
+      },
+      "applies": [
+        "armor",
+        "shield"
+      ],
+      "stat": "res_fire",
+      "range": [
+        3,
+        7
+      ],
+      "tier": 1
+    },
+    {
+      "id": "ensolarado",
+      "name": {
+        "pt": "Ensolarado",
+        "en": "Sunbaked"
+      },
+      "applies": [
+        "armor",
+        "clothing"
+      ],
+      "stat": "res_cold",
+      "range": [
+        6,
+        12
+      ],
+      "tier": 2
+    },
+    {
+      "id": "purificado",
+      "name": {
+        "pt": "Purificado",
+        "en": "Purified"
+      },
+      "applies": [
+        "armor",
+        "jewelry"
+      ],
+      "stat": "res_poison",
+      "range": [
+        10,
+        18
+      ],
+      "tier": 3
+    },
+    {
+      "id": "benzido",
+      "name": {
+        "pt": "Benzido",
+        "en": "Hallowed"
+      },
+      "applies": [
+        "armor",
+        "jewelry"
+      ],
+      "stat": "res_energy",
+      "range": [
+        6,
+        12
+      ],
+      "tier": 2
+    },
+    {
+      "id": "afortunado",
+      "name": {
+        "pt": "Afortunado",
+        "en": "Fortunate"
+      },
+      "applies": [
+        "jewelry"
+      ],
+      "stat": "luck",
+      "range": [
+        6,
+        14
+      ],
+      "tier": 1
+    },
+    {
+      "id": "temperado",
+      "name": {
+        "pt": "Temperado",
+        "en": "Tempered"
+      },
+      "applies": [
+        "weapon",
+        "armor"
+      ],
+      "stat": "durability",
+      "range": [
+        20,
+        40
+      ],
+      "tier": 2
+    },
+    {
+      "id": "cicatrizante",
+      "name": {
+        "pt": "Cicatrizante",
+        "en": "Scar-mending"
+      },
+      "applies": [
+        "armor",
+        "jewelry"
+      ],
+      "stat": "regen_hp",
+      "range": [
+        1,
+        2
+      ],
+      "tier": 1
+    },
+    {
+      "id": "contemplativo",
+      "name": {
+        "pt": "Contemplativo",
+        "en": "Contemplative"
+      },
+      "applies": [
+        "jewelry"
+      ],
+      "stat": "regen_mana",
+      "range": [
+        2,
+        3
+      ],
+      "tier": 3
+    },
+    {
+      "id": "marchador",
+      "name": {
+        "pt": "Marchador",
+        "en": "Marching"
+      },
+      "applies": [
+        "armor",
+        "clothing"
+      ],
+      "stat": "regen_stam",
+      "range": [
+        1,
+        2
+      ],
+      "tier": 2
+    },
+    {
+      "id": "guardiao",
+      "name": {
+        "pt": "Guardião",
+        "en": "Guardian"
+      },
+      "applies": [
+        "armor",
+        "shield"
+      ],
+      "stat": "def_chance",
+      "range": [
+        2,
+        5
+      ],
+      "tier": 1
+    },
+    {
+      "id": "espadachim",
+      "name": {
+        "pt": "Espadachim",
+        "en": "Bladesworn"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "skill:swordsmanship",
+      "range": [
+        4,
+        8
+      ],
+      "tier": 2
+    },
+    {
+      "id": "brutal",
+      "name": {
+        "pt": "Brutal",
+        "en": "Brutal"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "dmg_pct",
+      "range": [
+        20,
+        32
+      ],
+      "tier": 4
+    },
+    {
+      "id": "macico",
+      "name": {
+        "pt": "Maciço",
+        "en": "Massive"
+      },
+      "applies": [
+        "armor",
+        "shield"
+      ],
+      "stat": "armor_pct",
+      "range": [
+        22,
+        36
+      ],
+      "tier": 4
+    },
+    {
+      "id": "colossal",
+      "name": {
+        "pt": "Colossal",
+        "en": "Colossal"
+      },
+      "applies": [
+        "armor",
+        "jewelry"
+      ],
+      "stat": "str",
+      "range": [
+        12,
+        20
+      ],
+      "tier": 4
+    },
+    {
+      "id": "fulminante",
+      "name": {
+        "pt": "Fulminante",
+        "en": "Fulminant"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "dmg_flat",
+      "range": [
+        8,
+        14
+      ],
+      "tier": 5
+    },
+    {
+      "id": "inexpugnavel",
+      "name": {
+        "pt": "Inexpugnável",
+        "en": "Unbreachable"
+      },
+      "applies": [
+        "armor",
+        "shield"
+      ],
+      "stat": "armor_flat",
+      "range": [
+        8,
+        14
+      ],
+      "tier": 5
+    },
+    {
+      "id": "ancestral",
+      "name": {
+        "pt": "Ancestral",
+        "en": "Ancestral"
+      },
+      "applies": [
+        "jewelry"
+      ],
+      "stat": "int",
+      "range": [
+        12,
+        20
+      ],
+      "tier": 4
+    },
+    {
+      "id": "relampago",
+      "name": {
+        "pt": "Relâmpago",
+        "en": "Storm-quick"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "swing_speed",
+      "range": [
+        10,
+        16
+      ],
+      "tier": 4
+    },
+    {
+      "id": "veneravel",
+      "name": {
+        "pt": "Venerável",
+        "en": "Venerable"
+      },
+      "applies": [
+        "jewelry",
+        "clothing"
+      ],
+      "stat": "mana",
+      "range": [
+        28,
+        48
+      ],
+      "tier": 4
+    },
+    {
+      "id": "heroico",
+      "name": {
+        "pt": "Heroico",
+        "en": "Heroic"
+      },
+      "applies": [
+        "armor"
+      ],
+      "stat": "hp",
+      "range": [
+        45,
+        75
+      ],
+      "tier": 5
+    }
+  ],
+  "suffix": [
+    {
+      "id": "das_dunas",
+      "name": {
+        "pt": "das Dunas",
+        "en": "of the Dunes"
+      },
+      "applies": [
+        "weapon",
+        "armor",
+        "clothing"
+      ],
+      "stat": "dex",
+      "range": [
+        6,
+        12
+      ],
+      "tier": 3
+    },
+    {
+      "id": "de_jafa",
+      "name": {
+        "pt": "de Jafa",
+        "en": "of Jaffa"
+      },
+      "applies": [
+        "armor",
+        "shield"
+      ],
+      "stat": "def_chance",
+      "range": [
+        8,
+        14
+      ],
+      "tier": 3
+    },
+    {
+      "id": "de_montgisard",
+      "name": {
+        "pt": "de Montgisard",
+        "en": "of Montgisard"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "dmg_pct",
+      "range": [
+        30,
+        50
+      ],
+      "tier": 5
+    },
+    {
+      "id": "do_sepulcro",
+      "name": {
+        "pt": "do Sepulcro",
+        "en": "of the Sepulchre"
+      },
+      "applies": [
+        "armor",
+        "jewelry"
+      ],
+      "stat": "res_energy",
+      "range": [
+        18,
+        32
+      ],
+      "tier": 5
+    },
+    {
+      "id": "do_oasis",
+      "name": {
+        "pt": "do Oásis",
+        "en": "of the Oasis"
+      },
+      "applies": [
+        "jewelry"
+      ],
+      "stat": "regen_mana",
+      "range": [
+        3,
+        5
+      ],
+      "tier": 4
+    },
+    {
+      "id": "de_aelia",
+      "name": {
+        "pt": "de Aelia",
+        "en": "of Aelia"
+      },
+      "applies": [
+        "armor",
+        "shield"
+      ],
+      "stat": "armor_pct",
+      "range": [
+        6,
+        14
+      ],
+      "tier": 2
+    },
+    {
+      "id": "de_ashur",
+      "name": {
+        "pt": "de Ashur",
+        "en": "of Ashur"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "hit_chance",
+      "range": [
+        8,
+        14
+      ],
+      "tier": 3
+    },
+    {
+      "id": "da_caravana",
+      "name": {
+        "pt": "da Caravana",
+        "en": "of the Caravan"
+      },
+      "applies": [
+        "jewelry",
+        "clothing"
+      ],
+      "stat": "luck",
+      "range": [
+        25,
+        45
+      ],
+      "tier": 4
+    },
+    {
+      "id": "da_muralha",
+      "name": {
+        "pt": "da Muralha",
+        "en": "of the Wall"
+      },
+      "applies": [
+        "armor",
+        "shield"
+      ],
+      "stat": "armor_flat",
+      "range": [
+        5,
+        9
+      ],
+      "tier": 3
+    },
+    {
+      "id": "do_siroco",
+      "name": {
+        "pt": "do Siroco",
+        "en": "of the Sirocco"
+      },
+      "applies": [
+        "armor",
+        "weapon"
+      ],
+      "stat": "res_fire",
+      "range": [
+        18,
+        32
+      ],
+      "tier": 5
+    },
+    {
+      "id": "da_geada",
+      "name": {
+        "pt": "da Geada",
+        "en": "of the Rime"
+      },
+      "applies": [
+        "armor",
+        "jewelry"
+      ],
+      "stat": "res_cold",
+      "range": [
+        18,
+        32
+      ],
+      "tier": 5
+    },
+    {
+      "id": "do_pantano",
+      "name": {
+        "pt": "do Pântano",
+        "en": "of the Marsh"
+      },
+      "applies": [
+        "armor"
+      ],
+      "stat": "res_poison",
+      "range": [
+        18,
+        32
+      ],
+      "tier": 5
+    },
+    {
+      "id": "da_cripta",
+      "name": {
+        "pt": "da Cripta",
+        "en": "of the Crypt"
+      },
+      "applies": [
+        "jewelry"
+      ],
+      "stat": "skill:meditation",
+      "range": [
+        6,
+        12
+      ],
+      "tier": 3
+    },
+    {
+      "id": "do_norte",
+      "name": {
+        "pt": "do Norte",
+        "en": "of the North"
+      },
+      "applies": [
+        "armor"
+      ],
+      "stat": "hp",
+      "range": [
+        22,
+        40
+      ],
+      "tier": 3
+    },
+    {
+      "id": "da_hiena",
+      "name": {
+        "pt": "da Hiena",
+        "en": "of the Hyena"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "skill:fencing",
+      "range": [
+        4,
+        9
+      ],
+      "tier": 2
+    },
+    {
+      "id": "do_escorpiao",
+      "name": {
+        "pt": "do Escorpião",
+        "en": "of the Scorpion"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "skill:poisoning",
+      "range": [
+        6,
+        12
+      ],
+      "tier": 3
+    },
+    {
+      "id": "da_formiga",
+      "name": {
+        "pt": "da Formiga",
+        "en": "of the Ant"
+      },
+      "applies": [
+        "tool",
+        "weapon"
+      ],
+      "stat": "skill:mining",
+      "range": [
+        4,
+        9
+      ],
+      "tier": 2
+    },
+    {
+      "id": "da_serpe",
+      "name": {
+        "pt": "da Serpe",
+        "en": "of the Serpent"
+      },
+      "applies": [
+        "armor",
+        "jewelry"
+      ],
+      "stat": "skill:resisting_spells",
+      "range": [
+        6,
+        12
+      ],
+      "tier": 3
+    },
+    {
+      "id": "do_jarl",
+      "name": {
+        "pt": "do Jarl",
+        "en": "of the Jarl"
+      },
+      "applies": [
+        "armor",
+        "weapon"
+      ],
+      "stat": "skill:tactics",
+      "range": [
+        8,
+        15
+      ],
+      "tier": 4
+    },
+    {
+      "id": "do_caranguejo",
+      "name": {
+        "pt": "do Caranguejo",
+        "en": "of the Crab"
+      },
+      "applies": [
+        "shield"
+      ],
+      "stat": "skill:parrying",
+      "range": [
+        4,
+        9
+      ],
+      "tier": 2
+    },
+    {
+      "id": "da_teia",
+      "name": {
+        "pt": "da Teia",
+        "en": "of the Web"
+      },
+      "applies": [
+        "clothing"
+      ],
+      "stat": "skill:stealth",
+      "range": [
+        5,
+        10
+      ],
+      "tier": 2
+    },
+    {
+      "id": "do_labirinto",
+      "name": {
+        "pt": "do Labirinto",
+        "en": "of the Labyrinth"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "skill:mace_fighting",
+      "range": [
+        6,
+        12
+      ],
+      "tier": 3
+    },
+    {
+      "id": "da_bigorna",
+      "name": {
+        "pt": "da Bigorna",
+        "en": "of the Anvil"
+      },
+      "applies": [
+        "weapon",
+        "armor"
+      ],
+      "stat": "skill:blacksmithing",
+      "range": [
+        5,
+        11
+      ],
+      "tier": 3
+    },
+    {
+      "id": "da_aljava",
+      "name": {
+        "pt": "da Aljava",
+        "en": "of the Quiver"
+      },
+      "applies": [
+        "weapon"
+      ],
+      "stat": "skill:archery",
+      "range": [
+        6,
+        13
+      ],
+      "tier": 3
+    },
+    {
+      "id": "do_grimorio",
+      "name": {
+        "pt": "do Grimório",
+        "en": "of the Grimoire"
+      },
+      "applies": [
+        "jewelry"
+      ],
+      "stat": "skill:magery",
+      "range": [
+        8,
+        16
+      ],
+      "tier": 4
+    },
+    {
+      "id": "da_lira",
+      "name": {
+        "pt": "da Lira",
+        "en": "of the Lyre"
+      },
+      "applies": [
+        "jewelry",
+        "clothing"
+      ],
+      "stat": "skill:musicianship",
+      "range": [
+        4,
+        9
+      ],
+      "tier": 2
+    },
+    {
+      "id": "do_machado",
+      "name": {
+        "pt": "do Machado",
+        "en": "of the Hatchet"
+      },
+      "applies": [
+        "weapon",
+        "tool"
+      ],
+      "stat": "skill:lumberjacking",
+      "range": [
+        5,
+        11
+      ],
+      "tier": 2
+    },
+    {
+      "id": "do_curativo",
+      "name": {
+        "pt": "do Curativo",
+        "en": "of the Bandage"
+      },
+      "applies": [
+        "armor",
+        "clothing"
+      ],
+      "stat": "skill:healing",
+      "range": [
+        6,
+        13
+      ],
+      "tier": 3
+    }
+  ]
+}

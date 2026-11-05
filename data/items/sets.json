@@ -1,0 +1,913 @@
+{
+  "version": 1,
+  "sets": [
+    {
+      "id": "vigia_de_jafa",
+      "name": {
+        "pt": "Vigia de Jafa",
+        "en": "Warden of Jaffa"
+      },
+      "pieces": [
+        {
+          "base": "nasal_helm",
+          "hue": "areia",
+          "affixes": [
+            [
+              "armor_flat",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "leather_armor",
+          "hue": "areia",
+          "affixes": [
+            [
+              "armor_pct",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "leather_gloves",
+          "hue": "areia",
+          "affixes": [
+            [
+              "dex",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "leather_boots",
+          "hue": "marrom_couro",
+          "affixes": [
+            [
+              "stam",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "round_shield",
+          "hue": "areia",
+          "affixes": [
+            [
+              "def_chance",
+              3
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "def_chance",
+            4
+          ]
+        ],
+        "3": [
+          [
+            "hp",
+            15
+          ]
+        ],
+        "4": [
+          [
+            "res_fire",
+            10
+          ]
+        ],
+        "5": [
+          [
+            "skill:parrying",
+            8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cruz_de_montgisard",
+      "name": {
+        "pt": "Cruz de Montgisard",
+        "en": "Cross of Montgisard"
+      },
+      "pieces": [
+        {
+          "base": "greathelm",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "armor_flat",
+              3
+            ]
+          ]
+        },
+        {
+          "base": "crusader_surcoat",
+          "hue": "carmesim",
+          "affixes": [
+            [
+              "str",
+              3
+            ]
+          ]
+        },
+        {
+          "base": "plate_gloves",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "dmg_flat",
+              1
+            ]
+          ]
+        },
+        {
+          "base": "kite_shield",
+          "hue": "carmesim",
+          "affixes": [
+            [
+              "def_chance",
+              3
+            ]
+          ]
+        },
+        {
+          "base": "plate_boots",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "armor_flat",
+              2
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "str",
+            5
+          ]
+        ],
+        "3": [
+          [
+            "dmg_pct",
+            8
+          ]
+        ],
+        "4": [
+          [
+            "res_fire",
+            12
+          ]
+        ],
+        "5": [
+          [
+            "armor_pct",
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "id": "trilha_de_qasr",
+      "name": {
+        "pt": "Trilha de Qasr",
+        "en": "Qasr Trail"
+      },
+      "pieces": [
+        {
+          "base": "keffiyeh",
+          "hue": "ocre",
+          "affixes": [
+            [
+              "res_fire",
+              4
+            ]
+          ]
+        },
+        {
+          "base": "bedouin_robe",
+          "hue": "areia",
+          "affixes": [
+            [
+              "stam",
+              8
+            ]
+          ]
+        },
+        {
+          "base": "scimitar",
+          "hue": "ouro",
+          "affixes": [
+            [
+              "dex",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "cloth_sandals",
+          "hue": "areia",
+          "affixes": [
+            [
+              "regen_stam",
+              1
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "dex",
+            4
+          ]
+        ],
+        "3": [
+          [
+            "stam",
+            12
+          ]
+        ],
+        "4": [
+          [
+            "res_fire",
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cota_de_aelia",
+      "name": {
+        "pt": "Cota de Aelia",
+        "en": "Aelia Mail"
+      },
+      "pieces": [
+        {
+          "base": "chain_coif",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "armor_flat",
+              1
+            ]
+          ]
+        },
+        {
+          "base": "hauberk",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "armor_pct",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "chain_gloves",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "def_chance",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "chain_greaves",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "hp",
+              8
+            ]
+          ]
+        },
+        {
+          "base": "chain_boots",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "armor_flat",
+              1
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "armor_flat",
+            3
+          ]
+        ],
+        "3": [
+          [
+            "def_chance",
+            5
+          ]
+        ],
+        "4": [
+          [
+            "hp",
+            25
+          ]
+        ],
+        "5": [
+          [
+            "res_energy",
+            10
+          ]
+        ]
+      }
+    },
+    {
+      "id": "inverno_do_jarl",
+      "name": {
+        "pt": "Inverno do Jarl",
+        "en": "Jarl's Winter"
+      },
+      "pieces": [
+        {
+          "base": "spangenhelm",
+          "hue": "branco_gelo",
+          "affixes": [
+            [
+              "armor_flat",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "fur_cloak",
+          "hue": "cinza_lobo",
+          "affixes": [
+            [
+              "res_cold",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "fur_boots",
+          "hue": "marrom_urso",
+          "affixes": [
+            [
+              "stam",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "battleaxe",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "dmg_flat",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "wool_pants",
+          "hue": "la",
+          "affixes": [
+            [
+              "regen_stam",
+              1
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "res_cold",
+            10
+          ]
+        ],
+        "3": [
+          [
+            "stam",
+            15
+          ]
+        ],
+        "4": [
+          [
+            "str",
+            8
+          ]
+        ],
+        "5": [
+          [
+            "dmg_flat",
+            4
+          ]
+        ]
+      }
+    },
+    {
+      "id": "verde_do_bosque",
+      "name": {
+        "pt": "Verde do Bosque",
+        "en": "Green of the Wood"
+      },
+      "pieces": [
+        {
+          "base": "leather_hood",
+          "hue": "verde_musgo",
+          "affixes": [
+            [
+              "dex",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "studded_leather",
+          "hue": "verde_musgo",
+          "affixes": [
+            [
+              "armor_flat",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "longbow",
+          "hue": "carvalho",
+          "affixes": [
+            [
+              "hit_chance",
+              4
+            ]
+          ]
+        },
+        {
+          "base": "studded_gloves",
+          "hue": "marrom_couro",
+          "affixes": [
+            [
+              "dex",
+              2
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "dex",
+            5
+          ]
+        ],
+        "3": [
+          [
+            "hit_chance",
+            6
+          ]
+        ],
+        "4": [
+          [
+            "skill:archery",
+            10
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pelego_do_miasma",
+      "name": {
+        "pt": "Pelego do Miasma",
+        "en": "Miasma Hide"
+      },
+      "pieces": [
+        {
+          "base": "hide_tunic",
+          "hue": "verde_veneno",
+          "affixes": [
+            [
+              "res_poison",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "kris",
+          "hue": "verde_pus",
+          "affixes": [
+            [
+              "dmg_flat",
+              1
+            ]
+          ]
+        },
+        {
+          "base": "leather_sleeves",
+          "hue": "verde_musgo",
+          "affixes": [
+            [
+              "dex",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "leather_cap",
+          "hue": "verde_oliva",
+          "affixes": [
+            [
+              "res_poison",
+              4
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "res_poison",
+            12
+          ]
+        ],
+        "3": [
+          [
+            "skill:poisoning",
+            8
+          ]
+        ],
+        "4": [
+          [
+            "regen_hp",
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pico_de_pedra",
+      "name": {
+        "pt": "Pico de Pedra",
+        "en": "Stone Peak"
+      },
+      "pieces": [
+        {
+          "base": "plate_torso",
+          "hue": "cinza_pedra",
+          "affixes": [
+            [
+              "armor_pct",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "warhammer",
+          "hue": "cinza_pedra",
+          "affixes": [
+            [
+              "str",
+              3
+            ]
+          ]
+        },
+        {
+          "base": "plate_legs",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "armor_flat",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "heater_shield",
+          "hue": "cinza_pedra",
+          "affixes": [
+            [
+              "def_chance",
+              3
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "str",
+            6
+          ]
+        ],
+        "3": [
+          [
+            "armor_flat",
+            5
+          ]
+        ],
+        "4": [
+          [
+            "armor_pct",
+            10
+          ]
+        ]
+      }
+    },
+    {
+      "id": "chama_de_ashur",
+      "name": {
+        "pt": "Chama de Ashur",
+        "en": "Flame of Ashur"
+      },
+      "pieces": [
+        {
+          "base": "turkish_cuirass",
+          "hue": "brasa",
+          "affixes": [
+            [
+              "res_fire",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "sabre",
+          "hue": "ouro",
+          "affixes": [
+            [
+              "dmg_pct",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "turban",
+          "hue": "ouro",
+          "affixes": [
+            [
+              "dex",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "buckler",
+          "hue": "cobre_queimado",
+          "affixes": [
+            [
+              "def_chance",
+              2
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "dmg_pct",
+            6
+          ]
+        ],
+        "3": [
+          [
+            "res_fire",
+            12
+          ]
+        ],
+        "4": [
+          [
+            "hit_chance",
+            8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "nevoa_da_cripta",
+      "name": {
+        "pt": "Névoa da Cripta",
+        "en": "Crypt Mist"
+      },
+      "pieces": [
+        {
+          "base": "face_helm",
+          "hue": "preto_sombra",
+          "affixes": [
+            [
+              "res_energy",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "loriga",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "armor_pct",
+              4
+            ]
+          ]
+        },
+        {
+          "base": "staff",
+          "hue": "violeta_cripta",
+          "affixes": [
+            [
+              "int",
+              4
+            ]
+          ]
+        },
+        {
+          "base": "relicary",
+          "hue": "prata",
+          "affixes": [
+            [
+              "mana",
+              10
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "int",
+            6
+          ]
+        ],
+        "3": [
+          [
+            "mana",
+            20
+          ]
+        ],
+        "4": [
+          [
+            "skill:magery",
+            10
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mare_vermelha",
+      "name": {
+        "pt": "Maré Vermelha",
+        "en": "Red Tide"
+      },
+      "pieces": [
+        {
+          "base": "cutlass",
+          "hue": "vermelho_sangue",
+          "affixes": [
+            [
+              "dmg_pct",
+              4
+            ]
+          ]
+        },
+        {
+          "base": "bandana",
+          "hue": "vermelho_sangue",
+          "affixes": [
+            [
+              "dex",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "cazagante",
+          "hue": "azul_mar",
+          "affixes": [
+            [
+              "armor_flat",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "oval_shield",
+          "hue": "azul_mar",
+          "affixes": [
+            [
+              "def_chance",
+              2
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "dex",
+            5
+          ]
+        ],
+        "3": [
+          [
+            "swing_speed",
+            5
+          ]
+        ],
+        "4": [
+          [
+            "luck",
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "id": "templo_branco",
+      "name": {
+        "pt": "Templo Branco",
+        "en": "White Temple"
+      },
+      "pieces": [
+        {
+          "base": "templar_cuirass",
+          "hue": "marfim",
+          "affixes": [
+            [
+              "armor_pct",
+              6
+            ]
+          ]
+        },
+        {
+          "base": "kettle_helm",
+          "hue": "marfim",
+          "affixes": [
+            [
+              "armor_flat",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "crusader_shield",
+          "hue": "vermelho_montgisard",
+          "affixes": [
+            [
+              "def_chance",
+              3
+            ]
+          ]
+        },
+        {
+          "base": "plate_arms",
+          "hue": "cinza_aco",
+          "affixes": [
+            [
+              "str",
+              2
+            ]
+          ]
+        },
+        {
+          "base": "iron_gauntlets",
+          "hue": "prata",
+          "affixes": [
+            [
+              "dmg_flat",
+              1
+            ]
+          ]
+        }
+      ],
+      "bonus": {
+        "2": [
+          [
+            "res_energy",
+            8
+          ]
+        ],
+        "3": [
+          [
+            "hp",
+            20
+          ]
+        ],
+        "4": [
+          [
+            "def_chance",
+            6
+          ]
+        ],
+        "5": [
+          [
+            "armor_pct",
+            12
+          ]
+        ]
+      }
+    }
+  ]
+}

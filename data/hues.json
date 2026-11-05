@@ -1,0 +1,562 @@
+{
+  "version": 1,
+  "hues": [
+    {
+      "id": "branco_linho",
+      "name": {
+        "pt": "Branco-linho",
+        "en": "Linen White"
+      },
+      "hex": "#f2ead8",
+      "group": "comum"
+    },
+    {
+      "id": "preto_tinta",
+      "name": {
+        "pt": "Preto-tinta",
+        "en": "Ink Black"
+      },
+      "hex": "#1a1816",
+      "group": "comum"
+    },
+    {
+      "id": "cinza_muralha",
+      "name": {
+        "pt": "Cinza de Muralha",
+        "en": "Wall Grey"
+      },
+      "hex": "#8d8a84",
+      "group": "comum"
+    },
+    {
+      "id": "cinza_aco",
+      "name": {
+        "pt": "Cinza-aço",
+        "en": "Steel Grey"
+      },
+      "hex": "#6a7076",
+      "group": "comum"
+    },
+    {
+      "id": "marrom_couro",
+      "name": {
+        "pt": "Marrom-couro",
+        "en": "Leather Brown"
+      },
+      "hex": "#6b4423",
+      "group": "comum"
+    },
+    {
+      "id": "marrom_terra",
+      "name": {
+        "pt": "Marrom-terra",
+        "en": "Earth Brown"
+      },
+      "hex": "#8d5a32",
+      "group": "comum"
+    },
+    {
+      "id": "ocre",
+      "name": {
+        "pt": "Ocre",
+        "en": "Ochre"
+      },
+      "hex": "#c4893a",
+      "group": "comum"
+    },
+    {
+      "id": "areia",
+      "name": {
+        "pt": "Areia",
+        "en": "Sand"
+      },
+      "hex": "#e6cc8a",
+      "group": "comum"
+    },
+    {
+      "id": "verde_oliva",
+      "name": {
+        "pt": "Verde-oliva",
+        "en": "Olive"
+      },
+      "hex": "#6d7034",
+      "group": "comum"
+    },
+    {
+      "id": "verde_musgo",
+      "name": {
+        "pt": "Verde-musgo",
+        "en": "Moss Green"
+      },
+      "hex": "#3e6b3c",
+      "group": "comum"
+    },
+    {
+      "id": "azul_ceu",
+      "name": {
+        "pt": "Azul-céu",
+        "en": "Sky Blue"
+      },
+      "hex": "#4aa3d8",
+      "group": "comum"
+    },
+    {
+      "id": "azul_real",
+      "name": {
+        "pt": "Azul-real",
+        "en": "Royal Blue"
+      },
+      "hex": "#2a4fd8",
+      "group": "comum"
+    },
+    {
+      "id": "azul_mar",
+      "name": {
+        "pt": "Azul-mar",
+        "en": "Sea Blue"
+      },
+      "hex": "#1d4e89",
+      "group": "comum"
+    },
+    {
+      "id": "carmesim",
+      "name": {
+        "pt": "Carmesim",
+        "en": "Crimson"
+      },
+      "hex": "#9e2a2a",
+      "group": "comum"
+    },
+    {
+      "id": "vermelho_sangue",
+      "name": {
+        "pt": "Vermelho-sangue",
+        "en": "Blood Red"
+      },
+      "hex": "#7a1218",
+      "group": "comum"
+    },
+    {
+      "id": "ouro",
+      "name": {
+        "pt": "Ouro",
+        "en": "Gold"
+      },
+      "hex": "#e0b13a",
+      "group": "comum"
+    },
+    {
+      "id": "purpura",
+      "name": {
+        "pt": "Púrpura",
+        "en": "Purple"
+      },
+      "hex": "#6a2d86",
+      "group": "comum"
+    },
+    {
+      "id": "laranja_barro",
+      "name": {
+        "pt": "Laranja-barro",
+        "en": "Clay Orange"
+      },
+      "hex": "#d06a2b",
+      "group": "comum"
+    },
+    {
+      "id": "marfim",
+      "name": {
+        "pt": "Marfim",
+        "en": "Ivory"
+      },
+      "hex": "#f3e6c4",
+      "group": "comum"
+    },
+    {
+      "id": "indigo",
+      "name": {
+        "pt": "Índigo",
+        "en": "Indigo"
+      },
+      "hex": "#2c2a72",
+      "group": "comum"
+    },
+    {
+      "id": "brasa",
+      "name": {
+        "pt": "Brasa",
+        "en": "Ember"
+      },
+      "hex": "#ff5a1a",
+      "group": "raro",
+      "glow": true
+    },
+    {
+      "id": "verde_veneno",
+      "name": {
+        "pt": "Verde-veneno",
+        "en": "Poison Green"
+      },
+      "hex": "#3dff4a",
+      "group": "raro",
+      "glow": true
+    },
+    {
+      "id": "branco_gelo",
+      "name": {
+        "pt": "Branco-gelo",
+        "en": "Ice White"
+      },
+      "hex": "#e7fbff",
+      "group": "raro",
+      "glow": true
+    },
+    {
+      "id": "preto_sombra",
+      "name": {
+        "pt": "Preto-sombra",
+        "en": "Shadow Black"
+      },
+      "hex": "#120818",
+      "group": "raro",
+      "glow": true
+    },
+    {
+      "id": "purpura_real",
+      "name": {
+        "pt": "Púrpura-real",
+        "en": "Royal Purple"
+      },
+      "hex": "#b14cff",
+      "group": "raro",
+      "glow": true
+    },
+    {
+      "id": "ouro_velho",
+      "name": {
+        "pt": "Ouro-velho",
+        "en": "Antique Gold"
+      },
+      "hex": "#c9a227",
+      "group": "raro"
+    },
+    {
+      "id": "sangue_seco",
+      "name": {
+        "pt": "Sangue Seco",
+        "en": "Dried Blood"
+      },
+      "hex": "#4a0c12",
+      "group": "raro"
+    },
+    {
+      "id": "verde_pus",
+      "name": {
+        "pt": "Verde-pus",
+        "en": "Pus Green"
+      },
+      "hex": "#9cbf3c",
+      "group": "raro"
+    },
+    {
+      "id": "azul_abissal",
+      "name": {
+        "pt": "Azul-abissal",
+        "en": "Abyssal Blue"
+      },
+      "hex": "#071a4a",
+      "group": "raro",
+      "glow": true
+    },
+    {
+      "id": "chama_branca",
+      "name": {
+        "pt": "Chama Branca",
+        "en": "White Flame"
+      },
+      "hex": "#fff1c4",
+      "group": "raro",
+      "glow": true
+    },
+    {
+      "id": "cinza_osso",
+      "name": {
+        "pt": "Cinza-osso",
+        "en": "Bone"
+      },
+      "hex": "#d9d3c5",
+      "group": "raro"
+    },
+    {
+      "id": "verde_seiva",
+      "name": {
+        "pt": "Verde-seiva",
+        "en": "Sap Green"
+      },
+      "hex": "#2f8f4e",
+      "group": "raro"
+    },
+    {
+      "id": "cinza_lobo",
+      "name": {
+        "pt": "Cinza-lobo",
+        "en": "Wolf Grey"
+      },
+      "hex": "#7d8288",
+      "group": "raro"
+    },
+    {
+      "id": "marrom_urso",
+      "name": {
+        "pt": "Marrom-urso",
+        "en": "Bear Brown"
+      },
+      "hex": "#4a2e1b",
+      "group": "raro"
+    },
+    {
+      "id": "violeta_cripta",
+      "name": {
+        "pt": "Violeta da Cripta",
+        "en": "Crypt Violet"
+      },
+      "hex": "#3a2458",
+      "group": "raro",
+      "glow": true
+    },
+    {
+      "id": "cobre_queimado",
+      "name": {
+        "pt": "Cobre Queimado",
+        "en": "Burnt Copper"
+      },
+      "hex": "#b85c38",
+      "group": "raro"
+    },
+    {
+      "id": "dourado_festa",
+      "name": {
+        "pt": "Ouro de Festa",
+        "en": "Festival Gold"
+      },
+      "hex": "#ffd35a",
+      "group": "evento",
+      "glow": true
+    },
+    {
+      "id": "verde_bencao",
+      "name": {
+        "pt": "Verde de Benção",
+        "en": "Blessing Green"
+      },
+      "hex": "#7dff9a",
+      "group": "evento",
+      "glow": true
+    },
+    {
+      "id": "azul_lua",
+      "name": {
+        "pt": "Azul da Lua",
+        "en": "Moon Blue"
+      },
+      "hex": "#7aa2ff",
+      "group": "evento",
+      "glow": true
+    },
+    {
+      "id": "laranja_evento",
+      "name": {
+        "pt": "Laranja do Evento",
+        "en": "Event Orange"
+      },
+      "hex": "#ff8a1f",
+      "group": "evento",
+      "glow": true
+    },
+    {
+      "id": "rosa_procissao",
+      "name": {
+        "pt": "Rosa de Procissão",
+        "en": "Procession Pink"
+      },
+      "hex": "#ff7ad9",
+      "group": "evento",
+      "glow": true
+    },
+    {
+      "id": "branco_sepulcro",
+      "name": {
+        "pt": "Branco do Sepulcro",
+        "en": "Sepulchre White"
+      },
+      "hex": "#f7f7ff",
+      "group": "evento",
+      "glow": true
+    },
+    {
+      "id": "vermelho_montgisard",
+      "name": {
+        "pt": "Vermelho de Montgisard",
+        "en": "Montgisard Red"
+      },
+      "hex": "#e10600",
+      "group": "evento"
+    },
+    {
+      "id": "preto_eclipse",
+      "name": {
+        "pt": "Preto de Eclipse",
+        "en": "Eclipse Black"
+      },
+      "hex": "#050308",
+      "group": "evento",
+      "glow": true
+    },
+    {
+      "id": "turquesa_oasis",
+      "name": {
+        "pt": "Turquesa do Oásis",
+        "en": "Oasis Turquoise"
+      },
+      "hex": "#2ee6c7",
+      "group": "evento",
+      "glow": true
+    },
+    {
+      "id": "ambar_feira",
+      "name": {
+        "pt": "Âmbar de Feira",
+        "en": "Fair Amber"
+      },
+      "hex": "#ffbf3c",
+      "group": "evento",
+      "glow": true
+    },
+    {
+      "id": "ferro",
+      "name": {
+        "pt": "Ferro",
+        "en": "Iron"
+      },
+      "hex": "#8d8f92",
+      "group": "material"
+    },
+    {
+      "id": "cobre",
+      "name": {
+        "pt": "Cobre",
+        "en": "Copper"
+      },
+      "hex": "#b87333",
+      "group": "material"
+    },
+    {
+      "id": "bronze",
+      "name": {
+        "pt": "Bronze",
+        "en": "Bronze"
+      },
+      "hex": "#8c6239",
+      "group": "material"
+    },
+    {
+      "id": "prata",
+      "name": {
+        "pt": "Prata",
+        "en": "Silver"
+      },
+      "hex": "#d5dbe0",
+      "group": "material"
+    },
+    {
+      "id": "ouro_minerio",
+      "name": {
+        "pt": "Ouro de Minério",
+        "en": "Ore Gold"
+      },
+      "hex": "#e6c15a",
+      "group": "material"
+    },
+    {
+      "id": "ferro_negro",
+      "name": {
+        "pt": "Ferro-negro",
+        "en": "Black Iron"
+      },
+      "hex": "#2a2c30",
+      "group": "material"
+    },
+    {
+      "id": "carvalho",
+      "name": {
+        "pt": "Carvalho",
+        "en": "Oak"
+      },
+      "hex": "#a97449",
+      "group": "material"
+    },
+    {
+      "id": "cedro",
+      "name": {
+        "pt": "Cedro",
+        "en": "Cedar"
+      },
+      "hex": "#c4a574",
+      "group": "material"
+    },
+    {
+      "id": "couro_grosso",
+      "name": {
+        "pt": "Couro Grosso",
+        "en": "Thick Leather"
+      },
+      "hex": "#5c4033",
+      "group": "material"
+    },
+    {
+      "id": "couro_de_serpe",
+      "name": {
+        "pt": "Couro de Serpe",
+        "en": "Wyrm Leather"
+      },
+      "hex": "#6a3a2a",
+      "group": "material"
+    },
+    {
+      "id": "linho",
+      "name": {
+        "pt": "Linho",
+        "en": "Linen"
+      },
+      "hex": "#e7dcc4",
+      "group": "material"
+    },
+    {
+      "id": "seda",
+      "name": {
+        "pt": "Seda",
+        "en": "Silk"
+      },
+      "hex": "#f0e6ef",
+      "group": "material"
+    },
+    {
+      "id": "la",
+      "name": {
+        "pt": "Lã",
+        "en": "Wool"
+      },
+      "hex": "#e4e0ea",
+      "group": "material"
+    },
+    {
+      "id": "cinza_pedra",
+      "name": {
+        "pt": "Cinza-pedra",
+        "en": "Stone Grey"
+      },
+      "hex": "#9aa0a6",
+      "group": "material"
+    }
+  ]
+}

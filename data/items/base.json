@@ -2170,6 +2170,2703 @@
         "pt": "Moeda padrão do reino.",
         "en": "Standard coin of the realm."
       }
+    },
+    {
+      "id": "falchion",
+      "name": {
+        "pt": "Fachão",
+        "en": "Falchion"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "swordsmanship",
+      "dmg": [
+        8,
+        15
+      ],
+      "speed": 2.6,
+      "weight": 6,
+      "value": 140,
+      "material": "iron",
+      "icon": "falchion",
+      "sprite_layer": "m/longsword",
+      "desc": {
+        "pt": "Fachão de fio curvo, comum nas hostes de Ashur.",
+        "en": "A curved falchion common in the hosts of Ashur."
+      }
+    },
+    {
+      "id": "arming_sword",
+      "name": {
+        "pt": "Espada de Armar",
+        "en": "Arming Sword"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "swordsmanship",
+      "dmg": [
+        7,
+        13
+      ],
+      "speed": 2.7,
+      "weight": 5,
+      "value": 100,
+      "material": "iron",
+      "icon": "arming_sword",
+      "sprite_layer": "m/longsword",
+      "desc": {
+        "pt": "Espada de uma mão para cavaleiro a pé ou montado.",
+        "en": "One-handed sword for a knight afoot or mounted."
+      }
+    },
+    {
+      "id": "sabre",
+      "name": {
+        "pt": "Sabre",
+        "en": "Sabre"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "swordsmanship",
+      "dmg": [
+        7,
+        12
+      ],
+      "speed": 2.9,
+      "weight": 4,
+      "value": 115,
+      "material": "iron",
+      "icon": "sabre",
+      "sprite_layer": "m/longsword",
+      "desc": {
+        "pt": "Sabre leve de cavalaria, feito para o corte em passagem.",
+        "en": "A light cavalry sabre, made for the passing cut."
+      }
+    },
+    {
+      "id": "cutlass",
+      "name": {
+        "pt": "Alfanje",
+        "en": "Cutlass"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "swordsmanship",
+      "dmg": [
+        6,
+        12
+      ],
+      "speed": 3.0,
+      "weight": 4,
+      "value": 95,
+      "material": "iron",
+      "icon": "cutlass",
+      "sprite_layer": "m/longsword",
+      "desc": {
+        "pt": "Alfanje curto de bordo, vendido nas docas.",
+        "en": "A short shipboard cutlass, sold on the docks."
+      }
+    },
+    {
+      "id": "cleaver",
+      "name": {
+        "pt": "Cutelo",
+        "en": "Cleaver"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "swordsmanship",
+      "dmg": [
+        6,
+        11
+      ],
+      "speed": 2.8,
+      "weight": 3,
+      "value": 40,
+      "material": "iron",
+      "icon": "cleaver",
+      "sprite_layer": "m/longsword",
+      "desc": {
+        "pt": "Cutelo de açougue que também serve na estrada.",
+        "en": "A butcher's cleaver that also serves on the road."
+      }
+    },
+    {
+      "id": "broadaxe",
+      "name": {
+        "pt": "Machado Largo",
+        "en": "Broadaxe"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "axe_fighting",
+      "dmg": [
+        11,
+        18
+      ],
+      "speed": 2.1,
+      "weight": 13,
+      "value": 190,
+      "material": "iron",
+      "icon": "broadaxe",
+      "sprite_layer": "m/infantry_axe",
+      "desc": {
+        "pt": "Machado largo de duas mãos, para lenha grossa e elmos.",
+        "en": "A two-handed broadaxe, for thick timber and helms."
+      }
+    },
+    {
+      "id": "war_axe",
+      "name": {
+        "pt": "Machado de Guerra",
+        "en": "War Axe"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "axe_fighting",
+      "dmg": [
+        9,
+        15
+      ],
+      "speed": 2.4,
+      "weight": 8,
+      "value": 140,
+      "material": "iron",
+      "icon": "war_axe",
+      "sprite_layer": "m/hand_axe",
+      "desc": {
+        "pt": "Machado de guerra de uma mão, equilibrado para o escudo.",
+        "en": "A one-handed war axe, balanced for the shield."
+      }
+    },
+    {
+      "id": "double_axe",
+      "name": {
+        "pt": "Machado Duplo",
+        "en": "Double Axe"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "axe_fighting",
+      "dmg": [
+        12,
+        19
+      ],
+      "speed": 2.0,
+      "weight": 14,
+      "value": 220,
+      "material": "iron",
+      "icon": "double_axe",
+      "sprite_layer": "m/infantry_axe",
+      "desc": {
+        "pt": "Duas lâminas no mesmo cabo. Pesado, e não perdoa o arco do golpe.",
+        "en": "Two blades on one haft. Heavy, and the swing does not forgive."
+      }
+    },
+    {
+      "id": "maul",
+      "name": {
+        "pt": "Malho",
+        "en": "Maul"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "mace_fighting",
+      "dmg": [
+        11,
+        18
+      ],
+      "speed": 2.0,
+      "weight": 14,
+      "value": 200,
+      "material": "iron",
+      "icon": "maul",
+      "sprite_layer": "m/martelo",
+      "desc": {
+        "pt": "Malho de ferro para quebrar portas e placas.",
+        "en": "An iron maul for doors and plate."
+      }
+    },
+    {
+      "id": "morning_star",
+      "name": {
+        "pt": "Maça Estrela",
+        "en": "Morning Star"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "mace_fighting",
+      "dmg": [
+        8,
+        14
+      ],
+      "speed": 2.5,
+      "weight": 8,
+      "value": 130,
+      "material": "iron",
+      "icon": "morning_star",
+      "sprite_layer": "m/mace",
+      "desc": {
+        "pt": "Maça com pontas. O golpe prende no elmo.",
+        "en": "A spiked mace. The blow catches on a helm."
+      }
+    },
+    {
+      "id": "flail",
+      "name": {
+        "pt": "Mangual",
+        "en": "Flail"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "mace_fighting",
+      "dmg": [
+        7,
+        15
+      ],
+      "speed": 2.4,
+      "weight": 7,
+      "value": 125,
+      "material": "iron",
+      "icon": "flail",
+      "sprite_layer": "m/mace",
+      "desc": {
+        "pt": "Mangual de corrente. Contorna o escudo se o pulso souber.",
+        "en": "A chain flail. It goes around a shield if the wrist knows how."
+      }
+    },
+    {
+      "id": "war_fork",
+      "name": {
+        "pt": "Forquilha de Guerra",
+        "en": "War Fork"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "fencing",
+      "dmg": [
+        7,
+        13
+      ],
+      "speed": 2.6,
+      "weight": 6,
+      "value": 110,
+      "material": "iron",
+      "icon": "war_fork",
+      "sprite_layer": "m/lanca",
+      "desc": {
+        "pt": "Forquilha de ferro, arma de milícia e de caçador.",
+        "en": "An iron war fork, a weapon of militia and hunters."
+      }
+    },
+    {
+      "id": "halberd",
+      "name": {
+        "pt": "Alabarda",
+        "en": "Halberd"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "fencing",
+      "dmg": [
+        10,
+        17
+      ],
+      "speed": 2.2,
+      "weight": 12,
+      "value": 175,
+      "material": "iron",
+      "icon": "halberd",
+      "sprite_layer": "m/lanca",
+      "desc": {
+        "pt": "Alabarda de guarda de muralha: ponta, machado e gancho.",
+        "en": "A wall-guard's halberd: point, axe and hook."
+      }
+    },
+    {
+      "id": "pike",
+      "name": {
+        "pt": "Pique",
+        "en": "Pike"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "fencing",
+      "dmg": [
+        9,
+        16
+      ],
+      "speed": 2.3,
+      "weight": 11,
+      "value": 150,
+      "material": "iron",
+      "icon": "pike",
+      "sprite_layer": "m/lanca",
+      "desc": {
+        "pt": "Pique longo de infantaria, para segurar cavalaria.",
+        "en": "A long infantry pike, to hold cavalry."
+      }
+    },
+    {
+      "id": "javelin",
+      "name": {
+        "pt": "Dardo",
+        "en": "Javelin"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "fencing",
+      "dmg": [
+        6,
+        12
+      ],
+      "speed": 2.9,
+      "weight": 3,
+      "value": 70,
+      "material": "iron",
+      "icon": "javelin",
+      "sprite_layer": "m/lanca",
+      "desc": {
+        "pt": "Dardo de arremesso. Também fere de perto, se sobrar na mão.",
+        "en": "A throwing javelin. It still wounds up close if it stays in the hand."
+      }
+    },
+    {
+      "id": "shortbow",
+      "name": {
+        "pt": "Arco Curto",
+        "en": "Shortbow"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "archery",
+      "dmg": [
+        5,
+        10
+      ],
+      "speed": 3.1,
+      "weight": 3,
+      "value": 60,
+      "material": "wood",
+      "icon": "shortbow",
+      "sprite_layer": "m/arco",
+      "desc": {
+        "pt": "Arco curto de caça, próprio para o mato fechado.",
+        "en": "A short hunting bow, fit for close wood."
+      }
+    },
+    {
+      "id": "composite_bow",
+      "name": {
+        "pt": "Arco Composto",
+        "en": "Composite Bow"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "archery",
+      "dmg": [
+        9,
+        16
+      ],
+      "speed": 2.4,
+      "weight": 5,
+      "value": 170,
+      "material": "wood",
+      "icon": "composite_bow",
+      "sprite_layer": "m/arco",
+      "desc": {
+        "pt": "Arco composto de chifre e tendão, ao modo das caravanas.",
+        "en": "A horn-and-sinew composite bow, in the caravan manner."
+      }
+    },
+    {
+      "id": "arbalest",
+      "name": {
+        "pt": "Besta Pesada",
+        "en": "Arbalest"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "archery",
+      "dmg": [
+        11,
+        18
+      ],
+      "speed": 1.8,
+      "weight": 10,
+      "value": 210,
+      "material": "wood",
+      "icon": "arbalest",
+      "sprite_layer": "m/besta",
+      "desc": {
+        "pt": "Besta pesada de muralha. Demora a armar e atravessa cota.",
+        "en": "A heavy wall arbalest. Slow to span, and it punches mail."
+      }
+    },
+    {
+      "id": "wand",
+      "name": {
+        "pt": "Varinha",
+        "en": "Wand"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "magery",
+      "dmg": [
+        3,
+        7
+      ],
+      "speed": 2.6,
+      "weight": 1,
+      "value": 80,
+      "material": "wood",
+      "icon": "wand",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Varinha de mago de cidade. O golpe é curto; a mana é que importa.",
+        "en": "A town mage's wand. The blow is short; the mana is the point."
+      }
+    },
+    {
+      "id": "scepter",
+      "name": {
+        "pt": "Cetro",
+        "en": "Scepter"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "magery",
+      "dmg": [
+        6,
+        11
+      ],
+      "speed": 2.5,
+      "weight": 5,
+      "value": 140,
+      "material": "iron",
+      "icon": "scepter",
+      "sprite_layer": "m/mace",
+      "desc": {
+        "pt": "Cetro de ofício, pesado o bastante para quem não só reza.",
+        "en": "A sceptre of office, heavy enough for one who does not only pray."
+      }
+    },
+    {
+      "id": "scythe",
+      "name": {
+        "pt": "Foice",
+        "en": "Scythe"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "swordsmanship",
+      "dmg": [
+        9,
+        16
+      ],
+      "speed": 2.3,
+      "weight": 9,
+      "value": 120,
+      "material": "iron",
+      "icon": "scythe",
+      "sprite_layer": "m/infantry_axe",
+      "desc": {
+        "pt": "Foice de guerra, lâmina de colheita revirada para o fio.",
+        "en": "A war scythe, a harvest blade turned to the edge."
+      }
+    },
+    {
+      "id": "throwing_knife",
+      "name": {
+        "pt": "Faca de Arremesso",
+        "en": "Throwing Knife"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "fencing",
+      "dmg": [
+        3,
+        6
+      ],
+      "speed": 3.6,
+      "weight": 1,
+      "value": 20,
+      "material": "iron",
+      "icon": "throwing_knife",
+      "sprite_layer": "m/dagger",
+      "desc": {
+        "pt": "Faca de arremesso, fina e barata, de taberna e de estrada.",
+        "en": "A throwing knife, thin and cheap, of tavern and road."
+      }
+    },
+    {
+      "id": "bardiche",
+      "name": {
+        "pt": "Bardiche",
+        "en": "Bardiche"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "axe_fighting",
+      "dmg": [
+        10,
+        16
+      ],
+      "speed": 2.3,
+      "weight": 11,
+      "value": 165,
+      "material": "iron",
+      "icon": "bardiche",
+      "sprite_layer": "m/infantry_axe",
+      "desc": {
+        "pt": "Bardiche de haste longa. O fio corre quase até as mãos.",
+        "en": "A long-hafted bardiche. The edge runs nearly to the hands."
+      }
+    },
+    {
+      "id": "glaive",
+      "name": {
+        "pt": "Glaive",
+        "en": "Glaive"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "fencing",
+      "dmg": [
+        9,
+        16
+      ],
+      "speed": 2.3,
+      "weight": 10,
+      "value": 155,
+      "material": "iron",
+      "icon": "glaive",
+      "sprite_layer": "m/lanca",
+      "desc": {
+        "pt": "Glaive de infantaria, lâmina larga no alto da haste.",
+        "en": "An infantry glaive, a broad blade at the head of the haft."
+      }
+    },
+    {
+      "id": "leather_sleeves",
+      "name": {
+        "pt": "Mangas de Couro",
+        "en": "Leather Sleeves"
+      },
+      "type": "armor",
+      "slot": "arms",
+      "armor": 4,
+      "weight": 3,
+      "value": 35,
+      "material": "leather",
+      "icon": "leather_sleeves",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Mangas de couro cozido, para quem ainda não tem malha.",
+        "en": "Boiled-leather sleeves, for those who do not yet have mail."
+      }
+    },
+    {
+      "id": "leather_leggings",
+      "name": {
+        "pt": "Calças de Couro",
+        "en": "Leather Leggings"
+      },
+      "type": "armor",
+      "slot": "legs",
+      "armor": 6,
+      "weight": 4,
+      "value": 50,
+      "material": "leather",
+      "icon": "leather_leggings",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Calças de couro de caçador. Seguram espinho e pouco mais.",
+        "en": "A hunter's leather leggings. They stop thorns, and little else."
+      }
+    },
+    {
+      "id": "leather_cap",
+      "name": {
+        "pt": "Gorra de Couro",
+        "en": "Leather Cap"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 2,
+      "weight": 1,
+      "value": 18,
+      "material": "leather",
+      "icon": "leather_cap",
+      "sprite_layer": "m/leather_hood",
+      "desc": {
+        "pt": "Gorra de couro, barata, de feira e de milícia.",
+        "en": "A cheap leather cap, of fair and militia."
+      }
+    },
+    {
+      "id": "padded_coif",
+      "name": {
+        "pt": "Coifa Acolchoada",
+        "en": "Padded Coif"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 4,
+      "weight": 2,
+      "value": 40,
+      "material": "cloth",
+      "icon": "padded_coif",
+      "sprite_layer": "m/chain_coif",
+      "desc": {
+        "pt": "Coifa de linho acolchoado, usada por baixo do elmo.",
+        "en": "A padded linen coif, worn under the helm."
+      }
+    },
+    {
+      "id": "chain_sleeves",
+      "name": {
+        "pt": "Mangas de Malha",
+        "en": "Chain Sleeves"
+      },
+      "type": "armor",
+      "slot": "arms",
+      "armor": 6,
+      "weight": 5,
+      "value": 90,
+      "material": "iron",
+      "icon": "chain_sleeves",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Mangas de malha avulsas, para prender no lorigão.",
+        "en": "Separate mail sleeves, to lace onto a hauberk."
+      }
+    },
+    {
+      "id": "scale_hauberk",
+      "name": {
+        "pt": "Loriga de Escamas",
+        "en": "Scale Hauberk"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 17,
+      "weight": 13,
+      "value": 300,
+      "material": "iron",
+      "icon": "scale_hauberk",
+      "sprite_layer": "m/lamelar",
+      "desc": {
+        "pt": "Loriga de escamas de ferro, comum nas tropas de Ashur.",
+        "en": "An iron scale hauberk, common in the troops of Ashur."
+      }
+    },
+    {
+      "id": "brigandine",
+      "name": {
+        "pt": "Brigantina",
+        "en": "Brigandine"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 16,
+      "weight": 11,
+      "value": 240,
+      "material": "leather",
+      "icon": "brigandine",
+      "sprite_layer": "m/cazagante",
+      "desc": {
+        "pt": "Brigantina: placas pequenas entre couro e forro.",
+        "en": "A brigandine: small plates between leather and lining."
+      }
+    },
+    {
+      "id": "bascinet",
+      "name": {
+        "pt": "Bacinete",
+        "en": "Bascinet"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 10,
+      "weight": 6,
+      "value": 150,
+      "material": "iron",
+      "icon": "bascinet",
+      "sprite_layer": "m/elmo_pontudo",
+      "desc": {
+        "pt": "Bacinete pontudo, elmo de quem já viu uma batalha.",
+        "en": "A pointed bascinet, the helm of someone who has seen a battle."
+      }
+    },
+    {
+      "id": "spangenhelm",
+      "name": {
+        "pt": "Elmo de Bandas",
+        "en": "Spangenhelm"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 7,
+      "weight": 4,
+      "value": 85,
+      "material": "iron",
+      "icon": "spangenhelm",
+      "sprite_layer": "m/elmo_nasal",
+      "desc": {
+        "pt": "Elmo de bandas rebitadas, de guarda de estrada.",
+        "en": "A riveted spangenhelm, for a road warden."
+      }
+    },
+    {
+      "id": "leather_gorget",
+      "name": {
+        "pt": "Gorjal de Couro",
+        "en": "Leather Gorget"
+      },
+      "type": "armor",
+      "slot": "neck",
+      "armor": 2,
+      "weight": 1,
+      "value": 25,
+      "material": "leather",
+      "icon": "leather_gorget",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Gorjal de couro. Cobre a garganta e pouco pesa.",
+        "en": "A leather gorget. It covers the throat and weighs little."
+      }
+    },
+    {
+      "id": "plate_gorget",
+      "name": {
+        "pt": "Gorjal de Placa",
+        "en": "Plate Gorget"
+      },
+      "type": "armor",
+      "slot": "neck",
+      "armor": 5,
+      "weight": 3,
+      "value": 110,
+      "material": "iron",
+      "icon": "plate_gorget",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Gorjal de placa, fechado com correia e fivela.",
+        "en": "A plate gorget, closed with strap and buckle."
+      }
+    },
+    {
+      "id": "templar_cuirass",
+      "name": {
+        "pt": "Couraça do Templo",
+        "en": "Temple Cuirass"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 22,
+      "weight": 18,
+      "value": 420,
+      "material": "iron",
+      "icon": "templar_cuirass",
+      "sprite_layer": "m/armadura_templario",
+      "desc": {
+        "pt": "Couraça branca da ordem do Templo, com a cruz no peito.",
+        "en": "White cuirass of the Temple order, the cross on the chest."
+      }
+    },
+    {
+      "id": "sergeant_cuirass",
+      "name": {
+        "pt": "Couraça de Sargento",
+        "en": "Sergeant Cuirass"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 20,
+      "weight": 16,
+      "value": 360,
+      "material": "iron",
+      "icon": "sergeant_cuirass",
+      "sprite_layer": "m/armadura_sargento",
+      "desc": {
+        "pt": "Couraça de sargento de hoste, sem o ouro do cavaleiro.",
+        "en": "A host sergeant's cuirass, without a knight's gold."
+      }
+    },
+    {
+      "id": "studded_gloves",
+      "name": {
+        "pt": "Luvas Cravejadas",
+        "en": "Studded Gloves"
+      },
+      "type": "armor",
+      "slot": "hands",
+      "armor": 3,
+      "weight": 1,
+      "value": 35,
+      "material": "leather",
+      "icon": "studded_gloves",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Luvas de couro com rebites. Seguram o cabo e arranham.",
+        "en": "Leather gloves with rivets. They hold the haft and scratch."
+      }
+    },
+    {
+      "id": "studded_leggings",
+      "name": {
+        "pt": "Calças Cravejadas",
+        "en": "Studded Leggings"
+      },
+      "type": "armor",
+      "slot": "legs",
+      "armor": 7,
+      "weight": 5,
+      "value": 80,
+      "material": "leather",
+      "icon": "studded_leggings",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Calças de couro cravejado, um passo acima do pelego.",
+        "en": "Studded leather leggings, one step above a hide."
+      }
+    },
+    {
+      "id": "studded_sleeves",
+      "name": {
+        "pt": "Mangas Cravejadas",
+        "en": "Studded Sleeves"
+      },
+      "type": "armor",
+      "slot": "arms",
+      "armor": 5,
+      "weight": 3,
+      "value": 55,
+      "material": "leather",
+      "icon": "studded_sleeves",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Mangas cravejadas de batedor.",
+        "en": "A scout's studded sleeves."
+      }
+    },
+    {
+      "id": "fur_boots",
+      "name": {
+        "pt": "Botas de Pele",
+        "en": "Fur Boots"
+      },
+      "type": "armor",
+      "slot": "feet",
+      "armor": 4,
+      "weight": 3,
+      "value": 45,
+      "material": "fur",
+      "icon": "fur_boots",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Botas forradas de pele, para a neve do norte.",
+        "en": "Fur-lined boots, for the snow of the north."
+      }
+    },
+    {
+      "id": "fur_cloak",
+      "name": {
+        "pt": "Manto de Pele",
+        "en": "Fur Cloak"
+      },
+      "type": "armor",
+      "slot": "cloak",
+      "armor": 3,
+      "weight": 3,
+      "value": 70,
+      "material": "fur",
+      "icon": "fur_cloak",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Manto de pele de lobo ou de urso. Aquece e ainda segura um corte raso.",
+        "en": "A wolf or bear fur cloak. It warms, and still stops a shallow cut."
+      }
+    },
+    {
+      "id": "scale_coif",
+      "name": {
+        "pt": "Coifa de Escamas",
+        "en": "Scale Coif"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 7,
+      "weight": 4,
+      "value": 95,
+      "material": "iron",
+      "icon": "scale_coif",
+      "sprite_layer": "m/chain_coif",
+      "desc": {
+        "pt": "Coifa de escamas, feia e honesta.",
+        "en": "A scale coif, ugly and honest."
+      }
+    },
+    {
+      "id": "bronze_helm",
+      "name": {
+        "pt": "Elmo de Bronze",
+        "en": "Bronze Helm"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 8,
+      "weight": 5,
+      "value": 110,
+      "material": "bronze",
+      "icon": "bronze_helm",
+      "sprite_layer": "m/elmo_nasal",
+      "desc": {
+        "pt": "Elmo de bronze fundido, brilho de desfile e de tumba.",
+        "en": "A cast bronze helm, the shine of parade and tomb."
+      }
+    },
+    {
+      "id": "blackiron_hauberk",
+      "name": {
+        "pt": "Lorigão de Ferro-negro",
+        "en": "Black-iron Hauberk"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 21,
+      "weight": 16,
+      "value": 480,
+      "material": "black_iron",
+      "icon": "blackiron_hauberk",
+      "sprite_layer": "m/lorigao",
+      "desc": {
+        "pt": "Lorigão batido em ferro-negro. Mais fechado que o ferro comum, e mais caro.",
+        "en": "A hauberk beaten from black iron. Tighter than common iron, and costlier."
+      }
+    },
+    {
+      "id": "iron_gauntlets",
+      "name": {
+        "pt": "Manoplas de Ferro",
+        "en": "Iron Gauntlets"
+      },
+      "type": "armor",
+      "slot": "hands",
+      "armor": 6,
+      "weight": 4,
+      "value": 100,
+      "material": "iron",
+      "icon": "iron_gauntlets",
+      "sprite_layer": "m/chain_gloves",
+      "desc": {
+        "pt": "Manoplas de ferro. O punho fecha mesmo com a mão dormente.",
+        "en": "Iron gauntlets. The fist closes even when the hand is numb."
+      }
+    },
+    {
+      "id": "mail_chausses",
+      "name": {
+        "pt": "Calças de Malha",
+        "en": "Mail Chausses"
+      },
+      "type": "armor",
+      "slot": "legs",
+      "armor": 9,
+      "weight": 8,
+      "value": 140,
+      "material": "iron",
+      "icon": "mail_chausses",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Calças de malha até o joelho, atadas ao cinto.",
+        "en": "Mail chausses to the knee, tied to the belt."
+      }
+    },
+    {
+      "id": "bedouin_vest",
+      "name": {
+        "pt": "Colete Beduíno",
+        "en": "Bedouin Vest"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 11,
+      "weight": 7,
+      "value": 140,
+      "material": "cloth",
+      "icon": "bedouin_vest",
+      "sprite_layer": "m/beduino_veste",
+      "desc": {
+        "pt": "Colete beduíno acolchoado, para o sol e para a faca curta.",
+        "en": "A padded Bedouin vest, for the sun and for a short knife."
+      }
+    },
+    {
+      "id": "lamellar_sleeves",
+      "name": {
+        "pt": "Mangas Lamelares",
+        "en": "Lamellar Sleeves"
+      },
+      "type": "armor",
+      "slot": "arms",
+      "armor": 7,
+      "weight": 4,
+      "value": 120,
+      "material": "iron",
+      "icon": "lamellar_sleeves",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Mangas de lamelas, no jeito das hostes do deserto.",
+        "en": "Lamellar sleeves, in the manner of the desert hosts."
+      }
+    },
+    {
+      "id": "bronze_cuirass",
+      "name": {
+        "pt": "Couraça de Bronze",
+        "en": "Bronze Cuirass"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 17,
+      "weight": 14,
+      "value": 260,
+      "material": "bronze",
+      "icon": "bronze_cuirass",
+      "sprite_layer": "m/couraca_turca",
+      "desc": {
+        "pt": "Couraça de bronze batido, relíquia de oficina antiga.",
+        "en": "A beaten bronze cuirass, a relic of an old workshop."
+      }
+    },
+    {
+      "id": "hide_tunic",
+      "name": {
+        "pt": "Túnica de Pelego",
+        "en": "Hide Tunic"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 10,
+      "weight": 7,
+      "value": 70,
+      "material": "leather",
+      "icon": "hide_tunic",
+      "sprite_layer": "m/jaque_couro",
+      "desc": {
+        "pt": "Túnica de pelego cru, de caçador que ainda não foi ao curtidor.",
+        "en": "A raw-hide tunic, for a hunter who has not yet seen the tanner."
+      }
+    },
+    {
+      "id": "chain_mantle",
+      "name": {
+        "pt": "Manto de Malha",
+        "en": "Mail Mantle"
+      },
+      "type": "armor",
+      "slot": "cloak",
+      "armor": 4,
+      "weight": 6,
+      "value": 160,
+      "material": "iron",
+      "icon": "chain_mantle",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Manto curto de malha sobre os ombros. Pesa, e segura a flecha de viés.",
+        "en": "A short mail mantle over the shoulders. It weighs, and it catches a glancing arrow."
+      }
+    },
+    {
+      "id": "tower_shield",
+      "name": {
+        "pt": "Escudo Torre",
+        "en": "Tower Shield"
+      },
+      "type": "shield",
+      "slot": "hand2",
+      "armor": 13,
+      "weight": 12,
+      "value": 200,
+      "material": "iron",
+      "icon": "tower_shield",
+      "sprite_layer": "m/shield",
+      "desc": {
+        "pt": "Escudo torre, alto o bastante para cobrir o corpo na muralha.",
+        "en": "A tower shield, tall enough to cover the body on the wall."
+      }
+    },
+    {
+      "id": "oval_shield",
+      "name": {
+        "pt": "Escudo Oval",
+        "en": "Oval Shield"
+      },
+      "type": "shield",
+      "slot": "hand2",
+      "armor": 8,
+      "weight": 7,
+      "value": 90,
+      "material": "wood",
+      "icon": "oval_shield",
+      "sprite_layer": "m/escudo_redondo",
+      "desc": {
+        "pt": "Escudo oval de madeira e couro, de milícia costeira.",
+        "en": "An oval shield of wood and leather, of the coastal militia."
+      }
+    },
+    {
+      "id": "pavise",
+      "name": {
+        "pt": "Pavês",
+        "en": "Pavise"
+      },
+      "type": "shield",
+      "slot": "hand2",
+      "armor": 12,
+      "weight": 14,
+      "value": 170,
+      "material": "wood",
+      "icon": "pavise",
+      "sprite_layer": "m/shield",
+      "desc": {
+        "pt": "Pavês de besteiro: planta-se no chão e cobre quem rearma.",
+        "en": "A crossbowman's pavise: planted in the ground to cover the reload."
+      }
+    },
+    {
+      "id": "linen_shirt",
+      "name": {
+        "pt": "Camisa de Linho",
+        "en": "Linen Shirt"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 1,
+      "weight": 1,
+      "value": 12,
+      "material": "linen",
+      "icon": "linen_shirt",
+      "sprite_layer": "m/cloth_shirt",
+      "desc": {
+        "pt": "Camisa de linho, fresca, de feira e de peregrino.",
+        "en": "A linen shirt, cool, of fair and pilgrim."
+      }
+    },
+    {
+      "id": "linen_pants",
+      "name": {
+        "pt": "Calças de Linho",
+        "en": "Linen Pants"
+      },
+      "type": "clothing",
+      "slot": "legs",
+      "armor": 1,
+      "weight": 1,
+      "value": 12,
+      "material": "linen",
+      "icon": "linen_pants",
+      "sprite_layer": "m/cloth_pants",
+      "desc": {
+        "pt": "Calças de linho, leves para a estrada quente.",
+        "en": "Linen pants, light for the hot road."
+      }
+    },
+    {
+      "id": "wool_tunic",
+      "name": {
+        "pt": "Túnica de Lã",
+        "en": "Wool Tunic"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 1,
+      "weight": 2,
+      "value": 18,
+      "material": "wool",
+      "icon": "wool_tunic",
+      "sprite_layer": "m/aldeao_tunica2",
+      "desc": {
+        "pt": "Túnica de lã grossa, de aldeão do norte e da planície.",
+        "en": "A coarse wool tunic, of a northerner or a plains villager."
+      }
+    },
+    {
+      "id": "wool_pants",
+      "name": {
+        "pt": "Calças de Lã",
+        "en": "Wool Pants"
+      },
+      "type": "clothing",
+      "slot": "legs",
+      "armor": 1,
+      "weight": 1,
+      "value": 16,
+      "material": "wool",
+      "icon": "wool_pants",
+      "sprite_layer": "m/calca_branca",
+      "desc": {
+        "pt": "Calças de lã. Seguram o vento melhor que o linho.",
+        "en": "Wool pants. They hold the wind better than linen."
+      }
+    },
+    {
+      "id": "smith_apron",
+      "name": {
+        "pt": "Avental de Ferreiro",
+        "en": "Smith Apron"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 2,
+      "weight": 2,
+      "value": 22,
+      "material": "leather",
+      "icon": "smith_apron",
+      "sprite_layer": "m/ferreiro_tunica",
+      "desc": {
+        "pt": "Avental de couro do ferreiro. Não é armadura, mas a fagulha não passa.",
+        "en": "The smith's leather apron. Not armor, but the spark does not get through."
+      }
+    },
+    {
+      "id": "bedouin_sleeves",
+      "name": {
+        "pt": "Mangas Beduínas",
+        "en": "Bedouin Sleeves"
+      },
+      "type": "clothing",
+      "slot": "arms",
+      "armor": 1,
+      "weight": 1,
+      "value": 20,
+      "material": "cloth",
+      "icon": "bedouin_sleeves",
+      "sprite_layer": "m/beduino_mangas",
+      "desc": {
+        "pt": "Mangas largas beduínas, para o sol do meio-dia.",
+        "en": "Wide Bedouin sleeves, for the noon sun."
+      }
+    },
+    {
+      "id": "bedouin_skirt",
+      "name": {
+        "pt": "Saia Beduína",
+        "en": "Bedouin Skirt"
+      },
+      "type": "clothing",
+      "slot": "legs",
+      "armor": 1,
+      "weight": 1,
+      "value": 22,
+      "material": "cloth",
+      "icon": "bedouin_skirt",
+      "sprite_layer": "m/beduino_saia",
+      "desc": {
+        "pt": "Saia de montaria beduína, aberta para a sela.",
+        "en": "A Bedouin riding skirt, split for the saddle."
+      }
+    },
+    {
+      "id": "monk_robe",
+      "name": {
+        "pt": "Hábito de Monge",
+        "en": "Monk Robe"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 1,
+      "weight": 2,
+      "value": 25,
+      "material": "cloth",
+      "icon": "monk_robe",
+      "sprite_layer": "m/habito_peregrino",
+      "desc": {
+        "pt": "Hábito de monge, lã pobre e cinto de corda.",
+        "en": "A monk's habit, poor wool and a rope belt."
+      }
+    },
+    {
+      "id": "straw_hat",
+      "name": {
+        "pt": "Chapéu de Palha",
+        "en": "Straw Hat"
+      },
+      "type": "clothing",
+      "slot": "head",
+      "armor": 0,
+      "weight": 1,
+      "value": 8,
+      "material": "wood",
+      "icon": "straw_hat",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Chapéu de palha de ceifador e de feirante.",
+        "en": "A straw hat for reaper and stall-keeper."
+      }
+    },
+    {
+      "id": "wizard_hat",
+      "name": {
+        "pt": "Barrete de Erudito",
+        "en": "Scholar's Cap"
+      },
+      "type": "clothing",
+      "slot": "head",
+      "armor": 1,
+      "weight": 1,
+      "value": 40,
+      "material": "cloth",
+      "icon": "wizard_hat",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Barrete alto de erudito. Não faz magia; só anuncia quem estuda.",
+        "en": "A tall scholar's cap. It works no magic; it only announces the student."
+      }
+    },
+    {
+      "id": "silk_robe",
+      "name": {
+        "pt": "Manto de Seda",
+        "en": "Silk Robe"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 1,
+      "weight": 1,
+      "value": 180,
+      "material": "silk",
+      "icon": "silk_robe",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Manto de seda de caravana. Leve, caro, e péssimo contra flecha.",
+        "en": "A caravan silk robe. Light, costly, and poor against an arrow."
+      }
+    },
+    {
+      "id": "desert_cloak",
+      "name": {
+        "pt": "Manto do Deserto",
+        "en": "Desert Cloak"
+      },
+      "type": "clothing",
+      "slot": "cloak",
+      "armor": 1,
+      "weight": 2,
+      "value": 45,
+      "material": "cloth",
+      "icon": "desert_cloak",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Manto claro do deserto, para o sol e para a areia no vento.",
+        "en": "A pale desert cloak, for the sun and for sand on the wind."
+      }
+    },
+    {
+      "id": "linen_gloves",
+      "name": {
+        "pt": "Luvas de Linho",
+        "en": "Linen Gloves"
+      },
+      "type": "clothing",
+      "slot": "hands",
+      "armor": 0,
+      "weight": 1,
+      "value": 8,
+      "material": "linen",
+      "icon": "linen_gloves",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Luvas finas de linho, de escriba e de mercador.",
+        "en": "Thin linen gloves, of scribe and merchant."
+      }
+    },
+    {
+      "id": "sash",
+      "name": {
+        "pt": "Faixa",
+        "en": "Sash"
+      },
+      "type": "clothing",
+      "slot": "none",
+      "armor": 0,
+      "weight": 1,
+      "value": 15,
+      "material": "cloth",
+      "icon": "sash",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Faixa de cintura, para prender a túnica e esconder uma faca.",
+        "en": "A waist sash, to bind the tunic and hide a knife."
+      }
+    },
+    {
+      "id": "linen_coif",
+      "name": {
+        "pt": "Coifa de Linho",
+        "en": "Linen Coif"
+      },
+      "type": "clothing",
+      "slot": "head",
+      "armor": 0,
+      "weight": 1,
+      "value": 10,
+      "material": "linen",
+      "icon": "linen_coif",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Coifa de linho, usada só ou por baixo do elmo.",
+        "en": "A linen coif, worn alone or under a helm."
+      }
+    },
+    {
+      "id": "tabard",
+      "name": {
+        "pt": "Tabardo",
+        "en": "Tabard"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 2,
+      "weight": 2,
+      "value": 55,
+      "material": "cloth",
+      "icon": "tabard",
+      "sprite_layer": "m/armadura_cruzado",
+      "desc": {
+        "pt": "Tabardo de hoste, para mostrar a cruz por cima da malha.",
+        "en": "A host tabard, to show the cross over the mail."
+      }
+    },
+    {
+      "id": "villager_dress",
+      "name": {
+        "pt": "Veste de Aldeão",
+        "en": "Villager Dress"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 1,
+      "weight": 2,
+      "value": 14,
+      "material": "cloth",
+      "icon": "villager_dress",
+      "sprite_layer": "m/aldeao_tunica1",
+      "desc": {
+        "pt": "Veste simples de aldeão, remendada e limpa.",
+        "en": "A simple villager's dress, patched and clean."
+      }
+    },
+    {
+      "id": "scarf",
+      "name": {
+        "pt": "Lenço",
+        "en": "Scarf"
+      },
+      "type": "clothing",
+      "slot": "neck",
+      "armor": 0,
+      "weight": 1,
+      "value": 8,
+      "material": "cloth",
+      "icon": "scarf",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Lenço de pescoço, contra poeira e contra o frio da manhã.",
+        "en": "A neck scarf, against dust and the morning cold."
+      }
+    },
+    {
+      "id": "bandana",
+      "name": {
+        "pt": "Lenço de Cabeça",
+        "en": "Headcloth"
+      },
+      "type": "clothing",
+      "slot": "head",
+      "armor": 0,
+      "weight": 1,
+      "value": 10,
+      "material": "cloth",
+      "icon": "bandana",
+      "sprite_layer": "m/keffiyeh",
+      "desc": {
+        "pt": "Lenço de cabeça de marinheiro e de salteador.",
+        "en": "A headcloth of sailor and highwayman."
+      }
+    },
+    {
+      "id": "fur_hat",
+      "name": {
+        "pt": "Gorro de Pele",
+        "en": "Fur Hat"
+      },
+      "type": "clothing",
+      "slot": "head",
+      "armor": 1,
+      "weight": 1,
+      "value": 20,
+      "material": "fur",
+      "icon": "fur_hat",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Gorro de pele, para o vento do norte.",
+        "en": "A fur hat, for the northern wind."
+      }
+    },
+    {
+      "id": "bronze_ring",
+      "name": {
+        "pt": "Anel de Bronze",
+        "en": "Bronze Ring"
+      },
+      "type": "jewelry",
+      "slot": "ring",
+      "weight": 0.1,
+      "value": 25,
+      "material": "bronze",
+      "icon": "bronze_ring",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Anel de bronze, o primeiro luxo de quem saiu da milícia.",
+        "en": "A bronze ring, the first luxury of someone who left the militia."
+      }
+    },
+    {
+      "id": "signet_ring",
+      "name": {
+        "pt": "Anel de Sinete",
+        "en": "Signet Ring"
+      },
+      "type": "jewelry",
+      "slot": "ring",
+      "weight": 0.1,
+      "value": 90,
+      "material": "gold",
+      "icon": "signet_ring",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Anel de sinete para lacre de cera. O desenho é da casa, não da Igreja.",
+        "en": "A signet ring for wax seals. The device is the house's, not the Church's."
+      }
+    },
+    {
+      "id": "amber_ring",
+      "name": {
+        "pt": "Anel de Âmbar",
+        "en": "Amber Ring"
+      },
+      "type": "jewelry",
+      "slot": "ring",
+      "weight": 0.1,
+      "value": 70,
+      "material": "gem",
+      "icon": "amber_ring",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Âmbar do norte, preso num aro de prata.",
+        "en": "Northern amber, set in a silver hoop."
+      }
+    },
+    {
+      "id": "coral_necklace",
+      "name": {
+        "pt": "Colar de Coral",
+        "en": "Coral Necklace"
+      },
+      "type": "jewelry",
+      "slot": "neck",
+      "weight": 0.2,
+      "value": 60,
+      "material": "gem",
+      "icon": "coral_necklace",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Colar de coral da costa. Os marinheiros dizem que afasta o afogamento.",
+        "en": "A coastal coral necklace. Sailors say it wards drowning."
+      }
+    },
+    {
+      "id": "pearl_necklace",
+      "name": {
+        "pt": "Colar de Pérolas",
+        "en": "Pearl Necklace"
+      },
+      "type": "jewelry",
+      "slot": "neck",
+      "weight": 0.2,
+      "value": 220,
+      "material": "gem",
+      "icon": "pearl_necklace",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Pérolas miúdas de ostra do litoral, num fio de seda.",
+        "en": "Small coastal pearls on a silk thread."
+      }
+    },
+    {
+      "id": "bead_necklace",
+      "name": {
+        "pt": "Colar de Contas",
+        "en": "Bead Necklace"
+      },
+      "type": "jewelry",
+      "slot": "neck",
+      "weight": 0.1,
+      "value": 15,
+      "material": "wood",
+      "icon": "bead_necklace",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Contas de madeira de oração, gastas pelo polegar.",
+        "en": "Wooden prayer beads, worn by the thumb."
+      }
+    },
+    {
+      "id": "iron_circlet",
+      "name": {
+        "pt": "Diadema de Ferro",
+        "en": "Iron Circlet"
+      },
+      "type": "jewelry",
+      "slot": "head",
+      "weight": 0.4,
+      "value": 40,
+      "material": "iron",
+      "icon": "iron_circlet",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Diadema simples de ferro, marca de quem comanda um bando pequeno.",
+        "en": "A plain iron circlet, the mark of someone who leads a small band."
+      }
+    },
+    {
+      "id": "sapphire_ring",
+      "name": {
+        "pt": "Anel de Safira",
+        "en": "Sapphire Ring"
+      },
+      "type": "jewelry",
+      "slot": "ring",
+      "weight": 0.1,
+      "value": 260,
+      "material": "gem",
+      "icon": "sapphire_ring",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Safira azul-real, pedra de mago rico e de bispo.",
+        "en": "A royal-blue sapphire, stone of a rich mage and of a bishop."
+      }
+    },
+    {
+      "id": "ruby_ring",
+      "name": {
+        "pt": "Anel de Rubi",
+        "en": "Ruby Ring"
+      },
+      "type": "jewelry",
+      "slot": "ring",
+      "weight": 0.1,
+      "value": 280,
+      "material": "gem",
+      "icon": "ruby_ring",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Rubi escuro, cor de vinho velho. Não é da Igreja; é de tesouro.",
+        "en": "A dark ruby, the color of old wine. Not the Church's; a treasury stone."
+      }
+    },
+    {
+      "id": "torque",
+      "name": {
+        "pt": "Torque",
+        "en": "Torque"
+      },
+      "type": "jewelry",
+      "slot": "neck",
+      "weight": 0.4,
+      "value": 150,
+      "material": "gold",
+      "icon": "torque",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Torque de ouro ao modo antigo do norte, rígido no pescoço.",
+        "en": "A gold torque in the old northern manner, stiff at the neck."
+      }
+    },
+    {
+      "id": "dates",
+      "name": {
+        "pt": "Tâmaras",
+        "en": "Dates"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.2,
+      "value": 4,
+      "material": "food",
+      "icon": "dates",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Tâmaras secas de oásis. Doce de viagem, e não estraga no alforje.",
+        "en": "Dried oasis dates. Travel sweet, and they do not spoil in the bag."
+      }
+    },
+    {
+      "id": "figs",
+      "name": {
+        "pt": "Figos",
+        "en": "Figs"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.2,
+      "value": 4,
+      "material": "food",
+      "icon": "figs",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Figos secos, vendidos na porta da estalagem.",
+        "en": "Dried figs, sold at the inn door."
+      }
+    },
+    {
+      "id": "cheese",
+      "name": {
+        "pt": "Queijo",
+        "en": "Cheese"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.3,
+      "value": 6,
+      "material": "food",
+      "icon": "cheese",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Queijo duro de ovelha. Salgado, e dura a semana.",
+        "en": "Hard sheep cheese. Salty, and it lasts the week."
+      }
+    },
+    {
+      "id": "roasted_meat",
+      "name": {
+        "pt": "Carne Assada",
+        "en": "Roasted Meat"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.4,
+      "value": 10,
+      "material": "food",
+      "icon": "roasted_meat",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Carne assada no espeto. Enche mais que o pão.",
+        "en": "Meat from the spit. It fills more than bread."
+      }
+    },
+    {
+      "id": "cooked_fish",
+      "name": {
+        "pt": "Peixe Cozido",
+        "en": "Cooked Fish"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.3,
+      "value": 8,
+      "material": "food",
+      "icon": "cooked_fish",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Peixe cozido com sal. Comida de porto e de sexta-feira.",
+        "en": "Fish cooked with salt. Food of the port, and of Friday."
+      }
+    },
+    {
+      "id": "flatbread",
+      "name": {
+        "pt": "Pão Chato",
+        "en": "Flatbread"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.2,
+      "value": 3,
+      "material": "food",
+      "icon": "flatbread",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Pão chato de caravana, assado na pedra.",
+        "en": "Caravan flatbread, baked on a stone."
+      }
+    },
+    {
+      "id": "ale",
+      "name": {
+        "pt": "Cerveja",
+        "en": "Ale"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 6,
+      "material": "food",
+      "icon": "ale",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Caneca de cerveja. Aquece e atrapalha a mira.",
+        "en": "A mug of ale. It warms, and it spoils the aim."
+      }
+    },
+    {
+      "id": "wine",
+      "name": {
+        "pt": "Vinho",
+        "en": "Wine"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 12,
+      "material": "food",
+      "icon": "wine",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Vinho de odre, áspero, de missa ou de mesa.",
+        "en": "Wineskin wine, rough, for mass or for the table."
+      }
+    },
+    {
+      "id": "water_flask",
+      "name": {
+        "pt": "Cantil de Água",
+        "en": "Water Flask"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 2,
+      "material": "food",
+      "icon": "water_flask",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Cantil de água. No deserto vale mais que a cerveja.",
+        "en": "A flask of water. In the desert it is worth more than ale."
+      }
+    },
+    {
+      "id": "strength_potion",
+      "name": {
+        "pt": "Poção de Força",
+        "en": "Strength Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 40,
+      "material": "glass",
+      "icon": "strength_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Poção turva que empresta força por um tempo curto.",
+        "en": "A cloudy potion that lends strength for a short while."
+      }
+    },
+    {
+      "id": "agility_potion",
+      "name": {
+        "pt": "Poção de Agilidade",
+        "en": "Agility Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 40,
+      "material": "glass",
+      "icon": "agility_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Poção clara que solta o pulso e o passo.",
+        "en": "A clear potion that loosens wrist and step."
+      }
+    },
+    {
+      "id": "greater_cure_potion",
+      "name": {
+        "pt": "Antídoto Maior",
+        "en": "Greater Cure Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 80,
+      "material": "glass",
+      "icon": "greater_cure_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Antídoto forte, para veneno de serpe e de escorpião.",
+        "en": "A strong antidote, for wyvern venom and scorpion sting."
+      }
+    },
+    {
+      "id": "greater_refresh_potion",
+      "name": {
+        "pt": "Poção de Vigor Maior",
+        "en": "Greater Refresh Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 70,
+      "material": "glass",
+      "icon": "greater_refresh_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Devolve o fôlego de uma marcha inteira num gole.",
+        "en": "It gives back a whole march of breath in one swallow."
+      }
+    },
+    {
+      "id": "night_sight_potion",
+      "name": {
+        "pt": "Poção de Visão Noturna",
+        "en": "Night Sight Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 45,
+      "material": "glass",
+      "icon": "night_sight_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Deixa a cripta menos cega. O gosto é de fuligem.",
+        "en": "It makes the crypt less blind. It tastes of soot."
+      }
+    },
+    {
+      "id": "copper_ingot",
+      "name": {
+        "pt": "Lingote de Cobre",
+        "en": "Copper Ingot"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 15,
+      "material": "copper",
+      "icon": "copper_ingot",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Lingote de cobre fundido, para bronze, arame e funilaria.",
+        "en": "A smelted copper ingot, for bronze, wire and tinkerwork."
+      }
+    },
+    {
+      "id": "bronze_ingot",
+      "name": {
+        "pt": "Lingote de Bronze",
+        "en": "Bronze Ingot"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 28,
+      "material": "bronze",
+      "icon": "bronze_ingot",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Bronze de cobre e estanho. O ferreiro faz elmo e couraça de desfile.",
+        "en": "Copper-and-tin bronze. The smith makes parade helms and cuirasses."
+      }
+    },
+    {
+      "id": "silver_ingot",
+      "name": {
+        "pt": "Lingote de Prata",
+        "en": "Silver Ingot"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 80,
+      "material": "silver",
+      "icon": "silver_ingot",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Prata fundida, para anel, relicário e fio de mago.",
+        "en": "Smelted silver, for ring, reliquary and a mage's wire."
+      }
+    },
+    {
+      "id": "gold_ingot",
+      "name": {
+        "pt": "Lingote de Ouro",
+        "en": "Gold Ingot"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 200,
+      "material": "gold",
+      "icon": "gold_ingot",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Ouro em barra. Não enferruja, e todo ofício fino o quer.",
+        "en": "Gold in a bar. It does not rust, and every fine craft wants it."
+      }
+    },
+    {
+      "id": "blackiron_ore",
+      "name": {
+        "pt": "Minério de Ferro-negro",
+        "en": "Black-iron Ore"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 2,
+      "value": 40,
+      "material": "stone",
+      "icon": "blackiron_ore",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Minério escuro, mais fundo que o ferro comum. A picareta canta diferente.",
+        "en": "Dark ore, deeper than common iron. The pick rings differently."
+      }
+    },
+    {
+      "id": "blackiron_ingot",
+      "name": {
+        "pt": "Lingote de Ferro-negro",
+        "en": "Black-iron Ingot"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 90,
+      "material": "black_iron",
+      "icon": "blackiron_ingot",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Ferro-negro batido em barra. Armadura feita disto pesa menos do que devia.",
+        "en": "Black iron beaten into a bar. Armor made from it weighs less than it should."
+      }
+    },
+    {
+      "id": "oak_logs",
+      "name": {
+        "pt": "Toras de Carvalho",
+        "en": "Oak Logs"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 4,
+      "value": 12,
+      "material": "wood",
+      "icon": "oak_logs",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Toras de carvalho, madeira de móvel, de escudo e de casa.",
+        "en": "Oak logs, wood for furniture, shield and house."
+      }
+    },
+    {
+      "id": "cedar_logs",
+      "name": {
+        "pt": "Toras de Cedro",
+        "en": "Cedar Logs"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 3,
+      "value": 18,
+      "material": "wood",
+      "icon": "cedar_logs",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Cedro cheiroso das serras. A traça não gosta, o marceneiro gosta.",
+        "en": "Fragrant mountain cedar. Moths dislike it; the joiner does not."
+      }
+    },
+    {
+      "id": "oak_boards",
+      "name": {
+        "pt": "Tábuas de Carvalho",
+        "en": "Oak Boards"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 8,
+      "material": "wood",
+      "icon": "oak_boards",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Tábuas de carvalho serradas, prontas para a bancada.",
+        "en": "Sawn oak boards, ready for the bench."
+      }
+    },
+    {
+      "id": "cedar_boards",
+      "name": {
+        "pt": "Tábuas de Cedro",
+        "en": "Cedar Boards"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 12,
+      "material": "wood",
+      "icon": "cedar_boards",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Tábuas de cedro, para arco, baú e forro de capela.",
+        "en": "Cedar boards, for bow, chest and chapel lining."
+      }
+    },
+    {
+      "id": "thick_leather",
+      "name": {
+        "pt": "Couro Grosso",
+        "en": "Thick Leather"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 18,
+      "material": "leather",
+      "icon": "thick_leather",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Couro grosso de boi, para bota, brigantina e sela.",
+        "en": "Thick ox leather, for boot, brigandine and saddle."
+      }
+    },
+    {
+      "id": "wyrm_hide",
+      "name": {
+        "pt": "Pele de Serpe",
+        "en": "Wyrm Hide"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 60,
+      "material": "leather",
+      "icon": "wyrm_hide",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Pele de serpe, quente ao toque. O curtidor cobra à parte.",
+        "en": "Wyrm hide, warm to the touch. The tanner charges extra."
+      }
+    },
+    {
+      "id": "fur_bundle",
+      "name": {
+        "pt": "Feixe de Peles",
+        "en": "Fur Bundle"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 14,
+      "material": "fur",
+      "icon": "fur_bundle",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Peles atadas: lobo, raposa ou cabra da serra.",
+        "en": "Tied furs: wolf, fox or mountain goat."
+      }
+    },
+    {
+      "id": "linen_bolt",
+      "name": {
+        "pt": "Rolo de Linho",
+        "en": "Linen Bolt"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 10,
+      "material": "linen",
+      "icon": "linen_bolt",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Rolo de linho alvejado, estoque do alfaiate.",
+        "en": "A bolt of bleached linen, a tailor's stock."
+      }
+    },
+    {
+      "id": "silk_bolt",
+      "name": {
+        "pt": "Rolo de Seda",
+        "en": "Silk Bolt"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 70,
+      "material": "silk",
+      "icon": "silk_bolt",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Seda de caravana, em rolo. Mancha se a mão suar.",
+        "en": "Caravan silk, in a bolt. It stains if the hand sweats."
+      }
+    },
+    {
+      "id": "wool_bolt",
+      "name": {
+        "pt": "Rolo de Lã",
+        "en": "Wool Bolt"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 12,
+      "material": "wool",
+      "icon": "wool_bolt",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Rolo de lã cardada, para túnica de inverno e hábito.",
+        "en": "A bolt of carded wool, for winter tunic and habit."
+      }
+    },
+    {
+      "id": "feather",
+      "name": {
+        "pt": "Pena",
+        "en": "Feather"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 2,
+      "material": "wood",
+      "icon": "feather",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Pena de ganso ou de grifo, para a flecha estabilizar.",
+        "en": "A goose or griffon feather, to steady an arrow."
+      }
+    },
+    {
+      "id": "arrow_shaft",
+      "name": {
+        "pt": "Haste de Flecha",
+        "en": "Arrow Shaft"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 1,
+      "material": "wood",
+      "icon": "arrow_shaft",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Haste reta de flecha, ainda sem ponta e sem pena.",
+        "en": "A straight arrow shaft, still without head or fletching."
+      }
+    },
+    {
+      "id": "nails",
+      "name": {
+        "pt": "Pregos",
+        "en": "Nails"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 0.2,
+      "value": 3,
+      "material": "iron",
+      "icon": "nails",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Punhado de pregos de ferreiro, para escudo, baú e casa.",
+        "en": "A handful of smith's nails, for shield, chest and house."
+      }
+    },
+    {
+      "id": "empty_bottle",
+      "name": {
+        "pt": "Frasco Vazio",
+        "en": "Empty Bottle"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 0.2,
+      "value": 2,
+      "material": "glass",
+      "icon": "empty_bottle",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Frasco de vidro vazio. O alquimista não vende a poção sem ele.",
+        "en": "An empty glass bottle. The alchemist will not sell the potion without one."
+      }
+    },
+    {
+      "id": "lockpick",
+      "name": {
+        "pt": "Gazua",
+        "en": "Lockpick"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 0.1,
+      "value": 15,
+      "material": "iron",
+      "icon": "lockpick",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Gazua fina. Quebra se a mão tremer.",
+        "en": "A thin lockpick. It snaps if the hand shakes."
+      }
+    },
+    {
+      "id": "saw",
+      "name": {
+        "pt": "Serra",
+        "en": "Saw"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 2,
+      "value": 30,
+      "material": "iron",
+      "icon": "saw",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Serra de carpinteiro, para tora virar tábua.",
+        "en": "A carpenter's saw, to turn a log into boards."
+      }
+    },
+    {
+      "id": "tongs",
+      "name": {
+        "pt": "Tenaz",
+        "en": "Tongs"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 3,
+      "value": 25,
+      "material": "iron",
+      "icon": "tongs",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Tenaz de forja. Segura a barra que a mão não pode.",
+        "en": "Forge tongs. They hold the bar the hand cannot."
+      }
+    },
+    {
+      "id": "scribe_pen",
+      "name": {
+        "pt": "Pena de Escriba",
+        "en": "Scribe Pen"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 0.1,
+      "value": 20,
+      "material": "wood",
+      "icon": "scribe_pen",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Pena de escriba e tinteiro pequeno. Serve à inscrição.",
+        "en": "A scribe's pen and a small inkwell. It serves inscription."
+      }
+    },
+    {
+      "id": "crook",
+      "name": {
+        "pt": "Cajado de Pastor",
+        "en": "Shepherd's Crook"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 3,
+      "value": 20,
+      "material": "wood",
+      "icon": "crook",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Cajado de pastor, para o rebanho e para o ofício de pastoreio.",
+        "en": "A shepherd's crook, for the flock and for the herding craft."
+      }
+    },
+    {
+      "id": "lute",
+      "name": {
+        "pt": "Alaúde",
+        "en": "Lute"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 2,
+      "value": 80,
+      "material": "wood",
+      "icon": "lute",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Alaúde de bardo. Sem ele a música não sai do peito.",
+        "en": "A bard's lute. Without it the music stays in the chest."
+      }
+    },
+    {
+      "id": "fletching_kit",
+      "name": {
+        "pt": "Kit de Flechas",
+        "en": "Fletching Kit"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 1,
+      "value": 25,
+      "material": "iron",
+      "icon": "fletching_kit",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Faca, cola e linha para emplumar flecha e virote.",
+        "en": "Knife, glue and thread to fletch arrow and bolt."
+      }
+    },
+    {
+      "id": "scissors",
+      "name": {
+        "pt": "Tesoura",
+        "en": "Scissors"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 0.4,
+      "value": 18,
+      "material": "iron",
+      "icon": "scissors",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Tesoura de alfaiate. Corta linho, lã e seda, não cota.",
+        "en": "Tailor's scissors. They cut linen, wool and silk, not mail."
+      }
+    },
+    {
+      "id": "wooden_chair",
+      "name": {
+        "pt": "Cadeira de Madeira",
+        "en": "Wooden Chair"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 8,
+      "value": 25,
+      "material": "wood",
+      "icon": "wooden_chair",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Cadeira de madeira, de mesa de estalagem.",
+        "en": "A wooden chair, from an inn table."
+      }
+    },
+    {
+      "id": "wooden_stool",
+      "name": {
+        "pt": "Banco de Madeira",
+        "en": "Wooden Stool"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 5,
+      "value": 12,
+      "material": "wood",
+      "icon": "wooden_stool",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Banco de três pés. Não tomba se o chão for honesto.",
+        "en": "A three-legged stool. It does not tip if the floor is honest."
+      }
+    },
+    {
+      "id": "candle",
+      "name": {
+        "pt": "Vela",
+        "en": "Candle"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 0.2,
+      "value": 3,
+      "material": "wax",
+      "icon": "candle",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Vela de sebo. Ilumina um cômodo e denuncia quem entra.",
+        "en": "A tallow candle. It lights a room and gives away whoever enters."
+      }
+    },
+    {
+      "id": "anvil",
+      "name": {
+        "pt": "Bigorna",
+        "en": "Anvil"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 80,
+      "value": 400,
+      "material": "iron",
+      "icon": "anvil",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Bigorna de ferreiro. Sem ela a barra não vira lâmina.",
+        "en": "A smith's anvil. Without it the bar does not become a blade."
+      }
+    },
+    {
+      "id": "loom",
+      "name": {
+        "pt": "Tear",
+        "en": "Loom"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 30,
+      "value": 180,
+      "material": "wood",
+      "icon": "loom",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Tear de alfaiate, para linho e lã virarem pano.",
+        "en": "A tailor's loom, to turn linen and wool into cloth."
+      }
+    },
+    {
+      "id": "bookshelf",
+      "name": {
+        "pt": "Estante",
+        "en": "Bookshelf"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 25,
+      "value": 90,
+      "material": "wood",
+      "icon": "bookshelf",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Estante de tábuas. Cabe livro, reagente e poeira.",
+        "en": "A plank bookshelf. It holds book, reagent and dust."
+      }
+    },
+    {
+      "id": "barrel",
+      "name": {
+        "pt": "Barril",
+        "en": "Barrel"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 12,
+      "value": 20,
+      "material": "wood",
+      "icon": "barrel",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Barril de aduelas, para vinho, água ou pregos.",
+        "en": "A stave barrel, for wine, water or nails."
+      }
+    },
+    {
+      "id": "crate",
+      "name": {
+        "pt": "Caixote",
+        "en": "Crate"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 8,
+      "value": 10,
+      "material": "wood",
+      "icon": "crate",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Caixote de feira. Leva o estoque do vendedor até a praça.",
+        "en": "A market crate. It carries a vendor's stock to the square."
+      }
+    },
+    {
+      "id": "cooking_pot",
+      "name": {
+        "pt": "Caldeirão",
+        "en": "Cooking Pot"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 6,
+      "value": 30,
+      "material": "iron",
+      "icon": "cooking_pot",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Caldeirão de ferro, para ensopado e para a culinária.",
+        "en": "An iron pot, for stew and for the cooking craft."
+      }
+    },
+    {
+      "id": "small_forge",
+      "name": {
+        "pt": "Forja Pequena",
+        "en": "Small Forge"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 120,
+      "value": 800,
+      "material": "stone",
+      "icon": "small_forge",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Forja pequena de pedra e fole. Cabe numa ferraria de vila.",
+        "en": "A small stone forge and bellows. It fits a village smithy."
+      }
+    },
+    {
+      "id": "deed_forest_hut",
+      "name": {
+        "pt": "Escritura: Cabana da Floresta",
+        "en": "Deed: Forest Hut"
+      },
+      "type": "deed",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 5000,
+      "material": "paper",
+      "icon": "deed_forest_hut",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Escritura de uma cabana de floresta, para cravar onde o chão deixar.",
+        "en": "Deed to a forest hut, to plant where the ground allows."
+      }
+    },
+    {
+      "id": "deed_market_stall",
+      "name": {
+        "pt": "Escritura: Banca de Feira",
+        "en": "Deed: Market Stall"
+      },
+      "type": "deed",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 3500,
+      "material": "paper",
+      "icon": "deed_market_stall",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Escritura de uma banca de feira, para quem vende na praça.",
+        "en": "Deed to a market stall, for whoever sells in the square."
+      }
     }
   ]
 }
