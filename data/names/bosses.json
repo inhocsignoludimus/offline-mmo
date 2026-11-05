@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "bosses": [
+    {
+      "id": "rei_formiga",
+      "name": {
+        "pt": "Rei Formiga",
+        "en": "Ant King"
+      },
+      "biome": "outremer",
+      "monster": "antlion"
+    },
+    {
+      "id": "guardiao_da_cripta",
+      "name": {
+        "pt": "Guardião da Cripta",
+        "en": "Crypt Guardian"
+      },
+      "biome": "ruins",
+      "monster": "skeleton_knight"
+    },
+    {
+      "id": "serpe_de_fogo",
+      "name": {
+        "pt": "Serpe de Fogo",
+        "en": "Fire Serpent"
+      },
+      "biome": "outremer",
+      "monster": "wyvern_fire"
+    },
+    {
+      "id": "fantasma_cruzado",
+      "name": {
+        "pt": "Fantasma Cruzado",
+        "en": "Crusader Ghost"
+      },
+      "biome": "outremer",
+      "monster": "crusader_ghost"
+    },
+    {
+      "id": "senhor_do_pantano",
+      "name": {
+        "pt": "Senhor do Pântano",
+        "en": "Swamp Lord"
+      },
+      "biome": "swamp",
+      "monster": "bog_lurker"
+    },
+    {
+      "id": "jarl_morto",
+      "name": {
+        "pt": "Jarl Morto",
+        "en": "Dead Jarl"
+      },
+      "biome": "north",
+      "monster": "wight"
+    },
+    {
+      "id": "matilha_cinzenta",
+      "name": {
+        "pt": "Matilha Cinzenta",
+        "en": "Ashen Pack"
+      },
+      "biome": "plains",
+      "monster": "wolf"
+    },
+    {
+      "id": "chefe_goblin",
+      "name": {
+        "pt": "Chefe Goblin",
+        "en": "Goblin Chief"
+      },
+      "biome": "plains",
+      "monster": "goblin"
+    },
+    {
+      "id": "aranha_da_clareira",
+      "name": {
+        "pt": "Aranha da Clareira",
+        "en": "Glade Spider"
+      },
+      "biome": "forest",
+      "monster": "spider_giant"
+    },
+    {
+      "id": "coracao_do_bosque",
+      "name": {
+        "pt": "Coração do Bosque",
+        "en": "Heart of the Wood"
+      },
+      "biome": "forest",
+      "monster": "treant"
+    },
+    {
+      "id": "urso_negro",
+      "name": {
+        "pt": "Urso Negro",
+        "en": "Black Bear"
+      },
+      "biome": "forest",
+      "monster": "dire_bear"
+    },
+    {
+      "id": "sombra_do_miasma",
+      "name": {
+        "pt": "Sombra do Miasma",
+        "en": "Miasma Shade"
+      },
+      "biome": "swamp",
+      "monster": "zombie_rotting"
+    },
+    {
+      "id": "minotauro_do_pico",
+      "name": {
+        "pt": "Minotauro do Pico",
+        "en": "Peak Minotaur"
+      },
+      "biome": "mountains",
+      "monster": "minotaur"
+    },
+    {
+      "id": "elemental_de_pedra",
+      "name": {
+        "pt": "Elemental de Pedra",
+        "en": "Stone Elemental"
+      },
+      "biome": "mountains",
+      "monster": "rock_elemental"
+    },
+    {
+      "id": "gigante_do_gelo",
+      "name": {
+        "pt": "Gigante do Gelo",
+        "en": "Frost Giant"
+      },
+      "biome": "north",
+      "monster": "frost_giant"
+    },
+    {
+      "id": "necromante_caduco",
+      "name": {
+        "pt": "Necromante Caduco",
+        "en": "Fallen Necromancer"
+      },
+      "biome": "ruins",
+      "monster": "necromancer_apprentice"
+    },
+    {
+      "id": "corsario_vermelho",
+      "name": {
+        "pt": "Corsário Vermelho",
+        "en": "Red Corsair"
+      },
+      "biome": "coast",
+      "monster": "sea_raider"
+    },
+    {
+      "id": "caranguejo_colossal",
+      "name": {
+        "pt": "Caranguejo Colossal",
+        "en": "Colossal Crab"
+      },
+      "biome": "coast",
+      "monster": "crab_giant"
+    }
+  ]
+}

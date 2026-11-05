@@ -1,0 +1,2175 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "sword",
+      "name": {
+        "pt": "Espada",
+        "en": "Sword"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "swordsmanship",
+      "dmg": [
+        6,
+        11
+      ],
+      "speed": 2.8,
+      "weight": 5,
+      "value": 80,
+      "material": "iron",
+      "icon": "espada_1",
+      "sprite_layer": "m/longsword",
+      "desc": {
+        "pt": "Espada forjada para o campo de batalha.",
+        "en": "Sword forged for the battlefield."
+      }
+    },
+    {
+      "id": "longsword",
+      "name": {
+        "pt": "Espada Longa",
+        "en": "Longsword"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "swordsmanship",
+      "dmg": [
+        8,
+        14
+      ],
+      "speed": 2.5,
+      "weight": 6,
+      "value": 120,
+      "material": "iron",
+      "icon": "espada_2",
+      "sprite_layer": "m/longsword",
+      "desc": {
+        "pt": "Espada Longa forjada para o campo de batalha.",
+        "en": "Longsword forged for the battlefield."
+      }
+    },
+    {
+      "id": "shortsword",
+      "name": {
+        "pt": "Espada Curta",
+        "en": "Shortsword"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "swordsmanship",
+      "dmg": [
+        5,
+        10
+      ],
+      "speed": 3.2,
+      "weight": 3,
+      "value": 60,
+      "material": "iron",
+      "icon": "espada_0",
+      "sprite_layer": "m/longsword",
+      "desc": {
+        "pt": "Espada Curta forjada para o campo de batalha.",
+        "en": "Shortsword forged for the battlefield."
+      }
+    },
+    {
+      "id": "scimitar",
+      "name": {
+        "pt": "Cimitarra",
+        "en": "Scimitar"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "swordsmanship",
+      "dmg": [
+        7,
+        13
+      ],
+      "speed": 2.7,
+      "weight": 5,
+      "value": 110,
+      "material": "iron",
+      "icon": "cimitarra_0",
+      "sprite_layer": "m/longsword",
+      "desc": {
+        "pt": "Cimitarra forjada para o campo de batalha.",
+        "en": "Scimitar forged for the battlefield."
+      }
+    },
+    {
+      "id": "dagger",
+      "name": {
+        "pt": "Adaga",
+        "en": "Dagger"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "fencing",
+      "dmg": [
+        3,
+        7
+      ],
+      "speed": 3.5,
+      "weight": 1,
+      "value": 25,
+      "material": "iron",
+      "icon": "faca_0",
+      "sprite_layer": "m/dagger",
+      "desc": {
+        "pt": "Adaga forjada para o campo de batalha.",
+        "en": "Dagger forged for the battlefield."
+      }
+    },
+    {
+      "id": "kris",
+      "name": {
+        "pt": "Kris",
+        "en": "Kris"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "fencing",
+      "dmg": [
+        4,
+        9
+      ],
+      "speed": 3.3,
+      "weight": 2,
+      "value": 45,
+      "material": "iron",
+      "icon": "faca_1",
+      "sprite_layer": "m/dagger",
+      "desc": {
+        "pt": "Kris forjada para o campo de batalha.",
+        "en": "Kris forged for the battlefield."
+      }
+    },
+    {
+      "id": "mace",
+      "name": {
+        "pt": "Maça",
+        "en": "Mace"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "mace_fighting",
+      "dmg": [
+        7,
+        12
+      ],
+      "speed": 2.6,
+      "weight": 8,
+      "value": 90,
+      "material": "iron",
+      "icon": "maca_0",
+      "sprite_layer": "m/mace",
+      "desc": {
+        "pt": "Maça forjada para o campo de batalha.",
+        "en": "Mace forged for the battlefield."
+      }
+    },
+    {
+      "id": "flanged_mace",
+      "name": {
+        "pt": "Maça de Flanges",
+        "en": "Flanged Mace"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "mace_fighting",
+      "dmg": [
+        8,
+        13
+      ],
+      "speed": 2.5,
+      "weight": 9,
+      "value": 110,
+      "material": "iron",
+      "icon": "maca_1",
+      "sprite_layer": "m/mace",
+      "desc": {
+        "pt": "Maça de Flanges forjada para o campo de batalha.",
+        "en": "Flanged Mace forged for the battlefield."
+      }
+    },
+    {
+      "id": "warhammer",
+      "name": {
+        "pt": "Martelo de Guerra",
+        "en": "Warhammer"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "mace_fighting",
+      "dmg": [
+        9,
+        16
+      ],
+      "speed": 2.2,
+      "weight": 10,
+      "value": 150,
+      "material": "iron",
+      "icon": "martelo",
+      "sprite_layer": "m/martelo",
+      "desc": {
+        "pt": "Martelo de Guerra forjada para o campo de batalha.",
+        "en": "Warhammer forged for the battlefield."
+      }
+    },
+    {
+      "id": "club",
+      "name": {
+        "pt": "Clava",
+        "en": "Club"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "mace_fighting",
+      "dmg": [
+        4,
+        8
+      ],
+      "speed": 3.0,
+      "weight": 4,
+      "value": 20,
+      "material": "wood",
+      "icon": "maca_0",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Clava forjada para o campo de batalha.",
+        "en": "Club forged for the battlefield."
+      }
+    },
+    {
+      "id": "axe",
+      "name": {
+        "pt": "Machado",
+        "en": "Axe"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "axe_fighting",
+      "dmg": [
+        7,
+        13
+      ],
+      "speed": 2.6,
+      "weight": 7,
+      "value": 95,
+      "material": "iron",
+      "icon": "acha_0",
+      "sprite_layer": "m/hand_axe",
+      "desc": {
+        "pt": "Machado forjada para o campo de batalha.",
+        "en": "Axe forged for the battlefield."
+      }
+    },
+    {
+      "id": "battleaxe",
+      "name": {
+        "pt": "Machado de Batalha",
+        "en": "Battle Axe"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "axe_fighting",
+      "dmg": [
+        10,
+        17
+      ],
+      "speed": 2.3,
+      "weight": 12,
+      "value": 160,
+      "material": "iron",
+      "icon": "machado",
+      "sprite_layer": "m/infantry_axe",
+      "desc": {
+        "pt": "Machado de Batalha forjada para o campo de batalha.",
+        "en": "Battle Axe forged for the battlefield."
+      }
+    },
+    {
+      "id": "hand_axe",
+      "name": {
+        "pt": "Machadinha",
+        "en": "Hand Axe"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "axe_fighting",
+      "dmg": [
+        5,
+        10
+      ],
+      "speed": 3.0,
+      "weight": 4,
+      "value": 50,
+      "material": "iron",
+      "icon": "acha_1",
+      "sprite_layer": "m/hand_axe",
+      "desc": {
+        "pt": "Machadinha forjada para o campo de batalha.",
+        "en": "Hand Axe forged for the battlefield."
+      }
+    },
+    {
+      "id": "spear",
+      "name": {
+        "pt": "Lança",
+        "en": "Spear"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "fencing",
+      "dmg": [
+        8,
+        14
+      ],
+      "speed": 2.4,
+      "weight": 7,
+      "value": 100,
+      "material": "iron",
+      "icon": "lanca_0",
+      "sprite_layer": "m/lanca",
+      "desc": {
+        "pt": "Lança forjada para o campo de batalha.",
+        "en": "Spear forged for the battlefield."
+      }
+    },
+    {
+      "id": "lance",
+      "name": {
+        "pt": "Lança de Choque",
+        "en": "Lance"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "fencing",
+      "dmg": [
+        10,
+        18
+      ],
+      "speed": 2.0,
+      "weight": 10,
+      "value": 180,
+      "material": "iron",
+      "icon": "lanca_1",
+      "sprite_layer": "m/lanca",
+      "desc": {
+        "pt": "Lança de Choque forjada para o campo de batalha.",
+        "en": "Lance forged for the battlefield."
+      }
+    },
+    {
+      "id": "bow",
+      "name": {
+        "pt": "Arco",
+        "en": "Bow"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "archery",
+      "dmg": [
+        6,
+        12
+      ],
+      "speed": 2.8,
+      "weight": 4,
+      "value": 80,
+      "material": "wood",
+      "icon": "arco",
+      "sprite_layer": "m/arco",
+      "desc": {
+        "pt": "Arco forjada para o campo de batalha.",
+        "en": "Bow forged for the battlefield."
+      }
+    },
+    {
+      "id": "longbow",
+      "name": {
+        "pt": "Arco Longo",
+        "en": "Longbow"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "archery",
+      "dmg": [
+        8,
+        15
+      ],
+      "speed": 2.5,
+      "weight": 5,
+      "value": 130,
+      "material": "wood",
+      "icon": "arco",
+      "sprite_layer": "m/arco",
+      "desc": {
+        "pt": "Arco Longo forjada para o campo de batalha.",
+        "en": "Longbow forged for the battlefield."
+      }
+    },
+    {
+      "id": "crossbow",
+      "name": {
+        "pt": "Besta",
+        "en": "Crossbow"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "archery",
+      "dmg": [
+        9,
+        16
+      ],
+      "speed": 2.0,
+      "weight": 8,
+      "value": 160,
+      "material": "wood",
+      "icon": "besta",
+      "sprite_layer": "m/besta",
+      "desc": {
+        "pt": "Besta forjada para o campo de batalha.",
+        "en": "Crossbow forged for the battlefield."
+      }
+    },
+    {
+      "id": "hand_crossbow",
+      "name": {
+        "pt": "Besta de Mão",
+        "en": "Hand Crossbow"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "archery",
+      "dmg": [
+        5,
+        9
+      ],
+      "speed": 2.8,
+      "weight": 3,
+      "value": 90,
+      "material": "wood",
+      "icon": "bestaMao",
+      "sprite_layer": "m/besta_mao",
+      "desc": {
+        "pt": "Besta de Mão forjada para o campo de batalha.",
+        "en": "Hand Crossbow forged for the battlefield."
+      }
+    },
+    {
+      "id": "staff",
+      "name": {
+        "pt": "Cajado",
+        "en": "Staff"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "magery",
+      "dmg": [
+        4,
+        8
+      ],
+      "speed": 2.5,
+      "weight": 4,
+      "value": 40,
+      "material": "wood",
+      "icon": "lanca_0",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Cajado forjada para o campo de batalha.",
+        "en": "Staff forged for the battlefield."
+      }
+    },
+    {
+      "id": "quarterstaff",
+      "name": {
+        "pt": "Bastão",
+        "en": "Quarterstaff"
+      },
+      "type": "weapon",
+      "slot": "hand1",
+      "skill": "mace_fighting",
+      "dmg": [
+        6,
+        11
+      ],
+      "speed": 2.7,
+      "weight": 5,
+      "value": 35,
+      "material": "wood",
+      "icon": "lanca_1",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Bastão forjada para o campo de batalha.",
+        "en": "Quarterstaff forged for the battlefield."
+      }
+    },
+    {
+      "id": "gambeson",
+      "name": {
+        "pt": "Gambesão",
+        "en": "Gambeson"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 8,
+      "weight": 5,
+      "value": 60,
+      "material": "cloth",
+      "icon": "gambesao",
+      "sprite_layer": "m/gambesao",
+      "desc": {
+        "pt": "Gambesão para proteger o guerreiro.",
+        "en": "Gambeson to protect the warrior."
+      }
+    },
+    {
+      "id": "leather_armor",
+      "name": {
+        "pt": "Armadura de Couro",
+        "en": "Leather Armor"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 12,
+      "weight": 8,
+      "value": 90,
+      "material": "leather",
+      "icon": "couroCozido",
+      "sprite_layer": "m/leather_armor",
+      "desc": {
+        "pt": "Armadura de Couro para proteger o guerreiro.",
+        "en": "Leather Armor to protect the warrior."
+      }
+    },
+    {
+      "id": "studded_leather",
+      "name": {
+        "pt": "Couro Cravejado",
+        "en": "Studded Leather"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 14,
+      "weight": 9,
+      "value": 120,
+      "material": "leather",
+      "icon": "jaque",
+      "sprite_layer": "m/jaque_couro",
+      "desc": {
+        "pt": "Couro Cravejado para proteger o guerreiro.",
+        "en": "Studded Leather to protect the warrior."
+      }
+    },
+    {
+      "id": "leather_hood",
+      "name": {
+        "pt": "Capuz de Couro",
+        "en": "Leather Hood"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 3,
+      "weight": 2,
+      "value": 25,
+      "material": "leather",
+      "icon": "capuz",
+      "sprite_layer": "m/leather_hood",
+      "desc": {
+        "pt": "Capuz de Couro para proteger o guerreiro.",
+        "en": "Leather Hood to protect the warrior."
+      }
+    },
+    {
+      "id": "leather_gloves",
+      "name": {
+        "pt": "Luvas de Couro",
+        "en": "Leather Gloves"
+      },
+      "type": "armor",
+      "slot": "hands",
+      "armor": 2,
+      "weight": 1,
+      "value": 20,
+      "material": "leather",
+      "icon": "luvasCouro",
+      "sprite_layer": "m/leather_gloves",
+      "desc": {
+        "pt": "Luvas de Couro para proteger o guerreiro.",
+        "en": "Leather Gloves to protect the warrior."
+      }
+    },
+    {
+      "id": "leather_boots",
+      "name": {
+        "pt": "Botas de Couro",
+        "en": "Leather Boots"
+      },
+      "type": "armor",
+      "slot": "feet",
+      "armor": 3,
+      "weight": 2,
+      "value": 30,
+      "material": "leather",
+      "icon": "botasCouro",
+      "sprite_layer": "m/leather_boots",
+      "desc": {
+        "pt": "Botas de Couro para proteger o guerreiro.",
+        "en": "Leather Boots to protect the warrior."
+      }
+    },
+    {
+      "id": "hauberk",
+      "name": {
+        "pt": "Cota de Malha",
+        "en": "Chain Hauberk"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 16,
+      "weight": 12,
+      "value": 220,
+      "material": "iron",
+      "icon": "cotaSemMangas",
+      "sprite_layer": "m/chain_cuirass",
+      "desc": {
+        "pt": "Cota de Malha para proteger o guerreiro.",
+        "en": "Chain Hauberk to protect the warrior."
+      }
+    },
+    {
+      "id": "lorigao",
+      "name": {
+        "pt": "Lorigão",
+        "en": "Hauberk"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 18,
+      "weight": 15,
+      "value": 300,
+      "material": "iron",
+      "icon": "cota",
+      "sprite_layer": "m/lorigao",
+      "desc": {
+        "pt": "Lorigão para proteger o guerreiro.",
+        "en": "Hauberk to protect the warrior."
+      }
+    },
+    {
+      "id": "loriga",
+      "name": {
+        "pt": "Loriga",
+        "en": "Lorica"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 17,
+      "weight": 14,
+      "value": 280,
+      "material": "iron",
+      "icon": "loriga",
+      "sprite_layer": "m/loriga",
+      "desc": {
+        "pt": "Loriga para proteger o guerreiro.",
+        "en": "Lorica to protect the warrior."
+      }
+    },
+    {
+      "id": "chain_coif",
+      "name": {
+        "pt": "Coifa de Malha",
+        "en": "Chain Coif"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 6,
+      "weight": 4,
+      "value": 80,
+      "material": "iron",
+      "icon": "capelo",
+      "sprite_layer": "m/chain_coif",
+      "desc": {
+        "pt": "Coifa de Malha para proteger o guerreiro.",
+        "en": "Chain Coif to protect the warrior."
+      }
+    },
+    {
+      "id": "chain_gloves",
+      "name": {
+        "pt": "Luvas de Malha",
+        "en": "Chain Gloves"
+      },
+      "type": "armor",
+      "slot": "hands",
+      "armor": 4,
+      "weight": 3,
+      "value": 55,
+      "material": "iron",
+      "icon": "manoplas",
+      "sprite_layer": "m/chain_gloves",
+      "desc": {
+        "pt": "Luvas de Malha para proteger o guerreiro.",
+        "en": "Chain Gloves to protect the warrior."
+      }
+    },
+    {
+      "id": "chain_greaves",
+      "name": {
+        "pt": "Grevas de Malha",
+        "en": "Chain Greaves"
+      },
+      "type": "armor",
+      "slot": "legs",
+      "armor": 8,
+      "weight": 7,
+      "value": 110,
+      "material": "iron",
+      "icon": "chain_greaves",
+      "sprite_layer": "m/chain_greaves",
+      "desc": {
+        "pt": "Grevas de Malha para proteger o guerreiro.",
+        "en": "Chain Greaves to protect the warrior."
+      }
+    },
+    {
+      "id": "chain_boots",
+      "name": {
+        "pt": "Botas de Malha",
+        "en": "Chain Boots"
+      },
+      "type": "armor",
+      "slot": "feet",
+      "armor": 5,
+      "weight": 5,
+      "value": 70,
+      "material": "iron",
+      "icon": "botasCano",
+      "sprite_layer": "m/chain_boots",
+      "desc": {
+        "pt": "Botas de Malha para proteger o guerreiro.",
+        "en": "Chain Boots to protect the warrior."
+      }
+    },
+    {
+      "id": "nasal_helm",
+      "name": {
+        "pt": "Elmo Nasal",
+        "en": "Nasal Helm"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 8,
+      "weight": 5,
+      "value": 100,
+      "material": "iron",
+      "icon": "elmoNasal",
+      "sprite_layer": "m/elmo_nasal",
+      "desc": {
+        "pt": "Elmo Nasal para proteger o guerreiro.",
+        "en": "Nasal Helm to protect the warrior."
+      }
+    },
+    {
+      "id": "kettle_helm",
+      "name": {
+        "pt": "Elmo de Caldeirão",
+        "en": "Kettle Helm"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 9,
+      "weight": 6,
+      "value": 120,
+      "material": "iron",
+      "icon": "elmoPontudo",
+      "sprite_layer": "m/elmo_pontudo",
+      "desc": {
+        "pt": "Elmo de Caldeirão para proteger o guerreiro.",
+        "en": "Kettle Helm to protect the warrior."
+      }
+    },
+    {
+      "id": "greathelm",
+      "name": {
+        "pt": "Grande Elmo",
+        "en": "Great Helm"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 12,
+      "weight": 8,
+      "value": 180,
+      "material": "iron",
+      "icon": "elmoGrande",
+      "sprite_layer": "m/elmo_grande",
+      "desc": {
+        "pt": "Grande Elmo para proteger o guerreiro.",
+        "en": "Great Helm to protect the warrior."
+      }
+    },
+    {
+      "id": "face_helm",
+      "name": {
+        "pt": "Elmo Fechado",
+        "en": "Closed Helm"
+      },
+      "type": "armor",
+      "slot": "head",
+      "armor": 11,
+      "weight": 7,
+      "value": 160,
+      "material": "iron",
+      "icon": "elmoGrande",
+      "sprite_layer": "m/elmo_rosto",
+      "desc": {
+        "pt": "Elmo Fechado para proteger o guerreiro.",
+        "en": "Closed Helm to protect the warrior."
+      }
+    },
+    {
+      "id": "plate_torso",
+      "name": {
+        "pt": "Peitoral de Placas",
+        "en": "Plate Torso"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 24,
+      "weight": 20,
+      "value": 450,
+      "material": "iron",
+      "icon": "sobreveste",
+      "sprite_layer": "m/armadura_cruzado",
+      "desc": {
+        "pt": "Peitoral de Placas para proteger o guerreiro.",
+        "en": "Plate Torso to protect the warrior."
+      }
+    },
+    {
+      "id": "plate_arms",
+      "name": {
+        "pt": "Braçais de Placas",
+        "en": "Plate Arms"
+      },
+      "type": "armor",
+      "slot": "arms",
+      "armor": 10,
+      "weight": 8,
+      "value": 160,
+      "material": "iron",
+      "icon": "manoplas",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Braçais de Placas para proteger o guerreiro.",
+        "en": "Plate Arms to protect the warrior."
+      }
+    },
+    {
+      "id": "plate_legs",
+      "name": {
+        "pt": "Coxotes de Placas",
+        "en": "Plate Legs"
+      },
+      "type": "armor",
+      "slot": "legs",
+      "armor": 14,
+      "weight": 12,
+      "value": 220,
+      "material": "iron",
+      "icon": "plate_legs",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Coxotes de Placas para proteger o guerreiro.",
+        "en": "Plate Legs to protect the warrior."
+      }
+    },
+    {
+      "id": "plate_boots",
+      "name": {
+        "pt": "Botas de Placas",
+        "en": "Plate Boots"
+      },
+      "type": "armor",
+      "slot": "feet",
+      "armor": 8,
+      "weight": 8,
+      "value": 140,
+      "material": "iron",
+      "icon": "botasCano",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Botas de Placas para proteger o guerreiro.",
+        "en": "Plate Boots to protect the warrior."
+      }
+    },
+    {
+      "id": "plate_gloves",
+      "name": {
+        "pt": "Manoplas",
+        "en": "Plate Gauntlets"
+      },
+      "type": "armor",
+      "slot": "hands",
+      "armor": 7,
+      "weight": 5,
+      "value": 120,
+      "material": "iron",
+      "icon": "manoplas",
+      "sprite_layer": "m/chain_gloves",
+      "desc": {
+        "pt": "Manoplas para proteger o guerreiro.",
+        "en": "Plate Gauntlets to protect the warrior."
+      }
+    },
+    {
+      "id": "lamellar",
+      "name": {
+        "pt": "Armadura Lamelar",
+        "en": "Lamellar Armor"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 19,
+      "weight": 14,
+      "value": 320,
+      "material": "iron",
+      "icon": "lamelar",
+      "sprite_layer": "m/lamelar",
+      "desc": {
+        "pt": "Armadura Lamelar para proteger o guerreiro.",
+        "en": "Lamellar Armor to protect the warrior."
+      }
+    },
+    {
+      "id": "egyptian_gambeson",
+      "name": {
+        "pt": "Gibão Egípcio",
+        "en": "Egyptian Doublet"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 10,
+      "weight": 6,
+      "value": 85,
+      "material": "cloth",
+      "icon": "gibao",
+      "sprite_layer": "m/gibao_egipcio",
+      "desc": {
+        "pt": "Gibão Egípcio para proteger o guerreiro.",
+        "en": "Egyptian Doublet to protect the warrior."
+      }
+    },
+    {
+      "id": "turkish_cuirass",
+      "name": {
+        "pt": "Couraça Turca",
+        "en": "Turkish Cuirass"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 18,
+      "weight": 13,
+      "value": 290,
+      "material": "iron",
+      "icon": "couracaTurca",
+      "sprite_layer": "m/couraca_turca",
+      "desc": {
+        "pt": "Couraça Turca para proteger o guerreiro.",
+        "en": "Turkish Cuirass to protect the warrior."
+      }
+    },
+    {
+      "id": "crusader_surcoat",
+      "name": {
+        "pt": "Sobreveste Cruzada",
+        "en": "Crusader Surcoat"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 15,
+      "weight": 10,
+      "value": 250,
+      "material": "cloth",
+      "icon": "sobreveste",
+      "sprite_layer": "m/armadura_cruzado",
+      "desc": {
+        "pt": "Sobreveste Cruzada para proteger o guerreiro.",
+        "en": "Crusader Surcoat to protect the warrior."
+      }
+    },
+    {
+      "id": "cazagante",
+      "name": {
+        "pt": "Cazagante",
+        "en": "Cazagante"
+      },
+      "type": "armor",
+      "slot": "torso",
+      "armor": 13,
+      "weight": 9,
+      "value": 160,
+      "material": "leather",
+      "icon": "cazagante",
+      "sprite_layer": "m/cazagante",
+      "desc": {
+        "pt": "Cazagante para proteger o guerreiro.",
+        "en": "Cazagante to protect the warrior."
+      }
+    },
+    {
+      "id": "wooden_shield",
+      "name": {
+        "pt": "Escudo de Madeira",
+        "en": "Wooden Shield"
+      },
+      "type": "shield",
+      "slot": "hand2",
+      "armor": 5,
+      "weight": 6,
+      "value": 40,
+      "material": "wood",
+      "icon": "amendoa_0",
+      "sprite_layer": "m/shield",
+      "desc": {
+        "pt": "Escudo de Madeira para a mão esquerda.",
+        "en": "Wooden Shield for the off hand."
+      }
+    },
+    {
+      "id": "buckler",
+      "name": {
+        "pt": "Broquel",
+        "en": "Buckler"
+      },
+      "type": "shield",
+      "slot": "hand2",
+      "armor": 4,
+      "weight": 3,
+      "value": 50,
+      "material": "iron",
+      "icon": "broquel",
+      "sprite_layer": "m/buckler",
+      "desc": {
+        "pt": "Broquel para a mão esquerda.",
+        "en": "Buckler for the off hand."
+      }
+    },
+    {
+      "id": "kite_shield",
+      "name": {
+        "pt": "Escudo de Pipa",
+        "en": "Kite Shield"
+      },
+      "type": "shield",
+      "slot": "hand2",
+      "armor": 10,
+      "weight": 8,
+      "value": 120,
+      "material": "iron",
+      "icon": "amendoa_1",
+      "sprite_layer": "m/shield",
+      "desc": {
+        "pt": "Escudo de Pipa para a mão esquerda.",
+        "en": "Kite Shield for the off hand."
+      }
+    },
+    {
+      "id": "heater_shield",
+      "name": {
+        "pt": "Escudo Heater",
+        "en": "Heater Shield"
+      },
+      "type": "shield",
+      "slot": "hand2",
+      "armor": 9,
+      "weight": 7,
+      "value": 110,
+      "material": "iron",
+      "icon": "amendoa_2",
+      "sprite_layer": "m/shield",
+      "desc": {
+        "pt": "Escudo Heater para a mão esquerda.",
+        "en": "Heater Shield for the off hand."
+      }
+    },
+    {
+      "id": "round_shield",
+      "name": {
+        "pt": "Escudo Redondo",
+        "en": "Round Shield"
+      },
+      "type": "shield",
+      "slot": "hand2",
+      "armor": 7,
+      "weight": 6,
+      "value": 80,
+      "material": "wood",
+      "icon": "escudoRedondo",
+      "sprite_layer": "m/escudo_redondo",
+      "desc": {
+        "pt": "Escudo Redondo para a mão esquerda.",
+        "en": "Round Shield for the off hand."
+      }
+    },
+    {
+      "id": "crusader_shield",
+      "name": {
+        "pt": "Escudo Cruzado",
+        "en": "Crusader Shield"
+      },
+      "type": "shield",
+      "slot": "hand2",
+      "armor": 11,
+      "weight": 9,
+      "value": 150,
+      "material": "iron",
+      "icon": "escudoCruz",
+      "sprite_layer": "m/escudo_cruz",
+      "desc": {
+        "pt": "Escudo Cruzado para a mão esquerda.",
+        "en": "Crusader Shield for the off hand."
+      }
+    },
+    {
+      "id": "cloth_shirt",
+      "name": {
+        "pt": "Camisa de Pano",
+        "en": "Cloth Shirt"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 1,
+      "weight": 1,
+      "value": 10,
+      "material": "cloth",
+      "icon": "gambesao",
+      "sprite_layer": "m/cloth_shirt",
+      "desc": {
+        "pt": "Camisa de Pano simples e confortável.",
+        "en": "A simple, comfortable cloth shirt."
+      }
+    },
+    {
+      "id": "cloth_pants",
+      "name": {
+        "pt": "Calças de Pano",
+        "en": "Cloth Pants"
+      },
+      "type": "clothing",
+      "slot": "legs",
+      "armor": 1,
+      "weight": 1,
+      "value": 10,
+      "material": "cloth",
+      "icon": "cloth_pants",
+      "sprite_layer": "m/cloth_pants",
+      "desc": {
+        "pt": "Calças de Pano simples e confortável.",
+        "en": "A simple, comfortable cloth pants."
+      }
+    },
+    {
+      "id": "cloth_sandals",
+      "name": {
+        "pt": "Sandálias",
+        "en": "Sandals"
+      },
+      "type": "clothing",
+      "slot": "feet",
+      "armor": 0,
+      "weight": 1,
+      "value": 5,
+      "material": "cloth",
+      "icon": "cloth_sandals",
+      "sprite_layer": "m/cloth_sandals",
+      "desc": {
+        "pt": "Sandálias simples e confortável.",
+        "en": "A simple, comfortable sandals."
+      }
+    },
+    {
+      "id": "pilgrim_habit",
+      "name": {
+        "pt": "Hábito de Peregrino",
+        "en": "Pilgrim Habit"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 2,
+      "weight": 2,
+      "value": 25,
+      "material": "cloth",
+      "icon": "habito",
+      "sprite_layer": "m/habito_peregrino",
+      "desc": {
+        "pt": "Hábito de Peregrino simples e confortável.",
+        "en": "A simple, comfortable pilgrim habit."
+      }
+    },
+    {
+      "id": "peasant_tunic",
+      "name": {
+        "pt": "Túnica de Aldeão",
+        "en": "Peasant Tunic"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 1,
+      "weight": 1,
+      "value": 8,
+      "material": "cloth",
+      "icon": "gambesao",
+      "sprite_layer": "m/aldeao_tunica1",
+      "desc": {
+        "pt": "Túnica de Aldeão simples e confortável.",
+        "en": "A simple, comfortable peasant tunic."
+      }
+    },
+    {
+      "id": "wool_cloak",
+      "name": {
+        "pt": "Manto de Lã",
+        "en": "Wool Cloak"
+      },
+      "type": "clothing",
+      "slot": "cloak",
+      "armor": 2,
+      "weight": 3,
+      "value": 40,
+      "material": "cloth",
+      "icon": "sobreveste",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Manto de Lã simples e confortável.",
+        "en": "A simple, comfortable wool cloak."
+      }
+    },
+    {
+      "id": "travel_cloak",
+      "name": {
+        "pt": "Capa de Viagem",
+        "en": "Travel Cloak"
+      },
+      "type": "clothing",
+      "slot": "cloak",
+      "armor": 2,
+      "weight": 3,
+      "value": 55,
+      "material": "cloth",
+      "icon": "cazagante",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Capa de Viagem simples e confortável.",
+        "en": "A simple, comfortable travel cloak."
+      }
+    },
+    {
+      "id": "crimson_cloak",
+      "name": {
+        "pt": "Manto Carmesim",
+        "en": "Crimson Cloak"
+      },
+      "type": "clothing",
+      "slot": "cloak",
+      "armor": 2,
+      "weight": 3,
+      "value": 90,
+      "material": "cloth",
+      "icon": "sobreveste",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Manto Carmesim simples e confortável.",
+        "en": "A simple, comfortable crimson cloak."
+      }
+    },
+    {
+      "id": "keffiyeh",
+      "name": {
+        "pt": "Keffiyeh",
+        "en": "Keffiyeh"
+      },
+      "type": "clothing",
+      "slot": "head",
+      "armor": 1,
+      "weight": 1,
+      "value": 15,
+      "material": "cloth",
+      "icon": "keffiyeh",
+      "sprite_layer": "m/keffiyeh",
+      "desc": {
+        "pt": "Keffiyeh simples e confortável.",
+        "en": "A simple, comfortable keffiyeh."
+      }
+    },
+    {
+      "id": "turban",
+      "name": {
+        "pt": "Turbante",
+        "en": "Turban"
+      },
+      "type": "clothing",
+      "slot": "head",
+      "armor": 1,
+      "weight": 1,
+      "value": 18,
+      "material": "cloth",
+      "icon": "turbante",
+      "sprite_layer": "m/turbante",
+      "desc": {
+        "pt": "Turbante simples e confortável.",
+        "en": "A simple, comfortable turban."
+      }
+    },
+    {
+      "id": "bedouin_robe",
+      "name": {
+        "pt": "Veste Beduína",
+        "en": "Bedouin Robe"
+      },
+      "type": "clothing",
+      "slot": "torso",
+      "armor": 2,
+      "weight": 2,
+      "value": 35,
+      "material": "cloth",
+      "icon": "gibao",
+      "sprite_layer": "m/beduino_veste",
+      "desc": {
+        "pt": "Veste Beduína simples e confortável.",
+        "en": "A simple, comfortable bedouin robe."
+      }
+    },
+    {
+      "id": "leather_belt",
+      "name": {
+        "pt": "Cinto de Couro",
+        "en": "Leather Belt"
+      },
+      "type": "clothing",
+      "slot": "none",
+      "armor": 0,
+      "weight": 1,
+      "value": 12,
+      "material": "leather",
+      "icon": "cintoCouro",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Cinto de Couro simples e confortável.",
+        "en": "A simple, comfortable leather belt."
+      }
+    },
+    {
+      "id": "knight_belt",
+      "name": {
+        "pt": "Cinto de Cavaleiro",
+        "en": "Knight Belt"
+      },
+      "type": "clothing",
+      "slot": "none",
+      "armor": 0,
+      "weight": 1,
+      "value": 40,
+      "material": "leather",
+      "icon": "cintoCavaleiro",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Cinto de Cavaleiro simples e confortável.",
+        "en": "A simple, comfortable knight belt."
+      }
+    },
+    {
+      "id": "copper_ring",
+      "name": {
+        "pt": "Anel de Cobre",
+        "en": "Copper Ring"
+      },
+      "type": "jewelry",
+      "slot": "ring",
+      "weight": 0.1,
+      "value": 15,
+      "material": "copper",
+      "icon": "sinete",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Anel de Cobre de adorno.",
+        "en": "An ornamental copper ring."
+      }
+    },
+    {
+      "id": "silver_ring",
+      "name": {
+        "pt": "Anel de Prata",
+        "en": "Silver Ring"
+      },
+      "type": "jewelry",
+      "slot": "ring",
+      "weight": 0.1,
+      "value": 50,
+      "material": "silver",
+      "icon": "anelPrata",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Anel de Prata de adorno.",
+        "en": "An ornamental silver ring."
+      }
+    },
+    {
+      "id": "gold_ring",
+      "name": {
+        "pt": "Anel de Ouro",
+        "en": "Gold Ring"
+      },
+      "type": "jewelry",
+      "slot": "ring",
+      "weight": 0.1,
+      "value": 120,
+      "material": "gold",
+      "icon": "anelPrata",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Anel de Ouro de adorno.",
+        "en": "An ornamental gold ring."
+      }
+    },
+    {
+      "id": "silver_necklace",
+      "name": {
+        "pt": "Colar de Prata",
+        "en": "Silver Necklace"
+      },
+      "type": "jewelry",
+      "slot": "neck",
+      "weight": 0.2,
+      "value": 80,
+      "material": "silver",
+      "icon": "cruz",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Colar de Prata de adorno.",
+        "en": "An ornamental silver necklace."
+      }
+    },
+    {
+      "id": "gold_necklace",
+      "name": {
+        "pt": "Colar de Ouro",
+        "en": "Gold Necklace"
+      },
+      "type": "jewelry",
+      "slot": "neck",
+      "weight": 0.2,
+      "value": 180,
+      "material": "gold",
+      "icon": "relicario",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Colar de Ouro de adorno.",
+        "en": "An ornamental gold necklace."
+      }
+    },
+    {
+      "id": "pilgrim_cross",
+      "name": {
+        "pt": "Cruz de Peregrino",
+        "en": "Pilgrim Cross"
+      },
+      "type": "jewelry",
+      "slot": "neck",
+      "weight": 0.2,
+      "value": 35,
+      "material": "silver",
+      "icon": "cruz",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Cruz de Peregrino de adorno.",
+        "en": "An ornamental pilgrim cross."
+      }
+    },
+    {
+      "id": "relicary",
+      "name": {
+        "pt": "Relicário",
+        "en": "Reliquary"
+      },
+      "type": "jewelry",
+      "slot": "neck",
+      "weight": 0.3,
+      "value": 200,
+      "material": "gold",
+      "icon": "relicario",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Relicário de adorno.",
+        "en": "An ornamental reliquary."
+      }
+    },
+    {
+      "id": "bandage",
+      "name": {
+        "pt": "Bandagem",
+        "en": "Bandage"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 5,
+      "material": "cloth",
+      "icon": "bandage",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Consumível: Bandagem.",
+        "en": "Consumable: Bandage."
+      }
+    },
+    {
+      "id": "greater_bandage",
+      "name": {
+        "pt": "Bandagem Grossa",
+        "en": "Heavy Bandage"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.2,
+      "value": 12,
+      "material": "cloth",
+      "icon": "greater_bandage",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Consumível: Bandagem Grossa.",
+        "en": "Consumable: Heavy Bandage."
+      }
+    },
+    {
+      "id": "heal_potion",
+      "name": {
+        "pt": "Poção de Cura",
+        "en": "Heal Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 30,
+      "material": "glass",
+      "icon": "heal_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Consumível: Poção de Cura.",
+        "en": "Consumable: Heal Potion."
+      }
+    },
+    {
+      "id": "greater_heal_potion",
+      "name": {
+        "pt": "Poção de Cura Maior",
+        "en": "Greater Heal Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 75,
+      "material": "glass",
+      "icon": "greater_heal_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Consumível: Poção de Cura Maior.",
+        "en": "Consumable: Greater Heal Potion."
+      }
+    },
+    {
+      "id": "mana_potion",
+      "name": {
+        "pt": "Poção de Mana",
+        "en": "Mana Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 35,
+      "material": "glass",
+      "icon": "mana_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Consumível: Poção de Mana.",
+        "en": "Consumable: Mana Potion."
+      }
+    },
+    {
+      "id": "refresh_potion",
+      "name": {
+        "pt": "Poção de Vigôr",
+        "en": "Refresh Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 25,
+      "material": "glass",
+      "icon": "refresh_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Consumível: Poção de Vigôr.",
+        "en": "Consumable: Refresh Potion."
+      }
+    },
+    {
+      "id": "cure_potion",
+      "name": {
+        "pt": "Poção Antídoto",
+        "en": "Cure Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 40,
+      "material": "glass",
+      "icon": "cure_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Consumível: Poção Antídoto.",
+        "en": "Consumable: Cure Potion."
+      }
+    },
+    {
+      "id": "poison_potion",
+      "name": {
+        "pt": "Poção de Veneno",
+        "en": "Poison Potion"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.5,
+      "value": 45,
+      "material": "glass",
+      "icon": "poison_potion",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Consumível: Poção de Veneno.",
+        "en": "Consumable: Poison Potion."
+      }
+    },
+    {
+      "id": "bread",
+      "name": {
+        "pt": "Pão",
+        "en": "Bread"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.3,
+      "value": 3,
+      "material": "food",
+      "icon": "bread",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Consumível: Pão.",
+        "en": "Consumable: Bread."
+      }
+    },
+    {
+      "id": "dried_meat",
+      "name": {
+        "pt": "Carne Seca",
+        "en": "Dried Meat"
+      },
+      "type": "consumable",
+      "slot": "none",
+      "weight": 0.4,
+      "value": 5,
+      "material": "food",
+      "icon": "dried_meat",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Consumível: Carne Seca.",
+        "en": "Consumable: Dried Meat."
+      }
+    },
+    {
+      "id": "iron_ore",
+      "name": {
+        "pt": "Minério de Ferro",
+        "en": "Iron Ore"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 4,
+      "value": 4,
+      "material": "stone",
+      "icon": "iron_ore",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Minério de Ferro.",
+        "en": "Resource: Iron Ore."
+      }
+    },
+    {
+      "id": "copper_ore",
+      "name": {
+        "pt": "Minério de Cobre",
+        "en": "Copper Ore"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 3,
+      "value": 3,
+      "material": "stone",
+      "icon": "copper_ore",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Minério de Cobre.",
+        "en": "Resource: Copper Ore."
+      }
+    },
+    {
+      "id": "silver_ore",
+      "name": {
+        "pt": "Minério de Prata",
+        "en": "Silver Ore"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 4,
+      "value": 12,
+      "material": "stone",
+      "icon": "silver_ore",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Minério de Prata.",
+        "en": "Resource: Silver Ore."
+      }
+    },
+    {
+      "id": "gold_ore",
+      "name": {
+        "pt": "Minério de Ouro",
+        "en": "Gold Ore"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 4,
+      "value": 30,
+      "material": "stone",
+      "icon": "gold_ore",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Minério de Ouro.",
+        "en": "Resource: Gold Ore."
+      }
+    },
+    {
+      "id": "iron_ingot",
+      "name": {
+        "pt": "Barra de Ferro",
+        "en": "Iron Ingot"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 10,
+      "material": "iron",
+      "icon": "iron_ingot",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Barra de Ferro.",
+        "en": "Resource: Iron Ingot."
+      }
+    },
+    {
+      "id": "logs",
+      "name": {
+        "pt": "Toros",
+        "en": "Logs"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 5,
+      "value": 2,
+      "material": "wood",
+      "icon": "logs",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Toros.",
+        "en": "Resource: Logs."
+      }
+    },
+    {
+      "id": "boards",
+      "name": {
+        "pt": "Tábuas",
+        "en": "Boards"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 2,
+      "value": 4,
+      "material": "wood",
+      "icon": "boards",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Tábuas.",
+        "en": "Resource: Boards."
+      }
+    },
+    {
+      "id": "leather_hide",
+      "name": {
+        "pt": "Pele",
+        "en": "Hide"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 3,
+      "value": 6,
+      "material": "leather",
+      "icon": "leather_hide",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Pele.",
+        "en": "Resource: Hide."
+      }
+    },
+    {
+      "id": "cut_leather",
+      "name": {
+        "pt": "Couro Cortado",
+        "en": "Cut Leather"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 1,
+      "value": 10,
+      "material": "leather",
+      "icon": "cut_leather",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Couro Cortado.",
+        "en": "Resource: Cut Leather."
+      }
+    },
+    {
+      "id": "cloth_bolt",
+      "name": {
+        "pt": "Peça de Tecido",
+        "en": "Bolt of Cloth"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 2,
+      "value": 8,
+      "material": "cloth",
+      "icon": "cloth_bolt",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Peça de Tecido.",
+        "en": "Resource: Bolt of Cloth."
+      }
+    },
+    {
+      "id": "arrow",
+      "name": {
+        "pt": "Flecha",
+        "en": "Arrow"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 2,
+      "material": "wood",
+      "icon": "arrow",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Flecha.",
+        "en": "Resource: Arrow."
+      }
+    },
+    {
+      "id": "crossbow_bolt",
+      "name": {
+        "pt": "Virote",
+        "en": "Crossbow Bolt"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 3,
+      "material": "wood",
+      "icon": "crossbow_bolt",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Recurso: Virote.",
+        "en": "Resource: Crossbow Bolt."
+      }
+    },
+    {
+      "id": "pickaxe",
+      "name": {
+        "pt": "Picareta",
+        "en": "Pickaxe"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 8,
+      "value": 40,
+      "material": "iron",
+      "icon": "acha_0",
+      "sprite_layer": "m/hand_axe",
+      "desc": {
+        "pt": "Ferramenta: Picareta.",
+        "en": "Tool: Pickaxe."
+      }
+    },
+    {
+      "id": "smith_hammer",
+      "name": {
+        "pt": "Martelo de Ferreiro",
+        "en": "Smith Hammer"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 5,
+      "value": 35,
+      "material": "iron",
+      "icon": "martelo",
+      "sprite_layer": "m/martelo",
+      "desc": {
+        "pt": "Ferramenta: Martelo de Ferreiro.",
+        "en": "Tool: Smith Hammer."
+      }
+    },
+    {
+      "id": "sewing_kit",
+      "name": {
+        "pt": "Kit de Costura",
+        "en": "Sewing Kit"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 1,
+      "value": 20,
+      "material": "iron",
+      "icon": "sewing_kit",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Ferramenta: Kit de Costura.",
+        "en": "Tool: Sewing Kit."
+      }
+    },
+    {
+      "id": "skinning_knife",
+      "name": {
+        "pt": "Faca de Esfolar",
+        "en": "Skinning Knife"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 1,
+      "value": 18,
+      "material": "iron",
+      "icon": "faca_0",
+      "sprite_layer": "m/dagger",
+      "desc": {
+        "pt": "Ferramenta: Faca de Esfolar.",
+        "en": "Tool: Skinning Knife."
+      }
+    },
+    {
+      "id": "hatchet",
+      "name": {
+        "pt": "Machadinha de Lenha",
+        "en": "Hatchet"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 4,
+      "value": 30,
+      "material": "iron",
+      "icon": "acha_1",
+      "sprite_layer": "m/hand_axe",
+      "desc": {
+        "pt": "Ferramenta: Machadinha de Lenha.",
+        "en": "Tool: Hatchet."
+      }
+    },
+    {
+      "id": "fishing_pole",
+      "name": {
+        "pt": "Vara de Pescar",
+        "en": "Fishing Pole"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 3,
+      "value": 25,
+      "material": "wood",
+      "icon": "fishing_pole",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Ferramenta: Vara de Pescar.",
+        "en": "Tool: Fishing Pole."
+      }
+    },
+    {
+      "id": "mortar_pestle",
+      "name": {
+        "pt": "Almofariz e Pilão",
+        "en": "Mortar and Pestle"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 2,
+      "value": 30,
+      "material": "stone",
+      "icon": "mortar_pestle",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Ferramenta: Almofariz e Pilão.",
+        "en": "Tool: Mortar and Pestle."
+      }
+    },
+    {
+      "id": "tinker_tools",
+      "name": {
+        "pt": "Ferramentas de Funileiro",
+        "en": "Tinker Tools"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 2,
+      "value": 40,
+      "material": "iron",
+      "icon": "tinker_tools",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Ferramenta: Ferramentas de Funileiro.",
+        "en": "Tool: Tinker Tools."
+      }
+    },
+    {
+      "id": "shovel",
+      "name": {
+        "pt": "Pá",
+        "en": "Shovel"
+      },
+      "type": "tool",
+      "slot": "hand1",
+      "weight": 6,
+      "value": 28,
+      "material": "iron",
+      "icon": "shovel",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Ferramenta: Pá.",
+        "en": "Tool: Shovel."
+      }
+    },
+    {
+      "id": "wooden_chest",
+      "name": {
+        "pt": "Baú de Madeira",
+        "en": "Wooden Chest"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 20,
+      "value": 50,
+      "material": "wood",
+      "icon": "wooden_chest",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Baú de Madeira.",
+        "en": "Wooden Chest."
+      }
+    },
+    {
+      "id": "simple_bed",
+      "name": {
+        "pt": "Cama Simples",
+        "en": "Simple Bed"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 40,
+      "value": 80,
+      "material": "wood",
+      "icon": "simple_bed",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Cama Simples.",
+        "en": "Simple Bed."
+      }
+    },
+    {
+      "id": "wooden_table",
+      "name": {
+        "pt": "Mesa de Madeira",
+        "en": "Wooden Table"
+      },
+      "type": "furniture",
+      "slot": "none",
+      "weight": 30,
+      "value": 60,
+      "material": "wood",
+      "icon": "wooden_table",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Mesa de Madeira.",
+        "en": "Wooden Table."
+      }
+    },
+    {
+      "id": "deed_plains_cabin",
+      "name": {
+        "pt": "Escritura: Cabana da Planície",
+        "en": "Deed: Plains Cabin"
+      },
+      "type": "deed",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 5000,
+      "material": "paper",
+      "icon": "deed_plains_cabin",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Escritura: Cabana da Planície.",
+        "en": "Deed: Plains Cabin."
+      }
+    },
+    {
+      "id": "deed_smithy",
+      "name": {
+        "pt": "Escritura: Ferraria",
+        "en": "Deed: Smithy"
+      },
+      "type": "deed",
+      "slot": "none",
+      "weight": 0.1,
+      "value": 12000,
+      "material": "paper",
+      "icon": "deed_smithy",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Escritura: Ferraria.",
+        "en": "Deed: Smithy."
+      }
+    },
+    {
+      "id": "gold_coin",
+      "name": {
+        "pt": "Moeda de Ouro",
+        "en": "Gold Coin"
+      },
+      "type": "misc",
+      "slot": "none",
+      "weight": 0.02,
+      "value": 1,
+      "material": "gold",
+      "icon": "gold_coin",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Moeda padrão do reino.",
+        "en": "Standard coin of the realm."
+      }
+    }
+  ]
+}
