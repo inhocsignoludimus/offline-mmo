@@ -93,6 +93,8 @@ button { font-family: inherit; }
 #create input, #create select { width: 100%; padding: 7px 8px; background: #0e0d0b; color: #fff; border: 1px solid #4a4030; font: inherit; user-select: text; -webkit-user-select: text; }
 #create .row { display: flex; gap: 10px; } #create .row > div { flex: 1; }
 #create button { width: 100%; margin-top: 18px; padding: 10px; background: linear-gradient(#6a5530, #3e301a); color: var(--ouro); border: 1px solid #000; font: 700 16px 'Alegreya SC', Georgia, serif; cursor: pointer; }
+#create .kitinfo { margin: 8px 0 0; font-size: 13px; color: var(--ouro); min-height: 18px; }
+#create .free { margin-top: 6px; }
 #create .note { margin-top: 12px; font-size: 11px; color: #6f6650; text-align: center; }
 
 @media (max-height: 520px), (max-width: 700px) {
@@ -101,3 +103,14 @@ button { font-family: inherit; }
   #menubar { bottom: 4px; padding: 2px; }
   #menubar button { padding: 4px 6px; font-size: 12px; }
 }
+
+/* skills */
+.skillsg .gbody { display: flex; flex-direction: column; padding: 5px; }
+.sktot { color: var(--ouro); font-size: 13px; margin-bottom: 4px; }
+.sklist { flex: 1; overflow-y: auto; touch-action: pan-y; }
+.skrow { display: flex; align-items: center; gap: 6px; font-size: 13px; padding: 1px 2px; border-bottom: 1px solid rgba(255,255,255,.04); }
+.skrow span { flex: 1; } .skrow b { width: 40px; text-align: right; font-weight: 600; }
+.skrow.zero { color: #7a7260; }
+.skrow button { width: 22px; height: 18px; padding: 0; font-size: 10px; background: #1a1814; border: 1px solid #4a4030; color: #8fd08f; cursor: pointer; }
+.skrow button.down { color: #e08a6a; } .skrow button.lock { color: #b0a890; }
+#menubar button[data-act=names].on { color: var(--ouro); border-color: var(--ouro); }

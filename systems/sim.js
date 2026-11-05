@@ -35,7 +35,9 @@ const VISUAIS_F = [() => [rnd(['clothes', 'aldea_roupa2', 'aldea_roupa2', 'habit
 const COR_NOME = { inocente: '#6ab0ff', criminoso: '#a0a0a0', assassino: '#ff5a4a', aliado: '#5ee07a', inimigo: '#ffa040' };
 
 const Sim = {
-  sims: [], guilds: [], wars: [], raids: [], invites: {}, t: 0, nextGlobal: 4, nextLogin: 20, nextGuild: 60,
+  sims: [], guilds: [], wars: [], raids: [], invites: {}, t: 0, nextGlobal: 8, nextLogin: 25, nextGuild: 90,
+  // quantos andam na cidade com o jogador (o resto está online em outros lugares, só no chat)
+  NEAR_START: 7, NEAR_MAX: 9,
   init(data, map) {
     this.map = map;
     this.guilds = data.guilds.guilds.map(g => ({ ...g, members: [] }));
@@ -55,7 +57,7 @@ const Sim = {
     for (let k = 0; k < 2; k++) { const a = rnd(caos), b = rnd(ordem); if (a && b && !this.atWar(a, b)) this.wars.push({ a, b }); }
     // começa com uns 40 online, 14 deles na cidade
     const sh = this.sims.slice().sort(() => Math.random() - 0.5);
-    sh.slice(0, 40).forEach((s, i) => this.login(s, i < 14, true));
+    sh.slice(0, 40).forEach((s, i) => this.login(s, i < this.NEAR_START, true));
   },
   online() { return this.sims.filter(s => s.online); },
   near() { return this.sims.filter(s => s.near); },
@@ -71,11 +73,11 @@ const Sim = {
       s.actor.sim = s; s.brain = { state: 'idle', until: this.t + between(1, 6) };
       this.color(s);
       Game.actors.push(s.actor);
-      if (!quiet && chance(0.5)) setTimeout(() => this.say(s, 'greet'), between(1500, 5000));
+      if (!quiet && chance(0.3)) setTimeout(() => this.say(s, 'greet'), between(1500, 5000));
     }
   },
   logout(s) {
-    if (s.near && chance(0.5)) this.say(s, 'bye');
+    if (s.near && chance(0.3)) this.say(s, 'bye');
     const go = () => { s.online = false; s.near = false; if (s.actor) { Game.actors.splice(Game.actors.indexOf(s.actor), 1); s.actor = null; } };
     s.near ? setTimeout(go, 1800) : go();
   },
@@ -110,7 +112,7 @@ const Sim = {
   emit(s, ch, text) {
     const who = s.guild && ch !== 'guild' ? `${s.name} [${s.guild.tag}]` : s.name;
     Journal.add(ch, who, text);
-    if (ch === 'local' && s.actor) s.actor.say = { text, until: Game.now + 3500 + text.length * 70 };
+    if (ch === 'local' && s.actor) s.actor.say = { text, until: Game.now + 2800 + text.length * 55 };
   },
   // escolhe alguém online (perto ou longe) que tenha frase para o contexto
   speaker(ctx, filter = () => true) {
@@ -195,9 +197,9 @@ const Sim = {
   update(dt) {
     this.t += dt;
     for (const s of this.near()) this.brain(s, dt);
-    if (this.t > this.nextGlobal) { this.nextGlobal = this.t + between(5, 13); this.globalEvent(); }
+    if (this.t > this.nextGlobal) { this.nextGlobal = this.t + between(14, 32); this.globalEvent(); }
     if (this.t > this.nextLogin) { this.nextLogin = this.t + between(12, 35); this.churn(); }
-    if (this.t > this.nextGuild) { this.nextGuild = this.t + between(70, 160); this.guildEvent(); }
+    if (this.t > this.nextGuild) { this.nextGuild = this.t + between(120, 260); this.guildEvent(); }
     for (const r of this.raids.slice()) if (this.t > r.end) {
       this.raids.splice(this.raids.indexOf(r), 1);
       const s = rnd(r.guild.members.filter(m => m.online && m !== Game.playerSim)); if (!s) continue;
@@ -217,14 +219,14 @@ const Sim = {
     } else if (r < 0.62 && a.ap.layers.some(l => TCOM.slot[l] === 'main')) { // treinar golpes
       a.setAnim('swing'); b.until = this.t + between(0.6, 1.2);
     } else { // ficar parado e às vezes falar
-      b.until = this.t + between(3, 12);
-      if (chance(0.22)) {
+      b.until = this.t + between(4, 14);
+      if (chance(0.07)) {
         const ctx = rnd(s.pers === 'comerciante' ? ['trade_sell', 'trade_buy', 'idle'] : ['idle', 'idle', 'lfg', 'brag', 'help_ask', 'complain_server']);
         this.say(s, ctx, null, 'local');
       }
     }
     // alguém perto puxa conversa com o jogador
-    if (chance(0.02) && Math.hypot(a.x - P.x, a.y - P.y) < 6) { this.face(a, P); this.say(s, chance(0.5) ? 'greet' : 'help_ask', { target: Game.player.name }, 'local'); }
+    if (chance(0.006) && Math.hypot(a.x - P.x, a.y - P.y) < 6) { this.face(a, P); this.say(s, chance(0.5) ? 'greet' : 'help_ask', { target: Game.player.name }, 'local'); }
   },
   globalEvent() {
     const ctx = rnd(['trade_sell', 'trade_sell', 'trade_buy', 'lfg', 'lfg', 'complain_server', 'loot_rare', 'kill_other', 'death_self', 'pk_warning', 'brag', 'guild_recruit', 'help_ask']);
@@ -241,16 +243,16 @@ const Sim = {
     }
     this.say(s, ctx, null, 'global');
     // às vezes alguém responde no global
-    if (chance(0.3)) setTimeout(() => { const o = this.speaker('reply_neutral', x => x !== s); o && this.say(o, rnd(['reply_neutral', 'reply_friend', 'reply_enemy']), { target: s.name }, 'global'); }, between(2000, 6000));
+    if (chance(0.15)) setTimeout(() => { const o = this.speaker('reply_neutral', x => x !== s); o && this.say(o, rnd(['reply_neutral', 'reply_friend', 'reply_enemy']), { target: s.name }, 'global'); }, between(2000, 6000));
     // conversa da própria guilda do jogador
     const pg = Game.player.guild;
-    if (pg && chance(0.35)) { const m = this.speaker(rnd(['idle', 'lfg', 'brag', 'help_ask', 'reply_friend']), x => x.guild === pg); m && setTimeout(() => this.say(m, rnd(['idle', 'lfg', 'brag', 'help_ask']), null, 'guild'), 2500); }
+    if (pg && chance(0.25)) { const m = this.speaker(rnd(['idle', 'lfg', 'brag', 'help_ask', 'reply_friend']), x => x.guild === pg); m && setTimeout(() => this.say(m, rnd(['idle', 'lfg', 'brag', 'help_ask']), null, 'guild'), 2500); }
   },
   churn() {
     const on = this.online(), off = this.sims.filter(s => !s.online);
     if (on.length > 30 && chance(0.6)) this.logout(rnd(on));
     if (off.length && on.length < 55 && chance(0.7)) {
-      const s = rnd(off), near = this.near().length < 16 && chance(0.45);
+      const s = rnd(off), near = this.near().length < this.NEAR_MAX && chance(0.4);
       this.login(s, near);
       if (!near && chance(0.3)) setTimeout(() => this.say(s, 'greet', null, 'global'), 1500);
     }
