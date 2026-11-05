@@ -30,11 +30,11 @@ obrigatório.
 
 ARTE DESTE JOGO — art/
 ======================
-Ainda não há tiles, props nem arquivos .blend neste repositório.
-Quando o primeiro render entrar, a entrada correspondente nasce
-nesta seção, com o caminho do arquivo, o autor (Ludimus / estúdio,
-ou o autor da obra adaptada), a licença e o que mudou em relação
-à origem.
+plains_cabin_01 — cabana 5x4 em camadas grandes, versao 2: back, front, front_low, roof, door_closed e door_open; cama, bau e mesa em quatro rotacoes.
+Fonte visual, meshes e materiais: flare-game-art-src, art_src_hd/tilesets/grassland/cabin.blend e texturas pine_green.jpg / pine_light.jpg / pine_yellow.jpg. Autores do tileset grassland: Clint Bellanger, Lamoot, apricot.blender.org, lattice, p0ss, Bart K., Sindwiller e Justin Jacobs. Licenca: CC-BY-SA 3.0 ou posterior. https://github.com/flareteam/flare-game-art-src/tree/master/art_src_hd/tilesets/grassland ; https://opengameart.org/content/grassland-tileset
+Cama: art_src_hd/tilesets/dungeon/bed.blend (mesh e materiais originais do Flare, fonte dungeon CC0). Bau: art_src_hd/tilesets/common/boss_chest.blend, Clint Bellanger, CC-BY-SA 3.0; base, tampa e ferragens originais, sem cranio/espinhos decorativos; materiais Cycles validos substituem saidas ausentes.
+Iluminacao de referencia: art_src_hd/tilesets/common/lighting.blend, Justin Jacobs, CC0. https://github.com/flareteam/flare-game-art-src
+Modificacoes: cabana mantida como cena coerente e ajustada a planta retangular 5x4; camada frontal sem folha; rodape a 20% da altura; porta articulada; fechamento opaco do substrato do telhado; recesso de janela escuro e nao emissivo; chao interno; bau com madeira/ferro validos; mesa rustica derivada de madeira Flare; master 192x96 por tile. Derivados sujeitos as licencas acima. Personagem TCoM somente nas previas: stance direcao 4 ampliado 2x nearest-neighbor; credito conforme CREDITOS.txt do TCoM, nao integra o tileset.
 
 Licença da arte derivada do Flare, nesta pasta:
 
