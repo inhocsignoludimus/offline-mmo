@@ -78,7 +78,7 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
   "prefix": [ { "id": "cruel", "name": {"pt": "Cruel", "en": "Cruel"}, "applies": ["weapon"], "stat": "dmg_pct", "range": [10, 25], "tier": 2 } ],
   "suffix": [ { "id": "do_urso", "name": {"pt": "do Urso", "en": "of the Bear"}, "applies": ["weapon", "armor"], "stat": "str", "range": [3, 8], "tier": 2 } ] }
 ```
-`stat`: `dmg_pct`, `dmg_flat`, `armor_pct`, `armor_flat`, `str`, `dex`, `int`, `hp`, `mana`, `stam`, `regen_hp`, `regen_mana`, `res_fire`, `res_cold`, `res_poison`, `res_energy`, `hit_chance`, `def_chance`, `swing_speed`, `luck`, `durability` ou `skill:<id>` (ex.: `skill:magery`). Os níveis (`tier`) vão de 1 a 5.
+`stat`: `dmg_pct`, `dmg_flat`, `armor_pct`, `armor_flat`, `str`, `dex`, `int`, `hp`, `mana`, `stam`, `regen_hp`, `regen_mana`, `res_fire`, `res_cold`, `res_poison`, `regen_stam`, `res_energy`, `hit_chance`, `def_chance`, `swing_speed`, `luck`, `durability` ou `skill:<id>` (ex.: `skill:magery`). Os níveis (`tier`) vão de 1 a 5.
 
 ## data/magic/spells.json e data/magic/reagents.json
 ```json
