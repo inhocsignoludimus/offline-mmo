@@ -104,16 +104,18 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
 
 ## art/buildings/<bioma>/<id>/house.json
 ```json
-{ "version": 1, "id": "plains_cabin_01", "size": [5, 4], "origin": [0, 0],
-  "tileset": "art/buildings/plains/plains_cabin_01/pieces.txt",
-  "floor": [[0,0,12],[1,0,12]],
-  "walls": [[0,0,40,"back"],[4,2,44,"front"]],
-  "doors": [[2,3,60,61]],
-  "roof": {"img": "roof.png", "ox": 0, "oy": 0},
+{ "version": 2, "id": "plains_cabin_01", "size": [5, 4],
+  "anchor": [384, 512],
+  "layers": { "back": "back.png", "front": "front.png", "front_low": "front_low.png",
+              "roof": "roof.png", "door_closed": "door_closed.png", "door_open": "door_open.png" },
+  "walls": [[0,0],[1,0],[2,0],[3,0],[4,0],[0,1],[4,1],[0,2],[4,2],[0,3],[1,3],[3,3],[4,3]],
+  "doors": [[2,3]],
   "props": [[1,1,"bed_r0"],[3,1,"chest_r2"]],
   "interior": [[1,1],[3,2]] }
 ```
-* `floor`: `[x, y, tile_id]`.
-* `walls`: `[x, y, tile_id, "back"|"front"]`. As paredes `front` são as que viram `wall_low` quando o jogador entra.
-* `doors`: `[x, y, id_fechada, id_aberta]`.
-* `interior`: o retângulo `[x0, y0]` a `[x1, y1]` que conta como "dentro" da casa.
+* `size`: largura (x) e profundidade (y) da planta em tiles. A casa ocupa os tiles `[0,0]` a `[w-1, h-1]` a partir de onde for colocada no mapa.
+* `anchor`: `ox, oy` em pixels do master, iguais para todas as camadas — o centro do losango do tile `[0,0]`.
+* `layers`: os arquivos das camadas (ver a seção 5 do `ART_SPEC.md`). A engine ordena por `size`; não precisa de `sort_y`.
+* `walls`: tiles bloqueados, `[x, y]`.
+* `doors`: `[x, y]` de cada porta. O tile da porta bloqueia quando fechada.
+* `interior`: o retângulo `[x0, y0]` a `[x1, y1]` que conta como "dentro" da casa (esconde o telhado e troca `front` por `front_low`).

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Outremer — protótipo da engine (offline MMO)</title>
+<link rel="stylesheet" href="ui/style.css">
+</head>
+<body>
+<canvas id="cv"></canvas>
+<div id="ui"></div>
+<div id="create">
+  <form autocomplete="off">
+    <h1>Outremer</h1>
+    <p class="sub">shard offline · protótipo da engine</p>
+    <label>Nome</label><input name="nome" maxlength="16" required>
+    <div class="row">
+      <div><label>Sexo</label><select name="sexo"><option value="m">Masculino</option><option value="f">Feminino</option></select></div>
+      <div><label>Ofício</label><select name="cls">
+        <option value="guerreiro">Guerreiro</option><option value="cruzado">Cruzado</option><option value="beduino">Beduíno</option>
+        <option value="artesao">Artesão</option><option value="peregrino">Peregrino</option><option value="aldea">Aldeã(o)</option></select></div>
+    </div>
+    <button>Entrar no mundo</button>
+    <p class="note">Vila provisória com mapa do Flare (CC-BY-SA). Personagens de A Cruz de Montgisard.</p>
+  </form>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
