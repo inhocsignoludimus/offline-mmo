@@ -18,6 +18,14 @@
       "icon": "mace_fighting"
     },
     {
+      "id": "axe_fighting",
+      "name": {
+        "pt": "Machados",
+        "en": "Axe Fighting"
+      },
+      "icon": "axe_fighting"
+    },
+    {
       "id": "fencing",
       "name": {
         "pt": "Esgrima",

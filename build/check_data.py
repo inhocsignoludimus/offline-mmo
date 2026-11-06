@@ -86,6 +86,25 @@ for e in J('events.json', {'events': []})['events']:
     for a, _ in e.get('adds', []):
         if a not in mons: bad.append(f"evento {e['id']}: monstro {a} não existe")
 
+
+# abilities.json (habilidades físicas estilo D2)
+Ab = J('abilities.json')
+if Ab:
+    skills = {s['id'] for s in J('skills.json', {'skills': []})['skills']}
+    EFFECT_TYPES = {s['effect']['type'] for s in J('magic/spells.json', {'spells': []})['spells']}
+    WEAPONS = {'sword', 'bow', 'mace', 'spear', 'axe'}
+    for a in Ab.get('abilities', []):
+        if a.get('weapon') not in WEAPONS:
+            bad.append(f"ability {a.get('id')}: weapon {a.get('weapon')} inválida")
+        if a.get('skill') not in skills:
+            bad.append(f"ability {a.get('id')}: skill {a.get('skill')} não existe")
+        e = a.get('effect') or {}
+        if e.get('type') not in EFFECT_TYPES:
+            bad.append(f"ability {a.get('id')}: effect.type {e.get('type')} não é tipo de magia")
+        b = e.get('base')
+        if not (isinstance(b, list) and len(b) == 2):
+            bad.append(f"ability {a.get('id')}: effect.base deve ser [min,max]")
+
 print(f'{len(items)} itens, {len(spells)} magias, {len(mons)} monstros, {len(tables)} tabelas, {len(hues)} cores')
 if bad:
     print('\nPROBLEMAS:'); [print(' -', b) for b in bad]; sys.exit(1)

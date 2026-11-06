@@ -216,3 +216,22 @@ As **5 faixas de raridade** são fixas na engine:
 
 * `phases`: o destino muda com a fase da lua, como no UO.
 
+
+
+## data/abilities.json
+
+Habilidades físicas estilo Diablo 2, por tipo de arma (teclas 1–9 junto com magias). O `effect` usa os **mesmos** `type` de `spells.json` (`damage`, `heal`, `buff`, `debuff`, …) e `base` sempre `[min, max]`.
+
+```json
+{ "version": 1,
+  "abilities": [
+    { "id": "whirlwind_strike", "name": {"pt": "Golpe Giratório", "en": "Whirlwind Strike"},
+      "weapon": "sword", "skill": "swordsmanship", "min_level": 40,
+      "stamina": 18, "cooldown_s": 8, "target": "self",
+      "effect": {"type": "damage", "element": "physical", "base": [12, 20], "scales": ["swordsmanship", "str"], "aoe": 2},
+      "icon": "whirlwind_strike", "desc": {"pt": "...", "en": "..."} }
+  ] }
+```
+* `weapon`: `sword`, `bow`, `mace`, `spear`, `axe`.
+* `skill` / `min_level`: skill que libera e nível mínimo.
+* Campos extras no effect (`aoe`, `dash`, `pierce`, `projectiles`, `range`) são dicas pra engine.
