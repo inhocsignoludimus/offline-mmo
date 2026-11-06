@@ -86,6 +86,15 @@ for e in J('events.json', {'events': []})['events']:
     for a, _ in e.get('adds', []):
         if a not in mons: bad.append(f"evento {e['id']}: monstro {a} não existe")
 
+
+# chat/lines.json — sem contextos de PvP
+Lj = J('chat/lines.json')
+if Lj:
+    banned_ctx = {'pk_warning', 'kill_other'}
+    for ln in Lj.get('lines', []):
+        if ln.get('ctx') in banned_ctx:
+            bad.append(f"linha {ln.get('id')}: ctx {ln.get('ctx')} removido (sem PvP)")
+
 print(f'{len(items)} itens, {len(spells)} magias, {len(mons)} monstros, {len(tables)} tabelas, {len(hues)} cores')
 if bad:
     print('\nPROBLEMAS:'); [print(' -', b) for b in bad]; sys.exit(1)
