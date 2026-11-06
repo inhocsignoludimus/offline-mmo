@@ -44,4 +44,9 @@ resolvido dentro do `flare-game` pelos scripts de import.
 Regiões e spawns: `data/zones.json` (`world.map`, `origin`,
 `chunks[].rect` em coordenadas do mapa único).
 
+`mundo.txt` é a fatia de 98×60 (Lochport + Bosque da Vila). Ela
+entra no mapa alvo de 2048×2048 no tile `[768, 1408]`. A planta
+grossa é `data/world_layout.json`. Não regenerar esta fatia por
+cima: o desenho novo carimba em volta. Ver `docs/WORLD_DESIGN.md`.
+
 Ver `docs/ART_SPEC.md` e `docs/DATA_SCHEMA.md`.

@@ -139,6 +139,282 @@
         "top_damage": 5
       },
       "notes": "Variante rara de fogo; mesma clareira, intervalo maior."
+    },
+    {
+      "id": "rei_formiga_dunas",
+      "boss": "rei_formiga",
+      "monster": "antlion",
+      "place": {
+        "region": "boss_rei_formiga",
+        "biome": "outremer",
+        "poi": "boss_rei_formiga"
+      },
+      "every_min": [
+        50,
+        80
+      ],
+      "duration_min": 18,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "O {boss} abriu as dunas!",
+        "en": "{boss} has opened the dunes!"
+      },
+      "adds": [
+        [
+          "antlion_hatchling",
+          4
+        ],
+        [
+          "fire_ant",
+          3
+        ],
+        [
+          "antlion_spitter",
+          2
+        ]
+      ],
+      "rewards": {
+        "table": "boss_rei_formiga",
+        "top_damage": 5
+      },
+      "notes": "Disputa de guilda por dano. Sem alvo entre jogadores."
+    },
+    {
+      "id": "serpe_de_fogo_dunas",
+      "boss": "serpe_de_fogo",
+      "monster": "wyvern_fire",
+      "place": {
+        "region": "boss_serpe_de_fogo",
+        "biome": "outremer",
+        "poi": "boss_serpe_de_fogo"
+      },
+      "every_min": [
+        90,
+        150
+      ],
+      "duration_min": 20,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "A {boss} cobriu as dunas de cinza!",
+        "en": "{boss} has covered the dunes in ash!"
+      },
+      "adds": [
+        [
+          "fire_ant",
+          4
+        ]
+      ],
+      "rewards": {
+        "table": "boss_serpe_de_fogo",
+        "top_damage": 5
+      },
+      "notes": "Disputa de guilda por dano. Sem alvo entre jogadores."
+    },
+    {
+      "id": "minotauro_passo",
+      "boss": "minotauro_do_pico",
+      "monster": "minotaur",
+      "place": {
+        "region": "boss_minotauro_do_pico",
+        "biome": "mountains",
+        "poi": "boss_minotauro_do_pico"
+      },
+      "every_min": [
+        40,
+        70
+      ],
+      "duration_min": 18,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "O {boss} fechou o passo!",
+        "en": "{boss} has closed the pass!"
+      },
+      "adds": [
+        [
+          "hobgoblin",
+          3
+        ],
+        [
+          "boulder",
+          1
+        ]
+      ],
+      "rewards": {
+        "table": "boss_minotauro_do_pico",
+        "top_damage": 5
+      },
+      "notes": "Disputa de guilda por dano. Sem alvo entre jogadores."
+    },
+    {
+      "id": "necromante_cidadela",
+      "boss": "necromante_caduco",
+      "monster": "necromancer",
+      "place": {
+        "region": "boss_necromante_caduco",
+        "biome": "ruins",
+        "poi": "boss_necromante_caduco"
+      },
+      "every_min": [
+        45,
+        75
+      ],
+      "duration_min": 18,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "O {boss} acendeu a cidadela!",
+        "en": "{boss} has lit the citadel!"
+      },
+      "adds": [
+        [
+          "skeleton",
+          4
+        ],
+        [
+          "skeleton_mage",
+          2
+        ]
+      ],
+      "rewards": {
+        "table": "boss_necromante_caduco",
+        "top_damage": 5
+      },
+      "notes": "Disputa de guilda por dano. Sem alvo entre jogadores."
+    },
+    {
+      "id": "guardiao_cripta_familiar",
+      "boss": "guardiao_da_cripta",
+      "monster": "skeleton_knight_boss",
+      "place": {
+        "region": "boss_guardiao_da_cripta",
+        "biome": "ruins",
+        "poi": "boss_guardiao_da_cripta"
+      },
+      "every_min": [
+        35,
+        60
+      ],
+      "duration_min": 15,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "O {boss} despertou na cripta familiar!",
+        "en": "{boss} has woken in the family crypt!"
+      },
+      "adds": [
+        [
+          "skeleton",
+          4
+        ],
+        [
+          "skeleton_archer",
+          2
+        ]
+      ],
+      "rewards": {
+        "table": "boss_guardiao_da_cripta",
+        "top_damage": 3
+      },
+      "notes": "Disputa de guilda por dano. Sem alvo entre jogadores."
+    },
+    {
+      "id": "sombra_torre_miasma",
+      "boss": "sombra_do_miasma",
+      "monster": "zombie_dark",
+      "place": {
+        "region": "boss_sombra_do_miasma",
+        "biome": "swamp",
+        "poi": "boss_sombra_do_miasma"
+      },
+      "every_min": [
+        40,
+        70
+      ],
+      "duration_min": 16,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "A {boss} subiu da torre!",
+        "en": "{boss} has risen from the tower!"
+      },
+      "adds": [
+        [
+          "zombie",
+          4
+        ],
+        [
+          "zombie_rotting",
+          3
+        ]
+      ],
+      "rewards": {
+        "table": "boss_sombra_do_miasma",
+        "top_damage": 3
+      },
+      "notes": "Disputa de guilda por dano. Sem alvo entre jogadores."
+    },
+    {
+      "id": "chefe_goblin_seara",
+      "boss": "chefe_goblin",
+      "monster": "goblin_elite",
+      "place": {
+        "region": "boss_chefe_goblin",
+        "biome": "plains",
+        "poi": "boss_chefe_goblin"
+      },
+      "every_min": [
+        25,
+        45
+      ],
+      "duration_min": 12,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "O {boss} juntou a seara!",
+        "en": "{boss} has rallied the fields!"
+      },
+      "adds": [
+        [
+          "goblin",
+          5
+        ],
+        [
+          "goblin_spearman",
+          2
+        ]
+      ],
+      "rewards": {
+        "table": "boss_chefe_goblin",
+        "top_damage": 3
+      },
+      "notes": "Disputa de guilda por dano. Sem alvo entre jogadores."
+    },
+    {
+      "id": "serpe_da_crista",
+      "boss": "wyvern_air_boss",
+      "monster": "wyvern_air_boss",
+      "place": {
+        "region": "boss_wyvern_air_boss",
+        "biome": "mountains",
+        "poi": "boss_wyvern_air_boss"
+      },
+      "every_min": [
+        80,
+        140
+      ],
+      "duration_min": 20,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "A {boss} pousou na crista!",
+        "en": "{boss} has landed on the ridge!"
+      },
+      "adds": [
+        [
+          "wyvern_air",
+          1
+        ]
+      ],
+      "rewards": {
+        "table": "boss_wyvern_air_boss",
+        "top_damage": 5
+      },
+      "notes": "Disputa de guilda por dano. Sem alvo entre jogadores."
     }
   ]
 }

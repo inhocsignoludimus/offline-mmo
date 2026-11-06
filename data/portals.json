@@ -9,11 +9,102 @@
       },
       "city": "aurelia",
       "phases": [
-        "aelia_sancta",
-        "porto_trigo",
-        "folhaverde"
+        "folhaverde",
+        "pedralta",
+        "san_marco"
       ],
-      "kind": "moon"
+      "kind": "moon",
+      "network": "capital"
+    },
+    {
+      "id": "portal_folhaverde",
+      "name": {
+        "pt": "Portal de Folhaverde",
+        "en": "Leafgreen Portal"
+      },
+      "city": "folhaverde",
+      "phases": [
+        "aurelia",
+        "gelomarca",
+        "lodoalto"
+      ],
+      "kind": "moon",
+      "network": "capital"
+    },
+    {
+      "id": "portal_pedralta",
+      "name": {
+        "pt": "Portal de Pedralta",
+        "en": "Highstone Portal"
+      },
+      "city": "pedralta",
+      "phases": [
+        "aurelia",
+        "gelomarca",
+        "templo_selo"
+      ],
+      "kind": "moon",
+      "network": "capital"
+    },
+    {
+      "id": "portal_gelomarca",
+      "name": {
+        "pt": "Portal de Gelomarca",
+        "en": "Frostmark Portal"
+      },
+      "city": "gelomarca",
+      "phases": [
+        "folhaverde",
+        "pedralta",
+        "aelia_sancta"
+      ],
+      "kind": "moon",
+      "network": "capital"
+    },
+    {
+      "id": "portal_san_marco",
+      "name": {
+        "pt": "Portal de San Marco",
+        "en": "San Marco Portal"
+      },
+      "city": "san_marco",
+      "phases": [
+        "aurelia",
+        "lodoalto",
+        "templo_selo"
+      ],
+      "kind": "moon",
+      "network": "capital"
+    },
+    {
+      "id": "portal_lodoalto",
+      "name": {
+        "pt": "Portal de Lodoalto",
+        "en": "Highmire Portal"
+      },
+      "city": "lodoalto",
+      "phases": [
+        "folhaverde",
+        "san_marco",
+        "aelia_sancta"
+      ],
+      "kind": "moon",
+      "network": "capital"
+    },
+    {
+      "id": "portal_templo_selo",
+      "name": {
+        "pt": "Portal de Templo do Selo",
+        "en": "Seal Temple Portal"
+      },
+      "city": "templo_selo",
+      "phases": [
+        "pedralta",
+        "san_marco",
+        "aelia_sancta"
+      ],
+      "kind": "moon",
+      "network": "capital"
     },
     {
       "id": "portal_aelia_sancta",
@@ -23,25 +114,87 @@
       },
       "city": "aelia_sancta",
       "phases": [
-        "aurelia",
-        "castelo_montgisard",
-        "oasis_qasr"
+        "gelomarca",
+        "lodoalto",
+        "templo_selo"
       ],
-      "kind": "moon"
+      "kind": "moon",
+      "network": "capital"
     },
     {
-      "id": "portal_folhaverde",
+      "id": "portal_porto_trigo",
       "name": {
-        "pt": "Portal de Folhaverde",
-        "en": "Folhaverde Portal"
+        "pt": "Portal de Porto do Trigo",
+        "en": "Wheatport Portal"
       },
-      "city": "folhaverde",
+      "city": "porto_trigo",
       "phases": [
-        "mosteiro_musgo",
-        "acampamento_machado",
+        "aurelia",
+        "san_marco",
+        "folhaverde"
+      ],
+      "kind": "moon",
+      "network": "local"
+    },
+    {
+      "id": "portal_acre_livre",
+      "name": {
+        "pt": "Portal de Acre Livre",
+        "en": "Free Acre Portal"
+      },
+      "city": "acre_livre",
+      "phases": [
+        "san_marco",
+        "aelia_sancta",
         "aurelia"
       ],
-      "kind": "moon"
+      "kind": "moon",
+      "network": "local"
+    },
+    {
+      "id": "portal_castelo_montgisard",
+      "name": {
+        "pt": "Portal de Castelo Montgisard",
+        "en": "Montgisard Castle Portal"
+      },
+      "city": "castelo_montgisard",
+      "phases": [
+        "aelia_sancta",
+        "oasis_qasr",
+        "aurelia"
+      ],
+      "kind": "moon",
+      "network": "local"
+    },
+    {
+      "id": "portal_oasis_qasr",
+      "name": {
+        "pt": "Portal de Oásis de Qasr",
+        "en": "Qasr Oasis Portal"
+      },
+      "city": "oasis_qasr",
+      "phases": [
+        "aelia_sancta",
+        "castelo_montgisard",
+        "acre_livre"
+      ],
+      "kind": "moon",
+      "network": "local"
+    },
+    {
+      "id": "portal_mosteiro_musgo",
+      "name": {
+        "pt": "Portal de Mosteiro do Musgo",
+        "en": "Moss Abbey Portal"
+      },
+      "city": "mosteiro_musgo",
+      "phases": [
+        "folhaverde",
+        "aurelia",
+        "acampamento_machado"
+      ],
+      "kind": "moon",
+      "network": "local"
     }
   ]
 }
