@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "portals": [
+    {
+      "id": "portal_aurelia",
+      "name": {
+        "pt": "Portal de Aurélia",
+        "en": "Aurelia Portal"
+      },
+      "city": "aurelia",
+      "phases": [
+        "aelia_sancta",
+        "porto_trigo",
+        "folhaverde"
+      ],
+      "kind": "moon"
+    },
+    {
+      "id": "portal_aelia_sancta",
+      "name": {
+        "pt": "Portal de Aelia Sancta",
+        "en": "Aelia Sancta Portal"
+      },
+      "city": "aelia_sancta",
+      "phases": [
+        "aurelia",
+        "castelo_montgisard",
+        "oasis_qasr"
+      ],
+      "kind": "moon"
+    },
+    {
+      "id": "portal_folhaverde",
+      "name": {
+        "pt": "Portal de Folhaverde",
+        "en": "Folhaverde Portal"
+      },
+      "city": "folhaverde",
+      "phases": [
+        "mosteiro_musgo",
+        "acampamento_machado",
+        "aurelia"
+      ],
+      "kind": "moon"
+    },
+    {
+      "id": "estrada_lochport_bosque",
+      "name": {
+        "pt": "Estrada do Bosque",
+        "en": "Woods Road"
+      },
+      "kind": "road",
+      "from": {
+        "map": "lochport",
+        "note": "saída a ligar na vila"
+      },
+      "to": {
+        "map": "bosque_da_vila",
+        "at": [
+          2,
+          18
+        ]
+      },
+      "return": {
+        "map": "bosque_da_vila",
+        "rect": [
+          0,
+          17,
+          1,
+          4
+        ],
+        "dest_map": "lochport",
+        "at": [
+          43,
+          55
+        ]
+      },
+      "pvp": false
+    }
+  ]
+}

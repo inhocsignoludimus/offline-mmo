@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "id": "chefe_goblin_entrada",
+      "boss": "chefe_goblin",
+      "monster": "goblin_elite",
+      "place": {
+        "zone": "bosque_da_vila",
+        "chunk": "entrada",
+        "biome": "forest",
+        "poi": "entrada_do_bosque"
+      },
+      "every_min": [
+        25,
+        45
+      ],
+      "duration_min": 12,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "O {boss} reuniu a matilha na entrada do bosque!",
+        "en": "{boss} has rallied the pack at the woods entrance!"
+      },
+      "adds": [
+        [
+          "goblin",
+          6
+        ],
+        [
+          "goblin_runner",
+          3
+        ],
+        [
+          "goblin_spearman",
+          2
+        ]
+      ],
+      "rewards": {
+        "table": "goblin_elite",
+        "top_damage": 3
+      },
+      "notes": "Disputa de guilda por dano no chefe — sem alvo PvP."
+    },
+    {
+      "id": "guardiao_cripta_bosque",
+      "boss": "guardiao_da_cripta",
+      "monster": "skeleton_knight_boss",
+      "place": {
+        "zone": "bosque_da_vila",
+        "chunk": "cripta",
+        "biome": "forest",
+        "poi": "cripta_do_bosque"
+      },
+      "every_min": [
+        35,
+        60
+      ],
+      "duration_min": 15,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "O {boss} desperta na cripta do bosque!",
+        "en": "{boss} awakens in the woods crypt!"
+      },
+      "adds": [
+        [
+          "skeleton",
+          5
+        ],
+        [
+          "skeleton_archer",
+          3
+        ],
+        [
+          "skeleton_mage",
+          2
+        ]
+      ],
+      "rewards": {
+        "table": "skeleton_knight_boss",
+        "top_damage": 3
+      },
+      "notes": "Evento de área; guerra de guilda = corrida pelo chefe."
+    },
+    {
+      "id": "wyvern_clareira",
+      "boss": "wyvern",
+      "monster": "wyvern",
+      "place": {
+        "zone": "bosque_da_vila",
+        "chunk": "clareira_do_fundo",
+        "biome": "forest",
+        "poi": "clareira_do_fundo"
+      },
+      "every_min": [
+        40,
+        70
+      ],
+      "duration_min": 18,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "A serpe {boss} pousou na clareira do fundo!",
+        "en": "The serpent {boss} has landed in the far clearing!"
+      },
+      "adds": [],
+      "rewards": {
+        "table": "wyvern",
+        "top_damage": 5
+      },
+      "notes": "Chefe de fundo da primeira área de caça. Adds opcional zerado = solo boss."
+    },
+    {
+      "id": "serpe_de_fogo_clareira",
+      "boss": "serpe_de_fogo",
+      "monster": "wyvern_fire",
+      "place": {
+        "zone": "bosque_da_vila",
+        "chunk": "clareira_do_fundo",
+        "biome": "forest",
+        "poi": "clareira_do_fundo"
+      },
+      "every_min": [
+        90,
+        150
+      ],
+      "duration_min": 20,
+      "contest": "guild_damage",
+      "announce": {
+        "pt": "A {boss} cobriu a clareira de cinzas!",
+        "en": "{boss} has covered the clearing in ash!"
+      },
+      "adds": [
+        [
+          "wyvern_fire",
+          1
+        ]
+      ],
+      "rewards": {
+        "table": "wyvern_fire",
+        "top_damage": 5
+      },
+      "notes": "Variante rara de fogo; mesma clareira, intervalo maior."
+    }
+  ]
+}
