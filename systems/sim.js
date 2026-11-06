@@ -49,7 +49,7 @@ const Sim = {
         const pref = this.guilds.filter(g => (GUILDA_COMBINA[g.style] || []).includes(pers));
         s.guild = rnd(pref.length && chance(0.8) ? pref : this.guilds); s.guild.members.push(s);
       }
-      if (pers === 'pvper' && chance(0.35)) s.murderer = true;
+      // sem PvP: ninguém é assassino
       this.sims.push(s);
     }
     // guerras iniciais entre guildas de caos e de ordem
@@ -60,6 +60,9 @@ const Sim = {
     sh.slice(0, 40).forEach((s, i) => this.login(s, i < this.NEAR_START, true));
   },
   online() { return this.sims.filter(s => s.online); },
+  // os jogadores simulados só andam na vila; fora dela continuam online, no chat
+  leaveTown() { for (const s of this.near()) { s.near = false; s.actor = null; } },
+  enterTown() { const on = this.online().filter(s => !s.near).sort(() => Math.random() - 0.5); on.slice(0, this.NEAR_START).forEach(s => { s.online = false; this.login(s, true, true); }); },
   near() { return this.sims.filter(s => s.near); },
   atWar(a, b) { return this.wars.some(w => (w.a === a && w.b === b) || (w.a === b && w.b === a)); },
   byName(n) { n = n.toLowerCase(); return this.sims.find(s => s.name.toLowerCase() === n) || this.sims.find(s => s.name.toLowerCase().startsWith(n)); },
@@ -84,8 +87,8 @@ const Sim = {
   color(s) {
     if (!s.actor) return;
     const pg = Game.player.guild;
-    let c = s.murderer ? COR_NOME.assassino : COR_NOME.inocente;
-    if (pg && s.guild === pg) c = COR_NOME.aliado; else if (pg && s.guild && this.atWar(pg, s.guild)) c = COR_NOME.inimigo;
+    let c = COR_NOME.inocente;
+    if (pg && s.guild === pg) c = COR_NOME.aliado;
     s.actor.nameColor = c;
   },
   recolorAll() { for (const s of this.sims) this.color(s); },
@@ -229,7 +232,7 @@ const Sim = {
     if (chance(0.006) && Math.hypot(a.x - P.x, a.y - P.y) < 6) { this.face(a, P); this.say(s, chance(0.5) ? 'greet' : 'help_ask', { target: Game.player.name }, 'local'); }
   },
   globalEvent() {
-    const ctx = rnd(['trade_sell', 'trade_sell', 'trade_buy', 'lfg', 'lfg', 'complain_server', 'loot_rare', 'kill_other', 'death_self', 'pk_warning', 'brag', 'guild_recruit', 'help_ask']);
+    const ctx = rnd(['trade_sell', 'trade_sell', 'trade_buy', 'lfg', 'lfg', 'complain_server', 'loot_rare', 'death_self', 'brag', 'guild_recruit', 'help_ask', 'lfg']);
     const s = this.speaker(ctx, x => !x.near || ctx === 'guild_recruit'); if (!s) return;
     if (ctx === 'guild_recruit') {
       if (!s.guild || Game.player.guild) return;
@@ -237,7 +240,8 @@ const Sim = {
       if (chance(0.35)) setTimeout(() => {
         if (Game.player.guild) return;
         this.invites.last = { guild: s.guild, from: s, at: Game.now };
-        Journal.add('whisper', s.name, `${Game.player.name}, quer entrar na ${s.guild.name}? digite /aceitar`);
+        Journal.add('whisper', s.name, `${Game.player.name}, quer entrar na ${s.guild.name}?`);
+        Prompt.ask(`${s.name} convida você para a guilda ${s.guild.name} [${s.guild.tag}].`, [['Aceitar', () => this.accept()], ['Recusar', () => { this.invites.last = null; }]]);
       }, 3500);
       return;
     }
@@ -252,7 +256,7 @@ const Sim = {
     const on = this.online(), off = this.sims.filter(s => !s.online);
     if (on.length > 30 && chance(0.6)) this.logout(rnd(on));
     if (off.length && on.length < 55 && chance(0.7)) {
-      const s = rnd(off), near = this.near().length < this.NEAR_MAX && chance(0.4);
+      const s = rnd(off), near = Game.zoneId === 'lochport' && this.near().length < this.NEAR_MAX && chance(0.4);
       this.login(s, near);
       if (!near && chance(0.3)) setTimeout(() => this.say(s, 'greet', null, 'global'), 1500);
     }

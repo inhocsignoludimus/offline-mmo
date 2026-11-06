@@ -131,7 +131,8 @@ const StatusGump = {
   update(p) {
     const b = this.g.body;
     b.querySelector('.sname').textContent = p.name;
-    b.querySelector('.sguild').textContent = p.guild ? `${p.guild.name} [${p.guild.tag}]` : 'Sem guilda';
+    const sg = b.querySelector('.sguild'), gtxt = p.guild ? `${p.guild.name} [${p.guild.tag}]` : 'Sem guilda';
+    if (sg.dataset.t !== gtxt) { sg.dataset.t = gtxt; sg.innerHTML = gtxt + (p.guild ? ' <button class="gleave">sair</button>' : ''); const bt = sg.querySelector('.gleave'); if (bt) bt.onclick = () => Prompt.ask(`Sair da guilda ${p.guild.name}?`, [['Sair', () => Sim.leave()], ['Ficar', () => {}]]); }
     for (const [k, v, m] of [['hp', p.hp, p.hpMax], ['mp', p.mp, p.mpMax], ['st', p.st, p.stMax]]) {
       const el = b.querySelector('.bar.' + k); el.querySelector('i').style.width = (100 * v / m) + '%'; el.querySelector('span').textContent = `${Math.round(v)} / ${m}`;
     }
@@ -174,7 +175,8 @@ const Backpack = {
       const d = document.createElement('div'); d.className = 'bitem';
       const ic = Icons.style(it, 44);
       d.style.cssText = ic.style + `;left:${it.bx}px;top:${it.by}px`;
-      d.title = it.name + (it.qty > 1 ? ` (${it.qty})` : '') + (it.d.desc ? '\n' + (it.d.desc[Chat.lang] || it.d.desc.pt) : '');
+      d.onmouseenter = () => Tip.show(d, Loot.lines(it)); d.onmouseleave = () => Tip.hide();
+      if (it.rarity && it.rarity !== 'comum') d.style.boxShadow = `0 0 0 1px ${Loot.color(it)}, 0 0 8px ${Loot.color(it)}`;
       d.innerHTML = ic.label + (it.qty > 1 ? `<b>${it.qty}</b>` : '');
       let sx, sy, ox, oy, moved = false;
       d.onpointerdown = e => { e.stopPropagation(); sx = e.clientX; sy = e.clientY; ox = it.bx; oy = it.by; moved = false; d.setPointerCapture(e.pointerId); };
@@ -202,7 +204,7 @@ const Paperdoll = {
       const it = p.equip[slot], d = document.createElement('div'); d.className = 'pslot';
       const ic = it ? Icons.style(it, 22) : { style: '', label: '' };
       d.innerHTML = `<i style="${ic.style}">${ic.label}</i><span>${it ? it.name : '<em>' + nome + '</em>'}</span>`;
-      if (it) { d.title = 'Clique para tirar'; d.onclick = () => Game.unequip(slot); }
+      if (it) { d.onclick = () => { Tip.hide(); Game.unequip(slot); }; d.onmouseenter = () => Tip.show(d, Loot.lines(it) + '<br><i>clique para tirar</i>'); d.onmouseleave = () => Tip.hide(); d.querySelector('span').style.color = Loot.color(it); }
       s.appendChild(d);
     }
     const sk = p.skills;
@@ -288,4 +290,10 @@ const HUD = {
   },
   badge() { const b = document.querySelector('#menubar .badge'); if (b) b.textContent = Journal.unread ? (Journal.unread > 99 ? '99+' : Journal.unread) : ''; },
   toast(t) { this.toastEl.textContent = t; this.toastEl.classList.add('on'); clearTimeout(this._t); this._t = setTimeout(() => this.toastEl.classList.remove('on'), 2600); },
+};
+
+// dica flutuante dos itens (nome na cor da faixa, afixos, conjunto, lore)
+const Tip = {
+  show(el, html) { const t = document.getElementById('tip'); t.innerHTML = html; t.style.display = 'block'; const r = el.getBoundingClientRect(); t.style.left = Math.min(innerWidth - t.offsetWidth - 6, r.right + 6) + 'px'; t.style.top = Math.max(6, Math.min(innerHeight - t.offsetHeight - 6, r.top)) + 'px'; },
+  hide() { document.getElementById('tip').style.display = 'none'; },
 };
