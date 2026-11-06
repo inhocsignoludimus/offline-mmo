@@ -186,7 +186,13 @@ const Game = {
     const up = () => { this.held = null; setTimeout(() => { if (!this.held) this.hover = null; }, 600); };
     cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
     cv.addEventListener('contextmenu', e => e.preventDefault());
-    cv.addEventListener('wheel', e => { Camera.zoom = Math.max(0.5, Math.min(2, Camera.zoom * (e.deltaY < 0 ? 1.1 : 0.9))); }, { passive: true });
+    const setZoom = z => { Camera.zoom = Math.max(0.4, Math.min(1.5, z)); Store.set('zoom', Camera.zoom); };
+    cv.addEventListener('wheel', e => setZoom(Camera.zoom * (e.deltaY < 0 ? 1.1 : 0.9)), { passive: true });
+    // pinça com dois dedos no celular
+    const touches = new Map(); let pinch0 = 0, zoom0 = 1;
+    cv.addEventListener('touchstart', e => { if (e.touches.length === 2) { const [a, b] = e.touches; pinch0 = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY); zoom0 = Camera.zoom; this.held = null; } }, { passive: true });
+    cv.addEventListener('touchmove', e => { if (e.touches.length === 2 && pinch0) { const [a, b] = e.touches; setZoom(zoom0 * Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY) / pinch0); } }, { passive: true });
+    cv.addEventListener('touchend', () => { pinch0 = 0; }, { passive: true });
     addEventListener('keydown', e => {
       const typing = document.activeElement && /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName);
       if (e.key === 'Enter' && !typing) { e.preventDefault(); Journal.focus(); return; }

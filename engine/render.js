@@ -16,7 +16,10 @@ const Render = {
     this.vw = innerWidth; this.vh = innerHeight;
     this.cv.width = Math.round(this.vw * this.dpr); this.cv.height = Math.round(this.vh * this.dpr);
     this.cv.style.width = this.vw + 'px'; this.cv.style.height = this.vh + 'px';
-    Camera.zoom = this.vw < 700 || this.vh < 500 ? 0.75 : 1;
+    // câmera mais afastada (pedido do Rodrigo: monstros grandes têm de caber na tela).
+    // Roda do mouse ou pinça ajustam, e o valor fica salvo.
+    const def = this.vw < 700 || this.vh < 500 ? 0.55 : 0.7;
+    Camera.zoom = Store.get('zoom', def);
   },
   frame(map, actors, hover, now) {
     const g = this.g, z = Camera.zoom * this.dpr;
