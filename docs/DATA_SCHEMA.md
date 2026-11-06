@@ -237,3 +237,16 @@ Coleta simples (sem PvP). Árvore → `logs` (serve direto na construção). Roc
 ```
 * `time_s`: 1 a 2 segundos.
 * `chance_by_skill`: lista `[nível_mínimo, chance]` (a engine usa o maior nível ≤ skill do jogador).
+## data/building.json
+
+Peças do modo construção. Cada peça custa **só** `logs` **ou** só `stone`/`iron_ingot` — nunca tábua (`boards`).
+
+```json
+{ "version": 1,
+  "pieces": [
+    { "id": "wall_wood", "name": {"pt": "Parede de Madeira", "en": "Wood Wall"},
+      "kind": "wall", "material": "wood", "cost": {"logs": 4}, "size": [1, 1] }
+  ] }
+```
+* `kind`: `floor`, `wall`, `door`, `window`, `fence`, `gate`, `roof`.
+* `cost`: exatamente um recurso.
