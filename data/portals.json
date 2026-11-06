@@ -42,40 +42,6 @@
         "aurelia"
       ],
       "kind": "moon"
-    },
-    {
-      "id": "estrada_lochport_bosque",
-      "name": {
-        "pt": "Estrada do Bosque",
-        "en": "Woods Road"
-      },
-      "kind": "road",
-      "from": {
-        "map": "lochport",
-        "note": "saída a ligar na vila"
-      },
-      "to": {
-        "map": "bosque_da_vila",
-        "at": [
-          2,
-          18
-        ]
-      },
-      "return": {
-        "map": "bosque_da_vila",
-        "rect": [
-          0,
-          17,
-          1,
-          4
-        ],
-        "dest_map": "lochport",
-        "at": [
-          43,
-          55
-        ]
-      },
-      "pvp": false
     }
   ]
 }

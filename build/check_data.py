@@ -53,12 +53,19 @@ for m in J('monsters.json', {'monsters': []})['monsters']:
         bad.append(f"monstro {m['id']}: tabela de loot {t} não existe")
     if m.get('hue') and m['hue'] not in hues:
         bad.append(f"monstro {m['id']}: cor {m['hue']} não existe")
+uniques = {u['id'] for u in J('items/uniques.json', {'uniques': []})['uniques']}
 for k, v in tables.items():
     for e in v:
         x = e[0]
-        if x.startswith('base:'):
-            x = x[5:]
-        if x not in ('gold', 'reagent') and x not in items | reag:
+        if x.startswith('base:') or x.startswith('raro:'):
+            iid = x.split(':', 1)[1]
+            if iid not in items | reag:
+                bad.append(f'loot {k}: {e[0]} não é item')
+        elif x.startswith('unique:'):
+            uid = x.split(':', 1)[1]
+            if uid not in uniques:
+                bad.append(f'loot {k}: unique {uid} não existe')
+        elif x not in ('gold', 'reagent') and x not in items | reag:
             bad.append(f'loot {k}: {e[0]} não é item')
 A = J('items/affixes.json', {'prefix': [], 'suffix': []})
 for a in A.get('prefix', []) + A.get('suffix', []):
@@ -175,6 +182,52 @@ if Po:
     for p in Po.get('portals', []):
         if p.get('pvp') is True:
             bad.append(f"portal {p.get('id')}: pvp não permitido")
+
+
+# boards obsoletos: fora de loot
+for k, v in tables.items():
+    for e in v:
+        if 'board' in e[0]:
+            bad.append(f'loot {k}: {e[0]} é tábua obsoleta')
+
+Po = J('portals.json')
+if Po:
+    for p in Po.get('portals', []):
+        if p.get('kind') == 'road':
+            bad.append(f"portal {p.get('id')}: kind road removido (mapa único)")
+        if p.get('pvp') is True:
+            bad.append(f"portal {p.get('id')}: pvp não permitido")
+
+Z = J('zones.json')
+if Z:
+    mons_ids = {m['id'] for m in J('monsters.json', {'monsters': []})['monsters']}
+    boss_ids = {b['id'] for b in J('names/bosses.json', {'bosses': []})['bosses']}
+    wmap = (Z.get('world') or {}).get('map')
+    for z in Z.get('zones', []):
+        if wmap and z.get('map') and z['map'] != wmap:
+            bad.append(f"zone {z.get('id')}: map {z.get('map')} != world.map {wmap}")
+        if z.get('connects'):
+            bad.append(f"zone {z.get('id')}: connects removido (mapa contínuo, sem exits)")
+        for ch in z.get('chunks', []) or []:
+            if ch.get('boss') and ch['boss'] not in mons_ids | boss_ids:
+                bad.append(f"zone {z.get('id')} chunk {ch.get('id')}: boss {ch.get('boss')} não existe")
+            for s in ch.get('spawns', []) or []:
+                if s.get('monster') not in mons_ids:
+                    bad.append(f"zone {z.get('id')} chunk {ch.get('id')}: monstro {s.get('monster')} não existe")
+
+Ev = J('events.json')
+if Ev:
+    for e in Ev.get('events', []):
+        for k in ('target_player', 'pk', 'pvp', 'kill_player'):
+            if k in e:
+                bad.append(f"evento {e.get('id')}: campo PvP {k} proibido")
+        rt = (e.get('rewards') or {}).get('table')
+        if rt and rt not in tables:
+            bad.append(f"evento {e.get('id')}: tabela de loot {rt} não existe")
+
+for s in J('magic/spells.json', {'spells': []})['spells']:
+    if 'words' in s:
+        bad.append(f"magia {s['id']}: campo words removido (sem palavras de poder)")
 
 print(f'{len(items)} itens, {len(spells)} magias, {len(mons)} monstros, {len(tables)} tabelas, {len(hues)} cores')
 if bad:

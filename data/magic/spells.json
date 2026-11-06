@@ -22,7 +22,6 @@
           "int"
         ]
       },
-      "words": "Shifa Qarib",
       "icon": "scroll_c1",
       "desc": {
         "pt": "Fecha um corte pequeno em quem você tocar.",
@@ -51,7 +50,6 @@
           "int"
         ]
       },
-      "words": "Nar Saghir",
       "icon": "scroll_c1",
       "desc": {
         "pt": "Uma centelha curta queima o alvo.",
@@ -80,7 +78,6 @@
           "magery"
         ]
       },
-      "words": "Ayn Layl",
       "icon": "scroll_c1",
       "desc": {
         "pt": "Seus olhos passam a enxergar no escuro por um tempo.",
@@ -109,7 +106,6 @@
           "magery"
         ]
       },
-      "words": "Dira Tin",
       "icon": "scroll_c1",
       "desc": {
         "pt": "Uma pele de couro mágico amortece os golpes.",
@@ -138,7 +134,6 @@
           "magery"
         ]
       },
-      "words": "Yad Rikhwa",
       "icon": "scroll_c1",
       "desc": {
         "pt": "Os dedos do alvo perdem firmeza.",
@@ -167,7 +162,6 @@
           "magery"
         ]
       },
-      "words": "Aql Wahn",
       "icon": "scroll_c1",
       "desc": {
         "pt": "A mente do alvo embaça por alguns instantes.",
@@ -196,7 +190,6 @@
           "magery"
         ]
       },
-      "words": "Jism Rikhwa",
       "icon": "scroll_c1",
       "desc": {
         "pt": "O braço do alvo pesa e a força cai.",
@@ -224,7 +217,6 @@
           "magery"
         ]
       },
-      "words": "Khubz Salib",
       "icon": "scroll_c1",
       "desc": {
         "pt": "Põe pão fresco na mochila.",
@@ -253,7 +245,6 @@
           "magery"
         ]
       },
-      "words": "Rashaq Qawi",
       "icon": "scroll_c2",
       "desc": {
         "pt": "O passo de quem você toca fica leve e certo.",
@@ -282,7 +273,6 @@
           "magery"
         ]
       },
-      "words": "Aql Nahar",
       "icon": "scroll_c2",
       "desc": {
         "pt": "Clareia o juízo de um aliado.",
@@ -313,7 +303,6 @@
           "int"
         ]
       },
-      "words": "Khalsa Milh",
       "icon": "scroll_c2",
       "desc": {
         "pt": "Lava o veneno e fecha um arranhão.",
@@ -342,7 +331,6 @@
           "int"
         ]
       },
-      "words": "Saqt Yad",
       "icon": "scroll_c2",
       "desc": {
         "pt": "Um golpe de palma invisível empurra o alvo.",
@@ -371,7 +359,6 @@
           "magery"
         ]
       },
-      "words": "Jism Qawi",
       "icon": "scroll_c2",
       "desc": {
         "pt": "O tendão de quem você toca endurece.",
@@ -400,7 +387,6 @@
           "magery"
         ]
       },
-      "words": "Haras Jild",
       "icon": "scroll_c2",
       "desc": {
         "pt": "A pele desvia uma parte dos golpes.",
@@ -428,7 +414,6 @@
           "magery"
         ]
       },
-      "words": "Lifafa Qarib",
       "icon": "scroll_c2",
       "desc": {
         "pt": "Tece faixas de linho prontas para estancar.",
@@ -457,7 +442,6 @@
           "int"
         ]
       },
-      "words": "Nar Yad",
       "icon": "scroll_c2",
       "desc": {
         "pt": "A mão deixa uma brasa no alvo.",
@@ -492,7 +476,6 @@
           "magery"
         ]
       },
-      "words": "Baraka Nur",
       "icon": "scroll_c3",
       "desc": {
         "pt": "Força, agilidade e juízo sobem juntos por um minuto.",
@@ -523,7 +506,6 @@
           "int"
         ]
       },
-      "words": "Nar Rami",
       "icon": "scroll_c3",
       "desc": {
         "pt": "Uma bola de nafta estoura em fogo no alvo.",
@@ -555,7 +537,6 @@
           "int"
         ]
       },
-      "words": "Samm Rami",
       "icon": "scroll_c3",
       "desc": {
         "pt": "A resina envenena e dói por alguns segundos.",
@@ -585,7 +566,6 @@
           "magery"
         ]
       },
-      "words": "Wasat Qarib",
       "icon": "scroll_c3",
       "desc": {
         "pt": "Você dá um passo curto até o chão marcado.",
@@ -618,7 +598,6 @@
           "magery"
         ]
       },
-      "words": "Hajar Sura",
       "icon": "scroll_c3",
       "desc": {
         "pt": "Uma cortina de cal viva fecha a passagem.",
@@ -649,7 +628,6 @@
           "int"
         ]
       },
-      "words": "Thalj Yad",
       "icon": "scroll_c3",
       "desc": {
         "pt": "Um frio seco belisca a carne do alvo.",
@@ -685,7 +663,6 @@
           "magery"
         ]
       },
-      "words": "Haras Salib",
       "icon": "scroll_c3",
       "desc": {
         "pt": "O incenso recobre você contra fogo, frio, veneno e energia.",
@@ -716,7 +693,6 @@
           "magery"
         ]
       },
-      "words": "Tubba Ayn",
       "icon": "scroll_c3",
       "desc": {
         "pt": "Pó de cal cobre os olhos e os golpes erram.",
@@ -751,7 +727,6 @@
           "int"
         ]
       },
-      "words": "Khalsa Kabir",
       "icon": "scroll_c4",
       "desc": {
         "pt": "Limpa o veneno e cura um pouco, em você e em quem está perto.",
@@ -783,7 +758,6 @@
           "magery"
         ]
       },
-      "words": "Haras Dira",
       "icon": "scroll_c4",
       "desc": {
         "pt": "Uma égide de cal e prece engrossa a armadura.",
@@ -819,7 +793,6 @@
           "magery"
         ]
       },
-      "words": "Laan Arba",
       "icon": "scroll_c4",
       "desc": {
         "pt": "Quatro pesos caem sobre força, agilidade e juízo.",
@@ -852,7 +825,6 @@
           "magery"
         ]
       },
-      "words": "Nar Midan",
       "icon": "scroll_c4",
       "desc": {
         "pt": "Uma linha de fogo de salitre queima quem a atravessa.",
@@ -882,7 +854,6 @@
           "int"
         ]
       },
-      "words": "Shifa Kabir",
       "icon": "scroll_c4",
       "desc": {
         "pt": "Fecha feridas fundas em quem você tocar.",
@@ -914,7 +885,6 @@
           "int"
         ]
       },
-      "words": "Sama Sahm",
       "icon": "scroll_c4",
       "desc": {
         "pt": "Um prego de tormenta crava energia no alvo.",
@@ -945,7 +915,6 @@
           "magery"
         ]
       },
-      "words": "Ruh Saqt",
       "icon": "scroll_c4",
       "desc": {
         "pt": "Suga na hora uma parte da mana do alvo.",
@@ -976,7 +945,6 @@
           "magery"
         ]
       },
-      "words": "Bab Markaz",
       "icon": "scroll_c4",
       "desc": {
         "pt": "Leva você de volta ao chão que foi cravado antes.",
@@ -1008,7 +976,6 @@
           "magery"
         ]
       },
-      "words": "Ruh Hadid",
       "icon": "scroll_c5",
       "desc": {
         "pt": "Chama um ou dois cavaleiros esqueleto, de lâmina em punho.",
@@ -1041,7 +1008,6 @@
           "magery"
         ]
       },
-      "words": "Fakk Sura",
       "icon": "scroll_c5",
       "desc": {
         "pt": "Rasga campos mágicos num pequeno trecho de chão.",
@@ -1073,7 +1039,6 @@
           "magery"
         ]
       },
-      "words": "Aks Qasam",
       "icon": "scroll_c5",
       "desc": {
         "pt": "O próximo feitiço hostil volta para quem o lançou.",
@@ -1105,7 +1070,6 @@
           "int"
         ]
       },
-      "words": "Thalj Aql",
       "icon": "scroll_c5",
       "desc": {
         "pt": "Um frio de dentro racha a mente do alvo.",
@@ -1137,7 +1101,6 @@
           "magery"
         ]
       },
-      "words": "Qayd Hajar",
       "icon": "scroll_c5",
       "desc": {
         "pt": "A cal prende os pés do alvo por uns instantes.",
@@ -1170,7 +1133,6 @@
           "magery"
         ]
       },
-      "words": "Samm Midan",
       "icon": "scroll_c5",
       "desc": {
         "pt": "Um lodaçal de mirra envenena quem pisa nele.",
@@ -1201,7 +1163,6 @@
           "magery"
         ]
       },
-      "words": "Ruh Dhib",
       "icon": "scroll_c5",
       "desc": {
         "pt": "Chama um chacal do deserto para o seu lado.",
@@ -1233,7 +1194,6 @@
           "magery"
         ]
       },
-      "words": "Dam Baraka",
       "icon": "scroll_c5",
       "desc": {
         "pt": "Unge o fio de uma arma e ela corta mais fundo.",
@@ -1265,7 +1225,6 @@
           "magery"
         ]
       },
-      "words": "Fakk Ruh",
       "icon": "scroll_c6",
       "desc": {
         "pt": "Desfia uma criatura chamada e a devolve ao nada.",
@@ -1297,7 +1256,6 @@
           "int"
         ]
       },
-      "words": "Sahm Zujaj",
       "icon": "scroll_c6",
       "desc": {
         "pt": "Um raio de vidro e salitre fura o alvo.",
@@ -1329,7 +1287,6 @@
           "int"
         ]
       },
-      "words": "Nar Fitna",
       "icon": "scroll_c6",
       "desc": {
         "pt": "O forno estoura em fogo à volta do chão marcado.",
@@ -1361,7 +1318,6 @@
           "magery"
         ]
       },
-      "words": "Hijab Ruh",
       "icon": "scroll_c6",
       "desc": {
         "pt": "Um véu de mirra esconde você por um tempo.",
@@ -1392,7 +1348,6 @@
           "magery"
         ]
       },
-      "words": "Markaz Salib",
       "icon": "scroll_c6",
       "desc": {
         "pt": "Crava este chão para um passo de santuário futuro.",
@@ -1429,7 +1384,6 @@
           "magery"
         ]
       },
-      "words": "Laan Jam",
       "icon": "scroll_c6",
       "desc": {
         "pt": "A maldição pesa em todos que estão no trecho marcado.",
@@ -1461,7 +1415,6 @@
           "magery"
         ]
       },
-      "words": "Qayd Midan",
       "icon": "scroll_c6",
       "desc": {
         "pt": "Uma jaula branca de cal prende quem a atravessa.",
@@ -1491,7 +1444,6 @@
           "magery"
         ]
       },
-      "words": "Kashf Hijab",
       "icon": "scroll_c6",
       "desc": {
         "pt": "Arranca o véu de quem se esconde perto do chão marcado.",
@@ -1524,7 +1476,6 @@
           "int"
         ]
       },
-      "words": "Silsila Sahm",
       "icon": "scroll_c7",
       "desc": {
         "pt": "Pregos de energia saltam do alvo para quem está perto.",
@@ -1558,7 +1509,6 @@
           "magery"
         ]
       },
-      "words": "Milh Sura",
       "icon": "scroll_c7",
       "desc": {
         "pt": "Barras de salitre crepitam e ferem quem as toca.",
@@ -1590,7 +1540,6 @@
           "int"
         ]
       },
-      "words": "Nar Burj",
       "icon": "scroll_c7",
       "desc": {
         "pt": "Um pilar de nafta desce em fogo sobre o chão marcado.",
@@ -1622,7 +1571,6 @@
           "magery"
         ]
       },
-      "words": "Bab Ramal",
       "icon": "scroll_c7",
       "desc": {
         "pt": "Abre por meio minuto uma porta até o chão cravado.",
@@ -1655,7 +1603,6 @@
           "magery"
         ]
       },
-      "words": "Ruh Shurb",
       "icon": "scroll_c7",
       "desc": {
         "pt": "Bebe a mana do alvo e devolve essa luz a você.",
@@ -1687,7 +1634,6 @@
           "magery"
         ]
       },
-      "words": "Fakk Jam",
       "icon": "scroll_c7",
       "desc": {
         "pt": "Espalha de uma vez as criaturas chamadas no trecho.",
@@ -1720,7 +1666,6 @@
           "int"
         ]
       },
-      "words": "Najm Saqt",
       "icon": "scroll_c7",
       "desc": {
         "pt": "Estrelas de fogo caem à volta do chão marcado.",
@@ -1753,7 +1698,6 @@
           "magery"
         ]
       },
-      "words": "Tin Sura",
       "icon": "scroll_c7",
       "desc": {
         "pt": "Seu corpo toma a forma de um golem das ruínas.",
@@ -1785,7 +1729,6 @@
           "int"
         ]
       },
-      "words": "Zalzal Ard",
       "icon": "scroll_c8",
       "desc": {
         "pt": "O chão se fende e sacode todos à volta.",
@@ -1817,7 +1760,6 @@
           "magery"
         ]
       },
-      "words": "Hadid Qarn",
       "icon": "scroll_c8",
       "desc": {
         "pt": "Traz um minotauro que investe contra quem estiver perto.",
@@ -1848,7 +1790,6 @@
           "int"
         ]
       },
-      "words": "Qiyam Haya",
       "icon": "scroll_c8",
       "desc": {
         "pt": "Ergue um corpo caído e devolve vida a ele.",
@@ -1879,7 +1820,6 @@
           "magery"
         ]
       },
-      "words": "Nar Jinn",
       "icon": "scroll_c8",
       "desc": {
         "pt": "O forno responde com uma wyvern de fogo.",
@@ -1910,7 +1850,6 @@
           "magery"
         ]
       },
-      "words": "Hajar Jinn",
       "icon": "scroll_c8",
       "desc": {
         "pt": "Ergue um elemental de rocha da pedreira.",
@@ -1942,7 +1881,6 @@
           "magery"
         ]
       },
-      "words": "Rih Jinn",
       "icon": "scroll_c8",
       "desc": {
         "pt": "O simum traz uma wyvern do ar.",
@@ -1974,7 +1912,6 @@
           "magery"
         ]
       },
-      "words": "Ma Jinn",
       "icon": "scroll_c8",
       "desc": {
         "pt": "A cisterna solta um caranguejo gigante.",
@@ -2011,7 +1948,6 @@
           "magery"
         ]
       },
-      "words": "Khatm Thamin",
       "icon": "scroll_c8",
       "desc": {
         "pt": "O oitavo selo fecha você contra fogo, frio, veneno e energia.",

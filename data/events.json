@@ -36,7 +36,7 @@
         ]
       ],
       "rewards": {
-        "table": "goblin_elite",
+        "table": "boss_chefe_goblin",
         "top_damage": 3
       },
       "notes": "Disputa de guilda por dano no chefe — sem alvo PvP."
@@ -76,7 +76,7 @@
         ]
       ],
       "rewards": {
-        "table": "skeleton_knight_boss",
+        "table": "boss_guardiao_da_cripta",
         "top_damage": 3
       },
       "notes": "Evento de área; guerra de guilda = corrida pelo chefe."
@@ -103,7 +103,7 @@
       },
       "adds": [],
       "rewards": {
-        "table": "wyvern",
+        "table": "boss_wyvern",
         "top_damage": 5
       },
       "notes": "Chefe de fundo da primeira área de caça. Adds opcional zerado = solo boss."
@@ -135,7 +135,7 @@
         ]
       ],
       "rewards": {
-        "table": "wyvern_fire",
+        "table": "boss_serpe_de_fogo",
         "top_damage": 5
       },
       "notes": "Variante rara de fogo; mesma clareira, intervalo maior."

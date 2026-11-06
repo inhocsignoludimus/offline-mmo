@@ -33,15 +33,24 @@
       "time_s": 1.8,
       "yields": [
         {
+          "item": "stone",
+          "amount": [
+            1,
+            2
+          ],
+          "min_skill": 0,
+          "always": true
+        },
+        {
           "item": "iron_ore",
           "chance_by_skill": [
             [
               0,
-              0.7
+              0.55
             ],
             [
               40,
-              0.55
+              0.5
             ],
             [
               70,
@@ -58,15 +67,15 @@
           "chance_by_skill": [
             [
               0,
-              0.25
+              0.2
             ],
             [
               40,
-              0.3
+              0.28
             ],
             [
               70,
-              0.35
+              0.32
             ]
           ],
           "amount": [
@@ -83,11 +92,11 @@
             ],
             [
               40,
-              0.15
+              0.12
             ],
             [
               70,
-              0.25
+              0.22
             ]
           ],
           "amount": [
@@ -95,7 +104,8 @@
             1
           ]
         }
-      ]
+      ],
+      "notes": "Sempre dá stone; minério é chance extra por nível de mining."
     }
   ],
   "stations": [
