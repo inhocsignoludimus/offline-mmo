@@ -35,27 +35,34 @@ const Magic = {
   },
 
   // ---------------------------------------------------------------
-  cast(id) {
+  // estilo Diablo: sem palavras e sem modo de mira; o alvo vem do cursor (ou do mais próximo)
+  cast(id, mob, at) {
     const s = this.byId[id], p = Game.player; if (!s) return;
-    if (this.casting) return;
+    if (this.casting || p.dead) return;
     if (!this.open(s)) { HUD.toast(`Precisa de Magia ${this.min(s)}`); return; }
     if (p.mp < s.mana) { Journal.add('system', '', 'Mana insuficiente.'); return; }
     if (!this.hasReagents(s)) { Journal.add('system', '', `Faltam reagentes: ${Object.keys(s.reagents).map(r => Items.name(Items.byId[r])).join(', ')}.`); return; }
     const a = p.actor;
-    a.say = { text: s.words, until: Game.now + 1600, color: '#9ad0ff' };
     a.path = null; a.setAnim('swing');
-    this.casting = { s, until: Game.now + 400 + s.circle * 180 };
+    const hostile = s.effect.type === 'damage' || s.effect.type === 'debuff';
+    if (hostile && !mob) { HUD.toast('Nenhum monstro por perto'); return; }
+    if (mob) a.dir = direcaoDoAngulo(Math.atan2(mob.y - a.y, mob.x - a.x));
+    this.casting = { s, mob, at, until: Game.now + 200 + s.circle * 60 };
   },
   update(dt) {
     const p = Game.player;
     if (this.casting && Game.now >= this.casting.until) {
-      const s = this.casting.s; this.casting = null;
-      if (s.target === 'self' || s.target === 'none') this.resolve(s, p.actor, [p.actor.x, p.actor.y]);
-      else { this.targeting = s; document.body.classList.add('targeting'); HUD.toast(`${this.name(s)}: escolha o alvo`); }
+      const { s, mob, at } = this.casting; this.casting = null;
+      const t = s.effect.type, P = p.actor;
+      if (t === 'damage' || t === 'debuff') this.resolve(s, mob, [mob.x, mob.y]);
+      else if (t === 'teleport') { const ang = DIRECOES.length && (P.dir - 6) * Math.PI / 4; const tgt = at && !Touch.on ? at : [P.x + Math.cos(ang) * 5, P.y + Math.sin(ang) * 5]; this.resolve(s, null, tgt); }
+      else if (t === 'field') this.resolve(s, null, mob ? [mob.x, mob.y] : at || [P.x, P.y]);
+      else this.resolve(s, P, [P.x, P.y]);
     }
     // buffs com duração
     for (const b of this.buffs.slice()) if (Game.now > b.until) { this.buffs.splice(this.buffs.indexOf(b), 1); b.end && b.end(); Journal.add('system', '', `${b.name} acabou.`); }
-    for (const f of this.fx) f.t += dt;
+    for (const f of this.fx) { f.t += dt;
+      if (f.kind === 'field' && f.dps) { f.tick = (f.tick || 0) - dt; if (f.tick <= 0) { f.tick = 1; for (const m of Combat.mobs) if (!m.dead && Math.hypot(m.x - f.x, m.y - f.y) < f.r) Combat.damageMob(m, Math.round(f.dps), false, f.col); } } }
     this.fx = this.fx.filter(f => f.t < f.life);
   },
   // clique no mundo enquanto mira; devolve true se usou o clique
@@ -88,14 +95,13 @@ const Magic = {
       }
       case 'damage': {
         const n = this.roll(s);
-        if (sim) { Journal.add('system', '', `${this.name(s)} atinge ${sim.name} (${n}).`); sim.rel = 'inimigo'; setTimeout(() => Sim.say(sim, 'reply_enemy', { target: p.name }, 'local'), 700); }
-        else if (me) { p.hp = Math.max(1, p.hp - n); }
+        if (actor && actor.kind === 'mob') { const m = actor; Combat.projectile(p.actor, m, col, () => Combat.damageMob(m, Math.max(1, Math.round(n * (1 - ((m.def.resist || {})[e.element] || 0) / 100))), false, col)); }
         break;
       }
       case 'buff': case 'debuff': {
         const n = this.roll(s), dur = (e.duration || 60) * 1000;
         if (me || e.type === 'buff' && !actor) this.addBuff(s, n, dur);
-        else if (sim) { if (e.type === 'debuff') { sim.rel = 'inimigo'; setTimeout(() => Sim.say(sim, 'reply_enemy', { target: p.name }, 'local'), 700); } else if (chance(0.5)) setTimeout(() => Sim.say(sim, 'thanks', { target: p.name }, 'local'), 800); }
+        else if (actor && actor.kind === 'mob' && e.type === 'debuff') { actor.speed *= 0.6; actor.cd += 1.5; Combat.float(actor, this.name(s), col); setTimeout(() => { actor.speed /= 0.6; }, dur); }
         break;
       }
       case 'teleport': {
@@ -105,7 +111,7 @@ const Magic = {
         break;
       }
       case 'create_item': { const n = Math.max(1, Math.round(((e.base || [1, 1])[0] + (e.base || [1, 1])[1]) / 2)); Game.give(e.id, n); Backpack.render(); Journal.add('system', '', `Você cria ${Items.name(Items.byId[e.id])}.`); break; }
-      case 'field': this.fx.push({ kind: 'field', x: at[0], y: at[1], r: e.radius || 1.5, col, t: 0, life: Math.min(20, e.duration || 10) }); break;
+      case 'field': this.fx.push({ kind: 'field', x: at[0], y: at[1], r: e.radius || 1.5, col, t: 0, life: Math.min(20, e.duration || 10), dps: Math.max(2, this.roll(s) / 3) }); break;
       case 'summon': Journal.add('system', '', `${this.name(s)}: as invocações chegam junto com os monstros.`); break;
       case 'reveal': Journal.add('system', '', 'Nada escondido por perto.'); break;
     }
@@ -161,7 +167,7 @@ const Spellbook = {
     }).join('');
     b.innerHTML = `<div class="sptabs">${tabs}</div><div class="sphead">Círculo ${this.circle} · precisa de Magia ${CIRCULO_MIN[this.circle]} · sua: ${v.toFixed(1)}</div><div class="splist">${rows}</div>`;
     b.querySelectorAll('[data-c]').forEach(x => x.onclick = () => { this.circle = +x.dataset.c; this.render(); });
-    b.querySelectorAll('[data-s]').forEach(x => x.onclick = () => Magic.cast(x.dataset.s));
+    b.querySelectorAll('[data-s]').forEach(x => x.onclick = () => Magic.cast(x.dataset.s, Combat.target || Combat.nearest(9), null));
     b.querySelectorAll('[data-b]').forEach(x => x.onclick = () => {
       const id = x.dataset.b, h = Magic.hotbar, i = h.indexOf(id);
       if (i >= 0) h.splice(i, 1); else if (h.length < 9) h.push(id); else HUD.toast('Barra cheia (9)');
@@ -172,6 +178,7 @@ const Spellbook = {
     const h = Magic.hotbar.filter(id => Magic.byId[id]);
     this.bar.style.display = h.length ? '' : 'none';
     this.bar.innerHTML = h.map((id, i) => { const s = Magic.byId[id]; return `<button data-s="${id}" title="${Magic.name(s)} (${s.mana} mana)"><b>${i + 1}</b>${Magic.name(s).split(' ').map(w => w[0]).join('').slice(0, 3)}</button>`; }).join('');
-    this.bar.querySelectorAll('[data-s]').forEach(x => x.onclick = () => Magic.cast(x.dataset.s));
+    this.bar.querySelectorAll('[data-s]').forEach(x => x.onclick = () => Game.castAt(x.dataset.s, ...(Game.mouse || [Render.vw / 2, Render.vh / 2])));
+    Touch.render();
   },
 };

@@ -92,11 +92,27 @@ def import_map(flare, name, out):
     atlas.save(os.path.join(out, f'{name}_tiles.webp'), 'WEBP', quality=92, method=6)
     tdef = {str(t): [*pos[t], round(meta[t][0], 2), round(meta[t][1], 2)] for t in pos}
     col = L.get('collision', [[0] * W for _ in range(H)])
+    # saídas (eventos intermap) e pontos de monstro ([enemy]) do mapa do Flare
+    txt = open(os.path.join(flare, 'mods', 'empyrean_campaign', 'maps', name + '.txt'), encoding='utf-8').read()
+    exits, spawns = [], []
+    for blk in txt.split('\n\n'):
+        loc = re.search(r'^location=([\d,]+)', blk, re.M)
+        if not loc:
+            continue
+        r = [int(v) for v in loc.group(1).split(',')]
+        im = re.search(r'^intermap=maps/(\w+)\.txt,(\d+),(\d+)', blk, re.M)
+        if blk.lstrip().startswith('[event]') and im:
+            exits.append({'rect': r, 'to': im.group(1), 'at': [int(im.group(2)), int(im.group(3))]})
+        if blk.lstrip().startswith('[enemy'):
+            cat = re.search(r'^category=(\w+)', blk, re.M)
+            lv = re.search(r'^level=(\d+)', blk, re.M)
+            spawns.append({'rect': r, 'cat': cat.group(1) if cat else '', 'level': int(lv.group(1)) if lv else 1})
     data = {
         'version': 1, 'id': name, 'source': 'flare-game/empyrean_campaign/maps/' + name + '.txt',
         'w': W, 'h': H, 'tile': [96, 48], 'hero': hero,
         'atlas': f'{name}_tiles.webp', 'tiles': tdef,
         'background': L['background'], 'object': L.get('object', []), 'collision': col,
+        'exits': exits, 'spawns': spawns,
     }
     json.dump(data, open(os.path.join(out, f'{name}.json'), 'w'), separators=(',', ':'))
     print(f'mapa {name}: {W}x{H}, {len(pos)} tiles, atlas {atlas.size}')

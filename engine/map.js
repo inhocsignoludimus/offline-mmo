@@ -5,10 +5,11 @@
 // Lê o formato gerado por build/import_dev_assets.py a partir do .txt do Flare.
 // =====================================================================
 const CHUNK = 16;
+const EMPTY_CHUNK = document.createElement('canvas'); EMPTY_CHUNK.width = EMPTY_CHUNK.height = 1;
 
 class GameMap {
   constructor(data, atlas) {
-    Object.assign(this, { id: data.id, w: data.w, h: data.h, hero: data.hero, tiles: data.tiles, atlas });
+    Object.assign(this, { id: data.id, w: data.w, h: data.h, hero: data.hero, tiles: data.tiles, atlas, exits: data.exits || [], spawns: data.spawns || [] });
     this.bg = data.background; this.obj = data.object; this.col = data.collision;
     this.chunks = new Map();
     // lista de objetos por linha, para achar rápido os que estão na tela
@@ -33,6 +34,7 @@ class GameMap {
   chunk(ci, cj) {
     const k = ci + ',' + cj; let c = this.chunks.get(k);
     if (c) return c;
+    if (!this.atlas.complete || !this.atlas.naturalWidth) return { cv: EMPTY_CHUNK, left: 0, top: 0 }; // atlas ainda carregando: não guarda
     const [ox, oy] = w2s(ci * CHUNK, cj * CHUNK);
     const left = ox - CHUNK * ISO.HW - 64, top = oy - 64;
     const cv = document.createElement('canvas'); cv.width = CHUNK * ISO.TW + 128; cv.height = CHUNK * ISO.TH + 160;

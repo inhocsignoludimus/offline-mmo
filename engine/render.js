@@ -53,17 +53,19 @@ const Render = {
     for (const a of actors) {
       const [sx, sy] = w2s(a.x, a.y);
       if (sx < L || sx > R || sy < T || sy > B + 200) continue;
-      list.push({ k: a.x + a.y, a, sx, sy });
+      list.push({ k: a.x + a.y - (a.dead ? 0.6 : 0), a, sx, sy });
     }
     list.sort((p, q) => p.k - q.k);
     for (const e of list) {
       if (e.o) map.drawTile(g, e.o.t, e.sx, e.sy);
       else e.a.draw(g, e.sx, e.sy);
     }
+    Combat.drawWorld(g);
     Magic.draw(g);
     // nomes e falas, em pixels de tela (texto nítido)
     g.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    for (const e of list) if (e.a) this.overhead(e.a, now);
+    for (const e of list) if (e.a && e.a.kind !== 'mob') this.overhead(e.a, now);
+    Combat.drawScreen(g, now);
   },
   toggleNames() {
     this.showNames = !this.showNames;

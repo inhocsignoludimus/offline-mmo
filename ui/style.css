@@ -132,3 +132,37 @@ button { font-family: inherit; }
 #hotbar button { position: relative; width: 42px; height: 42px; background: radial-gradient(#3a3060, #1a1630); border: 1px solid #000; outline: 1px solid #6b5a3a; color: #e0d8ff; font: 700 12px 'Alegreya SC', serif; cursor: pointer; }
 #hotbar b { position: absolute; left: 3px; top: 1px; font-size: 10px; color: var(--ouro); }
 body.targeting #cv { cursor: cell; }
+
+/* combate D2 */
+.orb { position: fixed; bottom: 8px; width: 92px; height: 92px; border-radius: 50%; overflow: hidden; background: #120c0a; border: 3px solid #4a3a26; box-shadow: 0 0 0 1px #000, inset 0 0 18px #000; z-index: 5; pointer-events: none; }
+#orb-hp { left: 10px; } #orb-mp { right: 10px; }
+.orb i { position: absolute; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 40% 30%, #ff6a4a, #8a1408 70%); transition: height .15s; }
+#orb-mp i { background: radial-gradient(circle at 40% 30%, #6a9aff, #102a8a 70%); }
+.orb b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 700 12px 'Alegreya Sans', sans-serif; text-shadow: 0 1px 2px #000; color: #fff; }
+#targetbar { position: fixed; top: 8px; left: 50%; transform: translateX(-50%); width: 260px; height: 22px; background: #140c0a; border: 1px solid #6b5a3a; z-index: 6; pointer-events: none; }
+#targetbar i { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(#a02818, #5a0c06); }
+#targetbar span { position: relative; display: block; text-align: center; font: 700 13px/20px 'Alegreya SC', serif; color: #f0e0c0; text-shadow: 0 1px 2px #000; }
+#tip { position: fixed; display: none; max-width: 280px; padding: 7px 10px; background: rgba(10,8,6,.95); border: 1px solid #6b5a3a; font-size: 13px; line-height: 1.35; z-index: 200; pointer-events: none; color: #d8d0b8; }
+#tip .afx { color: #8fb0ff; } #tip .lore { color: #b0a080; }
+#prompt { position: fixed; top: 22%; left: 50%; transform: translateX(-50%); padding: 14px 18px; background: linear-gradient(#2e2a23, #1d1a15); border: 2px solid var(--borda); display: none; z-index: 150; text-align: center; max-width: 90vw; }
+#prompt.on { display: block; } #prompt button { margin: 8px 6px 0; padding: 8px 16px; background: linear-gradient(#5a4a2a, #3a2e18); color: var(--ouro); border: 1px solid #000; font: 700 14px 'Alegreya SC', serif; }
+#death { position: fixed; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; background: rgba(40,0,0,.55); z-index: 120; }
+#death.on { display: flex; } #death h2 { font: 700 42px 'Alegreya SC', serif; color: #d03020; margin: 0; text-shadow: 0 2px 8px #000; }
+#death button { margin-top: 14px; padding: 10px 22px; background: linear-gradient(#5a4a2a, #3a2e18); color: var(--ouro); border: 1px solid #000; font: 700 16px 'Alegreya SC', serif; }
+.gleave { font-size: 10px; padding: 0 4px; background: #3a1a14; color: #f0c0a0; border: 1px solid #000; cursor: pointer; }
+#cv { cursor: default; }
+/* celular (como no TCoM) */
+#joy { position: fixed; left: 22px; bottom: 26px; width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,.06); border: 2px solid rgba(255,230,160,.25); z-index: 8; touch-action: none; }
+#joy i { position: absolute; left: 35px; top: 35px; width: 50px; height: 50px; border-radius: 50%; background: rgba(255,230,160,.3); border: 2px solid rgba(255,230,160,.5); }
+#acts { position: fixed; right: 18px; bottom: 20px; width: 190px; height: 170px; z-index: 8; }
+#acts button { position: absolute; border-radius: 50%; border: 2px solid #6b5a3a; background: radial-gradient(#3a2e20, #120c08); color: #f0e0c0; font: 700 14px 'Alegreya SC', serif; touch-action: none; }
+#acts .atk { right: 0; bottom: 0; width: 84px; height: 84px; font-size: 34px; background: radial-gradient(#6a2a1a, #200806); }
+#acts .pick { right: 96px; bottom: 0; width: 52px; height: 52px; font-size: 22px; }
+#acts .sk { width: 54px; height: 54px; background: radial-gradient(#3a3060, #120e28); }
+#acts .s0 { right: 94px; bottom: 62px; } #acts .s1 { right: 34px; bottom: 96px; } #acts .s2 { right: 148px; bottom: 112px; } #acts .s3 { right: 88px; bottom: 126px; }
+body.touch #orb-hp, body.touch #orb-mp { top: 6px; bottom: auto; width: 54px; height: 54px; } body.touch #orb-hp { left: 6px; } body.touch #orb-mp { left: 66px; right: auto; }
+body.touch #hotbar { display: none !important; }
+body.touch #menubar { bottom: auto; top: 4px; left: auto; right: 4px; transform: none; flex-wrap: wrap; max-width: 60vw; justify-content: flex-end; }
+body.touch #targetbar { top: 64px; }
+#menubar { bottom: 8px; } #hotbar { bottom: 56px; }
+body.touch #menubar button { padding: 3px 6px; font-size: 11px; } body.touch #menubar button[data-g=status], body.touch #menubar button[data-act=names] { display: none; }
