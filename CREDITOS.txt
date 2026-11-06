@@ -153,3 +153,79 @@ arte de terceiros:
   O chão é medido em metros e convertido para pixels.
   O cenário em folhas está em assets/cenario/<área>/folha*.webp,
   fatiado por CENARIO_DADOS.
+
+
+MONSTROS — LOTE 1 (art/monsters/)
+=================================
+Folhas isométricas no contrato de docs/ART_SPEC.md, seção 9.
+Câmera do Flare (ortográfica, 60°/0°/45°), Cycles, view transform
+Standard, PNG RGBA com fundo transparente. Oito direções, na
+ordem do TCoM: SW, W, NW, N, NE, E, SE, S. Animações: stance 6
+(back_forth), run 8 (looped), swing 7 (play_once), hit 3
+(play_once), die 8 (play_once). Sem cast e sem special. A figura
+humana das prévias é o personagem do TCoM, só na prévia; não
+entra na folha. O crédito dele está na seção "MOTOR DE
+REFERÊNCIA", acima. Notas de entrega: art/monsters/BATCH1.md.
+
+rat — rato, escala 0,3× (humano de 140 px no master → cerca de 42 px).
+  Autor: CDmir (feito para Kelgar)
+  Título: Evil giant rat
+  Obra: https://opengameart.org/content/evil-giant-rat
+  Licença: CC0 1.0 Universal
+    https://creativecommons.org/publicdomain/zero/1.0/
+  Modificações (Ludimus / In Hoc Signo Ludimus, 2026-11-05):
+    materiais Cycles dessaturados e escurecidos; folha isométrica
+    do Flare; Idle/Walk/Attack/Hit/Die remapeados para
+    stance/run/swing/hit/die; âncora dos pés no centro do losango.
+  Arquivos: art/monsters/rat/rat.png, art/monsters/rat/rat.json,
+    art/src/rat.blend, art/_preview/rat.png.
+
+boar — javali, escala 0,6× (cerca de 84 px).
+  Autor: Teh_Bucket
+  Título: Boar
+  Obra: https://opengameart.org/content/boar
+  Licença: CC0 1.0 Universal
+    https://creativecommons.org/publicdomain/zero/1.0/
+  Modificações (Ludimus / In Hoc Signo Ludimus, 2026-11-05):
+    materiais escurecidos; idle (respiração), hit (recuo) e die
+    (tombo de lado) animados à mão — a fonte só tinha walk e
+    attack; walk→run e attack→swing.
+  Arquivos: art/monsters/boar/boar.png, art/monsters/boar/boar.json,
+    art/src/boar.blend, art/_preview/boar.png.
+
+giant_spider — aranha gigante, escala 0,7× (cerca de 98 px).
+  Autor: Guillaume "GuieA_7" Englert
+  Título: Spider (3D)
+  Obra: https://opengameart.org/content/spider-3d
+  Licença do modelo: CC-BY-SA 4.0
+    https://creativecommons.org/licenses/by-sa/4.0/
+    https://creativecommons.org/licenses/by-sa/4.0/legalcode
+  Os sprites derivados deste modelo ficam em CC-BY-SA 4.0
+  (compartilha-igual). Crédito: Guillaume "GuieA_7" Englert.
+  Modificações (Ludimus / In Hoc Signo Ludimus, 2026-11-05):
+    materiais escurecidos e dessaturados; hit (recuo) animado à
+    mão; idle/walk/attack/die remapeados. A altura opaca do corpo
+    fica cerca de 88 px (pernas finas abaixo do limiar de alfa);
+    o recorte geral permanece perto do alvo.
+  Arquivos: art/monsters/giant_spider/giant_spider.png,
+    art/monsters/giant_spider/giant_spider.json,
+    art/src/giant_spider.blend, art/_preview/giant_spider.png.
+
+scorpion — escorpião, escala 0,5× (cerca de 70 px).
+  Autor: Guillaume "GuieA_7" Englert
+  Título: Scorpion (3D)
+  Obra: https://opengameart.org/content/scorpion-3d
+  Licença do modelo: CC-BY-SA 4.0
+    https://creativecommons.org/licenses/by-sa/4.0/
+    https://creativecommons.org/licenses/by-sa/4.0/legalcode
+  Os sprites derivados deste modelo ficam em CC-BY-SA 4.0
+  (compartilha-igual). Crédito: Guillaume "GuieA_7" Englert.
+  Modificações (Ludimus / In Hoc Signo Ludimus, 2026-11-05):
+    materiais escurecidos; osso do olho reduzido a 0,55× (o bulbo
+    da fonte era grande demais); hit animado à mão;
+    idle/walk/attack/die remapeados.
+  Arquivos: art/monsters/scorpion/scorpion.png,
+    art/monsters/scorpion/scorpion.json, art/src/scorpion.blend,
+    art/_preview/scorpion.png.
+
+Nenhum material do Ultima Online ou da EA entra nestas folhas.
