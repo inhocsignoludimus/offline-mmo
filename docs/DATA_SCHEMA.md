@@ -216,3 +216,24 @@ As **5 faixas de raridade** são fixas na engine:
 
 * `phases`: o destino muda com a fase da lua, como no UO.
 
+
+
+## data/gathering.json
+
+Coleta simples (sem PvP). Árvore → `logs` (serve direto na construção). Rocha → minérios com chance por nível de `mining`. Forja: 2 minérios → 1 lingote.
+
+```json
+{ "version": 1,
+  "nodes": [
+    { "id": "tree", "skill": "lumberjacking", "tool": "axe", "time_s": 1.5,
+      "yields": [ { "item": "logs", "amount": [1, 3], "min_skill": 0 } ] },
+    { "id": "rock", "skill": "mining", "tool": "pickaxe", "time_s": 1.8,
+      "yields": [ { "item": "iron_ore", "chance_by_skill": [[0, 0.7], [40, 0.55]], "amount": [1, 2] } ] }
+  ],
+  "stations": [
+    { "id": "forge", "skill": "blacksmithing", "time_s": 2.0,
+      "recipes": [ { "id": "smelt_iron", "in": {"iron_ore": 2}, "out": {"iron_ingot": 1}, "min_skill": 0 } ] }
+  ] }
+```
+* `time_s`: 1 a 2 segundos.
+* `chance_by_skill`: lista `[nível_mínimo, chance]` (a engine usa o maior nível ≤ skill do jogador).
