@@ -189,8 +189,8 @@
       "ctx": "help_ask",
       "ch": "local",
       "text": {
-        "pt": "o q é PK? me mataram em {place}",
-        "en": "what's PK? I got killed in {place}"
+        "pt": "alguem me ajuda no {boss} em {place}?",
+        "en": "can someone help me with {boss} at {place}?"
       }
     },
     {
@@ -321,8 +321,8 @@
       "ctx": "insult",
       "ch": "local",
       "text": {
-        "pt": "{target} pq me matou? eu era noob :(",
-        "en": "{target} why kill me? I was a noob :("
+        "pt": "{target} pq me deixou pra tras no pack? :( ",
+        "en": "{target} why leave me behind on the pack? :("
       }
     },
     {
@@ -383,18 +383,6 @@
       "text": {
         "pt": "perdi o loot todo em {place}",
         "en": "lost all my loot in {place}"
-      }
-    },
-    {
-      "id": "nov_kill_other_01",
-      "p": [
-        "novato"
-      ],
-      "ctx": "kill_other",
-      "ch": "local",
-      "text": {
-        "pt": "matei um monstro!! era o {boss}?",
-        "en": "I killed a mob!! was it {boss}?"
       }
     },
     {
@@ -575,30 +563,6 @@
       "text": {
         "pt": "desculpa te encher {target}",
         "en": "sorry to bother you {target}"
-      }
-    },
-    {
-      "id": "nov_pk_warning_01",
-      "p": [
-        "novato"
-      ],
-      "ctx": "pk_warning",
-      "ch": "local",
-      "text": {
-        "pt": "cuidado tem PK perto de {place}!!",
-        "en": "careful PK near {place}!!"
-      }
-    },
-    {
-      "id": "nov_pk_warning_02",
-      "p": [
-        "novato"
-      ],
-      "ctx": "pk_warning",
-      "ch": "global",
-      "text": {
-        "pt": "vi uns vermelhos em {place}",
-        "en": "saw reds in {place}"
       }
     },
     {
@@ -926,30 +890,6 @@
       }
     },
     {
-      "id": "frm_kill_other_01",
-      "p": [
-        "farmador"
-      ],
-      "ctx": "kill_other",
-      "ch": "local",
-      "text": {
-        "pt": "clear, prox pack",
-        "en": "clear, next pack"
-      }
-    },
-    {
-      "id": "frm_kill_other_02",
-      "p": [
-        "farmador"
-      ],
-      "ctx": "kill_other",
-      "ch": "party",
-      "text": {
-        "pt": "{boss} down, loot",
-        "en": "{boss} down, loot"
-      }
-    },
-    {
       "id": "frm_loot_rare_01",
       "p": [
         "farmador"
@@ -1029,8 +969,8 @@
       "ctx": "guild_war_taunt",
       "ch": "guild",
       "text": {
-        "pt": "eles n farmam, só pk",
-        "en": "they don't farm, just pk"
+        "pt": "eles n farmam boss, só flodam chat",
+        "en": "they dont farm bosses, just spam chat"
       }
     },
     {
@@ -1154,30 +1094,6 @@
       }
     },
     {
-      "id": "frm_pk_warning_01",
-      "p": [
-        "farmador"
-      ],
-      "ctx": "pk_warning",
-      "ch": "local",
-      "text": {
-        "pt": "pk no spot de {place}",
-        "en": "pk at {place} spot"
-      }
-    },
-    {
-      "id": "frm_pk_warning_02",
-      "p": [
-        "farmador"
-      ],
-      "ctx": "pk_warning",
-      "ch": "guild",
-      "text": {
-        "pt": "vermelhos farmando em {place}",
-        "en": "reds farming at {place}"
-      }
-    },
-    {
       "id": "frm_idle_04",
       "p": [
         "farmador"
@@ -1257,8 +1173,8 @@
       "ctx": "idle",
       "ch": "local",
       "text": {
-        "pt": "to entediado, cadê os pks",
-        "en": "bored, where are the pks"
+        "pt": "to entediado, cadê um boss bom",
+        "en": "bored, wheres a good boss"
       }
     },
     {
@@ -1281,8 +1197,8 @@
       "ctx": "lfg",
       "ch": "global",
       "text": {
-        "pt": "lfg gank squad {place}",
-        "en": "lfg gank squad {place}"
+        "pt": "lfg squad de boss {place}",
+        "en": "lfg boss squad {place}"
       }
     },
     {
@@ -1293,8 +1209,8 @@
       "ctx": "lfg",
       "ch": "party",
       "text": {
-        "pt": "preciso de stun pra gank",
-        "en": "need stun for gank"
+        "pt": "preciso de stun pra {boss}",
+        "en": "need stun for {boss}"
       }
     },
     {
@@ -1305,8 +1221,8 @@
       "ctx": "lfg",
       "ch": "guild",
       "text": {
-        "pt": "war party formando",
-        "en": "war party forming"
+        "pt": "war party de evento formando",
+        "en": "event war party forming"
       }
     },
     {
@@ -1317,8 +1233,8 @@
       "ctx": "trade_sell",
       "ch": "global",
       "text": {
-        "pt": "WTS set pvp {price}gp",
-        "en": "WTS pvp set {price}gp"
+        "pt": "WTS set de farm {price}gp",
+        "en": "WTS farm set {price}gp"
       }
     },
     {
@@ -1329,8 +1245,8 @@
       "ctx": "trade_buy",
       "ch": "global",
       "text": {
-        "pt": "WTB {item} pvp pronto",
-        "en": "WTB {item} pvp ready"
+        "pt": "WTB {item} pronto pra boss",
+        "en": "WTB {item} boss-ready"
       }
     },
     {
@@ -1413,8 +1329,8 @@
       "ctx": "brag",
       "ch": "global",
       "text": {
-        "pt": "matei {target} 1v1 facil",
-        "en": "killed {target} 1v1 easy"
+        "pt": "derrubei o {boss} solo facil",
+        "en": "soloed {boss} easy"
       }
     },
     {
@@ -1425,8 +1341,8 @@
       "ctx": "brag",
       "ch": "local",
       "text": {
-        "pt": "{n} kills hj, farm de noob",
-        "en": "{n} kills today, noob farm"
+        "pt": "{n} kills de monstro hj, farmando hard",
+        "en": "{n} mob kills today, farming hard"
       }
     },
     {
@@ -1437,8 +1353,8 @@
       "ctx": "brag",
       "ch": "guild",
       "text": {
-        "pt": "derrubei o leader de {tag}",
-        "en": "downed {tag}'s leader"
+        "pt": "lideramos o ranking do {boss}",
+        "en": "we lead the {boss} ranking"
       }
     },
     {
@@ -1449,8 +1365,8 @@
       "ctx": "insult",
       "ch": "local",
       "text": {
-        "pt": "{target} é noob demais kkk",
-        "en": "{target} is such a noob lol"
+        "pt": "{target} errou o pull do {boss} kkk",
+        "en": "{target} botched the {boss} pull lol"
       }
     },
     {
@@ -1473,8 +1389,8 @@
       "ctx": "insult",
       "ch": "whisper",
       "text": {
-        "pt": "ez {target}",
-        "en": "ez {target}"
+        "pt": "ez farm {target}",
+        "en": "ez farm {target}"
       }
     },
     {
@@ -1526,42 +1442,6 @@
       }
     },
     {
-      "id": "pvp_kill_other_01",
-      "p": [
-        "pvper"
-      ],
-      "ctx": "kill_other",
-      "ch": "local",
-      "text": {
-        "pt": "EZ {target}",
-        "en": "EZ {target}"
-      }
-    },
-    {
-      "id": "pvp_kill_other_02",
-      "p": [
-        "pvper"
-      ],
-      "ctx": "kill_other",
-      "ch": "global",
-      "text": {
-        "pt": "mais um skull, gg {target}",
-        "en": "another skull, gg {target}"
-      }
-    },
-    {
-      "id": "pvp_kill_other_03",
-      "p": [
-        "pvper"
-      ],
-      "ctx": "kill_other",
-      "ch": "guild",
-      "text": {
-        "pt": "{target} caiu, prox",
-        "en": "{target} down, next"
-      }
-    },
-    {
       "id": "pvp_loot_rare_01",
       "p": [
         "pvper"
@@ -1569,8 +1449,8 @@
       "ctx": "loot_rare",
       "ch": "local",
       "text": {
-        "pt": "lootou set do {target} kkk",
-        "en": "looted {target}'s set lol"
+        "pt": "lootou set do {boss} kkk",
+        "en": "looted the {boss} set lol"
       }
     },
     {
@@ -1581,8 +1461,8 @@
       "ctx": "loot_rare",
       "ch": "guild",
       "text": {
-        "pt": "peguei {item} do corpse",
-        "en": "got {item} off the corpse"
+        "pt": "peguei {item} do {boss}",
+        "en": "got {item} from {boss}"
       }
     },
     {
@@ -1593,8 +1473,8 @@
       "ctx": "guild_recruit",
       "ch": "global",
       "text": {
-        "pt": "[{tag}] recruta PvP hardcore",
-        "en": "[{tag}] recruiting hardcore PvP"
+        "pt": "[{tag}] recruta pra boss e evento",
+        "en": "[{tag}] recruiting for bosses and events"
       }
     },
     {
@@ -1617,8 +1497,8 @@
       "ctx": "guild_war_declare",
       "ch": "global",
       "text": {
-        "pt": "[{tag}] DECLARA GUERRA a {guild}!!",
-        "en": "[{tag}] DECLARES WAR on {guild}!!"
+        "pt": "[{tag}] disputa o {boss} contra {guild}!!",
+        "en": "[{tag}] contests {boss} against {guild}!!"
       }
     },
     {
@@ -1629,8 +1509,8 @@
       "ctx": "guild_war_declare",
       "ch": "guild",
       "text": {
-        "pt": "guerra ON, todos online",
-        "en": "war ON, everyone online"
+        "pt": "guerra de evento ON, todos no {boss}",
+        "en": "event war ON, everyone on {boss}"
       }
     },
     {
@@ -1641,8 +1521,8 @@
       "ctx": "guild_war_taunt",
       "ch": "global",
       "text": {
-        "pt": "{guild} ta escondida kkk",
-        "en": "{guild} is hiding lol"
+        "pt": "{guild} sumiu do {boss} kkk",
+        "en": "{guild} vanished from {boss} lol"
       }
     },
     {
@@ -1653,8 +1533,8 @@
       "ctx": "guild_war_taunt",
       "ch": "local",
       "text": {
-        "pt": "vem {tag}, ou tem medo?",
-        "en": "come {tag}, or scared?"
+        "pt": "vem {tag}, ou tem medo do {boss}?",
+        "en": "come {tag}, or scared of {boss}?"
       }
     },
     {
@@ -1665,8 +1545,8 @@
       "ctx": "raid_call",
       "ch": "guild",
       "text": {
-        "pt": "raid PvP em {place} AGORA",
-        "en": "PvP raid at {place} NOW"
+        "pt": "guild evento de {boss} em {place} AGORA",
+        "en": "guild {boss} event at {place} NOW"
       }
     },
     {
@@ -1763,30 +1643,6 @@
       "text": {
         "pt": "1v1 ou some",
         "en": "1v1 or leave"
-      }
-    },
-    {
-      "id": "pvp_pk_warning_01",
-      "p": [
-        "pvper"
-      ],
-      "ctx": "pk_warning",
-      "ch": "local",
-      "text": {
-        "pt": "eu sou o PK de {place} kkk",
-        "en": "I'm the PK of {place} lol"
-      }
-    },
-    {
-      "id": "pvp_pk_warning_02",
-      "p": [
-        "pvper"
-      ],
-      "ctx": "pk_warning",
-      "ch": "global",
-      "text": {
-        "pt": "vermelhos free em {place}",
-        "en": "free reds at {place}"
       }
     },
     {
@@ -2174,18 +2030,6 @@
       }
     },
     {
-      "id": "com_kill_other_01",
-      "p": [
-        "comerciante"
-      ],
-      "ctx": "kill_other",
-      "ch": "local",
-      "text": {
-        "pt": "defendi a carga, gg",
-        "en": "defended the cargo, gg"
-      }
-    },
-    {
       "id": "com_loot_rare_01",
       "p": [
         "comerciante"
@@ -2241,8 +2085,8 @@
       "ctx": "guild_war_declare",
       "ch": "guild",
       "text": {
-        "pt": "guerra: suspender rotas",
-        "en": "war: suspend routes"
+        "pt": "evento: pausar rotas perto do {boss}",
+        "en": "event: pause routes near {boss}"
       }
     },
     {
@@ -2363,30 +2207,6 @@
       "text": {
         "pt": "pm oferta por {item}",
         "en": "pm offer for {item}"
-      }
-    },
-    {
-      "id": "com_pk_warning_01",
-      "p": [
-        "comerciante"
-      ],
-      "ctx": "pk_warning",
-      "ch": "global",
-      "text": {
-        "pt": "PK na rota {place}, evitem",
-        "en": "PK on {place} route, avoid"
-      }
-    },
-    {
-      "id": "com_pk_warning_02",
-      "p": [
-        "comerciante"
-      ],
-      "ctx": "pk_warning",
-      "ch": "local",
-      "text": {
-        "pt": "escolta cara em {place} hj",
-        "en": "pricey escort at {place} today"
       }
     },
     {
@@ -2726,30 +2546,6 @@
       }
     },
     {
-      "id": "rp_kill_other_01",
-      "p": [
-        "roleplayer"
-      ],
-      "ctx": "kill_other",
-      "ch": "local",
-      "text": {
-        "pt": "Que {target} encontre paz além.",
-        "en": "May {target} find peace beyond."
-      }
-    },
-    {
-      "id": "rp_kill_other_02",
-      "p": [
-        "roleplayer"
-      ],
-      "ctx": "kill_other",
-      "ch": "guild",
-      "text": {
-        "pt": "O adversário {target} foi vencido.",
-        "en": "The foe {target} has been vanquished."
-      }
-    },
-    {
       "id": "rp_loot_rare_01",
       "p": [
         "roleplayer"
@@ -2805,8 +2601,8 @@
       "ctx": "guild_war_declare",
       "ch": "global",
       "text": {
-        "pt": "[{tag}] declara guerra justa a {guild}.",
-        "en": "[{tag}] declares just war upon {guild}."
+        "pt": "[{tag}] disputa a glória do {boss} com {guild}.",
+        "en": "[{tag}] contests the glory of {boss} with {guild}."
       }
     },
     {
@@ -2817,8 +2613,8 @@
       "ctx": "guild_war_declare",
       "ch": "guild",
       "text": {
-        "pt": "Sob juramento, a guerra começa.",
-        "en": "Under oath, the war begins."
+        "pt": "Sob juramento, a disputa pelo {boss} começa.",
+        "en": "Under oath, the contest for {boss} begins."
       }
     },
     {
@@ -2829,8 +2625,8 @@
       "ctx": "guild_war_taunt",
       "ch": "global",
       "text": {
-        "pt": "{guild}, enfrentai-nos com honra em {place}.",
-        "en": "{guild}, meet us with honor at {place}."
+        "pt": "{guild}, enfrentai-nos no ritual de {boss} em {place}.",
+        "en": "{guild}, face us at the {boss} rite in {place}."
       }
     },
     {
@@ -2963,30 +2759,6 @@
       "text": {
         "pt": "Estado-vos, {target}.",
         "en": "I greet you, {target}."
-      }
-    },
-    {
-      "id": "rp_pk_warning_01",
-      "p": [
-        "roleplayer"
-      ],
-      "ctx": "pk_warning",
-      "ch": "local",
-      "text": {
-        "pt": "Cuidado: assassinos rondam {place}.",
-        "en": "Beware: assassins haunt {place}."
-      }
-    },
-    {
-      "id": "rp_pk_warning_02",
-      "p": [
-        "roleplayer"
-      ],
-      "ctx": "pk_warning",
-      "ch": "global",
-      "text": {
-        "pt": "Há sangue injusto nas estradas de {place}.",
-        "en": "Unjust blood stains the roads of {place}."
       }
     },
     {
@@ -3350,30 +3122,6 @@
       }
     },
     {
-      "id": "trl_kill_other_01",
-      "p": [
-        "troll"
-      ],
-      "ctx": "kill_other",
-      "ch": "local",
-      "text": {
-        "pt": "gg ez next",
-        "en": "gg ez next"
-      }
-    },
-    {
-      "id": "trl_kill_other_02",
-      "p": [
-        "troll"
-      ],
-      "ctx": "kill_other",
-      "ch": "global",
-      "text": {
-        "pt": "mais um pro mural de vergonha",
-        "en": "another for the shame wall"
-      }
-    },
-    {
       "id": "trl_loot_rare_01",
       "p": [
         "troll"
@@ -3429,8 +3177,8 @@
       "ctx": "guild_war_declare",
       "ch": "global",
       "text": {
-        "pt": "[{tag}] declara GUERRA de meme",
-        "en": "[{tag}] declares meme WAR"
+        "pt": "[{tag}] declara GUERRA de meme no {boss}",
+        "en": "[{tag}] declares meme WAR on {boss}"
       }
     },
     {
@@ -3578,27 +3326,783 @@
       }
     },
     {
-      "id": "trl_pk_warning_01",
+      "id": "nov_hunt_01",
       "p": [
-        "troll"
+        "novato"
       ],
-      "ctx": "pk_warning",
-      "ch": "global",
+      "ctx": "hunt",
+      "ch": "local",
       "text": {
-        "pt": "PK? sou eu kkk em {place}",
-        "en": "PK? that's me lol at {place}"
+        "pt": "bora caçar goblin no bosque?",
+        "en": "wanna hunt goblins in the woods?"
       }
     },
     {
-      "id": "trl_pk_warning_02",
+      "id": "nov_hunt_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "hunt",
+      "ch": "party",
+      "text": {
+        "pt": "alguem topa caçar em {place}?",
+        "en": "anyone up to hunt at {place}?"
+      }
+    },
+    {
+      "id": "nov_hunt_03",
+      "p": [
+        "novato"
+      ],
+      "ctx": "hunt",
+      "ch": "global",
+      "text": {
+        "pt": "onde farmar goblin de boa?",
+        "en": "where to farm goblins safely?"
+      }
+    },
+    {
+      "id": "frm_hunt_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "hunt",
+      "ch": "local",
+      "text": {
+        "pt": "caçando em {place}, xp bom",
+        "en": "hunting at {place}, good xp"
+      }
+    },
+    {
+      "id": "frm_hunt_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "hunt",
+      "ch": "party",
+      "text": {
+        "pt": "stack pra caçar {boss} trash",
+        "en": "stack to hunt {boss} trash"
+      }
+    },
+    {
+      "id": "frm_hunt_03",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "hunt",
+      "ch": "guild",
+      "text": {
+        "pt": "rota de caça: {place} → cripta",
+        "en": "hunt route: {place} → crypt"
+      }
+    },
+    {
+      "id": "pvp_hunt_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "hunt",
+      "ch": "local",
+      "text": {
+        "pt": "bora limpar o bosque AGORA",
+        "en": "lets clear the woods NOW"
+      }
+    },
+    {
+      "id": "pvp_hunt_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "hunt",
+      "ch": "party",
+      "text": {
+        "pt": "hunt squad {place}, sem enrolar",
+        "en": "hunt squad {place}, no stalling"
+      }
+    },
+    {
+      "id": "pvp_hunt_03",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "hunt",
+      "ch": "global",
+      "text": {
+        "pt": "caçando {boss} adds, vem quem quer dmg",
+        "en": "hunting {boss} adds, dps welcome"
+      }
+    },
+    {
+      "id": "com_hunt_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "hunt",
+      "ch": "local",
+      "text": {
+        "pt": "vendo pots pra caçada em {place}",
+        "en": "selling pots for hunts at {place}"
+      }
+    },
+    {
+      "id": "com_hunt_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "hunt",
+      "ch": "global",
+      "text": {
+        "pt": "caçada rende {item}? compro stack",
+        "en": "hunt drop {item}? buying stacks"
+      }
+    },
+    {
+      "id": "rp_hunt_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "hunt",
+      "ch": "local",
+      "text": {
+        "pt": "Que a caça em {place} seja justa.",
+        "en": "May the hunt at {place} be just."
+      }
+    },
+    {
+      "id": "rp_hunt_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "hunt",
+      "ch": "guild",
+      "text": {
+        "pt": "Marchemos à caça do bosque.",
+        "en": "Let us march to the woodland hunt."
+      }
+    },
+    {
+      "id": "rp_hunt_03",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "hunt",
+      "ch": "party",
+      "text": {
+        "pt": "Companheiros, à trilha do goblin.",
+        "en": "Companions, to the goblin trail."
+      }
+    },
+    {
+      "id": "trl_hunt_01",
       "p": [
         "troll"
       ],
-      "ctx": "pk_warning",
+      "ctx": "hunt",
       "ch": "local",
       "text": {
-        "pt": "cuidado o chao... nao, sou eu",
-        "en": "careful the floor... nah it's me"
+        "pt": "bora caçar e zoar em {place}",
+        "en": "lets hunt and troll at {place}"
+      }
+    },
+    {
+      "id": "trl_hunt_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "hunt",
+      "ch": "global",
+      "text": {
+        "pt": "hunt de goblin pra farmar meme",
+        "en": "goblin hunt for meme farm"
+      }
+    },
+    {
+      "id": "nov_boss_spawn_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "global",
+      "text": {
+        "pt": "{boss} spawnou em {place}!!!!",
+        "en": "{boss} spawned at {place}!!!!"
+      }
+    },
+    {
+      "id": "nov_boss_spawn_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "party",
+      "text": {
+        "pt": "galera o {boss} ta up, vamos?",
+        "en": "guys {boss} is up, coming?"
+      }
+    },
+    {
+      "id": "nov_boss_spawn_03",
+      "p": [
+        "novato"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "local",
+      "text": {
+        "pt": "vi o {boss} perto de {place}!!",
+        "en": "saw {boss} near {place}!!"
+      }
+    },
+    {
+      "id": "frm_boss_spawn_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "guild",
+      "text": {
+        "pt": "{boss} up em {place}, dropa {item}?",
+        "en": "{boss} up at {place}, drops {item}?"
+      }
+    },
+    {
+      "id": "frm_boss_spawn_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "party",
+      "text": {
+        "pt": "tag {boss} agora, sem delay",
+        "en": "tag {boss} now, no delay"
+      }
+    },
+    {
+      "id": "frm_boss_spawn_03",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "global",
+      "text": {
+        "pt": "{boss} spawn {place} — stack pronto",
+        "en": "{boss} spawn {place} — stack ready"
+      }
+    },
+    {
+      "id": "pvp_boss_spawn_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "global",
+      "text": {
+        "pt": "{boss} UP {place} CORRE",
+        "en": "{boss} UP {place} RUN"
+      }
+    },
+    {
+      "id": "pvp_boss_spawn_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "guild",
+      "text": {
+        "pt": "primeiro no {boss} leva o loot",
+        "en": "first on {boss} takes the loot"
+      }
+    },
+    {
+      "id": "pvp_boss_spawn_03",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "party",
+      "text": {
+        "pt": "rush {boss}, sem morte besta",
+        "en": "rush {boss}, no dumb deaths"
+      }
+    },
+    {
+      "id": "com_boss_spawn_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "global",
+      "text": {
+        "pt": "{boss} up — compro loot fresco",
+        "en": "{boss} up — buying fresh loot"
+      }
+    },
+    {
+      "id": "com_boss_spawn_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "local",
+      "text": {
+        "pt": "evento {boss}: pots {price}gp",
+        "en": "{boss} event: pots {price}gp"
+      }
+    },
+    {
+      "id": "rp_boss_spawn_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "global",
+      "text": {
+        "pt": "O {boss} desperta em {place}!",
+        "en": "{boss} awakens at {place}!"
+      }
+    },
+    {
+      "id": "rp_boss_spawn_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "guild",
+      "text": {
+        "pt": "Ao chamado do {boss}, às armas!",
+        "en": "At {boss}'s call, to arms!"
+      }
+    },
+    {
+      "id": "rp_boss_spawn_03",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "local",
+      "text": {
+        "pt": "Senti a sombra do {boss} em {place}.",
+        "en": "I felt {boss}'s shadow at {place}."
+      }
+    },
+    {
+      "id": "trl_boss_spawn_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "global",
+      "text": {
+        "pt": "{boss} up kkk vai ter wipe",
+        "en": "{boss} up lol wipe incoming"
+      }
+    },
+    {
+      "id": "trl_boss_spawn_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "boss_spawn",
+      "ch": "party",
+      "text": {
+        "pt": "bring popcorn pro {boss}",
+        "en": "bring popcorn for {boss}"
+      }
+    },
+    {
+      "id": "nov_loot_drop_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "loot_drop",
+      "ch": "local",
+      "text": {
+        "pt": "caiu {item} no chao!! pego?",
+        "en": "{item} on the ground!! take it?"
+      }
+    },
+    {
+      "id": "nov_loot_drop_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "loot_drop",
+      "ch": "party",
+      "text": {
+        "pt": "loot do pack: {item}, quem quer?",
+        "en": "pack loot: {item}, who wants?"
+      }
+    },
+    {
+      "id": "nov_loot_drop_03",
+      "p": [
+        "novato"
+      ],
+      "ctx": "loot_drop",
+      "ch": "local",
+      "text": {
+        "pt": "dropou ouro e {item} aq",
+        "en": "dropped gold and {item} here"
+      }
+    },
+    {
+      "id": "frm_loot_drop_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "loot_drop",
+      "ch": "party",
+      "text": {
+        "pt": "need on {item}",
+        "en": "need on {item}"
+      }
+    },
+    {
+      "id": "frm_loot_drop_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "loot_drop",
+      "ch": "local",
+      "text": {
+        "pt": "loot limpo, {item} x{n}",
+        "en": "clean loot, {item} x{n}"
+      }
+    },
+    {
+      "id": "frm_loot_drop_03",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "loot_drop",
+      "ch": "guild",
+      "text": {
+        "pt": "drop comum: {item}, vendor?",
+        "en": "common drop: {item}, vendor?"
+      }
+    },
+    {
+      "id": "pvp_loot_drop_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "loot_drop",
+      "ch": "local",
+      "text": {
+        "pt": "peguei {item} do pack, gg",
+        "en": "took {item} from the pack, gg"
+      }
+    },
+    {
+      "id": "pvp_loot_drop_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "loot_drop",
+      "ch": "party",
+      "text": {
+        "pt": "loot split dps no {item}",
+        "en": "loot split dps on {item}"
+      }
+    },
+    {
+      "id": "com_loot_drop_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "loot_drop",
+      "ch": "global",
+      "text": {
+        "pt": "WTB {item} drop fresco {price}gp",
+        "en": "WTB fresh {item} drop {price}gp"
+      }
+    },
+    {
+      "id": "com_loot_drop_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "loot_drop",
+      "ch": "local",
+      "text": {
+        "pt": "vendo {item} q acabou de dropar",
+        "en": "selling {item} that just dropped"
+      }
+    },
+    {
+      "id": "com_loot_drop_03",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "loot_drop",
+      "ch": "party",
+      "text": {
+        "pt": "avalio {item} por {price}gp",
+        "en": "appraising {item} for {price}gp"
+      }
+    },
+    {
+      "id": "rp_loot_drop_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "loot_drop",
+      "ch": "local",
+      "text": {
+        "pt": "O espólio revela {item}.",
+        "en": "The spoils reveal {item}."
+      }
+    },
+    {
+      "id": "rp_loot_drop_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "loot_drop",
+      "ch": "party",
+      "text": {
+        "pt": "Partilhemos {item} com justiça.",
+        "en": "Let us share {item} in fairness."
+      }
+    },
+    {
+      "id": "rp_loot_drop_03",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "loot_drop",
+      "ch": "guild",
+      "text": {
+        "pt": "O {item} cabe a quem mais lutou.",
+        "en": "{item} belongs to who fought hardest."
+      }
+    },
+    {
+      "id": "trl_loot_drop_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "loot_drop",
+      "ch": "local",
+      "text": {
+        "pt": "dropou {item} e eu n queria kkk",
+        "en": "dropped {item} and i didnt want it lol"
+      }
+    },
+    {
+      "id": "trl_loot_drop_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "loot_drop",
+      "ch": "party",
+      "text": {
+        "pt": "need all {item} trust me",
+        "en": "need all {item} trust me"
+      }
+    },
+    {
+      "id": "nov_trade_01",
+      "p": [
+        "novato"
+      ],
+      "ctx": "trade",
+      "ch": "local",
+      "text": {
+        "pt": "como funciona trade? clico onde?",
+        "en": "how does trade work? where do i click?"
+      }
+    },
+    {
+      "id": "nov_trade_02",
+      "p": [
+        "novato"
+      ],
+      "ctx": "trade",
+      "ch": "whisper",
+      "text": {
+        "pt": "troco {item} com vc?",
+        "en": "trade you {item}?"
+      }
+    },
+    {
+      "id": "nov_trade_03",
+      "p": [
+        "novato"
+      ],
+      "ctx": "trade",
+      "ch": "global",
+      "text": {
+        "pt": "alguem troca {item} por pots?",
+        "en": "anyone trade {item} for pots?"
+      }
+    },
+    {
+      "id": "frm_trade_01",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "trade",
+      "ch": "local",
+      "text": {
+        "pt": "trade rápido: {item} x{n}",
+        "en": "quick trade: {item} x{n}"
+      }
+    },
+    {
+      "id": "frm_trade_02",
+      "p": [
+        "farmador"
+      ],
+      "ctx": "trade",
+      "ch": "whisper",
+      "text": {
+        "pt": "fecha trade {item} {price}gp",
+        "en": "close trade {item} {price}gp"
+      }
+    },
+    {
+      "id": "pvp_trade_01",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "trade",
+      "ch": "local",
+      "text": {
+        "pt": "trade set de farm {price}gp",
+        "en": "trade farm set {price}gp"
+      }
+    },
+    {
+      "id": "pvp_trade_02",
+      "p": [
+        "pvper"
+      ],
+      "ctx": "trade",
+      "ch": "whisper",
+      "text": {
+        "pt": "manda trade q eu meto {item}",
+        "en": "send trade i put {item}"
+      }
+    },
+    {
+      "id": "com_trade_01",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade",
+      "ch": "global",
+      "text": {
+        "pt": "trade aberto na praça, {item} {price}gp",
+        "en": "trade open at square, {item} {price}gp"
+      }
+    },
+    {
+      "id": "com_trade_02",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade",
+      "ch": "local",
+      "text": {
+        "pt": "aceito trade de {item} e ouro",
+        "en": "accepting trade for {item} and gold"
+      }
+    },
+    {
+      "id": "com_trade_03",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade",
+      "ch": "whisper",
+      "text": {
+        "pt": "trade limpo: {item} por {price}gp",
+        "en": "clean trade: {item} for {price}gp"
+      }
+    },
+    {
+      "id": "com_trade_04",
+      "p": [
+        "comerciante"
+      ],
+      "ctx": "trade",
+      "ch": "global",
+      "text": {
+        "pt": "feirão: trade {item} x{n}",
+        "en": "sale: trade {item} x{n}"
+      }
+    },
+    {
+      "id": "rp_trade_01",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "trade",
+      "ch": "local",
+      "text": {
+        "pt": "Aceito troca honrada de {item}.",
+        "en": "I accept an honest trade of {item}."
+      }
+    },
+    {
+      "id": "rp_trade_02",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "trade",
+      "ch": "whisper",
+      "text": {
+        "pt": "{target}, negociemos {item} com justeza.",
+        "en": "{target}, let us bargain {item} fairly."
+      }
+    },
+    {
+      "id": "rp_trade_03",
+      "p": [
+        "roleplayer"
+      ],
+      "ctx": "trade",
+      "ch": "global",
+      "text": {
+        "pt": "Ofereço troca: {item} por {price} moedas.",
+        "en": "I offer trade: {item} for {price} coins."
+      }
+    },
+    {
+      "id": "trl_trade_01",
+      "p": [
+        "troll"
+      ],
+      "ctx": "trade",
+      "ch": "local",
+      "text": {
+        "pt": "trade 1gp e um sonho kkk",
+        "en": "trade 1gp and a dream lol"
+      }
+    },
+    {
+      "id": "trl_trade_02",
+      "p": [
+        "troll"
+      ],
+      "ctx": "trade",
+      "ch": "whisper",
+      "text": {
+        "pt": "trade scam? mentira, to zoando",
+        "en": "trade scam? kidding"
+      }
+    },
+    {
+      "id": "trl_trade_03",
+      "p": [
+        "troll"
+      ],
+      "ctx": "trade",
+      "ch": "global",
+      "text": {
+        "pt": "FREE TRADE de ar {item}",
+        "en": "FREE TRADE of air {item}"
       }
     }
   ]

@@ -12,7 +12,7 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
   "personalities": [
     { "id": "novato",      "desc": "pergunta tudo, erra muito, agradece",        "typo": 0.15, "caps": 0.05, "emoji": 0.2 },
     { "id": "farmador",    "desc": "focado em xp/loot, fala pouco",               "typo": 0.05, "caps": 0.0,  "emoji": 0.05 },
-    { "id": "pvper",       "desc": "provoca, desafia, se gaba",                    "typo": 0.08, "caps": 0.3,  "emoji": 0.1 },
+    { "id": "pvper",       "desc": "provoca, desafia, se gaba no PvE/boss",         "typo": 0.08, "caps": 0.3,  "emoji": 0.1 },
     { "id": "comerciante", "desc": "WTS/WTB, negocia, anuncia preço",              "typo": 0.03, "caps": 0.2,  "emoji": 0.0 },
     { "id": "roleplayer",  "desc": "fala como personagem medieval, nunca gíria",   "typo": 0.0,  "caps": 0.0,  "emoji": 0.0 },
     { "id": "troll",       "desc": "zoa, reclama do servidor, spam leve",          "typo": 0.2,  "caps": 0.4,  "emoji": 0.3 }
@@ -32,8 +32,8 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
 ```
 * `p`: lista de personalidades que podem usar a frase.
 * `ch`: `global`, `local`, `guild`, `whisper` ou `party`.
-* `ctx` (contextos que a engine dispara): `greet`, `bye`, `idle`, `lfg` (procura grupo), `trade_sell`, `trade_buy`, `trade_haggle`, `help_ask`, `help_give`, `thanks`, `brag`, `insult`, `complain_server`, `death_self`, `kill_other`, `loot_rare`, `guild_recruit`, `guild_war_declare`, `guild_war_taunt`, `raid_call`, `raid_win`, `raid_wipe`, `reply_friend` (quem gosta de você responde), `reply_enemy` (quem te odeia responde), `reply_neutral`, `pk_warning` (avisa sobre PK numa área).
-* Meta da primeira rodada: 300 frases, com cerca de 50 por personalidade, todos os `ctx` cobertos pelo menos uma vez e frases curtas, como num chat de MMO (até cerca de 80 caracteres).
+* `ctx` (contextos que a engine dispara): `greet`, `bye`, `idle`, `lfg` (procura grupo), `trade`, `trade_sell`, `trade_buy`, `trade_haggle`, `help_ask`, `help_give`, `thanks`, `brag`, `insult`, `complain_server`, `death_self`, `hunt` (convite/rota de caça PvE), `boss_spawn` (chefe/evento apareceu), `loot_drop` (loot comum no chão), `loot_rare`, `guild_recruit`, `guild_war_declare`, `guild_war_taunt`, `raid_call`, `raid_win`, `raid_wipe`, `reply_friend` (quem gosta de você responde), `reply_enemy` (quem te odeia responde), `reply_neutral`. **Sem PvP:** `pk_warning` e `kill_other` foram removidos; guerra de guilda = disputa por chefe/evento.
+* Meta: frases curtas, como num chat de MMO (até cerca de 80 caracteres), com cobertura de todos os `ctx` ativos.
 
 ## data/names/players.json
 ```json
@@ -54,7 +54,7 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
       "style": "rp", "align": "ordem", "colors": ["#b8302a", "#e8e0d0"] }
   ] }
 ```
-`tag` com 2 a 4 letras. `align`: `ordem`, `neutro` ou `caos` (o caos tende a PK e guerra).
+`tag` com 2 a 4 letras. `align`: `ordem`, `neutro` ou `caos` (o caos tende a disputa agressiva de chefes/eventos).
 
 ## data/items/base.json
 ```json
