@@ -204,15 +204,26 @@ As **5 faixas de raridade** são fixas na engine:
 
 ## data/events.json e data/portals.json
 
+Eventos são **chefes por área** (disputa de guilda = corrida de dano/participação). **Sem PvP**: nenhum campo de alvo de jogador.
+
 ```json
-{ "version": 1, "events": [ { "id": "rei_formiga_dunas", "boss": "rei_formiga", "place": {"biome": "outremer", "poi": "dunas_de_qasr"},
-  "every_min": [40, 70], "duration_min": 15, "announce": {"pt": "O {boss} surgiu em {place}!", "en": "{boss} has appeared at {place}!"},
-  "adds": [["fire_ant", 6]], "rewards": {"table": "boss_rei_formiga", "top_damage": 3} } ] }
+{ "version": 1, "events": [ { "id": "wyvern_clareira", "boss": "wyvern", "monster": "wyvern",
+  "place": {"zone": "bosque_da_vila", "chunk": "clareira_do_fundo", "biome": "forest", "poi": "clareira_do_fundo"},
+  "every_min": [40, 70], "duration_min": 18, "contest": "guild_damage",
+  "announce": {"pt": "A serpe {boss} pousou na clareira do fundo!", "en": "The serpent {boss} has landed in the far clearing!"},
+  "adds": [], "rewards": {"table": "wyvern", "top_damage": 5} } ] }
 ```
 
 ```json
-{ "version": 1, "portals": [ { "id": "portal_aurelia", "city": "aurelia", "phases": ["aelia_sancta", "porto_do_trigo", "folhaverde"] } ] }
+{ "version": 1, "portals": [
+  { "id": "portal_aurelia", "city": "aurelia", "kind": "moon", "phases": ["aelia_sancta", "porto_trigo", "folhaverde"] },
+  { "id": "estrada_lochport_bosque", "kind": "road", "pvp": false,
+    "to": {"map": "bosque_da_vila", "at": [2, 18]},
+    "return": {"map": "bosque_da_vila", "rect": [0, 17, 1, 4], "dest_map": "lochport", "at": [43, 55]} }
+] }
 ```
 
-* `phases`: o destino muda com a fase da lua, como no UO.
+* `contest`: `guild_damage` (corrida pelo chefe/evento). Nunca alvo de jogador.
+* `phases`: o destino do portal lunar muda com a fase da lua, como no UO.
+* `kind`: `moon` ou `road` (ligação permanente entre mapas).
 

@@ -86,6 +86,21 @@ for e in J('events.json', {'events': []})['events']:
     for a, _ in e.get('adds', []):
         if a not in mons: bad.append(f"evento {e['id']}: monstro {a} não existe")
 
+
+# events.json / portals.json — sem alvos PvP
+Ev = J('events.json')
+if Ev:
+    for e in Ev.get('events', []):
+        # já checado boss/adds abaixo no bloco legado; reforço: sem campos de PvP
+        for k in ('target_player', 'pk', 'pvp', 'kill_player'):
+            if k in e:
+                bad.append(f"evento {e.get('id')}: campo PvP {k} proibido")
+Po = J('portals.json')
+if Po:
+    for p in Po.get('portals', []):
+        if p.get('pvp') is True:
+            bad.append(f"portal {p.get('id')}: pvp não permitido")
+
 print(f'{len(items)} itens, {len(spells)} magias, {len(mons)} monstros, {len(tables)} tabelas, {len(hues)} cores')
 if bad:
     print('\nPROBLEMAS:'); [print(' -', b) for b in bad]; sys.exit(1)
