@@ -1125,8 +1125,8 @@
       "ctx": "greet",
       "ch": "local",
       "text": {
-        "pt": "eae fracos",
-        "en": "hey scrubs"
+        "pt": "eae caçadores",
+        "en": "hey hunters"
       }
     },
     {
@@ -1137,8 +1137,8 @@
       "ctx": "greet",
       "ch": "global",
       "text": {
-        "pt": "quem topa 1v1 em {place}?",
-        "en": "who wants 1v1 at {place}?"
+        "pt": "quem topa o {boss} em {place}?",
+        "en": "who wants {boss} at {place}?"
       }
     },
     {
@@ -1149,8 +1149,8 @@
       "ctx": "bye",
       "ch": "local",
       "text": {
-        "pt": "flw, vcs n valem meu tempo",
-        "en": "cya, not worth my time"
+        "pt": "flw, vou farmar o próximo boss",
+        "en": "cya, off to the next boss"
       }
     },
     {
@@ -1161,8 +1161,8 @@
       "ctx": "bye",
       "ch": "whisper",
       "text": {
-        "pt": "gg {target}, ate a prox",
-        "en": "gg {target}, until next"
+        "pt": "gg {target}, bom hunt",
+        "en": "gg {target}, good hunt"
       }
     },
     {
@@ -1185,8 +1185,8 @@
       "ctx": "idle",
       "ch": "global",
       "text": {
-        "pt": "arena aberta em {place}",
-        "en": "arena open at {place}"
+        "pt": "ranking do {boss} aberto em {place}",
+        "en": "{boss} ranking open at {place}"
       }
     },
     {
@@ -1377,8 +1377,8 @@
       "ctx": "insult",
       "ch": "global",
       "text": {
-        "pt": "{guild} só sabe correr",
-        "en": "{guild} only knows how to run"
+        "pt": "{guild} só foge do {boss}",
+        "en": "{guild} just runs from {boss}"
       }
     },
     {
@@ -1569,8 +1569,8 @@
       "ctx": "raid_win",
       "ch": "global",
       "text": {
-        "pt": "raid win, {guild} chorou",
-        "en": "raid win, {guild} cried"
+        "pt": "EZ {boss}, top dano nosso",
+        "en": "EZ {boss}, our top damage"
       }
     },
     {
@@ -1581,8 +1581,8 @@
       "ctx": "raid_wipe",
       "ch": "party",
       "text": {
-        "pt": "wipe... eles tão stacked",
-        "en": "wipe... they're stacked"
+        "pt": "wipe no {boss}, reset e vai",
+        "en": "wipe on {boss}, reset and go"
       }
     },
     {
@@ -1594,7 +1594,7 @@
       "ch": "whisper",
       "text": {
         "pt": "{target} bora gankar?",
-        "en": "{target} let's gank?"
+        "en": "{target} let's boss rush?"
       }
     },
     {
@@ -1617,8 +1617,8 @@
       "ctx": "reply_enemy",
       "ch": "local",
       "text": {
-        "pt": "te pego dnv {target}",
-        "en": "catching you again {target}"
+        "pt": "compete no {boss} ou cala",
+        "en": "contest {boss} or quiet"
       }
     },
     {
@@ -1629,8 +1629,8 @@
       "ctx": "reply_enemy",
       "ch": "whisper",
       "text": {
-        "pt": "ranked rematch {target}?",
-        "en": "ranked rematch {target}?"
+        "pt": "seu dps no {boss} é piada",
+        "en": "your {boss} dps is a joke"
       }
     },
     {
@@ -1641,8 +1641,8 @@
       "ctx": "reply_neutral",
       "ch": "local",
       "text": {
-        "pt": "1v1 ou some",
-        "en": "1v1 or leave"
+        "pt": "hunt ou some",
+        "en": "hunt or leave"
       }
     },
     {

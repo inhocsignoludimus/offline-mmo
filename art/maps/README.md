@@ -2,15 +2,46 @@
 
 Dono: **Ludimus**.
 
-Mapas que o jogo lê: `art/maps/<id>.txt`, no formato `.txt` do
-Flare, como os de `flare-game/mods/*/maps`. Camadas: `background`,
-`object` e `collision`.
+O mundo é um **mapa único e contínuo** (estilo After Light). Não há
+troca de área nem `intermap`/exits entre mapas.
 
-A fonte editável do Tiled fica em `src/<id>.tmx` (esta pasta
-`src/`, não a `src/` de código na raiz do repositório).
+## Fonte
 
-Ver `docs/ART_SPEC.md`.
+- Runtime / entrega: `art/maps/<id>.txt` no formato Flare
+  (camadas `background`, `object`, `collision`).
+- Fonte editável Tiled: `art/maps/src/<id>.tmx`.
+- `engine/dev_assets/flare/*.json` é **gerado** pelos scripts de
+  build do Claude. **Não editar à mão.**
 
-Mapas entregues:
-- `bosque_da_vila` — primeira área de caça PvE (estrada a partir de Lochport).
+## Checkout irmão do Flare (TMX)
 
+Os `.tmx` referenciam o tileset grassland do Flare neste caminho
+relativo a `art/maps/src/`:
+
+```
+../../../../flare-game/mods/fantasycore/images/tilesets/tileset_grassland.png
+```
+
+Ou seja, o repositório `flare-game` deve ficar como **irmão** do
+checkout `offline-mmo`:
+
+```
+<pai>/
+  offline-mmo/
+  flare-game/
+```
+
+O `.txt` Flare usa `tileset=tilesetdefs/tileset_grassland.txt`
+resolvido dentro do `flare-game` pelos scripts de import.
+
+## Mapas
+
+- `mundo` — mapa contínuo atual (Lochport + Bosque da Vila a leste,
+  ligados por estrada, sem exits).
+- `bosque_da_vila` — peça modular da região de caça (sem exits);
+  já embutida em `mundo`.
+
+Regiões e spawns: `data/zones.json` (`world.map`, `origin`,
+`chunks[].rect` em coordenadas do mapa único).
+
+Ver `docs/ART_SPEC.md` e `docs/DATA_SCHEMA.md`.

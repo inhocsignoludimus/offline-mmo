@@ -291,7 +291,7 @@
           16,
           40
         ],
-        "table": "goblin_elite",
+        "table": "boss_goblin_elite",
         "rarity_bonus": 1
       },
       "tame": null,
@@ -862,7 +862,7 @@
           48,
           110
         ],
-        "table": "skeleton_knight_boss",
+        "table": "boss_skeleton_knight_boss",
         "rarity_bonus": 2
       },
       "tame": null,
@@ -928,7 +928,7 @@
           44,
           100
         ],
-        "table": "skeleton_mage_boss",
+        "table": "boss_skeleton_mage_boss",
         "rarity_bonus": 2
       },
       "tame": null,
@@ -995,7 +995,7 @@
           70,
           160
         ],
-        "table": "skeleton_mage_high_boss",
+        "table": "boss_skeleton_mage_high_boss",
         "rarity_bonus": 2
       },
       "tame": null,
@@ -1847,7 +1847,7 @@
           55,
           130
         ],
-        "table": "wyvern",
+        "table": "boss_wyvern",
         "rarity_bonus": 2
       },
       "tame": null,
@@ -1910,7 +1910,7 @@
           70,
           160
         ],
-        "table": "wyvern_fire",
+        "table": "boss_serpe_de_fogo",
         "rarity_bonus": 2
       },
       "tame": null,
@@ -2106,7 +2106,7 @@
           100,
           220
         ],
-        "table": "wyvern_air_boss",
+        "table": "boss_wyvern_air_boss",
         "rarity_bonus": 2
       },
       "tame": null,

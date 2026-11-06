@@ -71,6 +71,7 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
 * `slot`: `head`, `neck`, `torso`, `arms`, `hands`, `legs`, `feet`, `cloak`, `hand1`, `hand2`, `ring` ou `none`.
 * `sprite_layer`: o nome da camada do TCoM que veste o item (veja a lista de camadas em `CAMADAS_ANIM`, no `jogo.js` do TCoM). Deixe `null` se ainda não existir a camada.
 * `icon`: o nome do ícone. Se ele não existir, a engine usa um genérico e registra o que falta.
+* `obsolete: true` — item mantido por compatibilidade (ex.: `boards`), fora de loot/receitas/construção.
 
 ## data/items/affixes.json
 ```json
@@ -87,9 +88,9 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
     { "id": "mind_blast", "name": {"pt": "Rajada Mental", "en": "Mind Blast"}, "circle": 5, "mana": 14,
       "reagents": {"black_pearl": 1, "mandrake_root": 1, "nightshade": 1, "sulfurous_ash": 1},
       "target": "mobile", "effect": {"type": "damage", "element": "cold", "base": [10, 20], "scales": ["magery", "int"]},
-      "words": "Por Corp Wis", "icon": "mind_blast", "desc": {"pt": "...", "en": "..."} } ] }
+      "icon": "mind_blast", "desc": {"pt": "...", "en": "..."} } ] }
 ```
-`target`: `self`, `mobile`, `ground`, `item` ou `none`. `effect.type`: `damage`, `heal`, `buff`, `debuff`, `summon`, `teleport`, `field`, `reveal` ou `create_item`. Os reagentes ficam em `reagents.json`, no mesmo formato de `items` (com `type: "reagent"`). **Os nomes de magias e as "palavras de poder" devem ser nossos**, e não copiados do Ultima Online.
+`target`: `self`, `mobile`, `ground`, `item` ou `none`. `effect.type`: `damage`, `heal`, `buff`, `debuff`, `summon`, `teleport`, `field`, `reveal` ou `create_item`. Os reagentes ficam em `reagents.json`, no mesmo formato de `items` (com `type: "reagent"`). **Os nomes de magias devem ser nossos**, e não copiados do Ultima Online. Campo `words` removido (sem palavras de poder).
 
 ## data/lore/biomes.json (+ um `.md` por bioma, com o texto longo)
 ```json
@@ -188,7 +189,12 @@ As **5 faixas de raridade** são fixas na engine:
   * Dragões de degraus diferentes usam a mesma arte, com `scale` e `hue` diferentes.
 * **`behavior`:** `passive` (bicho), `defensive`, `aggressive` ou `coward`.
 * **`tame`:** `{"skill": 60}` para os que dá para domar.
-* **Tabelas de loot:** `data/loot.json` → `{ "tables": { "dragon_young": [ ["base:longsword", 5], ["gold", 1], ["reagent", 10] ] } }`. Cada entrada é um peso; `base:<id>` sorteia a faixa pelo `rarity.json`.
+* **Tabelas de loot:** `data/loot.json` → pesos por entrada.
+  * `base:<id>` — sorteia faixa pelo `rarity.json`.
+  * `raro:<id>` — item na faixa raro (chefes garantem ≥1).
+  * `unique:<id>` — chance do único (`uniques.json`).
+  * `gold`, `reagent`.
+  * Tabelas `boss_<chefe>`: mais ouro, `raro:*` garantido, chance de `unique:*`.
 
 ## data/npcs/vendors.json
 
@@ -204,29 +210,26 @@ As **5 faixas de raridade** são fixas na engine:
 
 ## data/events.json e data/portals.json
 
-Eventos são **chefes por área** (disputa de guilda = corrida de dano/participação). **Sem PvP**: nenhum campo de alvo de jogador.
+Eventos = chefes por região (`contest: guild_damage`). Sem PvP.
 
 ```json
 { "version": 1, "events": [ { "id": "wyvern_clareira", "boss": "wyvern", "monster": "wyvern",
-  "place": {"zone": "bosque_da_vila", "chunk": "clareira_do_fundo", "biome": "forest", "poi": "clareira_do_fundo"},
+  "place": {"zone": "bosque_da_vila", "chunk": "clareira_do_fundo"},
   "every_min": [40, 70], "duration_min": 18, "contest": "guild_damage",
-  "announce": {"pt": "A serpe {boss} pousou na clareira do fundo!", "en": "The serpent {boss} has landed in the far clearing!"},
-  "adds": [], "rewards": {"table": "wyvern", "top_damage": 5} } ] }
+  "rewards": {"table": "boss_wyvern", "top_damage": 5} } ] }
 ```
+
+Portais: **só** `kind: "moon"` (cidade↔cidade no mesmo mapa). Sem `road`/troca de mapa.
 
 ```json
 { "version": 1, "portals": [
-  { "id": "portal_aurelia", "city": "aurelia", "kind": "moon", "phases": ["aelia_sancta", "porto_trigo", "folhaverde"] },
-  { "id": "estrada_lochport_bosque", "kind": "road", "pvp": false,
-    "to": {"map": "bosque_da_vila", "at": [2, 18]},
-    "return": {"map": "bosque_da_vila", "rect": [0, 17, 1, 4], "dest_map": "lochport", "at": [43, 55]} }
+  { "id": "portal_aurelia", "city": "aurelia", "kind": "moon",
+    "phases": ["aelia_sancta", "porto_trigo", "folhaverde"] }
 ] }
 ```
 
-* `contest`: `guild_damage` (corrida pelo chefe/evento). Nunca alvo de jogador.
-* `phases`: o destino do portal lunar muda com a fase da lua, como no UO.
-* `kind`: `moon` ou `road` (ligação permanente entre mapas).
-
+* Recompensas de evento/chefe usam tabelas `boss_<id>` em `loot.json`
+  (garantem `raro:<item>`, chance de `unique:<id>`, mais ouro).
 
 
 ## data/gathering.json
@@ -248,6 +251,7 @@ Coleta simples (sem PvP). Árvore → `logs` (serve direto na construção). Roc
 ```
 * `time_s`: 1 a 2 segundos.
 * `chance_by_skill`: lista `[nível_mínimo, chance]` (a engine usa o maior nível ≤ skill do jogador).
+* Rocha: `stone` com `always: true` + minérios por chance.
 ## data/building.json
 
 Peças do modo construção. Cada peça custa **só** `logs` **ou** só `stone`/`iron_ingot` — nunca tábua (`boards`).
@@ -280,24 +284,20 @@ Habilidades físicas estilo Diablo 2, por tipo de arma (teclas 1–9 junto com m
 * Campos extras no effect (`aoe`, `dash`, `pierce`, `projectiles`, `range`) são dicas pra engine.
 ## data/zones.json
 
-Zonas de mundo (vila, caça PvE, etc.). A primeira área de caça liga-se à vila por estrada.
+Mundo **contínuo** (um único mapa). `chunks` são regiões desse mapa, não mapas separados. Sem `connects`/exits entre áreas.
 
 ```json
 { "version": 1,
+  "world": { "map": "mundo", "size": [98, 60], "continuous": true },
   "zones": [
-    { "id": "bosque_da_vila", "name": {"pt": "Bosque da Vila", "en": "Village Woods"},
-      "map": "bosque_da_vila", "kind": "hunt", "biome": "forest", "level": [1, 8],
-      "connects": [ {"to": "lochport", "via": "road", "exit_rect": [0, 17, 1, 4], "dest": [43, 55]} ],
+    { "id": "lochport", "map": "mundo", "kind": "village", "origin": [0, 0], "size": [50, 60] },
+    { "id": "bosque_da_vila", "map": "mundo", "kind": "hunt", "origin": [50, 12], "size": [48, 36],
       "chunks": [
-        { "id": "entrada", "rect": [0, 10, 14, 16],
-          "spawns": [ {"monster": "goblin", "count": [3, 6], "level": 1} ] },
-        { "id": "cripta", "rect": [16, 4, 14, 12],
-          "spawns": [ {"monster": "skeleton", "count": [2, 4], "level": 3} ] },
-        { "id": "clareira_do_fundo", "rect": [34, 10, 12, 16], "boss": "wyvern",
-          "spawns": [ {"monster": "wyvern", "count": [1, 1], "level": 8} ] }
+        { "id": "entrada", "rect": [50, 22, 14, 16],
+          "spawns": [ {"monster": "goblin", "count": [3, 6], "level": 1} ] }
       ] }
   ] }
 ```
-* `kind`: `village`, `hunt`, `dungeon`, `city`, …
-* `chunks[].rect`: `[x, y, w, h]` em tiles do mapa.
-* Mapa correspondente: `art/maps/<map>.txt` (+ `src/<map>.tmx`) e, no runtime de dev, `engine/dev_assets/flare/<map>.json`.
+* `origin` / `chunks[].rect`: coordenadas do mapa único (`world.map`).
+* Fonte do mapa: `art/maps/<map>.txt` (+ `src/<map>.tmx`). JSON em `engine/dev_assets/flare/` é gerado pelo build.
+

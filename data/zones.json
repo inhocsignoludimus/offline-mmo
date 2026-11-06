@@ -1,5 +1,14 @@
 {
   "version": 1,
+  "world": {
+    "map": "mundo",
+    "size": [
+      98,
+      60
+    ],
+    "continuous": true,
+    "note": "Mapa único contínuo (estilo After Light). Sem trocas de área nem exits."
+  },
   "zones": [
     {
       "id": "lochport",
@@ -7,16 +16,16 @@
         "pt": "Lochport",
         "en": "Lochport"
       },
-      "map": "lochport",
+      "map": "mundo",
       "kind": "village",
       "biome": "plains",
-      "connects": [
-        {
-          "to": "bosque_da_vila",
-          "via": "road",
-          "from_map": "lochport",
-          "note": "saída sul/leste a adicionar no mapa da vila; retorno já existe no bosque"
-        }
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        50,
+        60
       ]
     },
     {
@@ -25,28 +34,20 @@
         "pt": "Bosque da Vila",
         "en": "Village Woods"
       },
-      "map": "bosque_da_vila",
+      "map": "mundo",
       "kind": "hunt",
       "biome": "forest",
       "level": [
         1,
         8
       ],
-      "connects": [
-        {
-          "to": "lochport",
-          "via": "road",
-          "exit_rect": [
-            0,
-            17,
-            1,
-            4
-          ],
-          "dest": [
-            43,
-            55
-          ]
-        }
+      "origin": [
+        50,
+        12
+      ],
+      "size": [
+        48,
+        36
       ],
       "chunks": [
         {
@@ -56,8 +57,8 @@
             "en": "Woods Entrance"
           },
           "rect": [
-            0,
-            10,
+            50,
+            22,
             14,
             16
           ],
@@ -95,8 +96,8 @@
             "en": "Woods Crypt"
           },
           "rect": [
+            66,
             16,
-            4,
             14,
             12
           ],
@@ -142,8 +143,8 @@
             "en": "Far Clearing"
           },
           "rect": [
-            34,
-            10,
+            84,
+            22,
             12,
             16
           ],
