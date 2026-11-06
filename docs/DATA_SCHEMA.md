@@ -216,3 +216,18 @@ As **5 faixas de raridade** são fixas na engine:
 
 * `phases`: o destino muda com a fase da lua, como no UO.
 
+
+
+## data/building.json
+
+Peças do modo construção. Cada peça custa **só** `logs` **ou** só `stone`/`iron_ingot` — nunca tábua (`boards`).
+
+```json
+{ "version": 1,
+  "pieces": [
+    { "id": "wall_wood", "name": {"pt": "Parede de Madeira", "en": "Wood Wall"},
+      "kind": "wall", "material": "wood", "cost": {"logs": 4}, "size": [1, 1] }
+  ] }
+```
+* `kind`: `floor`, `wall`, `door`, `window`, `fence`, `gate`, `roof`.
+* `cost`: exatamente um recurso.

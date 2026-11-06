@@ -4867,6 +4867,24 @@
         "pt": "Escritura de uma banca de feira, para quem vende na praça.",
         "en": "Deed to a market stall, for whoever sells in the square."
       }
+    },
+    {
+      "id": "stone",
+      "name": {
+        "pt": "Pedra",
+        "en": "Stone"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 4,
+      "value": 1,
+      "material": "stone",
+      "icon": "stone",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Pedra bruta para piso, parede e telhado de construção.",
+        "en": "Raw stone for floors, walls and roofs in building mode."
+      }
     }
   ]
 }

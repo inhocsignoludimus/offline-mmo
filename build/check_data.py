@@ -86,6 +86,24 @@ for e in J('events.json', {'events': []})['events']:
     for a, _ in e.get('adds', []):
         if a not in mons: bad.append(f"evento {e['id']}: monstro {a} não existe")
 
+
+# building.json (peças do modo construção)
+Bld = J('building.json')
+if Bld:
+    BOARD_IDS = {'boards', 'oak_boards', 'cedar_boards'}
+    KINDS = {'floor', 'wall', 'door', 'window', 'fence', 'gate', 'roof'}
+    for p in Bld.get('pieces', []):
+        if p.get('kind') not in KINDS:
+            bad.append(f"building {p.get('id')}: kind {p.get('kind')} inválido")
+        cost = p.get('cost') or {}
+        if len(cost) != 1:
+            bad.append(f"building {p.get('id')}: cost deve ter exatamente 1 recurso (log OU ingot/stone)")
+        for k in cost:
+            if k in BOARD_IDS:
+                bad.append(f"building {p.get('id')}: não pode custar tábua ({k})")
+            if k not in items:
+                bad.append(f"building {p.get('id')}: cost {k} não é item")
+
 print(f'{len(items)} itens, {len(spells)} magias, {len(mons)} monstros, {len(tables)} tabelas, {len(hues)} cores')
 if bad:
     print('\nPROBLEMAS:'); [print(' -', b) for b in bad]; sys.exit(1)
