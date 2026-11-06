@@ -86,6 +86,32 @@ for e in J('events.json', {'events': []})['events']:
     for a, _ in e.get('adds', []):
         if a not in mons: bad.append(f"evento {e['id']}: monstro {a} não existe")
 
+
+# gathering.json (coleta simples)
+G = J('gathering.json')
+if G:
+    skills = {s['id'] for s in J('skills.json', {'skills': []})['skills']}
+    for n in G.get('nodes', []):
+        if n.get('skill') not in skills:
+            bad.append(f"gathering node {n.get('id')}: skill {n.get('skill')} não existe")
+        for y in n.get('yields', []):
+            if y.get('item') not in items:
+                bad.append(f"gathering node {n.get('id')}: item {y.get('item')} não existe")
+        t = n.get('time_s')
+        if t is not None and not (1.0 <= float(t) <= 2.0):
+            bad.append(f"gathering node {n.get('id')}: time_s {t} fora de 1–2 s")
+    for st in G.get('stations', []):
+        if st.get('skill') and st['skill'] not in skills:
+            bad.append(f"gathering station {st.get('id')}: skill {st.get('skill')} não existe")
+        t = st.get('time_s')
+        if t is not None and not (1.0 <= float(t) <= 2.0):
+            bad.append(f"gathering station {st.get('id')}: time_s {t} fora de 1–2 s")
+        for r in st.get('recipes', []):
+            for bag in ('in', 'out'):
+                for k in (r.get(bag) or {}):
+                    if k not in items:
+                        bad.append(f"gathering recipe {r.get('id')}: {bag} {k} não é item")
+
 print(f'{len(items)} itens, {len(spells)} magias, {len(mons)} monstros, {len(tables)} tabelas, {len(hues)} cores')
 if bad:
     print('\nPROBLEMAS:'); [print(' -', b) for b in bad]; sys.exit(1)
