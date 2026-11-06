@@ -158,7 +158,8 @@ const Icons = {
   css(key, size) {
     const m = this.meta && this.meta.mapa[key]; if (!m) return '';
     const s = size / this.meta.tam;
-    return `background-image:url(engine/dev_assets/tcom/icons.webp);background-size:${1024 * s}px ${896 * s}px;background-position:-${m[0] * size}px -${m[1] * size}px`;
+    const sw = (this.meta.w || 1024), sh = (this.meta.h || 896);
+    return `background-image:url(engine/dev_assets/tcom/icons.webp);background-size:${sw * s}px ${sh * s}px;background-position:-${m[0] * size}px -${m[1] * size}px`;
   },
 };
 
