@@ -267,3 +267,26 @@ Habilidades físicas estilo Diablo 2, por tipo de arma (teclas 1–9 junto com m
 * `weapon`: `sword`, `bow`, `mace`, `spear`, `axe`.
 * `skill` / `min_level`: skill que libera e nível mínimo.
 * Campos extras no effect (`aoe`, `dash`, `pierce`, `projectiles`, `range`) são dicas pra engine.
+## data/zones.json
+
+Zonas de mundo (vila, caça PvE, etc.). A primeira área de caça liga-se à vila por estrada.
+
+```json
+{ "version": 1,
+  "zones": [
+    { "id": "bosque_da_vila", "name": {"pt": "Bosque da Vila", "en": "Village Woods"},
+      "map": "bosque_da_vila", "kind": "hunt", "biome": "forest", "level": [1, 8],
+      "connects": [ {"to": "lochport", "via": "road", "exit_rect": [0, 17, 1, 4], "dest": [43, 55]} ],
+      "chunks": [
+        { "id": "entrada", "rect": [0, 10, 14, 16],
+          "spawns": [ {"monster": "goblin", "count": [3, 6], "level": 1} ] },
+        { "id": "cripta", "rect": [16, 4, 14, 12],
+          "spawns": [ {"monster": "skeleton", "count": [2, 4], "level": 3} ] },
+        { "id": "clareira_do_fundo", "rect": [34, 10, 12, 16], "boss": "wyvern",
+          "spawns": [ {"monster": "wyvern", "count": [1, 1], "level": 8} ] }
+      ] }
+  ] }
+```
+* `kind`: `village`, `hunt`, `dungeon`, `city`, …
+* `chunks[].rect`: `[x, y, w, h]` em tiles do mapa.
+* Mapa correspondente: `art/maps/<map>.txt` (+ `src/<map>.tmx`) e, no runtime de dev, `engine/dev_assets/flare/<map>.json`.

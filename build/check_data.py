@@ -151,6 +151,17 @@ if Ab:
         b = e.get('base')
         if not (isinstance(b, list) and len(b) == 2):
             bad.append(f"ability {a.get('id')}: effect.base deve ser [min,max]")
+# zones.json
+Z = J('zones.json')
+if Z:
+    mons_ids = {m['id'] for m in J('monsters.json', {'monsters': []})['monsters']}
+    for z in Z.get('zones', []):
+        for ch in z.get('chunks', []) or []:
+            if ch.get('boss') and ch['boss'] not in mons_ids | {b['id'] for b in J('names/bosses.json', {'bosses': []})['bosses']}:
+                bad.append(f"zone {z.get('id')} chunk {ch.get('id')}: boss {ch.get('boss')} não existe")
+            for s in ch.get('spawns', []) or []:
+                if s.get('monster') not in mons_ids:
+                    bad.append(f"zone {z.get('id')} chunk {ch.get('id')}: monstro {s.get('monster')} não existe")
 
 print(f'{len(items)} itens, {len(spells)} magias, {len(mons)} monstros, {len(tables)} tabelas, {len(hues)} cores')
 if bad:
