@@ -10,3 +10,7 @@ A fonte editável do Tiled fica em `src/<id>.tmx` (esta pasta
 `src/`, não a `src/` de código na raiz do repositório).
 
 Ver `docs/ART_SPEC.md`.
+
+Mapas entregues:
+- `bosque_da_vila` — primeira área de caça PvE (estrada a partir de Lochport).
+
