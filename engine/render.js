@@ -45,7 +45,7 @@ const Render = {
     }
     // objetos + personagens
     const list = [];
-    for (const o of map.objects) {
+    for (const o of map.objectsIn(Math.max(0, minI), maxI + 1, Math.max(0, minJ), maxJ + 1)) {
       const [sx, sy] = w2s(o.i + 0.5, o.j + 0.5);
       if (sx < L || sx > R || sy < T || sy > B + 300) continue;
       list.push({ k: o.key, o, sx, sy });

@@ -38,7 +38,7 @@ def main():
     data = {
         'maps': maps,
         'monsters': load('data/monsters.json'), 'monArt': load('engine/dev_assets/monsters/monsters.json'),
-        'zones': load('data/zones.json'), 'houses': load('engine/dev_assets/houses/houses.json'), 'paperdoll': load('engine/dev_assets/paperdoll/paperdoll.json'),
+        'zones': load('data/zones.json'), 'houses': load('engine/dev_assets/houses/houses.json'),
         'loot': load('data/loot.json'), 'affixes': load('data/items/affixes.json'), 'sets': load('data/items/sets.json'),
         'uniques': load('data/items/uniques.json'), 'rarity': load('data/items/rarity.json'), 'hues': load('data/hues.json'),
         'tcom': load('engine/dev_assets/tcom/layers.json'),

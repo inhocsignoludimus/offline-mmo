@@ -10,7 +10,7 @@ const World = {
   init(data, map) {
     const [ox, oy] = map.offset || [0, 0];
     this.off = [ox, oy];
-    this.zones = data.zones.zones.map(z => ({ ...z, rect: [z.origin[0] + ox, z.origin[1] + oy, z.size[0], z.size[1]],
+    this.zones = (map.zones || data.zones.zones).map(z => ({ ...z, rect: [z.origin[0] + ox, z.origin[1] + oy, z.size[0], z.size[1]],
       chunks: (z.chunks || []).map(c => ({ ...c, rect: [c.rect[0] + ox, c.rect[1] + oy, c.rect[2], c.rect[3]] })) }));
   },
   name(z) { return z.name[Chat.lang] || z.name.pt; },
@@ -52,9 +52,10 @@ const Houses = {
       if (ok) return this.add(id, x, y, map);
     }
   },
-  add(id, x, y, map) {
-    const d = DATA.houses[id], [w, h] = d.size;
-    const o = { id, d, x, y, w, h, inside: false, door: false, fade: 1 };
+  add(id, x, y, map, tint) {
+    const d = DATA.houses[id]; if (!d) return; const [w, h] = d.size;
+    const o = { id, d, x, y, w, h, inside: false, door: false, fade: 1, tint };
+    for (let j = -1; j <= h; j++) for (let i = -1; i <= w; i++) if (map.inBounds(x + i, y + j)) { map.obj[y + j][x + i] = 0; map.col[y + j][x + i] = 0; }
     for (const [i, j] of d.walls) map.col[y + j][x + i] = 1;
     for (const [i, j] of d.doors) map.col[y + j][x + i] = 0;      // porta abre sozinha ao chegar perto
     const [[ix0, iy0], [ix1, iy1]] = d.interior || [[1, 1], [w - 2, h - 2]];
@@ -91,10 +92,19 @@ const Houses = {
       list.push({ k: kFront + 0.001, house: o, layer: 'roof', sx, sy });
     }
   },
+  // telhado de cada casa num tom próprio (o mesmo modelo não parece repetido)
+  tinted(id, hex, im) {
+    const k = id + '/roof' + hex; let c = this.imgs[k]; if (c) return c;
+    c = document.createElement('canvas'); c.width = im.naturalWidth; c.height = im.naturalHeight; const g = c.getContext('2d');
+    g.drawImage(im, 0, 0); g.globalCompositeOperation = 'color'; g.fillStyle = hex; g.globalAlpha = 0.55; g.fillRect(0, 0, c.width, c.height);
+    g.globalAlpha = 1; g.globalCompositeOperation = 'destination-in'; g.drawImage(im, 0, 0); c.complete = true; c.naturalWidth = c.width;
+    this.imgs[k] = c; return c;
+  },
   draw(g, e) {
     const o = e.house;
     if (e.prop) { const im = this.img(o.id, 'props/' + e.prop.p); if (im.complete && im.naturalWidth) g.drawImage(im, Math.round(e.sx - im.naturalWidth / 2), Math.round(e.sy - im.naturalHeight * 0.83)); return; }
-    const im = this.img(o.id, e.layer); if (!im.complete || !im.naturalWidth) return;
+    let im = this.img(o.id, e.layer); if (!im.complete || !im.naturalWidth) return;
+    if (e.layer === 'roof' && o.tint) im = this.tinted(o.id, o.tint, im);
     if (e.layer === 'roof') { if (o.fade < 0.02) return; g.globalAlpha = o.fade; }
     g.drawImage(im, Math.round(e.sx - o.d.anchor[0]), Math.round(e.sy - o.d.anchor[1]));
     g.globalAlpha = 1;

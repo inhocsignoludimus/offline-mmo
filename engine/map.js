@@ -13,11 +13,24 @@ class GameMap {
     this.bg = data.background; this.obj = data.object; this.col = data.collision;
     this.chunks = new Map();
     // lista de objetos por linha, para achar rápido os que estão na tela
-    this.objects = [];
+    this.zones = data.zones || null; this.houses = data.houses || []; this.towns = data.towns || []; this.home = data.home || null;
+    this.indexObjects();
+  }
+  // objetos guardados por pedaço (CHUNK x CHUNK), para desenhar só os visíveis
+  indexObjects() {
+    this.objChunks = new Map();
     for (let j = 0; j < this.h; j++) for (let i = 0; i < this.w; i++) {
       const t = this.obj[j] && this.obj[j][i];
-      if (t && this.tiles[t]) this.objects.push({ i, j, t, key: i + j + 1 });
+      if (!t || !this.tiles[t]) continue;
+      const k = Math.floor(i / CHUNK) + ',' + Math.floor(j / CHUNK);
+      let a = this.objChunks.get(k); if (!a) this.objChunks.set(k, a = []);
+      a.push({ i, j, t, key: i + j + 1 });
     }
+  }
+  objectsIn(ci0, ci1, cj0, cj1) {
+    const out = [];
+    for (let cj = cj0; cj <= cj1; cj++) for (let ci = ci0; ci <= ci1; ci++) { const a = this.objChunks.get(ci + ',' + cj); if (a) out.push(...a); }
+    return out;
   }
   inBounds(i, j) { return i >= 0 && j >= 0 && i < this.w && j < this.h; }
   blocked(i, j) { if (!this.inBounds(i, j)) return true; const c = this.col[j][i]; return c !== 0; }

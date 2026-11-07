@@ -47,8 +47,9 @@ const Game = {
     this.map = new GameMap(DATA.maps.mundo, this.atlasOf('mundo'));
     this.townMap = this.map;
     World.init(DATA, this.map);
-    const vila = World.zones.find(z => z.kind === 'village');
-    this.townRect = vila.rect;
+    const home = this.map.home;
+    const vila = World.zones.find(z => z.kind === 'village' && z.center && home && z.center[0] === home[0] && z.center[1] === home[1]) || World.zones.find(z => z.kind === 'village');
+    this.townRect = vila.rect; this.townName = World.name(vila);
     this.townCenter = this.findCenter();
     Chat.init(DATA); TCOM.meta = DATA.tcom; Icons.meta = DATA.icons;
     // personagem
@@ -73,11 +74,13 @@ const Game = {
     Minimap.build(this.map);
     Sim.init(DATA, this.map);
     // casas em camadas na vila (até o mapa ter lotes próprios)
-    for (const id of Object.keys(DATA.houses || {})) Houses.place(id, this.townCenter, this.map);
+    if (this.map.houses.length) for (const [id, x, y, tint] of this.map.houses) Houses.add(id, x, y, this.map, tint);
+    else for (const id of Object.keys(DATA.houses || {})) Houses.place(id, this.townCenter, this.map);
+    this.map.indexObjects();
     Combat.spawnWorld();
     Journal.add('system', '', `Bem-vindo a ${this.townName}, shard Outremer. ${Sim.online().length} jogadores online.`);
-    Journal.add('system', '', Touch.on ? 'Joystick para andar, ⚔ para atacar, botões de magia à direita, ✋ para pegar itens. O Bosque da Vila fica a leste.'
-      : 'Segure o clique num monstro para atacar e no chão para andar. Magias nas teclas 1–9. Alt mostra os itens no chão. O Bosque da Vila fica a leste; a Estrada Real, ao norte.');
+    Journal.add('system', '', Touch.on ? 'Joystick para andar, ⚔ para atacar, botões de magia à direita, ✋ para pegar itens. Os acampamentos e ruínas ficam nos ermos, longe da vila: quanto mais longe, mais perigoso.'
+      : 'Segure o clique num monstro para atacar e no chão para andar. Magias nas teclas 1–9. Alt mostra os itens no chão. Quanto mais longe da vila, mais perigoso; siga as estradas até Aurélia, ao norte.');
     this.bindInput(); Touch.init();
     this.last = performance.now(); requestAnimationFrame(t => this.loop(t));
     setInterval(() => { OnlineGump.render(); }, 3000);
