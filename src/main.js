@@ -12,7 +12,7 @@ const Items = {
   name(d) { return (d.name && (d.name[Chat.lang] || d.name.pt)) || d.id; },
   layer(d) { return d.sprite_layer ? d.sprite_layer.split('/')[1] : null; },
   stackable(d) { return ['consumable', 'resource'].includes(d.type) || d.slot === 'none' && d.type === 'misc'; },
-  twoHanded(d) { return ['arco', 'besta', 'lanca', 'infantry_axe'].includes(this.layer(d)) || /staff/.test(d.id); },
+  twoHanded(d) { return ['arco', 'besta', 'lanca', 'infantry_axe', 'cajado', 'bastao'].includes(this.layer(d)) || /staff/.test(d.id); },
 };
 // Não há classe fixa, como no UO: o kit inicial só decide por onde você começa
 // (4 skills e o equipamento). Qualquer skill sobe com o uso (systems/skills.js).
@@ -53,7 +53,7 @@ const Game = {
     this.townCenter = this.findCenter();
     Chat.init(DATA); TCOM.meta = DATA.tcom; Icons.meta = DATA.icons;
     // personagem
-    Items.init(DATA); Magic.init(DATA); Mons.init(DATA); Loot.init(DATA);
+    Items.init(DATA); FX.init(DATA.powers); Magic.init(DATA); Mons.init(DATA); Loot.init(DATA);
     const cls = KITS[cfg.cls] || KITS.guerreiro, sexo = cfg.sexo === 'f' ? 'f' : 'm';
     const base = sexo === 'f' ? (cls.f || ['clothes', 'head_long']) : cls.base;
     const [x, y] = this.townCenter;
@@ -77,7 +77,7 @@ const Game = {
     if (this.map.houses.length) for (const [id, x, y, tint] of this.map.houses) Houses.add(id, x, y, this.map, tint);
     else for (const id of Object.keys(DATA.houses || {})) Houses.place(id, this.townCenter, this.map);
     this.map.indexObjects();
-    Build.init(DATA, this.map); BuildGump.init();
+    Build.init(DATA, this.map); BuildGump.init(); Abilities.init(DATA);
     if (Save.load()) { this.rebuildLook(); Combat.recompute(); Camera.snap(actor.x, actor.y); Backpack.render(); }
     setInterval(() => Save.write(), 20000); addEventListener('pagehide', () => Save.write());
     Combat.spawnWorld();
@@ -138,7 +138,9 @@ const Game = {
   // camadas = base (cabeça, roupa de baixo) + itens equipados; armadura de tronco esconde a túnica de base
   rebuildLook() {
     const p = this.player, a = p.actor;
-    const eq = Object.values(p.equip).map(i => Items.layer(i.d)).filter(Boolean);
+    // ferramenta na mão enquanto corta ou minera (no lugar da arma e do escudo)
+    const eq = Object.entries(p.equip).filter(([k]) => !(this.tool && /hand/.test(k))).map(([, i]) => Items.layer(i.d)).filter(Boolean);
+    if (this.tool) eq.push(this.tool);
     a.hues = {}; for (const i of Object.values(p.equip)) { const l = Items.layer(i.d); if (l && i.hue && Loot.hues[i.hue]) a.hues[l] = Loot.hues[i.hue].hex; }
     const hasChest = eq.some(l => TCOM.slot[l] === 'tronco');
     a.ap.layers = p.base.filter(l => !(hasChest && TCOM.slot[l] === 'tronco')).concat(eq);
@@ -228,6 +230,7 @@ const Game = {
       if (typing) return;
       const k = e.key.toLowerCase(), map = { c: 'build', s: 'status', p: 'paperdoll', b: 'backpack', i: 'backpack', j: 'journal', o: 'online', m: 'minimap', k: 'skills', l: 'spellbook' };
       if (/^[1-9]$/.test(k)) { const id = Magic.hotbar[+k - 1]; if (id) this.castAt(id, ...(this.mouse || [Render.vw / 2, Render.vh / 2])); return; }
+      if ((k === 'q' || k === 'e') && !Build.mode) { Abilities.use(k === 'q' ? 0 : 1); e.preventDefault(); return; }
       if (k === 'r' && Build.mode) { Build.rot++; return; }
       if (e.key === 'Escape' && Build.mode) { Build.toggleMode(null); return; }
       if (k === ' ') { Combat.pickNear(); e.preventDefault(); return; }
@@ -256,7 +259,7 @@ const Game = {
     const p = this.player, a = p.actor;
     if (!p.dead) Touch.update(dt);
     for (const x of this.actors) if (x !== a || !p.dead) x.update(dt, this.map);
-    Sim.update(dt); Combat.update(dt); Houses.update(dt); World.update(); Build.update(dt);
+    Sim.update(dt); Combat.update(dt); Houses.update(dt); World.update(); Build.update(dt); Abilities.update(dt); FX.update(dt);
     if (this.pickup && !a.path) { if (Combat.ground.includes(this.pickup) && Math.hypot(this.pickup.x - a.x, this.pickup.y - a.y) < 1.6) Combat.pick(this.pickup); this.pickup = null; }
     // fôlego cai correndo e volta parado
     p.st = Math.max(0, Math.min(p.stMax, p.st + (a.path ? -0.4 : 2) * dt));
@@ -265,7 +268,7 @@ const Game = {
     Camera.follow(a.x, a.y, dt);
     Render.frame(this.map, this.actors.concat(Combat.mobs), this.hover, t);
     Orbs.update(p);
-    if (!this._ui || t - this._ui > 200) { this._ui = t; StatusGump.update(p); Minimap.tick(this.map, this.actors, a); }
+    if (!this._ui || t - this._ui > 200) { this._ui = t; Abilities.tick(); StatusGump.update(p); Minimap.tick(this.map, this.actors, a); }
     Paperdoll.tick(dt);
     requestAnimationFrame(n => this.loop(n));
   },

@@ -10,6 +10,9 @@ const CIRCULO_MIN = [0, 0, 10, 20, 30, 45, 60, 75, 90]; // índice = círculo
 const COR_ELEM = { fire: '#ff8a3a', energy: '#9ad0ff', physical: '#e0d0b0', poison: '#7ee05a', cold: '#a0e8ff' };
 const COR_TIPO_FX = { heal: '#ffe680', buff: '#c0a0ff', debuff: '#b060d0', teleport: '#80c0ff', field: '#ff9a50', summon: '#b0b0b0', create_item: '#ffd890', reveal: '#ffffff', damage: '#ff6040' };
 
+const FX_CEU = new Set(['storm_nail', 'nail_chain']);
+const FX_CAMPO = { fire: 'blast', poison: 'dark_mist', energy: 'lightning', paralyze: 'status_freeze', wall: 'spikes', dispel: 'sparkle' };
+
 const Magic = {
   byId: {}, list: [], casting: null, targeting: null, buffs: [], fx: [], hotbar: Store.get('hotbar', []),
   init(data) {
@@ -43,7 +46,7 @@ const Magic = {
     if (p.mp < s.mana) { Journal.add('system', '', 'Mana insuficiente.'); return; }
     if (!this.hasReagents(s)) { Journal.add('system', '', `Faltam reagentes: ${Object.keys(s.reagents).map(r => Items.name(Items.byId[r])).join(', ')}.`); return; }
     const a = p.actor;
-    a.path = null; a.setAnim('swing');
+    a.path = null; a.setAnim('swing'); FX.play('channel', a.x, a.y, { follow: a, life: 0.35 });
     const hostile = s.effect.type === 'damage' || s.effect.type === 'debuff';
     if (hostile && !mob) { HUD.toast('Nenhum monstro por perto'); return; }
     if (mob) a.dir = direcaoDoAngulo(Math.atan2(mob.y - a.y, mob.x - a.x));
@@ -62,6 +65,8 @@ const Magic = {
     // buffs com duração
     for (const b of this.buffs.slice()) if (Game.now > b.until) { this.buffs.splice(this.buffs.indexOf(b), 1); b.end && b.end(); Journal.add('system', '', `${b.name} acabou.`); }
     for (const f of this.fx) { f.t += dt;
+      if (f.kind === 'field' && f.spr) { f.st = (f.st || 0) - dt; if (f.st <= 0) { f.st = 0.22; const a = Math.random() * 6.28, r = Math.sqrt(Math.random()) * f.r; FX.play(f.spr, f.x + Math.cos(a) * r, f.y + Math.sin(a) * r * 0.9, { scale: f.spr === 'blast' ? 0.2 : 0.6, life: f.spr === 'blast' ? undefined : 0.9 }); } }
+      if (f.kind === 'field' && f.stop) for (const m of Combat.mobs) if (!m.dead && Math.hypot(m.x - f.x, m.y - f.y) < f.r) m.stun = Game.now + 300;
       if (f.kind === 'field' && f.dps) { f.tick = (f.tick || 0) - dt; if (f.tick <= 0) { f.tick = 1; for (const m of Combat.mobs) if (!m.dead && Math.hypot(m.x - f.x, m.y - f.y) < f.r) Combat.damageMob(m, Math.round(f.dps), false, f.col); } } }
     this.fx = this.fx.filter(f => f.t < f.life);
   },
@@ -81,7 +86,7 @@ const Magic = {
     const p = Game.player, e = s.effect;
     const ok = Math.random() < this.chance(s);
     Skills.use('magery', Math.min(1, 0.3 + s.circle * 0.08)); // treina tentando, como no UO
-    if (!ok) { p.mp -= Math.ceil(s.mana / 2); Journal.add('system', '', 'A magia falhou.'); this.burst(p.actor.x, p.actor.y, '#666', 0.6); return; }
+    if (!ok) { p.mp -= Math.ceil(s.mana / 2); Journal.add('system', '', 'A magia falhou.'); FX.play('spark_blue', p.actor.x, p.actor.y) || this.burst(p.actor.x, p.actor.y, '#666', 0.6); return; }
     p.mp -= s.mana; this.useReagents(s);
     if (Math.random() < 0.5) Skills.use('evaluating_intelligence', 0.3);
     const col = COR_ELEM[e.element] || COR_TIPO_FX[e.type] || '#fff';
@@ -89,34 +94,61 @@ const Magic = {
     switch (e.type) {
       case 'heal': {
         const n = this.roll(s);
+        FX.play('heal', (actor || p.actor).x, (actor || p.actor).y, { follow: actor || p.actor });
+        if (e.radius) for (const x of [p.actor]) FX.play('heal', x.x, x.y, { follow: x });
         if (me) { p.hp = Math.min(p.hpMax, p.hp + n); Journal.add('system', '', `Você recupera ${n} de vida.`); }
         else if (sim && chance(0.6)) setTimeout(() => Sim.say(sim, 'thanks', { target: p.name }, 'local'), 900);
         break;
       }
       case 'damage': {
-        const n = this.roll(s);
-        if (actor && actor.kind === 'mob') { const m = actor; Combat.projectile(p.actor, m, col, () => Combat.damageMob(m, Math.max(1, Math.round(n * (1 - ((m.def.resist || {})[e.element] || 0) / 100))), false, col)); }
+        const n = this.roll(s), el = e.element || 'physical', R = e.radius || 0;
+        const hurt = (m, k = 1) => !m.dead && Combat.damageMob(m, Math.max(1, Math.round(n * k * (1 - ((m.def.resist || {})[el] || 0) / 100))), false, col);
+        const area = (x, y, r) => { for (const m of Combat.mobs) if (!m.dead && Math.hypot(m.x - x, m.y - y) <= r + 0.3) hurt(m, m === actor ? 1 : 0.75); };
+        const tx = actor ? actor.x : at[0], ty = actor ? actor.y : at[1];
+        if (s.id === 'falling_stars') {   // chuva de fogo em volta do alvo
+          for (let i = 0; i < 8; i++) { const a = Math.random() * 6.28, r = Math.random() * R; FX.play('blast', tx + Math.cos(a) * r, ty + Math.sin(a) * r, { delay: i * 0.15, scale: 0.4 }); }
+          setTimeout(() => area(tx, ty, R), 600); break;
+        }
+        if (s.id === 'split_ground') { FX.play('quake', tx, ty, { scale: 1.7 }); FX.play('rupture', tx, ty); setTimeout(() => area(tx, ty, R), 250); break; }
+        if (FX_CEU.has(s.id)) {          // raio que cai do céu, e pula de monstro em monstro
+          FX.play('thunderstrike', tx, ty); if (actor) setTimeout(() => hurt(actor), 150);
+          let last = actor; const done = new Set([actor]);
+          for (let c = 0; c < (e.chains || 0) && last; c++) {
+            const nx = Combat.mobs.filter(m => !m.dead && !done.has(m) && Math.hypot(m.x - last.x, m.y - last.y) < 5).sort((a, b) => Math.hypot(a.x - last.x, a.y - last.y) - Math.hypot(b.x - last.x, b.y - last.y))[0];
+            if (!nx) break; done.add(nx); last = nx;
+            FX.play('thunderstrike', nx.x, nx.y, { delay: (c + 1) * 0.2 }); setTimeout(() => hurt(nx, 0.7), (c + 1) * 200 + 150);
+          }
+          break;
+        }
+        if (actor && actor.kind === 'mob') {
+          const m = actor;
+          Combat.projectile(p.actor, m, col, () => {
+            FX.play(R ? FX_AREA[el] : FX_HIT[el], m.x, m.y, { scale: R ? (el === 'fire' ? 0.35 + R * 0.12 : 0.6 + R * 0.3) : 1, dir: direcaoDoAngulo(Math.atan2(m.y - p.actor.y, m.x - p.actor.x)) });
+            if (R) area(m.x, m.y, R); else hurt(m);
+          }, FX_PROJ[el]);
+        }
         break;
       }
       case 'buff': case 'debuff': {
         const n = this.roll(s), dur = (e.duration || 60) * 1000;
-        if (me || e.type === 'buff' && !actor) this.addBuff(s, n, dur);
-        else if (actor && actor.kind === 'mob' && e.type === 'debuff') { actor.speed *= 0.6; actor.cd += 1.5; Combat.float(actor, this.name(s), col); setTimeout(() => { actor.speed /= 0.6; }, dur); }
+        if (me || e.type === 'buff' && !actor) { this.addBuff(s, n, dur); if (e.type === 'buff') FX.play(e.stat === 'invisible' ? 'immunity' : (e.stats || []).some(x => /res_/.test(x)) ? 'shield_orange' : 'shield', p.actor.x, p.actor.y, { follow: p.actor, life: 1.4 }); }
+        else if (actor && actor.kind === 'mob' && e.type === 'debuff' && e.stat === 'paralyze') { actor.stun = Game.now + Math.min(8000, dur); FX.play('status_freeze', actor.x, actor.y, { follow: actor, life: Math.min(8, dur / 1000) }); }
+        else if (actor && actor.kind === 'mob' && e.type === 'debuff') { FX.play('dark_mist', actor.x, actor.y, { follow: actor, scale: 0.7 }); actor.speed *= 0.6; actor.cd += 1.5; Combat.float(actor, this.name(s), col); setTimeout(() => { actor.speed /= 0.6; }, dur); }
         break;
       }
       case 'teleport': {
         const [x, y] = at;
         if (Game.map.blocked(Math.floor(x), Math.floor(y))) { Journal.add('system', '', 'Não dá para ir até lá.'); return; }
-        this.burst(p.actor.x, p.actor.y, col, 0.8); p.actor.x = x; p.actor.y = y; p.actor.path = null;
+        FX.play('runes_blue', p.actor.x, p.actor.y, { life: 0.8 }); p.actor.x = x; p.actor.y = y; p.actor.path = null; FX.play('runes_blue', x, y, { life: 0.8 });
         break;
       }
-      case 'create_item': { const n = Math.max(1, Math.round(((e.base || [1, 1])[0] + (e.base || [1, 1])[1]) / 2)); Game.give(e.id, n); Backpack.render(); Journal.add('system', '', `Você cria ${Items.name(Items.byId[e.id])}.`); break; }
-      case 'field': this.fx.push({ kind: 'field', x: at[0], y: at[1], r: e.radius || 1.5, col, t: 0, life: Math.min(20, e.duration || 10), dps: Math.max(2, this.roll(s) / 3) }); break;
-      case 'summon': Journal.add('system', '', `${this.name(s)}: as invocações chegam junto com os monstros.`); break;
-      case 'reveal': Journal.add('system', '', 'Nada escondido por perto.'); break;
+      case 'create_item': { const n = Math.max(1, Math.round(((e.base || [1, 1])[0] + (e.base || [1, 1])[1]) / 2)); Game.give(e.id, n); Backpack.render(); FX.play('sparkle', p.actor.x, p.actor.y, { scale: 0.6, life: 1 }); Journal.add('system', '', `Você cria ${Items.name(Items.byId[e.id])}.`); break; }
+      case 'field': this.fx.push({ kind: 'field', x: at[0], y: at[1], r: e.radius || 1.5, col, t: 0, life: Math.max(1.5, Math.min(20, e.duration || 10)), dps: e.base && e.base[1] ? Math.max(2, this.roll(s) / 3) : 0, spr: FX_CAMPO[e.kind] || 'sparkle', stop: e.kind === 'paralyze' }); break;
+      case 'summon': FX.play('runes_orange', p.actor.x, p.actor.y, { life: 1.2 }); Journal.add('system', '', `${this.name(s)}: as invocações chegam junto com os monstros.`); break;
+      case 'reveal': FX.play('sparkle', p.actor.x, p.actor.y, { life: 1 }); Journal.add('system', '', 'Nada escondido por perto.'); break;
     }
     const tgt = actor || { x: at[0], y: at[1] };
-    if (e.type !== 'field') this.burst(tgt.x, tgt.y, col, 1);
+    if (!FX.has('heal') && e.type !== 'field') this.burst(tgt.x, tgt.y, col, 1);
   },
   addBuff(s, n, dur) {
     const p = Game.player, e = s.effect, b = { id: s.id, name: this.name(s), until: Game.now + dur };
@@ -138,7 +170,7 @@ const Magic = {
         g.beginPath(); g.arc(sx, sy - 35, r, 0, 7); g.fill();
         for (let i = 0; i < 10; i++) { const a = i * 0.63 + f.t * 3, d = 8 + k * 30; g.fillStyle = f.col; g.fillRect(sx + Math.cos(a) * d, sy - 35 + Math.sin(a) * d * 0.6 - k * 25, 2, 2); }
       } else {
-        g.globalAlpha = 0.45 * Math.min(1, (f.life - f.t) / 1.5) * (0.8 + 0.2 * Math.sin(f.t * 8));
+        g.globalAlpha = (f.spr ? 0.12 : 0.45) * Math.min(1, (f.life - f.t) / 1.5) * (0.8 + 0.2 * Math.sin(f.t * 8));
         g.fillStyle = f.col; g.beginPath(); g.ellipse(sx, sy, f.r * ISO.HW, f.r * ISO.HH, 0, 0, 7); g.fill();
       }
       g.restore();

@@ -176,3 +176,10 @@ body.touch #menubar button { padding: 3px 6px; font-size: 11px; } body.touch #me
 .buildg .bp.poor { opacity: .55; }
 .buildg .bbar { display: flex; gap: 4px; flex-wrap: wrap; }
 .buildg .bbar button { flex: 1; padding: 5px 2px; background: #2a1f12; border: 1px solid #5a4a2a; color: #f0e0c0; font: 12px 'Alegreya SC', serif; }
+
+#abil { position: fixed; left: 50%; bottom: 58px; transform: translateX(-50%); display: flex; gap: 6px; z-index: 8; }
+#abil button { position: relative; width: 46px; height: 46px; border-radius: 8px; border: 2px solid #7a6038; background: radial-gradient(#4a3418, #160e06); color: #f4e4c0; font: 700 15px 'Alegreya SC', serif; overflow: hidden; cursor: pointer; }
+#abil button i { position: absolute; right: 3px; bottom: 1px; font: 600 10px sans-serif; color: #c8b080; font-style: normal; }
+#abil button s { position: absolute; left: 0; right: 0; bottom: 0; height: 0; background: rgba(0,0,0,.6); text-decoration: none; }
+#abil button.lock { opacity: .45; }
+body.touch #abil { left: auto; transform: none; right: 22px; bottom: 196px; flex-direction: column; }

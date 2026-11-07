@@ -48,6 +48,7 @@ class Monster {
     this.cd -= dt; this.next -= dt;
     const P = Game.player, pa = P.actor, d = Math.hypot(pa.x - this.x, pa.y - this.y), def = this.def;
     if (this.hitStun > 0) { this.hitStun -= dt; return; }
+    if (this.stun && Game.now < this.stun) { this.path = null; if (this.anim === 'run') this.setAnim('stance'); return; }
     const alive = !P.dead && !World.safe(pa.x, pa.y);
     if (alive && (this.state === 'chase' || (d < (def.aggro || 6) && def.behavior !== 'passive'))) this.state = 'chase';
     if (this.state === 'chase' && (!alive || d > 16)) { this.state = 'home'; }
@@ -89,7 +90,7 @@ class Monster {
     if (spells.length && Math.random() < 0.45 && d > 1.5) {
       const s = spells[Math.floor(Math.random() * spells.length)];
       this.setAnim(Mons.meta[this.art].cast ? 'cast' : 'swing'); this.cd = 2.2;
-      Combat.projectile(this, P.actor, COR_ELEM[s.effect.element] || '#c080ff', () => Combat.hitPlayer(Math.round(Combat.rand(s.effect.base)), s.effect.element, this));
+      Combat.projectile(this, P.actor, COR_ELEM[s.effect.element] || '#c080ff', () => { FX.play(FX_HIT[s.effect.element] || 'spark_red', P.actor.x, P.actor.y); Combat.hitPlayer(Math.round(Combat.rand(s.effect.base)), s.effect.element, this); }, FX_PROJ[s.effect.element]);
       return;
     }
     const ranged = (def.range || 1) > 2;
@@ -97,7 +98,7 @@ class Monster {
     this.cd = 1.4 / Math.max(0.5, def.speed || 1);
     const dmg = Math.round(Combat.rand(def.dmg));
     const hit = () => { if (Math.random() < Math.max(0.25, 0.75 + (def.level * 2 - (P.skills.parrying || 0) * 0.3 - Combat.stats.def_chance) / 100)) Combat.hitPlayer(dmg, 'physical', this); else Combat.float(P.actor, 'esquivou', '#aaa'); };
-    if (ranged) Combat.projectile(this, P.actor, '#d8c8a0', hit); else setTimeout(() => !this.dead && hit(), 250);
+    if (ranged) Combat.projectile(this, P.actor, '#d8c8a0', hit, 'arrows'); else setTimeout(() => !this.dead && hit(), 250);
   }
   draw(g, sx, sy) {
     const a0 = Mons.meta[this.art]; if (!a0) return;
@@ -263,7 +264,7 @@ const Combat = {
     // pegar ouro andando por cima
     for (const g of this.ground.slice()) if (g.gold && Math.hypot(g.x - a.x, g.y - a.y) < 0.8) this.pick(g);
     for (const f of this.floats) f.t += dt; this.floats = this.floats.filter(f => f.t < 1.1);
-    for (const sh of this.shots) { sh.t += dt / sh.dur; if (sh.t >= 1 && !sh.done) { sh.done = true; sh.hit(); } } this.shots = this.shots.filter(s => !s.done);
+    for (const sh of this.shots) { sh.age += dt; if (sh.to.ref && !sh.to.ref.dead && sh.to.ref.x !== undefined) { sh.to.x = sh.to.ref.x; sh.to.y = sh.to.ref.y; } sh.t += dt / sh.dur; if (sh.t >= 1 && !sh.done) { sh.done = true; sh.hit(); } } this.shots = this.shots.filter(s => !s.done);
     this.respawn(dt);
   },
   swing(t) {
@@ -283,7 +284,7 @@ const Combat = {
       const crit = Math.random() < this.skill('anatomy') / 600; if (crit) dmg *= 1.8;
       this.damageMob(t, Math.max(1, Math.round(dmg)), crit);
     };
-    if (ranged) { const ar = Game.player.bag.find(i => i.id === 'arrow'); if (!ar) { HUD.toast('Sem flechas'); this.cd = 0.6; return; } if (--ar.qty <= 0) p.bag.splice(p.bag.indexOf(ar), 1); this.projectile(a, t, '#e8dcb0', go); }
+    if (ranged) { const ar = Game.player.bag.find(i => i.id === 'arrow'); if (!ar) { HUD.toast('Sem flechas'); this.cd = 0.6; return; } if (--ar.qty <= 0) p.bag.splice(p.bag.indexOf(ar), 1); this.projectile(a, t, '#e8dcb0', go, 'arrows'); }
     else setTimeout(go, 180);
   },
   damageMob(m, n, crit, color) {
@@ -335,9 +336,10 @@ const Combat = {
     if (best) this.pick(best); return !!best;
   },
   float(who, text, color, big) { this.floats.push({ x: who.x, y: who.y, text, color, big, t: 0 }); },
-  projectile(from, to, color, hit) {
+  projectile(from, to, color, hit, sprite) {
     const d = Math.hypot(to.x - from.x, to.y - from.y);
-    this.shots.push({ x0: from.x, y0: from.y, to, color, t: 0, dur: Math.max(0.12, d / 14), hit });
+    this.shots.push({ x0: from.x, y0: from.y, to: { x: to.x, y: to.y, ref: to }, color, t: 0, dur: Math.max(0.12, d / (sprite === 'arrows' ? 16 : 11)), hit, sprite,
+      dir: direcaoDoAngulo(Math.atan2(to.y - from.y, to.x - from.x)), age: 0 });
   },
   // ------------------------------------------------------------
   // spawns da zona
@@ -380,6 +382,7 @@ const Combat = {
     }
     for (const sh of this.shots) {
       const x = sh.x0 + (sh.to.x - sh.x0) * sh.t, y = sh.y0 + (sh.to.y - sh.y0) * sh.t, [sx, sy] = w2s(x, y);
+      if (sh.sprite && FX.frame(g, sh.sprite, sh.age, sh.dir, 0, x, y)) continue;
       g.save(); g.globalCompositeOperation = 'lighter'; g.fillStyle = sh.color; g.beginPath(); g.arc(sx, sy - 36, 4, 0, 7); g.fill(); g.restore();
     }
   },

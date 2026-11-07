@@ -44,7 +44,7 @@ const TCOM = {
     maos: 'default_hands leather_gloves chain_gloves beduino_mangas',
     tronco: 'default_chest aldeao_tunica1 aldeao_tunica2 cloth_shirt gambesao jaque_couro loriga lorigao lamelar ferreiro_tunica armadura_templario armadura_cruzado armadura_sargento beduino_veste habito_peregrino clothes aldea_roupa2 camisa_freira habito cazagante chain_cuirass couraca_turca gibao_egipcio leather_armor',
     cabeca: 'male_head1 male_head2 head_long leather_hood chain_coif elmo_nasal turbante elmo_grande elmo_pontudo elmo_rosto keffiyeh',
-    main: 'longsword mace hand_axe dagger lanca martelo infantry_axe',
+    main: 'longsword mace hand_axe dagger lanca martelo infantry_axe cajado bastao picareta',
     off: 'shield buckler escudo_cruz escudo_redondo arco besta besta_mao', // arcos e bestas vão na ordem da mão de trás, como no TCoM
   };
   for (const k in S) for (const n of S[k].split(' ')) TCOM.slot[n] = k;

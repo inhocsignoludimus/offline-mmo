@@ -34,11 +34,13 @@ const Build = {
     if (!spot) return;
     if (Math.hypot(spot[0] - a.x, spot[1] - a.y) > 0.4) a.moveTo(Game.map, spot[0], spot[1]);
     this.gather = { n, t: 0 }; Combat.attacking = false; Combat.target = null;
+    this.holdTool(n.kind === 'tree' ? 'hand_axe' : 'picareta');
   },
   update(dt) {
     const a = Game.player.actor, g = this.gather;
     for (const r of this.regrow.slice()) if (Sim.t > r.at && Math.hypot(r.i - a.x, r.j - a.y) > 8) { this.setObj(r.i, r.j, r.t); this.regrow.splice(this.regrow.indexOf(r), 1); }
-    if (!g || a.path) return;
+    if (!g) { if (Game.tool) this.holdTool(null); return; }
+    if (a.path) return;
     if (this.nodeAt(g.n.i, g.n.j) === null) { this.gather = null; return; }
     if (Math.hypot(g.n.i + 0.5 - a.x, g.n.j + 0.5 - a.y) > 1.9) { this.gather = null; return; }
     const def = this.G[g.n.kind]; g.t += dt;
@@ -66,6 +68,7 @@ const Build = {
       this.gather = null; HUD.toast(g.n.kind === 'tree' ? 'A árvore caiu' : 'A rocha acabou');
     }
   },
+  holdTool(l) { if (Game.tool === l) return; Game.tool = l; Game.rebuildLook(); },
   // troca o objeto de um tile (e a colisão) e atualiza o índice de desenho
   setObj(i, j, t, solid) {
     const m = Game.map; m.obj[j][i] = t; m.col[j][i] = t ? (solid === false ? 0 : 1) : 0;

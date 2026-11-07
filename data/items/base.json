@@ -475,7 +475,7 @@
       "value": 40,
       "material": "wood",
       "icon": "lanca_0",
-      "sprite_layer": null,
+      "sprite_layer": "m/cajado",
       "desc": {
         "pt": "Cajado forjada para o campo de batalha.",
         "en": "Staff forged for the battlefield."
@@ -499,7 +499,7 @@
       "value": 35,
       "material": "wood",
       "icon": "lanca_1",
-      "sprite_layer": null,
+      "sprite_layer": "m/bastao",
       "desc": {
         "pt": "Bastão forjada para o campo de batalha.",
         "en": "Quarterstaff forged for the battlefield."
@@ -1914,7 +1914,7 @@
       "value": 40,
       "material": "iron",
       "icon": "acha_0",
-      "sprite_layer": "m/hand_axe",
+      "sprite_layer": "m/picareta",
       "desc": {
         "pt": "Ferramenta: Picareta.",
         "en": "Tool: Pickaxe."

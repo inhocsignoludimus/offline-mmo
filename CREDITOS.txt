@@ -206,3 +206,4 @@ griffin (grifo) — art/monsters/griffin/
     (trot run approved), scale 1.6× human master (140 px → ≈224 px),
     CAMADAS_ANIM JSON with feet anchor.
   No Ultima Online / EA assets used.
+Efeitos de magia (engine/dev_assets/powers): Flare (flare-game, images/powers), CC-BY-SA 3.0.
