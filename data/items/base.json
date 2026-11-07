@@ -3281,6 +3281,25 @@
       }
     },
     {
+      "id": "templar_mantle",
+      "name": {
+        "pt": "Manto do Templo",
+        "en": "Temple Mantle"
+      },
+      "type": "clothing",
+      "slot": "cloak",
+      "armor": 2,
+      "weight": 3,
+      "value": 120,
+      "material": "cloth",
+      "icon": "templar_mantle",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Manto de lã da ordem do Templo, por cima da armadura. A cruz fica na couraça, não neste pano.",
+        "en": "Wool mantle of the Temple order, worn over the armor. The cross is on the cuirass, not on this cloth."
+      }
+    },
+    {
       "id": "tower_shield",
       "name": {
         "pt": "Escudo Torre",

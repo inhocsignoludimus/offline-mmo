@@ -1,0 +1,136 @@
+{
+  "completed": "2026-11-06 19:22:28 America/Sao_Paulo",
+  "method": "monotonic gray remap 0.12 + gain * gray^0.8; per-sex gain targets opaque-pixel mean 0.56; original alpha byte-identical",
+  "gloves": {
+    "m": {
+      "before": {
+        "mean_luminance_srgb_opaque": 0.21311013390549427,
+        "alpha_weighted_mean_srgb": 0.21311002870576304,
+        "p05_p50_p95_srgb": [
+          0.058823529411764705,
+          0.21176470588235294,
+          0.3905882352941173
+        ],
+        "range_srgb": [
+          0.058823529411764705,
+          0.45098039215686275
+        ]
+      },
+      "after": {
+        "mean_luminance_srgb_opaque": 0.5599883868318002,
+        "alpha_weighted_mean_srgb": 0.5599880357247639,
+        "p05_p50_p95_srgb": [
+          0.2784313725490196,
+          0.5647058823529412,
+          0.8478431372549012
+        ],
+        "range_srgb": [
+          0.2784313725490196,
+          0.9372549019607843
+        ]
+      },
+      "gain": 1.5433743453993483,
+      "alpha_identical": true,
+      "before_sha256": "2feed20615f54470718acc56ad7dd268e9ddfc2882f7cec82d9093def8d9d7af",
+      "after_sha256": "5bb0a4daacac67027a25e927d034dd6f47108bd3c74280f65a9aacb6b47e877e"
+    },
+    "f": {
+      "before": {
+        "mean_luminance_srgb_opaque": 0.24843292289866425,
+        "alpha_weighted_mean_srgb": 0.2484408788273683,
+        "p05_p50_p95_srgb": [
+          0.058823529411764705,
+          0.24705882352941178,
+          0.4549019607843137
+        ],
+        "range_srgb": [
+          0.058823529411764705,
+          0.5254901960784314
+        ]
+      },
+      "after": {
+        "mean_luminance_srgb_opaque": 0.5599813958042642,
+        "alpha_weighted_mean_srgb": 0.5599931351012208,
+        "p05_p50_p95_srgb": [
+          0.2627450980392157,
+          0.5647058823529412,
+          0.8470588235294118
+        ],
+        "range_srgb": [
+          0.2627450980392157,
+          0.9372549019607843
+        ]
+      },
+      "gain": 1.3667061130795237,
+      "alpha_identical": true,
+      "before_sha256": "2f8bd9e8007f50f73edd06f5a6d9f02c8f1e6c2c868a63b621b9a5412c8925ea",
+      "after_sha256": "e86e4208e2540ee47228fc9eafc2317ae0398963193d44ad774fbaaf406df1da"
+    }
+  },
+  "changed_pieces": [
+    "m/leather_gloves.png",
+    "f/leather_gloves.png"
+  ],
+  "unchanged_piece_count": 58,
+  "unchanged_piece_sha256": {
+    "m/hair_02.png": "753e283214bad0a780d976cab1246949b2c53ccc1d993220877d97426f5486f2",
+    "m/skin_02.png": "2f5405e35821c394a8abfc4e34c0dcf9f96205f82511fb80f8547822f8d53b8d",
+    "m/plate_arms_fixed.png": "85a6875a9db22b79280b1e0e5545dd76822e398e1b930e608237368f5edf8afa",
+    "m/leather_hood.png": "d34426cd801f996f9b2891412ceea44ffe74a0ded0090b030c846ff569056460",
+    "m/wool_cloak.png": "4553908d4bfd4becd9463e41b07f916dd8d992cc047d0a6b9529370a50ee71be",
+    "m/cloth_pants.png": "e070e3435d06102e4add3873f6a816bc5a82e5cf78b9fc7d8f12f68327225ee2",
+    "m/studded_leather.png": "7b9f49e560ac36f43751650852dfa58303456c173ddf13e063a36c33260894be",
+    "m/nasal_helm_fixed.png": "3b1e769615b4dcef3dbfcd5a2c3e0b9a286849bb6e9dce072db8d28f2e6d4c88",
+    "m/studded_leather_fixed.png": "4e5705a3046dd62e75e27b839ba46f420369e189b830cca80ee9367dcd999c75",
+    "m/leather_boots.png": "156476625fc2e31ff09c5cdb9acaab6a79bb1db029340fe7cd0a07c020d2897c",
+    "m/cloth_shirt.png": "4c7c02fcd7ef1b106111878fa85bc133cad328cdc1e1357aac10a9404fad9be9",
+    "m/kite_shield_fixed.png": "ecc5bf870375e7818ca880abb6f06a80da286adcebdf5439ef3122eca85775e7",
+    "m/wool_cloak_fixed.png": "d7c8f6863dc41911d0d4ddddc73b874ef985660fa867e1c20ef0364956642e85",
+    "m/plate_boots_fixed.png": "58611fac800ea12924794db842ff60fb0c7864d80f18a5c1bd3898a10d1c89ad",
+    "m/hair_01.png": "3537c2422eab20125ae97634a243d3467ae25d231bafc85e3e5af32f95a5d4fb",
+    "m/skin_03.png": "891b23fe8b4ae9eed86edd74b83f7daace9366e46a6ffa71b73f08bae63de204",
+    "m/chain_greaves_fixed.png": "dec47a6796368ff469d33db6466f37c7e7c34e0f0b0340580d4e0c4210aacdb7",
+    "m/hair_05.png": "f005d6e11b5bf428cd07a4f660abf69b8483c2c6d682376d00fb3b595dab5d59",
+    "m/hair_06.png": "730c34328d9bb1702cedd76709526a6fd4dff4e26f2fc6df7fc2d19cd7683b9d",
+    "m/skin_01.png": "ef0724e6f252e6348670a703a35f0ed4d2bf431ef50e041cf0451c515de8f286",
+    "m/plate_gloves_fixed.png": "1088641577b64d7150cd6780d1ada2617976ac4be1cf4f8e6569be53614b3f95",
+    "m/wooden_shield_fixed.png": "33d598730257368c1a924aef51fc4b959c4d69e0fbdc91870260ea510f0644e3",
+    "m/plate_legs_fixed.png": "dec47a6796368ff469d33db6466f37c7e7c34e0f0b0340580d4e0c4210aacdb7",
+    "m/loriga_fixed.png": "0953e6040df91fb026a37bada907b4d4598d31a7ea536a19ead3b8fca02edaf4",
+    "m/longsword_fixed.png": "4c1cd77039b5095ac4abe29f6998947c87efc8dc116e6b4bece61a41ae1f1a00",
+    "m/body.png": "31519c71b8ee2f17ed0cd0e3c26f60c725602e96c1b1b77477d29e3b3ebb897d",
+    "m/hair_04.png": "5a6dcd79495e06b328a8216b6841c678e54a5051c3032d8547ace1dec1120cc7",
+    "m/hair_03.png": "466dcbf591cec04dad7f95282446b279e94d02a558763ee04ed91702598a443e",
+    "m/plate_torso_fixed.png": "0953e6040df91fb026a37bada907b4d4598d31a7ea536a19ead3b8fca02edaf4",
+    "f/hair_02.png": "da457afdec66989a5997d265fbdb49ed219df6bcf7b979d9b48cce46d7da4ed8",
+    "f/skin_02.png": "211fb942fa9f4a8834b63a0a791ae5f9787d5a66590e7bbc4b83c4aa71d6fb8e",
+    "f/plate_arms_fixed.png": "190fbe37ea20c5ef6f69c4d31e1faf9cac4eadf37f04063b18bc9fba4dc8747b",
+    "f/leather_hood.png": "b11eef6d2db03fa87c15ca9f210f7b0d5bf319a72bd747649c5c8b1381a9477f",
+    "f/wool_cloak.png": "a01e7a705e50b1875715a62c03e20b3cc970e159d3fef173775bfc68a69f07bb",
+    "f/cloth_pants.png": "72f272a76538aaa14d92d836843f1bb444f7650649fc289efb5300632e1f15d9",
+    "f/studded_leather.png": "4886dfd2373576064aea1415a1e85e22d82ce7a3b2a63cd1fc5d512226d5a29b",
+    "f/nasal_helm_fixed.png": "ac04963a08ffbbc86b9b97d53e19cd70aa71816dd7c277c5e310b62241f4f54c",
+    "f/studded_leather_fixed.png": "d8519c368dc556bdd9a190846603b8ae71ea8a3f500db3a3f18846bfe7c5f5d6",
+    "f/leather_boots.png": "f1d83e1ec36d7a48248cbb2858af9f36ff19ffe3491580d83942fc0e7c22b465",
+    "f/cloth_shirt.png": "894042b93e0067867fd0215a52ef8fc79042b4efdb949c3aebd82b10994248d3",
+    "f/kite_shield_fixed.png": "f2bb2734a4044e02a155b9b3083770c35db32a3fb0bdd6a785dda3bc15e7ad38",
+    "f/wool_cloak_fixed.png": "2e7a5c0fcdd87a73adf950dfa4643ff5de8fe3b18e6a9c07376c23382bc67822",
+    "f/plate_boots_fixed.png": "a0fdadbdefaa8b19013b9eb8264c91880baa74f4df78d6f8ed2d2a12014eed46",
+    "f/hair_01.png": "a95b611b84c496eda70dd9a1bb0b7bae7101e17cea3fbd96a511e87033d407b1",
+    "f/skin_03.png": "301708be3db28ce4afde6728526f9b8306511a80d5f02dc744be970bc0d95a83",
+    "f/chain_greaves_fixed.png": "972146860ada7db7dc4781068630d83e960f6696ce6eea38523963ad8404e743",
+    "f/hair_05.png": "d744879a90eca75b02bd81449def8b2084e9e18641bb0433dc5161873b272740",
+    "f/hair_06.png": "595766129b2d7eebed9bec335f592b9261642544dc38f447944199df8db2169a",
+    "f/skin_01.png": "095eada603fa39785ff578f9c693c8c1c054582aef27c780cabeee233cdfc38f",
+    "f/plate_gloves_fixed.png": "e77a36e04578dc767a9dc02f27f5f4cb4c6df35cb15749ee8f71def822640acf",
+    "f/wooden_shield_fixed.png": "d78581fcc4ae51ed98840aad5f21509626de073531ea32cd78c8ba6e7a71c08c",
+    "f/plate_legs_fixed.png": "972146860ada7db7dc4781068630d83e960f6696ce6eea38523963ad8404e743",
+    "f/loriga_fixed.png": "530c86316492677828248ef7b577ae01fe06ea1fa4124ca24a4e9f5920161729",
+    "f/longsword_fixed.png": "5b869c01e4fe4b7a38788bd71d1ff211d3a47f92a4606badc78e6d56e9d30e83",
+    "f/body.png": "e404265f39250ce198fe99e589674855038d908bf696ad1e46be82f184568b31",
+    "f/hair_04.png": "eb6965b976df04694725ea6b6a6aca7123d0ce4012b472eed2a1d2bcc2961c90",
+    "f/hair_03.png": "f8e056acda5423b4b166a31fc3d1aabe22360b9768aa48839f226755b555aad2",
+    "f/plate_torso_fixed.png": "530c86316492677828248ef7b577ae01fe06ea1fa4124ca24a4e9f5920161729"
+  },
+  "v5_cloak_hashes_verified": true
+}

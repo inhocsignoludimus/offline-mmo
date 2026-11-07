@@ -1,0 +1,86 @@
+{
+  "completed": "2026-11-06 17:55:17 America/Sao_Paulo",
+  "renders": {
+    "samples": 128,
+    "engine": "Cycles CPU",
+    "denoiser": "OpenImageDenoise",
+    "view": "Standard",
+    "raw_size": [
+      600,
+      960
+    ]
+  },
+  "pieces": {
+    "m/wool_cloak.png": {
+      "size": [
+        300,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        46,
+        85,
+        250,
+        416
+      ],
+      "sha256": "4553908d4bfd4becd9463e41b07f916dd8d992cc047d0a6b9529370a50ee71be",
+      "opaque_pixels": 25774,
+      "mean_gray": 0.5158916798658627
+    },
+    "m/wool_cloak_fixed.png": {
+      "size": [
+        300,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        121,
+        88,
+        167,
+        96
+      ],
+      "sha256": "d7c8f6863dc41911d0d4ddddc73b874ef985660fa867e1c20ef0364956642e85",
+      "opaque_pixels": 84,
+      "mean_gray": 0.3949579831932773
+    },
+    "f/wool_cloak.png": {
+      "size": [
+        300,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        48,
+        83,
+        216,
+        415
+      ],
+      "sha256": "a01e7a705e50b1875715a62c03e20b3cc970e159d3fef173775bfc68a69f07bb",
+      "opaque_pixels": 20685,
+      "mean_gray": 0.5521403688378904
+    },
+    "f/wool_cloak_fixed.png": {
+      "size": [
+        300,
+        480
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        116,
+        84,
+        158,
+        92
+      ],
+      "sha256": "2e7a5c0fcdd87a73adf950dfa4643ff5de8fe3b18e6a9c07376c23382bc67822",
+      "opaque_pixels": 80,
+      "mean_gray": 0.3905882352941176
+    }
+  },
+  "non_cloak_unchanged": 56,
+  "changed": [
+    "art/paperdoll/m/wool_cloak.png",
+    "art/paperdoll/m/wool_cloak_fixed.png",
+    "art/paperdoll/f/wool_cloak.png",
+    "art/paperdoll/f/wool_cloak_fixed.png"
+  ]
+}
