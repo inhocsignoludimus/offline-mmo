@@ -56,7 +56,7 @@ const Game = {
     const cls = KITS[cfg.cls] || KITS.guerreiro, sexo = cfg.sexo === 'f' ? 'f' : 'm';
     const base = sexo === 'f' ? (cls.f || ['clothes', 'head_long']) : cls.base;
     const [x, y] = this.townCenter;
-    const actor = new Actor({ x, y, ap: { sexo, layers: [] }, name: cfg.name, kind: 'me', nameColor: '#6ab0ff', speed: 4.2 });
+    const actor = new Actor({ x, y, ap: { sexo, layers: [] }, name: cfg.name, kind: 'me', nameColor: '#6ab0ff', speed: 2.6 });
     this.player = {
       name: cfg.name, guild: null, actor, base, gold: 120, hp: 70, hpMax: 70, mp: 40, mpMax: 40, st: 60, stMax: 60,
       skills: Skills.start(cfg.cls === 'livre' ? cfg.free : cls.skills), equip: {}, bag: [],

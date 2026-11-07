@@ -72,7 +72,7 @@ const Sim = {
     if (near) {
       const ap = { sexo: s.sex, layers: (s.sex === 'f' ? rnd(VISUAIS_F) : rnd(VISUAIS_M))() };
       const [x, y] = this.map.randomFree(Math.random, Game.townCenter, 14);
-      s.actor = new Actor({ x, y, ap, name: s.name, tag: s.guild ? s.guild.tag : '', kind: 'sim', speed: between(2.9, 3.8), dir: Math.floor(Math.random() * 8) });
+      s.actor = new Actor({ x, y, ap, name: s.name, tag: s.guild ? s.guild.tag : '', kind: 'sim', speed: between(1.8, 2.4), dir: Math.floor(Math.random() * 8) });
       s.actor.sim = s; s.brain = { state: 'idle', until: this.t + between(1, 6) };
       this.color(s);
       Game.actors.push(s.actor);
