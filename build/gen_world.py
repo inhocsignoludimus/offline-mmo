@@ -94,6 +94,31 @@ def noise(w, h, scale, rng):
     return (a * (1 - fx) + b * fx) * (1 - fy) + (c * (1 - fx) + d * fx) * fy
 
 
+def iso_wall(tex, H, mirror=False, hole=None, cap=(70, 52, 34), dark=1.0):
+    """parede isométrica de 1 tile, sintetizada a partir de uma textura (sem desenho do Flare para isso)"""
+    from PIL import ImageDraw, ImageEnhance
+    L, t = 48, 6
+    tw, th = tex.size; k = H / th
+    tx = tex.resize((max(1, round(tw * k)), H), Image.LANCZOS)
+    face = Image.new('RGBA', (L, H))
+    for x0 in range(0, L, tx.width): face.paste(tx, (x0, 0))
+    dr = ImageDraw.Draw(face)
+    if hole == 'window':
+        dr.rectangle((14, H * .25, 34, H * .55), fill=(18, 14, 10, 255), outline=(60, 44, 26, 255), width=3)
+        dr.line((24, H * .25, 24, H * .55), fill=(60, 44, 26, 255), width=2)
+    elif hole == 'door':
+        dr.rectangle((12, H * .18, 36, H), fill=(74, 50, 28, 255), outline=(40, 26, 14, 255), width=3)
+        for xx in (18, 24, 30): dr.line((xx, H * .18 + 3, xx, H), fill=(52, 34, 18, 255), width=1)
+        dr.ellipse((31, H * .6, 34, H * .6 + 3), fill=(190, 160, 90, 255))
+    if dark != 1.0: face = ImageEnhance.Brightness(face).enhance(dark)
+    out = face.transform((L, H + 24 + t), Image.AFFINE, (1, 0, 0, -0.5, 1, -t), Image.BICUBIC)
+    d2 = ImageDraw.Draw(out)
+    d2.polygon([(0, t), (L, t + 24), (L - 5, t + 24 - 5), (-5, t - 5)], fill=cap + (255,))
+    d2.line([(0, t), (L, t + 24)], fill=tuple(max(0, c - 25) for c in cap) + (255,), width=1)
+    if mirror: out = out.transpose(Image.FLIP_LEFT_RIGHT)
+    return out, (24, t + H + 12)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--flare', required=True); ap.add_argument('--cells', default='8,3,22,23'); ap.add_argument('--cell', type=int, default=32)
@@ -372,6 +397,33 @@ def main():
         src, x, y, w, h, ox, oy = sets[base][t - base]
         imgs[t] = src.crop((x, y, x + w, y + h)).resize((max(1, round(w * SCALE)), max(1, round(h * SCALE))), Image.LANCZOS)
         meta[t] = (ox * SCALE, oy * SCALE)
+    # peças de construção (sempre no atlas): ids do Flare + piso de tábua recortado do cais
+    BUILD = {'floor_wood': [D + 900], 'floor_stone': [R + 24, R + 25], 'wall_wood': [208, 215], 'wall_stone': [R + 223, R + 227],
+             'door_wood': [212, 212], 'door_iron': [R + 364, R + 364], 'window_wood': [210, 211], 'window_iron': [R + 360, R + 365],
+             'fence_wood': [104, 105], 'fence_stone': [R + 48, R + 49], 'gate_wood': [110, 111], 'gate_iron': [R + 361, R + 361],
+             'stump': G['stump'], 'anvil': G['anvil']}
+    src, x, y, w, h, ox, oy = sets[0][200]
+    plank = src.crop((x, y, x + w, y + 96)).resize((96, 48), Image.LANCZOS)
+    DIMG[D + 900] = (plank, (48, 24))
+    def crop_full(base, tid, fx0, fy0, fx1, fy1):
+        src, x, y, w, h, ox, oy = sets[base][tid]
+        return src.crop((x + int(w * fx0), y + int(h * fy0), x + int(w * fx1), y + int(h * fy1)))
+    wood = crop_full(0, 215, .12, .3, .8, .92); stone = crop_full(R, 228, .2, .35, .8, .8)
+    for n, (tex, wh, cap, hole) in enumerate([(wood, 62, (92, 66, 40), None), (stone, 68, (150, 146, 138), None),
+                                             (wood, 62, (92, 66, 40), 'window'), (stone, 68, (150, 146, 138), 'window'),
+                                             (wood, 62, (92, 66, 40), 'door')]):
+        for m in (0, 1): DIMG[D + 910 + n * 2 + m] = iso_wall(tex, wh, mirror=bool(m), hole=hole, cap=cap, dark=0.82 if m else 1.0)
+    BUILD.update({'wall_wood': [D + 910, D + 911], 'wall_stone': [D + 912, D + 913], 'window_wood': [D + 914, D + 915],
+                  'window_iron': [D + 916, D + 917], 'door_wood': [D + 918, D + 919], 'door_iron': [R + 364, R + 361]})
+    for ids in BUILD.values():
+        for t in ids:
+            if t in imgs: continue
+            if t >= D: im, (ox, oy) = DIMG[t]; imgs[t] = im; meta[t] = (ox, oy); continue
+            base = R if t >= R else S if t >= S else 0
+            src, x, y, w, h, ox, oy = sets[base][t - base]
+            imgs[t] = src.crop((x, y, x + w, y + h)).resize((max(1, round(w * SCALE)), max(1, round(h * SCALE))), Image.LANCZOS); meta[t] = (ox * SCALE, oy * SCALE)
+    NODES = {'tree': G['oak'] + G['birch'] + G['pine'] + G['dead'] + N['dead'] + DS['palm'] + RU['autumn'],
+             'rock': G['rock'] + N['rock'] + N['boulder'] + DS['rock'] + RU['rubble']}
     atlas, pos = pack(imgs)
     d = os.path.join(ROOT, 'engine', 'dev_assets', 'flare'); os.makedirs(d, exist_ok=True)
     atlas.save(os.path.join(d, 'mundo_tiles.webp'), 'WEBP', quality=90, method=6)
@@ -381,7 +433,7 @@ def main():
             'offset': [0, 0], 'hero': home, 'atlas': 'mundo_tiles.webp', 'enc': 'u16b64',
             'tiles': {str(t): [*pos[t], round(meta[t][0], 2), round(meta[t][1], 2)] for t in pos},
             'background': enc(bg), 'object': enc(obj), 'collision': enc(col), 'exits': [], 'spawns': [],
-            'zones': zones, 'houses': houses, 'towns': towns, 'home': home}
+            'zones': zones, 'houses': houses, 'towns': towns, 'home': home, 'build': BUILD, 'nodes': NODES}
     json.dump(data, open(os.path.join(d, 'mundo.json'), 'w'), separators=(',', ':'))
     cnt = {}
     for y in range(0, H, 4):

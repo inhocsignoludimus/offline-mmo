@@ -32,6 +32,7 @@ const Touch = {
   },
   // toque rápido na tela: pega item, fala com jogador ou mira um monstro
   tap(t) {
+    if (Build.click(t.clientX, t.clientY)) return;
     const it = Combat.labelAt(t.clientX, t.clientY);
     if (it) { Game.player.actor.moveTo(Game.map, it.x, it.y); Game.pickup = it; return; }
     const [wx, wy] = Camera.screenToWorld(t.clientX, t.clientY + 30 * Camera.zoom, Render.vw, Render.vh);
@@ -41,11 +42,12 @@ const Touch = {
   render() {
     if (!this.on) return;
     const spells = Magic.hotbar.slice(0, 4).map((id, i) => { const s = Magic.byId[id]; return s ? `<button class="sk s${i}" data-s="${id}">${Magic.name(s).split(' ').map(w => w[0]).join('').slice(0, 3)}</button>` : ''; }).join('');
-    this.acts.innerHTML = `<button class="atk">⚔</button><button class="pick">✋</button>${spells}`;
+    this.acts.innerHTML = `<button class="atk">⚔</button><button class="pick">✋</button><button class="bld">🔨</button>${spells}`;
     const atk = this.acts.querySelector('.atk');
     atk.addEventListener('touchstart', e => { this.atk = true; e.preventDefault(); }, { passive: false });
     atk.addEventListener('touchend', () => { this.atk = false; Combat.attacking = false; });
-    this.acts.querySelector('.pick').addEventListener('touchstart', e => { e.preventDefault(); if (!Combat.pickNear()) HUD.toast('Nada para pegar'); }, { passive: false });
+    this.acts.querySelector('.pick').addEventListener('touchstart', e => { e.preventDefault(); if (!Combat.pickNear() && !Build.gatherNear()) HUD.toast('Nada para pegar'); }, { passive: false });
+    this.acts.querySelector('.bld').addEventListener('touchstart', e => { e.preventDefault(); Gumps.toggle('build'); }, { passive: false });
     this.acts.querySelectorAll('[data-s]').forEach(b => b.addEventListener('touchstart', e => { e.preventDefault(); Magic.cast(b.dataset.s, Combat.target || Combat.nearest(9), null); }, { passive: false }));
   },
   update(dt) {

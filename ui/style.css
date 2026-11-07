@@ -166,3 +166,13 @@ body.touch #menubar { bottom: auto; top: 4px; left: auto; right: 4px; transform:
 body.touch #targetbar { top: 64px; }
 #menubar { bottom: 8px; } #hotbar { bottom: 56px; }
 body.touch #menubar button { padding: 3px 6px; font-size: 11px; } body.touch #menubar button[data-g=status], body.touch #menubar button[data-act=names] { display: none; }
+
+#acts .bld { right: 150px; bottom: 0; width: 46px; height: 46px; font-size: 20px; }
+.buildg .bmats { font-size: 12px; color: #d8c8a0; padding: 4px 2px 6px; border-bottom: 1px solid #4a3a24; }
+.buildg .blist { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 6px 0; max-height: 168px; overflow-y: auto; }
+.buildg .bp { display: flex; flex-direction: column; align-items: flex-start; padding: 4px 6px; background: #20180f; border: 1px solid #4a3a24; color: #f0e0c0; font: 13px 'Alegreya SC', serif; cursor: pointer; }
+.buildg .bp em { font: 11px sans-serif; color: #a89870; font-style: normal; }
+.buildg .bp.on, .buildg .bbar .on { border-color: #e0b050; background: #3a2a10; }
+.buildg .bp.poor { opacity: .55; }
+.buildg .bbar { display: flex; gap: 4px; flex-wrap: wrap; }
+.buildg .bbar button { flex: 1; padding: 5px 2px; background: #2a1f12; border: 1px solid #5a4a2a; color: #f0e0c0; font: 12px 'Alegreya SC', serif; }

@@ -77,6 +77,9 @@ const Game = {
     if (this.map.houses.length) for (const [id, x, y, tint] of this.map.houses) Houses.add(id, x, y, this.map, tint);
     else for (const id of Object.keys(DATA.houses || {})) Houses.place(id, this.townCenter, this.map);
     this.map.indexObjects();
+    Build.init(DATA, this.map); BuildGump.init();
+    if (Save.load()) { this.rebuildLook(); Combat.recompute(); Camera.snap(actor.x, actor.y); Backpack.render(); }
+    setInterval(() => Save.write(), 20000); addEventListener('pagehide', () => Save.write());
     Combat.spawnWorld();
     Journal.add('system', '', `Bem-vindo a ${this.townName}, shard Outremer. ${Sim.online().length} jogadores online.`);
     Journal.add('system', '', Touch.on ? 'Joystick para andar, ⚔ para atacar, botões de magia à direita, ✋ para pegar itens. Os acampamentos e ruínas ficam nos ermos, longe da vila: quanto mais longe, mais perigoso.'
@@ -188,6 +191,7 @@ const Game = {
     let lastRepath = 0;
     const press = (cx, cy) => {
       if (this.player.dead) return;
+      if (Build.click(cx, cy)) return;
       const lab = Combat.labelAt(cx, cy);
       if (lab) { const a = this.player.actor; a.moveTo(this.map, lab.x, lab.y); this.pickup = lab; return; }
       const [wx, wy] = world(cx, cy), m = Combat.mobAt(wx, wy);
@@ -222,8 +226,10 @@ const Game = {
       if (e.key === 'Enter' && !typing) { e.preventDefault(); Journal.focus(); return; }
       if (e.key === 'Escape' && typing) { document.activeElement.blur(); return; }
       if (typing) return;
-      const k = e.key.toLowerCase(), map = { s: 'status', p: 'paperdoll', b: 'backpack', i: 'backpack', j: 'journal', o: 'online', m: 'minimap', k: 'skills', l: 'spellbook' };
+      const k = e.key.toLowerCase(), map = { c: 'build', s: 'status', p: 'paperdoll', b: 'backpack', i: 'backpack', j: 'journal', o: 'online', m: 'minimap', k: 'skills', l: 'spellbook' };
       if (/^[1-9]$/.test(k)) { const id = Magic.hotbar[+k - 1]; if (id) this.castAt(id, ...(this.mouse || [Render.vw / 2, Render.vh / 2])); return; }
+      if (k === 'r' && Build.mode) { Build.rot++; return; }
+      if (e.key === 'Escape' && Build.mode) { Build.toggleMode(null); return; }
       if (k === ' ') { Combat.pickNear(); e.preventDefault(); return; }
       if (k === 'n' && !e.ctrlKey) { Render.toggleNames(); e.preventDefault(); return; }
       if (map[k] && !e.ctrlKey && !e.metaKey) { Gumps.toggle(map[k]); e.preventDefault(); }
@@ -250,7 +256,7 @@ const Game = {
     const p = this.player, a = p.actor;
     if (!p.dead) Touch.update(dt);
     for (const x of this.actors) if (x !== a || !p.dead) x.update(dt, this.map);
-    Sim.update(dt); Combat.update(dt); Houses.update(dt); World.update();
+    Sim.update(dt); Combat.update(dt); Houses.update(dt); World.update(); Build.update(dt);
     if (this.pickup && !a.path) { if (Combat.ground.includes(this.pickup) && Math.hypot(this.pickup.x - a.x, this.pickup.y - a.y) < 1.6) Combat.pick(this.pickup); this.pickup = null; }
     // fôlego cai correndo e volta parado
     p.st = Math.max(0, Math.min(p.stMax, p.st + (a.path ? -0.4 : 2) * dt));

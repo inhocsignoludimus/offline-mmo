@@ -17,7 +17,7 @@ class GameMap {
     } else { this.bg = data.background; this.obj = data.object; this.col = data.collision; }
     this.chunks = new Map();
     // lista de objetos por linha, para achar rápido os que estão na tela
-    this.zones = data.zones || null; this.houses = data.houses || []; this.towns = data.towns || []; this.home = data.home || null;
+    this.zones = data.zones || null; this.houses = data.houses || []; this.towns = data.towns || []; this.home = data.home || null; this.build = data.build || null; this.nodes = data.nodes || null;
     this.indexObjects();
   }
   // objetos guardados por pedaço (CHUNK x CHUNK), para desenhar só os visíveis

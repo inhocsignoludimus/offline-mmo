@@ -64,6 +64,7 @@ const Render = {
     }
     Combat.drawWorld(g);
     Magic.draw(g);
+    Build.drawGhost(g);
     // nomes e falas, em pixels de tela (texto nítido)
     g.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
     for (const e of list) if (e.a && e.a.kind !== 'mob') this.overhead(e.a, now);
