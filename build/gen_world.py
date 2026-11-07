@@ -37,6 +37,53 @@ WALKABLE = set(G['grass'] + G['cobble'] + G['flower'] + G['tall'] + G['plant'] +
                + RU['dirt'] + RU['floor'] + RU['plant'] + G['circle'] + RU['circle'] + N['shrub'])
 
 
+D = 3000  # ids do deserto (gerados a partir da arte do TCoM)
+TCOM = '/home/claude/ihsl/tcom'
+
+
+def desert_assets(tcom):
+    """areia (losangos recortados do chão pintado das Dunas do TCoM) e objetos
+    (palmeiras, pedras, arbustos) das fatias de tile das Dunas. Escala TCoM 2x de 64 px -> 0,75."""
+    import re as _re
+    js = open(os.path.join(tcom, 'js', 'jogo.js'), encoding='utf-8').read()
+    m = _re.search(r'const CENARIO_DADOS = (\{.*?\});\n', js, _re.S)
+    dados = json.loads(m.group(1))['dunas']
+    chao = Image.open(os.path.join(tcom, 'assets', 'cenario', 'dunas', 'chao_0_0.webp')).convert('RGBA')
+    folha = Image.open(os.path.join(tcom, 'assets', 'cenario', 'dunas', 'folha0.webp')).convert('RGBA')
+    out, kinds = {}, {'sand': [], 'palm': [], 'rock': [], 'bush': []}
+    mask = Image.new('L', (128, 64), 0)
+    from PIL import ImageDraw
+    ImageDraw.Draw(mask).polygon([(64, 0), (127, 32), (64, 63), (0, 32)], fill=255)
+    rr = random.Random(3); cand = []
+    for k in range(3000):
+        x, y = rr.randint(0, chao.width - 129), rr.randint(0, chao.height - 65)
+        c = chao.crop((x, y, x + 128, y + 64)); arr = np.array(c)
+        px = arr[..., :3].reshape(-1, 3).astype(float); m_ = px.mean(axis=0)
+        if arr[..., 3].min() < 250 or px.std(axis=0).mean() > 18: continue
+        if not (m_[0] > 150 and m_[0] > m_[1] + 8 and m_[1] > m_[2] + 15): continue   # tom de areia
+        cand.append((m_, c))
+    med = np.median(np.array([m_ for m_, _ in cand]), axis=0)
+    cand.sort(key=lambda t: np.abs(t[0] - med).sum())                                 # areias do mesmo tom
+    for m_, c in cand[:16]:
+        c = c.copy(); c.putalpha(mask); tid = D + len(kinds['sand'])
+        out[tid] = (c.resize((100, 50), Image.LANCZOS), (50, 25)); kinds['sand'].append(tid)   # 2 px de sobra: sem emenda entre losangos
+    for key, f in dados['fatias'].items():
+        sh, x, y, w, h, ax, ay = f
+        if sh != 0 or w < 40: continue
+        im = folha.crop((x, y, x + w, y + h)); arr = np.array(im).astype(int); al = arr[..., 3] > 30
+        if al.sum() < 300: continue
+        ys_ = np.where(al.any(axis=1))[0]
+        if ys_.max() < h - 6 or ys_.min() > 6: continue   # fatia cortada (pedaço de algo maior): pula
+        r_, g_, b_ = arr[..., 0][al], arr[..., 1][al], arr[..., 2][al]
+        green = ((g_ > r_ + 8) & (g_ > b_)).mean()
+        sandy = ((r_ > 150) & (g_ > 120) & (b_ < 120)).mean()
+        kind = 'palm' if green > .25 and h > 260 else 'bush' if green > .25 else 'rock' if sandy < .3 and h < 230 else None
+        if not kind or len(kinds[kind]) >= 14: continue
+        tid = D + 100 * (1 + ['palm', 'rock', 'bush'].index(kind)) + len(kinds[kind])
+        out[tid] = (im.resize((max(1, round(w * .75)), max(1, round(h * .75))), Image.LANCZOS), (ax * .75, ay * .75)); kinds[kind].append(tid)
+    return out, kinds
+
+
 def noise(w, h, scale, rng):
     gw, gh = w // scale + 2, h // scale + 2
     g = rng.random((gh, gw))
@@ -49,7 +96,7 @@ def noise(w, h, scale, rng):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--flare', required=True); ap.add_argument('--cells', default='8,3,18,21'); ap.add_argument('--cell', type=int, default=32)
+    ap.add_argument('--flare', required=True); ap.add_argument('--cells', default='8,3,22,23'); ap.add_argument('--cell', type=int, default=32)
     ap.add_argument('--seed', type=int, default=7)
     a = ap.parse_args()
     CELL = a.cell
@@ -59,6 +106,8 @@ def main():
     W, H = cw * CELL, ch * CELL
     rng = random.Random(a.seed); nrng = np.random.default_rng(a.seed)
     rows = L['rows']
+    DIMG, DS = desert_assets(TCOM)
+    print('deserto:', {k: len(v) for k, v in DS.items()})
 
     jx, jy = (noise(W, H, 28, nrng) - .5) * CELL * 1.1, (noise(W, H, 28, nrng) - .5) * CELL * 1.1
     ys, xs = np.mgrid[0:H, 0:W]
@@ -77,6 +126,7 @@ def main():
             if b == 'water': bg[y, x] = rng.choice(G['water']); col[y, x] = 2
             elif b == 'north': bg[y, x] = rng.choice(N['snow2'] if patch[y, x] > .62 else N['snow'])
             elif b == 'ruins': bg[y, x] = rng.choice(RU['floor'] if patch[y, x] > .66 else RU['dirt'])
+            elif b == 'outremer': bg[y, x] = rng.choice(DS['sand'])
             else: bg[y, x] = rng.choice(G['grass'])
     # borda neve/grama com tiles de neve rala, para a transição não ser uma linha seca
     for y in range(1, H - 1):
@@ -100,7 +150,7 @@ def main():
 
     def road_tiles(X, Y):
         b = biome(X, Y)
-        return N['snow2'] if b == 'north' else RU['floor'] if b == 'ruins' else G['cobble']
+        return N['snow2'] if b == 'north' else RU['floor'] if b == 'ruins' else RU['dirt'] if b == 'outremer' else G['cobble']
 
     center = lambda c: ((c[0] - cx0) * CELL + CELL // 2, (c[1] - cy0) * CELL + CELL // 2)
     inside = lambda c: cx0 <= c[0] < cx0 + cw and cy0 <= c[1] < cy0 + ch
@@ -137,6 +187,10 @@ def main():
         crate, logs, fire, tent = (N['crate'], N['logs'], N['fire'], N['tent']) if snow else (G['crate'], G['logs'], G['fire'], G['tent'])
         spots = [(tx - 13, ty - 13), (tx + 7, ty - 13), (tx - 13, ty + 7), (tx + 7, ty + 7), (tx - 20, ty - 3), (tx + 14, ty - 3), (tx - 3, ty - 20), (tx - 3, ty + 14)]
         rng.shuffle(spots)
+        if b == 'outremer' and style in ('vila', 'mosteiro'):
+            style = 'acampamento'   # no deserto: tendas e palmeiras, nada de cabana de toras
+            for k in range(8):
+                an = k / 8 * 6.283; put(int(tx + math.cos(an) * (Rr - 2)), int(ty + math.sin(an) * (Rr - 2)), rng.choice(DS['palm']))
         if style == 'vila':
             for k, (hx, hy) in enumerate(spots[:6 if s.get('capital') else 3]):
                 houses.append([['plains_cabin_01', 'plains_cabin_02'][(k + len(houses)) % 2], hx, hy, rng.choice(tints)])
@@ -163,7 +217,8 @@ def main():
                 for i in range(-8, 9):
                     if i * i + j * j < 70: pave(tx + i, ty + j) if False else None
             for k in range(4): put(tx + rng.choice([-5, 5]), ty + rng.choice([-5, 5]), rng.choice(RU['statue'] + RU['barrel']))
-            put(tx + 3, ty + 3, fire[0]); houses.append(['plains_cabin_02', tx - 9, ty - 9, rng.choice(tints)])
+            put(tx + 3, ty + 3, fire[0])
+            if b != 'outremer': houses.append(['plains_cabin_02', tx - 9, ty - 9, rng.choice(tints)])
         else:                          # mosteiro: pátio de pedra, santuário, horta de ervas
             for j in range(-7, 8):
                 for i in range(-7, 8):
@@ -179,7 +234,7 @@ def main():
     towns_xy = [t['center'] for t in towns]
 
     def monsters_for(b, lv, n=3):
-        bb = {'forest': 'forest', 'north': 'north', 'ruins': 'ruins', 'mountains': 'mountains', 'swamp': 'swamp'}.get(b, 'plains')
+        bb = {'forest': 'forest', 'north': 'north', 'ruins': 'ruins', 'mountains': 'mountains', 'swamp': 'swamp', 'outremer': 'outremer'}.get(b, 'plains')
         ok = sorted([m for m in mons.values() if bb in m['biomes'] and 'boss' not in m['id']], key=lambda m: abs(m['level'] - lv))
         return [m['id'] for m in ok[:n]] or ['goblin']
 
@@ -209,6 +264,20 @@ def main():
                 for k in range(4): put(x + rng.choice([-3, 3]), y + rng.choice([-3, 3]), rng.choice(RU['statue']))
             else: put(x, y, rng.choice(RU['shrine'])); put(x + 2, y, rng.choice(RU['urn'])); put(x - 2, y, rng.choice(RU['sword']))
             name = {'templo': ('Templo Caído', 'Fallen Temple'), 'estatuas': ('Jardim das Estátuas', 'Statue Garden'), 'altar': ('Altar Profanado', 'Defiled Altar')}[kind]
+        elif b == 'outremer':
+            kind = rng.choice(['oasis', 'ninho', 'ruina'])
+            if kind == 'oasis':
+                for k in range(6):
+                    an = k / 6 * 6.283; put(int(x + math.cos(an) * 5), int(y + math.sin(an) * 5), rng.choice(DS['palm']))
+                put(x, y, RU['well'][0])
+            elif kind == 'ninho':
+                for _ in range(12):
+                    an = rng.random() * 6.283; d = rng.uniform(3, 7); put(int(x + math.cos(an) * d), int(y + math.sin(an) * d), rng.choice(DS['rock']))
+            else:
+                for k in range(8):
+                    an = k / 8 * 6.283; put(int(x + math.cos(an) * 6), int(y + math.sin(an) * 6), rng.choice(RU['pillar'] + RU['rubble']))
+                put(x, y, rng.choice(RU['statue']))
+            name = {'oasis': ('Oásis Perdido', 'Lost Oasis'), 'ninho': ('Ninho nas Dunas', 'Dune Nest'), 'ruina': ('Ruína nas Areias', 'Ruin in the Sands')}[kind]
         elif b == 'mountains':
             for _ in range(14):
                 an = rng.random() * 6.283; d = rng.uniform(3, 7); put(int(x + math.cos(an) * d), int(y + math.sin(an) * d), rng.choice(G['rock'] + G['pillar']))
@@ -240,7 +309,7 @@ def main():
         if b == 'water' or clear[y, x] or any(col[y + j, x + i] == 2 for j in (-7, 0, 7) for i in (-7, 0, 7)): continue
         dmin = min(math.hypot(x - p, y - q) for p, q in towns_xy) if towns_xy else 999
         if dmin < 34 or any(math.hypot(x - c['rect'][0] - 7, y - c['rect'][1] - 7) < 30 for c in chunks): continue
-        lv = max(1, min(18, int(dmin / 26) + 1 + {'north': 4, 'ruins': 4, 'mountains': 3}.get(b, 0)))
+        lv = max(1, min(18, int(dmin / 26) + 1 + {'north': 4, 'ruins': 4, 'mountains': 3, 'outremer': 6}.get(b, 0)))
         chunks.append(scene(x, y, b, lv))
     # chefes do mapa-guia que caem na região
     for bo in L['bosses']:
@@ -278,6 +347,9 @@ def main():
                 if r < 0.03 + max(0, patch[y, x] - .55) * .3: put(x, y, rng.choice(G['rock']))
                 elif r < 0.05: put(x, y, rng.choice(G['pine'] + G['pillar']))
                 elif r < 0.08: put(x, y, rng.choice(G['tall'] + G['shrub']))
+            elif b == 'outremer':
+                if r < 0.004 + max(0, f - 0.6) * 0.12: put(x, y, rng.choice(DS['palm']))
+                elif r < 0.02: put(x, y, rng.choice(DS['rock'] + DS['bush']))
             elif b in ('swamp',):
                 if r < 0.05: put(x, y, rng.choice(G['dead']))
                 elif r < 0.16: put(x, y, rng.choice(G['reed'] + G['shrub']))
@@ -294,6 +366,8 @@ def main():
     imgs, meta = {}, {}
     for t in sorted(used):
         if not t: continue
+        if t >= D:
+            im, (ox, oy) = DIMG[t]; imgs[t] = im; meta[t] = (ox, oy); continue
         base = R if t >= R else S if t >= S else 0
         src, x, y, w, h, ox, oy = sets[base][t - base]
         imgs[t] = src.crop((x, y, x + w, y + h)).resize((max(1, round(w * SCALE)), max(1, round(h * SCALE))), Image.LANCZOS)
