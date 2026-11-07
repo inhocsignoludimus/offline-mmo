@@ -1,0 +1,48 @@
+[
+  {
+    "id": "buckler",
+    "upstream": "https://github.com/flareteam/flare-game/tree/master/art_src/characters/hero",
+    "upstream_file": "iron_buckler.blend",
+    "source_sha256": "5380b02c535692c71cbf62e7e9581dfec16b38ed20438675d83c66b0244915eb",
+    "actual_mesh": "IronBuckler",
+    "license": "CC-BY-SA-3.0",
+    "originals_preserved": true,
+    "modification": "actual mesh reoriented/rescaled; UV retained for buckler; new Cycles materials on other items; hand occlusion in PNG",
+    "sex_specific_fit": {
+      "m": {
+        "item": "buckler",
+        "source": "/workspace/flare-game/art_src/characters/hero/iron_buckler.blend",
+        "source_object": "IronBuckler",
+        "source_materials": [
+          "BucklerTex"
+        ],
+        "roles": [
+          "fixed"
+        ],
+        "grip_pixel": [
+          243,
+          237
+        ],
+        "size_pixels": 76,
+        "static_only": true
+      },
+      "f": {
+        "item": "buckler",
+        "source": "/workspace/flare-game/art_src/characters/hero/iron_buckler.blend",
+        "source_object": "IronBuckler",
+        "source_materials": [
+          "BucklerTex"
+        ],
+        "roles": [
+          "fixed"
+        ],
+        "grip_pixel": [
+          251,
+          218
+        ],
+        "size_pixels": 76,
+        "static_only": true
+      }
+    }
+  }
+]

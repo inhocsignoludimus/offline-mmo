@@ -1,0 +1,9 @@
+# Proposta de acréscimo a CREDITOS.txt — NÃO aplicada
+Paperdoll armas/escudo, lote 1: art/paperdoll/{m,f}/{shortsword,dagger,hand_axe,mace,longbow,staff,wand,buckler}[ _fixed ].png (somente arquivos presentes no pacote).
+Geometria: modelos históricos Flare, art_src/characters/hero/{shortsword,dagger,hand_axe,mace,longbow,staff,wand,iron_buckler}.blend.
+Texturas originais usadas: iron_buckler_diffuse.png e iron_buckler_normal.png, do mesmo diretório.
+Flare: Clint Bellanger e demais colaboradores/artistas creditados em Flare CREDITS.txt (cópia incluída em tools_src/upstream/). Colaboradores retêm direitos sobre suas contribuições; não se atribui autoria individual de cada mesh sem indicação específica na fonte.
+Fonte: https://github.com/flareteam/flare-game/tree/master/art_src/characters/hero
+Licença: Creative Commons Attribution-ShareAlike 3.0 Unported, versões posteriores permitidas pelo Flare — https://creativecommons.org/licenses/by-sa/3.0/
+Modificações Ludimus (2026): extração dos objetos reais, reorientação e escala para paperdoll frontal m/f, novos materiais Cycles preservando UV do broquel, encaixe estático e recorte de oclusão da mão, separação couro/pano cinza hueable e materiais fixos, render 96 amostras/denoiser e acabamento leve.
+A derivação permanece CC-BY-SA 3.0, não CC0. As prévias e referências usam o corpo aprovado do projeto (Ludimus, CC0), sem alterar ou relicenciar o corpo. Nenhum asset da EA/Ultima Online.

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "wooden_shield",
+    "data_material": "wood",
+    "visual_reference_id": "wooden_shield",
+    "paths_by_sex": {
+      "m": "art/paperdoll/m/wooden_shield_fixed.png",
+      "f": "art/paperdoll/f/wooden_shield_fixed.png"
+    },
+    "status": "EXISTING_EXACT_PRESERVE",
+    "auto_enable": true,
+    "new_files_supplied": false,
+    "exact_art_missing": false,
+    "note": "Existing phase1 file preserved, not re-approved or replaced.",
+    "license": "existing phase1 CC0 per staged credits; no copying/overwriting here"
+  },
+  {
+    "id": "buckler",
+    "data_material": "iron",
+    "visual_reference_id": "buckler",
+    "paths_by_sex": {
+      "m": "art/paperdoll/m/buckler_fixed.png",
+      "f": "art/paperdoll/f/buckler_fixed.png"
+    },
+    "status": "NEW_PRODUCTION_EXACT",
+    "auto_enable": true,
+    "new_files_supplied": true,
+    "exact_art_missing": false,
+    "note": "Real Flare iron_buckler mesh, offhand fit checked.",
+    "license": "CC-BY-SA-3.0"
+  },
+  {
+    "id": "kite_shield",
+    "data_material": "iron",
+    "visual_reference_id": "kite_shield",
+    "paths_by_sex": {
+      "m": "art/paperdoll/m/kite_shield_fixed.png",
+      "f": "art/paperdoll/f/kite_shield_fixed.png"
+    },
+    "status": "EXISTING_EXACT_PRESERVE",
+    "auto_enable": true,
+    "new_files_supplied": false,
+    "exact_art_missing": false,
+    "note": "Existing phase1 file preserved, not re-approved or replaced.",
+    "license": "existing phase1 CC0 per staged credits; no copying/overwriting here"
+  },
+  {
+    "id": "heater_shield",
+    "data_material": "iron",
+    "visual_reference_id": "kite_shield",
+    "paths_by_sex": {
+      "m": "art/paperdoll/m/kite_shield_fixed.png",
+      "f": "art/paperdoll/f/kite_shield_fixed.png"
+    },
+    "status": "APPROXIMATE_FALLBACK_PROPOSAL_DISABLED",
+    "auto_enable": false,
+    "new_files_supplied": false,
+    "exact_art_missing": true,
+    "note": "No exact heater silhouette; kite is only an elongated fallback.",
+    "license": "existing phase1 CC0 per staged credits; no copying/overwriting here"
+  },
+  {
+    "id": "round_shield",
+    "data_material": "wood",
+    "visual_reference_id": "wooden_shield",
+    "paths_by_sex": {
+      "m": "art/paperdoll/m/wooden_shield_fixed.png",
+      "f": "art/paperdoll/f/wooden_shield_fixed.png"
+    },
+    "status": "APPROXIMATE_FALLBACK_PROPOSAL_DISABLED",
+    "auto_enable": false,
+    "new_files_supplied": false,
+    "exact_art_missing": true,
+    "note": "Existing wooden shield is the nearest round wooden visual, not dedicated new art.",
+    "license": "existing phase1 CC0 per staged credits; no copying/overwriting here"
+  },
+  {
+    "id": "crusader_shield",
+    "data_material": "iron",
+    "visual_reference_id": "kite_shield",
+    "paths_by_sex": {
+      "m": "art/paperdoll/m/kite_shield_fixed.png",
+      "f": "art/paperdoll/f/kite_shield_fixed.png"
+    },
+    "status": "APPROXIMATE_FALLBACK_PROPOSAL_DISABLED",
+    "auto_enable": false,
+    "new_files_supplied": false,
+    "exact_art_missing": true,
+    "note": "Kite fallback lacks crusader cross/emblem.",
+    "license": "existing phase1 CC0 per staged credits; no copying/overwriting here"
+  },
+  {
+    "id": "tower_shield",
+    "data_material": "iron",
+    "visual_reference_id": "kite_shield",
+    "paths_by_sex": {
+      "m": "art/paperdoll/m/kite_shield_fixed.png",
+      "f": "art/paperdoll/f/kite_shield_fixed.png"
+    },
+    "status": "APPROXIMATE_FALLBACK_PROPOSAL_DISABLED",
+    "auto_enable": false,
+    "new_files_supplied": false,
+    "exact_art_missing": true,
+    "note": "Kite fallback is NOT a tower shield; do not enable silently.",
+    "license": "existing phase1 CC0 per staged credits; no copying/overwriting here"
+  },
+  {
+    "id": "oval_shield",
+    "data_material": "wood",
+    "visual_reference_id": "wooden_shield",
+    "paths_by_sex": {
+      "m": "art/paperdoll/m/wooden_shield_fixed.png",
+      "f": "art/paperdoll/f/wooden_shield_fixed.png"
+    },
+    "status": "APPROXIMATE_FALLBACK_PROPOSAL_DISABLED",
+    "auto_enable": false,
+    "new_files_supplied": false,
+    "exact_art_missing": true,
+    "note": "Wooden fallback is NOT an exact oval shield.",
+    "license": "existing phase1 CC0 per staged credits; no copying/overwriting here"
+  },
+  {
+    "id": "pavise",
+    "data_material": "wood",
+    "visual_reference_id": "wooden_shield",
+    "paths_by_sex": {
+      "m": "art/paperdoll/m/wooden_shield_fixed.png",
+      "f": "art/paperdoll/f/wooden_shield_fixed.png"
+    },
+    "status": "APPROXIMATE_FALLBACK_PROPOSAL_DISABLED",
+    "auto_enable": false,
+    "new_files_supplied": false,
+    "exact_art_missing": true,
+    "note": "Wooden fallback is NOT a pavise; standing/support shape absent.",
+    "license": "existing phase1 CC0 per staged credits; no copying/overwriting here"
+  }
+]
