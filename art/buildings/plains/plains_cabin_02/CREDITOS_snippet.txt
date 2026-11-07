@@ -1,0 +1,4 @@
+plains_cabin_02 — cabana menor 4x4 em camadas (back, front, front_low, roof, door_closed, door_open), telhado de palha em fiadas, alpendre frontal com deque e dois esteios. Variacao da plains_cabin_01 (BUILDINGS.md).
+Modelo, materiais procedurais (madeira e palha via Wave/Noise do Blender) e render: Ludimus, construidos por script (art/src/plains_cabin_02_build.py, art/src/plains_cabin_02.blend), mesma camera Flare 60/0/45, luz e paleta da plains_cabin_01 v4. Licenca: CC-BY-SA 3.0 (mesma da familia plains_cabin), sem texturas externas no render final.
+Props cama e bau: copias de plains_cabin_01/props (creditos naquela pasta: Flare bed.blend CC0; boss_chest.blend Clint Bellanger CC-BY-SA 3.0).
+Personagem TCoM somente nas previas, nao integra o tileset.
