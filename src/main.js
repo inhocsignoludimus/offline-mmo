@@ -205,7 +205,7 @@ const Game = {
       const [wx, wy] = world(e.clientX, e.clientY);
       Combat.hover = Combat.mobAt(wx, wy);
       const h = pick(e.clientX, e.clientY); this.hoverActor = h; cv.style.cursor = Combat.hover ? 'crosshair' : h ? 'pointer' : 'default';
-      if (this.held) { this.held = [e.clientX, e.clientY]; const n = performance.now(); if (n - lastRepath > 180) { lastRepath = n; go(e.clientX, e.clientY); } }
+      if (this.held) { this.held = [e.clientX, e.clientY]; const n = performance.now(); if (n - lastRepath > 90) { lastRepath = n; go(e.clientX, e.clientY); } }
     });
     const up = e => { if (e && e.pointerType === 'touch') return; this.held = null; Combat.attacking = false; setTimeout(() => { if (!this.held) this.hover = null; }, 600); };
     cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);

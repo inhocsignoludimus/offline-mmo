@@ -76,6 +76,8 @@ class Actor {
   }
   setAnim(a) { if (this.anim !== a) { this.anim = a; this.t = 0; } }
   moveTo(map, gx, gy) {
+    // em linha reta quando dá; A* só quando há obstáculo no caminho
+    if (map.free(gx, gy) && map.los(this.x, this.y, gx, gy)) { this.path = [[gx, gy]]; return true; }
     const p = map.path(this.x, this.y, gx, gy);
     if (p) { if (p.length) p[p.length - 1] = [gx, gy]; this.path = p; }
     return !!p;

@@ -64,7 +64,7 @@ class GameMap {
       if (i === gx && j === gy) {
         const out = []; let c = idx(i, j);
         while (prev.has(c)) { out.push([c % W + 0.5, Math.floor(c / W) + 0.5]); c = prev.get(c); }
-        return out.reverse();
+        return this.smooth([sx + 0.5, sy + 0.5], out.reverse());
       }
       const gc = g.get(idx(i, j));
       for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [1, -1], [-1, 1], [-1, -1]]) {
@@ -77,6 +77,23 @@ class GameMap {
       }
     }
     return null;
+  }
+  // linha reta livre entre dois pontos (para andar sem zigue-zague)
+  los(x0, y0, x1, y1, r = 0.22) {
+    const d = Math.hypot(x1 - x0, y1 - y0), n = Math.ceil(d / 0.2);
+    for (let k = 1; k <= n; k++) { const t = k / n; if (!this.free(x0 + (x1 - x0) * t, y0 + (y1 - y0) * t, r)) return false; }
+    return true;
+  }
+  // corta os cantos do caminho do A*: pula para o ponto mais distante que se vê em linha reta
+  smooth(start, pts) {
+    if (pts.length < 3) return pts;
+    const out = []; let cur = start, i = 0;
+    while (i < pts.length) {
+      let far = i;
+      for (let k = pts.length - 1; k > i; k--) if (this.los(cur[0], cur[1], pts[k][0], pts[k][1])) { far = k; break; }
+      out.push(pts[far]); cur = pts[far]; i = far + 1;
+    }
+    return out;
   }
   randomFree(rng = Math.random, near = null, radius = 12) {
     for (let k = 0; k < 400; k++) {
