@@ -1,0 +1,608 @@
+[
+  {
+    "id": "sword",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/longsword",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "longsword",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/longsword",
+    "phase1_exact_files": {
+      "m": [
+        "m/longsword_fixed.png"
+      ],
+      "f": [
+        "f/longsword_fixed.png"
+      ]
+    },
+    "status": "existing_exact_do_not_duplicate"
+  },
+  {
+    "id": "shortsword",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/longsword",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "chosen_this_batch"
+  },
+  {
+    "id": "scimitar",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/longsword",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "dagger",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/dagger",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "chosen_this_batch"
+  },
+  {
+    "id": "kris",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/dagger",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "mace",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/mace",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "chosen_this_batch"
+  },
+  {
+    "id": "flanged_mace",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/mace",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "warhammer",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/martelo",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "club",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": null,
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "axe",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/hand_axe",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "battleaxe",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/infantry_axe",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "hand_axe",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/hand_axe",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "chosen_this_batch"
+  },
+  {
+    "id": "spear",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/lanca",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "lance",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/lanca",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "bow",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/arco",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "longbow",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/arco",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "chosen_this_batch"
+  },
+  {
+    "id": "crossbow",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/besta",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "hand_crossbow",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/besta_mao",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "staff",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": null,
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "chosen_this_batch"
+  },
+  {
+    "id": "quarterstaff",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": null,
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "wooden_shield",
+    "type": "shield",
+    "slot": "hand2",
+    "sprite_layer": "m/shield",
+    "phase1_exact_files": {
+      "m": [
+        "m/wooden_shield_fixed.png"
+      ],
+      "f": [
+        "f/wooden_shield_fixed.png"
+      ]
+    },
+    "status": "existing_exact_do_not_duplicate"
+  },
+  {
+    "id": "buckler",
+    "type": "shield",
+    "slot": "hand2",
+    "sprite_layer": "m/buckler",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "chosen_this_batch"
+  },
+  {
+    "id": "kite_shield",
+    "type": "shield",
+    "slot": "hand2",
+    "sprite_layer": "m/shield",
+    "phase1_exact_files": {
+      "m": [
+        "m/kite_shield_fixed.png"
+      ],
+      "f": [
+        "f/kite_shield_fixed.png"
+      ]
+    },
+    "status": "existing_exact_do_not_duplicate"
+  },
+  {
+    "id": "heater_shield",
+    "type": "shield",
+    "slot": "hand2",
+    "sprite_layer": "m/shield",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "round_shield",
+    "type": "shield",
+    "slot": "hand2",
+    "sprite_layer": "m/escudo_redondo",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "crusader_shield",
+    "type": "shield",
+    "slot": "hand2",
+    "sprite_layer": "m/escudo_cruz",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "falchion",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/longsword",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "arming_sword",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/longsword",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "sabre",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/longsword",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "cutlass",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/longsword",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "cleaver",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/longsword",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "broadaxe",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/infantry_axe",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "war_axe",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/hand_axe",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "double_axe",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/infantry_axe",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "maul",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/martelo",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "morning_star",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/mace",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "flail",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/mace",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "war_fork",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/lanca",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "halberd",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/lanca",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "pike",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/lanca",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "javelin",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/lanca",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "shortbow",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/arco",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "composite_bow",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/arco",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "arbalest",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/besta",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "wand",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": null,
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "chosen_this_batch"
+  },
+  {
+    "id": "scepter",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/mace",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "scythe",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/infantry_axe",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "throwing_knife",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/dagger",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "bardiche",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/infantry_axe",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "glaive",
+    "type": "weapon",
+    "slot": "hand1",
+    "sprite_layer": "m/lanca",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "tower_shield",
+    "type": "shield",
+    "slot": "hand2",
+    "sprite_layer": "m/shield",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "oval_shield",
+    "type": "shield",
+    "slot": "hand2",
+    "sprite_layer": "m/escudo_redondo",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  },
+  {
+    "id": "pavise",
+    "type": "shield",
+    "slot": "hand2",
+    "sprite_layer": "m/shield",
+    "phase1_exact_files": {
+      "m": [],
+      "f": []
+    },
+    "status": "missing_exact_NOT_in_this_batch"
+  }
+]

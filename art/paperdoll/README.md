@@ -112,6 +112,14 @@ Prévia do conjunto, sem hauberk: `art/_preview/paperdoll_batch2_v4_set_{m,f}.pn
 
 Limitações conhecidas, não corrigidas aqui: pé da bota ainda simples; sandália com tiras estreitas e sola atrás do corpo; coifa com a coroa levantada cerca de 5 px para cobrir o couro cabeludo; luvas sem remodelagem. A redução 150×240 do pacote não é a da engine. Nada foi validado em jogo, em movimento ou com hue de verdade.
 
+## Broquel — único escudo novo
+
+`buckler_fixed.png` (m/f), 300×480 RGBA, ferro, sem hue. A face cobre a mão, então não depende de dedos fechados. CC-BY-SA 3.0, mesh `IronBuckler` do Flare (`art_src/characters/hero/iron_buckler.blend`; a heroína tem o mesmo arquivo). Fontes em `art/src/buckler/`. Não substitui `longsword`, `wooden_shield` nem `kite_shield`.
+
+`SHIELD_VISUAL_MAPPING.json` lista os 9 ids de `hand2`. Exatos, e só estes podem ser usados: `wooden_shield`, `kite_shield`, `buckler`. Seis aproximações estão com `auto_enable: false` e **não** são arte própria: `heater_shield` e `crusader_shield` e `tower_shield` apontam para o kite; `round_shield`, `oval_shield` e `pavise` apontam para o de madeira. Não ligar esses seis.
+
+As sete armas (`shortsword`, `dagger`, `hand_axe`, `mace`, `longbow`, `staff`, `wand`) **não** estão em `art/paperdoll/`. O arquivo de trabalho, com cabos inteiros e mãos ainda abertas, está em `art/src/wip/paperdoll_weapons_batch1/`. Não é runtime. Máscara de oclusão não fecha os dedos: faltam patches de mão fechada (pele, couro, malha e placa) e a máscara que apaga a palma aberta.
+
 ## Onde está o quê
 
 - Peças: `art/paperdoll/m/`, `art/paperdoll/f/`

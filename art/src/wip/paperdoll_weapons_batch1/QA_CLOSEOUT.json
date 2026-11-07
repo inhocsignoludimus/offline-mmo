@@ -1,0 +1,27 @@
+{
+  "state_recovered": "No renderer/grip correction was running. Last real output was original REVIEW archive; closed grip was never delivered.",
+  "bounded_correction": "Compared baked open-hand occlusion with complete original Cycles shaft layers; restored full shafts for future closed-hand compositing. Existing open body still cannot form a convincing closed grip by occlusion alone.",
+  "production_ids": [
+    "buckler"
+  ],
+  "production_target_pngs": 2,
+  "wip_weapon_ids": [
+    "shortsword",
+    "dagger",
+    "hand_axe",
+    "mace",
+    "longbow",
+    "staff",
+    "wand"
+  ],
+  "wip_target_namespace": "art/_wip/paperdoll_weapons_batch1",
+  "all_shield_ids_mapped": 9,
+  "exact_shield_visuals": 3,
+  "disabled_approximate_mappings": 6,
+  "engine_test": false,
+  "original_review_archive_sha256_preserved": "0e674f4202d697243fec0d662b293bf480d3bd8e79a426e40cbe9bcaa18e376b",
+  "other_preserved_files_checked": 236,
+  "changed_prior_files": [],
+  "license": "Flare-derived art CC-BY-SA-3.0; approved body/glove references CC0 as staged",
+  "renderer_of_source_layers": "Original Cycles 96 denoised, 3 CPU threads; no new primitive weapon art"
+}

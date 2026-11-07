@@ -1,0 +1,418 @@
+[
+  {
+    "id": "shortsword",
+    "upstream": "https://github.com/flareteam/flare-game/tree/master/art_src/characters/hero",
+    "upstream_file": "shortsword.blend",
+    "source_sha256": "48b203fedea25fd362070da8cf8118870c7a82e33df927dcf510b41cca9d5697",
+    "actual_mesh": "Shortsword",
+    "license": "CC-BY-SA-3.0",
+    "originals_preserved": true,
+    "modification": "actual mesh reoriented/rescaled; UV retained for buckler; new Cycles materials on other items; hand occlusion in PNG",
+    "sex_specific_fit": {
+      "m": {
+        "item": "shortsword",
+        "source": "/workspace/flare-game/art_src/characters/hero/shortsword.blend",
+        "source_object": "Shortsword",
+        "source_materials": [
+          "Silver",
+          "Leather.001"
+        ],
+        "roles": [
+          "fixed",
+          "hue"
+        ],
+        "grip_pixel": [
+          48,
+          237
+        ],
+        "size_pixels": 150,
+        "static_only": true
+      },
+      "f": {
+        "item": "shortsword",
+        "source": "/workspace/flare-game/art_src/characters/hero/shortsword.blend",
+        "source_object": "Shortsword",
+        "source_materials": [
+          "Silver",
+          "Leather.001"
+        ],
+        "roles": [
+          "fixed",
+          "hue"
+        ],
+        "grip_pixel": [
+          35,
+          216
+        ],
+        "size_pixels": 150,
+        "static_only": true
+      }
+    }
+  },
+  {
+    "id": "dagger",
+    "upstream": "https://github.com/flareteam/flare-game/tree/master/art_src/characters/hero",
+    "upstream_file": "dagger.blend",
+    "source_sha256": "3b7e7401acac81b28c4b8e67926f8c8114b12670cebd80d8158ff44666848916",
+    "actual_mesh": "Dagger",
+    "license": "CC-BY-SA-3.0",
+    "originals_preserved": true,
+    "modification": "actual mesh reoriented/rescaled; UV retained for buckler; new Cycles materials on other items; hand occlusion in PNG",
+    "sex_specific_fit": {
+      "m": {
+        "item": "dagger",
+        "source": "/workspace/flare-game/art_src/characters/hero/dagger.blend",
+        "source_object": "Dagger",
+        "source_materials": [
+          "Silver.002",
+          "Wood",
+          "GreenGold"
+        ],
+        "roles": [
+          "fixed",
+          "fixed",
+          "fixed"
+        ],
+        "grip_pixel": [
+          48,
+          237
+        ],
+        "size_pixels": 95,
+        "static_only": true
+      },
+      "f": {
+        "item": "dagger",
+        "source": "/workspace/flare-game/art_src/characters/hero/dagger.blend",
+        "source_object": "Dagger",
+        "source_materials": [
+          "Silver.002",
+          "Wood",
+          "GreenGold"
+        ],
+        "roles": [
+          "fixed",
+          "fixed",
+          "fixed"
+        ],
+        "grip_pixel": [
+          35,
+          216
+        ],
+        "size_pixels": 95,
+        "static_only": true
+      }
+    }
+  },
+  {
+    "id": "hand_axe",
+    "upstream": "https://github.com/flareteam/flare-game/tree/master/art_src/characters/hero",
+    "upstream_file": "hand_axe.blend",
+    "source_sha256": "ad028e4414b360b8382a86e68ca24eab6e5c9f841c60152f211fb216227091db",
+    "actual_mesh": "HandAxe",
+    "license": "CC-BY-SA-3.0",
+    "originals_preserved": true,
+    "modification": "actual mesh reoriented/rescaled; UV retained for buckler; new Cycles materials on other items; hand occlusion in PNG",
+    "sex_specific_fit": {
+      "m": {
+        "item": "hand_axe",
+        "source": "/workspace/flare-game/art_src/characters/hero/hand_axe.blend",
+        "source_object": "HandAxe",
+        "source_materials": [
+          "Iron.001",
+          "Steel.001",
+          "Wood.001"
+        ],
+        "roles": [
+          "fixed",
+          "fixed",
+          "fixed"
+        ],
+        "grip_pixel": [
+          48,
+          237
+        ],
+        "size_pixels": 150,
+        "static_only": true
+      },
+      "f": {
+        "item": "hand_axe",
+        "source": "/workspace/flare-game/art_src/characters/hero/hand_axe.blend",
+        "source_object": "HandAxe",
+        "source_materials": [
+          "Iron.001",
+          "Steel.001",
+          "Wood.001"
+        ],
+        "roles": [
+          "fixed",
+          "fixed",
+          "fixed"
+        ],
+        "grip_pixel": [
+          35,
+          216
+        ],
+        "size_pixels": 150,
+        "static_only": true
+      }
+    }
+  },
+  {
+    "id": "mace",
+    "upstream": "https://github.com/flareteam/flare-game/tree/master/art_src/characters/hero",
+    "upstream_file": "mace.blend",
+    "source_sha256": "0cf0679759cd8df68c90a41968579192d6ad2d581339c6f1e6b2fdc92eff8373",
+    "actual_mesh": "IronMaceHigh",
+    "license": "CC-BY-SA-3.0",
+    "originals_preserved": true,
+    "modification": "actual mesh reoriented/rescaled; UV retained for buckler; new Cycles materials on other items; hand occlusion in PNG",
+    "sex_specific_fit": {
+      "m": {
+        "item": "mace",
+        "source": "/workspace/flare-game/art_src/characters/hero/mace.blend",
+        "source_object": "IronMaceHigh",
+        "source_materials": [
+          "Iron",
+          "Steel"
+        ],
+        "roles": [
+          "fixed",
+          "fixed"
+        ],
+        "grip_pixel": [
+          48,
+          237
+        ],
+        "size_pixels": 165,
+        "static_only": true
+      },
+      "f": {
+        "item": "mace",
+        "source": "/workspace/flare-game/art_src/characters/hero/mace.blend",
+        "source_object": "IronMaceHigh",
+        "source_materials": [
+          "Iron",
+          "Steel"
+        ],
+        "roles": [
+          "fixed",
+          "fixed"
+        ],
+        "grip_pixel": [
+          35,
+          216
+        ],
+        "size_pixels": 165,
+        "static_only": true
+      }
+    }
+  },
+  {
+    "id": "longbow",
+    "upstream": "https://github.com/flareteam/flare-game/tree/master/art_src/characters/hero",
+    "upstream_file": "longbow.blend",
+    "source_sha256": "ec2af6288b88488e4c3b9ca16bf9b84db615886d38b8cf0b7dc9283d5a336492",
+    "actual_mesh": "LongBow",
+    "license": "CC-BY-SA-3.0",
+    "originals_preserved": true,
+    "modification": "actual mesh reoriented/rescaled; UV retained for buckler; new Cycles materials on other items; hand occlusion in PNG",
+    "sex_specific_fit": {
+      "m": {
+        "item": "longbow",
+        "source": "/workspace/flare-game/art_src/characters/hero/longbow.blend",
+        "source_object": "LongBow",
+        "source_materials": [
+          "Silver",
+          "Wood.002",
+          "ClothWrap",
+          "GreenGold.001",
+          "BowString"
+        ],
+        "roles": [
+          "fixed",
+          "fixed",
+          "hue",
+          "fixed",
+          "fixed"
+        ],
+        "grip_pixel": [
+          48,
+          237
+        ],
+        "size_pixels": 330,
+        "static_only": true
+      },
+      "f": {
+        "item": "longbow",
+        "source": "/workspace/flare-game/art_src/characters/hero/longbow.blend",
+        "source_object": "LongBow",
+        "source_materials": [
+          "Silver",
+          "Wood.002",
+          "ClothWrap",
+          "GreenGold.001",
+          "BowString"
+        ],
+        "roles": [
+          "fixed",
+          "fixed",
+          "hue",
+          "fixed",
+          "fixed"
+        ],
+        "grip_pixel": [
+          35,
+          216
+        ],
+        "size_pixels": 330,
+        "static_only": true
+      }
+    }
+  },
+  {
+    "id": "staff",
+    "upstream": "https://github.com/flareteam/flare-game/tree/master/art_src/characters/hero",
+    "upstream_file": "staff.blend",
+    "source_sha256": "af2d29577e7580df28e0daed6f84d7cc8a2acbedf7cb777cc99b0822b7dd6b67",
+    "actual_mesh": "Staff",
+    "license": "CC-BY-SA-3.0",
+    "originals_preserved": true,
+    "modification": "actual mesh reoriented/rescaled for static paperdoll; new materials; hand occlusion in PNG; staff crystal seated without new geometry",
+    "sex_specific_fit": {
+      "m": {
+        "item": "staff",
+        "source": "/workspace/flare-game/art_src/characters/hero/staff.blend",
+        "source_object": "Staff",
+        "source_materials": [
+          "Wood",
+          "Crystal.001",
+          "ClothWrap"
+        ],
+        "roles": [
+          "fixed",
+          "fixed",
+          "hue"
+        ],
+        "grip_pixel": [
+          48,
+          237
+        ],
+        "size_pixels": 400,
+        "static_only": true
+      },
+      "f": {
+        "item": "staff",
+        "source": "/workspace/flare-game/art_src/characters/hero/staff.blend",
+        "source_object": "Staff",
+        "source_materials": [
+          "Wood",
+          "Crystal.001",
+          "ClothWrap"
+        ],
+        "roles": [
+          "fixed",
+          "fixed",
+          "hue"
+        ],
+        "grip_pixel": [
+          35,
+          216
+        ],
+        "size_pixels": 400,
+        "static_only": true
+      }
+    }
+  },
+  {
+    "id": "wand",
+    "upstream": "https://github.com/flareteam/flare-game/tree/master/art_src/characters/hero",
+    "upstream_file": "wand.blend",
+    "source_sha256": "710ff20c25a99a5b028ff8a416932e89a0eaf8a66fb6a89d8ee0c29d9de0b983",
+    "actual_mesh": "Wand",
+    "license": "CC-BY-SA-3.0",
+    "originals_preserved": true,
+    "modification": "actual mesh reoriented/rescaled; UV retained for buckler; new Cycles materials on other items; hand occlusion in PNG",
+    "sex_specific_fit": {
+      "m": {
+        "item": "wand",
+        "source": "/workspace/flare-game/art_src/characters/hero/wand.blend",
+        "source_object": "Wand",
+        "source_materials": [
+          "Wood.001"
+        ],
+        "roles": [
+          "fixed"
+        ],
+        "grip_pixel": [
+          48,
+          237
+        ],
+        "size_pixels": 100,
+        "static_only": true
+      },
+      "f": {
+        "item": "wand",
+        "source": "/workspace/flare-game/art_src/characters/hero/wand.blend",
+        "source_object": "Wand",
+        "source_materials": [
+          "Wood.001"
+        ],
+        "roles": [
+          "fixed"
+        ],
+        "grip_pixel": [
+          35,
+          216
+        ],
+        "size_pixels": 100,
+        "static_only": true
+      }
+    }
+  },
+  {
+    "id": "buckler",
+    "upstream": "https://github.com/flareteam/flare-game/tree/master/art_src/characters/hero",
+    "upstream_file": "iron_buckler.blend",
+    "source_sha256": "5380b02c535692c71cbf62e7e9581dfec16b38ed20438675d83c66b0244915eb",
+    "actual_mesh": "IronBuckler",
+    "license": "CC-BY-SA-3.0",
+    "originals_preserved": true,
+    "modification": "actual mesh reoriented/rescaled; UV retained for buckler; new Cycles materials on other items; hand occlusion in PNG",
+    "sex_specific_fit": {
+      "m": {
+        "item": "buckler",
+        "source": "/workspace/flare-game/art_src/characters/hero/iron_buckler.blend",
+        "source_object": "IronBuckler",
+        "source_materials": [
+          "BucklerTex"
+        ],
+        "roles": [
+          "fixed"
+        ],
+        "grip_pixel": [
+          243,
+          237
+        ],
+        "size_pixels": 76,
+        "static_only": true
+      },
+      "f": {
+        "item": "buckler",
+        "source": "/workspace/flare-game/art_src/characters/hero/iron_buckler.blend",
+        "source_object": "IronBuckler",
+        "source_materials": [
+          "BucklerTex"
+        ],
+        "roles": [
+          "fixed"
+        ],
+        "grip_pixel": [
+          251,
+          218
+        ],
+        "size_pixels": 76,
+        "static_only": true
+      }
+    }
+  }
+]

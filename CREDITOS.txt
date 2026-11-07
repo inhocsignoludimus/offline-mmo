@@ -56,6 +56,12 @@ Licenca: CC-BY-SA 3.0 Unported, a do flare-game. https://creativecommons.org/lic
 O envio OpenGameArt do heroi e da heroina e CC-BY 3.0 (https://lpc.opengameart.org/content/isometric-hero-and-heroine). A derivacao neste jogo fica em CC-BY-SA 3.0, como as outras pecas vindas do Flare.
 Modificacoes (Ludimus, 2026): pose estatica, coifa com coroa e gola e abertura de rosto, botas e tiras remodeladas, aneis finos e couro cinza, Cycles 96 amostras, separacao hueable/fixed. O corpo das previas e o body.png CC0 e nao entra nesta licenca. Hauberk nao entra: o estudo foi recusado e nao foi importado.
 
+paperdoll broquel — art/paperdoll/{m,f}/buckler_fixed.png e as previas art/_preview/buckler_{m,f}_on_body.png. Fontes editaveis em art/src/buckler/.
+Geometria IronBuckler e texturas iron_buckler_diffuse / iron_buckler_normal, Clint Bellanger e artistas do Flare. https://github.com/flareteam/flare-game/blob/master/art_src/characters/hero/iron_buckler.blend ; o mesmo arquivo existe em art_src/characters/heroine/. Conferido no GitHub. O sha256 do .blend guardado em art/src/buckler/iron_buckler.blend e 5380b02c535692c71cbf62e7e9581dfec16b38ed20438675d83c66b0244915eb.
+Licenca: CC-BY-SA 3.0 Unported, a do flare-game. Nao e CC0. https://creativecommons.org/licenses/by-sa/3.0/deed.pt ; https://creativecommons.org/licenses/by-sa/3.0/legalcode ; https://github.com/flareteam/flare-game/blob/master/LICENSE.txt
+O envio OpenGameArt do heroi e da heroina e CC-BY 3.0 (https://lpc.opengameart.org/content/isometric-hero-and-heroine). A derivacao neste jogo fica em CC-BY-SA 3.0.
+Modificacoes (Ludimus, 2026): escala e orientacao do paperdoll, Cycles, encaixe na mao esquerda m/f. Sem material da Electronic Arts nem do Ultima Online. Nao cobre as sete armas em art/src/wip/paperdoll_weapons_batch1/ (shortsword, dagger, hand_axe, mace, longbow, staff, wand): isso nao e runtime e a empunhadura nao esta resolvida.
+
 Licença da arte derivada do Flare, nesta pasta:
 
   Creative Commons Atribuição-CompartilhaIgual 3.0 Internacional
