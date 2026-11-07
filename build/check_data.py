@@ -311,8 +311,11 @@ if WL:
 if Z:
     banned_in('zones', Z)
     w = Z.get('world') or {}
-    if w.get('map') != 'mundo' or w.get('size') != [98, 60] or w.get('continuous') is not True:
-        bad.append(f"zones.world fatia autoral mudou: {w.get('map')} {w.get('size')} continuous={w.get('continuous')}")
+    # A fatia cresce para leste. Lochport e o Bosque guardam origin/size.
+    # Altura 60 e largura >= 98: o retângulo antigo continua no canto noroeste.
+    wsz = w.get('size') or [0, 0]
+    if w.get('map') != 'mundo' or w.get('continuous') is not True or wsz[1] != 60 or wsz[0] < 98:
+        bad.append(f"zones.world fatia autoral mudou: {w.get('map')} {wsz} continuous={w.get('continuous')}")
     if w.get('design_size') != [2048, 2048]:
         bad.append(f"zones.world design_size {w.get('design_size')}")
     byz = {zz['id']: zz for zz in Z.get('zones', [])}
@@ -334,6 +337,29 @@ if Z:
         bad.append(f'bosque_da_vila: chunks mudaram {got_chunks}')
     if bo.get('build') != 'nao' or bo.get('invasion') is not False:
         bad.append('bosque_da_vila: caça autoral não é lote e não é invadida')
+
+    def rect_of(zz):
+        ox, oy = zz.get('origin') or [0, 0]
+        sx, sy = zz.get('size') or [0, 0]
+        return ox, oy, ox + sx, oy + sy
+
+    def overlap(a, b):
+        return a[0] < b[2] and b[0] < a[2] and a[1] < b[3] and b[1] < a[3]
+
+    protected = [rect_of(lo), rect_of(bo)]
+    for zz in Z.get('zones', []):
+        if zz.get('id') in ('lochport', 'bosque_da_vila'):
+            continue
+        r = rect_of(zz)
+        if r[2] > wsz[0] or r[3] > wsz[1]:
+            bad.append(f"zone {zz.get('id')}: rect sai do mapa {wsz}")
+        for p, name in zip(protected, ('lochport', 'bosque_da_vila')):
+            if overlap(r, p):
+                bad.append(f"zone {zz.get('id')}: invade {name}")
+        if zz.get('id') in ('orla_do_bosque', 'seara_leste'):
+            for ch in zz.get('chunks') or []:
+                if ch.get('boss'):
+                    bad.append(f"zone {zz.get('id')} chunk {ch.get('id')}: esta extensão não leva chefe")
     regs = Z.get('regions') or []
     if not regs:
         bad.append('zones: falta regions')

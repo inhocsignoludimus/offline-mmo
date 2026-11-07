@@ -36,17 +36,21 @@ resolvido dentro do `flare-game` pelos scripts de import.
 
 ## Mapas
 
-- `mundo` — mapa contínuo atual (Lochport + Bosque da Vila a leste,
-  ligados por estrada, sem exits).
+- `mundo` — mapa contínuo (Lochport + Bosque da Vila + trilha leste).
+  Os primeiros 98 tiles de largura são a fatia anterior, intacta.
 - `bosque_da_vila` — peça modular da região de caça (sem exits);
-  já embutida em `mundo`.
+  já embutida em `mundo`. Não foi alargada.
+- `trilha_leste` — peça modular da continuação a leste, embutida em
+  `mundo` a partir do tile local `(98, 12)`.
 
 Regiões e spawns: `data/zones.json` (`world.map`, `origin`,
 `chunks[].rect` em coordenadas do mapa único).
 
-`mundo.txt` é a fatia de 98×60 (Lochport + Bosque da Vila). Ela
-entra no mapa alvo de 2048×2048 no tile `[768, 1408]`. A planta
-grossa é `data/world_layout.json`. Não regenerar esta fatia por
-cima: o desenho novo carimba em volta. Ver `docs/WORLD_DESIGN.md`.
+O retângulo noroeste de 98×60 (Lochport + Bosque da Vila) entra no
+mapa alvo de 2048×2048 no tile `[768, 1408]`. `mundo.txt` agora mede
+146×60: as 48 colunas novas são a trilha leste, a partir de x=98.
+A planta grossa é `data/world_layout.json`. Não regenerar as
+primeiras 98 colunas. Ver `docs/WORLD_DESIGN.md` e
+`docs/HANDOFF_TRILHA_LESTE.md`.
 
 Ver `docs/ART_SPEC.md` e `docs/DATA_SCHEMA.md`.
