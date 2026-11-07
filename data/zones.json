@@ -3,7 +3,7 @@
   "world": {
     "map": "mundo",
     "size": [
-      98,
+      146,
       60
     ],
     "continuous": true,
@@ -258,6 +258,192 @@
       "world_origin": [
         818,
         1420
+      ]
+    },
+    {
+      "id": "orla_do_bosque",
+      "name": {
+        "pt": "Orla do Bosque",
+        "en": "Woods Edge"
+      },
+      "map": "mundo",
+      "kind": "hunt",
+      "biome": "forest",
+      "level": [
+        2,
+        5
+      ],
+      "origin": [
+        98,
+        12
+      ],
+      "size": [
+        30,
+        36
+      ],
+      "build": "nao",
+      "danger": 2,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "layout_cell": [
+        13,
+        22
+      ],
+      "world_origin": [
+        866,
+        1420
+      ],
+      "note": {
+        "pt": "Continuação leste da mata, ainda na célula floresta (13,22). Sem chefe. As duas brechas em x=97, y=15 e y=17 são a entrada.",
+        "en": "East continuation of the woods, still on forest cell (13,22). No boss. The two gaps at x=97, y=15 and y=17 are the entrance."
+      },
+      "chunks": [
+        {
+          "id": "trilha",
+          "name": {
+            "pt": "Trilha Leste",
+            "en": "East Track"
+          },
+          "rect": [
+            98,
+            12,
+            30,
+            36
+          ],
+          "build": "nao",
+          "danger": 2,
+          "invasion": false,
+          "spawns": [
+            {
+              "monster": "goblin",
+              "count": [
+                3,
+                6
+              ],
+              "level": 4
+            },
+            {
+              "monster": "goblin_runner",
+              "count": [
+                1,
+                3
+              ],
+              "level": 3
+            },
+            {
+              "monster": "goblin_spearman",
+              "count": [
+                1,
+                2
+              ],
+              "level": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seara_leste",
+      "name": {
+        "pt": "Seara a Leste",
+        "en": "East Fields"
+      },
+      "map": "mundo",
+      "kind": "hunt",
+      "biome": "plains",
+      "level": [
+        6,
+        6
+      ],
+      "origin": [
+        128,
+        12
+      ],
+      "size": [
+        18,
+        36
+      ],
+      "build": "aberta",
+      "danger": 2,
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "leather_hide"
+        ]
+      },
+      "layout_cell": [
+        14,
+        22
+      ],
+      "world_origin": [
+        896,
+        1420
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "note": {
+        "pt": "Primeiro campo aberto a leste da mata, célula de planície (14,22). Sem chefe. Aberto desde o começo: é o passo seguinte da fatia inicial, não o portão do bioma inteiro.",
+        "en": "First open field east of the woods, plains cell (14,22). No boss. Open from the start: it is the next step of the starter slice, not the gate for the whole biome."
+      },
+      "chunks": [
+        {
+          "id": "seara",
+          "name": {
+            "pt": "Seara",
+            "en": "Fields"
+          },
+          "rect": [
+            128,
+            12,
+            18,
+            36
+          ],
+          "build": "aberta",
+          "danger": 2,
+          "invasion": true,
+          "spawns": [
+            {
+              "monster": "goblin",
+              "count": [
+                3,
+                5
+              ],
+              "level": 6
+            },
+            {
+              "monster": "goblin_spearman",
+              "count": [
+                2,
+                4
+              ],
+              "level": 6
+            },
+            {
+              "monster": "skeleton",
+              "count": [
+                2,
+                3
+              ],
+              "level": 6
+            }
+          ]
+        }
       ]
     }
   ],
