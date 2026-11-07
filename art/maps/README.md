@@ -42,6 +42,9 @@ resolvido dentro do `flare-game` pelos scripts de import.
   já embutida em `mundo`. Não foi alargada.
 - `trilha_leste` — peça modular da continuação a leste, embutida em
   `mundo` a partir do tile local `(98, 12)`.
+- `estrada_norte` — peça à parte, ao norte de `mundo.txt`. O arquivo
+  antigo não muda de tamanho. A origem legada é `[32, -72]`; o portão
+  em `(41, 0)` continua no mesmo tile. Ver `docs/HANDOFF_ESTRADA_NORTE.md`.
 
 Regiões e spawns: `data/zones.json` (`world.map`, `origin`,
 `chunks[].rect` em coordenadas do mapa único).

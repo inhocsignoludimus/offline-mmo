@@ -302,6 +302,7 @@ Mundo **contínuo** (um único mapa). `chunks` são regiões desse mapa, não ma
 * Fonte do mapa: `art/maps/<map>.txt` (+ `src/<map>.tmx`). JSON em `engine/dev_assets/flare/` é gerado pelo build.
 * `world.size` é a fatia autoral já desenhada (hoje `[98, 60]`, Lochport + Bosque da Vila). O mundo alvo mora em `world.design_size` (`[2048, 2048]`), `world.chunk` (`[64, 64]`) e `world.layout` (`world_layout.json`). `world.authored_stamp` é o tile onde essa fatia entra no mapa grande. Não mover `origin` nem `chunks[].rect` da fatia: `world_origin` da zona é o carimbo já somado.
 * Cada zona e cada chunk podem trazer `build`, `danger` (1–5), `invasion` (bool) e `resources`.
+* `world.pieces` coloca arquivos a mais no mesmo mapa, sem teleporte. `legacy_origin` é o tile legado do canto noroeste do arquivo. Tile legado = `legacy_origin` + tile dentro do arquivo. `mundo.txt` usa `[0, 0]`, então os `origin` antigos não mudam. Uma peça ao norte pode ter `legacy_origin` com Y negativo; isso não desloca as linhas já desenhadas. `abuts` diz em que lado ela encosta na peça vizinha. Sem `connects` e sem exit.
 
 ## data/world_layout.json — grelha grossa
 

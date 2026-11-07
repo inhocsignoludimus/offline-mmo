@@ -31,7 +31,46 @@
         "pt": "Aelória",
         "en": "Aeloria"
       }
-    }
+    },
+    "pieces": [
+      {
+        "id": "mundo",
+        "file": "art/maps/mundo.txt",
+        "legacy_origin": [
+          0,
+          0
+        ],
+        "size": [
+          146,
+          60
+        ],
+        "note": {
+          "pt": "Coordenada legada = tile do arquivo. Lochport segue em [0, 0].",
+          "en": "Legacy coordinate = file tile. Lochport stays at [0, 0]."
+        }
+      },
+      {
+        "id": "estrada_norte",
+        "file": "art/maps/estrada_norte.txt",
+        "legacy_origin": [
+          32,
+          -72
+        ],
+        "size": [
+          64,
+          72
+        ],
+        "abuts": {
+          "piece": "mundo",
+          "side": "north",
+          "legacy_y": 0
+        },
+        "note": {
+          "pt": "Norte de mundo.txt. Tile legado (x, y) = origem + tile do arquivo. y negativo não desloca o que já está desenhado.",
+          "en": "North of mundo.txt. Legacy tile (x, y) = origin + file tile. Negative y does not move what is already drawn."
+        }
+      }
+    ]
   },
   "zones": [
     {
@@ -436,6 +475,239 @@
             },
             {
               "monster": "skeleton",
+              "count": [
+                2,
+                3
+              ],
+              "level": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "estrada_real_norte",
+      "name": {
+        "pt": "Estrada Real ao Norte",
+        "en": "North Royal Road"
+      },
+      "map": "mundo",
+      "piece": "estrada_norte",
+      "kind": "road",
+      "biome": "plains",
+      "level": [
+        1,
+        1
+      ],
+      "origin": [
+        32,
+        -72
+      ],
+      "size": [
+        32,
+        72
+      ],
+      "build": "fronteira",
+      "danger": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "layout_cells": [
+        [
+          12,
+          20
+        ],
+        [
+          12,
+          21
+        ]
+      ],
+      "world_origin": [
+        800,
+        1336
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "note": {
+        "pt": "Portão norte de Porto do Trigo (legado x=41..44, y=0) e o primeiro lance da Estrada Real. Fronteira: sem monstro e sem invasão. Folhaverde continua a noroeste, depois deste lance.",
+        "en": "North gate of Wheatport (legacy x=41..44, y=0) and the first stretch of the Royal Road. Frontier: no monsters and no invasion. Folhaverde stays northwest, beyond this stretch."
+      },
+      "chunks": [
+        {
+          "id": "portao_norte",
+          "name": {
+            "pt": "Portão Norte",
+            "en": "North Gate"
+          },
+          "rect": [
+            32,
+            -72,
+            32,
+            72
+          ],
+          "build": "fronteira",
+          "danger": 1,
+          "invasion": false,
+          "spawns": []
+        }
+      ]
+    },
+    {
+      "id": "acostamento_norte",
+      "name": {
+        "pt": "Acostamento Norte",
+        "en": "North Roadside"
+      },
+      "map": "mundo",
+      "piece": "estrada_norte",
+      "kind": "road",
+      "biome": "plains",
+      "level": [
+        1,
+        1
+      ],
+      "origin": [
+        64,
+        -64
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "build": "fronteira",
+      "danger": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "layout_cells": [
+        [
+          13,
+          21
+        ]
+      ],
+      "world_origin": [
+        832,
+        1344
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "chunks": [
+        {
+          "id": "acostamento",
+          "name": {
+            "pt": "Acostamento",
+            "en": "Roadside"
+          },
+          "rect": [
+            64,
+            -64,
+            32,
+            64
+          ],
+          "build": "fronteira",
+          "danger": 1,
+          "invasion": false,
+          "spawns": []
+        }
+      ]
+    },
+    {
+      "id": "campo_do_marco",
+      "name": {
+        "pt": "Campo do Marco",
+        "en": "Milestone Field"
+      },
+      "map": "mundo",
+      "piece": "estrada_norte",
+      "kind": "hunt",
+      "biome": "plains",
+      "level": [
+        6,
+        6
+      ],
+      "origin": [
+        64,
+        -72
+      ],
+      "size": [
+        32,
+        8
+      ],
+      "build": "aberta",
+      "danger": 2,
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "leather_hide"
+        ]
+      },
+      "layout_cells": [
+        [
+          13,
+          20
+        ]
+      ],
+      "world_origin": [
+        832,
+        1336
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "note": {
+        "pt": "Primeira faixa aberta ao lado da Estrada Real, célula (13, 20). Sem chefe. Não é Folhaverde.",
+        "en": "First open strip beside the Royal Road, cell (13, 20). No boss. This is not Folhaverde."
+      },
+      "chunks": [
+        {
+          "id": "campo",
+          "name": {
+            "pt": "Campo",
+            "en": "Field"
+          },
+          "rect": [
+            64,
+            -72,
+            32,
+            8
+          ],
+          "build": "aberta",
+          "danger": 2,
+          "invasion": true,
+          "spawns": [
+            {
+              "monster": "goblin",
+              "count": [
+                3,
+                5
+              ],
+              "level": 6
+            },
+            {
+              "monster": "goblin_spearman",
               "count": [
                 2,
                 3

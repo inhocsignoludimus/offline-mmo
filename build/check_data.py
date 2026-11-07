@@ -337,6 +337,30 @@ if Z:
         bad.append(f'bosque_da_vila: chunks mudaram {got_chunks}')
     if bo.get('build') != 'nao' or bo.get('invasion') is not False:
         bad.append('bosque_da_vila: caça autoral não é lote e não é invadida')
+    orla = byz.get('orla_do_bosque') or {}
+    seara = byz.get('seara_leste') or {}
+    if orla.get('origin') != [98, 12] or orla.get('size') != [30, 36]:
+        bad.append('orla_do_bosque: origin/size mudou')
+    if seara.get('origin') != [128, 12] or seara.get('size') != [18, 36]:
+        bad.append('seara_leste: origin/size mudou')
+    piece_rects = {}
+    for p in w.get('pieces') or []:
+        ox, oy = p.get('legacy_origin') or [None, None]
+        sx, sy = p.get('size') or [0, 0]
+        piece_rects[p.get('id')] = (ox, oy, ox + sx, oy + sy, p)
+        fp = os.path.join(ROOT, p.get('file') or '')
+        if not os.path.exists(fp):
+            bad.append(f"peça {p.get('id')}: arquivo {p.get('file')} não existe")
+        else:
+            head = open(fp, encoding='utf-8').read().split('[layer]', 1)[0]
+            hw = hh = None
+            for line in head.splitlines():
+                if line.startswith('width='):
+                    hw = int(line.split('=', 1)[1])
+                elif line.startswith('height='):
+                    hh = int(line.split('=', 1)[1])
+            if [hw, hh] != [sx, sy]:
+                bad.append(f"peça {p.get('id')}: arquivo {hw}×{hh} != size {sx}×{sy}")
 
     def rect_of(zz):
         ox, oy = zz.get('origin') or [0, 0]
@@ -351,12 +375,24 @@ if Z:
         if zz.get('id') in ('lochport', 'bosque_da_vila'):
             continue
         r = rect_of(zz)
-        if r[2] > wsz[0] or r[3] > wsz[1]:
+        placed = zz.get('piece')
+        if placed:
+            pre = piece_rects.get(placed)
+            if not pre:
+                bad.append(f"zone {zz.get('id')}: peça {placed} não está em world.pieces")
+            elif r[0] < pre[0] or r[1] < pre[1] or r[2] > pre[2] or r[3] > pre[3]:
+                bad.append(f"zone {zz.get('id')}: rect sai da peça {placed}")
+        elif r[0] < 0 or r[1] < 0 or r[2] > wsz[0] or r[3] > wsz[1]:
             bad.append(f"zone {zz.get('id')}: rect sai do mapa {wsz}")
         for p, name in zip(protected, ('lochport', 'bosque_da_vila')):
             if overlap(r, p):
                 bad.append(f"zone {zz.get('id')}: invade {name}")
-        if zz.get('id') in ('orla_do_bosque', 'seara_leste'):
+        if zz.get('build') == 'fronteira':
+            if zz.get('invasion'):
+                bad.append(f"zone {zz.get('id')}: fronteira não é invadida")
+            if (zz.get('resources') or {}).get('rare'):
+                bad.append(f"zone {zz.get('id')}: fronteira não tem recurso raro")
+        if zz.get('id') in ('orla_do_bosque', 'seara_leste', 'estrada_real_norte', 'acostamento_norte', 'campo_do_marco'):
             for ch in zz.get('chunks') or []:
                 if ch.get('boss'):
                     bad.append(f"zone {zz.get('id')} chunk {ch.get('id')}: esta extensão não leva chefe")
