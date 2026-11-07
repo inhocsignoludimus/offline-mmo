@@ -10,7 +10,11 @@ const EMPTY_CHUNK = document.createElement('canvas'); EMPTY_CHUNK.width = EMPTY_
 class GameMap {
   constructor(data, atlas) {
     Object.assign(this, { id: data.id, w: data.w, h: data.h, hero: data.hero, tiles: data.tiles, atlas, exits: data.exits || [], spawns: data.spawns || [], offset: data.offset || [0, 0] });
-    this.bg = data.background; this.obj = data.object; this.col = data.collision;
+    if (data.enc === 'u16b64') {
+      // camadas compactadas (build/gen_world.py): Uint16 em base64 -> linhas
+      const dec = b64 => { const bin = atob(b64), u = new Uint16Array(bin.length / 2); for (let k = 0; k < u.length; k++) u[k] = bin.charCodeAt(2 * k) | (bin.charCodeAt(2 * k + 1) << 8); const rows = []; for (let j = 0; j < data.h; j++) rows.push(u.subarray(j * data.w, (j + 1) * data.w)); return rows; };
+      this.bg = dec(data.background); this.obj = dec(data.object); this.col = dec(data.collision);
+    } else { this.bg = data.background; this.obj = data.object; this.col = data.collision; }
     this.chunks = new Map();
     // lista de objetos por linha, para achar rápido os que estão na tela
     this.zones = data.zones || null; this.houses = data.houses || []; this.towns = data.towns || []; this.home = data.home || null;

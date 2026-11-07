@@ -54,8 +54,10 @@ const Houses = {
   },
   add(id, x, y, map, tint) {
     const d = DATA.houses[id]; if (!d) return; const [w, h] = d.size;
+    if (!map.inBounds(x - 1, y - 1) || !map.inBounds(x + w, y + h)) return;
     const o = { id, d, x, y, w, h, inside: false, door: false, fade: 1, tint };
     for (let j = -1; j <= h; j++) for (let i = -1; i <= w; i++) if (map.inBounds(x + i, y + j)) { map.obj[y + j][x + i] = 0; map.col[y + j][x + i] = 0; }
+    if (!map.inBounds(x - 1, y - 1) || !map.inBounds(x + w, y + h)) return;   // casa fora do mapa: não põe
     for (const [i, j] of d.walls) map.col[y + j][x + i] = 1;
     for (const [i, j] of d.doors) map.col[y + j][x + i] = 0;      // porta abre sozinha ao chegar perto
     const [[ix0, iy0], [ix1, iy1]] = d.interior || [[1, 1], [w - 2, h - 2]];

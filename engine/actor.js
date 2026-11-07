@@ -85,7 +85,7 @@ class Actor {
   update(dt, map) {
     // a corrida do TCoM foi feita para 2,2 tiles/s em tile de 64 px (= 1,47 tile/s aqui):
     // acelera os passos na mesma proporção da velocidade, senão o pé "desliza"
-    this.t += dt * (this.anim === 'run' ? this.speed / 1.47 : 1);
+    this.t += dt * (this.anim === 'run' ? this.speed / 2.6 : 1);
     if (this.path && this.path.length) {
       const [tx, ty] = this.path[0], dx = tx - this.x, dy = ty - this.y, d = Math.hypot(dx, dy);
       const step = this.speed * dt;
