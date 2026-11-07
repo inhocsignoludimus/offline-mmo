@@ -94,7 +94,8 @@ class Actor {
       if (d > 0.01) this.dir = direcaoDoAngulo(Math.atan2(dy, dx)); // ângulo no mundo, como no TCoM
       this.setAnim('run');
       if (!this.path.length) this.path = null;
-    } else if (this.anim === 'run') this.setAnim('stance');
+    } else if (this.manualMove) this.manualMove = false; // andando pelo joystick: mantém a corrida
+    else if (this.anim === 'run') this.setAnim('stance');
     if (this.anim === 'swing' && this.t > 0.45) this.setAnim('stance');
   }
   draw(g, sx, sy) {

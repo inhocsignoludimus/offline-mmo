@@ -57,7 +57,7 @@ const Touch = {
       const sp = a.speed * Math.min(1, Math.hypot(jx, jy)) * dt, nx = a.x + wx / d * sp, ny = a.y + wy / d * sp;
       a.path = null; Combat.attacking = false;
       if (Game.map.free(nx, ny)) { a.x = nx; a.y = ny; } else if (Game.map.free(nx, a.y)) a.x = nx; else if (Game.map.free(a.x, ny)) a.y = ny;
-      a.dir = direcaoDoAngulo(Math.atan2(wy, wx)); a.setAnim('run'); this.moving = true;
+      a.dir = direcaoDoAngulo(Math.atan2(wy, wx)); a.setAnim('run'); a.manualMove = true; this.moving = true;
     } else if (this.moving) { this.moving = false; if (!a.path) a.setAnim('stance'); }
     if (this.atk) {
       if (!Combat.target || Combat.target.dead) Combat.engage(Combat.nearest(8));
