@@ -217,7 +217,8 @@ const Sim = {
     if (this.t < b.until) return;
     const r = Math.random();
     if (r < 0.5) { // passear
-      const [x, y] = this.map.randomFree(Math.random, chance(0.25) ? [P.x, P.y] : Game.townCenter, chance(0.25) ? 5 : 16);
+      const followMe = World.safe(P.x, P.y) && chance(0.25);
+      const [x, y] = this.map.randomFree(Math.random, followMe ? [P.x, P.y] : Game.townCenter, followMe ? 5 : 16);
       a.moveTo(this.map, x, y); b.until = this.t + between(2, 8);
     } else if (r < 0.62 && a.ap.layers.some(l => TCOM.slot[l] === 'main')) { // treinar golpes
       a.setAnim('swing'); b.until = this.t + between(0.6, 1.2);
@@ -256,7 +257,7 @@ const Sim = {
     const on = this.online(), off = this.sims.filter(s => !s.online);
     if (on.length > 30 && chance(0.6)) this.logout(rnd(on));
     if (off.length && on.length < 55 && chance(0.7)) {
-      const s = rnd(off), near = Game.zoneId === 'lochport' && this.near().length < this.NEAR_MAX && chance(0.4);
+      const s = rnd(off), near = this.near().length < this.NEAR_MAX && chance(0.4);
       this.login(s, near);
       if (!near && chance(0.3)) setTimeout(() => this.say(s, 'greet', null, 'global'), 1500);
     }

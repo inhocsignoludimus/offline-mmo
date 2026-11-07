@@ -9,7 +9,7 @@ const EMPTY_CHUNK = document.createElement('canvas'); EMPTY_CHUNK.width = EMPTY_
 
 class GameMap {
   constructor(data, atlas) {
-    Object.assign(this, { id: data.id, w: data.w, h: data.h, hero: data.hero, tiles: data.tiles, atlas, exits: data.exits || [], spawns: data.spawns || [] });
+    Object.assign(this, { id: data.id, w: data.w, h: data.h, hero: data.hero, tiles: data.tiles, atlas, exits: data.exits || [], spawns: data.spawns || [], offset: data.offset || [0, 0] });
     this.bg = data.background; this.obj = data.object; this.col = data.collision;
     this.chunks = new Map();
     // lista de objetos por linha, para achar rápido os que estão na tela

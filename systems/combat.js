@@ -48,7 +48,7 @@ class Monster {
     this.cd -= dt; this.next -= dt;
     const P = Game.player, pa = P.actor, d = Math.hypot(pa.x - this.x, pa.y - this.y), def = this.def;
     if (this.hitStun > 0) { this.hitStun -= dt; return; }
-    const alive = !P.dead && Game.zone.pve;
+    const alive = !P.dead && !World.safe(pa.x, pa.y);
     if (alive && (this.state === 'chase' || (d < (def.aggro || 6) && def.behavior !== 'passive'))) this.state = 'chase';
     if (this.state === 'chase' && (!alive || d > 16)) { this.state = 'home'; }
     if (this.state === 'chase') {
@@ -319,7 +319,7 @@ const Combat = {
   revive() {
     const p = Game.player; p.dead = false; p.hp = Math.round(p.hpMax * 0.6); p.mp = Math.round(p.mpMax * 0.5);
     document.getElementById('death').classList.remove('on');
-    Game.loadZone('lochport'); p.actor.setAnim('stance');
+    const [x, y] = Game.townCenter; p.actor.x = x; p.actor.y = y; p.actor.path = null; Camera.snap(x, y); p.actor.setAnim('stance');
     Journal.add('system', '', 'Você acorda no templo da vila. Nada foi perdido.');
   },
   pick(g) {
@@ -341,10 +341,10 @@ const Combat = {
   },
   // ------------------------------------------------------------
   // spawns da zona
-  spawnZone(z) {
+  // mundo contínuo: spawns das regiões do data/zones.json
+  spawnWorld() {
     this.mobs = []; this.ground = []; this.target = null;
-    if (!z.pve) return;
-    this.spawns = (Game.map.spawns || []).map(s => ({ ...s, dead: -999, mob: null }));
+    this.spawns = World.spawns().filter(s => Mons.byId[s.monster]).map(s => ({ ...s, dead: -999 }));
     for (const s of this.spawns) this.fill(s);
   },
   pickMonster(level, cat) {
@@ -353,10 +353,11 @@ const Combat = {
   },
   catOk(m, cat) { return cat === 'undead' || cat === 'cursed_grave' ? /skeleton|zombie|necro/.test(m.id) : true; },
   fill(s) {
-    const [x, y, w, h] = s.rect, def = this.pickMonster(Math.max(1, s.level), s.cat);
-    const n = Math.max(1, Math.round(this.rand(def.pack || [1, 1]) * 0.6));
+    const [x, y, w, h] = s.rect, def = s.monster ? Mons.byId[s.monster] : this.pickMonster(Math.max(1, s.level), s.cat);
+    const n = s.count ? Math.round(this.rand(s.count)) : Math.max(1, Math.round(this.rand(def.pack || [1, 1]) * 0.6));
+    if (n <= 0) { s.dead = null; return; }
     for (let i = 0; i < n; i++) {
-      const [mx, my] = Game.map.randomFree(Math.random, [x + w / 2, y + h / 2], 1.5);
+      const [mx, my] = Game.map.randomFree(Math.random, [x + w / 2, y + h / 2], Math.max(1.5, Math.min(w, h) / 2 - 1));
       const m = new Monster(def, mx, my); m.spawn = s; this.mobs.push(m);
     }
     s.dead = null;
@@ -366,7 +367,7 @@ const Combat = {
     const a = Game.player.actor;
     for (const s of this.spawns) {
       if (s.dead === null) { if (!this.mobs.some(m => m.spawn === s && !m.dead)) s.dead = Sim.t; continue; }
-      if (Sim.t - s.dead > 40 && Math.hypot(s.rect[0] - a.x, s.rect[1] - a.y) > 12) this.fill(s);
+      if (Sim.t - s.dead > (s.boss ? 240 : 45) && Math.hypot(s.rect[0] + s.rect[2] / 2 - a.x, s.rect[1] + s.rect[3] / 2 - a.y) > 14) this.fill(s);
     }
   },
   // ------------------------------------------------------------

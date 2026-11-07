@@ -194,11 +194,12 @@ const Backpack = {
 // ---------------------------------------------------------------------
 const Paperdoll = {
   init() {
-    this.g = Gumps.create('paperdoll', 'Paperdoll', { pos: [240, 12], posCompact: [6, 6], w: 300, h: 340, cls: 'paperdoll', open: false, onOpen: () => this.render() });
-    this.g.body.innerHTML = `<canvas width="120" height="150"></canvas><div class="pslots"></div><div class="pinfo"></div>`;
+    this.g = Gumps.create('paperdoll', 'Paperdoll', { pos: [240, 12], posCompact: [6, 6], w: 340, h: 360, cls: 'paperdoll', open: false, onOpen: () => this.render() });
+    this.g.body.innerHTML = `<canvas width="150" height="240"></canvas><div class="pslots"></div><div class="pinfo"></div>`;
     this.cv = this.g.body.querySelector('canvas'); this.t = 0;
   },
   render() {
+    this.dirty = true;
     const p = Game.player, s = this.g.body.querySelector('.pslots');
     s.innerHTML = '';
     for (const [slot, nome] of [['head', 'Cabeça'], ['neck', 'Pescoço'], ['torso', 'Tronco'], ['cloak', 'Manto'], ['arms', 'Braços'], ['hands', 'Mãos'], ['legs', 'Pernas'], ['feet', 'Pés'], ['hand1', 'Arma'], ['hand2', 'Escudo'], ['ring', 'Anel']]) {
@@ -211,14 +212,31 @@ const Paperdoll = {
     const sk = p.skills;
     this.g.body.querySelector('.pinfo').innerHTML = `<b>${p.name}</b>${p.guild ? ` <span>[${p.guild.tag}]</span>` : ''}<br>${Object.entries(sk).filter(e => e[1] > 0).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([k, v]) => `${Chat.skills[k] || k} ${v.toFixed(1)}`).join('<br>')}`;
   },
+  // desenho 2D pintado (art/paperdoll, 150x240), camadas na ordem do ART_SPEC §10
+  ORDEM: ['legs', 'feet', 'torso', 'arms', 'hands', 'neck', 'cloak', 'head', 'hand1', 'hand2'],
+  imgs: {},
+  img(sx, id) { const k = sx + '/' + id; let i = this.imgs[k]; if (!i) { i = new Image(); i.src = `engine/dev_assets/paperdoll/${k}.webp`; i.onload = () => { this.dirty = true; }; this.imgs[k] = i; } return i; },
+  // peças tingíveis vêm em cinza claro: sem hue, recebem a cor natural do material
+  baseHue(id) { return /leather|studded|boots|gloves|hood|belt/.test(id) ? '#6b4a2e' : /cloth|shirt|pants|sandal|cloak|tunic|robe|habit|mantle|surcoat/.test(id) ? '#7d705a' : '#8a8478'; },
+  has(sx, id) { return DATA.paperdoll && DATA.paperdoll[sx] && DATA.paperdoll[sx].includes(id); },
   tick(dt) {
     if (!Gumps.isOpen('paperdoll')) return;
-    this.t += dt;
-    const g = this.cv.getContext('2d'); g.clearRect(0, 0, 120, 150); g.imageSmoothingEnabled = false;
-    g.save(); g.scale(1.6, 1.6);
-    const a = Game.player.actor, keep = [a.dir, a.anim, a.t];
-    a.dir = 7; a.anim = 'stance'; a.t = this.t; a.draw(g, 37, 86);
-    [a.dir, a.anim, a.t] = keep; g.restore();
+    const p = Game.player, sx = p.actor.ap.sexo;
+    const sig = sx + Object.values(p.equip).map(i => i.id + (i.hue || '')).join(',');
+    if (sig === this.sig && !this.dirty) return;
+    this.sig = sig; this.dirty = false;
+    const g = this.cv.getContext('2d'); g.clearRect(0, 0, 150, 240);
+    const layers = [['body'], ['hair_01']];
+    for (const slot of this.ORDEM) { const it = p.equip[slot]; if (!it) continue;
+      if (this.has(sx, it.id)) layers.push([it.id, it.hue && Loot.hues[it.hue] ? Loot.hues[it.hue].hex : this.baseHue(it.id)]);
+      if (this.has(sx, it.id + '_fixed')) layers.push([it.id + '_fixed']); }
+    for (const [id, hue] of layers) {
+      const im = this.img(sx, id); if (!im.complete || !im.naturalWidth) continue;
+      if (!hue) { g.drawImage(im, 0, 0, 150, 240); continue; }
+      const c = document.createElement('canvas'); c.width = 150; c.height = 240; const t = c.getContext('2d');
+      t.drawImage(im, 0, 0, 150, 240); t.globalCompositeOperation = 'color'; t.fillStyle = hue; t.fillRect(0, 0, 150, 240);
+      t.globalCompositeOperation = 'destination-in'; t.drawImage(im, 0, 0, 150, 240); g.drawImage(c, 0, 0);
+    }
   },
 };
 

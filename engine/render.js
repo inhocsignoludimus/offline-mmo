@@ -55,9 +55,11 @@ const Render = {
       if (sx < L || sx > R || sy < T || sy > B + 200) continue;
       list.push({ k: a.x + a.y - (a.dead ? 0.6 : 0), a, sx, sy });
     }
+    Houses.addToList(list, actors);
     list.sort((p, q) => p.k - q.k);
     for (const e of list) {
-      if (e.o) map.drawTile(g, e.o.t, e.sx, e.sy);
+      if (e.house) Houses.draw(g, e);
+      else if (e.o) map.drawTile(g, e.o.t, e.sx, e.sy);
       else e.a.draw(g, e.sx, e.sy);
     }
     Combat.drawWorld(g);

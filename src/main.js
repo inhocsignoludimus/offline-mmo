@@ -39,19 +39,16 @@ const EFEITOS = { // consumíveis
   mana_potion: p => p.mp += 20, refresh_potion: p => p.st += 30, cure_potion: p => p.hp += 2, bread: p => p.st += 12, dried_meat: p => p.st += 15,
 };
 
-// zonas: a vila é segura; as saídas do Flare levam às áreas de caça (PvE, sem PvP)
-const ZONES = {
-  lochport: { name: 'Porto do Trigo', pve: false },
-  lochport_cemetery: { name: 'Cemitério de Porto do Trigo · área de caça', pve: true },
-};
-
 const Game = {
   actors: [], now: 0, t0: performance.now(), held: null, hover: null,
   clock() { const d = new Date(); return d.getHours() * 60 + d.getMinutes(); },
   start(cfg) {
-    this.zone = ZONES.lochport; this.zoneId = 'lochport';
-    this.map = new GameMap(DATA.maps.lochport, this.atlasOf('lochport'));
+    this.zoneId = 'lochport';
+    this.map = new GameMap(DATA.maps.mundo, this.atlasOf('mundo'));
     this.townMap = this.map;
+    World.init(DATA, this.map);
+    const vila = World.zones.find(z => z.kind === 'village');
+    this.townRect = vila.rect;
     this.townCenter = this.findCenter();
     Chat.init(DATA); TCOM.meta = DATA.tcom; Icons.meta = DATA.icons;
     // personagem
@@ -75,9 +72,12 @@ const Game = {
     Journal.init(); StatusGump.init(); Backpack.init(); Paperdoll.init(); SkillsGump.init(); Spellbook.init(); Minimap.init(); OnlineGump.init(); HUD.init();
     Minimap.build(this.map);
     Sim.init(DATA, this.map);
+    // casas em camadas na vila (até o mapa ter lotes próprios)
+    for (const id of Object.keys(DATA.houses || {})) Houses.place(id, this.townCenter, this.map);
+    Combat.spawnWorld();
     Journal.add('system', '', `Bem-vindo a ${this.townName}, shard Outremer. ${Sim.online().length} jogadores online.`);
-    Journal.add('system', '', Touch.on ? 'Joystick para andar, ⚔ para atacar, botões de magia à direita, ✋ para pegar itens. A saída para o cemitério fica ao norte da vila.'
-      : 'Segure o clique num monstro para atacar e no chão para andar. Magias nas teclas 1–9. Alt mostra os itens no chão. A saída para o cemitério fica ao norte da vila.');
+    Journal.add('system', '', Touch.on ? 'Joystick para andar, ⚔ para atacar, botões de magia à direita, ✋ para pegar itens. O Bosque da Vila fica a leste.'
+      : 'Segure o clique num monstro para atacar e no chão para andar. Magias nas teclas 1–9. Alt mostra os itens no chão. O Bosque da Vila fica a leste; a Estrada Real, ao norte.');
     this.bindInput(); Touch.init();
     this.last = performance.now(); requestAnimationFrame(t => this.loop(t));
     setInterval(() => { OnlineGump.render(); }, 3000);
@@ -85,35 +85,14 @@ const Game = {
   townName: 'Porto do Trigo',
   atlases: {},
   atlasOf(id) { let a = this.atlases[id]; if (!a) { a = new Image(); a.src = DATA.maps[id].atlasFile; this.atlases[id] = a; } return a; },
-  // troca de mapa (saídas do Flare); a vila é segura, o resto é PvE
-  loadZone(id, at) {
-    if (!DATA.maps[id]) { HUD.toast('Caminho fechado por enquanto'); return false; }
-    const p = this.player, a = p.actor, z = ZONES[id] || { name: id, pve: true };
-    this.map = id === 'lochport' ? this.townMap : new GameMap(DATA.maps[id], this.atlasOf(id));
-    this.zone = z; this.zoneId = id;
-    if (id === 'lochport') { Sim.enterTown(); } else Sim.leaveTown();
-    const [x, y] = at ? this.map.randomFree(Math.random, [at[0] + 0.5, at[1] + 0.5], 1.5) : this.townCenter;
-    a.x = x; a.y = y; a.path = null; Camera.snap(x, y);
-    this.actors = [a, ...Sim.near().map(s => s.actor)];
-    Combat.spawnZone(z); Minimap.build(this.map);
-    HUD.toast(z.name); this.exitCooldown = 1.5;
-    return true;
-  },
-  checkExit(dt) {
-    this.exitCooldown = (this.exitCooldown || 0) - dt; if (this.exitCooldown > 0) return;
-    const a = this.player.actor, i = Math.floor(a.x), j = Math.floor(a.y);
-    for (const e of this.map.exits || []) {
-      const [x, y, w, h] = e.rect;
-      if (i >= x - 1 && i <= x + w && j >= y - 1 && j <= y + h) { if (!this.loadZone(e.to, e.at)) { this.exitCooldown = 2; a.path = null; } return; }
-    }
-  },
   findCenter() {
     const m = this.map; let best = null, bd = 1e9;
-    for (let j = 0; j < m.h; j++) for (let i = 0; i < m.w; i++) {
+    const [rx, ry, rw, rh] = this.townRect || [0, 0, m.w, m.h], cx = rx + rw / 2, cy = ry + rh / 2;
+    for (let j = ry; j < ry + rh; j++) for (let i = rx; i < rx + rw; i++) {
       if (m.blocked(i, j) || !m.bg[j][i]) continue;
       // perto do meio e com espaço livre em volta
       let free = 0; for (let dj = -2; dj <= 2; dj++) for (let di = -2; di <= 2; di++) if (!m.blocked(i + di, j + dj)) free++;
-      const d = Math.hypot(i - m.w / 2, j - m.h / 2) - free * 0.6;
+      const d = Math.hypot(i - cx, j - cy) - free * 0.6;
       if (d < bd) { bd = d; best = [i + 0.5, j + 0.5]; }
     }
     return best;
@@ -268,7 +247,7 @@ const Game = {
     const p = this.player, a = p.actor;
     if (!p.dead) Touch.update(dt);
     for (const x of this.actors) if (x !== a || !p.dead) x.update(dt, this.map);
-    Sim.update(dt); Combat.update(dt); this.checkExit(dt);
+    Sim.update(dt); Combat.update(dt); Houses.update(dt); World.update();
     if (this.pickup && !a.path) { if (Combat.ground.includes(this.pickup) && Math.hypot(this.pickup.x - a.x, this.pickup.y - a.y) < 1.6) Combat.pick(this.pickup); this.pickup = null; }
     // fôlego cai correndo e volta parado
     p.st = Math.max(0, Math.min(p.stMax, p.st + (a.path ? -0.4 : 2) * dt));
@@ -288,7 +267,7 @@ const Game = {
 // ---------------------------------------------------------------------
 function boot() {
   Render.init(document.getElementById('cv'));
-  const atlas = Game.atlasOf('lochport');
+  const atlas = Game.atlasOf('mundo');
   const fonts = document.fonts ? document.fonts.ready : Promise.resolve();
   const saved = Store.get('char', null);
   const el = document.getElementById('create');

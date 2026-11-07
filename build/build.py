@@ -9,8 +9,8 @@ import argparse, json, os, shutil, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCRIPTS = ['engine/iso.js', 'engine/map.js', 'engine/actor.js', 'engine/render.js',
-           'ui/gumps.js', 'ui/touch.js', 'systems/chat.js', 'systems/skills.js', 'systems/magic.js', 'systems/combat.js', 'systems/sim.js', 'src/main.js']
-MAPS = ['lochport', 'lochport_cemetery']
+           'ui/gumps.js', 'ui/touch.js', 'systems/chat.js', 'systems/skills.js', 'systems/magic.js', 'systems/combat.js', 'systems/world.js', 'systems/sim.js', 'src/main.js']
+MAPS = ['mundo']
 
 
 def load(p, default=None):
@@ -38,6 +38,7 @@ def main():
     data = {
         'maps': maps,
         'monsters': load('data/monsters.json'), 'monArt': load('engine/dev_assets/monsters/monsters.json'),
+        'zones': load('data/zones.json'), 'houses': load('engine/dev_assets/houses/houses.json'), 'paperdoll': load('engine/dev_assets/paperdoll/paperdoll.json'),
         'loot': load('data/loot.json'), 'affixes': load('data/items/affixes.json'), 'sets': load('data/items/sets.json'),
         'uniques': load('data/items/uniques.json'), 'rarity': load('data/items/rarity.json'), 'hues': load('data/hues.json'),
         'tcom': load('engine/dev_assets/tcom/layers.json'),

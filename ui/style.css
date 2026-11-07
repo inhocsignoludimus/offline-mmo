@@ -47,8 +47,8 @@ button { font-family: inherit; }
 .empty { color: var(--tenue); text-align: center; }
 
 /* paperdoll */
-.paperdoll .gbody { display: grid; grid-template-columns: 120px 1fr; gap: 6px; }
-.paperdoll canvas { background: radial-gradient(#3a3428, #15130f); border: 1px solid #000; image-rendering: pixelated; }
+.paperdoll .gbody { display: grid; grid-template-columns: 150px 1fr; gap: 6px; }
+.paperdoll canvas { background: radial-gradient(#3a3428, #15130f); border: 1px solid #000; width: 150px; height: 240px; }
 .pslots { display: flex; flex-direction: column; gap: 1px; font-size: 12px; }
 .pslot { display: flex; align-items: center; gap: 4px; background: rgba(0,0,0,.3); border: 1px solid #3a3226; min-height: 24px; cursor: pointer; }
 .pslot i { width: 22px; height: 22px; flex: none; font-style: normal; }
