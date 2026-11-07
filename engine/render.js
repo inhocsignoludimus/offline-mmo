@@ -16,7 +16,10 @@ const Render = {
     this.vw = innerWidth; this.vh = innerHeight;
     this.cv.width = Math.round(this.vw * this.dpr); this.cv.height = Math.round(this.vh * this.dpr);
     this.cv.style.width = this.vw + 'px'; this.cv.style.height = this.vh + 'px';
-    Camera.zoom = this.vw < 700 || this.vh < 500 ? 0.75 : 1;
+    // câmera mais afastada (pedido do Rodrigo: monstros grandes têm de caber na tela).
+    // Roda do mouse ou pinça ajustam, e o valor fica salvo.
+    const def = this.vw < 700 || this.vh < 500 ? 0.55 : 0.7;
+    Camera.zoom = Store.get('zoom', def);
   },
   frame(map, actors, hover, now) {
     const g = this.g, z = Camera.zoom * this.dpr;
@@ -50,17 +53,19 @@ const Render = {
     for (const a of actors) {
       const [sx, sy] = w2s(a.x, a.y);
       if (sx < L || sx > R || sy < T || sy > B + 200) continue;
-      list.push({ k: a.x + a.y, a, sx, sy });
+      list.push({ k: a.x + a.y - (a.dead ? 0.6 : 0), a, sx, sy });
     }
     list.sort((p, q) => p.k - q.k);
     for (const e of list) {
       if (e.o) map.drawTile(g, e.o.t, e.sx, e.sy);
       else e.a.draw(g, e.sx, e.sy);
     }
+    Combat.drawWorld(g);
     Magic.draw(g);
     // nomes e falas, em pixels de tela (texto nítido)
     g.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    for (const e of list) if (e.a) this.overhead(e.a, now);
+    for (const e of list) if (e.a && e.a.kind !== 'mob') this.overhead(e.a, now);
+    Combat.drawScreen(g, now);
   },
   toggleNames() {
     this.showNames = !this.showNames;

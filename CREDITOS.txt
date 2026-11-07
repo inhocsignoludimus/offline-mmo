@@ -157,3 +157,16 @@ arte de terceiros:
   O chão é medido em metros e convertido para pixels.
   O cenário em folhas está em assets/cenario/<área>/folha*.webp,
   fatiado por CENARIO_DADOS.
+
+## Ícones (lote 1) — skills, pergaminhos, poções, reagentes, 37 itens, recursos
+- game-icons.net (Lorc / Delapouite et al.), CC-BY 3.0 — silhuetas SVG recoloridas e sombreada
+  para o estilo pintado sombrio dos ícones de item do TCoM. Usado em art/icons/skills/*,
+  art/icons/reagents/*, e ferramentas em art/icons/items/ (sewing_kit, fishing_pole, etc.).
+  https://game-icons.net/
+- Poções, pergaminhos por círculo (scroll_c1..c8), minérios, barras, toras, comida, móveis,
+  deeds e demais dos 37 itens sem célula TCoM: desenhados à mão (procedural) por Ludimus,
+  128×128 RGBA, sem Blender.
+- Atlas estendido: engine/dev_assets/tcom/icons.webp (+ icons.json com w/h); cópia em
+  art/icons/sheet.webp. Prévia: art/_preview/analysis/icons_sheet.png
+- Magias: um template de pergaminho tingido por círculo (não 64 ícones únicos);
+  data/magic/spells.json → icon = scroll_c{círculo}.

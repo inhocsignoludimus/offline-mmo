@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "pieces": [
+    {
+      "id": "floor_wood",
+      "name": {
+        "pt": "Piso de Madeira",
+        "en": "Wood Floor"
+      },
+      "kind": "floor",
+      "material": "wood",
+      "cost": {
+        "logs": 2
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "floor_stone",
+      "name": {
+        "pt": "Piso de Pedra",
+        "en": "Stone Floor"
+      },
+      "kind": "floor",
+      "material": "stone",
+      "cost": {
+        "stone": 2
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "wall_wood",
+      "name": {
+        "pt": "Parede de Madeira",
+        "en": "Wood Wall"
+      },
+      "kind": "wall",
+      "material": "wood",
+      "cost": {
+        "logs": 4
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "wall_stone",
+      "name": {
+        "pt": "Parede de Pedra",
+        "en": "Stone Wall"
+      },
+      "kind": "wall",
+      "material": "stone",
+      "cost": {
+        "stone": 4
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "door_wood",
+      "name": {
+        "pt": "Porta de Madeira",
+        "en": "Wood Door"
+      },
+      "kind": "door",
+      "material": "wood",
+      "cost": {
+        "logs": 3
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "door_iron",
+      "name": {
+        "pt": "Porta de Ferro",
+        "en": "Iron Door"
+      },
+      "kind": "door",
+      "material": "metal",
+      "cost": {
+        "iron_ingot": 4
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "window_wood",
+      "name": {
+        "pt": "Janela de Madeira",
+        "en": "Wood Window"
+      },
+      "kind": "window",
+      "material": "wood",
+      "cost": {
+        "logs": 2
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "window_iron",
+      "name": {
+        "pt": "Janela Gradeada",
+        "en": "Barred Window"
+      },
+      "kind": "window",
+      "material": "metal",
+      "cost": {
+        "iron_ingot": 2
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "fence_wood",
+      "name": {
+        "pt": "Cerca de Madeira",
+        "en": "Wood Fence"
+      },
+      "kind": "fence",
+      "material": "wood",
+      "cost": {
+        "logs": 2
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "fence_stone",
+      "name": {
+        "pt": "Mureta de Pedra",
+        "en": "Stone Fence"
+      },
+      "kind": "fence",
+      "material": "stone",
+      "cost": {
+        "stone": 2
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "gate_wood",
+      "name": {
+        "pt": "Portão de Madeira",
+        "en": "Wood Gate"
+      },
+      "kind": "gate",
+      "material": "wood",
+      "cost": {
+        "logs": 4
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "gate_iron",
+      "name": {
+        "pt": "Portão de Ferro",
+        "en": "Iron Gate"
+      },
+      "kind": "gate",
+      "material": "metal",
+      "cost": {
+        "iron_ingot": 6
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "roof_wood",
+      "name": {
+        "pt": "Telhado de Madeira",
+        "en": "Wood Roof"
+      },
+      "kind": "roof",
+      "material": "wood",
+      "cost": {
+        "logs": 5
+      },
+      "size": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "roof_stone",
+      "name": {
+        "pt": "Telhado de Pedra",
+        "en": "Stone Roof"
+      },
+      "kind": "roof",
+      "material": "stone",
+      "cost": {
+        "stone": 5
+      },
+      "size": [
+        1,
+        1
+      ]
+    }
+  ]
+}

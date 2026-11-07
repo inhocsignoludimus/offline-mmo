@@ -1807,9 +1807,10 @@
       "icon": "boards",
       "sprite_layer": null,
       "desc": {
-        "pt": "Recurso: Tábuas.",
-        "en": "Resource: Boards."
-      }
+        "pt": "Recurso: Tábuas. (obsoleto: use logs direto na construção.)",
+        "en": "Resource: Boards. (obsolete: use logs directly for building.)"
+      },
+      "obsolete": true
     },
     {
       "id": "leather_hide",
@@ -4306,9 +4307,10 @@
       "icon": "oak_boards",
       "sprite_layer": null,
       "desc": {
-        "pt": "Tábuas de carvalho serradas, prontas para a bancada.",
-        "en": "Sawn oak boards, ready for the bench."
-      }
+        "pt": "Tábuas de carvalho serradas, prontas para a bancada. (obsoleto: use logs direto na construção.)",
+        "en": "Sawn oak boards, ready for the bench. (obsolete: use logs directly for building.)"
+      },
+      "obsolete": true
     },
     {
       "id": "cedar_boards",
@@ -4324,9 +4326,10 @@
       "icon": "cedar_boards",
       "sprite_layer": null,
       "desc": {
-        "pt": "Tábuas de cedro, para arco, baú e forro de capela.",
-        "en": "Cedar boards, for bow, chest and chapel lining."
-      }
+        "pt": "Tábuas de cedro, para arco, baú e forro de capela. (obsoleto: use logs direto na construção.)",
+        "en": "Cedar boards, for bow, chest and chapel lining. (obsolete: use logs directly for building.)"
+      },
+      "obsolete": true
     },
     {
       "id": "thick_leather",
@@ -4866,6 +4869,24 @@
       "desc": {
         "pt": "Escritura de uma banca de feira, para quem vende na praça.",
         "en": "Deed to a market stall, for whoever sells in the square."
+      }
+    },
+    {
+      "id": "stone",
+      "name": {
+        "pt": "Pedra",
+        "en": "Stone"
+      },
+      "type": "resource",
+      "slot": "none",
+      "weight": 4,
+      "value": 1,
+      "material": "stone",
+      "icon": "stone",
+      "sprite_layer": null,
+      "desc": {
+        "pt": "Pedra bruta para piso, parede e telhado de construção.",
+        "en": "Raw stone for floors, walls and roofs in building mode."
       }
     }
   ]

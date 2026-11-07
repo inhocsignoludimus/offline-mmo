@@ -12,7 +12,7 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
   "personalities": [
     { "id": "novato",      "desc": "pergunta tudo, erra muito, agradece",        "typo": 0.15, "caps": 0.05, "emoji": 0.2 },
     { "id": "farmador",    "desc": "focado em xp/loot, fala pouco",               "typo": 0.05, "caps": 0.0,  "emoji": 0.05 },
-    { "id": "pvper",       "desc": "provoca, desafia, se gaba",                    "typo": 0.08, "caps": 0.3,  "emoji": 0.1 },
+    { "id": "pvper",       "desc": "provoca, desafia, se gaba no PvE/boss",         "typo": 0.08, "caps": 0.3,  "emoji": 0.1 },
     { "id": "comerciante", "desc": "WTS/WTB, negocia, anuncia preço",              "typo": 0.03, "caps": 0.2,  "emoji": 0.0 },
     { "id": "roleplayer",  "desc": "fala como personagem medieval, nunca gíria",   "typo": 0.0,  "caps": 0.0,  "emoji": 0.0 },
     { "id": "troll",       "desc": "zoa, reclama do servidor, spam leve",          "typo": 0.2,  "caps": 0.4,  "emoji": 0.3 }
@@ -32,8 +32,8 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
 ```
 * `p`: lista de personalidades que podem usar a frase.
 * `ch`: `global`, `local`, `guild`, `whisper` ou `party`.
-* `ctx` (contextos que a engine dispara): `greet`, `bye`, `idle`, `lfg` (procura grupo), `trade_sell`, `trade_buy`, `trade_haggle`, `help_ask`, `help_give`, `thanks`, `brag`, `insult`, `complain_server`, `death_self`, `kill_other`, `loot_rare`, `guild_recruit`, `guild_war_declare`, `guild_war_taunt`, `raid_call`, `raid_win`, `raid_wipe`, `reply_friend` (quem gosta de você responde), `reply_enemy` (quem te odeia responde), `reply_neutral`, `pk_warning` (avisa sobre PK numa área).
-* Meta da primeira rodada: 300 frases, com cerca de 50 por personalidade, todos os `ctx` cobertos pelo menos uma vez e frases curtas, como num chat de MMO (até cerca de 80 caracteres).
+* `ctx` (contextos que a engine dispara): `greet`, `bye`, `idle`, `lfg` (procura grupo), `trade`, `trade_sell`, `trade_buy`, `trade_haggle`, `help_ask`, `help_give`, `thanks`, `brag`, `insult`, `complain_server`, `death_self`, `hunt` (convite/rota de caça PvE), `boss_spawn` (chefe/evento apareceu), `loot_drop` (loot comum no chão), `loot_rare`, `guild_recruit`, `guild_war_declare`, `guild_war_taunt`, `raid_call`, `raid_win`, `raid_wipe`, `reply_friend` (quem gosta de você responde), `reply_enemy` (quem te odeia responde), `reply_neutral`. **Sem PvP:** `pk_warning` e `kill_other` foram removidos; guerra de guilda = disputa por chefe/evento.
+* Meta: frases curtas, como num chat de MMO (até cerca de 80 caracteres), com cobertura de todos os `ctx` ativos.
 
 ## data/names/players.json
 ```json
@@ -54,7 +54,7 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
       "style": "rp", "align": "ordem", "colors": ["#b8302a", "#e8e0d0"] }
   ] }
 ```
-`tag` com 2 a 4 letras. `align`: `ordem`, `neutro` ou `caos` (o caos tende a PK e guerra).
+`tag` com 2 a 4 letras. `align`: `ordem`, `neutro` ou `caos` (o caos tende a disputa agressiva de chefes/eventos).
 
 ## data/items/base.json
 ```json
@@ -71,6 +71,7 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
 * `slot`: `head`, `neck`, `torso`, `arms`, `hands`, `legs`, `feet`, `cloak`, `hand1`, `hand2`, `ring` ou `none`.
 * `sprite_layer`: o nome da camada do TCoM que veste o item (veja a lista de camadas em `CAMADAS_ANIM`, no `jogo.js` do TCoM). Deixe `null` se ainda não existir a camada.
 * `icon`: o nome do ícone. Se ele não existir, a engine usa um genérico e registra o que falta.
+* `obsolete: true` — item mantido por compatibilidade (ex.: `boards`), fora de loot/receitas/construção.
 
 ## data/items/affixes.json
 ```json
@@ -87,9 +88,9 @@ Variáveis aceitas dentro dos textos (a engine troca na hora): `{player}` (você
     { "id": "mind_blast", "name": {"pt": "Rajada Mental", "en": "Mind Blast"}, "circle": 5, "mana": 14,
       "reagents": {"black_pearl": 1, "mandrake_root": 1, "nightshade": 1, "sulfurous_ash": 1},
       "target": "mobile", "effect": {"type": "damage", "element": "cold", "base": [10, 20], "scales": ["magery", "int"]},
-      "words": "Por Corp Wis", "icon": "mind_blast", "desc": {"pt": "...", "en": "..."} } ] }
+      "icon": "mind_blast", "desc": {"pt": "...", "en": "..."} } ] }
 ```
-`target`: `self`, `mobile`, `ground`, `item` ou `none`. `effect.type`: `damage`, `heal`, `buff`, `debuff`, `summon`, `teleport`, `field`, `reveal` ou `create_item`. Os reagentes ficam em `reagents.json`, no mesmo formato de `items` (com `type: "reagent"`). **Os nomes de magias e as "palavras de poder" devem ser nossos**, e não copiados do Ultima Online.
+`target`: `self`, `mobile`, `ground`, `item` ou `none`. `effect.type`: `damage`, `heal`, `buff`, `debuff`, `summon`, `teleport`, `field`, `reveal` ou `create_item`. Os reagentes ficam em `reagents.json`, no mesmo formato de `items` (com `type: "reagent"`). **Os nomes de magias devem ser nossos**, e não copiados do Ultima Online. Campo `words` removido (sem palavras de poder).
 
 ## data/lore/biomes.json (+ um `.md` por bioma, com o texto longo)
 ```json
@@ -188,7 +189,12 @@ As **5 faixas de raridade** são fixas na engine:
   * Dragões de degraus diferentes usam a mesma arte, com `scale` e `hue` diferentes.
 * **`behavior`:** `passive` (bicho), `defensive`, `aggressive` ou `coward`.
 * **`tame`:** `{"skill": 60}` para os que dá para domar.
-* **Tabelas de loot:** `data/loot.json` → `{ "tables": { "dragon_young": [ ["base:longsword", 5], ["gold", 1], ["reagent", 10] ] } }`. Cada entrada é um peso; `base:<id>` sorteia a faixa pelo `rarity.json`.
+* **Tabelas de loot:** `data/loot.json` → pesos por entrada.
+  * `base:<id>` — sorteia faixa pelo `rarity.json`.
+  * `raro:<id>` — item na faixa raro (chefes garantem ≥1).
+  * `unique:<id>` — chance do único (`uniques.json`).
+  * `gold`, `reagent`.
+  * Tabelas `boss_<chefe>`: mais ouro, `raro:*` garantido, chance de `unique:*`.
 
 ## data/npcs/vendors.json
 
@@ -204,15 +210,94 @@ As **5 faixas de raridade** são fixas na engine:
 
 ## data/events.json e data/portals.json
 
-```json
-{ "version": 1, "events": [ { "id": "rei_formiga_dunas", "boss": "rei_formiga", "place": {"biome": "outremer", "poi": "dunas_de_qasr"},
-  "every_min": [40, 70], "duration_min": 15, "announce": {"pt": "O {boss} surgiu em {place}!", "en": "{boss} has appeared at {place}!"},
-  "adds": [["fire_ant", 6]], "rewards": {"table": "boss_rei_formiga", "top_damage": 3} } ] }
-```
+Eventos = chefes por região (`contest: guild_damage`). Sem PvP.
 
 ```json
-{ "version": 1, "portals": [ { "id": "portal_aurelia", "city": "aurelia", "phases": ["aelia_sancta", "porto_do_trigo", "folhaverde"] } ] }
+{ "version": 1, "events": [ { "id": "wyvern_clareira", "boss": "wyvern", "monster": "wyvern",
+  "place": {"zone": "bosque_da_vila", "chunk": "clareira_do_fundo"},
+  "every_min": [40, 70], "duration_min": 18, "contest": "guild_damage",
+  "rewards": {"table": "boss_wyvern", "top_damage": 5} } ] }
 ```
 
-* `phases`: o destino muda com a fase da lua, como no UO.
+Portais: **só** `kind: "moon"` (cidade↔cidade no mesmo mapa). Sem `road`/troca de mapa.
+
+```json
+{ "version": 1, "portals": [
+  { "id": "portal_aurelia", "city": "aurelia", "kind": "moon",
+    "phases": ["aelia_sancta", "porto_trigo", "folhaverde"] }
+] }
+```
+
+* Recompensas de evento/chefe usam tabelas `boss_<id>` em `loot.json`
+  (garantem `raro:<item>`, chance de `unique:<id>`, mais ouro).
+
+
+## data/gathering.json
+
+Coleta simples (sem PvP). Árvore → `logs` (serve direto na construção). Rocha → minérios com chance por nível de `mining`. Forja: 2 minérios → 1 lingote.
+
+```json
+{ "version": 1,
+  "nodes": [
+    { "id": "tree", "skill": "lumberjacking", "tool": "axe", "time_s": 1.5,
+      "yields": [ { "item": "logs", "amount": [1, 3], "min_skill": 0 } ] },
+    { "id": "rock", "skill": "mining", "tool": "pickaxe", "time_s": 1.8,
+      "yields": [ { "item": "iron_ore", "chance_by_skill": [[0, 0.7], [40, 0.55]], "amount": [1, 2] } ] }
+  ],
+  "stations": [
+    { "id": "forge", "skill": "blacksmithing", "time_s": 2.0,
+      "recipes": [ { "id": "smelt_iron", "in": {"iron_ore": 2}, "out": {"iron_ingot": 1}, "min_skill": 0 } ] }
+  ] }
+```
+* `time_s`: 1 a 2 segundos.
+* `chance_by_skill`: lista `[nível_mínimo, chance]` (a engine usa o maior nível ≤ skill do jogador).
+* Rocha: `stone` com `always: true` + minérios por chance.
+## data/building.json
+
+Peças do modo construção. Cada peça custa **só** `logs` **ou** só `stone`/`iron_ingot` — nunca tábua (`boards`).
+
+```json
+{ "version": 1,
+  "pieces": [
+    { "id": "wall_wood", "name": {"pt": "Parede de Madeira", "en": "Wood Wall"},
+      "kind": "wall", "material": "wood", "cost": {"logs": 4}, "size": [1, 1] }
+  ] }
+```
+* `kind`: `floor`, `wall`, `door`, `window`, `fence`, `gate`, `roof`.
+* `cost`: exatamente um recurso.
+## data/abilities.json
+
+Habilidades físicas estilo Diablo 2, por tipo de arma (teclas 1–9 junto com magias). O `effect` usa os **mesmos** `type` de `spells.json` (`damage`, `heal`, `buff`, `debuff`, …) e `base` sempre `[min, max]`.
+
+```json
+{ "version": 1,
+  "abilities": [
+    { "id": "whirlwind_strike", "name": {"pt": "Golpe Giratório", "en": "Whirlwind Strike"},
+      "weapon": "sword", "skill": "swordsmanship", "min_level": 40,
+      "stamina": 18, "cooldown_s": 8, "target": "self",
+      "effect": {"type": "damage", "element": "physical", "base": [12, 20], "scales": ["swordsmanship", "str"], "aoe": 2},
+      "icon": "whirlwind_strike", "desc": {"pt": "...", "en": "..."} }
+  ] }
+```
+* `weapon`: `sword`, `bow`, `mace`, `spear`, `axe`.
+* `skill` / `min_level`: skill que libera e nível mínimo.
+* Campos extras no effect (`aoe`, `dash`, `pierce`, `projectiles`, `range`) são dicas pra engine.
+## data/zones.json
+
+Mundo **contínuo** (um único mapa). `chunks` são regiões desse mapa, não mapas separados. Sem `connects`/exits entre áreas.
+
+```json
+{ "version": 1,
+  "world": { "map": "mundo", "size": [98, 60], "continuous": true },
+  "zones": [
+    { "id": "lochport", "map": "mundo", "kind": "village", "origin": [0, 0], "size": [50, 60] },
+    { "id": "bosque_da_vila", "map": "mundo", "kind": "hunt", "origin": [50, 12], "size": [48, 36],
+      "chunks": [
+        { "id": "entrada", "rect": [50, 22, 14, 16],
+          "spawns": [ {"monster": "goblin", "count": [3, 6], "level": 1} ] }
+      ] }
+  ] }
+```
+* `origin` / `chunks[].rect`: coordenadas do mapa único (`world.map`).
+* Fonte do mapa: `art/maps/<map>.txt` (+ `src/<map>.tmx`). JSON em `engine/dev_assets/flare/` é gerado pelo build.
 

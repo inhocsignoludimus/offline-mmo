@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "abilities": [
+    {
+      "id": "whirlwind_strike",
+      "name": {
+        "pt": "Golpe Giratório",
+        "en": "Whirlwind Strike"
+      },
+      "weapon": "sword",
+      "skill": "swordsmanship",
+      "min_level": 40,
+      "stamina": 18,
+      "cooldown_s": 8,
+      "target": "self",
+      "effect": {
+        "type": "damage",
+        "element": "physical",
+        "base": [
+          12,
+          20
+        ],
+        "scales": [
+          "swordsmanship",
+          "str"
+        ],
+        "aoe": 2
+      },
+      "icon": "whirlwind_strike",
+      "desc": {
+        "pt": "Gira a lâmina e acerta inimigos ao redor.",
+        "en": "Spin the blade and hit foes around you."
+      }
+    },
+    {
+      "id": "charge",
+      "name": {
+        "pt": "Investida",
+        "en": "Charge"
+      },
+      "weapon": "sword",
+      "skill": "swordsmanship",
+      "min_level": 25,
+      "stamina": 14,
+      "cooldown_s": 10,
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "physical",
+        "base": [
+          10,
+          16
+        ],
+        "scales": [
+          "swordsmanship",
+          "str"
+        ],
+        "dash": true
+      },
+      "icon": "charge",
+      "desc": {
+        "pt": "Avança até o alvo e golpeia com força.",
+        "en": "Dash to the target and strike hard."
+      }
+    },
+    {
+      "id": "multishot",
+      "name": {
+        "pt": "Tiro Múltiplo",
+        "en": "Multishot"
+      },
+      "weapon": "bow",
+      "skill": "archery",
+      "min_level": 30,
+      "stamina": 16,
+      "cooldown_s": 7,
+      "target": "ground",
+      "effect": {
+        "type": "damage",
+        "element": "physical",
+        "base": [
+          6,
+          10
+        ],
+        "scales": [
+          "archery",
+          "dex"
+        ],
+        "projectiles": 3
+      },
+      "icon": "multishot",
+      "desc": {
+        "pt": "Dispara várias flechas em leque.",
+        "en": "Loose several arrows in a fan."
+      }
+    },
+    {
+      "id": "piercing_arrow",
+      "name": {
+        "pt": "Flecha Perfurante",
+        "en": "Piercing Arrow"
+      },
+      "weapon": "bow",
+      "skill": "archery",
+      "min_level": 45,
+      "stamina": 12,
+      "cooldown_s": 6,
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "physical",
+        "base": [
+          14,
+          22
+        ],
+        "scales": [
+          "archery",
+          "dex"
+        ],
+        "pierce": true
+      },
+      "icon": "piercing_arrow",
+      "desc": {
+        "pt": "Flecha que atravessa o alvo e quem estiver atrás.",
+        "en": "An arrow that pierces the target and whoever stands behind."
+      }
+    },
+    {
+      "id": "stun_blow",
+      "name": {
+        "pt": "Atordoar",
+        "en": "Stun"
+      },
+      "weapon": "mace",
+      "skill": "mace_fighting",
+      "min_level": 20,
+      "stamina": 15,
+      "cooldown_s": 9,
+      "target": "mobile",
+      "effect": {
+        "type": "debuff",
+        "stat": "paralyze",
+        "base": [
+          1,
+          2
+        ],
+        "duration": 2,
+        "scales": [
+          "mace_fighting",
+          "str"
+        ]
+      },
+      "icon": "stun_blow",
+      "desc": {
+        "pt": "Golpe de maça que deixa o alvo atordoado por um instante.",
+        "en": "A mace blow that stuns the target for a moment."
+      }
+    },
+    {
+      "id": "long_thrust",
+      "name": {
+        "pt": "Estocada Longa",
+        "en": "Long Thrust"
+      },
+      "weapon": "spear",
+      "skill": "fencing",
+      "min_level": 25,
+      "stamina": 12,
+      "cooldown_s": 5,
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "physical",
+        "base": [
+          11,
+          18
+        ],
+        "scales": [
+          "fencing",
+          "dex"
+        ],
+        "range": 3
+      },
+      "icon": "long_thrust",
+      "desc": {
+        "pt": "Estocada alongada que alcança além do corpo a corpo.",
+        "en": "A lengthened thrust that reaches beyond melee."
+      }
+    },
+    {
+      "id": "heavy_blow",
+      "name": {
+        "pt": "Golpe Pesado",
+        "en": "Heavy Blow"
+      },
+      "weapon": "axe",
+      "skill": "axe_fighting",
+      "min_level": 30,
+      "stamina": 20,
+      "cooldown_s": 8,
+      "target": "mobile",
+      "effect": {
+        "type": "damage",
+        "element": "physical",
+        "base": [
+          18,
+          28
+        ],
+        "scales": [
+          "axe_fighting",
+          "str"
+        ]
+      },
+      "icon": "heavy_blow",
+      "desc": {
+        "pt": "Machadada lenta e devastadora num único alvo.",
+        "en": "A slow, crushing axe blow on a single target."
+      }
+    }
+  ]
+}

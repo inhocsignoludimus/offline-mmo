@@ -53,12 +53,19 @@ for m in J('monsters.json', {'monsters': []})['monsters']:
         bad.append(f"monstro {m['id']}: tabela de loot {t} não existe")
     if m.get('hue') and m['hue'] not in hues:
         bad.append(f"monstro {m['id']}: cor {m['hue']} não existe")
+uniques = {u['id'] for u in J('items/uniques.json', {'uniques': []})['uniques']}
 for k, v in tables.items():
     for e in v:
         x = e[0]
-        if x.startswith('base:'):
-            x = x[5:]
-        if x not in ('gold', 'reagent') and x not in items | reag:
+        if x.startswith('base:') or x.startswith('raro:'):
+            iid = x.split(':', 1)[1]
+            if iid not in items | reag:
+                bad.append(f'loot {k}: {e[0]} não é item')
+        elif x.startswith('unique:'):
+            uid = x.split(':', 1)[1]
+            if uid not in uniques:
+                bad.append(f'loot {k}: unique {uid} não existe')
+        elif x not in ('gold', 'reagent') and x not in items | reag:
             bad.append(f'loot {k}: {e[0]} não é item')
 A = J('items/affixes.json', {'prefix': [], 'suffix': []})
 for a in A.get('prefix', []) + A.get('suffix', []):
@@ -85,6 +92,142 @@ for e in J('events.json', {'events': []})['events']:
     if e['boss'] not in bosses | mons: bad.append(f"evento {e['id']}: chefe {e['boss']} não existe")
     for a, _ in e.get('adds', []):
         if a not in mons: bad.append(f"evento {e['id']}: monstro {a} não existe")
+
+
+# chat/lines.json — sem contextos de PvP
+Lj = J('chat/lines.json')
+if Lj:
+    banned_ctx = {'pk_warning', 'kill_other'}
+    for ln in Lj.get('lines', []):
+        if ln.get('ctx') in banned_ctx:
+            bad.append(f"linha {ln.get('id')}: ctx {ln.get('ctx')} removido (sem PvP)")
+# gathering.json (coleta simples)
+G = J('gathering.json')
+if G:
+    skills = {s['id'] for s in J('skills.json', {'skills': []})['skills']}
+    for n in G.get('nodes', []):
+        if n.get('skill') not in skills:
+            bad.append(f"gathering node {n.get('id')}: skill {n.get('skill')} não existe")
+        for y in n.get('yields', []):
+            if y.get('item') not in items:
+                bad.append(f"gathering node {n.get('id')}: item {y.get('item')} não existe")
+        t = n.get('time_s')
+        if t is not None and not (1.0 <= float(t) <= 2.0):
+            bad.append(f"gathering node {n.get('id')}: time_s {t} fora de 1–2 s")
+    for st in G.get('stations', []):
+        if st.get('skill') and st['skill'] not in skills:
+            bad.append(f"gathering station {st.get('id')}: skill {st.get('skill')} não existe")
+        t = st.get('time_s')
+        if t is not None and not (1.0 <= float(t) <= 2.0):
+            bad.append(f"gathering station {st.get('id')}: time_s {t} fora de 1–2 s")
+        for r in st.get('recipes', []):
+            for bag in ('in', 'out'):
+                for k in (r.get(bag) or {}):
+                    if k not in items:
+                        bad.append(f"gathering recipe {r.get('id')}: {bag} {k} não é item")
+# building.json (peças do modo construção)
+Bld = J('building.json')
+if Bld:
+    BOARD_IDS = {'boards', 'oak_boards', 'cedar_boards'}
+    KINDS = {'floor', 'wall', 'door', 'window', 'fence', 'gate', 'roof'}
+    for p in Bld.get('pieces', []):
+        if p.get('kind') not in KINDS:
+            bad.append(f"building {p.get('id')}: kind {p.get('kind')} inválido")
+        cost = p.get('cost') or {}
+        if len(cost) != 1:
+            bad.append(f"building {p.get('id')}: cost deve ter exatamente 1 recurso (log OU ingot/stone)")
+        for k in cost:
+            if k in BOARD_IDS:
+                bad.append(f"building {p.get('id')}: não pode custar tábua ({k})")
+            if k not in items:
+                bad.append(f"building {p.get('id')}: cost {k} não é item")
+# abilities.json (habilidades físicas estilo D2)
+Ab = J('abilities.json')
+if Ab:
+    skills = {s['id'] for s in J('skills.json', {'skills': []})['skills']}
+    EFFECT_TYPES = {s['effect']['type'] for s in J('magic/spells.json', {'spells': []})['spells']}
+    WEAPONS = {'sword', 'bow', 'mace', 'spear', 'axe'}
+    for a in Ab.get('abilities', []):
+        if a.get('weapon') not in WEAPONS:
+            bad.append(f"ability {a.get('id')}: weapon {a.get('weapon')} inválida")
+        if a.get('skill') not in skills:
+            bad.append(f"ability {a.get('id')}: skill {a.get('skill')} não existe")
+        e = a.get('effect') or {}
+        if e.get('type') not in EFFECT_TYPES:
+            bad.append(f"ability {a.get('id')}: effect.type {e.get('type')} não é tipo de magia")
+        b = e.get('base')
+        if not (isinstance(b, list) and len(b) == 2):
+            bad.append(f"ability {a.get('id')}: effect.base deve ser [min,max]")
+# zones.json
+Z = J('zones.json')
+if Z:
+    mons_ids = {m['id'] for m in J('monsters.json', {'monsters': []})['monsters']}
+    for z in Z.get('zones', []):
+        for ch in z.get('chunks', []) or []:
+            if ch.get('boss') and ch['boss'] not in mons_ids | {b['id'] for b in J('names/bosses.json', {'bosses': []})['bosses']}:
+                bad.append(f"zone {z.get('id')} chunk {ch.get('id')}: boss {ch.get('boss')} não existe")
+            for s in ch.get('spawns', []) or []:
+                if s.get('monster') not in mons_ids:
+                    bad.append(f"zone {z.get('id')} chunk {ch.get('id')}: monstro {s.get('monster')} não existe")
+# events.json / portals.json — sem alvos PvP
+Ev = J('events.json')
+if Ev:
+    for e in Ev.get('events', []):
+        # já checado boss/adds abaixo no bloco legado; reforço: sem campos de PvP
+        for k in ('target_player', 'pk', 'pvp', 'kill_player'):
+            if k in e:
+                bad.append(f"evento {e.get('id')}: campo PvP {k} proibido")
+Po = J('portals.json')
+if Po:
+    for p in Po.get('portals', []):
+        if p.get('pvp') is True:
+            bad.append(f"portal {p.get('id')}: pvp não permitido")
+
+
+# boards obsoletos: fora de loot
+for k, v in tables.items():
+    for e in v:
+        if 'board' in e[0]:
+            bad.append(f'loot {k}: {e[0]} é tábua obsoleta')
+
+Po = J('portals.json')
+if Po:
+    for p in Po.get('portals', []):
+        if p.get('kind') == 'road':
+            bad.append(f"portal {p.get('id')}: kind road removido (mapa único)")
+        if p.get('pvp') is True:
+            bad.append(f"portal {p.get('id')}: pvp não permitido")
+
+Z = J('zones.json')
+if Z:
+    mons_ids = {m['id'] for m in J('monsters.json', {'monsters': []})['monsters']}
+    boss_ids = {b['id'] for b in J('names/bosses.json', {'bosses': []})['bosses']}
+    wmap = (Z.get('world') or {}).get('map')
+    for z in Z.get('zones', []):
+        if wmap and z.get('map') and z['map'] != wmap:
+            bad.append(f"zone {z.get('id')}: map {z.get('map')} != world.map {wmap}")
+        if z.get('connects'):
+            bad.append(f"zone {z.get('id')}: connects removido (mapa contínuo, sem exits)")
+        for ch in z.get('chunks', []) or []:
+            if ch.get('boss') and ch['boss'] not in mons_ids | boss_ids:
+                bad.append(f"zone {z.get('id')} chunk {ch.get('id')}: boss {ch.get('boss')} não existe")
+            for s in ch.get('spawns', []) or []:
+                if s.get('monster') not in mons_ids:
+                    bad.append(f"zone {z.get('id')} chunk {ch.get('id')}: monstro {s.get('monster')} não existe")
+
+Ev = J('events.json')
+if Ev:
+    for e in Ev.get('events', []):
+        for k in ('target_player', 'pk', 'pvp', 'kill_player'):
+            if k in e:
+                bad.append(f"evento {e.get('id')}: campo PvP {k} proibido")
+        rt = (e.get('rewards') or {}).get('table')
+        if rt and rt not in tables:
+            bad.append(f"evento {e.get('id')}: tabela de loot {rt} não existe")
+
+for s in J('magic/spells.json', {'spells': []})['spells']:
+    if 'words' in s:
+        bad.append(f"magia {s['id']}: campo words removido (sem palavras de poder)")
 
 print(f'{len(items)} itens, {len(spells)} magias, {len(mons)} monstros, {len(tables)} tabelas, {len(hues)} cores')
 if bad:

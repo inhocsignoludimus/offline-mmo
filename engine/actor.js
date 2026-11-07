@@ -20,6 +20,17 @@ const TCOM = {
   corpo: { pes: 'default_feet', pernas: 'default_legs', maos: 'default_hands', tronco: 'default_chest' },
   // em que espaço do corpo cada camada é desenhada
   slot: {},
+  // camada pintada com a cor (hue) do item: troca matiz/saturação, mantém luz e sombra
+  tinted(key, hex) {
+    const k = key + hex; let c = this.imgs[k];
+    if (c) return c;
+    const im = this.img(key); if (!im.complete || !im.naturalWidth) return im;
+    c = document.createElement('canvas'); c.width = im.naturalWidth; c.height = im.naturalHeight;
+    const g = c.getContext('2d'); g.drawImage(im, 0, 0);
+    g.globalCompositeOperation = 'color'; g.fillStyle = hex; g.fillRect(0, 0, c.width, c.height);
+    g.globalCompositeOperation = 'destination-in'; g.drawImage(im, 0, 0);
+    c.complete = true; c.naturalWidth = c.width; this.imgs[k] = c; return c;
+  },
   img(key) {
     let im = this.imgs[key];
     if (!im) { im = new Image(); im.src = this.base + key + '.webp'; this.imgs[key] = im; }
@@ -92,7 +103,8 @@ class Actor {
       const a = m[this.anim] || m.stance; if (!a) continue;
       const q = a.q[quadroDaAnimacao(a, this.t)][this.dir];
       if (!q || q[2] <= 0) continue;
-      const im = TCOM.img(key); if (!im.complete || !im.naturalWidth) continue;
+      const hue = this.hues && this.hues[key.slice(2)];
+      const im = hue ? TCOM.tinted(key, hue) : TCOM.img(key); if (!im.complete || !im.naturalWidth) continue;
       g.drawImage(im, q[0], q[1], q[2], q[3], Math.round(sx - q[4]), Math.round(sy - q[5]), q[2], q[3]);
     }
     g.globalAlpha = 1;

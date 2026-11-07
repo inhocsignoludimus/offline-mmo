@@ -9,8 +9,8 @@ import argparse, json, os, shutil, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCRIPTS = ['engine/iso.js', 'engine/map.js', 'engine/actor.js', 'engine/render.js',
-           'ui/gumps.js', 'systems/chat.js', 'systems/skills.js', 'systems/magic.js', 'systems/sim.js', 'src/main.js']
-MAP = 'lochport'
+           'ui/gumps.js', 'ui/touch.js', 'systems/chat.js', 'systems/skills.js', 'systems/magic.js', 'systems/combat.js', 'systems/sim.js', 'src/main.js']
+MAPS = ['lochport', 'lochport_cemetery']
 
 
 def load(p, default=None):
@@ -30,10 +30,16 @@ def main():
     shutil.rmtree(out, ignore_errors=True)
     os.makedirs(os.path.join(out, 'ui'))
 
-    m = load(f'engine/dev_assets/flare/{MAP}.json')
-    m['atlasFile'] = f'engine/dev_assets/flare/{m["atlas"]}'
+    maps = {}
+    for mid in MAPS:
+        m = load(f'engine/dev_assets/flare/{mid}.json')
+        m['atlasFile'] = f'engine/dev_assets/flare/{m["atlas"]}'
+        maps[mid] = m
     data = {
-        'map': m,
+        'maps': maps,
+        'monsters': load('data/monsters.json'), 'monArt': load('engine/dev_assets/monsters/monsters.json'),
+        'loot': load('data/loot.json'), 'affixes': load('data/items/affixes.json'), 'sets': load('data/items/sets.json'),
+        'uniques': load('data/items/uniques.json'), 'rarity': load('data/items/rarity.json'), 'hues': load('data/hues.json'),
         'tcom': load('engine/dev_assets/tcom/layers.json'),
         'icons': load('engine/dev_assets/tcom/icons.json'),
         'personalities': load('data/chat/personalities.json'),

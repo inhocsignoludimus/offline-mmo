@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "tree",
+      "name": {
+        "pt": "Árvore",
+        "en": "Tree"
+      },
+      "skill": "lumberjacking",
+      "tool": "axe",
+      "time_s": 1.5,
+      "yields": [
+        {
+          "item": "logs",
+          "amount": [
+            1,
+            3
+          ],
+          "min_skill": 0
+        }
+      ],
+      "notes": "Toros vão direto pra construção; sem etapa de tábua."
+    },
+    {
+      "id": "rock",
+      "name": {
+        "pt": "Rocha",
+        "en": "Rock"
+      },
+      "skill": "mining",
+      "tool": "pickaxe",
+      "time_s": 1.8,
+      "yields": [
+        {
+          "item": "stone",
+          "amount": [
+            1,
+            2
+          ],
+          "min_skill": 0,
+          "always": true
+        },
+        {
+          "item": "iron_ore",
+          "chance_by_skill": [
+            [
+              0,
+              0.55
+            ],
+            [
+              40,
+              0.5
+            ],
+            [
+              70,
+              0.4
+            ]
+          ],
+          "amount": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "copper_ore",
+          "chance_by_skill": [
+            [
+              0,
+              0.2
+            ],
+            [
+              40,
+              0.28
+            ],
+            [
+              70,
+              0.32
+            ]
+          ],
+          "amount": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "silver_ore",
+          "chance_by_skill": [
+            [
+              0,
+              0.05
+            ],
+            [
+              40,
+              0.12
+            ],
+            [
+              70,
+              0.22
+            ]
+          ],
+          "amount": [
+            1,
+            1
+          ]
+        }
+      ],
+      "notes": "Sempre dá stone; minério é chance extra por nível de mining."
+    }
+  ],
+  "stations": [
+    {
+      "id": "forge",
+      "name": {
+        "pt": "Forja",
+        "en": "Forge"
+      },
+      "skill": "blacksmithing",
+      "time_s": 2.0,
+      "recipes": [
+        {
+          "id": "smelt_iron",
+          "in": {
+            "iron_ore": 2
+          },
+          "out": {
+            "iron_ingot": 1
+          },
+          "min_skill": 0
+        },
+        {
+          "id": "smelt_copper",
+          "in": {
+            "copper_ore": 2
+          },
+          "out": {
+            "copper_ingot": 1
+          },
+          "min_skill": 20
+        },
+        {
+          "id": "smelt_silver",
+          "in": {
+            "silver_ore": 2
+          },
+          "out": {
+            "silver_ingot": 1
+          },
+          "min_skill": 50
+        }
+      ]
+    }
+  ]
+}

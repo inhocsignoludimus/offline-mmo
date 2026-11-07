@@ -22,8 +22,7 @@
           "int"
         ]
       },
-      "words": "Shifa Qarib",
-      "icon": "minor_mend",
+      "icon": "scroll_c1",
       "desc": {
         "pt": "Fecha um corte pequeno em quem você tocar.",
         "en": "Closes a small cut on whomever you touch."
@@ -51,8 +50,7 @@
           "int"
         ]
       },
-      "words": "Nar Saghir",
-      "icon": "spark_dart",
+      "icon": "scroll_c1",
       "desc": {
         "pt": "Uma centelha curta queima o alvo.",
         "en": "A short spark burns the target."
@@ -80,8 +78,7 @@
           "magery"
         ]
       },
-      "words": "Ayn Layl",
-      "icon": "night_eye",
+      "icon": "scroll_c1",
       "desc": {
         "pt": "Seus olhos passam a enxergar no escuro por um tempo.",
         "en": "Your eyes see in the dark for a while."
@@ -109,8 +106,7 @@
           "magery"
         ]
       },
-      "words": "Dira Tin",
-      "icon": "soft_hide",
+      "icon": "scroll_c1",
       "desc": {
         "pt": "Uma pele de couro mágico amortece os golpes.",
         "en": "A hide of magic leather softens incoming blows."
@@ -138,8 +134,7 @@
           "magery"
         ]
       },
-      "words": "Yad Rikhwa",
-      "icon": "loose_grip",
+      "icon": "scroll_c1",
       "desc": {
         "pt": "Os dedos do alvo perdem firmeza.",
         "en": "The target's fingers lose their firmness."
@@ -167,8 +162,7 @@
           "magery"
         ]
       },
-      "words": "Aql Wahn",
-      "icon": "dull_wit",
+      "icon": "scroll_c1",
       "desc": {
         "pt": "A mente do alvo embaça por alguns instantes.",
         "en": "The target's mind clouds for a few moments."
@@ -196,8 +190,7 @@
           "magery"
         ]
       },
-      "words": "Jism Rikhwa",
-      "icon": "slack_limb",
+      "icon": "scroll_c1",
       "desc": {
         "pt": "O braço do alvo pesa e a força cai.",
         "en": "The target's arm hangs heavy and strength falls."
@@ -224,8 +217,7 @@
           "magery"
         ]
       },
-      "words": "Khubz Salib",
-      "icon": "pilgrim_loaf",
+      "icon": "scroll_c1",
       "desc": {
         "pt": "Põe pão fresco na mochila.",
         "en": "Puts fresh bread in the pack."
@@ -253,8 +245,7 @@
           "magery"
         ]
       },
-      "words": "Rashaq Qawi",
-      "icon": "firm_step",
+      "icon": "scroll_c2",
       "desc": {
         "pt": "O passo de quem você toca fica leve e certo.",
         "en": "The one you touch steps lighter and surer."
@@ -282,8 +273,7 @@
           "magery"
         ]
       },
-      "words": "Aql Nahar",
-      "icon": "clear_mind",
+      "icon": "scroll_c2",
       "desc": {
         "pt": "Clareia o juízo de um aliado.",
         "en": "Clears an ally's wits."
@@ -313,8 +303,7 @@
           "int"
         ]
       },
-      "words": "Khalsa Milh",
-      "icon": "salt_wash",
+      "icon": "scroll_c2",
       "desc": {
         "pt": "Lava o veneno e fecha um arranhão.",
         "en": "Washes out poison and closes a scratch."
@@ -342,8 +331,7 @@
           "int"
         ]
       },
-      "words": "Saqt Yad",
-      "icon": "open_palm",
+      "icon": "scroll_c2",
       "desc": {
         "pt": "Um golpe de palma invisível empurra o alvo.",
         "en": "An unseen open palm strikes the target."
@@ -371,8 +359,7 @@
           "magery"
         ]
       },
-      "words": "Jism Qawi",
-      "icon": "sinew_gift",
+      "icon": "scroll_c2",
       "desc": {
         "pt": "O tendão de quem você toca endurece.",
         "en": "The sinew of the one you touch grows firm."
@@ -400,8 +387,7 @@
           "magery"
         ]
       },
-      "words": "Haras Jild",
-      "icon": "ward_skin",
+      "icon": "scroll_c2",
       "desc": {
         "pt": "A pele desvia uma parte dos golpes.",
         "en": "The skin turns aside a share of the blows."
@@ -428,8 +414,7 @@
           "magery"
         ]
       },
-      "words": "Lifafa Qarib",
-      "icon": "linen_wrap",
+      "icon": "scroll_c2",
       "desc": {
         "pt": "Tece faixas de linho prontas para estancar.",
         "en": "Weaves linen wraps ready to staunch a wound."
@@ -457,8 +442,7 @@
           "int"
         ]
       },
-      "words": "Nar Yad",
-      "icon": "ember_touch",
+      "icon": "scroll_c2",
       "desc": {
         "pt": "A mão deixa uma brasa no alvo.",
         "en": "The hand leaves an ember on the target."
@@ -492,8 +476,7 @@
           "magery"
         ]
       },
-      "words": "Baraka Nur",
-      "icon": "three_gifts",
+      "icon": "scroll_c3",
       "desc": {
         "pt": "Força, agilidade e juízo sobem juntos por um minuto.",
         "en": "Strength, agility and wits rise together for a minute."
@@ -523,8 +506,7 @@
           "int"
         ]
       },
-      "words": "Nar Rami",
-      "icon": "naphtha_ball",
+      "icon": "scroll_c3",
       "desc": {
         "pt": "Uma bola de nafta estoura em fogo no alvo.",
         "en": "A ball of naphtha bursts into fire on the target."
@@ -555,8 +537,7 @@
           "int"
         ]
       },
-      "words": "Samm Rami",
-      "icon": "resin_sting",
+      "icon": "scroll_c3",
       "desc": {
         "pt": "A resina envenena e dói por alguns segundos.",
         "en": "The resin poisons and hurts for several seconds."
@@ -585,8 +566,7 @@
           "magery"
         ]
       },
-      "words": "Wasat Qarib",
-      "icon": "side_step",
+      "icon": "scroll_c3",
       "desc": {
         "pt": "Você dá um passo curto até o chão marcado.",
         "en": "You take a short step to the marked ground."
@@ -618,8 +598,7 @@
           "magery"
         ]
       },
-      "words": "Hajar Sura",
-      "icon": "lime_curtain",
+      "icon": "scroll_c3",
       "desc": {
         "pt": "Uma cortina de cal viva fecha a passagem.",
         "en": "A curtain of quicklime closes the way."
@@ -649,8 +628,7 @@
           "int"
         ]
       },
-      "words": "Thalj Yad",
-      "icon": "frost_pinch",
+      "icon": "scroll_c3",
       "desc": {
         "pt": "Um frio seco belisca a carne do alvo.",
         "en": "A dry cold pinches the target's flesh."
@@ -685,8 +663,7 @@
           "magery"
         ]
       },
-      "words": "Haras Salib",
-      "icon": "pilgrim_ward",
+      "icon": "scroll_c3",
       "desc": {
         "pt": "O incenso recobre você contra fogo, frio, veneno e energia.",
         "en": "Incense cloaks you against fire, cold, poison and energy."
@@ -716,8 +693,7 @@
           "magery"
         ]
       },
-      "words": "Tubba Ayn",
-      "icon": "dust_blind",
+      "icon": "scroll_c3",
       "desc": {
         "pt": "Pó de cal cobre os olhos e os golpes erram.",
         "en": "Lime dust covers the eyes and blows go wide."
@@ -751,8 +727,7 @@
           "int"
         ]
       },
-      "words": "Khalsa Kabir",
-      "icon": "choir_cleanse",
+      "icon": "scroll_c4",
       "desc": {
         "pt": "Limpa o veneno e cura um pouco, em você e em quem está perto.",
         "en": "Clears poison and mends a little, on you and those nearby."
@@ -783,8 +758,7 @@
           "magery"
         ]
       },
-      "words": "Haras Dira",
-      "icon": "host_aegis",
+      "icon": "scroll_c4",
       "desc": {
         "pt": "Uma égide de cal e prece engrossa a armadura.",
         "en": "An aegis of lime and prayer thickens armor."
@@ -819,8 +793,7 @@
           "magery"
         ]
       },
-      "words": "Laan Arba",
-      "icon": "four_weights",
+      "icon": "scroll_c4",
       "desc": {
         "pt": "Quatro pesos caem sobre força, agilidade e juízo.",
         "en": "Four weights settle on strength, agility and wits."
@@ -852,8 +825,7 @@
           "magery"
         ]
       },
-      "words": "Nar Midan",
-      "icon": "saltfire_line",
+      "icon": "scroll_c4",
       "desc": {
         "pt": "Uma linha de fogo de salitre queima quem a atravessa.",
         "en": "A line of saltpeter fire burns whoever crosses it."
@@ -882,8 +854,7 @@
           "int"
         ]
       },
-      "words": "Shifa Kabir",
-      "icon": "deep_mend",
+      "icon": "scroll_c4",
       "desc": {
         "pt": "Fecha feridas fundas em quem você tocar.",
         "en": "Closes deep wounds on whomever you touch."
@@ -914,8 +885,7 @@
           "int"
         ]
       },
-      "words": "Sama Sahm",
-      "icon": "storm_nail",
+      "icon": "scroll_c4",
       "desc": {
         "pt": "Um prego de tormenta crava energia no alvo.",
         "en": "A storm nail drives energy into the target."
@@ -945,8 +915,7 @@
           "magery"
         ]
       },
-      "words": "Ruh Saqt",
-      "icon": "breath_siphon",
+      "icon": "scroll_c4",
       "desc": {
         "pt": "Suga na hora uma parte da mana do alvo.",
         "en": "Drains a share of the target's mana at once."
@@ -976,8 +945,7 @@
           "magery"
         ]
       },
-      "words": "Bab Markaz",
-      "icon": "shrine_step",
+      "icon": "scroll_c4",
       "desc": {
         "pt": "Leva você de volta ao chão que foi cravado antes.",
         "en": "Carries you back to ground you nailed earlier."
@@ -1008,8 +976,7 @@
           "magery"
         ]
       },
-      "words": "Ruh Hadid",
-      "icon": "blade_djinn",
+      "icon": "scroll_c5",
       "desc": {
         "pt": "Chama um ou dois cavaleiros esqueleto, de lâmina em punho.",
         "en": "Calls one or two skeletal knights, blade in hand."
@@ -1041,8 +1008,7 @@
           "magery"
         ]
       },
-      "words": "Fakk Sura",
-      "icon": "tear_curtain",
+      "icon": "scroll_c5",
       "desc": {
         "pt": "Rasga campos mágicos num pequeno trecho de chão.",
         "en": "Tears magical fields across a small patch of ground."
@@ -1073,8 +1039,7 @@
           "magery"
         ]
       },
-      "words": "Aks Qasam",
-      "icon": "mirror_oath",
+      "icon": "scroll_c5",
       "desc": {
         "pt": "O próximo feitiço hostil volta para quem o lançou.",
         "en": "The next hostile spell turns back on its caster."
@@ -1105,8 +1070,7 @@
           "int"
         ]
       },
-      "words": "Thalj Aql",
-      "icon": "cold_mind",
+      "icon": "scroll_c5",
       "desc": {
         "pt": "Um frio de dentro racha a mente do alvo.",
         "en": "An inner cold cracks the target's mind."
@@ -1137,8 +1101,7 @@
           "magery"
         ]
       },
-      "words": "Qayd Hajar",
-      "icon": "lime_bind",
+      "icon": "scroll_c5",
       "desc": {
         "pt": "A cal prende os pés do alvo por uns instantes.",
         "en": "Lime locks the target's feet for a few moments."
@@ -1170,8 +1133,7 @@
           "magery"
         ]
       },
-      "words": "Samm Midan",
-      "icon": "resin_mire",
+      "icon": "scroll_c5",
       "desc": {
         "pt": "Um lodaçal de mirra envenena quem pisa nele.",
         "en": "A myrrh mire poisons whoever steps in it."
@@ -1201,8 +1163,7 @@
           "magery"
         ]
       },
-      "words": "Ruh Dhib",
-      "icon": "call_jackal",
+      "icon": "scroll_c5",
       "desc": {
         "pt": "Chama um chacal do deserto para o seu lado.",
         "en": "Calls a desert jackal to your side."
@@ -1233,8 +1194,7 @@
           "magery"
         ]
       },
-      "words": "Dam Baraka",
-      "icon": "anoint_edge",
+      "icon": "scroll_c5",
       "desc": {
         "pt": "Unge o fio de uma arma e ela corta mais fundo.",
         "en": "Anoints a weapon's edge so it cuts deeper."
@@ -1265,8 +1225,7 @@
           "magery"
         ]
       },
-      "words": "Fakk Ruh",
-      "icon": "unweave",
+      "icon": "scroll_c6",
       "desc": {
         "pt": "Desfia uma criatura chamada e a devolve ao nada.",
         "en": "Unweaves a summoned creature and sends it back to nothing."
@@ -1297,8 +1256,7 @@
           "int"
         ]
       },
-      "words": "Sahm Zujaj",
-      "icon": "glass_bolt",
+      "icon": "scroll_c6",
       "desc": {
         "pt": "Um raio de vidro e salitre fura o alvo.",
         "en": "A bolt of glass and saltpeter pierces the target."
@@ -1329,8 +1287,7 @@
           "int"
         ]
       },
-      "words": "Nar Fitna",
-      "icon": "kiln_burst",
+      "icon": "scroll_c6",
       "desc": {
         "pt": "O forno estoura em fogo à volta do chão marcado.",
         "en": "The kiln bursts into fire around the marked ground."
@@ -1361,8 +1318,7 @@
           "magery"
         ]
       },
-      "words": "Hijab Ruh",
-      "icon": "myrrh_veil",
+      "icon": "scroll_c6",
       "desc": {
         "pt": "Um véu de mirra esconde você por um tempo.",
         "en": "A veil of myrrh hides you for a time."
@@ -1392,8 +1348,7 @@
           "magery"
         ]
       },
-      "words": "Markaz Salib",
-      "icon": "nail_place",
+      "icon": "scroll_c6",
       "desc": {
         "pt": "Crava este chão para um passo de santuário futuro.",
         "en": "Nails this ground for a later shrine step."
@@ -1429,8 +1384,7 @@
           "magery"
         ]
       },
-      "words": "Laan Jam",
-      "icon": "crowd_malison",
+      "icon": "scroll_c6",
       "desc": {
         "pt": "A maldição pesa em todos que estão no trecho marcado.",
         "en": "The malison weighs on everyone in the marked patch."
@@ -1461,8 +1415,7 @@
           "magery"
         ]
       },
-      "words": "Qayd Midan",
-      "icon": "white_cage",
+      "icon": "scroll_c6",
       "desc": {
         "pt": "Uma jaula branca de cal prende quem a atravessa.",
         "en": "A white lime cage holds whoever crosses it."
@@ -1491,8 +1444,7 @@
           "magery"
         ]
       },
-      "words": "Kashf Hijab",
-      "icon": "strip_veil",
+      "icon": "scroll_c6",
       "desc": {
         "pt": "Arranca o véu de quem se esconde perto do chão marcado.",
         "en": "Strips the veil from anyone hiding near the marked ground."
@@ -1524,8 +1476,7 @@
           "int"
         ]
       },
-      "words": "Silsila Sahm",
-      "icon": "nail_chain",
+      "icon": "scroll_c7",
       "desc": {
         "pt": "Pregos de energia saltam do alvo para quem está perto.",
         "en": "Energy nails leap from the target to those nearby."
@@ -1558,8 +1509,7 @@
           "magery"
         ]
       },
-      "words": "Milh Sura",
-      "icon": "salt_bars",
+      "icon": "scroll_c7",
       "desc": {
         "pt": "Barras de salitre crepitam e ferem quem as toca.",
         "en": "Saltpeter bars crackle and wound whoever touches them."
@@ -1590,8 +1540,7 @@
           "int"
         ]
       },
-      "words": "Nar Burj",
-      "icon": "naphtha_pillar",
+      "icon": "scroll_c7",
       "desc": {
         "pt": "Um pilar de nafta desce em fogo sobre o chão marcado.",
         "en": "A pillar of naphtha comes down in fire on the marked ground."
@@ -1622,8 +1571,7 @@
           "magery"
         ]
       },
-      "words": "Bab Ramal",
-      "icon": "two_sands_door",
+      "icon": "scroll_c7",
       "desc": {
         "pt": "Abre por meio minuto uma porta até o chão cravado.",
         "en": "Opens, for half a minute, a door to the nailed ground."
@@ -1655,8 +1603,7 @@
           "magery"
         ]
       },
-      "words": "Ruh Shurb",
-      "icon": "drink_lamp",
+      "icon": "scroll_c7",
       "desc": {
         "pt": "Bebe a mana do alvo e devolve essa luz a você.",
         "en": "Drinks the target's mana and returns that light to you."
@@ -1687,8 +1634,7 @@
           "magery"
         ]
       },
-      "words": "Fakk Jam",
-      "icon": "scatter_called",
+      "icon": "scroll_c7",
       "desc": {
         "pt": "Espalha de uma vez as criaturas chamadas no trecho.",
         "en": "Scatters summoned creatures in the patch at once."
@@ -1720,8 +1666,7 @@
           "int"
         ]
       },
-      "words": "Najm Saqt",
-      "icon": "falling_stars",
+      "icon": "scroll_c7",
       "desc": {
         "pt": "Estrelas de fogo caem à volta do chão marcado.",
         "en": "Stars of fire fall around the marked ground."
@@ -1753,8 +1698,7 @@
           "magery"
         ]
       },
-      "words": "Tin Sura",
-      "icon": "clay_shape",
+      "icon": "scroll_c7",
       "desc": {
         "pt": "Seu corpo toma a forma de um golem das ruínas.",
         "en": "Your body takes the shape of a ruin golem."
@@ -1785,8 +1729,7 @@
           "int"
         ]
       },
-      "words": "Zalzal Ard",
-      "icon": "split_ground",
+      "icon": "scroll_c8",
       "desc": {
         "pt": "O chão se fende e sacode todos à volta.",
         "en": "The ground splits and shakes everyone around it."
@@ -1817,8 +1760,7 @@
           "magery"
         ]
       },
-      "words": "Hadid Qarn",
-      "icon": "labyrinth_rush",
+      "icon": "scroll_c8",
       "desc": {
         "pt": "Traz um minotauro que investe contra quem estiver perto.",
         "en": "Brings a minotaur that rushes whoever stands nearby."
@@ -1848,8 +1790,7 @@
           "int"
         ]
       },
-      "words": "Qiyam Haya",
-      "icon": "raise_fallen",
+      "icon": "scroll_c8",
       "desc": {
         "pt": "Ergue um corpo caído e devolve vida a ele.",
         "en": "Raises a fallen body and returns life to it."
@@ -1879,8 +1820,7 @@
           "magery"
         ]
       },
-      "words": "Nar Jinn",
-      "icon": "call_kiln",
+      "icon": "scroll_c8",
       "desc": {
         "pt": "O forno responde com uma wyvern de fogo.",
         "en": "The kiln answers with a fire wyvern."
@@ -1910,8 +1850,7 @@
           "magery"
         ]
       },
-      "words": "Hajar Jinn",
-      "icon": "call_quarry",
+      "icon": "scroll_c8",
       "desc": {
         "pt": "Ergue um elemental de rocha da pedreira.",
         "en": "Raises a rock elemental from the quarry."
@@ -1942,8 +1881,7 @@
           "magery"
         ]
       },
-      "words": "Rih Jinn",
-      "icon": "call_simoom",
+      "icon": "scroll_c8",
       "desc": {
         "pt": "O simum traz uma wyvern do ar.",
         "en": "The simoom brings an air wyvern."
@@ -1974,8 +1912,7 @@
           "magery"
         ]
       },
-      "words": "Ma Jinn",
-      "icon": "call_cistern",
+      "icon": "scroll_c8",
       "desc": {
         "pt": "A cisterna solta um caranguejo gigante.",
         "en": "The cistern looses a giant crab."
@@ -2011,8 +1948,7 @@
           "magery"
         ]
       },
-      "words": "Khatm Thamin",
-      "icon": "eighth_seal",
+      "icon": "scroll_c8",
       "desc": {
         "pt": "O oitavo selo fecha você contra fogo, frio, veneno e energia.",
         "en": "The eighth seal closes you against fire, cold, poison and energy."
