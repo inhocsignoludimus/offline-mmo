@@ -206,7 +206,7 @@ const BuildGump = {
 // Salvamento no navegador: personagem, mochila, skills, posição e construções
 // ---------------------------------------------------------------------
 const Save = {
-  key() { return 'save.' + Game.player.name; },
+  key() { return 'save2.' + Game.player.name; },   // save2: começo só com roupa simples
   soon() { clearTimeout(this._t); this._t = setTimeout(() => this.write(), 1500); },
   item(i) { return { id: i.id, qty: i.qty, rarity: i.rarity, affixes: i.affixes, hue: i.hue, name: i.name, set: i.set, unique: i.unique, bx: i.bx, by: i.by }; },
   write() {

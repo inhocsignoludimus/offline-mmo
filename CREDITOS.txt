@@ -207,3 +207,4 @@ griffin (grifo) — art/monsters/griffin/
     CAMADAS_ANIM JSON with feet anchor.
   No Ultima Online / EA assets used.
 Efeitos de magia (engine/dev_assets/powers): Flare (flare-game, images/powers), CC-BY-SA 3.0.
+Parte dos ícones de itens (engine/dev_assets/tcom/icons.webp): Flare (flare-game, images/icons), CC-BY-SA 3.0.

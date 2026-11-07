@@ -15,7 +15,7 @@ const Items = {
   twoHanded(d) { return ['arco', 'besta', 'lanca', 'infantry_axe', 'cajado', 'bastao'].includes(this.layer(d)) || /staff/.test(d.id); },
 };
 // Não há classe fixa, como no UO: o kit inicial só decide por onde você começa
-// (4 skills e o equipamento). Qualquer skill sobe com o uso (systems/skills.js).
+// (4 skills; o equipamento da lista é só referência do estilo, todos começam com roupa simples). Qualquer skill sobe com o uso (systems/skills.js).
 const ROUPA = ['cloth_shirt', 'cloth_pants', 'cloth_sandals'];
 const KITS = {
   guerreiro: { nome: 'Guerreiro', equip: ['gambeson', 'chain_greaves', 'leather_boots', 'leather_gloves', 'nasal_helm', 'longsword', 'buckler'], base: ['male_head1'], skills: { swordsmanship: 50, tactics: 45, parrying: 30, anatomy: 25 }, bag: [['bandage', 8], ['heal_potion', 2]] },
@@ -63,8 +63,9 @@ const Game = {
       skills: Skills.start(cfg.cls === 'livre' ? cfg.free : cls.skills), equip: {}, bag: [],
       weight() { let w = 0; for (const i of this.bag) w += (i.d.weight || 0) * i.qty; for (const k in this.equip) w += this.equip[k].d.weight || 0; return Math.round(w); },
     };
-    for (const id of cls.equip) { const it = this.item(id); if (it) this.player.equip[it.d.slot] = it; }
-    cls.bag.forEach(([id, n]) => this.give(id, n || 1));
+    // todo mundo começa só com roupa simples: arma, armadura e ferramenta se conquistam no mundo
+    for (const id of ROUPA) { const it = this.item(id); if (it) this.player.equip[it.d.slot] = it; }
+    cls.bag.forEach(([id, n]) => { const d = Items.def(id); if (d && ['consumable', 'resource', 'reagent'].includes(d.type)) this.give(id, Math.min(n || 1, 10)); });
     this.rebuildLook(); Combat.recompute(); this.player.hp = this.player.hpMax; this.player.mp = this.player.mpMax;
     this.playerSim = { name: cfg.name, online: true, near: true, pers: 'novato' };
     this.actors.push(actor);
