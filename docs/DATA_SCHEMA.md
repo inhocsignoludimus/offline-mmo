@@ -300,4 +300,100 @@ Mundo **contínuo** (um único mapa). `chunks` são regiões desse mapa, não ma
 ```
 * `origin` / `chunks[].rect`: coordenadas do mapa único (`world.map`).
 * Fonte do mapa: `art/maps/<map>.txt` (+ `src/<map>.tmx`). JSON em `engine/dev_assets/flare/` é gerado pelo build.
+* `world.size` é a fatia autoral já desenhada (hoje `[98, 60]`, Lochport + Bosque da Vila). O mundo alvo mora em `world.design_size` (`[2048, 2048]`), `world.chunk` (`[64, 64]`) e `world.layout` (`world_layout.json`). `world.authored_stamp` é o tile onde essa fatia entra no mapa grande. Não mover `origin` nem `chunks[].rect` da fatia: `world_origin` da zona é o carimbo já somado.
+* Cada zona e cada chunk podem trazer `build`, `danger` (1–5), `invasion` (bool) e `resources`.
+
+## data/world_layout.json — grelha grossa
+
+32×32 células, cada uma 64×64 tiles. `(0,0)` é noroeste, Y cresce para o sul. O tile da célula `(x,y)` é `(x*64, y*64)`.
+
+```json
+{ "version": 1,
+  "map": "mundo",
+  "cells": [32, 32], "cell_tiles": [64, 64], "tile_size": [2048, 2048],
+  "rows": [ [ { "biome": "plains", "zone": "city", "level": 0, "danger": 1,
+    "build": "proibido", "invasion": false, "road": true, "river": false, "water": false,
+    "resources": {"common": ["logs", "stone"], "rare": []}, "monsters": [],
+    "city_id": "aurelia" } ] ] }
+```
+
+* `biome`: um id de `data/lore/biomes.json`. Água usa `coast` com `water: true`.
+* `zone`: `city`, `frontier`, `open`, `dangerous` ou `boss`.
+* `build`: `proibido` (cidade), `fronteira` (lote pequeno, sem invasão), `aberta` (lote depois de abrir a região) ou `nao` (água, arena, caça desenhada).
+* `level`: nível de monstro da célula. `danger`: 1 a 5.
+* `resources.rare` fica vazio em `city`, `frontier` e no Bosque da Vila. Prata inclusive.
+* `requested_monster`, quando existe, é um id que **ainda não** está em `monsters.json`.
+* `sim_slots` e `guild_hall` dizem onde o simulado mora. A tag tem de existir em `guilds.json`.
+* `roads[]`, `rivers[]`, `settlements[]`, `bosses[]` e `housing` são o índice. A célula continua a ser a verdade do tile.
+* `dungeons.status` é `undecided`. Entrada futura volta para o mesmo tile. Não é troca de mapa.
+
+## data/zones.json — regions[]
+
+Além das zonas da fatia, `regions` cobre as 1024 células, cada célula numa região só.
+
+```json
+{ "id": "frontier_aurelia", "name": {"pt": "Fronteira de Aurélia", "en": "Aurelia Frontier"},
+  "biomes": ["plains"], "zone": "frontier", "build": "fronteira",
+  "danger": 1, "level": 1, "invasion": false,
+  "resources": {"common": ["logs", "stone", "iron_ore", "copper_ore"], "rare": []},
+  "cells": [[13, 17], [14, 17]], "cell_span": [13, 17, 3, 3],
+  "settlement": "aurelia",
+  "unlock": {"kind": "always"} }
+```
+
+* `unlock.kind`: `always`, `visit` (exige `city`) ou `any`.
+* `any`: basta o `camp` (id, `monster` que existe, `count`), **ou** `skill_min` em uma skill de `skill_any`, **ou** `reputation` (`city` + `min`).
+* No perigoso, `requires_region` (o aberto do mesmo bioma) vem antes desse ou.
+* `services` de uma cidade: `bank`, `healer`, `trainer`, `contract_board`, `moon_portal`, `stall_market`.
+* `vendors`: ids de `data/npcs/vendors.json`.
+* `danger` e `level` são um número ou `[min, max]` quando a região mistura células.
+
+## data/invasions.json
+
+Hordas PvE contra base em `open` ou `dangerous`. `pvp` é `false`. Fronteira, cidade, água e arena não entram. O relógio é `owner_online`.
+
+```json
+{ "version": 1, "pvp": false,
+  "rules": {"frontier_invaded": false, "clock": "owner_online", "min_pieces": 4},
+  "protected": {"deed": true, "home_chest": true, "bank": true, "equipped": true},
+  "loss": {"wall_fraction_max": {"2": 0.2, "3": 0.3, "4": 0.45},
+           "offline": {"loot_chests": false, "repair_to_bank": true}},
+  "defenses": [ {"piece": "wall_stone", "exists": true, "role": "wall"},
+                {"piece": "tower_stone", "exists": false, "role": "range"} ],
+  "hordes": [ {"id": "plains_d2", "biome": "plains", "danger": 2, "zone": "open",
+    "every_min": [480, 720], "warning_s": 180, "size": [4, 7], "clock": "owner_online",
+    "composition": [["goblin", 4], ["goblin_runner", 2]],
+    "announce": {"pt": "...", "en": "..."},
+    "rewards": {"gold": [25, 50], "items": {"logs": [3, 6]}, "chance": [["bandage", 0.6, [1, 3]]]} } ] }
+```
+
+* `composition` lista `[monstro, peso]`. `size` é o total de cabeças.
+* Peça com `exists: true` tem de estar em `building.json`. `tower_stone` é pedido (`exists: false`).
+* Recompensa usa item que existe. Não é farm melhor que chefe.
+* Offline não esvazia o baú da casa. O conserto vai para o banco.
+
+## data/contracts.json
+
+Quadro da cidade, envio da base e banca. `pvp` é `false`. Nada se perde no caminho.
+
+```json
+{ "version": 1, "pvp": false,
+  "delivery": {"nearest_capital_fee": 0, "other_city_fee": [5, 15], "from": ["base_chest", "backpack"]},
+  "stall": {"item": "deed_market_stall", "per_player": 1, "counts_as_lot": false, "where": "stall_market"},
+  "orders": [ {"id": "aurelia_toros", "city": "aurelia", "ask": {"logs": 15},
+    "gold": [35, 55], "reputation": 2} ] }
+```
+
+* A cidade do pedido tem `contract_board` na região.
+* `ask` tem um item só (de `base.json` ou `reagents.json`), quantidade 1–30.
+* `reputation` é 1–3, naquela cidade. Não cumprir não pune.
+* A banca não gasta o lote único da base.
+
+## data/portals.json — rede das capitais
+
+Continua só `kind: moon`, três `phases`, cada uma uma cidade de `biomes.json`. `network: capital` liga as oito capitais nos dois sentidos. `network: local` é a pedra de vila (Porto do Trigo, Acre, Montgisard, Qasr, Musgo). Sem `road` e sem `pvp`.
+
+## data/events.json — place.region
+
+O evento antigo guarda `place.zone` (Bosque da Vila). O evento do mapa grande guarda `place.region`, um id de `zones.json` → `regions`. Os dois podem vir juntos. `contest` continua `guild_damage`.
 

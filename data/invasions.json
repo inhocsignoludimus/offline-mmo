@@ -1,0 +1,1843 @@
+{
+  "version": 1,
+  "pvp": false,
+  "rules": {
+    "frontier_invaded": false,
+    "city_invaded": false,
+    "boss_arena_invaded": false,
+    "water_invaded": false,
+    "requires_zone": [
+      "open",
+      "dangerous"
+    ],
+    "requires_build": [
+      "aberta"
+    ],
+    "requires_piece_kinds": [
+      "wall",
+      "gate"
+    ],
+    "min_pieces": 4,
+    "clock": "owner_online",
+    "not_during_boss_event": true,
+    "prefer_far_from_city": true,
+    "one_active_per_base": true
+  },
+  "protected": {
+    "deed": true,
+    "home_chest": true,
+    "bank": true,
+    "equipped": true
+  },
+  "loss": {
+    "wall_fraction_max": {
+      "2": 0.2,
+      "3": 0.3,
+      "4": 0.45
+    },
+    "chests_looted_max": {
+      "2": 0,
+      "3": 1,
+      "4": 1
+    },
+    "offline": {
+      "loot_chests": false,
+      "wall_fraction_max": 0.15,
+      "repair_to_bank": true,
+      "note": {
+        "pt": "Quem está fora não perde o baú da casa. No máximo umas paredes racham, e a pedra ou o toro do conserto já está no banco.",
+        "en": "An offline owner does not lose the home chest. A few walls crack at most, and the stone or logs to fix them are already in the bank."
+      }
+    }
+  },
+  "targets": [
+    {
+      "id": "gate",
+      "pieces": [
+        "gate_wood",
+        "gate_iron"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "door",
+      "pieces": [
+        "door_wood",
+        "door_iron"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "wall",
+      "pieces": [
+        "wall_wood",
+        "wall_stone"
+      ],
+      "priority": 3
+    },
+    {
+      "id": "fence",
+      "pieces": [
+        "fence_wood",
+        "fence_stone"
+      ],
+      "priority": 4
+    },
+    {
+      "id": "chest",
+      "pieces": [
+        "wooden_chest"
+      ],
+      "priority": 5,
+      "skip_role": "home_chest"
+    }
+  ],
+  "defenses": [
+    {
+      "piece": "fence_wood",
+      "tier": 1,
+      "exists": true,
+      "role": "delay"
+    },
+    {
+      "piece": "wall_wood",
+      "tier": 1,
+      "exists": true,
+      "role": "wall"
+    },
+    {
+      "piece": "fence_stone",
+      "tier": 2,
+      "exists": true,
+      "role": "delay"
+    },
+    {
+      "piece": "wall_stone",
+      "tier": 2,
+      "exists": true,
+      "role": "wall"
+    },
+    {
+      "piece": "gate_iron",
+      "tier": 3,
+      "exists": true,
+      "role": "choke"
+    },
+    {
+      "piece": "door_iron",
+      "tier": 3,
+      "exists": true,
+      "role": "choke"
+    },
+    {
+      "piece": "tower_stone",
+      "tier": 3,
+      "exists": false,
+      "role": "range",
+      "stand_in": "Uma sala 1×1 de wall_stone com gate_iron conta como reduto até a peça existir."
+    }
+  ],
+  "sim": {
+    "cosmetic": true,
+    "repairs_self": true,
+    "chat_ctx": "raid_call",
+    "note": {
+      "pt": "Casa de simulado racha e é consertada sozinha. Serve de conversa no chat, não de prejuízo.",
+      "en": "A simulated homestead cracks and repairs itself. It is chat, not a loss."
+    }
+  },
+  "hordes": [
+    {
+      "id": "plains_d2",
+      "biome": "plains",
+      "danger": 2,
+      "zone": "open",
+      "every_min": [
+        480,
+        720
+      ],
+      "clock": "owner_online",
+      "warning_s": 180,
+      "size": [
+        4,
+        7
+      ],
+      "composition": [
+        [
+          "goblin",
+          4
+        ],
+        [
+          "goblin_runner",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Berrante em {place}: uma manada desce do campo.",
+        "en": "A horn at {place}: a pack is coming off the fields."
+      },
+      "rewards": {
+        "gold": [
+          25,
+          50
+        ],
+        "items": {
+          "logs": [
+            3,
+            6
+          ],
+          "stone": [
+            3,
+            6
+          ]
+        },
+        "chance": [
+          [
+            "bandage",
+            0.6,
+            [
+              1,
+              3
+            ]
+          ],
+          [
+            "heal_potion",
+            0.25,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "plains_d3",
+      "biome": "plains",
+      "danger": 3,
+      "zone": "open",
+      "every_min": [
+        240,
+        420
+      ],
+      "clock": "owner_online",
+      "warning_s": 120,
+      "size": [
+        8,
+        12
+      ],
+      "composition": [
+        [
+          "goblin",
+          4
+        ],
+        [
+          "goblin_spearman",
+          3
+        ],
+        [
+          "skeleton",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Berrante em {place}: uma manada desce do campo.",
+        "en": "A horn at {place}: a pack is coming off the fields."
+      },
+      "rewards": {
+        "gold": [
+          40,
+          80
+        ],
+        "items": {
+          "logs": [
+            4,
+            8
+          ],
+          "stone": [
+            4,
+            8
+          ],
+          "iron_ingot": [
+            1,
+            2
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.4,
+            [
+              1,
+              1
+            ]
+          ],
+          [
+            "cure_potion",
+            0.2,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "plains_d4",
+      "biome": "plains",
+      "danger": 4,
+      "zone": "dangerous",
+      "every_min": [
+        150,
+        240
+      ],
+      "clock": "owner_online",
+      "warning_s": 90,
+      "size": [
+        12,
+        18
+      ],
+      "composition": [
+        [
+          "goblin_elite",
+          2
+        ],
+        [
+          "goblin_spearman",
+          4
+        ],
+        [
+          "skeleton_archer",
+          3
+        ],
+        [
+          "wyvern",
+          1
+        ]
+      ],
+      "announce": {
+        "pt": "Berrante em {place}: uma manada desce do campo.",
+        "en": "A horn at {place}: a pack is coming off the fields."
+      },
+      "rewards": {
+        "gold": [
+          70,
+          120
+        ],
+        "items": {
+          "logs": [
+            6,
+            10
+          ],
+          "stone": [
+            6,
+            10
+          ],
+          "iron_ingot": [
+            1,
+            3
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.5,
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "greater_bandage",
+            0.3,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "forest_d2",
+      "biome": "forest",
+      "danger": 2,
+      "zone": "open",
+      "every_min": [
+        480,
+        720
+      ],
+      "clock": "owner_online",
+      "warning_s": 180,
+      "size": [
+        4,
+        7
+      ],
+      "composition": [
+        [
+          "goblin",
+          3
+        ],
+        [
+          "goblin_runner",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Tambor no {place}: o bosque solta a matilha.",
+        "en": "A drum at {place}: the wood lets the pack loose."
+      },
+      "rewards": {
+        "gold": [
+          25,
+          50
+        ],
+        "items": {
+          "logs": [
+            3,
+            6
+          ],
+          "stone": [
+            3,
+            6
+          ]
+        },
+        "chance": [
+          [
+            "bandage",
+            0.6,
+            [
+              1,
+              3
+            ]
+          ],
+          [
+            "heal_potion",
+            0.25,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "forest_d3",
+      "biome": "forest",
+      "danger": 3,
+      "zone": "open",
+      "every_min": [
+        240,
+        420
+      ],
+      "clock": "owner_online",
+      "warning_s": 120,
+      "size": [
+        8,
+        12
+      ],
+      "composition": [
+        [
+          "goblin_shaman",
+          2
+        ],
+        [
+          "goblin",
+          4
+        ],
+        [
+          "skeleton",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Tambor no {place}: o bosque solta a matilha.",
+        "en": "A drum at {place}: the wood lets the pack loose."
+      },
+      "rewards": {
+        "gold": [
+          40,
+          80
+        ],
+        "items": {
+          "logs": [
+            4,
+            8
+          ],
+          "stone": [
+            4,
+            8
+          ],
+          "iron_ingot": [
+            1,
+            2
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.4,
+            [
+              1,
+              1
+            ]
+          ],
+          [
+            "cure_potion",
+            0.2,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "forest_d4",
+      "biome": "forest",
+      "danger": 4,
+      "zone": "dangerous",
+      "every_min": [
+        150,
+        240
+      ],
+      "clock": "owner_online",
+      "warning_s": 90,
+      "size": [
+        12,
+        18
+      ],
+      "composition": [
+        [
+          "goblin_elite",
+          2
+        ],
+        [
+          "goblin_shaman",
+          2
+        ],
+        [
+          "skeleton",
+          4
+        ]
+      ],
+      "announce": {
+        "pt": "Tambor no {place}: o bosque solta a matilha.",
+        "en": "A drum at {place}: the wood lets the pack loose."
+      },
+      "rewards": {
+        "gold": [
+          70,
+          120
+        ],
+        "items": {
+          "logs": [
+            6,
+            10
+          ],
+          "stone": [
+            6,
+            10
+          ],
+          "iron_ingot": [
+            1,
+            3
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.5,
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "greater_bandage",
+            0.3,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mountains_d2",
+      "biome": "mountains",
+      "danger": 2,
+      "zone": "open",
+      "every_min": [
+        480,
+        720
+      ],
+      "clock": "owner_online",
+      "warning_s": 180,
+      "size": [
+        4,
+        7
+      ],
+      "composition": [
+        [
+          "goblin",
+          4
+        ],
+        [
+          "skeleton",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Pedra rolando em {place}: a serra desce para o portão.",
+        "en": "Stone rolling at {place}: the ridge is coming for the gate."
+      },
+      "rewards": {
+        "gold": [
+          25,
+          50
+        ],
+        "items": {
+          "logs": [
+            3,
+            6
+          ],
+          "stone": [
+            3,
+            6
+          ]
+        },
+        "chance": [
+          [
+            "bandage",
+            0.6,
+            [
+              1,
+              3
+            ]
+          ],
+          [
+            "heal_potion",
+            0.25,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mountains_d3",
+      "biome": "mountains",
+      "danger": 3,
+      "zone": "open",
+      "every_min": [
+        240,
+        420
+      ],
+      "clock": "owner_online",
+      "warning_s": 120,
+      "size": [
+        8,
+        12
+      ],
+      "composition": [
+        [
+          "hobgoblin",
+          3
+        ],
+        [
+          "goblin_elite",
+          3
+        ],
+        [
+          "skeleton",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Pedra rolando em {place}: a serra desce para o portão.",
+        "en": "Stone rolling at {place}: the ridge is coming for the gate."
+      },
+      "rewards": {
+        "gold": [
+          40,
+          80
+        ],
+        "items": {
+          "logs": [
+            4,
+            8
+          ],
+          "stone": [
+            4,
+            8
+          ],
+          "iron_ingot": [
+            1,
+            2
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.4,
+            [
+              1,
+              1
+            ]
+          ],
+          [
+            "cure_potion",
+            0.2,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mountains_d4",
+      "biome": "mountains",
+      "danger": 4,
+      "zone": "dangerous",
+      "every_min": [
+        150,
+        240
+      ],
+      "clock": "owner_online",
+      "warning_s": 90,
+      "size": [
+        12,
+        18
+      ],
+      "composition": [
+        [
+          "hobgoblin_archer",
+          3
+        ],
+        [
+          "minotaur",
+          1
+        ],
+        [
+          "boulder",
+          2
+        ],
+        [
+          "skeleton_knight",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Pedra rolando em {place}: a serra desce para o portão.",
+        "en": "Stone rolling at {place}: the ridge is coming for the gate."
+      },
+      "rewards": {
+        "gold": [
+          70,
+          120
+        ],
+        "items": {
+          "logs": [
+            6,
+            10
+          ],
+          "stone": [
+            6,
+            10
+          ],
+          "iron_ingot": [
+            1,
+            3
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.5,
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "greater_bandage",
+            0.3,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "north_d2",
+      "biome": "north",
+      "danger": 2,
+      "zone": "open",
+      "every_min": [
+        480,
+        720
+      ],
+      "clock": "owner_online",
+      "warning_s": 180,
+      "size": [
+        4,
+        7
+      ],
+      "composition": [
+        [
+          "frozen_zombie",
+          3
+        ],
+        [
+          "antlion_freezer",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Vento cortante em {place}: o gelo caminha.",
+        "en": "A cutting wind at {place}: the ice is walking."
+      },
+      "rewards": {
+        "gold": [
+          25,
+          50
+        ],
+        "items": {
+          "logs": [
+            3,
+            6
+          ],
+          "stone": [
+            3,
+            6
+          ]
+        },
+        "chance": [
+          [
+            "bandage",
+            0.6,
+            [
+              1,
+              3
+            ]
+          ],
+          [
+            "heal_potion",
+            0.25,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "north_d3",
+      "biome": "north",
+      "danger": 3,
+      "zone": "open",
+      "every_min": [
+        240,
+        420
+      ],
+      "clock": "owner_online",
+      "warning_s": 120,
+      "size": [
+        8,
+        12
+      ],
+      "composition": [
+        [
+          "frozen_zombie",
+          4
+        ],
+        [
+          "skeleton_mage_ice",
+          2
+        ],
+        [
+          "antlion_freezer",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Vento cortante em {place}: o gelo caminha.",
+        "en": "A cutting wind at {place}: the ice is walking."
+      },
+      "rewards": {
+        "gold": [
+          40,
+          80
+        ],
+        "items": {
+          "logs": [
+            4,
+            8
+          ],
+          "stone": [
+            4,
+            8
+          ],
+          "iron_ingot": [
+            1,
+            2
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.4,
+            [
+              1,
+              1
+            ]
+          ],
+          [
+            "cure_potion",
+            0.2,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "north_d4",
+      "biome": "north",
+      "danger": 4,
+      "zone": "dangerous",
+      "every_min": [
+        150,
+        240
+      ],
+      "clock": "owner_online",
+      "warning_s": 90,
+      "size": [
+        12,
+        18
+      ],
+      "composition": [
+        [
+          "wyvern_air",
+          1
+        ],
+        [
+          "skeleton_mage_ice",
+          2
+        ],
+        [
+          "frozen_zombie",
+          5
+        ],
+        [
+          "antlion_freezer",
+          3
+        ]
+      ],
+      "announce": {
+        "pt": "Vento cortante em {place}: o gelo caminha.",
+        "en": "A cutting wind at {place}: the ice is walking."
+      },
+      "rewards": {
+        "gold": [
+          70,
+          120
+        ],
+        "items": {
+          "logs": [
+            6,
+            10
+          ],
+          "stone": [
+            6,
+            10
+          ],
+          "iron_ingot": [
+            1,
+            3
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.5,
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "greater_bandage",
+            0.3,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "swamp_d2",
+      "biome": "swamp",
+      "danger": 2,
+      "zone": "open",
+      "every_min": [
+        480,
+        720
+      ],
+      "clock": "owner_online",
+      "warning_s": 180,
+      "size": [
+        4,
+        7
+      ],
+      "composition": [
+        [
+          "zombie_rotting",
+          3
+        ],
+        [
+          "antlion_hatchling",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Sino abafado em {place}: o brejo sobe pelas estacas.",
+        "en": "A muffled bell at {place}: the bog is climbing the stilts."
+      },
+      "rewards": {
+        "gold": [
+          25,
+          50
+        ],
+        "items": {
+          "logs": [
+            3,
+            6
+          ],
+          "stone": [
+            3,
+            6
+          ]
+        },
+        "chance": [
+          [
+            "bandage",
+            0.6,
+            [
+              1,
+              3
+            ]
+          ],
+          [
+            "heal_potion",
+            0.25,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "swamp_d3",
+      "biome": "swamp",
+      "danger": 3,
+      "zone": "open",
+      "every_min": [
+        240,
+        420
+      ],
+      "clock": "owner_online",
+      "warning_s": 120,
+      "size": [
+        8,
+        12
+      ],
+      "composition": [
+        [
+          "zombie",
+          4
+        ],
+        [
+          "zombie_rotting",
+          2
+        ],
+        [
+          "skeleton",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Sino abafado em {place}: o brejo sobe pelas estacas.",
+        "en": "A muffled bell at {place}: the bog is climbing the stilts."
+      },
+      "rewards": {
+        "gold": [
+          40,
+          80
+        ],
+        "items": {
+          "logs": [
+            4,
+            8
+          ],
+          "stone": [
+            4,
+            8
+          ],
+          "iron_ingot": [
+            1,
+            2
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.4,
+            [
+              1,
+              1
+            ]
+          ],
+          [
+            "cure_potion",
+            0.2,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "swamp_d4",
+      "biome": "swamp",
+      "danger": 4,
+      "zone": "dangerous",
+      "every_min": [
+        150,
+        240
+      ],
+      "clock": "owner_online",
+      "warning_s": 90,
+      "size": [
+        12,
+        18
+      ],
+      "composition": [
+        [
+          "zombie_dark",
+          3
+        ],
+        [
+          "antlion",
+          2
+        ],
+        [
+          "wyvern_water",
+          1
+        ],
+        [
+          "zombie",
+          4
+        ]
+      ],
+      "announce": {
+        "pt": "Sino abafado em {place}: o brejo sobe pelas estacas.",
+        "en": "A muffled bell at {place}: the bog is climbing the stilts."
+      },
+      "rewards": {
+        "gold": [
+          70,
+          120
+        ],
+        "items": {
+          "logs": [
+            6,
+            10
+          ],
+          "stone": [
+            6,
+            10
+          ],
+          "iron_ingot": [
+            1,
+            3
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.5,
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "greater_bandage",
+            0.3,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "outremer_d2",
+      "biome": "outremer",
+      "danger": 2,
+      "zone": "open",
+      "every_min": [
+        480,
+        720
+      ],
+      "clock": "owner_online",
+      "warning_s": 180,
+      "size": [
+        4,
+        7
+      ],
+      "composition": [
+        [
+          "antlion_hatchling",
+          3
+        ],
+        [
+          "skeleton",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Poeira em {place}: a areia traz a coluna.",
+        "en": "Dust at {place}: the sand is bringing a column."
+      },
+      "rewards": {
+        "gold": [
+          25,
+          50
+        ],
+        "items": {
+          "logs": [
+            3,
+            6
+          ],
+          "stone": [
+            3,
+            6
+          ]
+        },
+        "chance": [
+          [
+            "bandage",
+            0.6,
+            [
+              1,
+              3
+            ]
+          ],
+          [
+            "heal_potion",
+            0.25,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "outremer_d3",
+      "biome": "outremer",
+      "danger": 3,
+      "zone": "open",
+      "every_min": [
+        240,
+        420
+      ],
+      "clock": "owner_online",
+      "warning_s": 120,
+      "size": [
+        8,
+        12
+      ],
+      "composition": [
+        [
+          "fire_ant",
+          3
+        ],
+        [
+          "antlion_spitter",
+          2
+        ],
+        [
+          "skeleton",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Poeira em {place}: a areia traz a coluna.",
+        "en": "Dust at {place}: the sand is bringing a column."
+      },
+      "rewards": {
+        "gold": [
+          40,
+          80
+        ],
+        "items": {
+          "logs": [
+            4,
+            8
+          ],
+          "stone": [
+            4,
+            8
+          ],
+          "iron_ingot": [
+            1,
+            2
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.4,
+            [
+              1,
+              1
+            ]
+          ],
+          [
+            "cure_potion",
+            0.2,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "outremer_d4",
+      "biome": "outremer",
+      "danger": 4,
+      "zone": "dangerous",
+      "every_min": [
+        150,
+        240
+      ],
+      "clock": "owner_online",
+      "warning_s": 90,
+      "size": [
+        12,
+        18
+      ],
+      "composition": [
+        [
+          "antlion",
+          2
+        ],
+        [
+          "antlion_armored",
+          1
+        ],
+        [
+          "skeleton_mage_fire",
+          2
+        ],
+        [
+          "wyvern_fire",
+          1
+        ]
+      ],
+      "announce": {
+        "pt": "Poeira em {place}: a areia traz a coluna.",
+        "en": "Dust at {place}: the sand is bringing a column."
+      },
+      "rewards": {
+        "gold": [
+          70,
+          120
+        ],
+        "items": {
+          "logs": [
+            6,
+            10
+          ],
+          "stone": [
+            6,
+            10
+          ],
+          "iron_ingot": [
+            1,
+            3
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.5,
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "greater_bandage",
+            0.3,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ruins_d2",
+      "biome": "ruins",
+      "danger": 2,
+      "zone": "open",
+      "every_min": [
+        480,
+        720
+      ],
+      "clock": "owner_online",
+      "warning_s": 180,
+      "size": [
+        4,
+        7
+      ],
+      "composition": [
+        [
+          "skeleton",
+          4
+        ],
+        [
+          "zombie",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Sino rachado em {place}: os ossos acharam a cerca.",
+        "en": "A cracked bell at {place}: the bones have found the fence."
+      },
+      "rewards": {
+        "gold": [
+          25,
+          50
+        ],
+        "items": {
+          "logs": [
+            3,
+            6
+          ],
+          "stone": [
+            3,
+            6
+          ]
+        },
+        "chance": [
+          [
+            "bandage",
+            0.6,
+            [
+              1,
+              3
+            ]
+          ],
+          [
+            "heal_potion",
+            0.25,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ruins_d3",
+      "biome": "ruins",
+      "danger": 3,
+      "zone": "open",
+      "every_min": [
+        240,
+        420
+      ],
+      "clock": "owner_online",
+      "warning_s": 120,
+      "size": [
+        8,
+        12
+      ],
+      "composition": [
+        [
+          "skeleton_knight",
+          2
+        ],
+        [
+          "skeleton_mage",
+          2
+        ],
+        [
+          "zombie_ghost",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Sino rachado em {place}: os ossos acharam a cerca.",
+        "en": "A cracked bell at {place}: the bones have found the fence."
+      },
+      "rewards": {
+        "gold": [
+          40,
+          80
+        ],
+        "items": {
+          "logs": [
+            4,
+            8
+          ],
+          "stone": [
+            4,
+            8
+          ],
+          "iron_ingot": [
+            1,
+            2
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.4,
+            [
+              1,
+              1
+            ]
+          ],
+          [
+            "cure_potion",
+            0.2,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ruins_d4",
+      "biome": "ruins",
+      "danger": 4,
+      "zone": "dangerous",
+      "every_min": [
+        150,
+        240
+      ],
+      "clock": "owner_online",
+      "warning_s": 90,
+      "size": [
+        12,
+        18
+      ],
+      "composition": [
+        [
+          "necromancer_apprentice",
+          1
+        ],
+        [
+          "skeleton_knight_boss",
+          1
+        ],
+        [
+          "zombie_dark",
+          3
+        ],
+        [
+          "minotaur",
+          1
+        ]
+      ],
+      "announce": {
+        "pt": "Sino rachado em {place}: os ossos acharam a cerca.",
+        "en": "A cracked bell at {place}: the bones have found the fence."
+      },
+      "rewards": {
+        "gold": [
+          70,
+          120
+        ],
+        "items": {
+          "logs": [
+            6,
+            10
+          ],
+          "stone": [
+            6,
+            10
+          ],
+          "iron_ingot": [
+            1,
+            3
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.5,
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "greater_bandage",
+            0.3,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "coast_d2",
+      "biome": "coast",
+      "danger": 2,
+      "zone": "open",
+      "every_min": [
+        480,
+        720
+      ],
+      "clock": "owner_online",
+      "warning_s": 180,
+      "size": [
+        4,
+        7
+      ],
+      "composition": [
+        [
+          "goblin",
+          3
+        ],
+        [
+          "skeleton",
+          2
+        ]
+      ],
+      "announce": {
+        "pt": "Concha em {place}: a maré sobe armada.",
+        "en": "A shell-horn at {place}: the tide is coming armed."
+      },
+      "rewards": {
+        "gold": [
+          25,
+          50
+        ],
+        "items": {
+          "logs": [
+            3,
+            6
+          ],
+          "stone": [
+            3,
+            6
+          ]
+        },
+        "chance": [
+          [
+            "bandage",
+            0.6,
+            [
+              1,
+              3
+            ]
+          ],
+          [
+            "heal_potion",
+            0.25,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "coast_d3",
+      "biome": "coast",
+      "danger": 3,
+      "zone": "open",
+      "every_min": [
+        240,
+        420
+      ],
+      "clock": "owner_online",
+      "warning_s": 120,
+      "size": [
+        8,
+        12
+      ],
+      "composition": [
+        [
+          "skeleton_archer",
+          3
+        ],
+        [
+          "goblin",
+          3
+        ],
+        [
+          "wyvern_water",
+          1
+        ]
+      ],
+      "announce": {
+        "pt": "Concha em {place}: a maré sobe armada.",
+        "en": "A shell-horn at {place}: the tide is coming armed."
+      },
+      "rewards": {
+        "gold": [
+          40,
+          80
+        ],
+        "items": {
+          "logs": [
+            4,
+            8
+          ],
+          "stone": [
+            4,
+            8
+          ],
+          "iron_ingot": [
+            1,
+            2
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.4,
+            [
+              1,
+              1
+            ]
+          ],
+          [
+            "cure_potion",
+            0.2,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "coast_d4",
+      "biome": "coast",
+      "danger": 4,
+      "zone": "dangerous",
+      "every_min": [
+        150,
+        240
+      ],
+      "clock": "owner_online",
+      "warning_s": 90,
+      "size": [
+        12,
+        18
+      ],
+      "composition": [
+        [
+          "wyvern_air",
+          1
+        ],
+        [
+          "wyvern_water",
+          1
+        ],
+        [
+          "skeleton_archer",
+          4
+        ],
+        [
+          "skeleton",
+          3
+        ]
+      ],
+      "announce": {
+        "pt": "Concha em {place}: a maré sobe armada.",
+        "en": "A shell-horn at {place}: the tide is coming armed."
+      },
+      "rewards": {
+        "gold": [
+          70,
+          120
+        ],
+        "items": {
+          "logs": [
+            6,
+            10
+          ],
+          "stone": [
+            6,
+            10
+          ],
+          "iron_ingot": [
+            1,
+            3
+          ]
+        },
+        "chance": [
+          [
+            "heal_potion",
+            0.5,
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "greater_bandage",
+            0.3,
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

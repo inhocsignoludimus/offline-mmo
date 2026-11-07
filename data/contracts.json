@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "pvp": false,
+  "rules": {
+    "board": "contract_board",
+    "fail_penalty": false,
+    "goods_can_be_lost": false,
+    "offline_completes": true,
+    "reputation_per_city": true
+  },
+  "delivery": {
+    "nearest_capital_fee": 0,
+    "other_city_fee": [5, 15],
+    "from": ["base_chest", "backpack"],
+    "note": {
+      "pt": "O envio sai da base ou da mochila e chega. Não há assalto no caminho. A taxa da cidade mais longe é ouro, não risco.",
+      "en": "A delivery leaves the base or the pack and arrives. Nothing is stolen on the way. A farther city costs gold, not risk."
+    }
+  },
+  "stall": {
+    "item": "deed_market_stall",
+    "per_player": 1,
+    "counts_as_lot": false,
+    "where": "stall_market",
+    "safe": true,
+    "sims_trade": true
+  },
+  "orders": [
+    {
+      "id": "aurelia_toros",
+      "city": "aurelia",
+      "ask": {"logs": 15},
+      "gold": [35, 55],
+      "reputation": 2
+    },
+    {
+      "id": "aurelia_pedra",
+      "city": "aurelia",
+      "ask": {"stone": 15},
+      "gold": [35, 55],
+      "reputation": 2
+    },
+    {
+      "id": "aurelia_pao",
+      "city": "aurelia",
+      "ask": {"bread": 8},
+      "gold": [20, 35],
+      "reputation": 1
+    },
+    {
+      "id": "pedralta_minerio",
+      "city": "pedralta",
+      "ask": {"iron_ore": 10},
+      "gold": [40, 70],
+      "reputation": 2
+    },
+    {
+      "id": "pedralta_pedra",
+      "city": "pedralta",
+      "ask": {"stone": 20},
+      "gold": [40, 60],
+      "reputation": 2
+    },
+    {
+      "id": "folhaverde_toros",
+      "city": "folhaverde",
+      "ask": {"logs": 20},
+      "gold": [40, 65],
+      "reputation": 2
+    },
+    {
+      "id": "folhaverde_bandagem",
+      "city": "folhaverde",
+      "ask": {"bandage": 10},
+      "gold": [25, 40],
+      "reputation": 1
+    },
+    {
+      "id": "aelia_lingote",
+      "city": "aelia_sancta",
+      "ask": {"iron_ingot": 4},
+      "gold": [50, 80],
+      "reputation": 2
+    },
+    {
+      "id": "aelia_incenso",
+      "city": "aelia_sancta",
+      "ask": {"incense": 12},
+      "gold": [30, 50],
+      "reputation": 2
+    },
+    {
+      "id": "lodoalto_salitre",
+      "city": "lodoalto",
+      "ask": {"saltpeter": 8},
+      "gold": [30, 50],
+      "reputation": 2
+    },
+    {
+      "id": "lodoalto_cura",
+      "city": "lodoalto",
+      "ask": {"cure_potion": 4},
+      "gold": [40, 60],
+      "reputation": 2
+    },
+    {
+      "id": "gelomarca_carne",
+      "city": "gelomarca",
+      "ask": {"dried_meat": 8},
+      "gold": [25, 40],
+      "reputation": 1
+    },
+    {
+      "id": "gelomarca_toros",
+      "city": "gelomarca",
+      "ask": {"logs": 12},
+      "gold": [30, 50],
+      "reputation": 2
+    },
+    {
+      "id": "selo_incenso",
+      "city": "templo_selo",
+      "ask": {"incense": 10},
+      "gold": [30, 45],
+      "reputation": 2
+    },
+    {
+      "id": "selo_bandagem",
+      "city": "templo_selo",
+      "ask": {"bandage": 12},
+      "gold": [25, 40],
+      "reputation": 1
+    },
+    {
+      "id": "san_marco_lingote",
+      "city": "san_marco",
+      "ask": {"iron_ingot": 4},
+      "gold": [50, 80],
+      "reputation": 2
+    },
+    {
+      "id": "san_marco_cobre",
+      "city": "san_marco",
+      "ask": {"copper_ore": 8},
+      "gold": [30, 50],
+      "reputation": 2
+    },
+    {
+      "id": "acre_toros",
+      "city": "acre_livre",
+      "ask": {"logs": 12},
+      "gold": [30, 50],
+      "reputation": 2
+    },
+    {
+      "id": "trigo_pedra",
+      "city": "porto_trigo",
+      "ask": {"stone": 12},
+      "gold": [30, 45],
+      "reputation": 2
+    },
+    {
+      "id": "trigo_pao",
+      "city": "porto_trigo",
+      "ask": {"bread": 10},
+      "gold": [20, 35],
+      "reputation": 1
+    }
+  ]
+}

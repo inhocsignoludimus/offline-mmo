@@ -7,7 +7,31 @@
       60
     ],
     "continuous": true,
-    "note": "Mapa único contínuo (estilo After Light). Sem trocas de área nem exits."
+    "note": "Mapa único contínuo (estilo After Light). Sem trocas de área nem exits.",
+    "design_size": [
+      2048,
+      2048
+    ],
+    "chunk": [
+      64,
+      64
+    ],
+    "layout_cells": [
+      32,
+      32
+    ],
+    "layout": "world_layout.json",
+    "authored_stamp": [
+      768,
+      1408
+    ],
+    "continent": {
+      "id": "aeloria",
+      "name": {
+        "pt": "Aelória",
+        "en": "Aeloria"
+      }
+    }
   },
   "zones": [
     {
@@ -26,6 +50,47 @@
       "size": [
         50,
         60
+      ],
+      "city_id": "porto_trigo",
+      "build": "proibido",
+      "danger": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "role": "grain_river",
+      "layout_cell": [
+        12,
+        22
+      ],
+      "world_origin": [
+        768,
+        1408
       ]
     },
     {
@@ -87,7 +152,10 @@
               ],
               "level": 2
             }
-          ]
+          ],
+          "build": "nao",
+          "invasion": false,
+          "danger": 2
         },
         {
           "id": "cripta",
@@ -134,7 +202,10 @@
               ],
               "level": 4
             }
-          ]
+          ],
+          "build": "nao",
+          "invasion": false,
+          "danger": 2
         },
         {
           "id": "clareira_do_fundo",
@@ -158,9 +229,8282 @@
               ],
               "level": 8
             }
-          ]
+          ],
+          "build": "nao",
+          "invasion": false,
+          "danger": 3
         }
+      ],
+      "build": "nao",
+      "danger": 2,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "oak_logs",
+          "leather_hide"
+        ]
+      },
+      "layout_cell": [
+        13,
+        22
+      ],
+      "world_origin": [
+        818,
+        1420
       ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "city_gelomarca",
+      "name": {
+        "pt": "Gelomarca",
+        "en": "Frostmark"
+      },
+      "biomes": [
+        "north"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          20,
+          3
+        ]
+      ],
+      "cell_span": [
+        20,
+        3,
+        1,
+        1
+      ],
+      "settlement": "gelomarca",
+      "capital": true,
+      "role": "honor_hunt",
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_gelomarca",
+      "name": {
+        "pt": "Fronteira de Gelomarca",
+        "en": "Frostmark Frontier"
+      },
+      "biomes": [
+        "north"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          18,
+          3
+        ],
+        [
+          19,
+          3
+        ],
+        [
+          21,
+          3
+        ],
+        [
+          22,
+          3
+        ],
+        [
+          18,
+          4
+        ],
+        [
+          18,
+          5
+        ],
+        [
+          19,
+          2
+        ],
+        [
+          20,
+          2
+        ],
+        [
+          21,
+          2
+        ],
+        [
+          19,
+          4
+        ],
+        [
+          20,
+          4
+        ],
+        [
+          21,
+          4
+        ]
+      ],
+      "cell_span": [
+        18,
+        2,
+        5,
+        4
+      ],
+      "settlement": "gelomarca",
+      "unlock": {
+        "kind": "visit",
+        "city": "gelomarca"
+      },
+      "sim_slots": 6
+    },
+    {
+      "id": "city_pedralta",
+      "name": {
+        "pt": "Pedralta",
+        "en": "Highstone"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          18,
+          10
+        ]
+      ],
+      "cell_span": [
+        18,
+        10,
+        1,
+        1
+      ],
+      "settlement": "pedralta",
+      "capital": true,
+      "role": "forge_ore",
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_pedralta",
+      "name": {
+        "pt": "Fronteira de Pedralta",
+        "en": "Highstone Frontier"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          18,
+          8
+        ],
+        [
+          18,
+          9
+        ],
+        [
+          20,
+          9
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          19,
+          10
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          18,
+          11
+        ],
+        [
+          19,
+          11
+        ]
+      ],
+      "cell_span": [
+        17,
+        8,
+        4,
+        4
+      ],
+      "settlement": "pedralta",
+      "unlock": {
+        "kind": "visit",
+        "city": "pedralta"
+      },
+      "sim_slots": 6
+    },
+    {
+      "id": "city_folhaverde",
+      "name": {
+        "pt": "Folhaverde",
+        "en": "Leafgreen"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          7,
+          13
+        ]
+      ],
+      "cell_span": [
+        7,
+        13,
+        1,
+        1
+      ],
+      "settlement": "folhaverde",
+      "capital": true,
+      "role": "timber_herb",
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_folhaverde",
+      "name": {
+        "pt": "Fronteira de Folhaverde",
+        "en": "Leafgreen Frontier"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          5,
+          13
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          7,
+          14
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          8,
+          14
+        ]
+      ],
+      "cell_span": [
+        5,
+        12,
+        4,
+        4
+      ],
+      "settlement": "folhaverde",
+      "unlock": {
+        "kind": "visit",
+        "city": "folhaverde"
+      },
+      "sim_slots": 6
+    },
+    {
+      "id": "city_aurelia",
+      "name": {
+        "pt": "Aurélia",
+        "en": "Aurelia"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          14,
+          18
+        ]
+      ],
+      "cell_span": [
+        14,
+        18,
+        1,
+        1
+      ],
+      "settlement": "aurelia",
+      "capital": true,
+      "role": "crown_commerce",
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_aurelia",
+      "name": {
+        "pt": "Fronteira de Aurélia",
+        "en": "Aurelia Frontier"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          14,
+          16
+        ],
+        [
+          12,
+          17
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          12,
+          18
+        ],
+        [
+          13,
+          18
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          12,
+          19
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          12,
+          20
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          13,
+          19
+        ],
+        [
+          14,
+          19
+        ]
+      ],
+      "cell_span": [
+        12,
+        16,
+        4,
+        5
+      ],
+      "settlement": "aurelia",
+      "unlock": {
+        "kind": "always"
+      },
+      "sim_slots": 6
+    },
+    {
+      "id": "city_lodoalto",
+      "name": {
+        "pt": "Lodoalto",
+        "en": "Highmire"
+      },
+      "biomes": [
+        "swamp"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          22,
+          20
+        ]
+      ],
+      "cell_span": [
+        22,
+        20,
+        1,
+        1
+      ],
+      "settlement": "lodoalto",
+      "capital": true,
+      "role": "reagent_fish",
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_lodoalto",
+      "name": {
+        "pt": "Fronteira de Lodoalto",
+        "en": "Highmire Frontier"
+      },
+      "biomes": [
+        "swamp"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          20,
+          20
+        ],
+        [
+          21,
+          20
+        ],
+        [
+          23,
+          20
+        ],
+        [
+          24,
+          20
+        ],
+        [
+          20,
+          21
+        ],
+        [
+          21,
+          19
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          23,
+          19
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          22,
+          21
+        ],
+        [
+          23,
+          21
+        ]
+      ],
+      "cell_span": [
+        20,
+        19,
+        5,
+        3
+      ],
+      "settlement": "lodoalto",
+      "unlock": {
+        "kind": "visit",
+        "city": "lodoalto"
+      },
+      "sim_slots": 6
+    },
+    {
+      "id": "city_templo_selo",
+      "name": {
+        "pt": "Templo do Selo",
+        "en": "Seal Temple"
+      },
+      "biomes": [
+        "ruins"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          27,
+          14
+        ]
+      ],
+      "cell_span": [
+        27,
+        14,
+        1,
+        1
+      ],
+      "settlement": "templo_selo",
+      "capital": true,
+      "role": "faith_seal",
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_templo_selo",
+      "name": {
+        "pt": "Fronteira de Templo do Selo",
+        "en": "Seal Temple Frontier"
+      },
+      "biomes": [
+        "ruins"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          26,
+          14
+        ],
+        [
+          27,
+          15
+        ],
+        [
+          27,
+          16
+        ],
+        [
+          26,
+          13
+        ],
+        [
+          27,
+          13
+        ],
+        [
+          28,
+          13
+        ],
+        [
+          28,
+          14
+        ],
+        [
+          26,
+          15
+        ],
+        [
+          28,
+          15
+        ]
+      ],
+      "cell_span": [
+        26,
+        13,
+        3,
+        4
+      ],
+      "settlement": "templo_selo",
+      "unlock": {
+        "kind": "visit",
+        "city": "templo_selo"
+      },
+      "sim_slots": 6
+    },
+    {
+      "id": "city_aelia_sancta",
+      "name": {
+        "pt": "Aelia Sancta",
+        "en": "Aelia Sancta"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          28,
+          23
+        ]
+      ],
+      "cell_span": [
+        28,
+        23,
+        1,
+        1
+      ],
+      "settlement": "aelia_sancta",
+      "capital": true,
+      "role": "faith_caravan",
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_aelia_sancta",
+      "name": {
+        "pt": "Fronteira de Aelia Sancta",
+        "en": "Aelia Sancta Frontier"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          28,
+          22
+        ],
+        [
+          29,
+          22
+        ],
+        [
+          26,
+          23
+        ],
+        [
+          27,
+          23
+        ],
+        [
+          29,
+          23
+        ],
+        [
+          27,
+          24
+        ],
+        [
+          27,
+          22
+        ],
+        [
+          28,
+          24
+        ],
+        [
+          29,
+          24
+        ]
+      ],
+      "cell_span": [
+        26,
+        22,
+        4,
+        3
+      ],
+      "settlement": "aelia_sancta",
+      "unlock": {
+        "kind": "visit",
+        "city": "aelia_sancta"
+      },
+      "sim_slots": 6
+    },
+    {
+      "id": "city_san_marco",
+      "name": {
+        "pt": "San Marco",
+        "en": "San Marco"
+      },
+      "biomes": [
+        "coast"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          5,
+          27
+        ]
+      ],
+      "cell_span": [
+        5,
+        27,
+        1,
+        1
+      ],
+      "settlement": "san_marco",
+      "capital": true,
+      "role": "port_arsenal",
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_san_marco",
+      "name": {
+        "pt": "Fronteira de San Marco",
+        "en": "San Marco Frontier"
+      },
+      "biomes": [
+        "coast"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          6,
+          27
+        ],
+        [
+          7,
+          27
+        ],
+        [
+          4,
+          26
+        ],
+        [
+          5,
+          26
+        ],
+        [
+          6,
+          26
+        ],
+        [
+          4,
+          27
+        ],
+        [
+          4,
+          28
+        ],
+        [
+          5,
+          28
+        ],
+        [
+          6,
+          28
+        ]
+      ],
+      "cell_span": [
+        4,
+        26,
+        4,
+        3
+      ],
+      "settlement": "san_marco",
+      "unlock": {
+        "kind": "visit",
+        "city": "san_marco"
+      },
+      "sim_slots": 6
+    },
+    {
+      "id": "city_porto_trigo",
+      "name": {
+        "pt": "Porto do Trigo",
+        "en": "Wheatport"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          12,
+          22
+        ]
+      ],
+      "cell_span": [
+        12,
+        22,
+        1,
+        1
+      ],
+      "settlement": "porto_trigo",
+      "capital": false,
+      "role": "grain_river",
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_porto_trigo",
+      "name": {
+        "pt": "Fronteira de Porto do Trigo",
+        "en": "Wheatport Frontier"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          12,
+          21
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          13,
+          23
+        ],
+        [
+          14,
+          23
+        ],
+        [
+          12,
+          24
+        ],
+        [
+          11,
+          21
+        ],
+        [
+          13,
+          21
+        ],
+        [
+          11,
+          22
+        ],
+        [
+          11,
+          23
+        ]
+      ],
+      "cell_span": [
+        11,
+        21,
+        4,
+        4
+      ],
+      "settlement": "porto_trigo",
+      "unlock": {
+        "kind": "always"
+      },
+      "sim_slots": 4
+    },
+    {
+      "id": "city_acre_livre",
+      "name": {
+        "pt": "Acre Livre",
+        "en": "Free Acre"
+      },
+      "biomes": [
+        "coast"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          16,
+          27
+        ]
+      ],
+      "cell_span": [
+        16,
+        27,
+        1,
+        1
+      ],
+      "settlement": "acre_livre",
+      "capital": false,
+      "role": "bazaar",
+      "services": [
+        "bank",
+        "healer",
+        "trainer",
+        "contract_board",
+        "moon_portal",
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "alfaiate",
+        "mago",
+        "alquimista",
+        "acougueiro",
+        "estalajadeiro",
+        "carpinteiro",
+        "arqueiro",
+        "banqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_acre_livre",
+      "name": {
+        "pt": "Fronteira de Acre Livre",
+        "en": "Free Acre Frontier"
+      },
+      "biomes": [
+        "coast",
+        "plains"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          16,
+          25
+        ],
+        [
+          16,
+          26
+        ],
+        [
+          17,
+          27
+        ],
+        [
+          18,
+          27
+        ],
+        [
+          15,
+          26
+        ],
+        [
+          17,
+          26
+        ],
+        [
+          15,
+          27
+        ],
+        [
+          15,
+          28
+        ],
+        [
+          16,
+          28
+        ],
+        [
+          17,
+          28
+        ]
+      ],
+      "cell_span": [
+        15,
+        25,
+        4,
+        4
+      ],
+      "settlement": "acre_livre",
+      "unlock": {
+        "kind": "visit",
+        "city": "acre_livre"
+      },
+      "sim_slots": 4
+    },
+    {
+      "id": "city_vila_rena",
+      "name": {
+        "pt": "Vila da Rena",
+        "en": "Reindeer Hamlet"
+      },
+      "biomes": [
+        "north"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          9,
+          2
+        ]
+      ],
+      "cell_span": [
+        9,
+        2,
+        1,
+        1
+      ],
+      "settlement": "vila_rena",
+      "capital": false,
+      "role": "fur_hamlet",
+      "services": [
+        "healer",
+        "stall_market"
+      ],
+      "vendors": [
+        "estalajadeiro",
+        "acougueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_vila_rena",
+      "name": {
+        "pt": "Fronteira de Vila da Rena",
+        "en": "Reindeer Hamlet Frontier"
+      },
+      "biomes": [
+        "north"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          9,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "cell_span": [
+        8,
+        1,
+        4,
+        3
+      ],
+      "settlement": "vila_rena",
+      "unlock": {
+        "kind": "visit",
+        "city": "vila_rena"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_posto_invernal",
+      "name": {
+        "pt": "Posto Invernal",
+        "en": "Winter Post"
+      },
+      "biomes": [
+        "north"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          24,
+          4
+        ]
+      ],
+      "cell_span": [
+        24,
+        4,
+        1,
+        1
+      ],
+      "settlement": "posto_invernal",
+      "capital": false,
+      "role": "winter_watch",
+      "services": [
+        "healer"
+      ],
+      "vendors": [
+        "estalajadeiro",
+        "arqueiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_posto_invernal",
+      "name": {
+        "pt": "Fronteira de Posto Invernal",
+        "en": "Winter Post Frontier"
+      },
+      "biomes": [
+        "north"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          23,
+          3
+        ],
+        [
+          24,
+          3
+        ],
+        [
+          25,
+          3
+        ],
+        [
+          23,
+          4
+        ],
+        [
+          25,
+          4
+        ],
+        [
+          23,
+          5
+        ],
+        [
+          24,
+          5
+        ],
+        [
+          25,
+          5
+        ]
+      ],
+      "cell_span": [
+        23,
+        3,
+        3,
+        3
+      ],
+      "settlement": "posto_invernal",
+      "unlock": {
+        "kind": "visit",
+        "city": "posto_invernal"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_mina_ferro",
+      "name": {
+        "pt": "Mina do Ferro",
+        "en": "Ironmine"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          17,
+          11
+        ]
+      ],
+      "cell_span": [
+        17,
+        11,
+        1,
+        1
+      ],
+      "settlement": "mina_ferro",
+      "capital": false,
+      "role": "ore_village",
+      "services": [
+        "stall_market"
+      ],
+      "vendors": [
+        "ferreiro",
+        "carpinteiro",
+        "estalajadeiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_mina_ferro",
+      "name": {
+        "pt": "Fronteira de Mina do Ferro",
+        "en": "Ironmine Frontier"
+      },
+      "biomes": [
+        "mountains",
+        "plains"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          16,
+          10
+        ],
+        [
+          15,
+          11
+        ],
+        [
+          15,
+          12
+        ],
+        [
+          15,
+          13
+        ],
+        [
+          16,
+          11
+        ],
+        [
+          16,
+          12
+        ],
+        [
+          17,
+          12
+        ],
+        [
+          18,
+          12
+        ]
+      ],
+      "cell_span": [
+        15,
+        10,
+        4,
+        4
+      ],
+      "settlement": "mina_ferro",
+      "unlock": {
+        "kind": "visit",
+        "city": "mina_ferro"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_castelo_pico",
+      "name": {
+        "pt": "Castelo do Pico",
+        "en": "Peak Castle"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          20,
+          7
+        ]
+      ],
+      "cell_span": [
+        20,
+        7,
+        1,
+        1
+      ],
+      "settlement": "castelo_pico",
+      "capital": false,
+      "role": "pass_keep",
+      "services": [
+        "healer"
+      ],
+      "vendors": [
+        "arqueiro",
+        "estalajadeiro",
+        "ferreiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_castelo_pico",
+      "name": {
+        "pt": "Fronteira de Castelo do Pico",
+        "en": "Peak Castle Frontier"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          18,
+          7
+        ],
+        [
+          20,
+          8
+        ],
+        [
+          19,
+          6
+        ],
+        [
+          20,
+          6
+        ],
+        [
+          21,
+          6
+        ],
+        [
+          19,
+          7
+        ],
+        [
+          21,
+          7
+        ],
+        [
+          19,
+          8
+        ],
+        [
+          21,
+          8
+        ]
+      ],
+      "cell_span": [
+        18,
+        6,
+        4,
+        3
+      ],
+      "settlement": "castelo_pico",
+      "unlock": {
+        "kind": "visit",
+        "city": "castelo_pico"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_mosteiro_vento",
+      "name": {
+        "pt": "Mosteiro do Vento",
+        "en": "Wind Abbey"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          15,
+          9
+        ]
+      ],
+      "cell_span": [
+        15,
+        9,
+        1,
+        1
+      ],
+      "settlement": "mosteiro_vento",
+      "capital": false,
+      "role": "route_abbey",
+      "services": [
+        "healer",
+        "trainer"
+      ],
+      "vendors": [
+        "mago",
+        "estalajadeiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_mosteiro_vento",
+      "name": {
+        "pt": "Fronteira de Mosteiro do Vento",
+        "en": "Wind Abbey Frontier"
+      },
+      "biomes": [
+        "mountains",
+        "plains"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          13,
+          10
+        ],
+        [
+          14,
+          10
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          13,
+          11
+        ],
+        [
+          14,
+          8
+        ],
+        [
+          15,
+          8
+        ],
+        [
+          16,
+          8
+        ],
+        [
+          14,
+          9
+        ],
+        [
+          16,
+          9
+        ]
+      ],
+      "cell_span": [
+        13,
+        8,
+        4,
+        4
+      ],
+      "settlement": "mosteiro_vento",
+      "unlock": {
+        "kind": "visit",
+        "city": "mosteiro_vento"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_mosteiro_musgo",
+      "name": {
+        "pt": "Mosteiro do Musgo",
+        "en": "Moss Abbey"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          5,
+          15
+        ]
+      ],
+      "cell_span": [
+        5,
+        15,
+        1,
+        1
+      ],
+      "settlement": "mosteiro_musgo",
+      "capital": false,
+      "role": "herb_abbey",
+      "services": [
+        "healer",
+        "trainer"
+      ],
+      "vendors": [
+        "mago",
+        "alquimista",
+        "estalajadeiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_mosteiro_musgo",
+      "name": {
+        "pt": "Fronteira de Mosteiro do Musgo",
+        "en": "Moss Abbey Frontier"
+      },
+      "biomes": [
+        "forest",
+        "plains"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          5,
+          14
+        ],
+        [
+          7,
+          16
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          16
+        ]
+      ],
+      "cell_span": [
+        4,
+        14,
+        4,
+        4
+      ],
+      "settlement": "mosteiro_musgo",
+      "unlock": {
+        "kind": "visit",
+        "city": "mosteiro_musgo"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_acampamento_machado",
+      "name": {
+        "pt": "Acampamento do Machado",
+        "en": "Axe Camp"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          10,
+          12
+        ]
+      ],
+      "cell_span": [
+        10,
+        12,
+        1,
+        1
+      ],
+      "settlement": "acampamento_machado",
+      "capital": false,
+      "role": "timber_camp",
+      "services": [],
+      "vendors": [
+        "carpinteiro",
+        "estalajadeiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_acampamento_machado",
+      "name": {
+        "pt": "Fronteira de Acampamento do Machado",
+        "en": "Axe Camp Frontier"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      "cell_span": [
+        9,
+        11,
+        4,
+        3
+      ],
+      "settlement": "acampamento_machado",
+      "unlock": {
+        "kind": "visit",
+        "city": "acampamento_machado"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_vila_cruzada",
+      "name": {
+        "pt": "Vila Cruzada",
+        "en": "Crusader Hamlet"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          16,
+          17
+        ]
+      ],
+      "cell_span": [
+        16,
+        17,
+        1,
+        1
+      ],
+      "settlement": "vila_cruzada",
+      "capital": false,
+      "role": "veteran_hamlet",
+      "services": [
+        "healer"
+      ],
+      "vendors": [
+        "ferreiro",
+        "estalajadeiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_vila_cruzada",
+      "name": {
+        "pt": "Fronteira de Vila Cruzada",
+        "en": "Crusader Hamlet Frontier"
+      },
+      "biomes": [
+        "mountains",
+        "plains"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          18
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          17,
+          19
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          17,
+          16
+        ],
+        [
+          17,
+          17
+        ]
+      ],
+      "cell_span": [
+        14,
+        15,
+        4,
+        5
+      ],
+      "settlement": "vila_cruzada",
+      "unlock": {
+        "kind": "visit",
+        "city": "vila_cruzada"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_castelo_linden",
+      "name": {
+        "pt": "Castelo Linden",
+        "en": "Linden Castle"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          15,
+          20
+        ]
+      ],
+      "cell_span": [
+        15,
+        20,
+        1,
+        1
+      ],
+      "settlement": "castelo_linden",
+      "capital": false,
+      "role": "road_keep",
+      "services": [
+        "healer"
+      ],
+      "vendors": [
+        "ferreiro",
+        "arqueiro",
+        "estalajadeiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_castelo_linden",
+      "name": {
+        "pt": "Fronteira de Castelo Linden",
+        "en": "Linden Castle Frontier"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          17,
+          20
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          14,
+          20
+        ],
+        [
+          16,
+          20
+        ],
+        [
+          14,
+          21
+        ],
+        [
+          15,
+          21
+        ],
+        [
+          16,
+          21
+        ]
+      ],
+      "cell_span": [
+        14,
+        19,
+        4,
+        3
+      ],
+      "settlement": "castelo_linden",
+      "unlock": {
+        "kind": "visit",
+        "city": "castelo_linden"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_porto_lodo",
+      "name": {
+        "pt": "Porto do Lodo",
+        "en": "Mireport"
+      },
+      "biomes": [
+        "swamp"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          20,
+          23
+        ]
+      ],
+      "cell_span": [
+        20,
+        23,
+        1,
+        1
+      ],
+      "settlement": "porto_lodo",
+      "capital": false,
+      "role": "mire_landing",
+      "services": [],
+      "vendors": [
+        "acougueiro",
+        "alquimista",
+        "estalajadeiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_porto_lodo",
+      "name": {
+        "pt": "Fronteira de Porto do Lodo",
+        "en": "Mireport Frontier"
+      },
+      "biomes": [
+        "swamp"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          20,
+          22
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          21,
+          22
+        ],
+        [
+          19,
+          23
+        ],
+        [
+          21,
+          23
+        ],
+        [
+          19,
+          24
+        ],
+        [
+          20,
+          24
+        ],
+        [
+          21,
+          24
+        ]
+      ],
+      "cell_span": [
+        19,
+        22,
+        3,
+        3
+      ],
+      "settlement": "porto_lodo",
+      "unlock": {
+        "kind": "visit",
+        "city": "porto_lodo"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_oasis_qasr",
+      "name": {
+        "pt": "Oásis de Qasr",
+        "en": "Qasr Oasis"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          27,
+          26
+        ]
+      ],
+      "cell_span": [
+        27,
+        26,
+        1,
+        1
+      ],
+      "settlement": "oasis_qasr",
+      "capital": false,
+      "role": "caravan_oasis",
+      "services": [
+        "stall_market",
+        "healer"
+      ],
+      "vendors": [
+        "estalajadeiro",
+        "alfaiate",
+        "acougueiro",
+        "mago"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_oasis_qasr",
+      "name": {
+        "pt": "Fronteira de Oásis de Qasr",
+        "en": "Qasr Oasis Frontier"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          27,
+          25
+        ],
+        [
+          26,
+          25
+        ],
+        [
+          28,
+          25
+        ],
+        [
+          26,
+          26
+        ],
+        [
+          28,
+          26
+        ],
+        [
+          26,
+          27
+        ],
+        [
+          27,
+          27
+        ],
+        [
+          28,
+          27
+        ]
+      ],
+      "cell_span": [
+        26,
+        25,
+        3,
+        3
+      ],
+      "settlement": "oasis_qasr",
+      "unlock": {
+        "kind": "visit",
+        "city": "oasis_qasr"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_castelo_montgisard",
+      "name": {
+        "pt": "Castelo Montgisard",
+        "en": "Montgisard Castle"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          26,
+          21
+        ]
+      ],
+      "cell_span": [
+        26,
+        21,
+        1,
+        1
+      ],
+      "settlement": "castelo_montgisard",
+      "capital": false,
+      "role": "desert_keep",
+      "services": [
+        "healer"
+      ],
+      "vendors": [
+        "ferreiro",
+        "arqueiro",
+        "estalajadeiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_castelo_montgisard",
+      "name": {
+        "pt": "Fronteira de Castelo Montgisard",
+        "en": "Montgisard Castle Frontier"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          25,
+          20
+        ],
+        [
+          26,
+          20
+        ],
+        [
+          27,
+          20
+        ],
+        [
+          26,
+          22
+        ],
+        [
+          25,
+          21
+        ],
+        [
+          27,
+          21
+        ],
+        [
+          25,
+          22
+        ]
+      ],
+      "cell_span": [
+        25,
+        20,
+        3,
+        3
+      ],
+      "settlement": "castelo_montgisard",
+      "unlock": {
+        "kind": "visit",
+        "city": "castelo_montgisard"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_fort_amir",
+      "name": {
+        "pt": "Forte Amir",
+        "en": "Fort Amir"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          29,
+          20
+        ]
+      ],
+      "cell_span": [
+        29,
+        20,
+        1,
+        1
+      ],
+      "settlement": "fort_amir",
+      "capital": false,
+      "role": "sultanate_fort",
+      "services": [
+        "healer"
+      ],
+      "vendors": [
+        "ferreiro",
+        "arqueiro",
+        "estalajadeiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_fort_amir",
+      "name": {
+        "pt": "Fronteira de Forte Amir",
+        "en": "Fort Amir Frontier"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          27,
+          18
+        ],
+        [
+          28,
+          18
+        ],
+        [
+          28,
+          19
+        ],
+        [
+          28,
+          20
+        ],
+        [
+          28,
+          21
+        ],
+        [
+          29,
+          21
+        ],
+        [
+          29,
+          19
+        ],
+        [
+          30,
+          19
+        ],
+        [
+          30,
+          20
+        ],
+        [
+          30,
+          21
+        ]
+      ],
+      "cell_span": [
+        27,
+        18,
+        4,
+        4
+      ],
+      "settlement": "fort_amir",
+      "unlock": {
+        "kind": "visit",
+        "city": "fort_amir"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_acampamento_espólio",
+      "name": {
+        "pt": "Acampamento do Espólio",
+        "en": "Spoil Camp"
+      },
+      "biomes": [
+        "ruins"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          24,
+          13
+        ]
+      ],
+      "cell_span": [
+        24,
+        13,
+        1,
+        1
+      ],
+      "settlement": "acampamento_espólio",
+      "capital": false,
+      "role": "relic_camp",
+      "services": [
+        "stall_market"
+      ],
+      "vendors": [
+        "mago",
+        "estalajadeiro"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_acampamento_espólio",
+      "name": {
+        "pt": "Fronteira de Acampamento do Espólio",
+        "en": "Spoil Camp Frontier"
+      },
+      "biomes": [
+        "plains",
+        "ruins"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          22,
+          11
+        ],
+        [
+          22,
+          12
+        ],
+        [
+          22,
+          13
+        ],
+        [
+          22,
+          14
+        ],
+        [
+          23,
+          14
+        ],
+        [
+          24,
+          14
+        ],
+        [
+          25,
+          14
+        ],
+        [
+          23,
+          12
+        ],
+        [
+          24,
+          12
+        ],
+        [
+          25,
+          12
+        ],
+        [
+          23,
+          13
+        ],
+        [
+          25,
+          13
+        ]
+      ],
+      "cell_span": [
+        22,
+        11,
+        4,
+        4
+      ],
+      "settlement": "acampamento_espólio",
+      "unlock": {
+        "kind": "visit",
+        "city": "acampamento_espólio"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "city_faro_bizantino",
+      "name": {
+        "pt": "Farol Bizantino",
+        "en": "Byzantine Lighthouse"
+      },
+      "biomes": [
+        "coast"
+      ],
+      "zone": "city",
+      "build": "proibido",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          24,
+          28
+        ]
+      ],
+      "cell_span": [
+        24,
+        28,
+        1,
+        1
+      ],
+      "settlement": "faro_bizantino",
+      "capital": false,
+      "role": "lighthouse",
+      "services": [],
+      "vendors": [
+        "estalajadeiro",
+        "mago"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "frontier_faro_bizantino",
+      "name": {
+        "pt": "Fronteira de Farol Bizantino",
+        "en": "Byzantine Lighthouse Frontier"
+      },
+      "biomes": [
+        "coast",
+        "outremer"
+      ],
+      "zone": "frontier",
+      "build": "fronteira",
+      "danger": 1,
+      "level": 1,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          22,
+          27
+        ],
+        [
+          23,
+          27
+        ],
+        [
+          24,
+          27
+        ],
+        [
+          25,
+          27
+        ],
+        [
+          23,
+          28
+        ],
+        [
+          25,
+          28
+        ],
+        [
+          23,
+          29
+        ],
+        [
+          24,
+          29
+        ],
+        [
+          25,
+          29
+        ]
+      ],
+      "cell_span": [
+        22,
+        27,
+        4,
+        3
+      ],
+      "settlement": "faro_bizantino",
+      "unlock": {
+        "kind": "visit",
+        "city": "faro_bizantino"
+      },
+      "sim_slots": 2
+    },
+    {
+      "id": "outremer_open",
+      "name": {
+        "pt": "Aberto — outremer",
+        "en": "Open — outremer"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "open",
+      "build": "aberta",
+      "danger": [
+        2,
+        3
+      ],
+      "level": [
+        8,
+        10
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "gold_ore",
+          "myrrh",
+          "incense"
+        ]
+      },
+      "cells": [
+        [
+          25,
+          18
+        ],
+        [
+          26,
+          18
+        ],
+        [
+          29,
+          18
+        ],
+        [
+          30,
+          18
+        ],
+        [
+          25,
+          19
+        ],
+        [
+          26,
+          19
+        ],
+        [
+          27,
+          19
+        ],
+        [
+          25,
+          23
+        ],
+        [
+          30,
+          23
+        ],
+        [
+          25,
+          24
+        ],
+        [
+          26,
+          24
+        ],
+        [
+          30,
+          24
+        ],
+        [
+          25,
+          25
+        ],
+        [
+          29,
+          25
+        ],
+        [
+          25,
+          26
+        ],
+        [
+          29,
+          26
+        ],
+        [
+          30,
+          26
+        ],
+        [
+          29,
+          27
+        ]
+      ],
+      "cell_span": [
+        25,
+        18,
+        6,
+        10
+      ],
+      "unlock": {
+        "kind": "any",
+        "camp": {
+          "id": "camp_outremer",
+          "monster": "fire_ant",
+          "count": [
+            4,
+            6
+          ]
+        },
+        "skill_min": 35,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "aelia_sancta",
+          "min": 15
+        }
+      }
+    },
+    {
+      "id": "plains_open",
+      "name": {
+        "pt": "Aberto — plains",
+        "en": "Open — plains"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "open",
+      "build": "aberta",
+      "danger": [
+        2,
+        3
+      ],
+      "level": [
+        6,
+        8
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "leather_hide"
+        ]
+      },
+      "cells": [
+        [
+          21,
+          11
+        ],
+        [
+          21,
+          12
+        ],
+        [
+          14,
+          13
+        ],
+        [
+          21,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          14
+        ],
+        [
+          21,
+          14
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          16,
+          15
+        ],
+        [
+          22,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          22,
+          16
+        ],
+        [
+          3,
+          17
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          17
+        ],
+        [
+          6,
+          17
+        ],
+        [
+          8,
+          17
+        ],
+        [
+          9,
+          17
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          11,
+          17
+        ],
+        [
+          18,
+          17
+        ],
+        [
+          19,
+          17
+        ],
+        [
+          20,
+          17
+        ],
+        [
+          21,
+          17
+        ],
+        [
+          22,
+          17
+        ],
+        [
+          10,
+          18
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          11,
+          19
+        ],
+        [
+          10,
+          20
+        ],
+        [
+          11,
+          20
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          10,
+          21
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          10,
+          22
+        ],
+        [
+          14,
+          22
+        ],
+        [
+          15,
+          22
+        ],
+        [
+          16,
+          22
+        ],
+        [
+          17,
+          22
+        ],
+        [
+          2,
+          23
+        ],
+        [
+          3,
+          23
+        ],
+        [
+          4,
+          23
+        ],
+        [
+          5,
+          23
+        ],
+        [
+          6,
+          23
+        ],
+        [
+          7,
+          23
+        ],
+        [
+          8,
+          23
+        ],
+        [
+          9,
+          23
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          2,
+          24
+        ],
+        [
+          3,
+          24
+        ],
+        [
+          4,
+          24
+        ],
+        [
+          5,
+          24
+        ],
+        [
+          6,
+          24
+        ],
+        [
+          7,
+          24
+        ],
+        [
+          8,
+          24
+        ],
+        [
+          9,
+          24
+        ],
+        [
+          10,
+          24
+        ],
+        [
+          11,
+          24
+        ],
+        [
+          13,
+          24
+        ],
+        [
+          14,
+          24
+        ],
+        [
+          2,
+          25
+        ],
+        [
+          3,
+          25
+        ],
+        [
+          4,
+          25
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          6,
+          25
+        ],
+        [
+          7,
+          25
+        ],
+        [
+          8,
+          25
+        ],
+        [
+          9,
+          25
+        ],
+        [
+          14,
+          25
+        ],
+        [
+          15,
+          25
+        ],
+        [
+          17,
+          25
+        ]
+      ],
+      "cell_span": [
+        2,
+        11,
+        21,
+        15
+      ],
+      "unlock": {
+        "kind": "any",
+        "camp": {
+          "id": "camp_plains",
+          "monster": "goblin",
+          "count": [
+            4,
+            6
+          ]
+        },
+        "skill_min": 35,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "aurelia",
+          "min": 15
+        }
+      }
+    },
+    {
+      "id": "plains_dangerous",
+      "name": {
+        "pt": "Perigoso — plains",
+        "en": "Dangerous — plains"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "dangerous",
+      "build": "aberta",
+      "danger": 4,
+      "level": [
+        12,
+        14
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "leather_hide"
+        ]
+      },
+      "cells": [
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          13,
+          12
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          2,
+          17
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          2,
+          18
+        ],
+        [
+          3,
+          18
+        ],
+        [
+          4,
+          18
+        ],
+        [
+          5,
+          18
+        ],
+        [
+          6,
+          18
+        ],
+        [
+          7,
+          18
+        ],
+        [
+          8,
+          18
+        ],
+        [
+          9,
+          18
+        ],
+        [
+          1,
+          19
+        ],
+        [
+          2,
+          19
+        ],
+        [
+          3,
+          19
+        ],
+        [
+          4,
+          19
+        ],
+        [
+          5,
+          19
+        ],
+        [
+          6,
+          19
+        ],
+        [
+          7,
+          19
+        ],
+        [
+          8,
+          19
+        ],
+        [
+          9,
+          19
+        ],
+        [
+          2,
+          20
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          4,
+          20
+        ],
+        [
+          5,
+          20
+        ],
+        [
+          6,
+          20
+        ],
+        [
+          7,
+          20
+        ],
+        [
+          8,
+          20
+        ],
+        [
+          9,
+          20
+        ],
+        [
+          2,
+          21
+        ],
+        [
+          3,
+          21
+        ],
+        [
+          4,
+          21
+        ],
+        [
+          5,
+          21
+        ],
+        [
+          6,
+          21
+        ],
+        [
+          7,
+          21
+        ],
+        [
+          8,
+          21
+        ],
+        [
+          9,
+          21
+        ],
+        [
+          2,
+          22
+        ],
+        [
+          3,
+          22
+        ],
+        [
+          4,
+          22
+        ],
+        [
+          5,
+          22
+        ],
+        [
+          6,
+          22
+        ],
+        [
+          7,
+          22
+        ],
+        [
+          8,
+          22
+        ],
+        [
+          9,
+          22
+        ],
+        [
+          15,
+          23
+        ],
+        [
+          16,
+          23
+        ],
+        [
+          15,
+          24
+        ],
+        [
+          16,
+          24
+        ],
+        [
+          17,
+          24
+        ],
+        [
+          10,
+          25
+        ],
+        [
+          11,
+          25
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          13,
+          25
+        ]
+      ],
+      "cell_span": [
+        1,
+        6,
+        17,
+        20
+      ],
+      "unlock": {
+        "kind": "any",
+        "requires_region": "plains_open",
+        "camp": {
+          "id": "camp_plains_fundo",
+          "monster": "skeleton_archer",
+          "count": [
+            3,
+            5
+          ]
+        },
+        "skill_min": 50,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "aurelia",
+          "min": 40
+        }
+      }
+    },
+    {
+      "id": "forest_open",
+      "name": {
+        "pt": "Aberto — forest",
+        "en": "Open — forest"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "open",
+      "build": "aberta",
+      "danger": [
+        2,
+        3
+      ],
+      "level": [
+        6,
+        8
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "oak_logs",
+          "leather_hide"
+        ]
+      },
+      "cells": [
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          9,
+          14
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          9,
+          15
+        ],
+        [
+          10,
+          15
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          10,
+          16
+        ],
+        [
+          12,
+          16
+        ]
+      ],
+      "cell_span": [
+        3,
+        9,
+        10,
+        8
+      ],
+      "unlock": {
+        "kind": "any",
+        "camp": {
+          "id": "camp_forest",
+          "monster": "goblin_shaman",
+          "count": [
+            4,
+            6
+          ]
+        },
+        "skill_min": 35,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "folhaverde",
+          "min": 15
+        }
+      }
+    },
+    {
+      "id": "forest_dangerous",
+      "name": {
+        "pt": "Perigoso — forest",
+        "en": "Dangerous — forest"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "dangerous",
+      "build": "aberta",
+      "danger": 4,
+      "level": [
+        12,
+        14
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "oak_logs",
+          "leather_hide"
+        ]
+      },
+      "cells": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          2,
+          13
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15
+        ],
+        [
+          2,
+          16
+        ]
+      ],
+      "cell_span": [
+        2,
+        6,
+        11,
+        11
+      ],
+      "unlock": {
+        "kind": "any",
+        "requires_region": "forest_open",
+        "camp": {
+          "id": "camp_forest_fundo",
+          "monster": "goblin_elite",
+          "count": [
+            3,
+            5
+          ]
+        },
+        "skill_min": 50,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "folhaverde",
+          "min": 40
+        }
+      }
+    },
+    {
+      "id": "swamp_open",
+      "name": {
+        "pt": "Aberto — swamp",
+        "en": "Open — swamp"
+      },
+      "biomes": [
+        "swamp"
+      ],
+      "zone": "open",
+      "build": "aberta",
+      "danger": [
+        2,
+        3
+      ],
+      "level": [
+        7,
+        9
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "saltpeter",
+          "myrrh"
+        ]
+      },
+      "cells": [
+        [
+          18,
+          18
+        ],
+        [
+          19,
+          18
+        ],
+        [
+          20,
+          18
+        ],
+        [
+          21,
+          18
+        ],
+        [
+          22,
+          18
+        ],
+        [
+          23,
+          18
+        ],
+        [
+          24,
+          18
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          20,
+          19
+        ],
+        [
+          24,
+          19
+        ],
+        [
+          18,
+          20
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          19,
+          21
+        ],
+        [
+          18,
+          22
+        ],
+        [
+          22,
+          22
+        ],
+        [
+          23,
+          22
+        ],
+        [
+          24,
+          22
+        ],
+        [
+          18,
+          23
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          23,
+          23
+        ],
+        [
+          24,
+          23
+        ],
+        [
+          18,
+          24
+        ],
+        [
+          22,
+          24
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          18,
+          25
+        ],
+        [
+          19,
+          25
+        ],
+        [
+          20,
+          25
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          24,
+          25
+        ]
+      ],
+      "cell_span": [
+        18,
+        18,
+        7,
+        8
+      ],
+      "unlock": {
+        "kind": "any",
+        "camp": {
+          "id": "camp_swamp",
+          "monster": "zombie_rotting",
+          "count": [
+            4,
+            6
+          ]
+        },
+        "skill_min": 35,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "lodoalto",
+          "min": 15
+        }
+      }
+    },
+    {
+      "id": "swamp_dangerous",
+      "name": {
+        "pt": "Perigoso — swamp",
+        "en": "Dangerous — swamp"
+      },
+      "biomes": [
+        "swamp"
+      ],
+      "zone": "dangerous",
+      "build": "aberta",
+      "danger": 4,
+      "level": 13,
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "saltpeter",
+          "myrrh"
+        ]
+      },
+      "cells": [
+        [
+          23,
+          25
+        ]
+      ],
+      "cell_span": [
+        23,
+        25,
+        1,
+        1
+      ],
+      "unlock": {
+        "kind": "any",
+        "requires_region": "swamp_open",
+        "camp": {
+          "id": "camp_swamp_fundo",
+          "monster": "zombie_dark",
+          "count": [
+            3,
+            5
+          ]
+        },
+        "skill_min": 50,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "lodoalto",
+          "min": 40
+        }
+      }
+    },
+    {
+      "id": "mountains_open",
+      "name": {
+        "pt": "Aberto — mountains",
+        "en": "Open — mountains"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "open",
+      "build": "aberta",
+      "danger": [
+        2,
+        3
+      ],
+      "level": [
+        7,
+        9
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "gold_ore",
+          "blackiron_ore",
+          "cedar_logs"
+        ]
+      },
+      "cells": [
+        [
+          16,
+          5
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          15,
+          6
+        ],
+        [
+          16,
+          6
+        ],
+        [
+          17,
+          6
+        ],
+        [
+          22,
+          6
+        ],
+        [
+          13,
+          7
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          15,
+          7
+        ],
+        [
+          16,
+          7
+        ],
+        [
+          17,
+          7
+        ],
+        [
+          22,
+          7
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          17,
+          8
+        ],
+        [
+          22,
+          8
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          21,
+          9
+        ],
+        [
+          22,
+          9
+        ],
+        [
+          21,
+          10
+        ],
+        [
+          22,
+          10
+        ],
+        [
+          14,
+          11
+        ],
+        [
+          20,
+          11
+        ],
+        [
+          14,
+          12
+        ],
+        [
+          19,
+          12
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          17,
+          13
+        ],
+        [
+          18,
+          13
+        ],
+        [
+          19,
+          13
+        ],
+        [
+          20,
+          13
+        ],
+        [
+          16,
+          14
+        ],
+        [
+          17,
+          14
+        ],
+        [
+          18,
+          14
+        ],
+        [
+          19,
+          14
+        ],
+        [
+          20,
+          14
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          18,
+          16
+        ],
+        [
+          19,
+          16
+        ],
+        [
+          20,
+          16
+        ],
+        [
+          21,
+          16
+        ]
+      ],
+      "cell_span": [
+        13,
+        5,
+        10,
+        12
+      ],
+      "unlock": {
+        "kind": "any",
+        "camp": {
+          "id": "camp_mountains",
+          "monster": "goblin",
+          "count": [
+            4,
+            6
+          ]
+        },
+        "skill_min": 35,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "pedralta",
+          "min": 15
+        }
+      }
+    },
+    {
+      "id": "mountains_dangerous",
+      "name": {
+        "pt": "Perigoso — mountains",
+        "en": "Dangerous — mountains"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "dangerous",
+      "build": "aberta",
+      "danger": 4,
+      "level": [
+        13,
+        14
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "gold_ore",
+          "blackiron_ore",
+          "cedar_logs"
+        ]
+      },
+      "cells": [
+        [
+          12,
+          5
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          14,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          13,
+          6
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          19,
+          15
+        ],
+        [
+          20,
+          15
+        ],
+        [
+          21,
+          15
+        ]
+      ],
+      "cell_span": [
+        12,
+        5,
+        10,
+        11
+      ],
+      "unlock": {
+        "kind": "any",
+        "requires_region": "mountains_open",
+        "camp": {
+          "id": "camp_mountains_fundo",
+          "monster": "hobgoblin_archer",
+          "count": [
+            3,
+            5
+          ]
+        },
+        "skill_min": 50,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "pedralta",
+          "min": 40
+        }
+      }
+    },
+    {
+      "id": "north_open",
+      "name": {
+        "pt": "Aberto — north",
+        "en": "Open — north"
+      },
+      "biomes": [
+        "north"
+      ],
+      "zone": "open",
+      "build": "aberta",
+      "danger": [
+        2,
+        3
+      ],
+      "level": [
+        8,
+        10
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "fur_bundle",
+          "gold_ore"
+        ]
+      },
+      "cells": [
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          18,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          21,
+          0
+        ],
+        [
+          22,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          24,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          16,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          20,
+          1
+        ],
+        [
+          21,
+          1
+        ],
+        [
+          22,
+          1
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          16,
+          2
+        ],
+        [
+          17,
+          2
+        ],
+        [
+          18,
+          2
+        ],
+        [
+          22,
+          2
+        ],
+        [
+          23,
+          2
+        ],
+        [
+          24,
+          2
+        ],
+        [
+          25,
+          2
+        ],
+        [
+          26,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          16,
+          3
+        ],
+        [
+          17,
+          3
+        ],
+        [
+          26,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          16,
+          4
+        ],
+        [
+          17,
+          4
+        ],
+        [
+          22,
+          4
+        ],
+        [
+          26,
+          4
+        ],
+        [
+          17,
+          5
+        ],
+        [
+          19,
+          5
+        ],
+        [
+          20,
+          5
+        ],
+        [
+          21,
+          5
+        ],
+        [
+          22,
+          5
+        ],
+        [
+          26,
+          5
+        ],
+        [
+          23,
+          6
+        ],
+        [
+          24,
+          6
+        ],
+        [
+          25,
+          6
+        ],
+        [
+          26,
+          6
+        ],
+        [
+          23,
+          7
+        ],
+        [
+          24,
+          7
+        ]
+      ],
+      "cell_span": [
+        7,
+        0,
+        20,
+        8
+      ],
+      "unlock": {
+        "kind": "any",
+        "camp": {
+          "id": "camp_north",
+          "monster": "frozen_zombie",
+          "count": [
+            4,
+            6
+          ]
+        },
+        "skill_min": 35,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "gelomarca",
+          "min": 15
+        }
+      }
+    },
+    {
+      "id": "north_dangerous",
+      "name": {
+        "pt": "Perigoso — north",
+        "en": "Dangerous — north"
+      },
+      "biomes": [
+        "north"
+      ],
+      "zone": "dangerous",
+      "build": "aberta",
+      "danger": 4,
+      "level": [
+        14,
+        18
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "fur_bundle",
+          "gold_ore"
+        ]
+      },
+      "cells": [
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          26,
+          1
+        ],
+        [
+          27,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          15,
+          2
+        ],
+        [
+          27,
+          2
+        ],
+        [
+          28,
+          2
+        ],
+        [
+          29,
+          2
+        ],
+        [
+          30,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          13,
+          3
+        ],
+        [
+          14,
+          3
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          27,
+          3
+        ],
+        [
+          28,
+          3
+        ],
+        [
+          29,
+          3
+        ],
+        [
+          30,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          14,
+          4
+        ],
+        [
+          15,
+          4
+        ],
+        [
+          27,
+          4
+        ],
+        [
+          28,
+          4
+        ],
+        [
+          29,
+          4
+        ],
+        [
+          30,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          27,
+          5
+        ],
+        [
+          28,
+          5
+        ],
+        [
+          29,
+          5
+        ],
+        [
+          30,
+          5
+        ],
+        [
+          27,
+          6
+        ],
+        [
+          28,
+          6
+        ],
+        [
+          29,
+          6
+        ],
+        [
+          30,
+          6
+        ],
+        [
+          25,
+          7
+        ],
+        [
+          26,
+          7
+        ],
+        [
+          27,
+          7
+        ],
+        [
+          28,
+          7
+        ],
+        [
+          29,
+          7
+        ],
+        [
+          30,
+          7
+        ]
+      ],
+      "cell_span": [
+        1,
+        0,
+        30,
+        8
+      ],
+      "unlock": {
+        "kind": "any",
+        "requires_region": "north_open",
+        "camp": {
+          "id": "camp_north_fundo",
+          "monster": "skeleton_mage_ice",
+          "count": [
+            3,
+            5
+          ]
+        },
+        "skill_min": 50,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "gelomarca",
+          "min": 40
+        }
+      }
+    },
+    {
+      "id": "ruins_open",
+      "name": {
+        "pt": "Aberto — ruins",
+        "en": "Open — ruins"
+      },
+      "biomes": [
+        "ruins"
+      ],
+      "zone": "open",
+      "build": "aberta",
+      "danger": [
+        2,
+        3
+      ],
+      "level": [
+        8,
+        10
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "blackiron_ore",
+          "gold_ore",
+          "quicklime"
+        ]
+      },
+      "cells": [
+        [
+          23,
+          10
+        ],
+        [
+          24,
+          10
+        ],
+        [
+          25,
+          10
+        ],
+        [
+          27,
+          10
+        ],
+        [
+          28,
+          10
+        ],
+        [
+          29,
+          10
+        ],
+        [
+          30,
+          10
+        ],
+        [
+          23,
+          11
+        ],
+        [
+          24,
+          11
+        ],
+        [
+          25,
+          11
+        ],
+        [
+          26,
+          11
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          28,
+          11
+        ],
+        [
+          30,
+          11
+        ],
+        [
+          26,
+          12
+        ],
+        [
+          27,
+          12
+        ],
+        [
+          28,
+          12
+        ],
+        [
+          29,
+          12
+        ],
+        [
+          30,
+          12
+        ],
+        [
+          29,
+          13
+        ],
+        [
+          30,
+          13
+        ],
+        [
+          29,
+          14
+        ],
+        [
+          30,
+          14
+        ],
+        [
+          23,
+          15
+        ],
+        [
+          24,
+          15
+        ],
+        [
+          25,
+          15
+        ],
+        [
+          29,
+          15
+        ],
+        [
+          30,
+          15
+        ],
+        [
+          23,
+          16
+        ],
+        [
+          24,
+          16
+        ],
+        [
+          25,
+          16
+        ],
+        [
+          26,
+          16
+        ],
+        [
+          28,
+          16
+        ],
+        [
+          29,
+          16
+        ],
+        [
+          30,
+          16
+        ],
+        [
+          23,
+          17
+        ],
+        [
+          24,
+          17
+        ],
+        [
+          25,
+          17
+        ],
+        [
+          26,
+          17
+        ],
+        [
+          27,
+          17
+        ],
+        [
+          28,
+          17
+        ],
+        [
+          29,
+          17
+        ],
+        [
+          30,
+          17
+        ]
+      ],
+      "cell_span": [
+        23,
+        10,
+        8,
+        8
+      ],
+      "unlock": {
+        "kind": "any",
+        "camp": {
+          "id": "camp_ruins",
+          "monster": "skeleton",
+          "count": [
+            4,
+            6
+          ]
+        },
+        "skill_min": 35,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "templo_selo",
+          "min": 15
+        }
+      }
+    },
+    {
+      "id": "ruins_dangerous",
+      "name": {
+        "pt": "Perigoso — ruins",
+        "en": "Dangerous — ruins"
+      },
+      "biomes": [
+        "ruins"
+      ],
+      "zone": "dangerous",
+      "build": "aberta",
+      "danger": 4,
+      "level": [
+        14,
+        15
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "blackiron_ore",
+          "gold_ore",
+          "quicklime"
+        ]
+      },
+      "cells": [
+        [
+          23,
+          8
+        ],
+        [
+          24,
+          8
+        ],
+        [
+          25,
+          8
+        ],
+        [
+          26,
+          8
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          28,
+          8
+        ],
+        [
+          29,
+          8
+        ],
+        [
+          30,
+          8
+        ],
+        [
+          23,
+          9
+        ],
+        [
+          24,
+          9
+        ],
+        [
+          25,
+          9
+        ],
+        [
+          26,
+          9
+        ],
+        [
+          27,
+          9
+        ],
+        [
+          28,
+          9
+        ],
+        [
+          29,
+          9
+        ],
+        [
+          30,
+          9
+        ]
+      ],
+      "cell_span": [
+        23,
+        8,
+        8,
+        2
+      ],
+      "unlock": {
+        "kind": "any",
+        "requires_region": "ruins_open",
+        "camp": {
+          "id": "camp_ruins_fundo",
+          "monster": "necromancer_apprentice",
+          "count": [
+            3,
+            5
+          ]
+        },
+        "skill_min": 50,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "templo_selo",
+          "min": 40
+        }
+      }
+    },
+    {
+      "id": "coast_open",
+      "name": {
+        "pt": "Aberto — coast",
+        "en": "Open — coast"
+      },
+      "biomes": [
+        "coast"
+      ],
+      "zone": "open",
+      "build": "aberta",
+      "danger": [
+        2,
+        3
+      ],
+      "level": [
+        6,
+        8
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "saltpeter",
+          "cedar_logs"
+        ]
+      },
+      "cells": [
+        [
+          2,
+          26
+        ],
+        [
+          3,
+          26
+        ],
+        [
+          7,
+          26
+        ],
+        [
+          8,
+          26
+        ],
+        [
+          9,
+          26
+        ],
+        [
+          14,
+          26
+        ],
+        [
+          18,
+          26
+        ],
+        [
+          22,
+          26
+        ],
+        [
+          23,
+          26
+        ],
+        [
+          24,
+          26
+        ],
+        [
+          2,
+          27
+        ],
+        [
+          3,
+          27
+        ],
+        [
+          8,
+          27
+        ],
+        [
+          9,
+          27
+        ],
+        [
+          14,
+          27
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          3,
+          28
+        ],
+        [
+          7,
+          28
+        ],
+        [
+          8,
+          28
+        ],
+        [
+          14,
+          28
+        ],
+        [
+          18,
+          28
+        ],
+        [
+          22,
+          28
+        ],
+        [
+          26,
+          28
+        ],
+        [
+          27,
+          28
+        ],
+        [
+          28,
+          28
+        ],
+        [
+          29,
+          28
+        ],
+        [
+          4,
+          29
+        ],
+        [
+          5,
+          29
+        ],
+        [
+          6,
+          29
+        ],
+        [
+          7,
+          29
+        ],
+        [
+          8,
+          29
+        ],
+        [
+          9,
+          29
+        ],
+        [
+          14,
+          29
+        ],
+        [
+          15,
+          29
+        ],
+        [
+          16,
+          29
+        ],
+        [
+          17,
+          29
+        ],
+        [
+          18,
+          29
+        ],
+        [
+          22,
+          29
+        ],
+        [
+          26,
+          29
+        ]
+      ],
+      "cell_span": [
+        2,
+        26,
+        28,
+        4
+      ],
+      "unlock": {
+        "kind": "any",
+        "camp": {
+          "id": "camp_coast",
+          "monster": "goblin",
+          "count": [
+            4,
+            6
+          ]
+        },
+        "skill_min": 35,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "san_marco",
+          "min": 15
+        }
+      }
+    },
+    {
+      "id": "coast_dangerous",
+      "name": {
+        "pt": "Perigoso — coast",
+        "en": "Dangerous — coast"
+      },
+      "biomes": [
+        "coast"
+      ],
+      "zone": "dangerous",
+      "build": "aberta",
+      "danger": 4,
+      "level": [
+        12,
+        16
+      ],
+      "invasion": true,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "saltpeter",
+          "cedar_logs"
+        ]
+      },
+      "cells": [
+        [
+          10,
+          26
+        ],
+        [
+          11,
+          26
+        ],
+        [
+          12,
+          26
+        ],
+        [
+          13,
+          26
+        ],
+        [
+          19,
+          26
+        ],
+        [
+          20,
+          26
+        ],
+        [
+          21,
+          26
+        ],
+        [
+          10,
+          27
+        ],
+        [
+          11,
+          27
+        ],
+        [
+          12,
+          27
+        ],
+        [
+          13,
+          27
+        ],
+        [
+          19,
+          27
+        ],
+        [
+          20,
+          27
+        ],
+        [
+          21,
+          27
+        ],
+        [
+          10,
+          28
+        ],
+        [
+          11,
+          28
+        ],
+        [
+          12,
+          28
+        ],
+        [
+          13,
+          28
+        ],
+        [
+          19,
+          28
+        ],
+        [
+          20,
+          28
+        ],
+        [
+          21,
+          28
+        ],
+        [
+          30,
+          28
+        ],
+        [
+          10,
+          29
+        ],
+        [
+          11,
+          29
+        ],
+        [
+          12,
+          29
+        ],
+        [
+          13,
+          29
+        ],
+        [
+          19,
+          29
+        ],
+        [
+          20,
+          29
+        ],
+        [
+          21,
+          29
+        ],
+        [
+          28,
+          29
+        ]
+      ],
+      "cell_span": [
+        10,
+        26,
+        21,
+        4
+      ],
+      "unlock": {
+        "kind": "any",
+        "requires_region": "coast_open",
+        "camp": {
+          "id": "camp_coast_fundo",
+          "monster": "wyvern_air",
+          "count": [
+            3,
+            5
+          ]
+        },
+        "skill_min": 50,
+        "skill_any": [
+          "swordsmanship",
+          "mace_fighting",
+          "axe_fighting",
+          "fencing",
+          "archery",
+          "wrestling",
+          "magery",
+          "tactics"
+        ],
+        "reputation": {
+          "city": "san_marco",
+          "min": 40
+        }
+      }
+    },
+    {
+      "id": "bosque_da_vila",
+      "name": {
+        "pt": "Bosque da Vila",
+        "en": "Village Woods"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "open",
+      "build": "nao",
+      "danger": 2,
+      "level": 4,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": []
+      },
+      "cells": [
+        [
+          13,
+          22
+        ]
+      ],
+      "cell_span": [
+        13,
+        22,
+        1,
+        1
+      ],
+      "feature": "bosque_da_vila",
+      "same_as_zone": "bosque_da_vila",
+      "unlock": {
+        "kind": "always"
+      },
+      "note": {
+        "pt": "Fatia de caça já desenhada. Sem lote e sem invasão. A serpe fica na clareira, não na célula inteira.",
+        "en": "Authored hunt slice. No lot and no invasion. The wyvern sits in the clearing, not on the whole cell."
+      }
+    },
+    {
+      "id": "mar_de_san_marco",
+      "name": {
+        "pt": "Mar de San Marco",
+        "en": "San Marco Sea"
+      },
+      "biomes": [
+        "coast"
+      ],
+      "zone": "open",
+      "build": "nao",
+      "danger": 1,
+      "level": 0,
+      "invasion": false,
+      "resources": {
+        "common": [],
+        "rare": []
+      },
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          26,
+          0
+        ],
+        [
+          27,
+          0
+        ],
+        [
+          28,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          30,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          28,
+          1
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          30,
+          1
+        ],
+        [
+          31,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          31,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          31,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          31,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          31,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          31,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          31,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          31,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          31,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          31,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          31,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          31,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          31,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          31,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          31,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          31,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          31,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          31,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          31,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          1,
+          20
+        ],
+        [
+          31,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          31,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          1,
+          22
+        ],
+        [
+          31,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          1,
+          23
+        ],
+        [
+          31,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          31,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          1,
+          25
+        ],
+        [
+          31,
+          25
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          1,
+          26
+        ],
+        [
+          31,
+          26
+        ],
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          31,
+          27
+        ],
+        [
+          0,
+          28
+        ],
+        [
+          1,
+          28
+        ],
+        [
+          31,
+          28
+        ],
+        [
+          0,
+          29
+        ],
+        [
+          1,
+          29
+        ],
+        [
+          2,
+          29
+        ],
+        [
+          3,
+          29
+        ],
+        [
+          29,
+          29
+        ],
+        [
+          30,
+          29
+        ],
+        [
+          31,
+          29
+        ],
+        [
+          0,
+          30
+        ],
+        [
+          1,
+          30
+        ],
+        [
+          2,
+          30
+        ],
+        [
+          3,
+          30
+        ],
+        [
+          4,
+          30
+        ],
+        [
+          5,
+          30
+        ],
+        [
+          6,
+          30
+        ],
+        [
+          7,
+          30
+        ],
+        [
+          8,
+          30
+        ],
+        [
+          9,
+          30
+        ],
+        [
+          10,
+          30
+        ],
+        [
+          11,
+          30
+        ],
+        [
+          12,
+          30
+        ],
+        [
+          13,
+          30
+        ],
+        [
+          14,
+          30
+        ],
+        [
+          15,
+          30
+        ],
+        [
+          16,
+          30
+        ],
+        [
+          17,
+          30
+        ],
+        [
+          18,
+          30
+        ],
+        [
+          19,
+          30
+        ],
+        [
+          20,
+          30
+        ],
+        [
+          21,
+          30
+        ],
+        [
+          22,
+          30
+        ],
+        [
+          23,
+          30
+        ],
+        [
+          24,
+          30
+        ],
+        [
+          25,
+          30
+        ],
+        [
+          26,
+          30
+        ],
+        [
+          27,
+          30
+        ],
+        [
+          28,
+          30
+        ],
+        [
+          29,
+          30
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          31,
+          30
+        ],
+        [
+          0,
+          31
+        ],
+        [
+          1,
+          31
+        ],
+        [
+          2,
+          31
+        ],
+        [
+          3,
+          31
+        ],
+        [
+          4,
+          31
+        ],
+        [
+          5,
+          31
+        ],
+        [
+          6,
+          31
+        ],
+        [
+          7,
+          31
+        ],
+        [
+          8,
+          31
+        ],
+        [
+          9,
+          31
+        ],
+        [
+          10,
+          31
+        ],
+        [
+          11,
+          31
+        ],
+        [
+          12,
+          31
+        ],
+        [
+          13,
+          31
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          15,
+          31
+        ],
+        [
+          16,
+          31
+        ],
+        [
+          17,
+          31
+        ],
+        [
+          18,
+          31
+        ],
+        [
+          19,
+          31
+        ],
+        [
+          20,
+          31
+        ],
+        [
+          21,
+          31
+        ],
+        [
+          22,
+          31
+        ],
+        [
+          23,
+          31
+        ],
+        [
+          24,
+          31
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          26,
+          31
+        ],
+        [
+          27,
+          31
+        ],
+        [
+          28,
+          31
+        ],
+        [
+          29,
+          31
+        ],
+        [
+          30,
+          31
+        ],
+        [
+          31,
+          31
+        ]
+      ],
+      "cell_span": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "water": true,
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "boss_rei_formiga",
+      "name": {
+        "pt": "Rei Formiga",
+        "en": "Ant King"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 16,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "gold_ore",
+          "myrrh",
+          "incense",
+          "wyrm_hide"
+        ]
+      },
+      "cells": [
+        [
+          30,
+          27
+        ]
+      ],
+      "cell_span": [
+        30,
+        27,
+        1,
+        1
+      ],
+      "boss": "rei_formiga",
+      "monsters": [
+        "antlion",
+        "antlion_armored",
+        "fire_ant"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "dungeon_entrance": "formigueiro"
+    },
+    {
+      "id": "boss_serpe_de_fogo",
+      "name": {
+        "pt": "Serpe de Fogo",
+        "en": "Fire Serpent"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 16,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "gold_ore",
+          "myrrh",
+          "incense",
+          "wyrm_hide"
+        ]
+      },
+      "cells": [
+        [
+          30,
+          25
+        ]
+      ],
+      "cell_span": [
+        30,
+        25,
+        1,
+        1
+      ],
+      "boss": "serpe_de_fogo",
+      "monsters": [
+        "wyvern_fire",
+        "antlion_armored"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "boss_fantasma_cruzado",
+      "name": {
+        "pt": "Fantasma Cruzado",
+        "en": "Crusader Ghost"
+      },
+      "biomes": [
+        "outremer"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 12,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "gold_ore",
+          "myrrh",
+          "incense"
+        ]
+      },
+      "cells": [
+        [
+          30,
+          22
+        ]
+      ],
+      "cell_span": [
+        30,
+        22,
+        1,
+        1
+      ],
+      "boss": "fantasma_cruzado",
+      "monsters": [
+        "skeleton_knight",
+        "skeleton_mage_fire"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "crusader_ghost"
+    },
+    {
+      "id": "boss_chefe_goblin",
+      "name": {
+        "pt": "Chefe Goblin",
+        "en": "Goblin Chief"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 6,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "leather_hide"
+        ]
+      },
+      "cells": [
+        [
+          10,
+          19
+        ]
+      ],
+      "cell_span": [
+        10,
+        19,
+        1,
+        1
+      ],
+      "boss": "chefe_goblin",
+      "monsters": [
+        "goblin_elite",
+        "goblin_spearman"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "boss_matilha_cinzenta",
+      "name": {
+        "pt": "Matilha Cinzenta",
+        "en": "Ashen Pack"
+      },
+      "biomes": [
+        "plains"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 8,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "leather_hide"
+        ]
+      },
+      "cells": [
+        [
+          17,
+          23
+        ]
+      ],
+      "cell_span": [
+        17,
+        23,
+        1,
+        1
+      ],
+      "boss": "matilha_cinzenta",
+      "monsters": [
+        "goblin_elite",
+        "skeleton"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "wolf"
+    },
+    {
+      "id": "boss_aranha_da_clareira",
+      "name": {
+        "pt": "Aranha da Clareira",
+        "en": "Glade Spider"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 10,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "oak_logs",
+          "leather_hide"
+        ]
+      },
+      "cells": [
+        [
+          3,
+          9
+        ]
+      ],
+      "cell_span": [
+        3,
+        9,
+        1,
+        1
+      ],
+      "boss": "aranha_da_clareira",
+      "monsters": [
+        "goblin_shaman",
+        "goblin"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "spider_giant"
+    },
+    {
+      "id": "boss_coracao_do_bosque",
+      "name": {
+        "pt": "Coração do Bosque",
+        "en": "Heart of the Wood"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 14,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "oak_logs",
+          "leather_hide"
+        ]
+      },
+      "cells": [
+        [
+          4,
+          7
+        ]
+      ],
+      "cell_span": [
+        4,
+        7,
+        1,
+        1
+      ],
+      "boss": "coracao_do_bosque",
+      "monsters": [
+        "goblin_elite",
+        "skeleton"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "treant"
+    },
+    {
+      "id": "boss_urso_negro",
+      "name": {
+        "pt": "Urso Negro",
+        "en": "Black Bear"
+      },
+      "biomes": [
+        "forest"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 12,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "oak_logs",
+          "leather_hide"
+        ]
+      },
+      "cells": [
+        [
+          11,
+          16
+        ]
+      ],
+      "cell_span": [
+        11,
+        16,
+        1,
+        1
+      ],
+      "boss": "urso_negro",
+      "monsters": [
+        "goblin_elite",
+        "goblin_shaman"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "dire_bear"
+    },
+    {
+      "id": "boss_senhor_do_pantano",
+      "name": {
+        "pt": "Senhor do Pântano",
+        "en": "Swamp Lord"
+      },
+      "biomes": [
+        "swamp"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 14,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "saltpeter",
+          "myrrh"
+        ]
+      },
+      "cells": [
+        [
+          24,
+          24
+        ]
+      ],
+      "cell_span": [
+        24,
+        24,
+        1,
+        1
+      ],
+      "boss": "senhor_do_pantano",
+      "monsters": [
+        "zombie_dark",
+        "antlion",
+        "wyvern_water"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "bog_lurker"
+    },
+    {
+      "id": "boss_sombra_do_miasma",
+      "name": {
+        "pt": "Sombra do Miasma",
+        "en": "Miasma Shade"
+      },
+      "biomes": [
+        "swamp"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 12,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "saltpeter",
+          "myrrh"
+        ]
+      },
+      "cells": [
+        [
+          24,
+          21
+        ]
+      ],
+      "cell_span": [
+        24,
+        21,
+        1,
+        1
+      ],
+      "boss": "sombra_do_miasma",
+      "monsters": [
+        "zombie_dark",
+        "zombie"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "boss_minotauro_do_pico",
+      "name": {
+        "pt": "Minotauro do Pico",
+        "en": "Peak Minotaur"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 15,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "gold_ore",
+          "blackiron_ore",
+          "cedar_logs"
+        ]
+      },
+      "cells": [
+        [
+          20,
+          10
+        ]
+      ],
+      "cell_span": [
+        20,
+        10,
+        1,
+        1
+      ],
+      "boss": "minotauro_do_pico",
+      "monsters": [
+        "minotaur",
+        "hobgoblin",
+        "boulder"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "boss_elemental_de_pedra",
+      "name": {
+        "pt": "Elemental de Pedra",
+        "en": "Stone Elemental"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 14,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "gold_ore",
+          "blackiron_ore",
+          "cedar_logs"
+        ]
+      },
+      "cells": [
+        [
+          20,
+          12
+        ]
+      ],
+      "cell_span": [
+        20,
+        12,
+        1,
+        1
+      ],
+      "boss": "elemental_de_pedra",
+      "monsters": [
+        "boulder",
+        "hobgoblin_archer"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "rock_elemental"
+    },
+    {
+      "id": "boss_gigante_do_gelo",
+      "name": {
+        "pt": "Gigante do Gelo",
+        "en": "Frost Giant"
+      },
+      "biomes": [
+        "north"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 16,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "fur_bundle",
+          "gold_ore"
+        ]
+      },
+      "cells": [
+        [
+          25,
+          1
+        ]
+      ],
+      "cell_span": [
+        25,
+        1,
+        1,
+        1
+      ],
+      "boss": "gigante_do_gelo",
+      "monsters": [
+        "antlion_freezer",
+        "skeleton_mage_ice",
+        "wyvern_air"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "frost_giant"
+    },
+    {
+      "id": "boss_jarl_morto",
+      "name": {
+        "pt": "Jarl Morto",
+        "en": "Dead Jarl"
+      },
+      "biomes": [
+        "north"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 14,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "fur_bundle",
+          "gold_ore"
+        ]
+      },
+      "cells": [
+        [
+          7,
+          1
+        ]
+      ],
+      "cell_span": [
+        7,
+        1,
+        1,
+        1
+      ],
+      "boss": "jarl_morto",
+      "monsters": [
+        "frozen_zombie",
+        "skeleton_mage_ice"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "wight"
+    },
+    {
+      "id": "boss_necromante_caduco",
+      "name": {
+        "pt": "Necromante Caduco",
+        "en": "Fallen Necromancer"
+      },
+      "biomes": [
+        "ruins"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 16,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "blackiron_ore",
+          "gold_ore",
+          "quicklime"
+        ]
+      },
+      "cells": [
+        [
+          26,
+          10
+        ]
+      ],
+      "cell_span": [
+        26,
+        10,
+        1,
+        1
+      ],
+      "boss": "necromante_caduco",
+      "monsters": [
+        "necromancer",
+        "skeleton_mage"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
+    },
+    {
+      "id": "boss_guardiao_da_cripta",
+      "name": {
+        "pt": "Guardião da Cripta",
+        "en": "Crypt Guardian"
+      },
+      "biomes": [
+        "ruins"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 14,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "blackiron_ore",
+          "gold_ore",
+          "quicklime"
+        ]
+      },
+      "cells": [
+        [
+          29,
+          11
+        ]
+      ],
+      "cell_span": [
+        29,
+        11,
+        1,
+        1
+      ],
+      "boss": "guardiao_da_cripta",
+      "monsters": [
+        "skeleton_knight_boss",
+        "skeleton_mage"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "dungeon_entrance": "cripta_familia"
+    },
+    {
+      "id": "boss_corsario_vermelho",
+      "name": {
+        "pt": "Corsário Vermelho",
+        "en": "Red Corsair"
+      },
+      "biomes": [
+        "coast"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 12,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "saltpeter",
+          "cedar_logs"
+        ]
+      },
+      "cells": [
+        [
+          9,
+          28
+        ]
+      ],
+      "cell_span": [
+        9,
+        28,
+        1,
+        1
+      ],
+      "boss": "corsario_vermelho",
+      "monsters": [
+        "skeleton_archer",
+        "goblin",
+        "wyvern_water"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "sea_raider"
+    },
+    {
+      "id": "boss_caranguejo_colossal",
+      "name": {
+        "pt": "Caranguejo Colossal",
+        "en": "Colossal Crab"
+      },
+      "biomes": [
+        "coast"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 14,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "saltpeter",
+          "cedar_logs"
+        ]
+      },
+      "cells": [
+        [
+          27,
+          29
+        ]
+      ],
+      "cell_span": [
+        27,
+        29,
+        1,
+        1
+      ],
+      "boss": "caranguejo_colossal",
+      "monsters": [
+        "wyvern_water",
+        "skeleton"
+      ],
+      "unlock": {
+        "kind": "always"
+      },
+      "requested_monster": "crab_giant"
+    },
+    {
+      "id": "boss_wyvern_air_boss",
+      "name": {
+        "pt": "Serpe da Crista",
+        "en": "Ridge Wyvern"
+      },
+      "biomes": [
+        "mountains"
+      ],
+      "zone": "boss",
+      "build": "nao",
+      "danger": 5,
+      "level": 18,
+      "invasion": false,
+      "resources": {
+        "common": [
+          "logs",
+          "stone",
+          "iron_ore",
+          "copper_ore"
+        ],
+        "rare": [
+          "silver_ore",
+          "gold_ore",
+          "blackiron_ore",
+          "cedar_logs",
+          "wyrm_hide"
+        ]
+      },
+      "cells": [
+        [
+          18,
+          6
+        ]
+      ],
+      "cell_span": [
+        18,
+        6,
+        1,
+        1
+      ],
+      "boss": "wyvern_air_boss",
+      "monsters": [
+        "wyvern_air_boss",
+        "wyvern_air"
+      ],
+      "unlock": {
+        "kind": "always"
+      }
     }
   ]
 }
