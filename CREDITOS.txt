@@ -186,3 +186,17 @@ arte de terceiros:
   art/icons/sheet.webp. Prévia: art/_preview/analysis/icons_sheet.png
 - Magias: um template de pergaminho tingido por círculo (não 64 ícones únicos);
   data/magic/spells.json → icon = scroll_c{círculo}.
+
+MONSTROS — griffin
+==================
+griffin (grifo) — art/monsters/griffin/
+  Model: "Safirgreif" by einbaukueche
+  URL: https://blendswap.com/blend/18513
+  License: CC0 1.0 Universal
+  https://creativecommons.org/publicdomain/zero/1.0/
+  Mods (Ludimus / In Hoc Signo Ludimus, 2026-11-05/06):
+    Principled/darkened materials, Flare iso sheet (ortho 60°/0°/45°,
+    Cycles Standard, transparent RGBA), scripted stance/run/swing/hit/die
+    (trot run approved), scale 1.6× human master (140 px → ≈224 px),
+    CAMADAS_ANIM JSON with feet anchor.
+  No Ultima Online / EA assets used.
