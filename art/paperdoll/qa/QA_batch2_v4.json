@@ -1,0 +1,272 @@
+{
+ "scope": "Imported candidates only. hauberk excluded; not in this tree.",
+ "renderer": "Cycles 96 samples, denoiser, CPU fixed 3 threads; 600x960 raw -> 300x480 RGBA",
+ "status": {
+  "chain_coif": "remodeled review candidate",
+  "chain_boots": "remodeled review candidate",
+  "cloth_sandals": "remodeled review candidate",
+  "chain_gloves": "unchanged v3 review candidate"
+ },
+ "excluded": {
+  "hauberk": "Rejected. Not imported. Archive path deferred/hauberk/ left out, including compare sheets that show it."
+ },
+ "visual_review": {
+  "scales": [
+   "300x480",
+   "150x240"
+  ],
+  "bodies": [
+   "m",
+   "f"
+  ],
+  "engine_test": false
+ },
+ "observed_kept": [
+  "Source hood crown visible; residual scalp at crown fixed by lifting garment crown 5px with tapered falloff, without changing head.",
+  "Boot calf edges, ankles and toes checked after second geometry fitting; no visible bare-ankle/toe gap in final composites. Foot form remains simple, review candidate not approved final art.",
+  "Sandal straps now narrow on both feet; sole is below/behind body.",
+  "Gloves unchanged from v3; no claim of newly resolved topology."
+ ],
+ "files": {
+  "art/paperdoll/f/chain_coif_fixed.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    106,
+    6,
+    168,
+    104
+   ],
+   "max_chroma": 3,
+   "sha256": "2da81464f8f3a75502f2214af16be060959bf6f4279d9543ec4b88c76b9f56d6",
+   "max_chroma_recheck": 4
+  },
+  "art/paperdoll/f/chain_boots_fixed.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    82,
+    339,
+    193,
+    432
+   ],
+   "max_chroma": 4,
+   "sha256": "67c02ae59f590c90802061285df9fb8ba376ff80f03e59e62bb2c24b8a7b5bda",
+   "max_chroma_recheck": 5
+  },
+  "art/paperdoll/f/chain_boots.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    76,
+    335,
+    207,
+    477
+   ],
+   "max_chroma": 0,
+   "sha256": "cf3149d2fd9bd95ff3599646a005ae5c648e02626006815741ccf7aea6a2a31a",
+   "max_chroma_recheck": 0
+  },
+  "art/paperdoll/f/chain_gloves.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    38,
+    190,
+    245,
+    202
+   ],
+   "max_chroma": 0,
+   "sha256": "d6959d8d38128206b103cfa70eb8a29ebba0c8a93734da8f1779b4bf32f24441",
+   "max_chroma_recheck": 0
+  },
+  "art/paperdoll/f/cloth_sandals.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    80,
+    428,
+    200,
+    478
+   ],
+   "max_chroma": 0,
+   "sha256": "5fe5f45f1546b8c8f0b9e5dadd84533a0db988ce438b6829c8486d3baf20734d",
+   "max_chroma_recheck": 0
+  },
+  "art/paperdoll/f/chain_gloves_fixed.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    8,
+    196,
+    276,
+    272
+   ],
+   "max_chroma": 4,
+   "sha256": "ecd91ac922cf9043f713148eb06ee7c8256dab9b7303ff438b172d9a00a2b6ad",
+   "max_chroma_recheck": 7
+  },
+  "art/paperdoll/m/chain_coif_fixed.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    111,
+    6,
+    177,
+    99
+   ],
+   "max_chroma": 4,
+   "sha256": "ceaf588b62a1f872b8ceb025938aa182fcd1512aa27dbed1fdbbdecad5f62ba1",
+   "max_chroma_recheck": 7
+  },
+  "art/paperdoll/m/chain_boots_fixed.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    89,
+    342,
+    199,
+    432
+   ],
+   "max_chroma": 4,
+   "sha256": "832c9a17684618d8ea0acb38d90ab60af6c5284769a6229b093594f83cd04495",
+   "max_chroma_recheck": 5
+  },
+  "art/paperdoll/m/chain_boots.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    77,
+    338,
+    212,
+    477
+   ],
+   "max_chroma": 0,
+   "sha256": "b06012436c75aed8d33640678a454191bf0626e7423181718796289085a4917c",
+   "max_chroma_recheck": 0
+  },
+  "art/paperdoll/m/chain_gloves.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    45,
+    204,
+    246,
+    218
+   ],
+   "max_chroma": 0,
+   "sha256": "95672454a4548f4f621ed9c50a8fbca291e9f01544d40c70f3167fb839232781",
+   "max_chroma_recheck": 0
+  },
+  "art/paperdoll/m/cloth_sandals.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    80,
+    428,
+    207,
+    478
+   ],
+   "max_chroma": 0,
+   "sha256": "f86b6411c5f4370961c8c6a41458a54eac0d4a89341724ec18fc0c6cab567cdc",
+   "max_chroma_recheck": 0
+  },
+  "art/paperdoll/m/chain_gloves_fixed.png": {
+   "size": [
+    300,
+    480
+   ],
+   "mode": "RGBA",
+   "alpha_minmax": [
+    0,
+    255
+   ],
+   "bbox": [
+    30,
+    214,
+    263,
+    265
+   ],
+   "max_chroma": 5,
+   "sha256": "454bbfdd769318b5e9e31c7366bb44acaf9afcff543ca9f2e884d81c416d9081",
+   "max_chroma_recheck": 5
+  }
+ }
+}

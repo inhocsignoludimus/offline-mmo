@@ -22,9 +22,6 @@ gambeson
 leather_armor
 hauberk
 lorigao
-chain_coif
-chain_gloves
-chain_boots
 kettle_helm
 face_helm
 lamellar
@@ -36,7 +33,6 @@ buckler
 heater_shield
 round_shield
 crusader_shield
-cloth_sandals
 pilgrim_habit
 peasant_tunic
 travel_cloak

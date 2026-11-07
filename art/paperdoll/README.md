@@ -91,7 +91,26 @@ Conferido aqui com Pillow, empilhando os PNGs. **Não** é teste da engine, nem 
 - Hueables de roupa (menos o manto v5) são pintura 2D sobre o corpo, mais limpa que o corpo pintado.
 - `body.png` tem frestas transparentes na costura da roupa de baixo.
 - Cabelos podem ter resto de recorte de fundo.
-- Itens ainda sem paperdoll: `REMAINING.txt` (152 ids). `greathelm`, `plate_gorget` e `templar_cuirass` saíram dessa lista porque entraram na v3.
+- Itens ainda sem paperdoll: `REMAINING.txt`. `greathelm`, `plate_gorget` e `templar_cuirass` saíram dessa lista porque entraram na v3. O lote 2 tirou `chain_coif`, `chain_gloves`, `chain_boots` e `cloth_sandals`. `hauberk` continua na lista.
+
+## Lote 2 v4 — coifa, luvas, botas, sandálias
+
+Publicado com as limitações cosméticas de pé. Rodrigo: «pode publicar, melhor feito do que bem feito … isso podemos arrumar depois». Sem refino estético neste PR. Sem teste na engine.
+
+12 PNGs novos, 300×480 RGBA, sem substituir peça já aceita. `hauberk` não entrou. As folhas comparativas, os detalhes e o sheet 150×240 do pacote mostram o hauberk recusado; ficaram de fora.
+
+| Arquivo | id | slot | Camadas |
+|---|---|---|---|
+| `chain_coif_fixed.png` | `chain_coif` | head | só ferro, sem hue |
+| `chain_gloves.png` + `chain_gloves_fixed.png` | `chain_gloves` | hands | couro cinza (croma 0) e malha fixa. Luvas são as da v3, mitenes, sem topologia nova |
+| `chain_boots.png` + `chain_boots_fixed.png` | `chain_boots` | feet | couro cinza (croma 0) e malha fixa |
+| `cloth_sandals.png` | `cloth_sandals` | feet | só hueable. Mesmo slot que `chain_boots`: um ou outro |
+
+Os ids já existiam em `data/items/base.json`. `sprite_layer` segue o boneco do TCoM e não foi alterado. Não há `chain_coif.png` nem `cloth_sandals_fixed.png`.
+
+Prévia do conjunto, sem hauberk: `art/_preview/paperdoll_batch2_v4_set_{m,f}.png`. QA: `art/paperdoll/qa/QA_batch2_v4.json`. Licença CC-BY-SA 3.0, bloco próprio no `CREDITOS.txt`.
+
+Limitações conhecidas, não corrigidas aqui: pé da bota ainda simples; sandália com tiras estreitas e sola atrás do corpo; coifa com a coroa levantada cerca de 5 px para cobrir o couro cabeludo; luvas sem remodelagem. A redução 150×240 do pacote não é a da engine. Nada foi validado em jogo, em movimento ou com hue de verdade.
 
 ## Onde está o quê
 
