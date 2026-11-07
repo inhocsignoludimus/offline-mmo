@@ -78,6 +78,7 @@ const Game = {
     if (this.map.houses.length) for (const [id, x, y, tint] of this.map.houses) Houses.add(id, x, y, this.map, tint);
     else for (const id of Object.keys(DATA.houses || {})) Houses.place(id, this.townCenter, this.map);
     this.map.indexObjects();
+    Vendors.init(DATA, this.map);
     Build.init(DATA, this.map); BuildGump.init(); Abilities.init(DATA);
     if (Save.load()) { this.rebuildLook(); Combat.recompute(); Camera.snap(actor.x, actor.y); Backpack.render(); }
     setInterval(() => Save.write(), 20000); addEventListener('pagehide', () => Save.write());
@@ -200,6 +201,7 @@ const Game = {
       const [wx, wy] = world(cx, cy), m = Combat.mobAt(wx, wy);
       if (m) { Combat.engage(m); Combat.attacking = true; this.held = null; return; }
       const s = pick(cx, cy);
+      if (s && s.vendor) { Vendors.click(s); return; }
       if (s && s.sim) { this.inspect(s.sim); return; }
       Combat.attacking = false; Combat.target = null; this.held = [cx, cy]; go(cx, cy);
     };
@@ -260,7 +262,7 @@ const Game = {
     const p = this.player, a = p.actor;
     if (!p.dead) Touch.update(dt);
     for (const x of this.actors) if (x !== a || !p.dead) x.update(dt, this.map);
-    Sim.update(dt); Combat.update(dt); Houses.update(dt); World.update(); Build.update(dt); Abilities.update(dt); FX.update(dt);
+    Sim.update(dt); Combat.update(dt); Houses.update(dt); World.update(); Build.update(dt); Abilities.update(dt); FX.update(dt); Vendors.update();
     if (this.pickup && !a.path) { if (Combat.ground.includes(this.pickup) && Math.hypot(this.pickup.x - a.x, this.pickup.y - a.y) < 1.6) Combat.pick(this.pickup); this.pickup = null; }
     // fôlego cai correndo e volta parado
     p.st = Math.max(0, Math.min(p.stMax, p.st + (a.path ? -0.4 : 2) * dt));

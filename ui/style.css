@@ -183,3 +183,18 @@ body.touch #menubar button { padding: 3px 6px; font-size: 11px; } body.touch #me
 #abil button s { position: absolute; left: 0; right: 0; bottom: 0; height: 0; background: rgba(0,0,0,.6); text-decoration: none; }
 #abil button.lock { opacity: .45; }
 body.touch #abil { left: auto; transform: none; right: 22px; bottom: 196px; flex-direction: column; }
+
+.shopg .gbody { display: flex; flex-direction: column; height: calc(100% - 30px); }
+.shopg .stabs { display: flex; gap: 4px; align-items: center; padding-bottom: 6px; border-bottom: 1px solid #4a3a24; }
+.shopg .stabs button { padding: 4px 10px; background: #2a1f12; border: 1px solid #5a4a2a; color: #e8d8b0; font: 13px 'Alegreya SC', serif; cursor: pointer; }
+.shopg .stabs button.on { border-color: #e0b050; background: #3a2a10; }
+.shopg .sgold { margin-left: auto; color: #ffd84a; font-size: 13px; }
+.shopg .slist { overflow-y: auto; flex: 1; padding-top: 4px; }
+.shopg .srow { display: flex; align-items: center; gap: 8px; padding: 3px 2px; border-bottom: 1px solid rgba(255,255,255,.05); font-size: 13px; color: #eadbb8; }
+.shopg .srow .ic { flex: none; display: inline-flex; }
+.shopg .srow .sn { flex: 1; }
+.shopg .srow b { color: #ffd84a; min-width: 34px; text-align: right; }
+.shopg .srow b.poor { color: #a05040; }
+.shopg .srow button { padding: 3px 8px; background: #2e4a20; border: 1px solid #5a7a3a; color: #f0f0d0; font: 12px 'Alegreya SC', serif; cursor: pointer; }
+.shopg .srow em { color: #9a8a6a; font-size: 12px; }
+.shopg .se { color: #a89870; padding: 10px; font-size: 13px; }

@@ -37,7 +37,7 @@ const Touch = {
     if (it) { Game.player.actor.moveTo(Game.map, it.x, it.y); Game.pickup = it; return; }
     const [wx, wy] = Camera.screenToWorld(t.clientX, t.clientY + 30 * Camera.zoom, Render.vw, Render.vh);
     const m = Combat.mobAt(wx, wy, 1.6); if (m) { Combat.engage(m); return; }
-    const s = Game.pickSim && Game.pickSim(t.clientX, t.clientY); if (s && s.sim) Game.inspect(s.sim);
+    const s = Game.pickSim && Game.pickSim(t.clientX, t.clientY); if (s && s.vendor) Vendors.click(s); else if (s && s.sim) Game.inspect(s.sim);
   },
   render() {
     if (!this.on) return;

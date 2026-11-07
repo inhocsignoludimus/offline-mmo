@@ -212,13 +212,14 @@ def main():
         crate, logs, fire, tent = (N['crate'], N['logs'], N['fire'], N['tent']) if snow else (G['crate'], G['logs'], G['fire'], G['tent'])
         spots = [(tx - 13, ty - 13), (tx + 7, ty - 13), (tx - 13, ty + 7), (tx + 7, ty + 7), (tx - 20, ty - 3), (tx + 14, ty - 3), (tx - 3, ty - 20), (tx - 3, ty + 14)]
         rng.shuffle(spots)
-        if b == 'outremer' and style in ('vila', 'mosteiro'):
-            style = 'acampamento'   # no deserto: tendas e palmeiras, nada de cabana de toras
+        CASAS = {'north': ['north_log_01', 'north_stone_01'], 'outremer': ['desert_adobe_01', 'desert_adobe_02'],
+                 'ruins': ['ruins_chapel_01', 'plains_stone_01', 'plains_timber_02']}.get(b, ['plains_timber_01', 'plains_timber_02', 'plains_cabin_01', 'plains_cabin_02', 'plains_stone_01'])
+        if b == 'outremer':   # no deserto: casas de adobe entre palmeiras
             for k in range(8):
                 an = k / 8 * 6.283; put(int(tx + math.cos(an) * (Rr - 2)), int(ty + math.sin(an) * (Rr - 2)), rng.choice(DS['palm']))
         if style == 'vila':
             for k, (hx, hy) in enumerate(spots[:6 if s.get('capital') else 3]):
-                houses.append([['plains_cabin_01', 'plains_cabin_02'][(k + len(houses)) % 2], hx, hy, rng.choice(tints)])
+                houses.append([CASAS[(k + len(houses)) % len(CASAS)], hx, hy, rng.choice(tints) if 'cabin' in CASAS[(k + len(houses)) % len(CASAS)] else None])
             for k in range(5): put(tx - 4 + (k % 3) * 2, ty + 4 + (k // 3) * 2, rng.choice(crate + logs + RU['barrel']))
             put(tx + 4, ty - 4, G['anvil'][0]); put(tx + 4, ty + 4, fire[0]); put(tx + 6, ty + 1, rng.choice(G['sign']))
             if snow:
@@ -243,7 +244,7 @@ def main():
                     if i * i + j * j < 70: pave(tx + i, ty + j) if False else None
             for k in range(4): put(tx + rng.choice([-5, 5]), ty + rng.choice([-5, 5]), rng.choice(RU['statue'] + RU['barrel']))
             put(tx + 3, ty + 3, fire[0])
-            if b != 'outremer': houses.append(['plains_cabin_02', tx - 9, ty - 9, rng.choice(tints)])
+            houses.append([{'north': 'north_stone_01', 'outremer': 'desert_adobe_02'}.get(b, 'plains_stone_01'), tx - 9, ty - 9, None])
         else:                          # mosteiro: pátio de pedra, santuário, horta de ervas
             for j in range(-7, 8):
                 for i in range(-7, 8):
@@ -251,7 +252,7 @@ def main():
             put(tx, ty, rng.choice(RU['shrine'])); put(tx - 3, ty, rng.choice(RU['statue'])); put(tx + 3, ty, rng.choice(RU['statue']))
             for j in range(3):
                 for i in range(4): put(tx + 9 + i, ty - 2 + j, rng.choice(RU['plant']))
-            houses.append(['plains_cabin_01', tx - 12, ty - 10, rng.choice(tints)])
+            houses.append(['ruins_chapel_01' if b != 'north' else 'north_stone_01', tx - 14, ty - 11, None])
         z = {'id': s['id'], 'name': s['name'], 'kind': 'village', 'biome': b, 'origin': [tx - Rr - 5, ty - Rr - 5], 'size': [2 * Rr + 10, 2 * Rr + 10], 'chunks': [], 'center': [tx, ty]}
         zones.append(z); towns.append({'id': s['id'], 'name': s['name'], 'center': [tx, ty]})
 

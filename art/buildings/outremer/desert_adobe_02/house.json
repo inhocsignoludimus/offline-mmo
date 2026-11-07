@@ -1,0 +1,111 @@
+{
+ "version": 2,
+ "id": "desert_adobe_02",
+ "size": [
+  6,
+  4
+ ],
+ "walls": [
+  [
+   0,
+   0
+  ],
+  [
+   1,
+   0
+  ],
+  [
+   2,
+   0
+  ],
+  [
+   3,
+   0
+  ],
+  [
+   4,
+   0
+  ],
+  [
+   5,
+   0
+  ],
+  [
+   0,
+   1
+  ],
+  [
+   5,
+   1
+  ],
+  [
+   0,
+   2
+  ],
+  [
+   5,
+   2
+  ],
+  [
+   0,
+   3
+  ],
+  [
+   1,
+   3
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   3,
+   3
+  ],
+  [
+   5,
+   3
+  ]
+ ],
+ "doors": [
+  [
+   4,
+   3
+  ]
+ ],
+ "props": [
+  [
+   1,
+   1,
+   "bed_r0"
+  ],
+  [
+   4,
+   1,
+   "chest_r2"
+  ]
+ ],
+ "interior": [
+  [
+   1,
+   1
+  ],
+  [
+   4,
+   2
+  ]
+ ],
+ "biome": "outremer",
+ "anchor": [
+  564,
+  788
+ ],
+ "layers": {
+  "back": "back.png",
+  "front": "front.png",
+  "front_low": "front_low.png",
+  "roof": "roof.png",
+  "door_closed": "door_closed.png",
+  "door_open": "door_open.png"
+ }
+}

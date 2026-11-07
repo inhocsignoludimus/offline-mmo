@@ -1,0 +1,124 @@
+{
+ "version": 2,
+ "id": "plains_timber_01",
+ "size": [
+  6,
+  5
+ ],
+ "walls": [
+  [
+   0,
+   0
+  ],
+  [
+   1,
+   0
+  ],
+  [
+   2,
+   0
+  ],
+  [
+   3,
+   0
+  ],
+  [
+   4,
+   0
+  ],
+  [
+   5,
+   0
+  ],
+  [
+   0,
+   1
+  ],
+  [
+   5,
+   1
+  ],
+  [
+   0,
+   2
+  ],
+  [
+   5,
+   2
+  ],
+  [
+   0,
+   3
+  ],
+  [
+   5,
+   3
+  ],
+  [
+   0,
+   4
+  ],
+  [
+   1,
+   4
+  ],
+  [
+   3,
+   4
+  ],
+  [
+   4,
+   4
+  ],
+  [
+   5,
+   4
+  ]
+ ],
+ "doors": [
+  [
+   2,
+   4
+  ]
+ ],
+ "props": [
+  [
+   1,
+   1,
+   "bed_r0"
+  ],
+  [
+   4,
+   1,
+   "chest_r2"
+  ],
+  [
+   3,
+   2,
+   "table_r1"
+  ]
+ ],
+ "interior": [
+  [
+   1,
+   1
+  ],
+  [
+   4,
+   3
+  ]
+ ],
+ "biome": "plains",
+ "anchor": [
+  660,
+  788
+ ],
+ "layers": {
+  "back": "back.png",
+  "front": "front.png",
+  "front_low": "front_low.png",
+  "roof": "roof.png",
+  "door_closed": "door_closed.png",
+  "door_open": "door_open.png"
+ }
+}

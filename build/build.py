@@ -9,7 +9,7 @@ import argparse, json, os, shutil, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCRIPTS = ['engine/iso.js', 'engine/map.js', 'engine/actor.js', 'engine/render.js',
-           'ui/gumps.js', 'ui/touch.js', 'systems/chat.js', 'systems/skills.js', 'systems/magic.js', 'systems/combat.js', 'systems/world.js', 'systems/sim.js', 'systems/build.js', 'systems/fx.js', 'systems/abilities.js', 'src/main.js']
+           'ui/gumps.js', 'ui/touch.js', 'systems/chat.js', 'systems/skills.js', 'systems/magic.js', 'systems/combat.js', 'systems/world.js', 'systems/sim.js', 'systems/build.js', 'systems/fx.js', 'systems/vendors.js', 'systems/abilities.js', 'src/main.js']
 MAPS = ['mundo']
 
 
@@ -53,7 +53,7 @@ def main():
         'skills': load('data/skills.json'),
         'spells': load('data/magic/spells.json'),
         'reagents': load('data/magic/reagents.json'),
-        'building': load('data/building.json'), 'abilities': load('data/abilities.json'), 'powers': load('engine/dev_assets/powers/powers.json'), 'gathering': load('data/gathering.json'),
+        'building': load('data/building.json'), 'abilities': load('data/abilities.json'), 'vendors': load('data/npcs/vendors.json'), 'powers': load('engine/dev_assets/powers/powers.json'), 'gathering': load('data/gathering.json'),
     }
     js = ['// gerado por build/build.py — não editar à mão',
           'const DATA = ' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';']
