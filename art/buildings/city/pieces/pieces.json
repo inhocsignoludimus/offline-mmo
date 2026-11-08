@@ -1,0 +1,44 @@
+{
+ "stone_wall_x": {
+  "file": "stone_wall_x.png",
+  "anchor": [
+   276,
+   788
+  ]
+ },
+ "stone_wall_y": {
+  "file": "stone_wall_y.png",
+  "anchor": [
+   276,
+   788
+  ]
+ },
+ "stone_tower": {
+  "file": "stone_tower.png",
+  "anchor": [
+   276,
+   788
+  ]
+ },
+ "adobe_wall_x": {
+  "file": "adobe_wall_x.png",
+  "anchor": [
+   276,
+   788
+  ]
+ },
+ "adobe_wall_y": {
+  "file": "adobe_wall_y.png",
+  "anchor": [
+   276,
+   788
+  ]
+ },
+ "adobe_tower": {
+  "file": "adobe_tower.png",
+  "anchor": [
+   276,
+   788
+  ]
+ }
+}

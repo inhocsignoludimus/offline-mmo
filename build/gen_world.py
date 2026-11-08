@@ -119,6 +119,113 @@ def iso_wall(tex, H, mirror=False, hole=None, cap=(70, 52, 34), dark=1.0):
     return out, (24, t + H + 12)
 
 
+BUILD_CTX = {}
+
+
+def build_city(tx, ty, b, s, houses, put, pave, rng):
+    """cidade grande murada: muralha com torres e portões, ruas em cruz, praça, castelo ao norte e lojas próprias"""
+    G_, R = globals(), 21
+    W_, H_ = BUILD_CTX['W'], BUILD_CTX['H']; col, bg, obj, isroad, WALL, D = BUILD_CTX['col'], BUILD_CTX['bg'], BUILD_CTX['obj'], BUILD_CTX['isroad'], BUILD_CTX['WALL'], BUILD_CTX['D']
+    mat = 'adobe' if b == 'outremer' else 'stone'
+    occ = {}   # (x, y) -> o que ocupa
+    inb = lambda x, y: 0 <= x < W_ and 0 <= y < H_
+    def street(x, y):
+        if inb(x, y) and (x, y) not in occ: pave(x, y); occ[(x, y)] = 'rua'
+    # castelo primeiro (no norte), a praça e as ruas depois, contornando o castelo
+    keep_id = 'desert_palace_01' if b == 'outremer' else 'city_keep_01'
+    kw, kh, kd = 12, 9, 5
+    kx, ky = tx - 6, ty - R + 3
+    for j in range(-1, kh + 1):
+        for i in range(-1, kw + 1): occ[(kx + i, ky + j)] = 'castelo'
+    houses.append([keep_id, kx, ky, None, 'castelo'])
+    gates = []
+    # muralha
+    for d in range(-R, R + 1):
+        for (x, y, piece) in ((tx + d, ty - R, 'wall_x'), (tx + d, ty + R, 'wall_x'), (tx - R, ty + d, 'wall_y'), (tx + R, ty + d, 'wall_y')):
+            occ[(x, y)] = 'muro'
+    def ring_gap(x, y):
+        return (abs(x - tx) <= 1 and abs(y - ty) == R and y > ty) or (abs(y - ty) <= 1 and abs(x - tx) == R)
+    gap = set()
+    for d in range(-R, R + 1):
+        for (x, y) in ((tx + d, ty - R), (tx + d, ty + R), (tx - R, ty + d), (tx + R, ty + d)):
+            if ring_gap(x, y) or (inb(x, y) and isroad[y, x] and abs(d) < R - 2 and not (y == ty - R and abs(x - tx) < 8)): gap.add((x, y))
+    # alarga cada portão para 3 tiles e põe torre dos dois lados
+    for (x, y) in list(gap):
+        if y in (ty - R, ty + R):
+            for k in (-1, 1): gap.add((x + k, y))
+        else:
+            for k in (-1, 1): gap.add((x, y + k))
+    for d in range(-R, R + 1):
+        for (x, y, piece) in ((tx + d, ty - R, 'wall_x'), (tx + d, ty + R, 'wall_x'), (tx - R, ty + d, 'wall_y'), (tx + R, ty + d, 'wall_y')):
+            if not inb(x, y) or (x, y) in gap: continue
+            nxt = [(x + 1, y), (x - 1, y)] if piece == 'wall_x' else [(x, y + 1), (x, y - 1)]
+            tower = abs(d) == R or d % 7 == 0 or any(n in gap for n in nxt)
+            col[y, x] = 0; obj[y, x] = 0
+            put(x, y, WALL[f'{mat}_{"tower" if tower else piece}'])
+    for (x, y) in gap:
+        if inb(x, y): street(x, y); occ[(x, y)] = 'portao'
+    gl = sorted(gap); 
+    for (x, y) in gl:
+        if (x, y) in gap and ((x - 1, y) not in gap and (x, y - 1) not in gap): pass
+    # ruas: cruz principal (largura 3), anel interno e duas transversais de cada lado
+    for d in range(-R + 1, R):
+        for w in (-1, 0, 1):
+            street(tx + w, ty + d); street(tx + d, ty + w)
+        for (x, y) in ((tx + d, ty - R + 1), (tx + d, ty + R - 1), (tx - R + 1, ty + d), (tx + R - 1, ty + d)):
+            street(x, y)
+        for c in (-11, 11):
+            street(tx + c, ty + d); street(tx + d, ty + c)
+    # ruas que levam de cada portão extra até a rua mais perto
+    for (x, y) in gap:
+        dx = 1 if x == tx - R else -1 if x == tx + R else 0; dy = 1 if y == ty - R else -1 if y == ty + R else 0
+        for k in range(1, 4): street(x + dx * k, y + dy * k)
+    # praça
+    for j in range(-4, 5):
+        for i in range(-4, 5): street(tx + i, ty + j)
+    for (x, y) in [(tx + i, ty + j) for j in range(-4, 5) for i in range(-4, 5)]: occ[(x, y)] = 'praca'
+    put(tx, ty, BUILD_CTX['RU']['well'][0])
+    for (i, j) in ((-3, -3), (3, -3), (-3, 3), (3, 3)): put(tx + i, ty + j, rng.choice(BUILD_CTX['RU']['statue']))
+    # lojas e casas: perto da praça primeiro; a porta (lado sul) sempre dá para uma rua
+    CAS = {'north': ['north_log_01', 'north_stone_01'], 'outremer': ['desert_adobe_01', 'desert_adobe_02']}.get(b, BUILD_CTX['CASAS'])
+    if b == 'north': lojas = [('north_tavern_01', 'estalajadeiro'), ('city_forge_01', 'ferreiro'), ('city_bank_01', 'banqueiro'), ('city_tower_01', 'mago'),
+                             ('north_stone_01', 'alquimista'), ('north_log_01', 'alfaiate'), ('north_log_01', 'arqueiro'), ('north_stone_01', 'carpinteiro'), ('north_log_01', 'acougueiro')]
+    elif b == 'outremer': lojas = [('desert_adobe_02', 'estalajadeiro'), ('city_forge_01', 'ferreiro'), ('city_bank_01', 'banqueiro'), ('city_tower_01', 'mago'),
+                                  ('desert_adobe_01', 'alquimista'), ('desert_adobe_02', 'alfaiate'), ('desert_adobe_01', 'arqueiro'), ('desert_adobe_01', 'carpinteiro'), ('desert_adobe_02', 'acougueiro')]
+    else: lojas = [('city_tavern_01', 'estalajadeiro'), ('city_forge_01', 'ferreiro'), ('city_bank_01', 'banqueiro'), ('city_tower_01', 'mago'),
+                   ('city_shop_01', 'alquimista'), ('city_shop_01', 'alfaiate'), ('city_shop_01', 'arqueiro'), ('plains_stone_01', 'carpinteiro'), ('plains_timber_02', 'acougueiro')]
+    lojas += [(CAS[k % len(CAS)], None) for k in range(14)]
+    SZ = BUILD_CTX['SIZES']
+    spots = sorted([(x, y) for y in range(ty - R + 2, ty + R - 1) for x in range(tx - R + 2, tx + R - 1)], key=lambda p: abs(p[0] - tx) + abs(p[1] - ty))
+    def fits(hid, x, y):
+        w, h = SZ[hid]; d = BUILD_CTX['DOOR'][hid]
+        for j in range(-1, h + 1):
+            for i in range(-1, w + 1):
+                if not inb(x + i, y + j): return False
+                o = occ.get((x + i, y + j))
+                inside = 0 <= i < w and 0 <= j < h
+                if inside and (o is not None or col[y + j, x + i] == 2): return False
+                if not inside and o not in (None, 'rua', 'praca'): return False
+        return occ.get((x + d, y + h)) in ('rua', 'praca')
+    placed = []
+    for hid, shop in lojas:
+        for (x, y) in spots:
+            if fits(hid, x, y):
+                w, h = SZ[hid]
+                for j in range(h):
+                    for i in range(w): occ[(x + i, y + j)] = 'casa'; obj[y + j, x + i] = 0
+                houses.append([hid, x, y, None, shop]); placed.append(shop); break
+    # enfeites: árvores e caixotes nos cantos que sobraram
+    for (x, y) in spots[::7]:
+        if (x, y) not in occ and inb(x, y) and col[y, x] != 2:
+            put(x, y, rng.choice(BUILD_CTX['DECOR'][b]))
+    for y in range(ty - R + 1, ty + R):
+        for x in range(tx - R + 1, tx + R):
+            if (x, y) not in occ and inb(x, y) and obj[y, x] and col[y, x] == 1 and obj[y, x] not in BUILD_CTX['KEEP']: obj[y, x] = 0; col[y, x] = 0
+    patrol = [[tx, ty + R - 2], [tx + R - 2, ty], [tx - R + 2, ty], [tx, ty], [tx - 11, ty - 11], [tx + 11, ty - 11], [tx - 11, ty + 11], [tx + 11, ty + 11], [tx, ty - R + 13]]
+    gate_posts = [[x, y] for (x, y) in gap if (x - 1, y) in gap and (x + 1, y) in gap or (x, y - 1) in gap and (x, y + 1) in gap]
+    return {'R': R, 'keep': [kx, ky, kw, kh], 'throne': [kx + kw // 2, ky + kh - 3], 'patrol': patrol, 'gates': gate_posts, 'shops': placed}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--flare', required=True); ap.add_argument('--cells', default='8,3,22,23'); ap.add_argument('--cell', type=int, default=32)
@@ -132,6 +239,13 @@ def main():
     rng = random.Random(a.seed); nrng = np.random.default_rng(a.seed)
     rows = L['rows']
     DIMG, DS = desert_assets(TCOM)
+    # muralhas das cidades grandes (art/src/gen_houses_bpy.py pieces): metade do tamanho, como o resto
+    PJ = os.path.join(ROOT, 'art', 'buildings', 'city', 'pieces'); WALL = {}
+    for k, (n, m) in enumerate(sorted(json.load(open(os.path.join(PJ, 'pieces.json'))).items())):
+        im = Image.open(os.path.join(PJ, m['file'])).convert('RGBA'); bb = im.getbbox(); im = im.crop(bb)
+        ax, ay = m['anchor'][0] - bb[0], m['anchor'][1] - bb[1]
+        im = im.resize((round(im.width / 2), round(im.height / 2)), Image.LANCZOS)
+        DIMG[D + 950 + k] = (im, (ax / 2, ay / 2)); WALL[n] = D + 950 + k
     print('deserto:', {k: len(v) for k, v in DS.items()})
 
     jx, jy = (noise(W, H, 28, nrng) - .5) * CELL * 1.1, (noise(W, H, 28, nrng) - .5) * CELL * 1.1
@@ -179,6 +293,7 @@ def main():
 
     center = lambda c: ((c[0] - cx0) * CELL + CELL // 2, (c[1] - cy0) * CELL + CELL // 2)
     inside = lambda c: cx0 <= c[0] < cx0 + cw and cy0 <= c[1] < cy0 + ch
+    isroad = np.zeros((H, W), bool)
     for r in L['roads']:
         cs = r['cells']
         for p, q in zip(cs, cs[1:]):
@@ -188,14 +303,22 @@ def main():
             for k in range(n + 1):
                 t = k / max(1, n)
                 x = int(x0 + (x1 - x0) * t + math.sin(t * 6.283 + x0) * 3); y = int(y0 + (y1 - y0) * t + math.cos(t * 6.283 + y0) * 3)
-                carve(x, y, 1, road_tiles); carve(x, y, 3)
+                carve(x, y, 1, road_tiles); carve(x, y, 3); isroad[max(0, y - 1):y + 2, max(0, x - 1):x + 2] = True
 
     zones, houses, towns = [], [], []
+    hsz, hdoor = {}, {}
+    for hj in glob.glob(os.path.join(ROOT, 'art', 'buildings', '*', '*', 'house.json')):
+        hh = json.load(open(hj)); hsz[hh['id']] = tuple(hh['size']); hdoor[hh['id']] = hh['doors'][0][0]
+    DECOR = {'north': G['pine'], 'outremer': DS['palm'], 'ruins': RU['autumn']}
+    BUILD_CTX.update(W=W, H=H, col=col, bg=bg, obj=obj, isroad=isroad, WALL=WALL, D=D, RU=RU, SIZES=hsz, DOOR=hdoor,
+                     CASAS=['plains_timber_01', 'plains_timber_02', 'plains_cabin_01', 'plains_cabin_02', 'plains_stone_01'],
+                     DECOR={k: DECOR.get(k, G['oak'] + G['birch']) for k in ('north', 'outremer', 'ruins', 'plains', 'forest', 'mountains', 'swamp', 'water')})
+    BUILD_CTX['KEEP'] = set(RU['well'] + RU['statue'] + sum(BUILD_CTX['DECOR'].values(), []) + list(WALL.values()))
     for s in L['settlements']:
         if not inside(s['cell']): continue
         tx, ty = center(s['cell']); b = biome(tx, ty)
         Rr = 20 if s.get('capital') else 14
-        carve(tx, ty, Rr + 5)
+        carve(tx, ty, Rr + (12 if s.get('capital') else 5))
         floor = road_tiles
         def pave(X, Y):
             if 0 <= X < W and 0 <= Y < H and col[Y, X] != 2: bg[Y, X] = rng.choice(floor(X, Y))
@@ -214,10 +337,15 @@ def main():
         rng.shuffle(spots)
         CASAS = {'north': ['north_log_01', 'north_stone_01'], 'outremer': ['desert_adobe_01', 'desert_adobe_02'],
                  'ruins': ['ruins_chapel_01', 'plains_stone_01', 'plains_timber_02']}.get(b, ['plains_timber_01', 'plains_timber_02', 'plains_cabin_01', 'plains_cabin_02', 'plains_stone_01'])
-        if b == 'outremer':   # no deserto: casas de adobe entre palmeiras
+        city = None
+        if s.get('capital'):
+            city = build_city(tx, ty, b, s, houses, put, pave, rng)
+            style = 'cidade'
+        if b == 'outremer' and style != 'cidade':   # no deserto: casas de adobe entre palmeiras
             for k in range(8):
                 an = k / 8 * 6.283; put(int(tx + math.cos(an) * (Rr - 2)), int(ty + math.sin(an) * (Rr - 2)), rng.choice(DS['palm']))
-        if style == 'vila':
+        if style == 'cidade': pass
+        elif style == 'vila':
             for k, (hx, hy) in enumerate(spots[:6 if s.get('capital') else 3]):
                 houses.append([CASAS[(k + len(houses)) % len(CASAS)], hx, hy, rng.choice(tints) if 'cabin' in CASAS[(k + len(houses)) % len(CASAS)] else None])
             for k in range(5): put(tx - 4 + (k % 3) * 2, ty + 4 + (k // 3) * 2, rng.choice(crate + logs + RU['barrel']))
@@ -254,6 +382,7 @@ def main():
                 for i in range(4): put(tx + 9 + i, ty - 2 + j, rng.choice(RU['plant']))
             houses.append(['ruins_chapel_01' if b != 'north' else 'north_stone_01', tx - 14, ty - 11, None])
         z = {'id': s['id'], 'name': s['name'], 'kind': 'village', 'biome': b, 'origin': [tx - Rr - 5, ty - Rr - 5], 'size': [2 * Rr + 10, 2 * Rr + 10], 'chunks': [], 'center': [tx, ty]}
+        if city: z['city'] = city; R = city['R']; z['origin'] = [tx - R - 3, ty - R - 3]; z['size'] = [2 * R + 7, 2 * R + 7]
         zones.append(z); towns.append({'id': s['id'], 'name': s['name'], 'center': [tx, ty]})
 
     # --- lugares de caça: cena e monstros pelo bioma e pela distância da vila mais próxima
