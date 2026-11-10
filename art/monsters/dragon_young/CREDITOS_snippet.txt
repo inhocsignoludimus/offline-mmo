@@ -1,0 +1,17 @@
+Dragon young spritesheet (dragon_young.png + .json)
+----------------------------------------------------------
+Base mesh / animations: "Animated Monsters" Dragon by Quaternius
+  Source: https://opengameart.org/content/lowpoly-animated-monsters
+  Also: https://quaternius.com/  |  Poly Pizza mirrors
+  License: CC0 1.0 Universal (public domain dedication)
+  https://creativecommons.org/publicdomain/zero/1.0/
+
+Modifications by Ludimus / In Hoc Signo Ludimus (2026-11-05):
+  - Rebuilt Cycles materials as light warm grey-beige base (hueable by engine)
+  - Flare ortho camera 60°/0°/45°, Standard view transform, transparent RGBA
+  - 8-direction isometric sheet (TCoM order SW W NW N NE E SE S)
+  - Remapped actions → stance/run/swing/hit/die/special
+  - Scaled to young 1.0× human master (human ref 140 px; body ≈140 px; stance S crop ≈186 px with wings)
+  - Packed CAMADAS_ANIM-style JSON with feet anchor on diamond center
+
+No Ultima Online / EA assets used.
